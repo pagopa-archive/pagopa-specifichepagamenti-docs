@@ -546,8 +546,7 @@ Avviso Digitale <_docs/15-Capitolo_8/Capitolo8.rst#specifiche-di-interfaccia-per
 `9.1.1.1 Generazione e invio della Ricevuta Telematica
 <_docs/16-Capitolo_9/Capitolo9.rst#generazione-e-invio-della-ricevuta-telematica>`__
 
-`9.1.1.2 Casi di errore e strategie di ripristino
-_docs/<16-Capitolo_9/Capitolo9.rst#casi-di-errore-e-strategie-di-ripristino>`__
+`9.1.1.2 Casi di errore e strategie di ripristino <_docs/16-Capitolo_9/Capitolo9.rst#casi-di-errore-e-strategie-di-ripristino>`__
 
 `9.1.2 Pagamenti attivati presso il PSP <_docs/16-Capitolo_9/Capitolo9.rst#pagamenti-attivati-presso-il-psp>`__
 

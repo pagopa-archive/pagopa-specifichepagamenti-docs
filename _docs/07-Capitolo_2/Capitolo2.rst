@@ -384,9 +384,9 @@ c. di memorizzare sul Sistema pagoPA alcune specifiche informazioni
    dovere inserire nuovamente le stesse informazioni, e
    segnatamente:
 
-   i. i dati di cui ai punti (5) e (6) che precedono sono obbligatori per
-      l’erogazione in favore dell’utente pagatore del servizio di cui
-      alla lettera [a] che precede;
+   i.  i dati di cui ai punti (5) e (6) che precedono sono obbligatori per
+       l’erogazione in favore dell’utente pagatore del servizio di cui
+       alla lettera [a] che precede;
 
    ii. mentre l’insieme dei dati di cui ai punti da (1) a (6) che precedono
        sono obbligatori per l’erogazione in favore dell’utente pagatore

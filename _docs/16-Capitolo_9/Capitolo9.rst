@@ -102,7 +102,7 @@ a) l'archivio dei pagamenti in attesa (APA), contenente tutte le
    effettuare il pagamento;
 
 b) un’applicazione “*server*” dedicata necessaria per trattare le
-       richieste provenienti dai PSP;
+   richieste provenienti dai PSP;
 
 Il *workflow* di questo modello di pagamento è dettagliatamente
 analizzato nel presente paragrafo e in quelli successivi. A tal
@@ -1099,32 +1099,32 @@ I metodi realizzati per le interazioni tra i PSP e il NodoSPC
 relativamente all'invio delle RPT e delle funzioni ancillari sono
 rappresentati nel diagramma di Figura 56:
 
-a. *pspInviaRPT*, con il quale il Nodo dei Pagamenti-SPC invia al PSP
-   una RPT. Il PSP verifica l’univocità e la correttezza formale della
-   RPT e risponde in modo sincrono con il *payload* di ACK definito
-   dall’apposito XSD;
+- a. **pspInviaRPT**, con il quale il Nodo dei Pagamenti-SPC invia al PSP
+     una RPT. Il PSP verifica l’univocità e la correttezza formale della
+     RPT e risponde in modo sincrono con il *payload* di ACK definito
+     dall’apposito XSD;
 
-b. *pspInviaCarrelloRPT*, con il quale il Nodo dei Pagamenti-SPC invia
-   al PSP un insieme di RPT, detto anche “carrello” (`vedi § 4.4.2 <../09-Capitolo_4/Capitolo4.rst#pagamenti-multi-beneficiario-o-multi-pagatore>`_). 
-   Il PSP verifica l’univocità e la correttezza formale delle RPT e, come
-   per la primitiva precedente, risponde in modo sincrono con il payload
-   di ACK definito dall’apposito XSD;
+- b. **pspInviaCarrelloRPT**, con il quale il Nodo dei Pagamenti-SPC invia
+     al PSP un insieme di RPT, detto anche “carrello” (`vedi § 4.4.2 <../09-Capitolo_4/Capitolo4.rst#pagamenti-multi-beneficiario-o-multi-pagatore>`_). 
+     Il PSP verifica l’univocità e la correttezza formale delle RPT e, come
+     per la primitiva precedente, risponde in modo sincrono con il payload
+     di ACK definito dall’apposito XSD;
 
-c. *pspInviaCarrelloRptCarte*, con il quale il Nodo dei Pagamenti-SPC
-   invia al PSP un insieme di RPT, detto anche “carrello” 
-   (`vedi § 4.4.2 <../09-Capitolo_4/Capitolo4.rst#pagamenti-multi-beneficiario-o-multi-pagatore>`_)
-   dedicato alle operazioni con carta di credito. Il PSP verifica
-   l’univocità e la correttezza formale delle RPT e, come per la
-   primitiva precedente, risponde in modo sincrono con il payload di ACK
-   definito dall’apposito XSD;
+- c. **pspInviaCarrelloRptCarte**, con il quale il Nodo dei Pagamenti-SPC
+     invia al PSP un insieme di RPT, detto anche “carrello” 
+     (`vedi § 4.4.2 <../09-Capitolo_4/Capitolo4.rst#pagamenti-multi-beneficiario-o-multi-pagatore>`_)
+     dedicato alle operazioni con carta di credito. Il PSP verifica
+     l’univocità e la correttezza formale delle RPT e, come per la
+     primitiva precedente, risponde in modo sincrono con il payload di ACK
+     definito dall’apposito XSD;
 
-d. *pspChiediAvanzamentoRPT*, con il quale il Nodo dei Pagamenti-SPC
-   interroga il PSP sullo stato di avanzamento della RPT. Il PSP
-   risponderà in modo sincrono fornendo l’elenco degli eventi
-   intercorsi. Dove previsto, potranno essere restituiti anche gli
-   avanzamenti dei singoli pagamenti generati dalla RPT di riferimento
-   ed eventuali altri segnali destinati all’ordinante e/o al
-   beneficiario.
+- d. **pspChiediAvanzamentoRPT**, con il quale il Nodo dei Pagamenti-SPC
+     interroga il PSP sullo stato di avanzamento della RPT. Il PSP
+     risponderà in modo sincrono fornendo l’elenco degli eventi
+     intercorsi. Dove previsto, potranno essere restituiti anche gli
+     avanzamenti dei singoli pagamenti generati dalla RPT di riferimento
+     ed eventuali altri segnali destinati all’ordinante e/o al
+     beneficiario.
 
 Questa interfaccia *Web service* definisce i meccanismi di comunicazione
 tra il Nodo dei Pagamenti-SPC e i PSP, pone l'onere di avviare le
@@ -1140,17 +1140,17 @@ Creditore.
 
 **Parametri di input**
 
-1. identificativoDominio
+I-1. identificativoDominio
 
-2. identificativoPSP
+I-2. identificativoPSP
 
-3. identificativoIntermediarioPSP
+I-3. identificativoIntermediarioPSP
 
-4. identificativoCanale
+I-4. identificativoCanale
 
-5. modelloPagamento
+I-5. modelloPagamento
 
-6. elementoListaRPT [5]_: array di:
+I-6. elementoListaRPT [5]_: array di:
 
 +-----------------------------------------------------------------------+
 | a. identificativoUnivocoVersamento                                    |
@@ -1169,18 +1169,18 @@ Creditore.
 
 **Parametri di output**
 
-1. esitoComplessivoOperazione: OK oppure KO
+O-1. esitoComplessivoOperazione: OK oppure KO
 
-2. identificativoCarrello (opzionale, per gestire il caso dei PSP che
-   non usano il carrello)
+O-2. identificativoCarrello (opzionale, per gestire il caso dei PSP che
+     non usano il carrello)
 
-3. parametriPagamentoImmediato: *query string* contenente parametri
-   specifici del PSP a supporto della re-direzione, nel caso di
-   pagamento online immediato [7]_
+O-3. parametriPagamentoImmediato: *query string* contenente parametri
+     specifici del PSP a supporto della re-direzione, nel caso di
+     pagamento online immediato [7]_
 
-4. listaErroriRPT: lista costituita da elementi faultBean, dove può
-   essere presente il dato opzionale serial (obbligatorio quando la
-   lista contiene più di un elemento).
+O-4. listaErroriRPT: lista costituita da elementi faultBean, dove può
+     essere presente il dato opzionale serial (obbligatorio quando la
+     lista contiene più di un elemento).
 
 **Gestione degli errori**
 
@@ -1222,43 +1222,43 @@ quanto un carrello di RPT può essere costituito da un'unica e sola RPT.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. modelloPagamento
+I-4. modelloPagamento
 
-5. parametriProfiloPagamento (opzionale): *query string* contenente
-   parametri ricavati dal NodoSPC su informazioni fornite dall’Ente
-   Creditore, che consentono al PSP di individuare il profilo di
-   pagamento da utilizzarsi. Poiché tali parametri possono essere
-   diversi da PSP a PSP, non è possibile darne una modellazione
-   dettagliata valida per tutti i casi. Si preferisce pertanto
-   rappresentarli come stringa di formato concordato tra Nodo e PSP.
+I-5. parametriProfiloPagamento (opzionale): *query string* contenente
+     parametri ricavati dal NodoSPC su informazioni fornite dall’Ente
+     Creditore, che consentono al PSP di individuare il profilo di
+     pagamento da utilizzarsi. Poiché tali parametri possono essere
+     diversi da PSP a PSP, non è possibile darne una modellazione
+     dettagliata valida per tutti i casi. Si preferisce pertanto
+     rappresentarli come stringa di formato concordato tra Nodo e PSP.
 
-6. listaRPT: lista di
+I-6. listaRPT: lista di
 
-   a. identificativoDominio
+- a. identificativoDominio
 
-   b. identificativoUnivocoVersamento
+- b. identificativoUnivocoVersamento
 
-   c. codiceContestoPagamento
+- c. codiceContestoPagamento
 
-   d. tipoFirma: **parametro deprecato**
+- d. tipoFirma: **parametro deprecato**
 
-   e. RPT: file XML codificato in formato base64 binary
+- e. RPT: file XML codificato in formato base64 binary
 
 **Parametri di output**
 
-1. esitoComplessivoOperazione: OK oppure KO
+O-1. esitoComplessivoOperazione: OK oppure KO
 
-2. identificativoCarrello (opzionale)
+O-2. identificativoCarrello (opzionale)
 
-3. parametriPagamentoImmediato: *query string* contenente parametri
-   specifici del PSP a supporto della re-direzione (vedi parametro di
-   output O-3 della primitiva **pspInviaRPT**)
+O-3. parametriPagamentoImmediato: *query string* contenente parametri
+     specifici del PSP a supporto della re-direzione (vedi parametro di
+     output O-3 della primitiva **pspInviaRPT**)
 
 Si tenga presente che il parametro O-3 (parametriPagamentoImmediato),
 anche in combinazione con il parametro opzionale O-2
@@ -1303,45 +1303,45 @@ La primitiva si applica in caso di pagamento con carte (`vedi § 8.1.1.2, scenar
 
 **Parametri di input**
 
-1.  identificativoPSP
+I-1.  identificativoPSP
 
-2.  identificativoIntermediarioPSP
+I-2.  identificativoIntermediarioPSP
 
-3.  identificativoCanale
+I-3.  identificativoCanale
 
-4.  modelloPagamento
+I-4.  modelloPagamento
 
-5.  rrn
+I-5.  rrn
 
-6.  esitoTransazioneCarta
+I-6.  esitoTransazioneCarta
 
-7.  importoTotalePagato
+I-7.  importoTotalePagato
 
-8.  timestampOperazione
+I-8.  timestampOperazione
 
-9.  codiceAutorizzativo
+I-9.  codiceAutorizzativo
 
-10. listaRPT: lista di
+I-10. listaRPT: lista di
 
-    a. identificativoDominio
+- a. identificativoDominio
 
-    b. identificativoUnivocoVersamento
+- b. identificativoUnivocoVersamento
 
-    c. codiceContestoPagamento
+- c. codiceContestoPagamento
 
-    d. tipoFirma: **parametro deprecato**
+- d. tipoFirma: **parametro deprecato**
 
-    e. RPT: file XML codificato in formato base64 binary
+- e. RPT: file XML codificato in formato base64 binary
 
 **Parametri di output**
 
-1. esitoComplessivoOperazione: OK oppure KO
+O-1. esitoComplessivoOperazione: OK oppure KO
 
-2. identificativoCarrello (opzionale)
+O-2. identificativoCarrello (opzionale)
 
-3. parametriPagamentoImmediato: *query string* contenente parametri
-   specifici del PSP a supporto della re-direzione (vedi parametro di
-   output O-3 della primitiva **pspInviaRPT**)
+O-3. parametriPagamentoImmediato: *query string* contenente parametri
+     specifici del PSP a supporto della re-direzione (vedi parametro di
+     output O-3 della primitiva **pspInviaRPT**)
 
 Si tenga presente che il parametro O-3 (parametriPagamentoImmediato),
 anche in combinazione con il parametro opzionale O-2
@@ -1383,18 +1383,18 @@ stato di avanzamento della RPT.
 
 **Parametri di input**
 
-1. identificativoDominio
+I-1. identificativoDominio
 
-2. identificativoUnivocoVersamento
+I-2. identificativoUnivocoVersamento
 
-3. codiceContestoPagamento
+I-3. codiceContestoPagamento
 
 **Parametri di output**
 
-1. Value: Valore descrittivo dello stato della lavorazione della RPT
-   presso il PSP, secondo le specifiche caratteristiche di processo
-   attuate presso il PSP stesso, al solo scopo di tracciatura degli
-   eventi [8]_.
+O-1. Value: Valore descrittivo dello stato della lavorazione della RPT
+     presso il PSP, secondo le specifiche caratteristiche di processo
+     attuate presso il PSP stesso, al solo scopo di tracciatura degli
+     eventi [8]_.
 
 La valorizzazione di questo campo e l’assenza della struttura
 FaultBean indica che la RPT è in carico al PSP ed è in corso di
@@ -1487,27 +1487,27 @@ accettata ed inoltrata con successo alla PA, oppure respinta con errore.
 
 **Parametri di input**
 
-1. identificativoIntermediarioPSP
+I-1. identificativoIntermediarioPSP
 
-2. identificativoCanale
+I-2. identificativoCanale
 
-3. password
+I-3. password
 
-4. identificativoPSP
+I-4. identificativoPSP
 
-5. identificativoDominio
+I-5. identificativoDominio
 
-6. identificativoUnivocoVersamento
+I-6. identificativoUnivocoVersamento
 
-7. codiceContestoPagamento
+I-7. codiceContestoPagamento
 
-8. tipoFirma: **parametro deprecato**
+I-8. tipoFirma: **parametro deprecato**
 
-9. RT: file xml base 64
+I-9. RT: file xml base 64
 
 Parametri di output
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
 oppure, in caso di errori:
 
@@ -1577,22 +1577,21 @@ di una RPT inviata in precedenza.
 
 **Parametri di input**
 
-1. identificativoDominio
+I-1. identificativoDominio
 
-2. identificativoUnivocoVersamento
+I-2. identificativoUnivocoVersamento
 
-3. codiceContestoPagamento
+I-3. codiceContestoPagamento
 
 **Parametri di output**
 
-1. RT: file XML codificato in formato base64 binary
+O-1. RT: file XML codificato in formato base64 binary
 
-2. tipoFirma: **parametro deprecato**
+O-2. tipoFirma: **parametro deprecato**
 
 **Gestione degli errori**
 
-in caso di errore: **faultBean** emesso da **PSP** (faultBean.id =<
-identificativoPSP >).
+in caso di errore: **faultBean** emesso da **PSP** (faultBean.id =<identificativoPSP >).
 
 Di seguito valori da codificare negli elementi faultBean.faultCode e
 faultBean.faultString nel caso di:
@@ -1631,24 +1630,24 @@ mentre il dato codiceErrore assumerà il valore *CANCTMOUT*.
 
 **Request**:
 
-1. identificativoDominio
+I-1. identificativoDominio
 
-2. identificativoUnivocoVersamento
+I-2. identificativoUnivocoVersamento
 
-3. codiceContestoPagamento
+I-3. codiceContestoPagamento
 
-4. ackRT: messaggio di conferma ricezione RT, file XML in formato base64
-   (`vedi § 5.3.10 <../11-Capitolo_5/Capitolo5.rst#messaggio-di-conferma-ricezione-della-rt-ack>`_)
+I-4. ackRT: messaggio di conferma ricezione RT, file XML in formato base64
+     (`vedi § 5.3.10 <../11-Capitolo_5/Capitolo5.rst#messaggio-di-conferma-ricezione-della-rt-ack>`_)
 
 Come indicato in Tabella 15 a pagina 97, la struttura XML del messaggio
 ackRT prevede due esiti principali (elemento
 statoMessaggioReferenziato):
 
--  ACTC: RT accettata e in carico al Nodo dei Pagamenti SPC. In questo
+-  **ACTC**: RT accettata e in carico al Nodo dei Pagamenti SPC. In questo
    caso la RT deve essere esclusa dalla lista di RT disponibili del
    PSP (restituita dalla primitiva *pspChiediListaRT*, `vedi § 9.2.2.4 <../16-Capitolo_9/Capitolo9.rst#pspchiedilistart>`_)
 
--  RJCT: RT rifiutata; l’operazione di pagamento rimane sospesa in
+-  **RJCT**: RT rifiutata; l’operazione di pagamento rimane sospesa in
    attesa di ulteriori azioni, anche con intervento manuale. La RT
    rimane a disposizione presso il PSP per indagini in uno stato che
    la esclude dall'elenco delle RT (restituite con la primitiva
@@ -1657,7 +1656,7 @@ statoMessaggioReferenziato):
 
 **Parametri di output**
 
-1. esito: OK oppure KO.
+O-1. esito: OK oppure KO.
 
 **Gestione degli errori**
 
@@ -1689,24 +1688,24 @@ positivo inviato mediante il metodo **pspInviaAckRT**.
 
 **Parametri di input**
 
-1. identificativoRichiedente
+I-1. identificativoRichiedente
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. modelloPagamento
+I-4. modelloPagamento
 
 **Parametri di output**
 
-1. valoreListaRT: elenco delle RPT per le quali è disponibile la
-   relativa RT. Si tratta di un array dei seguenti elementi:
+O-1. valoreListaRT: elenco delle RPT per le quali è disponibile la
+     relativa RT. Si tratta di un array dei seguenti elementi:
 
-   a. identificativoDominio
+- a. identificativoDominio
 
-   b. identificativoUnivocoVersamento
+- b. identificativoUnivocoVersamento
 
-   c. codiceContestoPagamento
+- c. codiceContestoPagamento
 
 **Gestione degli errori**
 
@@ -1780,45 +1779,45 @@ generata dall’Ente Creditore.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP (Richiedente)
+I-2. identificativoIntermediarioPSP (Richiedente)
 
-3. identificativoCanale (Richiedente)
+I-3. identificativoCanale (Richiedente)
 
-4. password (Richiedente)
+I-4. password (Richiedente)
 
-5. codiceContestoPagamento
+I-5. codiceContestoPagamento
 
-6. codificaInfrastrutturaPSP: è un identificativo utilizzato dal NodoSPC
-   per recuperare la regola di transcodifica dei dati contenuti in
-   codiceIdRPT. I valori attualmente previsti sono riportati al `§ 15.5 <../24-Capitolo_15/Capitolo15.rst#identificazione-rpt-in-attesa>`_
+I-6. codificaInfrastrutturaPSP: è un identificativo utilizzato dal NodoSPC
+     per recuperare la regola di transcodifica dei dati contenuti in
+     codiceIdRPT. I valori attualmente previsti sono riportati al `§ 15.5 <../24-Capitolo_15/Capitolo15.rst#identificazione-rpt-in-attesa>`_
 
-7. codiceIdRPT: parametro di tipo polimorfico che contiene i dati in
-   formato XML che identificano la RPT. La sua composizione varia in
-   funzione del codice grafico utilizzato dal PSP per acquisire dette
-   informazioni. I nomi degli XSD da utilizzare, in funzione del tipo di
-   codice grafico letto sull’avviso di pagamento, sono riportati nel `§ 15.5 <../24-Capitolo_15/Capitolo15.rst#identificazione-rpt-in-attesa>`_
+I-7. codiceIdRPT: parametro di tipo polimorfico che contiene i dati in
+     formato XML che identificano la RPT. La sua composizione varia in
+     funzione del codice grafico utilizzato dal PSP per acquisire dette
+     informazioni. I nomi degli XSD da utilizzare, in funzione del tipo di
+     codice grafico letto sull’avviso di pagamento, sono riportati nel `§ 15.5 <../24-Capitolo_15/Capitolo15.rst#identificazione-rpt-in-attesa>`_
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-2. datiPagamentoPA: parametro a sua volta composto da:
+O-2. datiPagamentoPA: parametro a sua volta composto da:
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAccredito: è divenuto obbligatorio, contiene l’IBAN sul quale
-      accreditare le somme indicate dall’Ente Creditore
+- b. ibanAccredito: è divenuto obbligatorio, contiene l’IBAN sul quale
+     accreditare le somme indicate dall’Ente Creditore
 
-   c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   d. enteBeneficiario (opzionale; raggruppa dati anagrafici)
+- d. enteBeneficiario (opzionale; raggruppa dati anagrafici)
 
-   e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   f. causaleVersamento: il formato della causale di versamento deve
-          essere conforme a quanto indicato `al § 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato `al § 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 **Gestione degli errori**
 
@@ -1827,11 +1826,11 @@ in caso di errore: **faultBean** emesso da **NodoSPC**.
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-1. faultBean.id=<identificativoDominio>:
+**1. faultBean.id=<identificativoDominio>:**
 *PPT_ERRORE_EMESSO_DA_PAA* (vedi contenuto dato
 faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`__)
 
-2. faultBean.id=“NodoDeiPagamentiSPC”:
+**2. faultBean.id=“NodoDeiPagamentiSPC”:**
 
 *PPT_AUTENTICAZIONE*
 
@@ -1896,61 +1895,61 @@ all'invocazione della primitiva stessa.
 
 **Parametri di input**
 
-1.  identificativoPSP
+I-1.  identificativoPSP
 
-2.  identificativoIntermediarioPSP
+I-2.  identificativoIntermediarioPSP
 
-3.  identificativoCanale
+I-3.  identificativoCanale
 
-4.  password
+I-4.  password
 
-5.  codiceContestoPagamento
+I-5.  codiceContestoPagamento
 
-6.  identificativoIntermediarioPSPPagamento
+I-6.  identificativoIntermediarioPSPPagamento
 
-7.  identificativoCanalePagamento
+I-7.  identificativoCanalePagamento
 
-8.  codificaInfrastrutturaPSP: vedi parametro I-6 della primitiva
-    **nodoVerificaRPT**
+I-8.  codificaInfrastrutturaPSP: vedi parametro I-6 della primitiva
+      **nodoVerificaRPT**
 
-9.  codiceIdRPT: vedi parametro I-7 della primitiva
-    **nodoVerificaRPT**
+I-9.  codiceIdRPT: vedi parametro I-7 della primitiva
+      **nodoVerificaRPT**
 
-10. datiPagamentoPSP: parametro a sua volta composto da:
+I-10. datiPagamentoPSP: parametro a sua volta composto da:
 
-    a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-    b. ibanAppoggio (opzionale)
+- b. ibanAppoggio (opzionale)
 
-    c. bicAppoggio (opzionale)
+- c. bicAppoggio (opzionale)
 
-    d. soggettoVersante (opzionale; raggruppa dati anagrafici)
+- d. soggettoVersante (opzionale; raggruppa dati anagrafici)
 
-    e. ibanAddebito (opzionale)
+- e. ibanAddebito (opzionale)
 
-    f. bicAddebito (opzionale)
+- f. bicAddebito (opzionale)
 
-    g. soggettoPagatore (opzionale; raggruppa dati anagrafici)
+- g. soggettoPagatore (opzionale; raggruppa dati anagrafici)
 
 **Parametri di output**
 
-1. Esito: OK oppure KO
+O-1. Esito: OK oppure KO
 
-2. datiPagamentoPA: parametro a sua volta composto da
+O-2. datiPagamentoPA: parametro a sua volta composto da
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAccredito è divenuto obbligatorio, contiene l’IBAN sul quale
-      accreditare le somme indicate dall’Ente Creditore
+- b. ibanAccredito è divenuto obbligatorio, contiene l’IBAN sul quale
+     accreditare le somme indicate dall’Ente Creditore
 
-   c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   d. enteBeneficiario (opzionale; raggruppa dati anagrafici)
+- d. enteBeneficiario (opzionale; raggruppa dati anagrafici)
 
-   e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   f. causaleVersamento: il formato della causale di versamento deve
-      essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`_
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`_
 
 **Gestione degli errori**
 
@@ -1959,11 +1958,11 @@ in caso di errore: **faultBean** emesso **NodoSPC**.
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-1. faultBean.id=<identificativoDominio>:
+**1. faultBean.id=<identificativoDominio>:**
 *PPT_ERRORE_EMESSO_DA_PAA* (vedi contenuto dato
 faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`_)
 
-2. faultBean.id=“NodoDeiPagamentiSPC”:
+**2. faultBean.id=“NodoDeiPagamentiSPC”:**
 
 *PPT_AUTENTICAZIONE*
 
@@ -2022,42 +2021,42 @@ pagamento in attesa presso l’ente stesso.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
-5. codiceContestoPagamento
+I-5. codiceContestoPagamento
 
-6. codificaInfrastrutturaPSP: vedi parametro I-6 della primitiva
-   **nodoVerificaRPT**
+I-6. codificaInfrastrutturaPSP: vedi parametro I-6 della primitiva
+     **nodoVerificaRPT**
 
-7. codiceIdRPT: vedi parametro I-7 della primitiva **nodoVerificaRPT**
+I-7. codiceIdRPT: vedi parametro I-7 della primitiva **nodoVerificaRPT**
 
-8. datiPagamentoPSP: parametro a sua volta composto da:
+I-8. datiPagamentoPSP: parametro a sua volta composto da:
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAppoggio (opzionale)
+- b. ibanAppoggio (opzionale)
 
-   c. bicAppoggio (opzionale)
+- c. bicAppoggio (opzionale)
 
-   d. soggettoVersante (opzionale; raggruppa dati anagrafici)
+- d. soggettoVersante (opzionale; raggruppa dati anagrafici)
 
-   e. ibanAddebito (opzionale)
+- e. ibanAddebito (opzionale)
 
-   f. bicAddebito (opzionale)
+- f. bicAddebito (opzionale)
 
-   g. soggettoPagatore (opzionale; raggruppa dati anagrafici)
+- g. soggettoPagatore (opzionale; raggruppa dati anagrafici)
 
 **Parametri di output**
 
-1. Esito: OK oppure KO
+O-1. Esito: OK oppure KO
 
-2. RPT: file XML codificato in formato base64 binary
+O-2. RPT: file XML codificato in formato base64 binary
 
 **Gestione degli errori**
 
@@ -2066,11 +2065,11 @@ in caso di errore: **faultBean** emesso **NodoSPC**.
 Di seguito i possibili valori dell'elemento **faultBean**.faultCode in
 funzione di faultBean.id:
 
-1. faultBean.id=<identificativoDominio>:
+**1. faultBean.id=<identificativoDominio>:**
 *PPT_ERRORE_EMESSO_DA_PAA* (vedi contenuto dato
 faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`_)
 
-2. faultBean.id=“NodoDeiPagamentiSPC”:
+**2. faultBean.id=“NodoDeiPagamentiSPC”:**
 
 *PPT_AUTENTICAZIONE*
 
@@ -2123,47 +2122,47 @@ Avviso di un pagamento in attesa presso l’Ente Creditore.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP (Richiedente)
+I-2. identificativoIntermediarioPSP (Richiedente)
 
-3. identificativoCanale (Richiedente)
+I-3. identificativoCanale (Richiedente)
 
-4. password (Richiedente)
+I-4. password (Richiedente)
 
-5. idServizio: è il codice presente nel Catalogo dei Servizi relativo al
-   servizio richiesto
+I-5. idServizio: è il codice presente nel Catalogo dei Servizi relativo al
+     servizio richiesto
 
-6. idDominioErogatoreServizio: idDominio del soggetto che eroga il
-   servizio, così come indicato nel Catalogo dei Servizi (`vedi § 5.3.11 <../11-Capitolo_5/Capitolo5.rst#catalogo-dei-servizi>`_)
+I-6. idDominioErogatoreServizio: idDominio del soggetto che eroga il
+     servizio, così come indicato nel Catalogo dei Servizi (`vedi § 5.3.11 <../11-Capitolo_5/Capitolo5.rst#catalogo-dei-servizi>`_)
 
-7. datiSpecificiServizio: file XML che contiene le informazioni
-   specifiche del servizio richiesto.
+I-7. datiSpecificiServizio: file XML che contiene le informazioni
+     specifiche del servizio richiesto.
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-2. identificativoDominio: codice fiscale dell'Ente Creditore che
-   gestisce il pagamento
+O-2. identificativoDominio: codice fiscale dell'Ente Creditore che
+     gestisce il pagamento
 
-3. numeroAvviso: contiene il Numero Avviso secondo la struttura di cui
-   al `§ 7.4.1 delle SANP <../13-Capitolo_7/Capitolo7.rst#il-numero-avviso-e-larchivio-dei-pagamenti-in-attesa>`_
+O-3. numeroAvviso: contiene il Numero Avviso secondo la struttura di cui
+     al `§ 7.4.1 delle SANP <../13-Capitolo_7/Capitolo7.rst#il-numero-avviso-e-larchivio-dei-pagamenti-in-attesa>`_
 
-4. datiPagamentoPA: parametro a sua volta composto da:
+O-4. datiPagamentoPA: parametro a sua volta composto da:
 
-   g. importoSingoloVersamento
+- g. importoSingoloVersamento
 
-   h. ibanAccredito
+- h. ibanAccredito
 
-   i. bicAccredito (opzionale)
+- i. bicAccredito (opzionale)
 
-   j. enteBeneficiario (opzionale; raggruppa dati anagrafici)
+- j. enteBeneficiario (opzionale; raggruppa dati anagrafici)
 
-   g. credenzialiPagatore (opzionale)
+- g. credenzialiPagatore (opzionale)
 
-   h. causaleVersamento: il formato della causale di versamento deve
-          essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`_
+- h. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`_
 
 **Gestione degli errori**
 
@@ -2172,12 +2171,12 @@ in caso di errore: **faultBean** emesso da **NodoSPC**.
 Di seguito i possibili valori dell'elemento **faultBean**.faultCode in
 funzione di faultBean.id:
 
-1. faultBean.id=<identificativoDominio>:
+**1. faultBean.id=<identificativoDominio>:**
 
 *PPT_ERRORE_EMESSO_DA_PAA* (vedi contenuto dato
 faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`_)
 
-2. faultBean.id=“NodoDeiPagamentiSPC”:
+**2. faultBean.id=“NodoDeiPagamentiSPC”:**
 
 *PPT_AUTENTICAZIONE*
 
@@ -2253,22 +2252,21 @@ richiesta di revoca di una specifica RT.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
-5. identificativoDominio
+I-5. identificativoDominio
 
-6. identificativoUnivocoVersamento
+I-6. identificativoUnivocoVersamento
 
-7. codiceContestoPagamento
+I-7. codiceContestoPagamento
 
-8. RR: file XML in formato base64 binary contenente la Richiesta di
-   Revoca
+I-8. RR: file XML in formato base64 binary contenente la Richiesta di Revoca
 
 **Parametri di output**
 
@@ -2326,21 +2324,20 @@ del processo di revoca richiesto con la primitiva precedente
 
 **Parametri di input**
 
-1. identificativo Dominio
+I-1. identificativo Dominio
 
-2. identificativoUnivocoVersamento
+I-2. identificativoUnivocoVersamento
 
-3. codiceContestoPagamento
+I-3. codiceContestoPagamento
 
-4. ER: file XML in formato base64 binary contenente l'Esito della
-   richiesta di Revoca
+I-4. ER: file XML in formato base64 binary contenente l'Esito della
+     richiesta di Revoca
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-Il **faultBean** è emesso dal **PSP** (faultBean.id =< identificativoPSP
->).
+Il **faultBean** è emesso dal **PSP** (faultBean.id =< identificativoPSP>).
 
 Di seguito i possibili valori del dato **faultBean**.faultCode:
 
@@ -2412,18 +2409,18 @@ modalità sincrona.
 
 **Parametri di input**
 
-1. identificativoDominio
+I-1. identificativoDominio
 
-2. identificativoUnivocoVersamento
+I-2. identificativoUnivocoVersamento
 
-3. codiceContestoPagamento
+I-3. codiceContestoPagamento
 
-4. RR: file XML in formato base64 binary contenente la Richiesta di
+I-4. RR: file XML in formato base64 binary contenente la Richiesta di
    Revoca che trasporta la richiesta di storno
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
 **Gestione degli errori**
 
@@ -2452,26 +2449,26 @@ il NodoSPC inoltra in modo sincrono all’Ente Creditore.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
-5. identificativoDominio
+I-5. identificativoDominio
 
-6. identificativoUnivocoVersamento
+I-6. identificativoUnivocoVersamento
 
-7. codiceContestoPagamento
+I-7. codiceContestoPagamento
 
-8. ER: file XML in formato base64 binary contenente l'Esito della
-   richiesta di Revoca che veicola l'esito dello storno
+I-8. ER: file XML in formato base64 binary contenente l'Esito della
+     richiesta di Revoca che veicola l'esito dello storno
 
 **Parametri di output**
 
-1. esito: OK oppure KO.
+O-1. esito: OK oppure KO.
 
 **Gestione degli errori**
 
@@ -2480,12 +2477,12 @@ in caso di errore: **faultBean** emesso dal **NodoSPC**.
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-3. faultBean.id=< identificativoDominio >:
+**3. faultBean.id=< identificativoDominio >:**
 
 *PPT_ERRORE_EMESSO_DA_PAA* (vedi contenuto dato
 faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`_)
 
-4. faultBean.id=“NodoDeiPagamentiSPC”:
+**4. faultBean.id=“NodoDeiPagamentiSPC”:**
 
 *PPT_AUTENTICAZIONE*
 
@@ -2545,26 +2542,26 @@ specifico flusso di rendicontazione.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
-5. identificativoDominio
+I-5. identificativoDominio
 
-6. identificativoFlusso
+I-6. identificativoFlusso
 
-7. dataOraFlusso (di generazione, non di spedizione)
+I-7. dataOraFlusso (di generazione, non di spedizione)
 
-8. xmlRendicontazione: file XML contenente il flusso di rendicontazione
-   in formato base64 binary
+I-8. xmlRendicontazione: file XML contenente il flusso di rendicontazione
+     in formato base64 binary
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
 **Gestione degli errori**
 
@@ -2650,18 +2647,18 @@ il PSP risponde valorizzando l’esito.
 
 **Parametri di input**
 
-1. IdentificativoPSP
+I-1. IdentificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. avvisoDigitale: contiene le informazioni indicate nel `§ 5.4.1 <../11-Capitolo_5/Capitolo5.rst#avviso-digitale>`_ della
-   Sezione II
+I-4. avvisoDigitale: contiene le informazioni indicate nel `§ 5.4.1 <../11-Capitolo_5/Capitolo5.rst#avviso-digitale>`_ della
+     Sezione II
 
 **Parametri di output**
 
-1. esitoOperazione: OK oppure KO
+O-1. esitoOperazione: OK oppure KO
 
 **Gestione degli errori**
 
@@ -2690,19 +2687,19 @@ NodoSPC valorizzando l’esito.
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
-5. datiNotifica: `vedi § 5.4.4.3 della Sezione II <../11-Capitolo_5/Capitolo5.rst#notifica-delliscrizione-al-servizio-di-avvisatura-digitale>`_
+I-5. datiNotifica: `vedi § 5.4.4.3 della Sezione II <../11-Capitolo_5/Capitolo5.rst#notifica-delliscrizione-al-servizio-di-avvisatura-digitale>`_
 
 **Parametri di output**
 
-3. Esito: OK oppure KO
+O-3. Esito: OK oppure KO
 
 **Gestione degli errori**
 
@@ -2711,7 +2708,7 @@ in caso di errore: **faultBean** emesso **NodoSPC**.
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-3. faultBean.id=“NodoDeiPagamentiSPC”:
+**3. faultBean.id=“NodoDeiPagamentiSPC”:**
 
 *PPT_AUTENTICAZIONE*
 
@@ -2782,32 +2779,32 @@ ad un Ente l’elenco degli avvisi di uno specifico cittadino.
 
 **Parametri di input**
 
-1. IdentificativoPSP
+I-1. IdentificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. codiceFiscaleUtente
+I-4. codiceFiscaleUtente
 
-5. codiceFiscalePA
+I-5. codiceFiscalePA
 
-6. codiceServizio (opzionale): contiene il codice (5 cifre numeriche)
-   del servizio classificato all'interno del NodoSPC che si vuole
-   selezionare (ad esempio: 00001 'Bollo Auto')
+I-6. codiceServizio (opzionale): contiene il codice (5 cifre numeriche)
+     del servizio classificato all'interno del NodoSPC che si vuole
+     selezionare (ad esempio: 00001 'Bollo Auto')
 
-7. periodoRiferimento (opzionale): periodo temporale rispetto al quale
-   si vuole restringere la ricerca, è formato da:
+I-7. periodoRiferimento (opzionale): periodo temporale rispetto al quale
+     si vuole restringere la ricerca, è formato da:
 
-   a. annoDA: anno di competenza del debito nel formato YYYY
+- a. annoDA: anno di competenza del debito nel formato YYYY
 
-a. annoA: anno di competenza del debito nel formato YYYY
+- b. annoA: anno di competenza del debito nel formato YYYY
 
 **Parametri di output**
 
-1. esitoOperazione: OK oppure KO
+O_1. esitoOperazione: OK oppure KO
 
-2. elencoAvvisiDigitali: contiene le informazioni indicate nel `§ 5.4.4.4 della Sezione II <../11-Capitolo_5/Capitolo5.rst#richiesta-posizione-debitoria-presso-un-ente-creditore>`_
+O-2. elencoAvvisiDigitali: contiene le informazioni indicate nel `§ 5.4.4.4 della Sezione II <../11-Capitolo_5/Capitolo5.rst#richiesta-posizione-debitoria-presso-un-ente-creditore>`_
 
 **Gestione degli errori**
 
@@ -2901,15 +2898,15 @@ corrispondente RT.
 
 **Parametri di input**
 
-1. identificativoDominio
+I-1. identificativoDominio
 
-2. identificativoUnivocoVersamento
+I-2. identificativoUnivocoVersamento
 
-3. codiceContestoPagamento
+I-3. codiceContestoPagamento
 
 **Parametri di output**
 
-1. Esito: OK oppure KO.
+O-1. Esito: OK oppure KO.
 
 **Gestione degli errori**
 
@@ -2963,20 +2960,20 @@ degli Enti Creditori.
 
 **Parametri di input**
 
-1. identificativoPSP (opzionale)
+I-1. identificativoPSP (opzionale)
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
-5. identificativoDominio (opzionale)
+I-5. identificativoDominio (opzionale)
 
 **Parametri di output**
 
-1. xmlInformativa: file XML in formato base64 binary contenente la
-   tabella delle controparti, descrittiva degli Enti Creditori
+O-1. xmlInformativa: file XML in formato base64 binary contenente la
+     tabella delle controparti, descrittiva degli Enti Creditori
 
 **Gestione degli errori**
 
@@ -3025,22 +3022,22 @@ per l'ambiente indicato, il NodoSPC restituirà un
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
 **Parametri di output**
 
-1. xmlTemplateInformativa: file XML in formato base64 binary contenente
-   il *"Catalogo Dati Informativi"* del PSP attualmente memorizzato sul
-   NodoSPC. Il PSP deve utilizzare questo file compilando i *tag* di
-   propria competenza ed inviarlo al Nodo SPC secondo le modalità
-   indicate dall'Agenzia per l'Italia Digitale. L’XSD corrispondente è
-   descritta al `§ 5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`_).
+O-1. xmlTemplateInformativa: file XML in formato base64 binary contenente
+     il *"Catalogo Dati Informativi"* del PSP attualmente memorizzato sul
+     NodoSPC. Il PSP deve utilizzare questo file compilando i *tag* di
+     propria competenza ed inviarlo al Nodo SPC secondo le modalità
+     indicate dall'Agenzia per l'Italia Digitale. L’XSD corrispondente è
+     descritta al `§ 5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`_).
 
 **Gestione degli errori**
 
@@ -3075,21 +3072,21 @@ presso i PSP (`vedi § 9.1.2.5 <../16-Capitolo_9/Capitolo9.rst#pagamento-spontan
 
 **Parametri di input**
 
-1. identificativoPSP (opzionale)
+I-1. identificativoPSP (opzionale)
 
-2. identificativoIntermediarioPSP
+I-2. identificativoIntermediarioPSP
 
-3. identificativoCanale
+I-3. identificativoCanale
 
-4. password
+I-4. password
 
-5. identificativoDominio (opzionale)
+I-5. identificativoDominio (opzionale)
 
 **Parametri di output**
 
-1. xmlCatalogoServizi: file XML in formato base64 binary contenente il
-   Catalogo dei Servizi degli Enti Creditori (`vedi § 5.3.11 <../11-Capitolo_5/Capitolo5.rst#catalogo-dei-servizi>`_ e Tabella
-   16, Tabella 17)
+O-1. xmlCatalogoServizi: file XML in formato base64 binary contenente il
+     Catalogo dei Servizi degli Enti Creditori (`vedi § 5.3.11 <../11-Capitolo_5/Capitolo5.rst#catalogo-dei-servizi>`_ e Tabella
+     16, Tabella 17)
 
 **Gestione degli errori**
 
@@ -3166,27 +3163,27 @@ la piattaforma.
 
 **Parametri input**
 
-1. identificativoIntermediarioPSP
+I-1. identificativoIntermediarioPSP
 
-2. identificativoCanale
+I-2. identificativoCanale
 
-3. password
+I-3. password
 
-4. identificativoPSP
+I-4. identificativoPSP
 
-5. identificativo Dominio (opzionale)
+I-5. identificativo Dominio (opzionale)
 
 **Parametri output**
 
-1. listaQuadrature: costituita da:
+O-1. listaQuadrature: costituita da:
 
-   a. totRestituiti
+- a. totRestituiti
 
-   b. idQuadratura: array di:
+- b. idQuadratura: array di:
 
-      1. identificativoFlusso
+     b1. identificativoFlusso
 
-      2. dataOraFlusso
+     b2. dataOraFlusso
 
 oppure, in caso di errore: **faultBean** emesso dal **NodoSPC** (dove
 faultBean.id è uguale a “NodoDeiPagamentiSPC”).
@@ -3223,20 +3220,20 @@ idDominio e idFlusso.
 
 **Parametri input**
 
-1. identificativoIntermediarioPSP
+I-1. identificativoIntermediarioPSP
 
-2. identificativoCanale
+I-2. identificativoCanale
 
-3. password
+I-3. password
 
-4. identificativoPSP
+I-4. identificativoPSP
 
-5. identificativoFlusso
+I-5. identificativoFlusso
 
 **Parametri output**
 
-1. XMLQuadratura: file XML in formato base64 binary, contenente i
-   "Totali di Traffico" richiesti dal PSP
+O-1. XMLQuadratura: file XML in formato base64 binary, contenente i
+     "Totali di Traffico" richiesti dal PSP
 
 oppure, in caso di errore: **faultBean** emesso dal **NodoSPC** (dove
 faultBean.id è uguale a “NodoDeiPagamentiSPC”).

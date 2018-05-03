@@ -331,27 +331,27 @@ Le principali attività svolte dalla componente riguardano:
 -  la raccolta delle informazioni attinenti alle operazioni svolte dalle
    componenti del Nodo dei Pagamenti-SPC:
 
--  tipo di operazione (RPT; RT; …),
+   -  tipo di operazione (RPT; RT; …),
 
--  identificativo univoco associato all’operazione,
+   -  identificativo univoco associato all’operazione,
 
--  *timestamp* dell’evento e della registrazione,
+   -  *timestamp* dell’evento e della registrazione,
 
--  componente in cui si verifica l’evento (FESP; Web-FESP;
-   *Repository*),
+   -  componente in cui si verifica l’evento (FESP; Web-FESP;
+      *Repository*),
 
--  ecc.
+   -  ecc.
 
 -  esposizione di un’interfaccia di interrogazione per l’accesso alle
    registrazioni degli eventi che consenta:
 
--  la selezione degli eventi in base a criteri di ricerca (tipo di
-   operazione, id, ecc.),
+   -  la selezione degli eventi in base a criteri di ricerca (tipo di
+      operazione, id, ecc.),
 
--  l’esame nel dettaglio di un evento selezionato,
+   -  l’esame nel dettaglio di un evento selezionato,
 
--  la disponibilità di dati di sintesi (totali di tipo di operazione per
-   stato, per intervallo temporale, ecc.).
+   -  la disponibilità di dati di sintesi (totali di tipo di operazione per
+      stato, per intervallo temporale, ecc.).
 
 Componenti di utilità
 ~~~~~~~~~~~~~~~~~~~~~

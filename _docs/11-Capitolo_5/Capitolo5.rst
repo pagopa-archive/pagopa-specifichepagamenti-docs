@@ -158,7 +158,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | che invia                                 |
 |                         |         |            |         |         |                 | la richiesta di pagamento.                |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| identificativoStazione  | 2       | an         |         | 1..35   | Name            | Identifica la stazione                    |
+| identificativoStazione  | 2       | an         | 0..1    | 1..35   | Name            | Identifica la stazione                    |
 | Richiedente             |         |            |         |         |                 | richiedente il                            |
 |                         |         |            |         |         |                 | pagamento secondo                         |
 |                         |         |            |         |         |                 | una codifica                              |
@@ -171,7 +171,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | congruenza                                |
 |                         |         |            |         |         |                 | su tale dato.                             |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| identificativoMessaggio | 1       | an         |         | 1..35   | Message         | Identificativo legato alla                |
+| identificativoMessaggio | 1       | an         | 1..1    | 1..35   | Message         | Identificativo legato alla                |
 | Richiesta               |         |            |         |         | Identification  | trasmissione della                        |
 |                         |         |            |         |         |                 | richiesta di pagamento.                   |
 |                         |         |            |         |         |                 | Deve essere univoco                       |
@@ -179,13 +179,13 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | data riferita all’elemento,               |
 |                         |         |            |         |         |                 | dataOraMessaggioRichiesta.                |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| dataOraMessaggio        | 1       | an         |         | 19      | Creation        | Indica la data e l’ora digenerazione      |
+| dataOraMessaggio        | 1       | an         | 1..1    | 19      | Creation        | Indica la data e l’ora digenerazione      |
 | Richiesta               |         |            |         |         | Date            | del messaggio di richiesta di             |
 |                         |         |            |         |         | Time            | pagamento secondo il formato              |
 |                         |         |            |         |         |                 | ISO 8601                                  |
 |                         |         |            |         |         |                 | [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]           |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| autenticazione          | 1       | an         |         | 4       | Proprietary     | Contiene la modalità di                   |
+| autenticazione          | 1       | an         | 1..1    | 4       | Proprietary     | Contiene la modalità di                   |
 | Soggetto                |         |            |         |         | Code            | identificazione                           |
 |                         |         |            |         |         |                 | applicata al soggetto che deve            |
 |                         |         |            |         |         |                 | essere addebitato per il pagamento:       |
@@ -195,27 +195,27 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | - **OTH** = Altro,                        |
 |                         |         |            |         |         |                 | - **N/A** = Non applicabile               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| SoggettoVersante        | 1       | s          |         |         | Debtor          | Aggregazione “versante” che               |
+| SoggettoVersante        | 1       | s          | 0..1    |         | Debtor          | Aggregazione “versante” che               |
 |                         |         |            |         |         |                 | riporta le informazioni concernenti       |
 |                         |         |            |         |         |                 | il soggetto che                           |
 |                         |         |            |         |         |                 | effettua il pagamento per conto           |
 |                         |         |            |         |         |                 | del soggetto                              |
 |                         |         |            |         |         |                 | Pagatore.                                 |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| identificativoUnivoco   | 2       | s          |         |         |                 | Aggregazione che riporta le               |
+| identificativoUnivoco   | 2       | s          | 1..1    |         |                 | Aggregazione che riporta le               |
 | Versante                |         |            |         |         |                 | informazioni                              |
 |                         |         |            |         |         |                 | concernenti l’identificazione             |
 |                         |         |            |         |         |                 | fiscale del                               |
 |                         |         |            |         |         |                 | versante.                                 |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| tipoIdentificativo      | 3       | an         |         | 1       | Proprietary     | Campo alfanumerico che indica la          |
+| tipoIdentificativo      | 3       | an         | 1..1    | 1       | Proprietary     | Campo alfanumerico che indica la          |
 | Univoco                 |         |            |         |         | Code            | natura del versante;                      |
 |                         |         |            |         |         |                 | può assumere i seguenti valori:           |
 |                         |         |            |         |         |                 |                                           |
 |                         |         |            |         |         |                 | - **F** = Persona fisica                  |
 |                         |         |            |         |         |                 | - **G** = Persona Giuridica.              |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| codiceIdentificativo    | 3       | an         |         | 1..35   | Tax             | Campo alfanumerico che può                |
+| codiceIdentificativo    | 3       | an         | 1..1    | 1..35   | Tax             | Campo alfanumerico che può                |
 | Univoco                 |         |            |         |         | Identification  | contenere il,codice fiscale o,            |
 |                         |         |            |         |         | Number          | in alternativa, la partita IVA            |
 |                         |         |            |         |         |                 | del soggetto versante.                    |
@@ -226,33 +226,33 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | può essere utilizzato il valore           |
 |                         |         |            |         |         |                 | **ANONIMO**                               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| anagraficaVersante      | 2       | an         |         | 1..70   | Name            | Indica il nominativo o la ragione         |
+| anagraficaVersante      | 2       | an         | 1..1    | 1..70   | Name            | Indica il nominativo o la ragione         |
 |                         |         |            |         |         |                 | sociale del versante.                     |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| indirizzoVersante       | 3       | an         |         | 1..70   | StreetName      | Indica l’indirizzo del versante.          |
+| indirizzoVersante       | 3       | an         | 0..1    | 1..70   | StreetName      | Indica l’indirizzo del versante.          |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| civicoVersante          | 3       | an         |         | 1..16   | Building        | Indica il                                 |
+| civicoVersante          | 3       | an         | 0..1    | 1..16   | Building        | Indica il                                 |
 |                         |         |            |         |         | Number          | numero civico del versante.               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| capVersante             | 3       | an         |         | 1..16   | Postal Code     | Indica il                                 |
+| capVersante             | 3       | an         | 0..1    | 1..16   | Postal Code     | Indica il                                 |
 |                         |         |            |         |         |                 | CAP del versante.                         |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| localitaVersante        | 3       | an         |         | 1..35   | Town Name       | Indica la                                 |
+| localitaVersante        | 3       | an         | 0..1    | 1..35   | Town Name       | Indica la                                 |
 |                         |         |            |         |         |                 | località del versante.                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| provinciaVersante       | 3       | an         |         | 1..35   | Country         | Indica la                                 |
+| provinciaVersante       | 3       | an         | 0..1    | 1..35   | Country         | Indica la                                 |
 |                         |         |            |         |         | SubDivision     | provincia del versante.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| nazioneVersante         | 3       | an         |         | 2       | Country         | Indica il                                 |
+| nazioneVersante         | 3       | an         | 0..1    | 2       | Country         | Indica il                                 |
 |                         |         |            |         |         |                 | codice nazione del versante               |
 |                         |         |            |         |         |                 | secondo lo standard ISO 3166.             |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| e-mailVersante          | 3       | an         |         | 1..256  | Remittance      | Indirizzo                                 |
+| e-mailVersante          | 3       | an         | 0..1    | 1..256  | Remittance      | Indirizzo                                 |
 |                         |         |            |         |         | Location        | di posta elettronica del versante.        |
 |                         |         |            |         |         | Electronic      |                                           |
 |                         |         |            |         |         | Address         |                                           |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| soggettoPagatore        | 1       | s          |         |         | Ultimate        | Aggregazione                              |
+| soggettoPagatore        | 1       | s          | 1..1    |         | Ultimate        | Aggregazione                              |
 |                         |         |            |         |         | Debtor/Debtor   | “soggetto pagatore”                       |
 |                         |         |            |         |         | [1]_            | che rappresenta il                        |
 |                         |         |            |         |         |                 | **soggetto**                              |
@@ -261,12 +261,12 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | confronti                                 |
 |                         |         |            |         |         |                 | della Pubblica Amministrazione            |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| identificativoUnivoco   | 2       | s          |         |         |                 | Aggregazione                              |
+| identificativoUnivoco   | 2       | s          | 1..1    |         |                 | Aggregazione                              |
 | Pagatore                |         |            |         |         |                 | che riporta le informazioni               |
 |                         |         |            |         |         |                 | concernenti l’identificazione             |
 |                         |         |            |         |         |                 | fiscale del pagatore.                     |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| tipoIdentificativo      | 3       | an         |         | 1       | Proprietary     | Campo alfanumerico che indica             |
+| tipoIdentificativo      | 3       | an         | 1..1    | 1       | Proprietary     | Campo alfanumerico che indica             |
 | Univoco                 |         |            |         |         | Code            | la natura del pagatore                    |
 |                         |         |            |         |         |                 | può assumere i seguenti                   |
 |                         |         |            |         |         |                 | valori:                                   |
@@ -274,7 +274,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | - **F** = Persona fisica,                 |
 |                         |         |            |         |         |                 | - **G** = Persona Giuridica.              |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| codiceIdentificativo    | 3       | an         |         | 1..35   | Tax             | Campo alfanumerico che può                |
+| codiceIdentificativo    | 3       | an         | 1..1    | 1..35   | Tax             | Campo alfanumerico che può                |
 | Univoco                 |         |            |         |         | Identification  | contenere il codice fiscale o,            |
 |                         |         |            |         |         | Number          | in alternativa, la partita                |
 |                         |         |            |         |         |                 | IVA del pagatore.                         |
@@ -285,108 +285,108 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | utilizzato il valore                      |
 |                         |         |            |         |         |                 | **“ANONIMO”**                             |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| anagraficaPagatore      | 2       | an         |         | 1..70   | Name            | Indica il                                 |
+| anagraficaPagatore      | 2       | an         | 1..1    | 1..70   | Name            | Indica il                                 |
 |                         |         |            |         |         |                 | nominativo o la ragione                   |
 |                         |         |            |         |         |                 | sociale del pagatore                      |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| indirizzoPagatore       | 2       | an         |         | 1..70   | Street Name     | Indica                                    |
+| indirizzoPagatore       | 2       | an         | 0..1    | 1..70   | Street Name     | Indica                                    |
 |                         |         |            |         |         |                 | l’indirizzo del pagatore                  |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| civicoPagatore          | 2       | an         |         | 1..16   | Building        | Indica il                                 |
+| civicoPagatore          | 2       | an         | 0..1    | 1..16   | Building        | Indica il                                 |
 |                         |         |            |         |         | Number          | numero civico del pagatore.               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| capPagatore             | 2       | an         |         | 1..16   | Postal Code     | Indica il                                 |
+| capPagatore             | 2       | an         | 0..1    | 1..16   | Postal Code     | Indica il                                 |
 |                         |         |            |         |         |                 | CAP del pagatore                          |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| localitaPagatore        | 2       | an         |         | 1..35   | Town Name       | Indica la                                 |
+| localitaPagatore        | 2       | an         | 0..1    | 1..35   | Town Name       | Indica la                                 |
 |                         |         |            |         |         |                 | località del pagatore.                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| provinciaPagatore       | 2       | an         |         | 1..35   | Country         | Indica la                                 |
+| provinciaPagatore       | 2       | an         | 0..1    | 1..35   | Country         | Indica la                                 |
 |                         |         |            |         |         | SubDivision     | provincia del pagatore                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| nazionePagatore         | 2       | an         |         | 2       | Country         | Indica ilcodice nazione del               |
+| nazionePagatore         | 2       | an         | 0..1    | 2       | Country         | Indica ilcodice nazione del               |
 |                         |         |            |         |         |                 | pagatore secondo lo standard              |
 |                         |         |            |         |         |                 | ISO 3166.                                 |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| e-mailPagatore          | 2       | an         |         | 1..256  | Remittance      | Indirizzo di posta elettronica            |
+| e-mailPagatore          | 2       | an         | 0..1    | 1..256  | Remittance      | Indirizzo di posta elettronica            |
 |                         |         |            |         |         | Location        | del pagatore                              |
 |                         |         |            |         |         | Electronic      |                                           |
 |                         |         |            |         |         | Address         |                                           |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| enteBeneficiario        | 1       | s          |         |         | Creditor        | Aggregazione                              |
+| enteBeneficiario        | 1       | s          | 1..1    |         | Creditor        | Aggregazione                              |
 |                         |         |            |         |         |                 | “ente beneficiario” creditore             |
 |                         |         |            |         |         |                 | di somme nei confronti del                |
 |                         |         |            |         |         |                 | soggetto                                  |
 |                         |         |            |         |         |                 | pagatore; è costituita dai                |
 |                         |         |            |         |         |                 | seguenti elementi:                        |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| identificativoUnivoco   | 2       | s          |         |         |                 | Aggregazione                              |
+| identificativoUnivoco   | 2       | s          | 1..1    |         |                 | Aggregazione                              |
 | Beneficiario            |         |            |         |         |                 | che riporta le informazioni               |
 |                         |         |            |         |         |                 | concernenti l’identificazione             |
 |                         |         |            |         |         |                 | fiscale                                   |
 |                         |         |            |         |         |                 | dell’ente beneficiario.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| tipoIdentificativo      | 3       | an         |         | 1       | Proprietary     | Campo                                     |
+| tipoIdentificativo      | 3       | an         | 1..1    | 1       | Proprietary     | Campo                                     |
 | Univoco                 |         |            |         |         | Code            | alfanumerico che indica la natura         |
 |                         |         |            |         |         |                 | dell’ente beneficiario; se presente       |
 |                         |         |            |         |         |                 | deve assumere il valore **G**             |
 |                         |         |            |         |         |                 | Identificativo fiscale Persona            |
 |                         |         |            |         |         |                 | Giuridica.                                |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| codiceIdentificativo    | 3       | an         |         | 1..35   | Tax             | Campo                                     |
+| codiceIdentificativo    | 3       | an         | 1..1    | 1..35   | Tax             | Campo                                     |
 | Univoco                 |         |            |         |         | Identification  | alfanumerico contenente il codice         |
 |                         |         |            |         |         | Number          | fiscale dell’Ente Creditore               |
 |                         |         |            |         |         |                 | destinatario del pagamento.               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| denominazione           | 2       | an         |         | 1..70   | Name            | Contiene la denominazione                 |
+| denominazione           | 2       | an         | 1..1    | 1..70   | Name            | Contiene la denominazione                 |
 | Beneficiario            |         |            |         |         |                 | dell’Ente Creditore                       |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| codiceUnitOper          | 2       | an         |         | 1..35   |                 | Indica il codice                          |
+| codiceUnitOper          | 2       | an         | 0..1    | 1..35   |                 | Indica il codice                          |
 | Beneficiario            |         |            |         |         |                 | dell’unità operativa                      |
 |                         |         |            |         |         |                 | destinataria                              |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| denomUnitOper           | 2       | an         |         | 1..70   |                 | Contiene la                               |
+| denomUnitOper           | 2       | an         | 0..1    | 1..70   |                 | Contiene la                               |
 | Beneficiario            |         |            |         |         |                 | denominazione dell’unità                  |
 |                         |         |            |         |         |                 | operativa destinataria.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| indirizzo               | 2       | an         |         | 1..70   | Street Name     | Indica l’indirizzo dell’ente              |
+| indirizzo               | 2       | an         | 0..1    | 1..70   | Street Name     | Indica l’indirizzo dell’ente              |
 | Beneficiario            |         |            |         |         |                 | beneficiario.                             |
 |                         |         |            |         |         |                 | Può coincidere con quello                 |
 |                         |         |            |         |         |                 | dell’unità                                |
 |                         |         |            |         |         |                 | operativa destinataria                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| civicoBeneficiario      | 2       | an         |         | 1..16   | Building        | Indica il numero civico                   |
+| civicoBeneficiario      | 2       | an         | 0..1    | 1..16   | Building        | Indica il numero civico                   |
 |                         |         |            |         |         | Number          | dell’ente beneficiario.                   |
 |                         |         |            |         |         |                 | Può coincidere con quello                 |
 |                         |         |            |         |         |                 | dell’unità                                |
 |                         |         |            |         |         |                 | operativa destinataria.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| capBeneficiario         | 2       | an         |         | 1..16   | Postal Code     | Indica il CAP dell’ente beneficiario.     |
+| capBeneficiario         | 2       | an         | 0..1    | 1..16   | Postal Code     | Indica il CAP dell’ente beneficiario.     |
 |                         |         |            |         |         |                 | Può coincidere con quello dell’unità      |
 |                         |         |            |         |         |                 | operativa destinataria                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| localita                | 2       | an         |         | 1..35   | Town Name       | Indica la località dell’ente              |
+| localita                | 2       | an         | 0..1    | 1..35   | Town Name       | Indica la località dell’ente              |
 | Beneficiario            |         |            |         |         |                 | beneficiario.                             |
 |                         |         |            |         |         |                 | Può coincidere con quello                 |
 |                         |         |            |         |         |                 | dell’unità                                |
 |                         |         |            |         |         |                 | operativa destinataria                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| provincia               | 2       | an         |         | 1..35   | Country         | Indica la provincia                       |
+| provincia               | 2       | an         | 0..1    | 1..35   | Country         | Indica la provincia                       |
 | Beneficiario            |         |            |         |         | SubDivision     | dell’ente beneficiario.                   |
 |                         |         |            |         |         |                 | Può coincidere con quello                 |
 |                         |         |            |         |         |                 | dell’unità                                |
 |                         |         |            |         |         |                 | operativa destinataria                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| nazione                 | 2       | an         |         | 2       | Country         | Indica il                                 |
+| nazione                 | 2       | an         | 0..1    | 2       | Country         | Indica il                                 |
 | Beneficiario            |         |            |         |         |                 | codice nazione dell’ente                  |
 |                         |         |            |         |         |                 | beneficiario                              |
 |                         |         |            |         |         |                 | secondo lo standard ISO 3166.             |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| datiVersamento          | 1       | s          |         |         |                 | Aggregazione                              |
+| datiVersamento          | 1       | s          | 1..1    |         |                 | Aggregazione                              |
 |                         |         |            |         |         |                 | “dati del Versamento”                     |
 |                         |         |            |         |         |                 | costituita dai seguenti elementi:         |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| dataEsecuzione          | 2       | an         |         | 10      | Requested       | Indica la data in cui si richiede che     |
+| dataEsecuzione          | 2       | an         | 1..1    | 10      | Requested       | Indica la data in cui si richiede che     |
 | Pagamento               |         |            |         |         | Execution       | venga effettuato                          |
 |                         |         |            |         |         | Date            | il pagamento secondo il formato           |
 |                         |         |            |         |         |                 | ISO 8601 [YYYY]-[MM]-[DD].                |
@@ -397,7 +397,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | 30 giorni                                 |
 |                         |         |            |         |         |                 | rispetto alla stessa data.                |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| importoTotale           | 2       | an         |         | 3..12   | Amount          | Campo numerico (due cifre per la          |
+| importoTotale           | 2       | an         | 1..1    | 3..12   | Amount          | Campo numerico (due cifre per la          |
 | DaVersare               |         |            |         |         |                 | parte decimale,                           |
 |                         |         |            |         |         |                 | il separatore dei centesimi è il          |
 |                         |         |            |         |         |                 | punto “.”), indicante l’importo           |
@@ -409,7 +409,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | presente nella struttura                  |
 |                         |         |            |         |         |                 | DatiSingoloVersamento.                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| tipoVersamento          | 2       | an         |         | 4       | Proprietary     | Forma tecnica di pagamento attraverso     |
+| tipoVersamento          | 2       | an         | 1..1    | 4       | Proprietary     | Forma tecnica di pagamento attraverso     |
 |                         |         |            |         |         | Code            | il quale                                  |
 |                         |         |            |         |         |                 | viene effettuata la provvista presso      |
 |                         |         |            |         |         |                 | il PSP. Può assumere i seguenti           |
@@ -423,7 +423,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | - **PO**   Pagamento attivato presso PSP  |
 |                         |         |            |         |         |                 | - **OBEP** On-line banking e-payment      |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| identificativo          | 2       | an         |         | 1..35   | Creditor        | Riferimento univoco                       |
+| identificativo          | 2       | an         | 1..1    | 1..35   | Creditor        | Riferimento univoco                       |
 | UnivocoVersamento       |         |            |         |         | Reference       | assegnato al                              |
 |                         |         |            |         |         |                 | versamento dall’Ente                      |
 |                         |         |            |         |         |                 | Creditore, utilizzato ai fini             |
@@ -437,7 +437,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | Capitolo_7/Capitolo7.rst#identificativo   |
 |                         |         |            |         |         |                 | -univoco-versamento>`_                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| CodiceContesto          | 2       | an         |         | 1..35   | Message         | Codice univoco necessario a               |
+| CodiceContesto          | 2       | an         | 1..1    | 1..35   | Message         | Codice univoco necessario a               |
 | Pagamento               |         |            |         |         | Identification  | definire il                               |
 |                         |         |            |         |         |                 | contesto                                  |
 |                         |         |            |         |         |                 | nel quale viene effettuato                |
@@ -447,7 +447,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | rst#codice-contesto-pagamento>`_          |
 |                         |         |            |         |         |                 | della presente Sezione.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| ibanAddebito            | 2       | an         |         | 1..35   | Debtor.         | Identifica l’International                |
+| ibanAddebito            | 2       | an         | 0..1    | 1..35   | Debtor.         | Identifica l’International                |
 |                         |         |            |         |         | Account         | Bank Account                              |
 |                         |         |            |         |         | IBAN            | Number del conto da                       |
 |                         |         |            |         |         |                 | addebitare definito secondo lo            |
@@ -457,13 +457,13 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | tipoPagamento assuma                      |
 |                         |         |            |         |         |                 | il valore “AD”**                          |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| bicAddebito             | 2       | an         |         | 8 / 11  | Debtor Agent    | Bank                                      |
+| bicAddebito             | 2       | an         | 0..1    | 8 / 11  | Debtor Agent    | Bank                                      |
 |                         |         |            |         |         | BIC             | Identifier Code della banca               |
 |                         |         |            |         |         |                 | di addebito,                              |
 |                         |         |            |         |         |                 | definito secondo                          |
 |                         |         |            |         |         |                 | lo standard ISO 9362.                     |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| firmaRicevuta           | 2       | an         |         | 1..1    | Proprietary     | Codice del tipo di firma                  |
+| firmaRicevuta           | 2       | an         | 1..1    | 1..1    | Proprietary     | Codice del tipo di firma                  |
 |                         |         |            |         |         | Code            | digitale o elettronica qualificata        |
 |                         |         |            |         |         |                 | cui deve essere                           |
 |                         |         |            |         |         |                 | sottoposto il messaggio                   |
@@ -484,7 +484,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | Il dato viene mantenuto per retro         |
 |                         |         |            |         |         |                 | compatibilità.                            |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| datiSingolo             | 2       | S          |         |         |                 | Aggregazione “dati dei singoli            |
+| datiSingolo             | 2       | S          | 1..5    |         |                 | Aggregazione “dati dei singoli            |
 | Versamento              |         |            |         |         |                 | versamenti” da un minimo di uno           |
 |                         |         |            |         |         |                 | ad un massimo di 5 occorrenze             |
 |                         |         |            |         |         |                 | di versamento,                            |
@@ -499,7 +499,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | essere riportate nello                    |
 |                         |         |            |         |         |                 | stesso ordine della RPT.                  |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| importoSingolo          | 3       | an         |         | 3..12   | Amount          | Campo numerico                            |
+| importoSingolo          | 3       | an         | 1..1    | 3..12   | Amount          | Campo numerico                            |
 | Versamento              |         |            |         |         |                 | (due cifre per la parte decimale,         |
 |                         |         |            |         |         |                 | il separatore dei centesimi               |
 |                         |         |            |         |         |                 | è il punto “.”),                          |
@@ -510,7 +510,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | Deve essere diverso da                    |
 |                         |         |            |         |         |                 | **“0.00”**.                               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| commissione             | 3       | an         |         | 3..12   | Charges Fees    | Campo numerico                            |
+| commissione             | 3       | an         | 0..1    | 3..12   | Charges Fees    | Campo numerico                            |
 | CaricoPA                |         |            |         |         |                 | (due cifre per la                         |
 |                         |         |            |         |         |                 | parte decimale,                           |
 |                         |         |            |         |         |                 | il separatore dei                         |
@@ -534,7 +534,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | diverso da                                |
 |                         |         |            |         |         |                 | **“0.00”**.                               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| ibanAccredito           | 3       | an         |         | 1..35   | Creditor        | Identifica l’International                |
+| ibanAccredito           | 3       | an         | 0..1    | 1..35   | Creditor        | Identifica l’International                |
 |                         |         |            |         |         | Account         | Bank Account                              |
 |                         |         |            |         |         | IBAN            | Number,                                   |
 |                         |         |            |         |         |                 | definito secondo lo                       |
@@ -552,7 +552,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | In tutti gli alti casi è                  |
 |                         |         |            |         |         |                 | obbligatorio.                             |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| bicAccredito            | 3       | an         |         | 8 / 11  | Creditor        | Bank                                      |
+| bicAccredito            | 3       | an         | 0..1    | 8 / 11  | Creditor        | Bank                                      |
 |                         |         |            |         |         | Agent           | Identifier Code definito                  |
 |                         |         |            |         |         | BIC             | secondo                                   |
 |                         |         |            |         |         |                 | lo standard                               |
@@ -561,7 +561,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | essere effettuato                         |
 |                         |         |            |         |         |                 | l’accredito.                              |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| ibanAppoggio            | 3       | an         |         | 1..35   | Creditor        | Identifica l’International                |
+| ibanAppoggio            | 3       | an         | 0..1    | 1..35   | Creditor        | Identifica l’International                |
 |                         |         |            |         |         | Account         | Bank Account                              |
 |                         |         |            |         |         | IBAN            | Number,definito secondo                   |
 |                         |         |            |         |         |                 | lo standard                               |
@@ -581,12 +581,12 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | linvio-delle-richieste-di-pagamento-      |
 |                         |         |            |         |         |                 | telematiche>`__                           |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| bicAppoggio             | 3       | an         |         | 8 / 11  | Creditor        | Bank Identifier Code                      |
+| bicAppoggio             | 3       | an         | 0..1    | 8 / 11  | Creditor        | Bank Identifier Code                      |
 |                         |         |            |         |         | Agent           | definito secondo lo standard              |
 |                         |         |            |         |         | BIC             | ISO 9362 dell’elemento                    |
 |                         |         |            |         |         |                 | ibanAppoggio.                             |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| credenziali             | 3       | an         |         | 1..35   |                 | Eventuali                                 |
+| credenziali             | 3       | an         | 0..1    | 1..35   |                 | Eventuali                                 |
 | Pagatore                |         |            |         |         |                 | credenziali richieste dal                 |
 |                         |         |            |         |         |                 | Prestatore                                |
 |                         |         |            |         |         |                 | di servizi di Pagamento                   |
@@ -597,7 +597,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | utilizzabile una sola                     |
 |                         |         |            |         |         |                 | volta).                                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| causale                 | 3       | an         |         | 1..140  | Unstructured    | Rappresenta                               |
+| causale                 | 3       | an         | 1..1    | 1..140  | Unstructured    | Rappresenta                               |
 | Versamento              |         |            |         |         | Remittance      | la descrizione estesa                     |
 |                         |         |            |         |         | Information     | della causale                             |
 |                         |         |            |         |         |                 | del versamento che                        |
@@ -608,7 +608,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | dell’Allegato A                           |
 |                         |         |            |         |         |                 | alle Linee guida.                         |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| datiSpecifici           | 3       | an         |         | 1..140  | Additional      | Rappresenta l’indicazione                 |
+| datiSpecifici           | 3       | an         | 1..1    | 1..140  | Additional      | Rappresenta l’indicazione                 |
 | Riscossione             |         |            |         |         | Remittance      | dell’imputazione della specifica          |
 |                         |         |            |         |         | Information     | entrata ed è così articolato:             |
 |                         |         |            |         |         |                 | **tipo contabilità”/”codice contabilità** |
@@ -628,7 +628,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | **9.** Altro codice ad uso                |
 |                         |         |            |         |         |                 | dell’Ente Creditore                       |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| datiMarca               | 3       | s          |         |         |                 | Aggregazione che contiene                 |
+| datiMarca               | 3       | s          | 0..1    |         |                 | Aggregazione che contiene                 |
 | BolloDigitale           |         |            |         |         |                 | le informazioni necessarie al             |
 |                         |         |            |         |         |                 | PSP per generare la marca                 |
 |                         |         |            |         |         |                 | da bollo digitale. La struttura           |
@@ -639,14 +639,14 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | essere                                    |
 |                         |         |            |         |         |                 | popolata.                                 |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| tipoBollo               | 4       | an         |         | 2       | Proprietary     | Contiene la tipologia di                  |
+| tipoBollo               | 4       | an         | 1..1    | 2       | Proprietary     | Contiene la tipologia di                  |
 |                         |         |            |         |         | Code            | Bollo Digitale.                           |
 |                         |         |            |         |         |                 | Può assumere i seguenti                   |
 |                         |         |            |         |         |                 | valori:                                   |
 |                         |         |            |         |         |                 |                                           |
 |                         |         |            |         |         |                 | **01 Imposta di bollo**                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| hashDocumento           | 4       | an         |         | 70      |                 | Contiene l’impronta                       |
+| hashDocumento           | 4       | an         | 1..1    | 70      |                 | Contiene l’impronta                       |
 |                         |         |            |         |         |                 | informatica (digest)                      |
 |                         |         |            |         |         |                 | del documento informatico                 |
 |                         |         |            |         |         |                 | cui è                                     |
@@ -661,7 +661,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | convertito                                |
 |                         |         |            |         |         |                 | in base64 [2]_                            |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| provinciaResidenza      | 4       | an         |         | 2       | Proprietary     | Sigla automobilistica                     |
+| provinciaResidenza      | 4       | an         | 1..1    | 2       | Proprietary     | Sigla automobilistica                     |
 |                         |         |            |         |         | Code            | della provincia di                        |
 |                         |         |            |         |         |                 | residenza del soggetto                    |
 |                         |         |            |         |         |                 | pagatore.                                 |
@@ -1436,7 +1436,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 | dataInizioValidita         | 2       | an         | 1..1    | 10      | Data in cui inizia la validità              |
 |                            |         |            |         |         | delle informazioni relative                 |
 |                            |         |            |         |         | all’Ente Creditore nel                      |
-|                            |         |            |         |         | formato ISO 8601: [YYYY]-[MM]-[DD]          |
+|                            |         |            |         |         | formato ISO 8601: **[YYYY]-[MM]-[DD]**      |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | pagamentiPressoPSP         | 2       | n          | 1..1    | 1       | Indica se l’Ente Creditore                  |
 |                            |         |            |         |         | consente i pagamenti                        |
@@ -1446,11 +1446,9 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | il-psp>`_)                                  |
 |                            |         |            |         |         | può assumere i seguenti valori:             |
 |                            |         |            |         |         |                                             |
-|                            |         |            |         |         | - **0** NON consente i                      |
-|                            |         |            |         |         | pagamenti c/o i PSP                         |
+|                            |         |            |         |         | - **0 NON consente i pagamenti c/o i PSP**  |
 |                            |         |            |         |         |                                             |
-|                            |         |            |         |         | - **1** CONSENTE i                          |
-|                            |         |            |         |         | pagamenti c/o i PSP                         |
+|                            |         |            |         |         | - **1 CONSENTE i agamenti c/o i PSP**       |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | contactCenterEnteCreditore | 2       | an         | 1..1    | 255     | Recapiti dell'Ente Creditore                |
 |                            |         |            |         |         | (Numero telefonico e/o                      |
@@ -1486,7 +1484,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | cui è attiva l'erogazione dello specifico   |
 |                            |         |            |         |         | servizio da parte dell’Ente Creditore       |
 |                            |         |            |         |         | nel formato ISO 8601:                       |
-|                            |         |            |         |         | [YYYY]-[MM]-[DD]                            |
+|                            |         |            |         |         | **[YYYY]-[MM]-[DD]**                        |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | avvisaturaPull             | 2       | n          | 0..1    | 1       | Indica                                      |
 |                            |         |            |         |         | che l’Ente Creditore consente di attivare   |
@@ -1552,12 +1550,12 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 | fasciaOrariaDa             | 5       | an         | 0..1    | 8       | Orario di inizio disponibilità              |
 |                            |         |            |         |         | nell’ambito del                             |
 |                            |         |            |         |         | giorno nel formato                          |
-|                            |         |            |         |         | [hh]:[mm]:[ss].                             |
+|                            |         |            |         |         | **[hh]:[mm]:[ss].**                         |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | fasciaOrariaA              | 5       | an         | 0..1    | 8       | Orario di fine disponibilità                |
 |                            |         |            |         |         | nell’ambito del giorno nel                  |
 |                            |         |            |         |         | formato                                     |
-|                            |         |            |         |         | [hh]:[mm]:[ss].                             |
+|                            |         |            |         |         | **[hh]:[mm]:[ss].**                         |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | indisponibilita            | 3       | s          | 0..n    |         | Aggregazione relativa al                    |
 |                            |         |            |         |         | giorno della settimana,                     |
@@ -1691,11 +1689,9 @@ in Tabella 7.
 |                        |         |            |         |         | il-psp>`_)                                  |
 |                        |         |            |         |         | può assumere i seguenti valori:             |
 |                        |         |            |         |         |                                             |
-|                        |         |            |         |         | - **0** NON consente i                      |
-|                        |         |            |         |         | pagamenti c/o i PSP                         |
+|                        |         |            |         |         | - **0 NON consente i pagamenti c/o i PSP**  |
 |                        |         |            |         |         |                                             |
-|                        |         |            |         |         | - **1** CONSENTE i                          |
-|                        |         |            |         |         | agamenti c/o i PSP                          |
+|                        |         |            |         |         | - **1 CONSENTE i agamenti c/o i PSP**       |
 +------------------------+---------+------------+---------+---------+---------------------------------------------+
 | erogazioneServizio     | 2       | s          | 0..1    |         | Aggregazione relativa alle fasce orarie di  |
 |                        |         |            |         |         | erogazione del servizio da parte dell’Ente  |
@@ -2821,7 +2817,7 @@ gli elementi componenti il messaggio stesso, ora indicati nella Tabella
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+
 | mittenteACK                            | 1       | an         | 1..1    | 1..25   | Data e ora di generazione del messaggio        |
 |                                        |         |            |         |         | di ACK secondo il formato ISO 8601             |
-|                                        |         |            |         |         | [YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]                |
+|                                        |         |            |         |         | **[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]**            |
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+
 | datiMessaggioReferenziato              | 1       | s          | 1..1    |         | Mittente del messaggio di ACK                  |
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+

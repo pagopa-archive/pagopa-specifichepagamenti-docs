@@ -130,7 +130,7 @@ Come indicato nel capitolo 2 dell’Allegato A alle Linee guida, il
 formato del **Numero Avviso** è il seguente:
 
 +----------------------------------------------------------------+--------------------------------------------------------+
-| <aux digit (1n)>[<application code> (2n)]<codice IUV (15|17n)> | (A) [2]_                                               |
+| <aux digit (1n)>[<application code> (2n)]<codice IUV (15|17n)>   (A) [2]_                                               |
 +================================================================+========================================================+
 | **aux digit**                                                  | Valore numerico che definisce la struttura del codice  |
 |                                                                | IUV in funzione del numero di punti di generazione     |

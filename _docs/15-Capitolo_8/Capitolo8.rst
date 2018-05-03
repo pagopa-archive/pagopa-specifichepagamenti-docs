@@ -643,21 +643,21 @@ Nel caso in cui l’EC non utilizzi la funzione di “emulatore” oppure il
 proprio software non sia *compliant* con la versione 1.3 del WISP, lo
 stesso ente dovrà:
 
-a) codificare nell’elemento tipoVersamento della struttura
-   datiVersamento della RPT il valore fisso **BBT**  [2]_
+- a) codificare nell’elemento tipoVersamento della struttura
+     datiVersamento della RPT il valore fisso **BBT**  [2]_
 
-b) usare la primitiva **nodoInviaCarrelloRPT** (in una prima fase è
-   ammessa anche la primitiva deprecata **nodoInviaRPT**) ed
-   impostare con i valori appresso indicati i seguenti parametri
-   fissi:
+- b) usare la primitiva **nodoInviaCarrelloRPT** (in una prima fase è
+     ammessa anche la primitiva deprecata **nodoInviaRPT**) ed
+     impostare con i valori appresso indicati i seguenti parametri
+     fissi:
 
-+-----------------------------------+--------------------+
-| 2. identificativoPSP              | **AGID_01**        |
-+-----------------------------------+--------------------+
-| 3. identificativoIntermediarioPSP | **97735020584**    |
-+-----------------------------------+--------------------+
-| 4. identificativoCanale           | **97735020584_02** |
-+-----------------------------------+--------------------+
++-------------------------------------+--------------------+
+| I-2. identificativoPSP              | **AGID_01**        |
++-------------------------------------+--------------------+
+| I-3. identificativoIntermediarioPSP | **97735020584**    |
++-------------------------------------+--------------------+
+| I-4. identificativoCanale           | **97735020584_02** |
++-------------------------------------+--------------------+
 
 Casi di errore e strategie di ripristino per l’Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1247,7 +1247,7 @@ all'elemento faultBean.description, si precisa che, nel caso in cui il
 faultCode sia uguale a:
 
 -  *PPT_CANALE_ERRORE*, il campo è valorizzato con il contenuto del
-       **faultBean** generato dal PSP, convertito in formato stringa;
+   **faultBean** generato dal PSP, convertito in formato stringa;
 
 -  *CANALE_SEMANTICA*, l'Ente Creditore dovrà indicare lo specifico
    errore legato all'elaborazione dell'oggetto ricevuto.
@@ -1313,37 +1313,42 @@ costituito da un'unica e sola RPT.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
-d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
-5. password                                                           
-6. identificativoPSP: per permettere di specificare il PSP     
-7. identificativoIntermediarioPSP                                     
-8. identificativoCanale: per permettere di specificare il percorso verso il PSP   
-9. tipoFirma: **parametro deprecato**                                 
-10. RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
+I-5  password
+
+I-6  identificativoPSP: per permettere di specificare il PSP
+
+I-7  identificativoIntermediarioPSP
+
+I-8  identificativoCanale: per permettere di specificare il percorso verso il PSP
+
+I-9  tipoFirma: **parametro deprecato**
+
+I-10 RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1 esito: OK oppure KO
 
-2. Redirect: valori ammessi 0 | 1; specifica se il pagamento prescelto
-   dall'utente prevede la re-direzione dell’utilizzatore finale
+O-2 Redirect: valori ammessi 0 | 1; specifica se il pagamento prescelto
+dall'utente prevede la re-direzione dell’utilizzatore finale
 
-3. URL: a cui re-dirigere il browser dell’utilizzatore finale,
-   contenente anche una *query string* “idSession=<idSession>” che
-   identifica univocamente l’operazione di pagamento
+O-3 URL: a cui re-dirigere il browser dell’utilizzatore finale,
+contenente anche una *query string* “idSession=<idSession>” che
+identifica univocamente l’operazione di pagamento
 
 **Gestione degli errori**
 
@@ -1352,11 +1357,11 @@ in caso di errore: **faultBean** emesso dal **NodoSPC**.
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-1. faultBean.id = <identificativoPSP>:
+1. **faultBean.id = <identificativoPSP>:**
 
 *PPT_CANALE_ERRORE* (vedi contenuto dato faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`__)
 
-2. faultBean.id = “NodoDeiPagamentiSPC”:
+2. **faultBean.id = “NodoDeiPagamentiSPC”:**
 
 *PPT_SINTASSI_XSD*
 
@@ -1433,43 +1438,43 @@ relativo all’intero “carrello”.
 
 **Parametri Header**
 
-1. intestazioneCarrelloPPT:
+H-1. intestazioneCarrelloPPT:
 
-   a. identificativoCarrello
+- a. identificativoCarrello
 
-   b. identificativoIntermediarioPA
+- b. identificativoIntermediarioPA
 
-   c. identificativoStazioneIntermediarioPA
+- c. identificativoStazioneIntermediarioPA
 
 **Parametri di input**
 
-1. password
+I-1. password
 
-2. identificativoPSP: per permettere di specificare il PSP
+I-2. identificativoPSP: per permettere di specificare il PSP
 
-3. identificativoIntermediarioPSP
+I-3. identificativoIntermediarioPSP
 
-4. identificativoCanale
+I-4. identificativoCanale
 
-5. listaRPT: array di:
+I-5. listaRPT: array di:
 
-   a. idDominio
+- a. idDominio
 
-   b. identificativoUnivocoVersamento
+- b. identificativoUnivocoVersamento
 
-   c. codiceContestoPagamento
+- c. codiceContestoPagamento
 
-   d. tipoFirma: **parametro deprecato**
+- d. tipoFirma: **parametro deprecato**
 
-   e. RPT: file XML in formato base64 binary (vedi Tabella 1)
+- e. RPT: file XML in formato base64 binary (vedi Tabella 1)
 
 **Parametri di output**
 
-1. URL: a cui re-dirigere il browser dell’utilizzatore finale,
-   contenente anche una *query string* “idSession=<idSession>” che
-   identifica univocamente l’operazione di pagamento
+O-1. URL: a cui re-dirigere il browser dell’utilizzatore finale,
+contenente anche una *query string* “idSession=<idSession>” che
+identifica univocamente l’operazione di pagamento
 
-2. esitoComplessivoOperazione: OK oppure KO.
+O-2. esitoComplessivoOperazione: OK oppure KO.
 
 **Gestione degli errori**
 
@@ -1483,7 +1488,7 @@ faultBean, dove può essere presente l'elemento opzionale serial
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-1. faultBean.id = <identificativoPSP>:
+**1. faultBean.id = <identificativoPSP>:**
 
 *PPT_CANALE_ERRORE* (vedi precisazioni al dato faultBean.description al `§ 8.2 <../15-Capitolo_8/Capitolo8.rst#interfacce-web-service-e-dettaglio-azioni-soap>`__)
 
@@ -1495,7 +1500,7 @@ funzione di faultBean.id:
 
 *PPT_FIRMA_INDISPONIBILE*
 
-2. faultBean.id = “NodoDeiPagamentiSPC”:
+**2. faultBean.id = “NodoDeiPagamentiSPC”:**
 
 *PPT_ID_CARRELLO_DUPLICATO*
 
@@ -1563,48 +1568,46 @@ precedente **nodoInviaRPT** sia stata perduta.
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativoDominio
+I-4. identificativoDominio
 
-5. identificativoUnivocoVersamento
+I-5. identificativoUnivocoVersamento
 
-6. codiceContestoPagamento
+I-6. codiceContestoPagamento
 
 **Parametri di output**
 
-1. Redirect: valori ammessi 0 | 1; specifica se il pagamento prescelto
-   dall'utente prevede la re-direzione dell’utilizzatore finale
+O-1. Redirect: valori ammessi 0 | 1; specifica se il pagamento prescelto
+dall'utente prevede la re-direzione dell’utilizzatore finale
 
-2. URL: a cui re-dirigere il browser dell’utilizzatore finale,
-   contenente chiave di sessione
+O-2. URL: a cui re-dirigere il browser dell’utilizzatore finale,
+contenente chiave di sessione
 
-3. stato: lo stato attuale della RPT (vedi Tabella 35 - Possibili
-   "stati" di una RPT)
+O-3. stato: lo stato attuale della RPT (vedi Tabella 35 - Possibili "stati" di una RPT)
 
-4. storicoLista: struttura contenente una lista di elementi che
-   identificano i vari stati che la RPT ha assunto durante la sua
-   storia, da quando è stata ricevuta dal Nodo dei Pagamenti-SPC.
+O-4. storicoLista: struttura contenente una lista di elementi che
+identificano i vari stati che la RPT ha assunto durante la sua
+storia, da quando è stata ricevuta dal Nodo dei Pagamenti-SPC.
 
 Ogni elemento della lista è costituito da:
 
-a. data: relativa allo stato
+-a. data: relativa allo stato
 
-b. stato: stato della RPT (vedi Tabella 35 a pagina 143)
+- b. stato: stato della RPT (vedi Tabella 35 a pagina 143)
 
-c. descrizione: dello stato
+- c. descrizione: dello stato
 
-d. versamentiLista: struttura contenente una lista di elementi che
-   identificano i vari stati che ogni singolo versamento contenuto nella
-   RPT ha assunto durante la sua storia, da quando è stata ricevuta dal
-   Nodo dei Pagamenti-SPC
-   Gli stati possono variare in base allo specifico PSP/Canale
-   utilizzato.
-   Ogni elemento della lista è costituito da:
+- d. versamentiLista: struttura contenente una lista di elementi che
+     identificano i vari stati che ogni singolo versamento contenuto nella
+     RPT ha assunto durante la sua storia, da quando è stata ricevuta dal
+     Nodo dei Pagamenti-SPC
+     Gli stati possono variare in base allo specifico PSP/Canale utilizzato.
+     Ogni elemento della lista è costituito da:
 
 1. progressivo: numero del versamento contenuto nella RPT
 
@@ -1756,36 +1759,36 @@ richiesta effettuata da un singolo Ente Creditore.
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativoDominio (opzionale)
+I-4. identificativoDominio (opzionale)
 
-5. Range temporale:
+I-5. Range temporale:
 
-   a. rangeDa
+- a. rangeDa
 
-   b. rangeA
+- b. rangeA
 
-6. dimensioneLista: numero massimo di elementi da restituire (intero
+I-6. dimensioneLista: numero massimo di elementi da restituire (intero
    numerico)
 
 **Parametri di output**
 
-1. totRestituiti: numero di occorrenze di rptPendente restituite
+O-1. totRestituiti: numero di occorrenze di rptPendente restituite
 
-2. rptPendente: array di
+O-2. rptPendente: array di
 
-   a. identificativoDominio
+- a. identificativoDominio
 
-   b. identificativoUnivocoVersamento
+- b. identificativoUnivocoVersamento
 
-   c. codiceContestoPagamento
+- c. codiceContestoPagamento
 
-   d. stato: stato della RPT (vedi Tabella 35 a pagina 143)
+- d. stato: stato della RPT (vedi Tabella 35 a pagina 143)
 
 **Gestione degli errori**
 
@@ -1839,17 +1842,17 @@ all'interno di tale periodo.
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. identificativoDominio
+I-3. identificativoDominio
 
-4. password
+I-4. password
 
-5. keyPA
+I-5. keyPA
 
-6. keyWISP
+I-6. keyWISP
 
 Da notare che il dato keyPA è il *token* generato dall'Ente Creditore
 che identifica la sessione di scelta del PSP da parte dell'utilizzatore
@@ -1860,30 +1863,28 @@ PSP ed il relativo servizio.
 
 **Parametri di output**
 
-1. effettuazioneScelta: indica che la terna di dati
-   idDominio+keyPA+keyWISP corrisponde ad una scelta effettuata e non
-   ancora scaduta (rispetto al parametro <timeout recupero scelta
-   WISP>). I valori ammissibili del parametro sono:
-   "**SI**”, l'utilizzatore finale ha scelto un servizio offerto da
-   un PSP
-   "**PO**”, l'utilizzatore finale ha chiesto di stampare l'avviso di
-   pagamento
+O-1. effettuazioneScelta: indica che la terna di dati
+idDominio+keyPA+keyWISP corrisponde ad una scelta effettuata e non
+ancora scaduta (rispetto al parametro <timeout recupero scelta
+WISP>). I valori ammissibili del parametro sono:
+"**SI**”, l'utilizzatore finale ha scelto un servizio offerto da un PSP
+"**PO**”, l'utilizzatore finale ha chiesto di stampare l'avviso di pagamento
 
-2. identificativoPSP: (opzionale) valorizzato se il parametro
-   effettuazioneScelta è uguale a “**SI**”; contiene il valore
-   dell'identificativo del PSP scelto
+O-2. identificativoPSP: (opzionale) valorizzato se il parametro
+effettuazioneScelta è uguale a “**SI**”; contiene il valore
+dell'identificativo del PSP scelto
 
-3. identificativoIntermediarioPSP: (opzionale) valorizzato se il
-   parametro effettuazioneScelta è uguale a “**SI**”; contiene il
-   valore dell'identificativo dell’intermediario del PSP scelto
+O-3. identificativoIntermediarioPSP: (opzionale) valorizzato se il
+parametro effettuazioneScelta è uguale a “**SI**”; contiene il
+valore dell'identificativo dell’intermediario del PSP scelto
 
-4. identificativoCanale: (opzionale) valorizzato se il parametro
-   effettuazioneScelta è uguale a “**SI**”; contiene il valore del
-   identificativo del canale scelto
+O-4. identificativoCanale: (opzionale) valorizzato se il parametro
+effettuazioneScelta è uguale a “**SI**”; contiene il valore del
+identificativo del canale scelto
 
-5. tipoVersamento: (opzionale) valorizzato se il parametro
-   effettuazioneScelta è uguale a “**SI**”; contiene il valore
-   identificativo del tipo di versamento scelto
+O-5. tipoVersamento: (opzionale) valorizzato se il parametro
+effettuazioneScelta è uguale a “**SI**”; contiene il valore
+identificativo del tipo di versamento scelto
 
 Per le specifiche relative ai parametri opzionali si faccia riferimento
 alle omologhe informazioni presenti nel Catalogo Dati Informativi (`cfr.
@@ -1930,16 +1931,16 @@ da parte dell'Ente Creditore, il Nodo dei Pagamenti-SPC rende
 disponibili i seguenti metodi SOAP, rappresentati nel diagramma di
 Figura 36:
 
-f. **paaInviaRT**, con la quale viene sottomessa (da parte di Nodo dei
-   Pagamenti-SPC) una RT. Questo significa che la RT è veicolata in
-   modalità push da parte di Nodo dei Pagamenti-SPC verso gli Enti
-   Creditori aderenti. Si noti che l’Ente Creditore aderente è comunque
-   in grado di richiedere di propria iniziativa una RT tramite la
-   primitiva **nodoChiediCopiaRT**, in modalità *pull*.
+- f. **paaInviaRT**, con la quale viene sottomessa (da parte di Nodo dei
+Pagamenti-SPC) una RT. Questo significa che la RT è veicolata in
+modalità push da parte di Nodo dei Pagamenti-SPC verso gli Enti
+Creditori aderenti. Si noti che l’Ente Creditore aderente è comunque
+in grado di richiedere di propria iniziativa una RT tramite la
+primitiva **nodoChiediCopiaRT**, in modalità *pull*.
 
-g. **nodoChiediCopiaRT**, con la quale gli Enti Creditori aderenti
-   possono richiedere la copia di una ricevuta telematica
-   precedentemente inviata dal Nodo dei Pagamenti-SPC.
+- g. **nodoChiediCopiaRT**, con la quale gli Enti Creditori aderenti
+possono richiedere la copia di una ricevuta telematica
+precedentemente inviata dal Nodo dei Pagamenti-SPC.
 
 |image15|
 
@@ -1955,27 +1956,27 @@ accettata oppure respinta con errore.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
-d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
-1. tipoFirma. **parametro deprecato**
+I-1. tipoFirma. **parametro deprecato**
 
-2. RT: file XML codificato in formato base64 binary (vedi Tabella 2)
+I-2. RT: file XML codificato in formato base64 binary (vedi Tabella 2)
 
 **Parametri di output**
 
-1. esito: OK oppure KO.
+O-1. esito: OK oppure KO.
 
 **Gestione degli errori**
 
@@ -2016,24 +2017,24 @@ Pagamenti-SPC all'ente stesso.
 
 Request
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativoDominio
+I-4. identificativoDominio
 
-5. identificativoUnivocoVersamento
+I-5. identificativoUnivocoVersamento
 
-6. codiceContestoPagamento
+I-6. codiceContestoPagamento
 
 **Parametri di output**
 
-1. tipoFirma: **parametro deprecato**
+O-1. tipoFirma: **parametro deprecato**
 
-2. RT: (opzionale) file XML codificato in formato base64 binary (vedi
-   Tabella 2); assente nel caso in cui la RT non sia stata trovata
+O-2. RT: (opzionale) file XML codificato in formato base64 binary (vedi
+Tabella 2); assente nel caso in cui la RT non sia stata trovata
 
 **Gestione degli errori**
 
@@ -2085,31 +2086,31 @@ generazione della RPT per i pagamenti in attesa, il Nodo dei
 Pagamenti-SPC rende disponibili i metodi SOAP descritti nel seguito ed
 indicati nel diagramma di Figura 37 a pagina 148:
 
-h. **paaVerificaRPT**, con la quale viene richiesta da parte del Nodo
-   dei Pagamenti-SPC la verifica dello stato di un pagamento in attesa
-   presso l’Ente Creditore; la richiesta è attivata su analoga
-   iniziativa del PSP nei confronti del Nodo dei Pagamenti-SPC stesso;
+-h. **paaVerificaRPT**, con la quale viene richiesta da parte del Nodo
+    dei Pagamenti-SPC la verifica dello stato di un pagamento in attesa
+    presso l’Ente Creditore; la richiesta è attivata su analoga
+    iniziativa del PSP nei confronti del Nodo dei Pagamenti-SPC stesso;
 
-i. **paaAttivaRPT**, con la quale vengono richiesti da parte del
-   NodoSPC la generazione e l’invio della RPT; la richiesta è attivata
-   su analoga iniziativa del PSP nei confronti del NodoSPC stesso;
+-i. **paaAttivaRPT**, con la quale vengono richiesti da parte del
+    NodoSPC la generazione e l’invio della RPT; la richiesta è attivata
+    su analoga iniziativa del PSP nei confronti del NodoSPC stesso;
 
-j. **paaAllegaRPT**, con la quale vengono richiesti da parte del
-   NodoSPC la generazione e l’invio della RPT, che viene allegata
-   dall’Ente Creditore direttamente nella risposta al NodoSPC; la
-   richiesta è attivata su analoga iniziativa del PSP nei confronti del
-   NodoSPC stesso (AgID si riserva di comunicare la data di attivazione
-   di tale primitiva);
+-j. **paaAllegaRPT**, con la quale vengono richiesti da parte del
+    NodoSPC la generazione e l’invio della RPT, che viene allegata
+    dall’Ente Creditore direttamente nella risposta al NodoSPC; la
+    richiesta è attivata su analoga iniziativa del PSP nei confronti del
+    NodoSPC stesso (AgID si riserva di comunicare la data di attivazione
+    di tale primitiva);
 
-k. **paaChiediNumeroAvviso**, con la quale vengono richiesti da parte
-   del NodoSPC il Numero Avviso di un pagamento in attesa presso l’Ente
-   Creditore relativo ad un particolare servizio (ad esempio: il
-   pagamento della tassa automobilistica); la richiesta è attivata su
-   analoga iniziativa del PSP nei confronti del Nodo dei Pagamenti-SPC
-   stesso. È essenziale che tutte le primitive descritte nei paragrafi
-   successivi restituiscano l’esito nel minor tempo possibile, dato che
-   da ciò può dipendere l’attesa dell’utilizzatore finale presso le
-   postazioni utilizzate dai PSP.
+-k. **paaChiediNumeroAvviso**, con la quale vengono richiesti da parte
+    del NodoSPC il Numero Avviso di un pagamento in attesa presso l’Ente
+    Creditore relativo ad un particolare servizio (ad esempio: il
+    pagamento della tassa automobilistica); la richiesta è attivata su
+    analoga iniziativa del PSP nei confronti del Nodo dei Pagamenti-SPC
+    stesso. È essenziale che tutte le primitive descritte nei paragrafi
+    successivi restituiscano l’esito nel minor tempo possibile, dato che
+    da ciò può dipendere l’attesa dell’utilizzatore finale presso le
+    postazioni utilizzate dai PSP.
 
 **Si tenga presente che l’attivazione sul sistema pagoPA del workflow**
 **definito per la primitiva nodoAllegaRPT è al momento sospesa.**
@@ -2143,41 +2144,40 @@ dei Pagamenti-SPC, che a sua volta la restituisce al PSP.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
-d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-2. datiPagamentoPA: parametro a sua volta composto da:
+O-2. datiPagamentoPA: parametro a sua volta composto da:
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAccredito: contiene l’IBAN del conto da accreditare
-          (obbligatorio)
+- b. ibanAccredito: contiene l’IBAN del conto da accreditare (obbligatorio)
 
-   c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   d. ente Beneficiario (opzionale): raggruppa dati anagrafici
+- d. ente Beneficiario (opzionale): raggruppa dati anagrafici
 
-   e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   f. causaleVersamento: il formato della causale di versamento deve
-      essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 
 **Gestione degli errori**
@@ -2247,69 +2247,67 @@ successo produrrà una segnalazione di errore per duplicazione.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
-d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. datiPagamentoPSP: parametro a sua volta composto da:
+I-2. datiPagamentoPSP: parametro a sua volta composto da:
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAppoggio (opzionale)
+- b. ibanAppoggio (opzionale)
 
-   c. bicAppoggio (opzionale)
+- c. bicAppoggio (opzionale)
 
-   d. soggettoVersante (opzionale): raggruppa dati anagrafici
+- d. soggettoVersante (opzionale): raggruppa dati anagrafici
 
-   e. ibanAddebito (opzionale)
+- e. ibanAddebito (opzionale)
 
-   f. bicAddebito (opzionale)
+- f. bicAddebito (opzionale)
 
-   g. soggettoPagatore (opzionale): raggruppa dati anagrafici
+- g. soggettoPagatore (opzionale): raggruppa dati anagrafici
 
-+-----------------------------------------------------------------------+
-| 3. identificativoIntermediarioPSP: contiene l'identificativo dello    |
-|    specifico intermediario del PSP che deve essere utilizzato nella   |
-|    primitiva **nodoInviaRPT**, parametro I-7                          |
-|                                                                       |
-| 4. identificativoCanalePSP: contiene l'identificativo dello specifico |
-|    canale del PSP che deve essere utilizzato nella primitiva          |
-|    **nodoInviaRPT**, parametro I-8                                    |
-+-----------------------------------------------------------------------+
+I-3. identificativoIntermediarioPSP: contiene l'identificativo dello 
+specifico intermediario del PSP che deve essere utilizzato nella
+primitiva **nodoInviaRPT**, parametro I-7
+
+I-4. identificativoCanalePSP: contiene l'identificativo dello specifico canale 
+del PSP che deve essere utilizzato nella primitiva
+
+**nodoInviaRPT**, parametro I-8
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-2. datiPagamentoPA: parametro a sua volta composto da:
+O-2. datiPagamentoPA: parametro a sua volta composto da:
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAccredito: contiene l’IBAN del conto da accreditare
-          (obbligatorio), deve essere lo stesso utilizzato nella
-          *response* della primitiva **paaVerificaRPT** (parametro
-          O-2, b)
+- b. ibanAccredito: contiene l’IBAN del conto da accreditare
+     (obbligatorio), deve essere lo stesso utilizzato nella
+     *response* della primitiva **paaVerificaRPT** (parametro O-2, b)
 
-   c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   d. enteBeneficiario (opzionale): raggruppa dati anagrafici
+- d. enteBeneficiario (opzionale): raggruppa dati anagrafici
 
-   e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   f. causaleVersamento: il formato della causale di versamento deve
-      essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 
 **Gestione degli errori**
@@ -2359,52 +2357,52 @@ stesso e allegarla nella *response* preparata dall'EC stesso.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
-d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. datiPagamentoPSP: parametro a sua volta composto da:
+I-2. datiPagamentoPSP: parametro a sua volta composto da:
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAppoggio (opzionale)
+- b. ibanAppoggio (opzionale)
 
-   c. bicAppoggio (opzionale)
+- c. bicAppoggio (opzionale)
 
-   d. soggettoVersante (opzionale): raggruppa dati anagrafici
+- d. soggettoVersante (opzionale): raggruppa dati anagrafici
 
-   e. ibanAddebito (opzionale)
+- e. ibanAddebito (opzionale)
 
-   f. bicAddebito (opzionale)
+- f. bicAddebito (opzionale)
 
-   g. soggettoPagatore (opzionale): raggruppa dati anagrafici
+- g. soggettoPagatore (opzionale): raggruppa dati anagrafici
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-2. datiPagamentoPA: parametro a sua volta composto da:
+O-2. datiPagamentoPA: parametro a sua volta composto da:
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAccredito: contiene l’IBAN del conto da
+- b. ibanAccredito: contiene l’IBAN del conto da
 
-   c. causaleVersamento: il formato della causale di versamento deve
-      essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- c. causaleVersamento: il formato della causale di versamento deve
+        essere conforme a quanto indicato al `§ 7.4.5 <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
-3. RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
+O-3. RPT: file XML codificato in formato base64 binary (vedi Tabella 1)
 
 **Gestione degli errori**
 
@@ -2450,46 +2448,46 @@ il quale poter richiedere la RPT.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-2. identificativoIntermediarioPA
+H-2. identificativoIntermediarioPA
 
-3. identificativoStazioneIntermediarioPA
+H-3. identificativoStazioneIntermediarioPA
 
-4. identificativoDominio
+H-4. identificativoDominio
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. idServizio: è il codice presente nel Catalogo dei Servizi relativo al
-   servizio richiesto (`vedi anche § 5.3.11 <../11-Capitolo_5/Capitolo5.rst#catalogo-dei-servizi>`__)
+I-2. idServizio: è il codice presente nel Catalogo dei Servizi relativo al
+     servizio richiesto (`vedi anche § 5.3.11 <../11-Capitolo_5/Capitolo5.rst#catalogo-dei-servizi>`__)
 
-3. datiSpecificiServizio: file XML che contiene le informazioni
-   specifiche del servizio richiesto al quale si applica lo schema
-   xsdRiferimento di cui alla Tabella 17 a pagina 99.
+I-3. datiSpecificiServizio: file XML che contiene le informazioni
+     specifiche del servizio richiesto al quale si applica lo schema
+     xsdRiferimento di cui alla Tabella 17 a pagina 99.
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
-2. numeroAvviso: contiene il Numero Avviso secondo la struttura di cui
-   al `§ 7.4.1 delle SANP <../13-Capitolo_7/Capitolo7.rst#il-numero-avviso-e-larchivio-dei-pagamenti-in-attesa>`__
+O-2. numeroAvviso: contiene il Numero Avviso secondo la struttura di cui
+     al `§ 7.4.1 delle SANP <../13-Capitolo_7/Capitolo7.rst#il-numero-avviso-e-larchivio-dei-pagamenti-in-attesa>`__
 
-3. datiPagamentoPA: parametro a sua volta composto da
+O-3. datiPagamentoPA: parametro a sua volta composto da
 
-   a. importoSingoloVersamento
+- a. importoSingoloVersamento
 
-   b. ibanAccredito
+- b. ibanAccredito
 
-   c. bicAccredito (opzionale)
+- c. bicAccredito (opzionale)
 
-   d. ente Beneficiario (opzionale): raggruppa dati anagrafici
+- d. ente Beneficiario (opzionale): raggruppa dati anagrafici
 
-   e. credenzialiPagatore (opzionale)
+- e. credenzialiPagatore (opzionale)
 
-   f. causaleVersamento: il formato della causale di versamento deve
-      essere conforme a quanto indicato al `§ 7.4.5 delle SANP <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
+- f. causaleVersamento: il formato della causale di versamento deve
+     essere conforme a quanto indicato al `§ 7.4.5 delle SANP <../13-Capitolo_7/Capitolo7.rst#comunicazioni-allutilizzatore-finale>`__
 
 **Gestione degli errori**
 
@@ -2558,18 +2556,18 @@ Creditore.
 
 **Parametri di input**
 
-1. identificativoDominio
+I-1. identificativoDominio
 
-2. identificativoUnivocoVersamento
+I-2. identificativoUnivocoVersamento
 
-3. codiceContestoPagamento
+I-3. codiceContestoPagamento
 
-4. Richiesta di Revoca (RR): file XML codificato in formato base64
-   binary (vedi Tabella 3)
+I-4. Richiesta di Revoca (RR): file XML codificato in formato base64
+     binary (vedi Tabella 3)
 
 **Parametri di output**
 
-1. Esito
+O-1. Esito
 
 **Gestione degli errori**
 
@@ -2595,24 +2593,24 @@ processo di revoca richiesto con la primitiva precedente.
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativo Dominio
+I-4. identificativo Dominio
 
-5. identificativoUnivocoVersamento
+I-5. identificativoUnivocoVersamento
 
-6. codiceContestoPagamento
+I-6. codiceContestoPagamento
 
-7. Esito richiesta di Revoca (ER): file XML codificato in formato base64
-   binary (vedi Tabella 4)
+I-7. Esito richiesta di Revoca (ER): file XML codificato in formato base64
+     binary (vedi Tabella 4)
 
 **Parametri di output**
 
-1. Esito
+O-1. Esito
 
 **Gestione degli errori**
 
@@ -2655,12 +2653,12 @@ Con riferimento al processo di storno del pagamento (`vedi § 8.1.3 <../15-Capit
 dei Pagamenti-SPC rende disponibili i metodi SOAP descritti nel seguito
 ed indicati nel diagramma di Figura 39 a pagina 155:
 
-n. **nodoInviaRichiestaStorno**, con la quale l’Ente Creditore
-   comunica al NodoSPC la richiesta di storno da inoltrare al PSP
+- n. **nodoInviaRichiestaStorno**, con la quale l’Ente Creditore
+     comunica al NodoSPC la richiesta di storno da inoltrare al PSP
 
-o. **paaInviaEsitoStorno**, con la quale il NodoSPC invia all’Ente
-   Creditore l’esito del processo di storno presso il PSP, richiesto con
-   la primitiva precedente.
+- o. **paaInviaEsitoStorno**, con la quale il NodoSPC invia all’Ente
+     Creditore l’esito del processo di storno presso il PSP, richiesto con
+     la primitiva precedente.
 
 Le primitive di richiesta sono da intendersi *end-to-end*, così come le
 primitive di esito. Le primitive di richiesta sono però asincrone
@@ -2683,24 +2681,24 @@ mediante una Richiesta di Revoca (RR).
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativoDominio
+I-4. identificativoDominio
 
-5. identificativoUnivocoVersamento
+I-5. identificativoUnivocoVersamento
 
-6. codiceContestoPagamento
+I-6. codiceContestoPagamento
 
-7. Richiesta di Revoca (RR): file XML codificato in formato base64
-   binary (vedi Tabella 3)
+I-7. Richiesta di Revoca (RR): file XML codificato in formato base64
+     binary (vedi Tabella 3)
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
 **Gestione degli errori**
 
@@ -2740,26 +2738,26 @@ Creditore ed è utilizzata per la ricezione dell’esito dello storno (ER).
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
-d. identificativoUnivocoVersamento
+- d. identificativoUnivocoVersamento
 
-e. codiceContestoPagamento
+- e. codiceContestoPagamento
 
 **Parametri di input**
 
-1. Esito richiesta di Revoca (ER): file XML codificato in formato base64
-   binary (vedi Tabella 4)
+I-1. Esito richiesta di Revoca (ER): file XML codificato in formato base64
+     binary (vedi Tabella 4)
 
 **Parametri di output**
 
-1. esito: OK oppure KO
+O-1. esito: OK oppure KO
 
 **Gestione degli errori**
 
@@ -2792,15 +2790,15 @@ essere scaricato dal sistema sia in modalità File Transfer, sia tramite
 dell’Ente Creditore per la gestione dei flussi di rendicontazione,
 riportati in Figura 40, sono i seguenti:
 
-n. **nodoChiediElencoFlussiRendicontazione**, con la quale l’Ente
-   Creditore richiede al NodoSPC l’elenco dei flussi di rendicontazione
-   di sua competenza memorizzati presso la piattaforma. Si noti che il
-   sistema fornisce l'elenco completo dei flussi dell'ente presenti sul
-   NodoSPC al momento della richiesta;
+- n. **nodoChiediElencoFlussiRendicontazione**, con la quale l’Ente
+     Creditore richiede al NodoSPC l’elenco dei flussi di rendicontazione
+     di sua competenza memorizzati presso la piattaforma. Si noti che il
+     sistema fornisce l'elenco completo dei flussi dell'ente presenti sul
+     NodoSPC al momento della richiesta;
 
-o. **nodoChiedFlussoRendicontazione**, con la quale l’Ente Creditore
-   richiede al NodoSPC uno specifico flusso di rendicontazione presente
-   nell'elenco scaricato con la primitiva di cui al punto precedente.
+- o. **nodoChiedFlussoRendicontazione**, con la quale l’Ente Creditore
+     richiede al NodoSPC uno specifico flusso di rendicontazione presente
+     nell'elenco scaricato con la primitiva di cui al punto precedente.
 
 Come già indicato, il NodoSPC non tiene traccia dei singoli flussi di
 rendicontazione richiesti dall’Ente Creditore con la primitiva
@@ -2821,25 +2819,25 @@ piattaforma.
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativoDominio
+I-4. identificativoDominio
 
-5. identificativoPSP
+I-5. identificativoPSP
 
 **Parametri di output**
 
-1. totRestituiti
+O-1. totRestituiti
 
-2. idRendicontazione: elenco dei flussi di rendicontazione, array di:
+O-2. idRendicontazione: elenco dei flussi di rendicontazione, array di:
 
-   a. identificativoFlusso
+- a. identificativoFlusso
 
-   b. dataOraFlusso
+- b. dataOraFlusso
 
 **Gestione degli errori**
 
@@ -2888,17 +2886,17 @@ restituita solo alla presa in carico dell’operazione stessa.
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativoDominio
+I-4. identificativoDominio
 
-5. identificativoPSP
+I-5. identificativoPSP
 
-6. identificativoFlusso
+I-6. identificativoFlusso
 
 **Parametri di output**
 
@@ -2906,7 +2904,7 @@ diversificati in funzione della configurazione dell'EC sopra indicata: .
 
 ricezione via *web service* SOAP
 
-1. file XML: flusso di rendicontazione in base64 binary (`vedi 5.3.5 <../11-Capitolo_5/Capitolo5.rst#flusso-di-rendicontazione>`__)
+O-1. file XML: flusso di rendicontazione in base64 binary (`vedi 5.3.5 <../11-Capitolo_5/Capitolo5.rst#flusso-di-rendicontazione>`__)
 
 ricezione via *server* SFTP
 a differenza della primitiva standard, non viene restituito in
@@ -2970,11 +2968,11 @@ Per la gestione del processo di inoltro da parte dell’ente Creditore
 degli avvisi digitali da inviare agli utilizzatori finali (`vedi §
 8.1.6 <../15-Capitolo_8/Capitolo8.rst#processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`__), il NodoSPC rende disponibile la seguente interfaccia *Web service*, riportata in Figura 41:
 
-p. *nodoInviaAvvisoDigitale*, con la quale viene sottomessa (da
-   parte dell’Ente Creditore) una richiesta di invio di un singolo
-   avviso di pagamento digitale. Questo significa che la richiesta è
-   veicolata in modalità *push* da parte di Nodo dei Pagamenti-SPC verso
-   i PSP aderenti.
+- p. *nodoInviaAvvisoDigitale*, con la quale viene sottomessa (da
+     parte dell’Ente Creditore) una richiesta di invio di un singolo
+     avviso di pagamento digitale. Questo significa che la richiesta è
+     veicolata in modalità *push* da parte di Nodo dei Pagamenti-SPC verso
+     i PSP aderenti.
 
 nodoInviaAvvisoDigitale
 ~~~~~~~~~~~~~~~~~~~~~~~
@@ -2988,24 +2986,24 @@ dell'avviso all'Ente Creditore.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
 **Parametri di input**
 
-1. password                                                           
-2. avvisoDigitaleWS: contiene le informazioni indicate nella Tabella 24 al `§ 5.4.4.1 <../11-Capitolo_5/Capitolo5.rst#invio-dellavviso-digitale-al-nodospc>`__
+I-1. password                                                           
+I-2. avvisoDigitaleWS: contiene le informazioni indicate nella Tabella 24 al `§ 5.4.4.1 <../11-Capitolo_5/Capitolo5.rst#invio-dellavviso-digitale-al-nodospc>`__
                                                     
 **Parametri di output**
 
-1. esitoOperazione: OK oppure KO
+O-1. esitoOperazione: OK oppure KO
 
-2. esitoAvvisoDigitaleWS: contiene le informazioni indicate nella Tabella 25 al `§ 5.4.4.1 <../11-Capitolo_5/Capitolo5.rst#invio-dellavviso-digitale-al-nodospc>`__
+O-2. esitoAvvisoDigitaleWS: contiene le informazioni indicate nella Tabella 25 al `§ 5.4.4.1 <../11-Capitolo_5/Capitolo5.rst#invio-dellavviso-digitale-al-nodospc>`__
 
 Gestione degli errori
 
@@ -3014,11 +3012,11 @@ in caso di errore: **faultBean** emesso dal **NodoSPC**.
 Di seguito i possibili valori dell'elemento faultBean.faultCode in
 funzione di faultBean.id:
 
-3. faultBean.id=<identificativoPSP>:
+**3. faultBean.id=<identificativoPSP>:**
 
 *PPT_CANALE_ERRORE* (vedi contenuto dato faultBean.description al `§ 10.1 <../17-Capitolo_10/Capitolo10.rst#la-struttura-faultbean>`__)
 
-4. faultBean.id=“NodoDeiPagamentiSPC”:
+**4. faultBean.id=“NodoDeiPagamentiSPC”:**
 
 *PPT_SINTASSI_XSD*
 
@@ -3046,11 +3044,11 @@ Per la gestione dei meccanismi di consultazione degli avvisi presenti
 presso l'Ente Creditore, il NodoSPC rende disponibile la seguente
 interfaccia *Web service*, riportata in Figura 42:
 
-q. *paaChiediElencoAvvisiDigitali*, con la quale viene sottomessa
-   (da parte del NodoSPC) una richiesta di verifica di avvisi di
-   pagamento presenti presso l’Ente Creditore. Questo significa che la
-   richiesta è veicolata in modalità *pull* da parte di Nodo dei
-   Pagamenti-SPC verso gli Enti Creditori aderenti.
+- q. *paaChiediElencoAvvisiDigitali*, con la quale viene sottomessa
+     (da parte del NodoSPC) una richiesta di verifica di avvisi di
+     pagamento presenti presso l’Ente Creditore. Questo significa che la
+     richiesta è veicolata in modalità *pull* da parte di Nodo dei
+     Pagamenti-SPC verso gli Enti Creditori aderenti.
 
 |image21|
 
@@ -3076,37 +3074,37 @@ qualora lo ritenga opportuno.
 
 **Parametri header**
 
-1. intestazionePPT
+H-1. intestazionePPT
 
-a. identificativoIntermediarioPA
+- a. identificativoIntermediarioPA
 
-b. identificativoStazioneIntermediarioPA
+- b. identificativoStazioneIntermediarioPA
 
-c. identificativoDominio
+- c. identificativoDominio
 
 **Parametri di input**
 
-1. identificativoPSP
+I-1. identificativoPSP
 
-2. codiceFiscaleDebitore
+I-2. codiceFiscaleDebitore
 
-3. codiceServizio (opzionale): contiene il codice (5 cifre numeriche)
-   del servizio classificato all'interno del NodoSPC che si vuole
-   selezionare (ad esempio: 00001 'Bollo Auto')
+I-3. codiceServizio (opzionale): contiene il codice (5 cifre numeriche)
+     del servizio classificato all'interno del NodoSPC che si vuole
+     selezionare (ad esempio: 00001 'Bollo Auto')
 
-4. periodoRiferimento (opzionale): periodo temporale rispetto al quale
-   si vuole restringere la ricerca, è formato da:
+I-4. periodoRiferimento (opzionale): periodo temporale rispetto al quale
+     si vuole restringere la ricerca, è formato da:
 
-   a. annoDA: anno di competenza del debito nel formato YYYY
+- a. annoDA: anno di competenza del debito nel formato YYYY
 
-   b. annoA: anno di competenza del debito nel formato YYYY
+- b. annoA: anno di competenza del debito nel formato YYYY
 
 **Parametri di output**
 
-1. esitoOperazione: OK oppure KO
+O-1. esitoOperazione: OK oppure KO
 
-2. elencoAvvisiDigitali: contiene le informazioni indicate in Tabella 28
-   al § 5.4.4.4
+O-2. elencoAvvisiDigitali: contiene le informazioni indicate in Tabella 28
+     al § 5.4.4.4
 
 **Gestione degli errori**
 
@@ -3151,11 +3149,11 @@ corrente (00-24).
 Per l'interrogazione del "*Catalogo Dati Informativ* i" il NodoSPC
 rende disponibile il metodo rappresentato nel diagramma di Figura 43:
 
-r. **nodoChiediInformativaPSP**, con la quale viene sottomessa a Nodo
-   dei Pagamenti-SPC una richiesta di invio del catalogo dei dati
-   informativi. Questo significa che l’invio del catalogo, informative
-   dei vari PSP comprese, avviene in modalità pull, a seguito di una
-   iniziativa diretta da parte dell’Ente Creditore.
+- r. **nodoChiediInformativaPSP**, con la quale viene sottomessa a Nodo
+     dei Pagamenti-SPC una richiesta di invio del catalogo dei dati
+     informativi. Questo significa che l’invio del catalogo, informative
+     dei vari PSP comprese, avviene in modalità pull, a seguito di una
+     iniziativa diretta da parte dell’Ente Creditore.
 
 Il NodoSPC restituisce un file XML, il cui tracciato è indicato al `§ 5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`__
 
@@ -3170,20 +3168,20 @@ file XML contenente il "*Catalogo Dati Informativi*".
 
 **Parametri di input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativo Dominio (opzionale)
+I-4. identificativo Dominio (opzionale)
 
-5. identificativoPSP (opzionale)
+I-5. identificativoPSP (opzionale)
 
 **Parametri di output**
 
-1. file XML: relativo al "*Catalogo Dati Informativi*" dei PSP in base64
-   binary (vedi Tabella 9)
+O-1. file XML: relativo al "*Catalogo Dati Informativi*" dei PSP in base64
+     binary (vedi Tabella 9)
 
 **Gestione degli errori**
 
@@ -3221,16 +3219,16 @@ Per la gestione dei meccanismi di ricezione dei flussi relativi ai
 disponibili i metodi SOAP descritti nel seguito e rappresentati nel
 diagramma di Figura 44 a pagina 163:
 
-s. **nodoChiediElencoQuadraturePA**, con la quale l’Ente Creditore
-   richiede al NodoSPC l’elenco dei flussi contenenti i "Totali di
-   Traffico" di sua competenza memorizzati presso la piattaforma. Si
-   noti che il sistema fornisce l'elenco completo dei flussi dell'ente
-   presenti sul NodoSPC al momento della richiesta;
+- s. **nodoChiediElencoQuadraturePA**, con la quale l’Ente Creditore
+     richiede al NodoSPC l’elenco dei flussi contenenti i "Totali di
+     Traffico" di sua competenza memorizzati presso la piattaforma. Si
+     noti che il sistema fornisce l'elenco completo dei flussi dell'ente
+     presenti sul NodoSPC al momento della richiesta;
 
-t. **nodoChiediQuadraturaPA**, con la quale l’Ente Creditore richiede
-   al NodoSPC uno specifico flusso, contenente i "Totali di Traffico",
-   presente nell'elenco scaricato con la primitiva indicata al punto
-   precedente.
+- t. **nodoChiediQuadraturaPA**, con la quale l’Ente Creditore richiede
+     al NodoSPC uno specifico flusso, contenente i "Totali di Traffico",
+     presente nell'elenco scaricato con la primitiva indicata al punto
+     precedente.
 
 |image23|
 
@@ -3258,23 +3256,23 @@ presso la piattaforma.
 
 **Parametri input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoStazioneIntermediarioPA
+I-2. identificativoStazioneIntermediarioPA
 
-3. password
+I-3. password
 
-4. identificativo Dominio
+I-4. identificativo Dominio
 
 **Parametri di output**
 
-1. totRestituiti
+O-1. totRestituiti
 
-2. idQuadratura: elenco dei flussi "Totali di Traffico", array di:
+O-2. idQuadratura: elenco dei flussi "Totali di Traffico", array di:
 
-   a. identificativoFlusso
+- a. identificativoFlusso
 
-   b. dataOraFlusso
+- b. dataOraFlusso
 
 **Gestione degli errori**
 
@@ -3313,20 +3311,20 @@ scaricato con la primitiva indicata al paragrafo precedente.
 
 **Parametri input**
 
-1. identificativoIntermediarioPA
+I-1. identificativoIntermediarioPA
 
-2. identificativoCanale
+I-2. identificativoCanale
 
-3. password
+I-3. password
 
-4. identificativoDominio
+I-4. identificativoDominio
 
-5. identificativo Flusso
+I-5. identificativo Flusso
 
 **Parametri di output**
 
-1. file XML: flusso contenente i "Totali di Traffico" in base64 binary
-   (vedi Tabella 13)
+O-1. file XML: flusso contenente i "Totali di Traffico" in base64 binary
+     (vedi Tabella 13)
 
 **Gestione degli errori**
 
