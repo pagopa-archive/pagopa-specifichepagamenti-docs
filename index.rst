@@ -2,12 +2,9 @@
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
-+------------+
-| **Indice** |
-+------------+
-
 .. toctree::
-
+   :caption: Indice dei contenuti
+   
    _docs/01-STATO_DEL_DOCUMENTO/STATO_DEL_DOCUMENTO.rst
    _docs/02-DEFINIZIONI_E_ACRONIMI/DEFINIZIONI_E_ACRONIMI.rst
    _docs/03-INTRODUZIONE/INTRODUZIONE.rst
