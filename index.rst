@@ -2,6 +2,10 @@
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
+###############################################
+Specifiche Attuative del Nodo dei Pagamenti-SPC
+###############################################
+
 .. toctree::
    :caption: Indice dei contenuti
    
