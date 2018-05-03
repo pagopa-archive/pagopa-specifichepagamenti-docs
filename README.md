@@ -1,2 +1,3 @@
-# Specifiche Attuative del Nodo dei Pagamento-SPC 
-Conversione in formato RST della versione 2.1 delle Specifiche Attuative del Nodo dei Pagamento-SPC 
+# pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC 
+
+Specifiche Attuative del Nodo dei Pagamenti-SPC di pagoPA versione 2.1

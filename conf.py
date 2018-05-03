@@ -7,8 +7,8 @@ settings_copyright_copyleft = 'AgID - Team Digitale'
 settings_editor_name = 'AgID - Team Digitale'
 settings_doc_version = 'version: 2.1'
 settings_doc_release = 'version: latest'
-settings_basename = 'titolo-documento'
-settings_file_name = 'titolo-documento'
+settings_basename = 'pagopa-specifichepagamenti-docs'
+settings_file_name = 'pagopa-specifichepagamenti-docs'
 
 # -- No need to change below here
 
