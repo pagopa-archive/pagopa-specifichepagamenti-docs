@@ -5,8 +5,8 @@
 settings_project_name = "Specifiche Attuative del Nodo dei Pagamenti-SPC"
 settings_copyright_copyleft = 'AgID - Team Digitale'
 settings_editor_name = 'AgID - Team Digitale'
-settings_doc_version = 'version: latest'
-settings_doc_release = 'version: latest'
+settings_doc_version = 'version: 2.1'
+settings_doc_release = 'version: 2.1'
 settings_basename = 'pagopa-specifichepagamenti-docs'
 settings_file_name = 'pagopa-specifichepagamenti-docs'
 
