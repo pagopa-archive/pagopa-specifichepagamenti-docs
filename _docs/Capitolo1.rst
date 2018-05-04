@@ -214,7 +214,7 @@ un flusso (l’Ente Creditore o il PSP) dal suo tramite tecnico
 
 Tale utilizzo è subordinato alla preventiva comunicazione all’Agenzia
 per l’Italia Digitale (ai fini del corretto popolamento della Tabella
-delle controparti, cfr. § 4.2.1 :ref:`tabella-delle-controparti`) ed al riconoscimento da parte del Nodo
+delle controparti, cfr. § 4.2.1 :ref:`Tabella delle Controparti <sec-tabella-delle-controparti>` ed al riconoscimento da parte del Nodo
 dei Pagamenti-SPC.
 
 
