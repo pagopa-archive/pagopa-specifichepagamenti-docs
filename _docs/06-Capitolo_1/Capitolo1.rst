@@ -621,7 +621,7 @@ attraverso il Nodo dei Pagamenti-SPC, si ritiene che, al fine di
 conservare traccia dell’intera transazione di pagamento, sia opportuno
 conservare a norma sia la Ricevuta Telematica, sia la Richiesta di
 Pagamento Telematico e non anche il Flusso di Rendicontazione (per il
-dettaglio su tali oggetti si veda :ref:il Capitolo 2 <Capitolo2>`).
+dettaglio su tali oggetti si veda il :ref:`Capitolo 2 <Capitolo2>`).
 
 :ref:`Torna all'indice <Indice>`
 
