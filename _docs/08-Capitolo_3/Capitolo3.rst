@@ -1,4 +1,4 @@
-+-----------------------------------------------------------------------+
+﻿+-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
@@ -417,7 +417,7 @@ Il sistema assicura la produzione e pubblicazione di informazioni a
 carattere statistico, attraverso un sito all’uopo dedicato e attraverso
 la gestione dei livelli di accesso secondo profili definiti.
 
-`Torna all'indice <../../index.rst>`__
+:ref:`Torna all'indice <Indice>`__
 
 .. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
    :width: 5.90551in

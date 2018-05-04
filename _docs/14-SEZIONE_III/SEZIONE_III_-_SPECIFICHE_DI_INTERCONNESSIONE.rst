@@ -1,8 +1,9 @@
-+-----------------------------------------------------------------------+
+﻿+-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
 **Sezione III - Specifiche di interconnessione**
+.. _Sezione-III:
 
 La presente sezione descrive le interfacce di cooperazione applicativa
 del software che implementa i servizi del Nodo dei Pagamenti SPC. I
@@ -151,7 +152,7 @@ aderenti.
 +---------------------------------+----------------------------------+-----------------------------------+
 
 
-FINE DOCUMENTO
+:ref:`Torna all'indice <Indice>`__
 
 .. [1]
    in alcuni documenti degli Enti Creditori indicato anche come CRS.
