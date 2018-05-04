@@ -213,8 +213,8 @@ un flusso (l’Ente Creditore o il PSP) dal suo tramite tecnico
 (l’intermediario in qualità di mittente o destinatario fisico).
 
 Tale utilizzo è subordinato alla preventiva comunicazione all’Agenzia
-per l’Italia Digitale (ai fini del corretto popolamento della Tabella
-delle controparti, :ref:`cfr. 4.2.1 <tabella-delle-controparti>`) ed al riconoscimento da parte del Nodo
+per l’Italia Digitale (ai fini del corretto popolamento della :ref:`Tabella
+delle controparti <tabella-delle-controparti>` ed al riconoscimento da parte del Nodo
 dei Pagamenti-SPC.
 
 
