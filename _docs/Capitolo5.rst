@@ -2,9 +2,13 @@
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
+.. _Capitolo5:
+
 +-----------------------------------------------+
 | **Capitolo 5. MESSAGGI E FLUSSI INFORMATIVI** |
 +-----------------------------------------------+
+
+.. _messaggi-e-flussi-informativi:
 
 Messaggi e flussi informativi
 =============================
@@ -26,12 +30,13 @@ sono individuate come:
 -  *Esito Revoca* (**ER**)
 
 Nel presente capitolo sono inoltre riportate le informazioni relative a
-"Tabella delle Controparti" (`§ 4.2.1 <../09-Capitolo_4/Capitolo4.rst#tabella-delle-controparti>`__), "Catalogo Dati Informativi" 
-(`§5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`__) e flussi inerenti i “Totali di Traffico” (`§ 4.5.1 <../09-Capitolo_4/Capitolo4.rst#totali-di-traffico>`__).
+"Tabella delle Controparti" (:ref:`§ 4.2.1 <tabella-delle-controparti>`__), "Catalogo Dati Informativi" 
+(:ref:`§5.3.7 <catalogo-dati-informativi>`__) e flussi inerenti i “Totali di Traffico” (:ref:`§ 4.5.1 <totali-di-traffico>`__).
+
+.. _formato-dei-messaggi:
 
 Formato dei messaggi
 --------------------
-.. _Formato dei messaggi:
 
 I formati adottati devono possedere almeno i seguenti requisiti:
 
@@ -65,9 +70,10 @@ l’interoperabilità.
 Per la visualizzazione dei messaggi, devono essere adottate soluzioni
 che presentino le informazioni in modo fedele alla struttura.
 
+.. _soggetti:
+
 Soggetti
 --------
-.. _Soggetti:
 
 Sono di seguito elencati i soggetti coinvolti nel processo di pagamento:
 
@@ -90,9 +96,10 @@ d. Istituto Attestante: rappresenta il Prestatore di Servizi di
    Pagamento che effettua il pagamento richiesto e ne attesta la
    regolarità.
 
+.. _formato-dei-dati:
+   
 Formato dei dati
 ----------------
-.. _Formato dei dati:
 
 Le colonne *Liv,* *Genere,* *Occ*, *Len* e *UNIFI* assumono i seguenti
 significati:
@@ -127,9 +134,10 @@ significati:
 |             |          | ISO 20022 - UNIversal Financial Industry message (UNIFI).                     |
 +-------------+----------+-------------------------------------------------------------------------------+
 
+.. _richiesta-pagamento-telematico-rpt:
+
 Richiesta Pagamento Telematico (RPT)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Richiesta Pagamento Telematico (RPT):
 
 È il documento informatico predisposto da un Ente Creditore o da un suo
 intermediario per consentire all'utilizzatore finale di richiedere, al
@@ -433,9 +441,8 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | eseguita                                  |
 |                         |         |            |         |         |                 | sui conti di tesoreria.,Si faccia         |
 |                         |         |            |         |         |                 | riferimento al capitolo                   |
-|                         |         |            |         |         |                 | `7.1 della presente Sezione. <../13-      |
-|                         |         |            |         |         |                 | Capitolo_7/Capitolo7.rst#identificativo   |
-|                         |         |            |         |         |                 | -univoco-versamento>`_                    |
+|                         |         |            |         |         |                 | :ref:`7.1 della presente Sezione.         |
+|                         |         |            |         |         |                 | <identificativo-univoco-versamento>`_     |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | CodiceContesto          | 2       | an         |         | 1..35   | Message         | Codice univoco necessario a               |
 | Pagamento               |         |            |         |         | Identification  | definire il                               |
@@ -443,8 +450,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | nel quale viene effettuato                |
 |                         |         |            |         |         |                 | il versamento.                            |
 |                         |         |            |         |         |                 | Si faccia riferimento al                  |
-|                         |         |            |         |         |                 | `§ 7.3 <../13-Capitolo_7/Capitolo7.       |
-|                         |         |            |         |         |                 | rst#codice-contesto-pagamento>`_          |
+|                         |         |            |         |         |                 | :ref:`§ 7.3 <codice-contesto-pagamento>`_ |
 |                         |         |            |         |         |                 | della presente Sezione.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | ibanAddebito            | 2       | an         |         | 1..35   | Debtor.         | Identifica l’International                |
@@ -576,10 +582,9 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | ibanAccredito.                            |
 |                         |         |            |         |         |                 | Per indicazioni circa                     |
 |                         |         |            |         |         |                 | l’utilizzo vedi il, paragrafo             |
-|                         |         |            |         |         |                 | `8.1.1.5 <../15-Capitolo_8/Capitolo8.     |
-|                         |         |            |         |         |                 | rst#avvertenze-per-la-predisposizione-e-  |
-|                         |         |            |         |         |                 | linvio-delle-richieste-di-pagamento-      |
-|                         |         |            |         |         |                 | telematiche>`__                           |
+|                         |         |            |         |         |                 | :ref:`8.1.1.5 <avvertenze-per-la-         |
+|                         |         |            |         |         |                 | predisposizione-e-linvio-delle-richieste- |
+|                         |         |            |         |         |                 | di-pagamento-telematiche>`__              |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | bicAppoggio             | 3       | an         |         | 8 / 11  | Creditor        | Bank Identifier Code                      |
 |                         |         |            |         |         | Agent           | definito secondo lo standard              |
@@ -673,9 +678,10 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | Creditore.                                |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 
+.. _ricevuta-telematica-rt:
+
 Ricevuta Telematica (RT)
 ~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Ricevuta Telematica (RT):
 
 È il documento informatico rilasciato a cura dell’organizzazione che
 effettua l’operazione di pagamento di somme nei confronti di enti
@@ -1092,9 +1098,10 @@ pubblici su ordine dell'utilizzatore finale.
 |                      |         |            |         |         |                        | codifica in “base64 binary”          |
 +----------------------+---------+------------+---------+---------+------------------------+--------------------------------------+
 
+.. _richiesta-di-revoca-rr:
+
 Richiesta di Revoca (RR)
 ~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Richiesta di Revoca (RR):
 
 È il documento informatico inviato dal prestatore di servizi di
 pagamento all’Ente Creditore per richiedere la revoca di un pagamento
@@ -1195,9 +1202,8 @@ di pagamento per richiedere lo “storno” di un pagamento.
 | tipoRevoca         | 2       | n          | 0..1    |         | Proprietary Code | Contiene il tipo di richiesta che       |
 |                    |         |            |         |         |                  | viene utilizzata nel processo di        |
 |                    |         |            |         |         |                  | revoca della RT                         |
-|                    |         |            |         |         |                  | (`vedi § 2.3 <../07-Capitolo_2/         |
-|                    |         |            |         |         |                  | Capitolo2.rst#revoca-della-ricevuta-    |
-|                    |         |            |         |         |                  | telematica>`_).                         |
+|                    |         |            |         |         |                  | (:ref:`vedi § 2.3 <revoca-della-        |
+|                    |         |            |         |         |                  | ricevuta-telematica>`_).                |
 |                    |         |            |         |         |                  | Il dato è **obbligatorio** in caso      |
 |                    |         |            |         |         |                  | di utilizzo della Richiesta Revoca da   |
 |                    |         |            |         |         |                  | parte del PSP nel processo di           |
@@ -1216,8 +1222,8 @@ di pagamento per richiedere lo “storno” di un pagamento.
 |                    |         |            |         |         |                  | Richiesta Revoca da                     |
 |                    |         |            |         |         |                  | parte dell'Ente Creditore nel processo  |
 |                    |         |            |         |         |                  | di Storno del pagamento                 |
-|                    |         |            |         |         |                  | (`vedi § 2.1.4 <../07-Capitolo_2/       |
-|                    |         |            |         |         |                  | Capitolo2.rst#storno-del-pagamento>`_). |
+|                    |         |            |         |         |                  | (:ref:`vedi § 2.1.4 <storno-del-        |
+|                    |         |            |         |         |                  | pagamento>`_).                          |
 +--------------------+---------+------------+---------+---------+------------------+-----------------------------------------+
 | datiSingolaRevoca  | 2       | s          | 1..1    |         |                  | Aggregazione                            |
 |                    |         |            |         |         |                  | “dati dei singoli pagamenti revocati”,  |
@@ -1247,9 +1253,10 @@ di pagamento per richiedere lo “storno” di un pagamento.
 |                    |         |            |         |         |                  |                                         |
 +--------------------+---------+------------+---------+---------+------------------+-----------------------------------------+
 
+.. _esito-della-revoca-er:
+
 Esito della Revoca (ER)
 ~~~~~~~~~~~~~~~~~~~~~~~
-.. _Esito della Revoca (ER):
 
 È il documento informatico inviato dall’Ente Creditore al prestatore di
 servizi di pagamento per indicare l’esito di una richiesta di revoca di
@@ -1387,9 +1394,10 @@ relativa allo “storno” di un pagamento.
 |                         |         |            |         |         |                    | dall’Ente Creditore .                     |
 +-------------------------+---------+------------+---------+---------+--------------------+-------------------------------------------+
 
+.. _flusso-di-rendicontazione:
+
 Flusso di rendicontazione
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Flusso di rendicontazione:
 
 È il flusso informatico inviato dal prestatore di servizi di pagamento o
 dal suo intermediario al Nodo dei Pagamenti-SPC e che quest’ultimo invia
@@ -1405,9 +1413,11 @@ Il dettaglio di dette informazioni è riportato nella Sezione II delle
 l'effettuazione dei pagamenti a favore delle pubbliche amministrazioni e
 dei gestori di pubblici servizi” alle quali si deve fare riferimento.
 
+.. _tabella-delle-controparti:
+
 Tabella delle controparti
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Tabella delle controparti:
+
 
 La “*Tabella delle controparti*” è il documento informatico che
 contiene l’elenco degli Enti Creditori aderenti al Nodo dei
@@ -1441,9 +1451,8 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 | pagamentiPressoPSP         | 2       | n          | 1..1    | 1       | Indica se l’Ente Creditore                  |
 |                            |         |            |         |         | consente i pagamenti                        |
 |                            |         |            |         |         | pressoi PSP                                 |
-|                            |         |            |         |         | (`vedi § 2.2 <../07-Capitolo_2/Capitolo2.   |
-|                            |         |            |         |         | rst#processo-di-pagamento-attivato-presso-  |
-|                            |         |            |         |         | il-psp>`_)                                  |
+|                            |         |            |         |         | (:ref:`vedi § 2.2 <processo-di-pagamento-   |
+|                            |         |            |         |         | attivato-presso-il-psp>`_)                  |
 |                            |         |            |         |         | può assumere i seguenti valori:             |
 |                            |         |            |         |         |                                             |
 |                            |         |            |         |         | - **0** NON consente i                      |
@@ -1466,8 +1475,8 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | propri utenti di                            |
 |                            |         |            |         |         | effettuare pagamenti                        |
 |                            |         |            |         |         | spontanei presso i PSP                      |
-|                            |         |            |         |         | (`vedi § 2.2.3 <../07-Capitolo_2/Capitolo2. |
-|                            |         |            |         |         | rst#pagamento-spontaneo-presso-i-psp>`_)    |
+|                            |         |            |         |         | (:ref:`vedi § 2.2.3 <pagamento-spontaneo-   |
+|                            |         |            |         |         | presso-i-psp>`_)                            |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | serviziModelloTreSpontaneo | 3       | s          | 0..n    |         | Struttura contenente                        |
 |                            |         |            |         |         | l'elenco dei servizi che                    |
@@ -1492,9 +1501,8 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | che l’Ente Creditore consente di attivare   |
 |                            |         |            |         |         | le funzionalità di avvisatura               |
 |                            |         |            |         |         | digitale pull                               |
-|                            |         |            |         |         | (`vedi § 2.10 <../07-Capitolo_2/Capitolo2.  |
-|                            |         |            |         |         | rst#avvisatura-digitale-pull-verifica-      |
-|                            |         |            |         |         | della-posizione-debitoria>`_)               |
+|                            |         |            |         |         | (:ref:`vedi § 2.10 <avvisatura-digitale-    |
+|                            |         |            |         |         | pull-verifica-della-posizione-debitoria>`_) |
 |                            |         |            |         |         | può assumere i seguenti valori:             |
 |                            |         |            |         |         |                                             |
 |                            |         |            |         |         | - **0 NON consente avvisatura pull**        |
@@ -1606,7 +1614,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 Le informazioni sono codificate in un file XML secondo il tracciato di
 Tabella 6 e devono essere richieste dai singoli prestatori di servizi di
 pagamento al NodoSPC utilizzando le apposite funzioni allo scopo messe a
-disposizione (`vedi § 9.2.10 della Sezione III <../16-Capitolo_9/Capitolo9.rst#interrogazione-delle-basi-dati-del-nodospc>`__).
+disposizione (:ref:`vedi § 9.2.10 della Sezione III <interrogazione-delle-basi-dati-del-nodospc>`__).
 
 **Tabella** **6 - Formato file XML della “Tabella delle controparti”**
 
@@ -1623,9 +1631,10 @@ disposizione (`vedi § 9.2.10 della Sezione III <../16-Capitolo_9/Capitolo9.rst#
 |                        |         |            |          |           | Tabella 5.                                          |
 +------------------------+---------+------------+----------+-----------+-----------------------------------------------------+
 
+.. _informazioni-inviate-dagli-enti-creditori:
+
 Informazioni inviate dagli Enti Creditori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Informazioni inviate dagli Enti Creditori:
 
 La “*Tabella delle controparti*” viene prodotta sulla base delle
 informazioni inviate dai singoli Enti Creditori all’Agenzia per l’Italia
@@ -1686,9 +1695,8 @@ in Tabella 7.
 | pagamentiPressoPSP     | 2       | n          | 1..1    | 1       | Indica se l’Ente Creditore                  |
 |                        |         |            |         |         | consente i pagamenti                        |
 |                        |         |            |         |         | pressoi PSP                                 |
-|                        |         |            |         |         | (`vedi § 2.2 <../07-Capitolo_2/Capitolo2.   |
-|                        |         |            |         |         | rst#processo-di-pagamento-attivato-presso-  |
-|                        |         |            |         |         | il-psp>`_)                                  |
+|                        |         |            |         |         | (:ref:`vedi § 2.2 <processo-di-pagamento-   |
+|                        |         |            |         |         | attivato-presso-il-psp>`_)                  |
 |                        |         |            |         |         | può assumere i seguenti valori:             |
 |                        |         |            |         |         |                                             |
 |                        |         |            |         |         | - **0** NON consente i                      |
@@ -1789,9 +1797,10 @@ in Tabella 8.
 |                                 |         |            |         |         | pubblicato sul sito AgID).                   |
 +---------------------------------+---------+------------+---------+---------+----------------------------------------------+
 
+.. _catalogo-dati-informativi:
+
 Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Catalogo Dati Informativi:
 
 Il catalogo dei dati informativi è lo strumento con il quale il PSP
 comunica ai propri potenziali clienti, utilizzatori del sistema pagoPA,
@@ -1851,14 +1860,13 @@ catalogo:
 | stornoPagamento             | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è in grado di gestire il processo di     |
 |                             |         |            |         |         | storno di un pagamento                          |
-|                             |         |            |         |         | (`cfr. § 2.1.4 <../07-Capitolo_2/Capitolo2.rst# |
-|                             |         |            |         |         | storno-del-pagamento>`_).                       |
+|                             |         |            |         |         | (:ref:`cfr. § 2.1.4 <storno-del-pagamento>`_).  |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | marcaBolloDigitale          | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è abilitato a vendere la marca           |
 |                             |         |            |         |         | da bollo digitale                               |
-|                             |         |            |         |         | (`cfr. § 2.7 <../07-Capitolo_2/Capitolo2.rst#   |
-|                             |         |            |         |         | riconciliazione-dei-pagamenti>`_).              |
+|                             |         |            |         |         | (:ref:`cfr. § 2.7 <riconciliazione-dei-         |
+|                             |         |            |         |         | pagamenti>`_).                                  |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | logoPSP                     | 3       | an         | 1..1    |         | Logotipo                                        |
 |                             |         |            |         |         | del PSP.                                        |
@@ -1882,12 +1890,11 @@ catalogo:
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | tipoVersamento              | 4       | an         | 1..1    | 4       | Tipo di versamento associato allo specifico     |
 |                             |         |            |         |         | servizio                                        |
-|                             |         |            |         |         | (`cfr. § 5.3.1 <../11-Capitolo_5/Capitolo5.rst# |
-|                             |         |            |         |         | richiesta-pagamento-telematico-rpt>`_).         |
+|                             |         |            |         |         | (:ref:`cfr. § 5.3.1 <richiesta-pagamento-       |
+|                             |         |            |         |         | telematico-rpt>`_).                             |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | modelloPagamento            | 4       | n          | 1..1    | 2       | Indica quale modello di pagamento               |
-|                             |         |            |         |         | (`cfr. capitolo 2 <../07-Capitolo_2/Capitolo2.  |
-|                             |         |            |         |         | rst>`_ delle SANP)                              |
+|                             |         |            |         |         | (:ref:`cfr. capitolo 2 <Capitolo2>`_ delle SANP)|
 |                             |         |            |         |         | è gestito attraverso il canale specifico.       |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | priorita                    | 4       | n          | 1..1    | 2       | Numero intero indicante la priorità con la      |
@@ -2068,7 +2075,7 @@ PSP.
 **stornoPagamento (+++):**
 
 Indica se il PSP è in grado di gestire il processo di storno di
-un pagamento (`cfr. § 2.1.4 delle SANP <../07-Capitolo_2/Capitolo2.rst#storno-del-pagamento>`__).
+un pagamento (:ref:`cfr. § 2.1.4 delle SANP <storno-del-pagamento>`__).
 
 Vale per tutti servizi indicati all’interno di
 **listaInformativaDetail.**
@@ -2126,8 +2133,8 @@ transazione.
 
 Tipo di versamento associato allo specifico servizio.
 
-Assume gli stessi valori dell’omonimo campo della RPT (`cfr. §
-5.3.1 delle SANP <../11-Capitolo_5/Capitolo5.rst#richiesta-pagamento-telematico-rpt>`__).
+Assume gli stessi valori dell’omonimo campo della RPT (:ref:`cfr. §
+5.3.1 delle SANP <richiesta-pagamento-telematico-rpt>`__).
 
 *Controlli:* Il dato deve essere un valore ammesso.
 
@@ -2482,9 +2489,10 @@ Digitale.
 |                 |          |            |          |         | tabella precedente                          |
 +-----------------+----------+------------+----------+---------+---------------------------------------------+
 
+.. _flusso-totali-di-traffico-per-gli-enti-creditori:
+
 Flusso “Totali di Traffico” per gli Enti Creditori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Flusso “Totali di Traffico” per gli Enti Creditori:
 
 È il flusso informatico inviato dal Nodo dei Pagamenti-SPC all’Ente
 Creditore o al suo intermediario e contenente tutte le interazioni (RPT
@@ -2637,9 +2645,10 @@ richiedente.
 |                                        |         |            |         |         | di aggregazione                              |
 +----------------------------------------+---------+------------+---------+---------+----------------------------------------------+
 
+.. _flusso-totali-di-traffico-per-i-prestatori-di-servizi-di-pagamento:
+
 Flusso “Totali di Traffico” per i prestatori di servizi di pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Flusso “Totali di Traffico” per i prestatori di servizi di pagamento:
 
 È il flusso informatico inviato dal Nodo dei Pagamenti-SPC al prestatore
 di servizi di pagamento o al suo intermediario contenente tutte le
@@ -2792,13 +2801,14 @@ Si noti che l'elemento identificativoIntermediarioPADestinatario,
 presente nella versione 1.6.1, è stato eliminato sostituito con
 l'elemento identificativoDominioDestinatario.
 
+.. _messaggio-di-conferma-ricezione-della-rt-ack:
+
 Messaggio di conferma ricezione della RT (ACK)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Messaggio di conferma ricezione della RT (ACK):
 
 È il documento informatico con il quale il Nodo dei Pagamenti-SPC
 conferma al prestatore di servizi di pagamento la ricezione della RT
-richiesta con l'apposita primitiva **pspInviaAckRT** (`vedi § 9.2.2.3 <../16-Capitolo_9/Capitolo9.rst#pspinviaackrt>`__).
+richiesta con l'apposita primitiva **pspInviaAckRT** (:ref:`vedi § 9.2.2.3 <pspinviaackrt>`__).
 
 Si precisa che il messaggio era già presente nelle versioni precedenti
 delle specifiche attuative, ma non erano stati formalmente specificati
@@ -2888,14 +2898,15 @@ gli elementi componenti il messaggio stesso, ora indicati nella Tabella
 |                                        |         |            |         |         | stato di errore.                               |
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+
 
+.. _catalogo-dei-servizi:
+
 Catalogo dei servizi
 ~~~~~~~~~~~~~~~~~~~~
-.. _Catalogo dei servizi:
 
 Il “*Catalogo dei Servizi*” è il documento informatico che contiene
 l’elenco dei servizi, attivati dagli Enti Creditori, utilizzabili
 attraverso il modello di pagamento attivato presso i PSP in modalità
-spontanea (`vedi § 2.2.3 <../07-Capitolo_2/Capitolo2.rst#pagamento-spontaneo-presso-i-psp>`__). Tale elenco ha valenza giornaliera: dalle ore
+spontanea (:ref:`vedi § 2.2.3 <pagamento-spontaneo-presso-i-psp>`__). Tale elenco ha valenza giornaliera: dalle ore
 0 alle ore 24.
 
 Nella Tabella 16 sono specificate le informazioni che il Nodo dei
@@ -2946,8 +2957,8 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 Le informazioni del “*Catalogo dei Servizi*” sono codificate in un
 file XML secondo il tracciato di Tabella 17 e devono essere richieste
 dai singoli prestatori di servizi di pagamento al NodoSPC utilizzando
-l'apposita primitiva allo scopo messa a disposizione dal NodoSPC (`vedi §
-8.2.6 Sezione III <../15-Capitolo_8/Capitolo8.rst#ricezione-del-flusso-di-rendicontazione>`__).
+l'apposita primitiva allo scopo messa a disposizione dal NodoSPC (:ref:`vedi §
+8.2.6 Sezione III <ricezione-del-flusso-di-rendicontazione>`__).
 
 Le informazioni sono codificate in un file XML secondo lo schema di
 Tabella 12 e devono essere inviate al Nodo dei Pagamenti-SPC via PEC dal
@@ -2971,8 +2982,8 @@ Ad ogni servizio presente nel Catalogo dei Servizi è associato un
 insieme di dati, specifici del servizio, e necessari all'Ente Creditore
 per fornire al PSP il Numero Avviso: tale insieme di dati viene
 veicolato dal Nodo dei Pagamenti-SPC in forma di file XML (si vedano il
-parametro **I-7** della primitiva nodoChiediNumeroAvviso `al § 9.2.3.4 <../16-Capitolo_9/Capitolo9.rst#nodochiedinumeroavviso>`__ e
-I-3 della primitiva paaChiediNumeroAvviso `al § 8.2.3.4 <../15-Capitolo_8/Capitolo8.rst#paachiedinumeroavviso>`__) a cui è
+parametro **I-7** della primitiva nodoChiediNumeroAvviso :ref:`al § 9.2.3.4 <nodochiedinumeroavviso>`__ e
+I-3 della primitiva paaChiediNumeroAvviso :ref:`al § 8.2.3.4 <paachiedinumeroavviso>`__) a cui è
 associato uno schema XSD che ne definisce il contenuto e permette il
 controllo delle informazioni presenti nel file XML stesso.
 
@@ -2981,14 +2992,15 @@ che viene inviato all'Ente Creditore attraverso il NodoSPC è riportato
 nell'elemento xsdRiferimento del *Catalogo dei Servizi* (vedi Tabella 16
 a pagina 99).
 
+.. _Ddati-specifici-del-servizio-nel-caso-duso-della-tassa-automobilistica:
+
 Dati specifici del servizio nel caso d'uso della Tassa Automobilistica
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Dati specifici del servizio nel caso d'uso della Tassa Automobilistica:
 
 Nella Tabella 18 sono specificate le informazioni che il PSP deve
 fornire per il pagamento della Tassa Automobilistica e che devono essere
 codificate nel file XML da inviare all'Ente Creditore tramite NodoSPC
-nel parametro datiSpecificiServizio (`cfr. §§ 8.2.3.4 <../15-Capitolo_8/Capitolo8.rst#paachiedinumeroavviso>`__ e `9.2.3.4 <../16-Capitolo_9/Capitolo9.rst#nodochiedinumeroavviso>`__).
+nel parametro datiSpecificiServizio (:ref:`cfr. §§ 8.2.3.4 <paachiedinumeroavviso>`__ e :ref:`9.2.3.4 <nodochiedinumeroavviso>`__).
 
 **Tabella** **18 - Struttura dati pagamento spontaneo nel caso d'uso Tassa Automobilistica**
 
@@ -3038,9 +3050,10 @@ tenuti a sviluppare solo l'opzione, definita in Tabella 18, con la
 struttura veicoloConTarga, mentre possono non gestire l'opzione definita
 con la struttura veicoloConTelaio.
 
+.. _avvisatura-digitale:
+
 Avvisatura digitale
 -------------------
-.. _Avvisatura digitale:
 
 Di seguito sono descritti gli oggetti che costituiscono la
 rappresentazione telematica delle informazioni che dovranno essere
@@ -3055,9 +3068,10 @@ scambiate nell’ambito del processo di avvisatura digitale in modalità
 
 -  Parametri Web service
 
+.. _avviso-digitale:
+
 Avviso digitale
 ~~~~~~~~~~~~~~~
-.. _Avviso digitale:
 
 È un oggetto informatico, predisposto da un Ente Creditore o da un suo
 intermediario, per consentire l’invio al Nodo dei Pagamenti-SPC delle
@@ -3181,14 +3195,14 @@ in formato digitale.
 +----------------------------------+---------+------------+---------+---------+--------------------------------------------------+
 | ibanAccredito                    | 3       | an         | 0..1    | 1..35   | Vedi omonimo dato presente nella                 |
 |                                  |         |            |         |         | struttura della RPT                              |
-|                                  |         |            |         |         | (`cfr. § 5.3.1 <../11-Capitolo_5/Capitolo5.rst#  |
-|                                  |         |            |         |         | richiesta-pagamento-telematico-rpt>`_).          |
+|                                  |         |            |         |         | (:ref:`cfr. § 5.3.1 <richiesta-pagamento-        |
+|                                  |         |            |         |         | telematico-rpt>`_).                              |
 +----------------------------------+---------+------------+---------+---------+--------------------------------------------------+
 | ibanAppoggio                     | 3       | an         | 0..1    | 1..35   | Vedi omonimo dato presente nella                 |
 |                                  |         |            |         |         | struttura della RPT                              |
 |                                  |         |            |         |         |                                                  |
-|                                  |         |            |         |         | (`cfr. § 5.3.1 <../11-Capitolo_5/Capitolo5.rst#  |
-|                                  |         |            |         |         | richiesta-pagamento-telematico-rpt>`_).          |
+|                                  |         |            |         |         | (:ref:`cfr. § 5.3.1 <richiesta-pagamento-        |
+|                                  |         |            |         |         | telematico -rpt>`_).                             |
 +----------------------------------+---------+------------+---------+---------+--------------------------------------------------+
 | tipoPagamento                    | 2       | n          | 1..1    | 1       | Dato numerico                                    |
 |                                  |         |            |         |         | che indica la natura del pagamento.              |
@@ -3209,9 +3223,11 @@ in formato digitale.
 |                                  |         |            |         |         | - **‘D’** = Cancellazione di un avviso esistente |
 +----------------------------------+---------+------------+---------+---------+--------------------------------------------------+
 
+.. _esito-inoltro-di-avviso-digitale:
+
 Esito inoltro di Avviso digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Esito inoltro di Avviso digitale:
+
 
 È un oggetto informatico, predisposto dal Nodo dei Pagamenti-SPC, per
 consentire l’invio all’Ente Creditore o al suo intermediario delle
@@ -3283,9 +3299,10 @@ di avviso di pagamento in formato digitale.
 |                                  |         |            |         |         | (codiceEsito<>0), descrive l’evento stesso   |
 +----------------------------------+---------+------------+---------+---------+----------------------------------------------+
 
+.. _file-xml-scambiati-con-lente-creditore:
+
 File XML scambiati con l’Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _File XML scambiati con l’Ente Creditore:
 
 La comunicazione delle richieste via file transfer di avviso digitale
 tra Ente Creditore e Nodo dei Pagamenti-SPC è prevista mediante scambio
@@ -3296,9 +3313,10 @@ compresso con algoritmo gzip e inviato via SFTP al Nodo dei
 Pagamenti-SPC il quale risponderà mediante i file di esito descritti in
 seguito.
 
+.. _file-delle-richieste-di-inoltro-dellavviso-digitale-e-di-esito:
+
 File delle richieste di inoltro dell’avviso digitale e di esito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _File delle richieste di inoltro dell’avviso digitale e di esito:
 
 Lo schema di Tabella 19 definisce la struttura XML che l’Ente Creditore
 deve utilizzare per comporre il file contenente le richieste di inoltro
@@ -3348,8 +3366,8 @@ Creditore con il flusso di cui sopra è indicata in Tabella 22.
 +--------------------------+---------+------------+---------+---------+----------------------------------------------------+
 | identificativoFlusso     | 2       | an         | 1..1    | 1..70   | Identificativo del flusso così                     |
 |                          |         |            |         |         | come definito al                                   |
-|                          |         |            |         |         | `§ 8.5.2.1 <../15-Capitolo_8/Capitolo8.rst#        |
-|                          |         |            |         |         | convenzioni-di-nomenclatura-dei-file-scambiati>`_  |
+|                          |         |            |         |         | :ref:`§ 8.5.2.1 <convenzioni-di-nomenclatura-dei-  |
+|                          |         |            |         |         | file-scambiati>`_                                  |
 +--------------------------+---------+------------+---------+---------+----------------------------------------------------+
 | esitoAvvisoDigitale      | 2       | s          | 1..10   |         | Numero non definito di                             |
 |                          |         |            |         |         | occorrenze della struttura                         |
@@ -3362,9 +3380,10 @@ Si ricorda che, per problemi di gestibilità del servizio di avvisatura,
 il numero massimo delle occorrenze di esiti di avvisi digitali presenti
 in un flusso scambiato è fissato in 100.000.
 
+.. _file-di-segnalazione-di-presa-in-carico:
+
 File di segnalazione di presa in carico
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _MFile di segnalazione di presa in carico:
 
 Lo schema di Tabella 23 rappresenta il file, predisposto da un Ente
 Creditore o dal Nodo dei Pagamenti-SPC, per segnalare alla controparte
@@ -3376,7 +3395,7 @@ del loro esito.
    :widths: 15, 10, 30,10,10,10
    
    "esitoPresaInCarico",1,"s","1..1",,"Struttura che contiene le informazioni relative alla presa in carico delle informazioni trasmesse"
-   "identificativoFlusso",2,"an","1..1","1..70","Identificativo del flusso così come definito al  `§ 8.5.2.1 <../15-Capitolo_8/Capitolo8.rst#convenzioni-di-nomenclatura-dei-file-scambiati>`_"
+   "identificativoFlusso",2,"an","1..1","1..70","Identificativo del flusso così come definito al  :ref:`§ 8.5.2.1 <convenzioni-di-nomenclatura-dei-file-scambiati>`_"
    "codiceEsitoPresaInCarico",2,"n","1..1",1,"Rappresenta il codice circa l’esito della presa in carico del flusso di avvisi digitali. Può assumere uno dei seguenti valori:
    
    - 0  Preso in carico
@@ -3388,9 +3407,11 @@ del loro esito.
    - 6  Altri errori"
    "descrizioneEsitoPresaInCarico",2,"an","0..1","1..140","Testo descrittivo dell’errore rilevato. Obbligatorio se l'esito è diverso da 0."
 
+.. _scambio-informazioni-via-web-service:
+   
 Scambio informazioni via web service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Scambio informazioni via web service:
+
 
 Lo scambio delle informazioni relative all'avvisatura digitale tra Nodo
 dei Pagamenti-SPC, Ente Creditore e PSP avviene, come indicato nei
@@ -3411,9 +3432,10 @@ componenti i seguenti parametri:
 4) I-5 datiNotifica, *request* della primitiva
    **nodoAggiornaIscrizioneAvvisatura**
 
+.. _invio-dellavviso-digitale-al-nodospc:
+   
 Invio dell’avviso digitale al NodoSPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Invio dell’avviso digitale al NodoSPC:
 
 Le informazioni elencate di seguito (vedi Tabella 26) definiscono il
 parametro avvisoDigitaleWS presente nella *request* della primitiva
@@ -3425,7 +3447,7 @@ servizio.
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
-   "avvisoDigitaleWS",2,"S","1..1","","Contiene le stesse informazioni definite per la struttura avvisoDigitale, specificata nella Tabella 19 al `§ 5.4.1. <../11-Capitolo_5/Capitolo5.rst#avviso-digitale>`_"
+   "avvisoDigitaleWS",2,"S","1..1","","Contiene le stesse informazioni definite per la struttura avvisoDigitale, specificata nella Tabella 19 al :ref:`§ 5.4.1. <avviso-digitale>`_"
 
 In Tabella 25 sono elencate le informazioni che definiscono il parametro
 esitoAvvisoDigitaleWS presente nella *response* della primitiva
@@ -3437,15 +3459,16 @@ servizio.
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
-   "esitoAvvisoDigitaleWS",2,"S","1..1","","Contiene le stesse informazioni specificate per la struttura esitoAvvisoDigitale, definita nella Tabella 20 al `§ 5.4.1. <../11-Capitolo_5/Capitolo5.rst#avviso-digitale>`_"
+   "esitoAvvisoDigitaleWS",2,"S","1..1","","Contiene le stesse informazioni specificate per la struttura esitoAvvisoDigitale, definita nella Tabella 20 al :ref:`§ 5.4.1. <avviso-digitale>`_"
 
+.. _recapito-dellavviso-digitale-ai-psp:
+   
 Recapito dell’avviso digitale ai PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Recapito dell’avviso digitale ai PSP:
 
 Le informazioni elencate di seguito (vedi Tabella 26) definiscono il
 parametro avvisoDigitale presente nella *request* della primitiva
-**pspInviaAvvisoDigitale** (`cfr. § 9.2.7.1 <../16-Capitolo_9/Capitolo9.rst#pspinviaavvisodigitale>`__); il livello della
+**pspInviaAvvisoDigitale** (:ref:`cfr. § 9.2.7.1 <pspinviaavvisodigitale>`__); il livello della
 struttura così definita inizia da 2 in quanto descritta formalmente
 all'interno del WSDL del servizio.
 
@@ -3453,15 +3476,16 @@ all'interno del WSDL del servizio.
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
-   "avvisoDigitaleWS",2,"S","1..1","","Contiene le stesse informazioni definite per la struttura avvisoDigitale, specificata nella Tabella 19 al `§ 5.4.1. <../11-Capitolo_5/Capitolo5.rst#avviso-digitale>`_"
+   "avvisoDigitaleWS",2,"S","1..1","","Contiene le stesse informazioni definite per la struttura avvisoDigitale, specificata nella Tabella 19 al :ref:`§ 5.4.1. <avviso-digitale>`_"
 
+.. _notifica-delliscrizione-al-servizio-di-avvisatura-digitale:
+   
 Notifica dell’iscrizione al servizio di avvisatura digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Notifica dell’iscrizione al servizio di avvisatura digitale:
 
 Le informazioni elencate di seguito definiscono la componente
 "datiNotifica" (parametro I-5) presente nella *request* della primitiva
-**nodoAggiornaIscrizioneAvvisatura** (`cfr. § 9.2.7.2 <../16-Capitolo_9/Capitolo9.rst#nodoaggiornaiscrizioniavvisatura>`__); il livello
+**nodoAggiornaIscrizioneAvvisatura** (:ref:`cfr. § 9.2.7.2 <nodoaggiornaiscrizioniavvisatura>`__); il livello
 della struttura così definita inizia da 2 in quanto descritta
 formalmente all'interno del WSDL del servizio.
 
@@ -3481,17 +3505,18 @@ formalmente all'interno del WSDL del servizio.
    
    - **A** = Attivazione
    - **D** = disattivazione"
+   
+.. _richiesta-posizione-debitoria-presso-un-ente-creditore:   
 
 Richiesta posizione debitoria presso un Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Richiesta posizione debitoria presso un Ente Creditore:
 
 Le informazioni elencate in Tabella 28 definiscono il parametro O-2
 elencoAvvisiDigitali presente nella *response* della primitiva
 **nodoChiediElencoAvvisiDigitali** disponibile per i PSP che erogano
 il servizio di invio degli avvisi su iniziativa del PSP (modalità pull)
 e della correlata primitiva **paaChiediElencoAvvisiDigitali** 
-(`cfr. §8.2.8.1 <../15-Capitolo_8/Capitolo8.rst#paachiedielencoavvisidigitali>`__) 
+(:ref:`cfr. §8.2.8.1 <paachiedielencoavvisidigitali>`__) 
 messa a disposizione dall'Ente Creditore; il livello della
 struttura così definita inizia da 2 in quanto descritta formalmente
 all'interno del WSDL del servizio.
@@ -3507,7 +3532,7 @@ all'interno del WSDL del servizio.
    - 1 Elenco incompleto"
    "numeroAvvisi",2,"n","1..1",3,"Numero avvisi presenti nell'elenco."
    "avvisoDigitale",2,"s","0..n",,"Struttura facoltativa che contiene le informazioni dell'avviso digitale in modalità pull. La struttura è **obbligatoria** se l'elemento **numeroAvvisi e maggiore di 0**."
-   "codiceAvviso",3,"an","1..1",18,"Codice dell’avviso di pagamento predisposto secondo quanto indicato al `§ 7.4.1 <../13-Capitolo_7/Capitolo7.rst#codice-contesto-pagamento/>`_ delle SANP. Contiene il codice IUV."
+   "codiceAvviso",3,"an","1..1",18,"Codice dell’avviso di pagamento predisposto secondo quanto indicato al :ref:`§ 7.4.1 <codice-contesto-pagamento/>`_ delle SANP. Contiene il codice IUV."
    "statoPagamento",3,"an","1..1","1.2","
    
    - 00 L’avviso è pagabile 
