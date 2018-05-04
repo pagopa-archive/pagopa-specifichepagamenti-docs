@@ -87,7 +87,7 @@ utilizzati le tabelle seguenti:
 
 Tabella delle controparti
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-.. tabella-delle-controparti
+.. _tabella-delle-controparti
 
 La “Tabella delle controparti” è il documento informatico, inviato dal
 Nodo dei Pagamenti-SPC ad ogni prestatore di servizi di pagamento, che
