@@ -225,8 +225,6 @@ per l’Italia Digitale (ai fini del corretto popolamento della Tabella
 delle controparti, cfr. § 4.2.1 :ref:`Tabella delle controparti <tabella-delle-controparti>`) ed al riconoscimento da parte del Nodo
 dei Pagamenti-SPC.
 
-
-
 Nel Dominio, le attività di pertinenza di ogni soggetto sono effettuate
 conformemente ai requisiti di riservatezza e di protezione da accessi
 non autorizzati.
