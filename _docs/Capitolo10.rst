@@ -1,6 +1,4 @@
-﻿+-----------------------------------------------------------------------+
-| |AGID_logo_carta_intestata-02.png|                                    |
-+-----------------------------------------------------------------------+
+﻿|AGID_logo_carta_intestata-02.png|
 
 +----------------------------------------+
 | **Capitolo 10. GESTIONE DEGLI ERRORI** |
@@ -190,8 +188,8 @@ nella **Gestione degli errori** delle singole primitive.
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RPT_SCONOSCIUTA*          | RPT sconosciuta.                                                                           |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
-| *CANALE_RT_NON_DISPONIBILE*       | `Vedi § 9.2.2.2 <../16-Capitolo_9/Capitolo9.rst#pspchiedirt>`_  **pspChiediRT** e          |
-|                                   | `§ 9.2.2.4 <../16-Capitolo_9/Capitolo9.rst#pspchiedilistart>`_  **pspChiediListaRT**       |
+| *CANALE_RT_NON_DISPONIBILE*       | `Vedi § 9.2.2.2 <../16-Capitolo_9/Capitolo9.rst#pspchiedirt>`  **pspChiediRT** e          |
+|                                   | `§ 9.2.2.4 <../16-Capitolo_9/Capitolo9.rst#pspchiedilistart>`  **pspChiediListaRT**       |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RT_SCONOSCIUTA*           | RT sconosciuta.                                                                            |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
@@ -512,7 +510,7 @@ Errori nella gestione del messaggio di ackRT
 In Tabella 53 sono riportati i codici di errore utilizzati per la
 valorizzazione dell’elemento codiceErrore qualora, nel messaggio di
 conferma di ricezione della RT al PSP, l'elemento
-statoMessaggioReferenziato assuma il valore **RJCT** (`vedi §§ 5.3.10 <../11-Capitolo_5/Capitolo5.rst#messaggio-di-conferma-ricezione-della-rt-ack>`__ e `9.2.2.3 <../16-Capitolo_9/Capitolo9.rst#pspinviaackrt>`__).
+statoMessaggioReferenziato assuma il valore **RJCT** (`vedi §§ 5.3.10 <../11-Capitolo_5/Capitolo5.rst#messaggio-di-conferma-ricezione-della-rt-ack>` e `9.2.2.3 <../16-Capitolo_9/Capitolo9.rst#pspinviaackrt>`).
 
 **Tabella** **53 - Valori dei codici di errore da utilizzare nella struttura XML ackRT**
 
@@ -535,7 +533,7 @@ statoMessaggioReferenziato assuma il valore **RJCT** (`vedi §§ 5.3.10 <../11-C
 |                                   | pendente.                         |
 +-----------------------------------+-----------------------------------+
 
-:ref:`Torna all'indice <Indice>`__
+:ref:`Torna all'indice <Indice>`
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in

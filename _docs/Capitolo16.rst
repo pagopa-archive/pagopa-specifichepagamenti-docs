@@ -1,6 +1,4 @@
-﻿+-----------------------------------------------------------------------+
-| |AGID_logo_carta_intestata-02.png|                                    |
-+-----------------------------------------------------------------------+
+﻿|AGID_logo_carta_intestata-02.png|
 
 +------------------------------------------------------------------+
 | **Capitolo 16. IL MODELLO DI FUNZIONAMENTO DEL SERVIZIO MYBANK** |
@@ -11,7 +9,7 @@ Il modello di funzionamento del servizio MyBank
 
 Il modello di funzionamento del servizio MyBank si identifica con il
 “processo di pagamento con esecuzione immediata” attivato presso il
-portale della pubblica amministrazione (`vedi § 2.1.1 <../07-Capitolo_2/Capitolo2.rst#processo-di-pagamento-con-re-indirizzamento-on-line>`_).
+portale della pubblica amministrazione (`vedi § 2.1.1 <../07-Capitolo_2/Capitolo2.rst#processo-di-pagamento-con-re-indirizzamento-on-line>`).
 
 |image1|
 

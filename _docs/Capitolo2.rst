@@ -1,5 +1,4 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
+﻿|AGID_logo_carta_intestata-02.png|
 
 
 .. _Capitolo2:

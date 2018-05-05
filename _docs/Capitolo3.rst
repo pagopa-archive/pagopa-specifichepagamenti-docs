@@ -1,6 +1,4 @@
-﻿+-----------------------------------------------------------------------+
-| |AGID_logo_carta_intestata-02.png|                                    |
-+-----------------------------------------------------------------------+
+﻿|AGID_logo_carta_intestata-02.png|
 
 .. _Capitolo3:
 
@@ -283,7 +281,7 @@ Componente-Wrapper-MyBank
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nell'ambito del collegamento tra il Nodo dei pagamenti-SPC ed il
-circuito *e-commerce* MyBank (:ref:`vedi Capitolo 16 in Appendice 2 <Capitolo16>`__), la
+circuito *e-commerce* MyBank (:ref:`vedi Capitolo 16 in Appendice 2 <Capitolo16>`), la
 componente "Wrapper MyBank" si occupa di effettuare le necessarie
 conversioni di tracciati e gestire il colloquio tra il Nodo dei
 Pagamenti-SPC e la componente *Initiating Party* messa a disposizione
@@ -305,10 +303,10 @@ attraverso l'utilizzo di componenti del NodoSPC che consentono:
 
 -  agli Enti Creditori l'invio degli avvisi sia in modalità SFTP (File
    transfer sicuro), sia attraverso l'utilizzo di appositi *web service*
-   (vedi rispettivamente :ref:`§§ 8.5 <interfacce-per-il-servizio-di-file-transfer-sicuro>`_ e :ref:`8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`__);
+   (vedi rispettivamente :ref:`§§ 8.5 <interfacce-per-il-servizio-di-file-transfer-sicuro>` e :ref:`8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`);
 
 -  ai PSP di inviare via *web service* al NodoSPC le richieste di
-   iscrizione al servizio (:ref:`vedi § 9.2.7 della Sezione III <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`__);
+   iscrizione al servizio (:ref:`vedi § 9.2.7 della Sezione III <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`);
 
 -  al NodoSPC di:
 
@@ -437,7 +435,7 @@ Il sistema assicura la produzione e pubblicazione di informazioni a
 carattere statistico, attraverso un sito all’uopo dedicato e attraverso
 la gestione dei livelli di accesso secondo profili definiti.
 
-:ref:`Torna all'indice <Indice>`__
+:ref:`Torna all'indice <Indice>`
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in

@@ -1,6 +1,4 @@
-﻿+-----------------------------------------------------------------------+
-| |AGID_logo_carta_intestata-02.png|                                    |
-+-----------------------------------------------------------------------+
+﻿|AGID_logo_carta_intestata-02.png|
 
 .. _Capitolo6:
 
@@ -44,12 +42,12 @@ Nella Tabella 29 sono indicate le informazioni e le specifiche di
 rappresentazione dei dati che i soggetti appartenenti al Dominio sono
 tenuti a fornire per le verifiche di cui sopra. Questi dati sono altresì
 le informazioni "minime" da archiviare nel Giornale degli Eventi 
-(:ref:`cfr. § 3.2.10 <giornale-degli-eventi>`__). Tali informazioni devono essere memorizzate presso le strutture
+(:ref:`cfr. § 3.2.10 <giornale-degli-eventi>`). Tali informazioni devono essere memorizzate presso le strutture
 che scambiano le informazioni (Enti Creditori, PSP, Intermediari
 tecnologici, Nodo dei Pagamenti-SPC) e devono essere accessibili a
 richiesta, nei formati che saranno concordati.
 
-**Tabella** **29 - Informazioni "minime" da archiviare nel "Giornale degli Eventi "**
+**Tabella** **29 - Informazioni "minime" da archiviare nel "Giornale degli Eventi"**
 
 +-------------------------------+---------+------------+---------+---------+-----------------------------------------------------+
 |            **Dato**           | **Liv** | **Genere** | **Occ** | **Len** | **Contenuto**                                       |
@@ -155,8 +153,6 @@ valorizzare il dato:
 -  categoriaEvento a “INTERNO”;
 
 -  identificativoErogatore a “GENERAZIONE-RT”.
-
-:ref:`Torna all'indice <Indice>`__
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in

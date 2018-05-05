@@ -1,6 +1,4 @@
-﻿+-----------------------------------------------------------------------+
-| |AGID_logo_carta_intestata-02.png|                                    |
-+-----------------------------------------------------------------------+
+﻿|AGID_logo_carta_intestata-02.png|
 
 +---------------------------------+
 | **Capitolo 13. RESPONSABILITÀ** |
@@ -78,7 +76,7 @@ l’erogazione dei servizi offerti oggetto delle presenti specifiche
 attuative, nonché alla pubblicazione dei dati rivenienti dal
 relativo monitoraggio.
 
-:ref:`Torna all'indice <Indice>`__
+:ref:`Torna all'indice <Indice>`
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
