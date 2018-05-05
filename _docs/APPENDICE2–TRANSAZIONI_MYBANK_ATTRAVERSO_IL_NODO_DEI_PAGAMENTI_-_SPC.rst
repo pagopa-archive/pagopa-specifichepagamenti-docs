@@ -25,7 +25,7 @@ Infatti l’utilizzo del servizio MyBank in tale contesto:
    pagamenti-SPC.
 
 La trattazione completa dell'argomento è consultabile nel documento
-monografico "*Transazioni MyBank attraverso il No* *do dei Pagamenti-SPC*"
+monografico "*Transazioni MyBank attraverso il Nodo dei Pagamenti-SPC*"
 pubblicato sul sito dell'Agenzia.
 
 
