@@ -54,7 +54,6 @@ processo di pagamento e che svolgono i seguenti ruoli:
 |                                   | informatiche (tipicamente SPID)   |
 |                                   | per accedere ai servizi           |
 |                                   | informatici dell’Ente Creditore.  |
-|                                   |                                   |
 |                                   | Nell’ambito del processo di       |
 |                                   | pagamento si distingue il ruolo   |
 |                                   | del **soggetto debitore**, cioè   |
@@ -67,7 +66,6 @@ processo di pagamento e che svolgono i seguenti ruoli:
 |                                   | si può presumere che              |
 |                                   | l’utilizzatore finale sia il      |
 |                                   | soggetto debitore                 |
-|                                   |                                   |
 |                                   | Si distingue infine il *soggetto* |
 |                                   | *versante*, ovvero come colui     |
 |                                   | accede ai servizi informatici dal |
@@ -81,7 +79,6 @@ processo di pagamento e che svolgono i seguenti ruoli:
 |                                   | configura come “creditore” per le |
 |                                   | somme a vario titolo da questi    |
 |                                   | dovute.                           |
-|                                   |                                   |
 |                                   | L’Ente Creditore, che identifica  |
 |                                   | il soggetto pagatore e la causale |
 |                                   | del pagamento, offre il servizio  |
@@ -99,7 +96,6 @@ processo di pagamento e che svolgono i seguenti ruoli:
 |                                   | restituire la ricevuta            |
 |                                   | elettronica di avvenuto           |
 |                                   | pagamento/incasso.                |
-|                                   |                                   |
 |                                   | Il PSP offre i propri servizi di  |
 |                                   | pagamento mettendo a disposizione |
 |                                   | direttamente o tramite terze      |
@@ -107,7 +103,6 @@ processo di pagamento e che svolgono i seguenti ruoli:
 |                                   | pagamento, fisici e telematici,   |
 |                                   | su cui l’utilizzatore finale può  |
 |                                   | effettuare l’operazione.          |
-|                                   |                                   |
 |                                   | In questo contesto il PSP può     |
 |                                   | svolgere anche, sulla base di     |
 |                                   | appositi accordi con l’ente,      |
@@ -620,8 +615,6 @@ conservare traccia dell’intera transazione di pagamento, sia opportuno
 conservare a norma sia la Ricevuta Telematica, sia la Richiesta di
 Pagamento Telematico e non anche il Flusso di Rendicontazione (per il
 dettaglio su tali oggetti si veda il :ref:`Capitolo 2 <Capitolo2>`).
-
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    Vedi http://www.indicepa.gov.it/
