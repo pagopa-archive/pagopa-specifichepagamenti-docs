@@ -1,4 +1,5 @@
-﻿|AGID_logo_carta_intestata-02.png|
+﻿
+|AGID_logo_carta_intestata-02.png|
 
 +---------------------------------------------------------------+
 | **Capitolo12. ADEMPIMENTI DURANTE L’EROGAZIONE DEL SERVIZIO** |

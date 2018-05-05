@@ -1,6 +1,5 @@
-﻿+-----------------------------------------------------------------------+
-| |AGID_logo_carta_intestata-02.png|                                    |
-+-----------------------------------------------------------------------+
+﻿
+|AGID_logo_carta_intestata-02.png|
 
 **Sezione III - Specifiche di interconnessione**
 .. _Sezione-III:
