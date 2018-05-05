@@ -636,12 +636,12 @@ dettaglio su tali oggetti si veda il :ref:`Capitolo 2 <Capitolo2>`).
 .. [3]
    :ref:`Vedi il paragrafo Definizioni e Acronimi <definizione-e-acronimi>`
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
-.. |image1| image:: ./myMediaFolder/media/image2.png
+.. |image1| image:: media/cap1/image2.png
    :width: 4.80315in
    :height: 3.92492in
-.. |image2| image:: ./myMediaFolder/media/image3.png
+.. |image2| image:: media/cap1/image3.png
    :width: 4.18276in
    :height: 2.3622in

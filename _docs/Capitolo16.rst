@@ -257,12 +257,12 @@ all’Ente Creditore.
 .. [1]
    vedi capitolo 4 delle Allegato A alle Linee guida.
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
 .. |image1| image:: ./myMediaFolder/media/image2.png
    :width: 6.69306in
    :height: 3.78146in
-.. |logo_MyBank_positive.png| image:: ./myMediaFolder/media/image3.png
+.. |logo_MyBank_positive.png| image:: media/cap16/image3.png
    :width: 0.83056in
    :height: 0.41667in

@@ -305,6 +305,6 @@ Lo schema XSD di tale oggetto è disponibile con il file
    quell'utilizzatore finale che utilizza le funzioni di home banking
    messe disposizione dal PSP.
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

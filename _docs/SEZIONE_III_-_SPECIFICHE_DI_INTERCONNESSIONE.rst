@@ -157,12 +157,12 @@ aderenti.
 .. [1]
    in alcuni documenti degli Enti Creditori indicato anche come CRS.
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
-.. |image1| image:: ./myMediaFolder/media/image2.png
+.. |image1| image:: media/sez3/image2.png
    :width: 3.18702in
    :height: 5.01889in
-.. |image2| image:: ./myMediaFolder/media/image3.png
+.. |image2| image:: media/sez3/image3.png
    :width: 3.19886in
    :height: 4.04545in

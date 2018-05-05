@@ -581,9 +581,9 @@ elettronica e codificate all’interno di un file di testo in formato CSV
    Ogni Richiesta di Pagamento Telematico (RPT) consente pagamenti
    indirizzati ad un unico ente beneficiario.
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
-.. |image1| image:: ./myMediaFolder/media/image2.png
+.. |image1| image:: media/cap4/image2.png
    :width: 5.51181in
    :height: 3.85849in

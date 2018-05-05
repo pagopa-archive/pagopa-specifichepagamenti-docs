@@ -1643,60 +1643,60 @@ tempo successivo.
 .. [4]
    :ref:`vedi fase 2a della Figura 19 <inoltro-degli-avvisi-al-debitore>`_
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
-.. |image1| image:: ./myMediaFolder/media/image2.png
+.. |image1| image:: media/cap2/image2.png
    :width: 5.82677in
    :height: 3.90383in
-.. |image2| image:: ./myMediaFolder/media/image3.png
+.. |image2| image:: media/cap2/image3.png
    :width: 5.90551in
    :height: 3.71246in
-.. |image3| image:: ./myMediaFolder/media/image4.png
+.. |image3| image:: media/cap2/image4.png
    :width: 5.90551in
    :height: 3.35152in
-.. |image4| image:: ./myMediaFolder/media/image5.png
+.. |image4| image:: media/cap2/image5.png
    :width: 5.25434in
    :height: 3.33369in
-.. |image5| image:: ./myMediaFolder/media/image6.png
+.. |image5| image:: media/cap2/image6.png
    :width: 5.47244in
    :height: 3.08161in
-.. |image6| image:: ./myMediaFolder/media/image7.png
+.. |image6| image:: media/cap2/image7.png
    :width: 5.82677in
    :height: 4.3639in
-.. |image7| image:: ./myMediaFolder/media/image8.png
+.. |image7| image:: media/cap2/image8.png
    :width: 5.70149in
    :height: 2.5455in
-.. |image8| image:: ./myMediaFolder/media/image9.png
+.. |image8| image:: media/cap2/image9.png
    :width: 5.90551in
    :height: 3.87124in
-.. |image9| image:: ./myMediaFolder/media/image10.png
+.. |image9| image:: media/cap2/image10.png
    :width: 5.90551in
    :height: 3.3014in
-.. |image10| image:: ./myMediaFolder/media/image11.png
+.. |image10| image:: media/cap2/image11.png
    :width: 5.90551in
    :height: 3.30439in
-.. |image11| image:: ./myMediaFolder/media/image12.png
+.. |image11| image:: media/cap2/image12.png
    :width: 4.92126in
    :height: 2.9101in
-.. |image12| image:: ./myMediaFolder/media/image13.png
+.. |image12| image:: media/cap2/image13.png
    :width: 5.47327in
    :height: 1.61417in
-.. |image13| image:: ./myMediaFolder/media/image14.png
+.. |image13| image:: media/cap2/image14.png
    :width: 5.33121in
    :height: 3.14961in
-.. |image14| image:: ./myMediaFolder/media/image15.png
+.. |image14| image:: media/cap2/image15.png
    :width: 5.09584in
    :height: 3.14961in
-.. |image15| image:: ./myMediaFolder/media/image16.png
+.. |image15| image:: media/cap2/image16.png
    :width: 5.90551in
    :height: 3.72097in
-.. |image16| image:: ./myMediaFolder/media/image17.png
+.. |image16| image:: media/cap2/image17.png
    :width: 4.33071in
    :height: 2.11896in
-.. |image17| image:: ./myMediaFolder/media/image18.png
+.. |image17| image:: media/cap2/image18.png
    :width: 5.90551in
    :height: 3.65113in
-.. |image18| image:: ./myMediaFolder/media/image19.png
+.. |image18| image:: media/cap2/image19.png
    :width: 5.90551in
    :height: 4.50265in

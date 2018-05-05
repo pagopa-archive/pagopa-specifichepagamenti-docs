@@ -4202,72 +4202,72 @@ b) il numero di file strettamente necessari a contenere tutte le
    massima numerosità consentita, al momento prevista in 100 mila avvisi
    digitali.
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
-.. |image1| image:: ./myMediaFolder/media/image2.png
+.. |image1| image:: media/cap8/image2.png
    :width: 5.60919in
    :height: 7.40157in
-.. |image2| image:: ./myMediaFolder/media/image3.png
+.. |image2| image:: media/cap8/image3.png
    :width: 5.90551in
    :height: 3.31738in
-.. |image3| image:: ./myMediaFolder/media/image4.png
+.. |image3| image:: media/cap8/image4.png
    :width: 5.59191in
    :height: 3.97638in
-.. |image4| image:: ./myMediaFolder/media/image5.png
+.. |image4| image:: media/cap8/image5.png
    :width: 5.90551in
    :height: 3.7123in
-.. |image5| image:: ./myMediaFolder/media/image6.png
+.. |image5| image:: media/cap8/image6.png
    :width: 5.90551in
    :height: 3.66659in
-.. |image6| image:: ./myMediaFolder/media/image7.png
+.. |image6| image:: media/cap8/image7.png
    :width: 5.70866in
    :height: 3.4613in
-.. |image7| image:: ./myMediaFolder/media/image8.png
+.. |image7| image:: media/cap8/image8.png
    :width: 5.90551in
    :height: 3.44244in
-.. |image8| image:: ./myMediaFolder/media/image9.png
+.. |image8| image:: media/cap8/image9.png
    :width: 5.90551in
    :height: 3.50826in
-.. |image9| image:: ./myMediaFolder/media/image10.png
+.. |image9| image:: media/cap8/image10.png
    :width: 5.90551in
    :height: 4.30469in
-.. |image10| image:: ./myMediaFolder/media/image11.png
+.. |image10| image:: media/cap8/image11.png
    :width: 5.90551in
    :height: 3.98873in
-.. |image11| image:: ./myMediaFolder/media/image12.png
+.. |image11| image:: media/cap8/image12.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image12| image:: ./myMediaFolder/media/image13.png
+.. |image12| image:: media/cap8/image13.png
    :width: 5.90551in
    :height: 3.93284in
-.. |image14| image:: ./myMediaFolder/media/image14.png
+.. |image14| image:: media/cap8/image14.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image15| image:: ./myMediaFolder/media/image15.png
+.. |image15| image:: media/cap8/image15.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image16| image:: ./myMediaFolder/media/image16.png
+.. |image16| image:: media/cap8/image16.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image17| image:: ./myMediaFolder/media/image17.png
+.. |image17| image:: media/cap8/image17.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image18| image:: ./myMediaFolder/media/image18.png
+.. |image18| image:: media/cap8/image18.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image19| image:: ./myMediaFolder/media/image19.png
+.. |image19| image:: media/cap8/image19.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image20| image:: ./myMediaFolder/media/image20.png
+.. |image20| image:: media/cap8/image20.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image21| image:: ./myMediaFolder/media/image21.png
+.. |image21| image:: media/cap8/image21.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image22| image:: ./myMediaFolder/media/image22.png
+.. |image22| image:: media/cap8/image22.png
    :width: 5.90551in
    :height: 4.04141in
-.. |image23| image:: ./myMediaFolder/media/image23.png
+.. |image23| image:: media/cap8/image23.png
    :width: 5.90551in
    :height: 4.04141in
