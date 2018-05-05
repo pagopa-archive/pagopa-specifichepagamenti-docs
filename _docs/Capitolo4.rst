@@ -2,9 +2,13 @@
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
+.. _Capitolo4:
+
 +---------------------------------------------------------------+
 | **Capitolo 4. IL SISTEMA PAGOPA E IL NODO DEI PAGAMENTI-SPC** |
 +---------------------------------------------------------------+
+
+.. _il-sistema-pagopa-e-il-nodo- dei-pagamenti-spc:
 
 Il sistema pagoPA e il Nodo dei Pagamenti-SPC
 =============================================
@@ -26,9 +30,10 @@ Nel presente capitolo saranno brevemente introdotte le caratteristiche
 relative alla connettività tra le parti ed i correlati servizi erogati
 dal NodoSPC nei confronti dei soggetti aderenti.
 
+.. _connessione-al-sistema-pagopa:
+
 Connessione al sistema pagoPA
 -----------------------------
-.. _Connessione al sistema pagoPA:
 
 In Figura 21 è rappresentato lo schema architetturale del sistema
 pagoPA, dove il Nodo dei Pagamenti-SPC costituisce l’*Hub*
@@ -57,9 +62,11 @@ assunto dalle “Linee guida per transitare al nuovo Modello di
 interoperabilità”, anche esso pubblicato sul sito istituzionale
 dell’Agenzia.
 
+.. _strutture-dati-di-supporto:
+
 Strutture dati di supporto
 --------------------------
-.. _Strutture dati di supporto:
+
 
 Il Dominio è gestito nel Nodo dei Pagamenti-SPC mediante strutture dati
 finalizzate all’indirizzamento ed alla gestione di dati a carattere
@@ -87,7 +94,7 @@ utilizzati le tabelle seguenti:
 
 
 
-.. _sec-tabella-delle-controparti:
+.. _tabella-delle-controparti:
 
 Tabella delle controparti
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -101,14 +108,15 @@ pagamento attivato presso il PSP (cosiddetto "Modello 3").
 
 La “Tabella delle controparti” contiene inoltre l'elenco dei codici IBAN
 di accredito che gli Enti Creditori sono tenuti a comunicare al Nodo dei
-Pagamenti-SPC (`vedi successivo § 4.2.3 <../09-Capitolo_4/Capitolo4.rst#tabella-dei-cc-di-accredito>`__).
+Pagamenti-SPC (:ref:`vedi successivo § 4.2.3 <tabella-dei-cc-di-accredito>`__).
 
 La “Tabella delle controparti” viene aggiornata e pubblicata con cadenza
 giornaliera.
 
+.. _catalogo-dati-informativi:
+
 Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Catalogo Dati Informativi:
 
 Ai fini della trasparenza delle operazioni, il Nodo dei Pagamenti-SPC
 censisce per i PSP i dati sulle condizioni di pagamento (costi massimi
@@ -123,9 +131,10 @@ opportune comunicazioni agli utilizzatori finali.
 Il Catalogo dei Dati Informativi viene aggiornato e pubblicato con
 cadenza giornaliera.
 
+.. _tabella-dei-cc-di-accredito:
+
 Tabella dei c/c di accredito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Tabella dei c/c di accredito:
 
 Al fine di garantire la sicurezza delle transazioni processate, il Nodo
 dei Pagamenti-SPC verifica che i codici IBAN presenti nelle Richieste di
@@ -137,21 +146,23 @@ A tale scopo questi ultimi sono tenuti ad inviare al Nodo dei
 Pagamenti-SPC l'elenco dei codici IBAN sui quali effettuare l'accredito
 delle somme dovute.
 
+.. _catalogo-dei-servizi:
+
 Catalogo dei servizi
 ~~~~~~~~~~~~~~~~~~~~
-.. _Catalogo dei servizi:
 
 Il Catalogo dei Servizi è il *repository* che contiene l’elenco dei
 servizi generalizzati, attivati dagli Enti Creditori, relativo al
-processo di pagamento attivato presso i PSP in modalità spontanea (`vedi
-§ 2.2.3 <../07-Capitolo_2/Capitolo2.rst#pagamento-spontaneo-presso-i-psp>`__).
+processo di pagamento attivato presso i PSP in modalità spontanea (:ref:`vedi
+§ 2.2.3 <pagamento-spontaneo-presso-i-psp>`__).
 
 Il Catalogo dei Servizi viene aggiornato e pubblicato con cadenza
 giornaliera.
 
+.. _controlli:
+
 Controlli
 ---------
-.. _Controlli:
 
 Tutti i flussi/dati scambiati e previsti dai Servizi di Nodo devono
 risultare conformi agli Standard di Servizio.
@@ -165,9 +176,10 @@ Servizio, il soggetto ricevente ha l’obbligo:
 -  rendere disponibile un’evidenza dello stato del flusso a fronte di
    una eventuale situazione di blocco del flusso stesso.
 
+   .. _servizi-applicativi-di-base:
+   
 Servizi applicativi di base
 ---------------------------
-.. _Servizi applicativi di base:
 
 Rientrano in questa tipologia tutte le attività per il corretto
 svolgimento delle interazioni finalizzate all’inoltro della Richiesta di
@@ -175,9 +187,10 @@ Pagamento Telematico – RPT da parte dell’Ente Creditore aderente verso
 un PSP e all’inoltro della Ricevuta Telematica – RT da parte di un PSP
 verso un Enti Creditori aderente.
 
+.. _richiesta-di-pagamento-telematico:
+
 Richiesta di Pagamento Telematico
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Richiesta di Pagamento Telematico:
 
 Il Servizio RPT apre il contesto del pagamento telematico. È costituito
 dalle operazioni di ricezione delle RPT dagli Enti Creditori aderenti,
@@ -198,9 +211,10 @@ I flussi di ingresso RPT sono sottoposti a controlli di conformità agli
 Standard di Servizio e sono accettati se trasmessi da Enti Creditori e
 diretti a PSP appartenenti al Dominio.
 
+.. _Ppagamenti-multi-beneficiario-o-multi-pagatore:
+
 Pagamenti multi beneficiario o multi pagatore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Pagamenti multi beneficiario o multi pagatore:
 
 Il processo di pagamento presso l'Ente Creditore consente di gestire
 anche pagamenti di diversi pagatori destinati a molteplici beneficiari
@@ -211,9 +225,10 @@ Pagamenti-SPC di un insieme di RPT [1]_; tale insieme viene denominato
 tutti gli Enti Creditori mittenti presenti nel “carrello RPT” si servano
 dello stesso intermediario tecnologico.
 
+.. _ricevuta-telematica:
+
 Ricevuta Telematica
 ~~~~~~~~~~~~~~~~~~~
-.. _Ricevuta Telematica:
 
 Il Servizio RT chiude il contesto di pagamento telematico ed è
 complementare al Servizio RPT. È costituito dalle operazioni di
@@ -239,11 +254,12 @@ I flussi RT di ricezione:
    sono accettati se trasmessi da PSP appartenenti al Dominio e riferiti
    a RPT in corso di trattamento presso il Nodo dei Pagamenti-SPC.
 
+.. _revoca-della-ricevuta-telematica:
+   
 Revoca della Ricevuta Telematica
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Revoca della Ricevuta Telematica:
 
-`Come visto nel § 2.1.3.2 <../07-Capitolo_2/Capitolo2.rst#individuazione-del-psp-in-caso-di-pagamento-con-carta>`__ la Revoca della RT si esplica nell’invio di una
+:ref:`Come visto nel § 2.1.3.2 <individuazione-del-psp-in-caso-di-pagamento-con-carta>`__ la Revoca della RT si esplica nell’invio di una
 richiesta di revoca (RR) da parte del PSP, contenente i riferimenti
 della RT oggetto della revoca, al quale corrisponde la valutazione
 dell’Ente Creditore e la restituzione al PSP dell’esito di revoca (ER)
@@ -270,11 +286,12 @@ interazione tra:
    Nodo considera conclusa l'operazione di esito revoca dopo la consegna
    della ER al PSP.
 
+.. _storno-di-un-pagamento:
+   
 Storno di un pagamento
 ~~~~~~~~~~~~~~~~~~~~~~
-.. _Storno di un pagamento:
 
-`Come visto nel § 2.1.4 <../07-Capitolo_2/Capitolo2.rst#storno-del-pagamento>`__ lo storno di un pagamento si esplica nell’invio
+:ref:`Come visto nel § 2.1.4 <storno-del-pagamento>`__ lo storno di un pagamento si esplica nell’invio
 di una richiesta di revoca (RR) da parte dell’Ente Creditore, contenente
 i riferimenti della RT oggetto dello storno, al quale corrisponde la
 valutazione del PSP e la restituzione all’Ente Creditore dell’esito di
@@ -305,43 +322,47 @@ I flussi RR e ER sono sottoposti a controlli di conformità agli Standard
 di Servizio e sono accettati se trasmessi da Enti Creditori appartenenti
 al Dominio.
 
+.. _rendicontazione-per-gli-enti-creditori:
+
 Rendicontazione per gli Enti Creditori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Rendicontazione per gli Enti Creditori:
 
 Il Servizio “Rendicontazione” mette a disposizione degli Enti Creditori
-un flusso, generato da ogni PSP (`si confronti il § 2.7 <../07-Capitolo_2/Capitolo2.rst#riconciliazione-dei-pagamenti>`__), 
+un flusso, generato da ogni PSP (:ref:`si confronti il § 2.7 <riconciliazione-dei-pagamenti>`__), 
 che riporta le informazioni necessarie per consentire all’Ente Creditore di procedere
 alla riconciliazione tra le RT ricevute e gli importi trasferiti dal PSP
 del debitore al PSP dell’Ente Creditore.
 
 Il Nodo dei Pagamenti-SPC mette a disposizione dell’Ente Creditore e del
-PSP gli strumenti per lo scambio di tali flussi (vedi anche `§§ 8.1.5 <../15-Capitolo_8/Capitolo8.rst#processo-di-riconciliazione-dei-pagamenti-eseguiti>`__ e `9.2.6 <../16-Capitolo_9/Capitolo9.rst#invio-flusso-di-rendicontazione>`__).
+PSP gli strumenti per lo scambio di tali flussi (vedi anche :ref:`§§ 8.1.5 <processo-di-riconciliazione-dei-pagamenti-eseguiti>`__ e :ref:`9.2.6 <invio-flusso-di-rendicontazione>`__).
 
 Il periodo temporale durante il quale saranno disponibili le
 informazioni relative a tali flussi non sarà inferiore a quindici e non
 superiore a trenta giorni lavorativi.
 
+.. _chiusura-operazioni-pendenti:
+
 Chiusura operazioni pendenti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Chiusura operazioni pendenti:
 
-Con riferimento al modello di pagamento ad esecuzione differita (`cfr. § 2.1.2 <../07-Capitolo_2/Capitolo2.rst#processo-di-pagamento-con-autorizzazione-gestita-dal-psp>`_), ma applicabile a tutti i processi di pagamento previsti, è
+Con riferimento al modello di pagamento ad esecuzione differita (:ref:`cfr. § 2.1.2 <processo-di-pagamento-con-autorizzazione-gestita-dal-psp>`_), ma applicabile a tutti i processi di pagamento previsti, è
 possibile che una Richiesta di pagamento Telematica (RPT) non abbia
 ricevuto la corrispondente Ricevuta Telematica nel periodo durante il
 quale il Nodo dei Pagamenti-SPC rende disponibili le RPT in attesa del
-relativo esito (`si veda il paragrafo 12.3.1 <../20-Capitolo_12/Capitolo12.rst#periodo-di-ritenzione-delle-rpt-senza-esito>`__ "Periodo di ritenzione delle
+relativo esito (:ref:`si veda il paragrafo 12.3.1 <periodo-di-ritenzione-delle-rpt-senza-esito>`__ "Periodo di ritenzione delle
 RPT senza esito" della Sezione IV).
 
 Al termine di detto periodo il Nodo dei Pagamenti-SPC genera in via
 automatica una RT avente esito del pagamento non determinato e la invia
 all’Ente Creditore che ha generato la RPT, nello stesso tempo
 interagisce con il PSP interessato per richiedere la cancellazione della
-RPT dall’archivio per decorrenza dei termini (vedi anche §§ 9.1.7 `vedi anche §§ 9.1.7 <../16-Capitolo_9/Capitolo9.rst#processo-di-notifica-di-chiusura-delle-operazioni-pendenti>`__ e `9.2.9 nella Sezione III <../16-Capitolo_9/Capitolo9.rst#notifica-di-chiusura-delle-operazioni-pendenti>`_).
+RPT dall’archivio per decorrenza dei termini (:ref:`vedi anche §§ 9.1.7 <processo-di-notifica-di-chiusura-delle-operazioni-pendenti>`__ e `9.2.9 nella Sezione III <../16-Capitolo_9/Capitolo9.rst#notifica-di-chiusura-delle-operazioni-pendenti>`_).
+
+.. _modalità-unica-dinterazione---mui:
 
 Modalità Unica d'Interazione - MUI
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Modalità Unica d'Interazione - MUI:
+
 
 In relazione ai diversi modelli di processo sopra descritti, il Servizio
 MUI del Nodo dei Pagamenti-SPC, che non ha interfacce verso i soggetti
@@ -352,11 +373,12 @@ Creditore.
 
 In particolare, MUI normalizza i flussi operativi per realizzare il
 processo di pagamento attuato presso il Portale di Pagamento del PSP
-appositamente predisposto dal PSP stesso (`cfr. anche §2.2 <../07-Capitolo_2/Capitolo2.rst#processo-di-pagamento-attivato-presso-il-psp>`_).
+appositamente predisposto dal PSP stesso (:ref:`cfr. anche §2.2 <processo-di-pagamento-attivato-presso-il-psp>`_).
+
+.. _accentramento-della-scelta-del-psp:
 
 Accentramento della scelta del PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Accentramento della scelta del PSP:
 
 Il Nodo dei Pagamenti-SPC mette a disposizione degli Enti Creditori
 apposite pagine esposte su internet che realizzano le funzionalità WISP
@@ -365,9 +387,10 @@ il servizio di pagamento che più si addice alle proprie esigenze e
 consente di standardizzare a livello nazionale la *user experience* dei
 pagamenti verso la Pubblica Amministrazione.
 
+.. _rendicontazione-per-lagenzia-delle-entrate:
+
 Rendicontazione per l’Agenzia delle Entrate
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Rendicontazione per l’Agenzia delle Entrate:
 
 Nell’ambito della gestione dell’acquisto della marca da bollo digitale,
 una specifica funzione del Nodo dei Pagamenti-SPC provvederà
@@ -376,9 +399,10 @@ gli Enti Creditori accreditati sul Nodo dei Pagamenti-SPC, il flusso di
 rendicontazione previsto al punto 5.4 del Provvedimento del Direttore
 dell’Agenzia delle Entrate del 19 settembre 2014.
 
+.. _sincronizzazione-con-la-componente-di-gestione-sftp:
+
 Sincronizzazione con la componente di gestione SFTP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Sincronizzazione con la componente di gestione SFTP:
 
 Il Nodo dei Pagamenti-SPC mette a disposizione degli Enti Creditori e
 dei PSP la possibilità di completare la ricezione e l'invio di flussi
@@ -387,20 +411,22 @@ sincrona (ad esempio: flussi di rendicontazione, totali di traffico,
 ecc.), in modalità file transfer sicuro (SFTP).
 
 **La funzione è al momento attiva solo per la ricezione dei flussi di**
-**rendicontazione** (`vedi § 5.3.5 <../11-Capitolo_5/Capitolo5.rst#flusso-di-rendicontazione>`__) **da parte degli Enti Creditori.**
+**rendicontazione** (:ref:`vedi § 5.3.5 <flusso-di-rendicontazione>`__) **da parte degli Enti Creditori.**
+
+.. _servizi-applicativi-opzionali:
 
 Servizi applicativi opzionali
 -----------------------------
-.. _Servizi applicativi opzionali:
 
 Rientrano in questa tipologia tutte le funzioni che il Servizio mette a
 disposizione dei soggetti appartenenti al Dominio e che possono da
 questi essere utilizzate nell’ambito dello svolgimento delle proprie
 attività.
 
+.. _totali-di-traffico:
+
 Totali di traffico
 ~~~~~~~~~~~~~~~~~~
-.. _Totali di traffico:
 
 Il Servizio di Quadratura dei flussi di traffico mette a disposizione
 dei soggetti appartenenti al Dominio che ne facciano richiesta, un
@@ -409,23 +435,25 @@ attraverso il Nodo dei Pagamenti-SPC e di stretta pertinenza del singolo
 richiedente.
 
 Il Nodo dei Pagamenti-SPC mette a disposizione dell’Ente Creditore e del
-PSP gli strumenti per la ricezione di tali flussi (`vedi §§ 8.1.5 <../15-Capitolo_8/Capitolo8.rst#processo-di-riconciliazione-dei-pagamenti-eseguiti>`__ e `9.2.11 <../16-Capitolo_9/Capitolo9.rst#ricezione-totali-di-traffico>`__).
+PSP gli strumenti per la ricezione di tali flussi (:ref:`vedi §§ 8.1.5 <processo-di-riconciliazione-dei-pagamenti-eseguiti>`__ e `9.2.11 <../16-Capitolo_9/Capitolo9.rst#ricezione-totali-di-traffico>`__).
 
 Il periodo temporale durante il quale saranno disponibili i flussi
 relativi ai “Totali di Traffico” non potrà superare i 10 giorni di
 calendario e sarà comunque pubblicato sul sito dell’Agenzia per l’Italia
 Digitale.
 
+.. _servizi-operativi:
+
 Servizi operativi
 -----------------
-.. _Servizi operativi:
 
 Sono classificati come Servizi Operativi tutte le attività propedeutiche
 o a supporto dell’erogazione del Servizio.
 
+.. _tavolo-operativo-e-gestione-delle-anomalie-incident:
+
 Tavolo Operativo e gestione delle anomalie (*Incident*)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Tavolo Operativo e gestione delle anomalie (*Incident*):
 
 Il Servizio rende disponibile un Tavolo operativo di primo livello, il
 quale:
@@ -455,9 +483,10 @@ terzo livello di supporto per l’opportuno intervento correttivo.
 Per l’accesso ai servizi del tavolo operativo si faccia riferimento al
 sito dell’Agenzia.
 
+.. _monitoring-e-controllo:
+
 Monitoring e controllo
 ~~~~~~~~~~~~~~~~~~~~~~
-.. _Monitoring e controllo:
 
 Il Servizio prevede la disponibilità di un sistema di tracciamento degli
 eventi e di strumenti per controllo avanzamento/stati a disposizione dei
@@ -475,9 +504,10 @@ di tali registrazioni costituisce il “Giornale degli Eventi”, il quale
 riporta gli estremi degli eventi verificatisi così come indicato negli
 Standard di Servizio.
 
+.. _reporting:
+
 Reporting
 ~~~~~~~~~
-.. _Reporting:
 
 Il Servizio rende disponibile la consultazione, l’analisi e
 l’esportazione di:
@@ -490,9 +520,10 @@ l’esportazione di:
    rispetto delle regole di riservatezza e competenza delle
    registrazioni.
 
+.. _report-commissioni-a-carico-pa:
+   
 Report “Commissioni a carico PA”
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Report “Commissioni a carico PA”:
 
 Premesso che le presenti linee guida hanno come presupposto le
 disposizioni primarie in materia di pagamenti, si evidenzia che i PSP
@@ -513,7 +544,7 @@ PSP, ciascuno per le informazioni di propria competenza, un documento
 contente l’elenco ed i relativi totali, per controparte, delle RPT
 scambiate nel mese di riferimento che contengono un valore non nullo nel
 dato commissioneCaricoPA presente nella struttura della RPT denominata
-datiSingoloVersamento (`vedi § 5.3.1 della Sezione II <../11-Capitolo_5/Capitolo5.rst#richiesta-pagamento-telematico-rpt>`__).
+datiSingoloVersamento (:ref:`vedi § 5.3.1 della Sezione II <richiesta-pagamento-telematico-rpt>`__).
 
 Per ogni coppia Ente Creditore / PSP sarà generata un elenco contenente
 il dettaglio delle RPT che hanno dato luogo ad una RT recepita dal Nodo

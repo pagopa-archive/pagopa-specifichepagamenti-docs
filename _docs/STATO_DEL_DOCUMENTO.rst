@@ -5,6 +5,7 @@
 +-------------------------+
 | **Stato del documento** |
 +-------------------------+
+
 .. _Stato-del-documento:
 
 Stato del documento

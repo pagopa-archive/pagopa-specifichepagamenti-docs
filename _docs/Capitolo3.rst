@@ -2,9 +2,13 @@
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
+.. _Capitolo3:
+
 +-------------------------------------------+
 | **Capitolo 3. IL NODO DEI PAGAMENTI-SPC** |
 +-------------------------------------------+
+
+.. _il-nodo-dei-pagamenti-spc:
 
 Il Nodo dei Pagamenti-SPC
 =========================
@@ -37,9 +41,10 @@ ai prestatori di servizi di pagamento che possono in tal modo
 implementare in modo uniforme il colloquio telematico relativo ai
 servizi di pagamento.
 
+.. _caratteristiche-generali-del-nodo-dei-pagamenti:
+
 Caratteristiche generali del Nodo dei Pagamenti-SPC
 ---------------------------------------------------
-.. _Caratteristiche generali del Nodo dei Pagamenti-SPC:
 
 Il Nodo dei Pagamenti-SPC è strutturato per rispondere alle necessità
 di:
@@ -100,16 +105,18 @@ dei flussi finanziari:
 
 -  de-materializza gli avvisi di pagamento.
 
+.. _architettura-e-contenuti-del-nodo-dei-pagamenti-spc:
+
 Architettura e contenuti del Nodo dei Pagamenti-SPC
 ---------------------------------------------------
-.. _Architettura e contenuti del Nodo dei Pagamenti-SPC:
 
 La piattaforma del Nodo dei Pagamenti-SPC si basa sulle componenti
 appresso indicate.
 
+.. _gestore-del-workflow-applicativo:
+
 Gestore del Workflow Applicativo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Gestore del Workflow Applicativo:
 
 È la macro-componente principale mediante la quale istanzia i modelli di
 pagamento di cui al capitolo 2. Ha lo scopo di coordinare l’esecuzione
@@ -143,9 +150,10 @@ permettono:
 
 -  il mantenimento del sincronismo temporale.
 
+.. _gestore-della-porta-di-dominio:
+
 Gestore della Porta di Dominio
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Gestore della Porta di Dominio:
 
 Questa componente, mantenuta per retro compatibilità, si occupa dello
 scambio dei messaggi da e verso SPC per il colloquio con l’Ente
@@ -180,9 +188,10 @@ titolo esemplificativo:
 
 -  mantenimento del sincronismo temporale.
 
+.. _interfaccia-di-canale:
+
 Interfaccia di Canale
 ~~~~~~~~~~~~~~~~~~~~~
-.. _Interfaccia di Canale:
 
 Le attività svolte da questa componente sono analoghe a quelle svolte
 dal gestore della Porta di Dominio per gli Enti Creditori, ma istanziate
@@ -217,9 +226,10 @@ Di seguito le principali attività svolte dalla componente:
 
 -  mantenimento del sincronismo temporale.
 
+.. _repository:
+
 Repository
 ~~~~~~~~~~
-.. _Repository:
 
 Il *Repository* costituisce l’archivio in cui sono memorizzate tutte le
 Ricevute Telematiche processate dal NodoSPC e non ancora consegnate,
@@ -228,9 +238,10 @@ finalizzato al buon funzionamento del sistema.
 Il *Repository* consente una verifica in merito al corretto trattamento
 dei flussi di pagamento del Nodo dei Pagamenti-SPC.
 
+.. _componente-web-fesp:
+
 Componente Web-FESP
 ~~~~~~~~~~~~~~~~~~~
-.. _Componente Web-FESP:
 
 La componente “Web-FESP” permette di effettuare il pagamento
 reindirizzando l’utente verso una *landing page* messa a disposizione
@@ -246,9 +257,10 @@ In questo caso:
    Nodo dei Pagamenti-SPC all’Ente Creditore per consentire di
    completare l’operazione di pagamento.
 
+   .. _componente-wisp:
+   
 Componente WISP
 ~~~~~~~~~~~~~~~
-.. _Componente WISP:
 
 La componente “WISP” (*Wizard* Interattivo di Scelta del PSP) consente
 all'utilizzatore finale di effettuare la scelta del PSP in modalità
@@ -265,12 +277,13 @@ anche nel caso di pagamento con dispositivi mobili. Inoltre l’utente
 potrà memorizzare i servizi di pagamento utilizzati, evitando di dover
 effettuare una nuova ricerca nelle occasioni successive.
 
-Componente Wrapper MyBank
+.. _componente-wrapper-mybank:
+
+Componente-Wrapper-MyBank
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Componente Wrapper MyBank:
 
 Nell'ambito del collegamento tra il Nodo dei pagamenti-SPC ed il
-circuito *e-commerce* MyBank (`vedi Capitolo 16 in Appendice 2 <../26-Capitolo_16/Capitolo16.rst>`__), la
+circuito *e-commerce* MyBank (:ref:`vedi Capitolo 16 in Appendice 2 <Capitolo16>`__), la
 componente "Wrapper MyBank" si occupa di effettuare le necessarie
 conversioni di tracciati e gestire il colloquio tra il Nodo dei
 Pagamenti-SPC e la componente *Initiating Party* messa a disposizione
@@ -282,19 +295,20 @@ In tale contesto, le *Seller Bank* aderenti al Nodo dei Pagamenti-SPC
 sono tenute ad utilizzare le specifiche di interfacciamento della
 componente “Wrapper MyBank”.
 
+.. _gestione-dellavvisatura-digitale-in-modalità-push:
+
 Gestione dell'avvisatura digitale in modalità *push*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Gestione dell'avvisatura digitale in modalità *push*:
 
 La gestione dell'avvisatura digitale in modalità *push* avviene
 attraverso l'utilizzo di componenti del NodoSPC che consentono:
 
 -  agli Enti Creditori l'invio degli avvisi sia in modalità SFTP (File
    transfer sicuro), sia attraverso l'utilizzo di appositi *web service*
-   (vedi rispettivamente `§§ 8.5 <../15-Capitolo_8/Capitolo8.rst#interfacce-per-il-servizio-di-file-transfer-sicuro>`_ e `8.1.6 <../15-    Capitolo_8/Capitolo8.rst#processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`__);
+   (vedi rispettivamente :ref:`§§ 8.5 <interfacce-per-il-servizio-di-file-transfer-sicuro>`_ e :ref:`8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`__);
 
 -  ai PSP di inviare via *web service* al NodoSPC le richieste di
-   iscrizione al servizio (`vedi § 9.2.7 della Sezione III <../16-Capitolo_9/Capitolo9.rst#avvisatura-digitale-push-su-iniziativa-          dellente-creditore>`__);
+   iscrizione al servizio (:ref:`vedi § 9.2.7 della Sezione III <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`__);
 
 -  al NodoSPC di:
 
@@ -305,10 +319,11 @@ attraverso l'utilizzo di componenti del NodoSPC che consentono:
 
    -  notificare ai servizi di Italia Login gli avvisi digitali
       (predisposizione per funzionalità future);
+	  
+.. _file-transfer-sicuro:
 
 File Transfer sicuro
 ~~~~~~~~~~~~~~~~~~~~
-.. _File Transfer sicuro:
 
 Il Nodo dei Pagamenti-SPC mette a disposizione dei soggetti aderenti una
 piattaforma *client-server* per il trasferimento sicuro dei dati in
@@ -317,9 +332,10 @@ l'utilizzo delle primitive SOAP oggi impiegate per lo scambio di
 informazioni in modalità massiva (ad esempio: i flussi di
 rendicontazione, i totali di traffico, ecc.).
 
+.. _giornale-degli-eventi:
+
 Giornale degli Eventi
 ~~~~~~~~~~~~~~~~~~~~~
-.. _Giornale degli Eventi:
 
 È la componente che evidenzia tutte le informazioni attinenti ad ogni
 singola operazione sintetizzando le registrazioni effettuate dalle
@@ -352,10 +368,11 @@ Le principali attività svolte dalla componente riguardano:
 
 -  la disponibilità di dati di sintesi (totali di tipo di operazione per
    stato, per intervallo temporale, ecc.).
+   
+.. _componenti-di-utilità:
 
 Componenti di utilità
 ~~~~~~~~~~~~~~~~~~~~~
-.. _Componenti di utilità:
 
 Le Componenti di utilità rappresentano un insieme di componenti “di
 servizio” invocate, in base alle necessità, dal *Workflow* Applicativo
@@ -374,9 +391,10 @@ Ognuna delle componenti di utilità, oltre ad attività specifiche alla
 propria funzione, svolge le attività di interfacciamento ed integrazione
 con il gestore del *Workflow* Applicativo.
 
+.. _sistema-di-monitoring:
+
 Sistema di Monitoring
 ~~~~~~~~~~~~~~~~~~~~~
-.. _Sistema di Monitoring:
 
 Il sistema di Monitoring svolge attività di controllo complessivo per
 quanto attiene alle tematiche di monitoraggio. tale componente deve
@@ -395,9 +413,10 @@ regole di *throttling* sono indicate nel documento
 “*Indicatori di qualità per i Soggetti Aderenti*” pubblicato sul sito istituzionale
 dell’Agenzia per l’Italia Digitale.
 
+.. _sistema-di-gestione-del-tavolo-operativo:
+
 Sistema di Gestione del Tavolo Operativo
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Sistema di Gestione del Tavolo Operati:
 
 Il sistema ha lo scopo di fornire il supporto necessario alle attività
 del Tavolo Operativo, monitorando le altre componenti applicative e
@@ -409,9 +428,10 @@ un sistema di *Interactive Voice Response* (IVR, Risposta Vocale
 Interattiva) per istradare le chiamate vocali, integrato a un sistema di
 *trouble-ticketing* per tracciare tutte le attività di assistenza.
 
+.. _sistema-di-reporting:
+
 Sistema di Reporting
 ~~~~~~~~~~~~~~~~~~~~
-.. _Sistema di Reporting:
 
 Il sistema assicura la produzione e pubblicazione di informazioni a
 carattere statistico, attraverso un sito all’uopo dedicato e attraverso
