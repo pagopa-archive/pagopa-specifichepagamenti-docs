@@ -1,4 +1,4 @@
-﻿+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
@@ -272,7 +272,6 @@ stabilito nelle Linee guida e nei relativi allegati:
    pagoPA”, nella versione pubblicata sul sito istituzionale
    dell’Agenzia per l’Italia Digitale.
 
-:ref:`Torna all'indice <Indice>`
 
 .. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
    :width: 5.90551in
