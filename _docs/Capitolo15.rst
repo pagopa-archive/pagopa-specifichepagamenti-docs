@@ -1,4 +1,4 @@
-﻿+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
@@ -322,7 +322,6 @@ Lo schema XSD di tale oggetto è disponibile con il file
 
 **ACK_PagamentiTelematici_<versione>.xsd.**
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    Il terminale può essere un ATM, quello dell'operatore del PSP ovvero
