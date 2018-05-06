@@ -2,9 +2,13 @@
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
+.. _Capitolo13:
+
 +---------------------------------+
 | **Capitolo 13. RESPONSABILITÀ** |
 +---------------------------------+
+
+.. _responsabilità:
 
 Responsabilità
 ==============
@@ -12,9 +16,10 @@ Responsabilità
 Di seguito sono indicati gli oneri in capo ai soggetti aderenti al Nodo
 dei Pagamenti-SPC.
 
+.. _responsabilità-dellente-creditore:
+
 Responsabilità dell’Ente Creditore
 ----------------------------------
-.. _Responsabilità dell’Ente Creditore:
 
 L’Ente Creditore è responsabile anche sotto il profilo giuridico:
 
@@ -45,9 +50,10 @@ Digitale e/o suoi aventi causa, a monitorare l’erogazione dei
 servizi offerti oggetto delle presenti specifiche tecniche, nonché
 alla pubblicazione dei dati rivenienti dal relativo monitoraggio.
 
+.. _responsabilità-del-prestatore-di-servizi-di-pagamento:
+
 Responsabilità del prestatore di servizi di pagamento
 -----------------------------------------------------
-.. _Responsabilità del prestatore di servizi di pagamento:
 
 Il prestatore di servizi di pagamento è tenuto a eseguire
 l’operazione di pagamento richiesta dall’utilizzatore finale secondo
@@ -78,7 +84,7 @@ l’erogazione dei servizi offerti oggetto delle presenti specifiche
 attuative, nonché alla pubblicazione dei dati rivenienti dal
 relativo monitoraggio.
 
-:ref:`Torna all'indice <Indice>`__
+:ref:`Torna all'indice <Indice>`
 
 .. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
    :width: 5.90551in
