@@ -1,4 +1,4 @@
-﻿+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
@@ -398,7 +398,6 @@ indicati in Tabella 33.
 L'Ente Creditore può scegliere quale tipo di formato utilizzare; il PSP
 rende disponibili tali informazioni all'utilizzatore finale.
 
-:ref:`Torna all'indice <Indice>`__
 
 .. [1]
    ad esempio: il GUID (Globally Unique IDentifier, identificatore unico
