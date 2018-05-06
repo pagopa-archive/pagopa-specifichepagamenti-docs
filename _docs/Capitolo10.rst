@@ -2,9 +2,13 @@
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
+.. _Capitolo10:
+
 +----------------------------------------+
 | **Capitolo 10. GESTIONE DEGLI ERRORI** |
 +----------------------------------------+
+
+.. _gestione-degli-errori:
 
 Gestione degli Errori
 =====================
@@ -12,9 +16,10 @@ Gestione degli Errori
 In questo capitolo sono fornite le specifiche necessarie per gestire gli
 errori all’interno del sistema pagoPA.
 
+.. _la-struttura-faultbean:
+
 La struttura faultBean
 ----------------------
-.. _La struttura faultBean:
 
 Per la **Gestione degli errori** all’interno dei messaggi scambiati tra
 i soggetti aderenti (EC e PSP) ed il NodoSPC viene utilizzata la
@@ -139,9 +144,10 @@ struttura **faultBean** composta così come indicato in Tabella 51.
 | *Formato:* Numerico stringa.                                          |
 +-----------------------------------------------------------------------+
 
+.. _codici-di-errore:
+
 Codici di errore
 ----------------
-.. _Codici di errore:
 
 Questo paragrafo riporta nella Tabella 52 i codici di errore
 (**faultCode**) e la relativa **faultString**, restituiti dalle
@@ -190,8 +196,8 @@ nella **Gestione degli errori** delle singole primitive.
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RPT_SCONOSCIUTA*          | RPT sconosciuta.                                                                           |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
-| *CANALE_RT_NON_DISPONIBILE*       | `Vedi § 9.2.2.2 <../16-Capitolo_9/Capitolo9.rst#pspchiedirt>`_  **pspChiediRT** e          |
-|                                   | `§ 9.2.2.4 <../16-Capitolo_9/Capitolo9.rst#pspchiedilistart>`_  **pspChiediListaRT**       |
+| *CANALE_RT_NON_DISPONIBILE*       | :ref:`Vedi § 9.2.2.2 <pspchiedirt>`_  **pspChiediRT** e                                    |
+|                                   | :ref:`§ 9.2.2.4 <pspchiedilistart>`_  **pspChiediListaRT**                                 |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RT_SCONOSCIUTA*           | RT sconosciuta.                                                                            |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
@@ -391,9 +397,10 @@ nella **Gestione degli errori** delle singole primitive.
 |                                   | scaduta.                                                                                   |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 
+.. _spiegazione-di-alcuni-faultcode:
+
 Spiegazione di alcuni faultCode
 -------------------------------
-.. _Spiegazione di alcuni faultCode:
 
 Ricordato che, nel caso di primitive sincrone, il NodoSPC provvede a far
 pervenire il codice di errore alla controparte interessata (Ente
@@ -505,14 +512,15 @@ faultCode emessi dai vari soggetti:
 | di avvisatura per un soggetto sconosciuto.                            |
 +-----------------------------------------------------------------------+
 
+.. _errori-nella-gestione-del-messaggio-di-ackrt:
+
 Errori nella gestione del messaggio di ackRT
 --------------------------------------------
-.. _Errori nella gestione del messaggio di ackRT:
 
 In Tabella 53 sono riportati i codici di errore utilizzati per la
 valorizzazione dell’elemento codiceErrore qualora, nel messaggio di
 conferma di ricezione della RT al PSP, l'elemento
-statoMessaggioReferenziato assuma il valore **RJCT** (`vedi §§ 5.3.10 <../11-Capitolo_5/Capitolo5.rst#messaggio-di-conferma-ricezione-della-rt-ack>`__ e `9.2.2.3 <../16-Capitolo_9/Capitolo9.rst#pspinviaackrt>`__).
+statoMessaggioReferenziato assuma il valore **RJCT** (:ref:`vedi §§ 5.3.10 <messaggio-di-conferma-ricezione-della-rt-ack>`__ e `9.2.2.3 <../16-Capitolo_9/Capitolo9.rst#pspinviaackrt>`__).
 
 **Tabella** **53 - Valori dei codici di errore da utilizzare nella struttura XML ackRT**
 
