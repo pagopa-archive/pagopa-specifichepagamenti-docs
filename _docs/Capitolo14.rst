@@ -1,4 +1,4 @@
-﻿+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
@@ -169,7 +169,6 @@ devono implementare, nell’ambito del processo di Avvisatura digitale
 *pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`),
 per inviare al NodoSPC una richiesta relativa alla posizione debitoria di un dato utilizzatore finale.
 
-:ref:`Torna all'indice <Indice>`
 
 .. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
    :width: 5.90551in
