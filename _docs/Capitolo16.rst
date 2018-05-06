@@ -1,4 +1,4 @@
-﻿+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
@@ -263,7 +263,6 @@ datiSingoloVersamento (:ref:`vedi § 5.3.1 <richiesta-pagamento-telematico-rpt>`
 Le Richieste di Pagamento Telematiche non conformi saranno rifiutate
 all’Ente Creditore.
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    vedi capitolo 4 delle Allegato A alle Linee guida.
