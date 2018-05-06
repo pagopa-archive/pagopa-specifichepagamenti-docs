@@ -1,4 +1,4 @@
-﻿+-----------------------------------------------------------------------+
++-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
@@ -1625,7 +1625,6 @@ dispositivi mobili ovvero altri servizi che consentono di ricevere i
 dati del dovuto e di effettuarne il pagamento contestualmente oppure in
 tempo successivo.
 
-:ref:`Torna all'indice <Indice>`__
 
 .. [1]
    Come per il processo di pagamento con re indirizzamento on-line, nel
