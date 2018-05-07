@@ -975,7 +975,7 @@ in funzione della configurazione dell'Ente Creditore:
     informatico ricevuto dalla Banca Tesoriera, la componente di
     *Back-office* dell’Ente Creditore effettua la riconciliazione (:ref:`si veda il § 2.7.2 <riconciliazione-in-modalità-multipla>`).
 
-.. _processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore:
+.. _processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8:
 
 Processo di avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
