@@ -691,7 +691,7 @@ sostituzione della iniziale richiesta di “*verifica del pagamento in attesa*�
 con la richiesta del “*numero dell'avviso*”.
 
 Il NodoSPC riceve la richiesta del numero di avviso dal PSP, controlla
-sul Catalogo dei servizi (vedi §§ :ref:`4.2.4 <Catalogo-dei-servizicap4>` e :ref:`5.3.11 <catalogo-dei-servizi>`),
+sul Catalogo dei servizi (vedi §§ :ref:`4.2.4 <catalogo-dei-servizicap4>` e :ref:`5.3.11 <catalogo-dei-servizi>`),
 la congruità della richiesta e la inoltra all'Ente
 Creditore che, accedendo ai propri archivi, assegna alla richiesta il
 corretto numero avviso. Da questo momento in poi, il processo di
