@@ -41,7 +41,7 @@ I *workflow* di seguito descritti sono parte integrante delle
 implementazioni previste nel Nodo dei Pagamenti-SPC (:ref:`vedi anche Sezione
 III <Sezione-III>`).
 
-.. _Processo-di-pagamento-attivato-presso-l’Ente-Creditore:
+.. _processo-di-pagamento-attivato-presso-lente-creditore:
 
 Processo di pagamento attivato presso l’Ente Creditore
 ------------------------------------------------------
@@ -335,7 +335,7 @@ Si noti, che, qualora l'utilizzatore finale non effettui alcuna scelta,
 oppure si verifichi un timeout di sessione, il NodoSPC genererà una o
 più RT negative, così come indicato nei precedenti paragrafi.
 
-.. _Servizio-di-scelta-e-memorizzazione-del-pagamento:
+.. _servizio-di-scelta-e-memorizzazione-del-pagamento:
 
 Servizio di scelta e memorizzazione del pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
