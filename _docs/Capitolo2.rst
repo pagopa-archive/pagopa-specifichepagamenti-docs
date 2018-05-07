@@ -271,7 +271,7 @@ Il regolamento dei pagamenti effettuati con questo tipo di *workflow*
 viene effettuato attraverso il bonifico bancario (SCT - SEPA Credit
 Transfer) ed il bollettino di conto corrente postale.
 
-.. _Scelta-del-servizio-di-pagamento-da-parte-dell'utilizzatore-finale:
+.. _scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale:
 
 Scelta del servizio di pagamento da parte dell'utilizzatore finale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1175,7 +1175,8 @@ acquisto consta dei seguenti passi:
 
    c. provincia di residenza del soggetto pagatore;
 
-5. l’utilizzatore finale viene indirizzato sul WISP (:ref:`vedi § 2.1.3 <scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale>`) che
+5. l’utilizzatore finale viene indirizzato sul WISP 
+   (:ref:`vedi § 2.1.3 <scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale>`) che
    gli consente di scegliere il servizio di pagamento che intende
    utilizzare NB: la PA deve porre attenzione alla composizione del
    carrello poiché in questa circostanza le opzioni disponibili saranno
@@ -1432,7 +1433,7 @@ utilizzando il formato dati previsto dalle specifiche riportate nel §
 **Errore. L'origine riferimento non è stata trovata.**, segnalando
 all'ente eventuali difformità rispetto agli standard previsti.
 
-.. _Recapito-dell'avviso-al-debitore:
+.. _recapito-dellavviso-al-debitore:
 
 Recapito dell'avviso al debitore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
