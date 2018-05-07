@@ -707,7 +707,7 @@ finale che consentono di identificare univocamente il pagamento presso
 l'Ente Creditore, quali, ad esempio, la targa del veicolo per il
 pagamento della tassa automobilistica.
 
-.. _Revoca-della-Ricevuta-Telematica:
+.. _Revoca-della-Ricevuta-Telematicacap2:
 
 Revoca della Ricevuta Telematica
 --------------------------------
