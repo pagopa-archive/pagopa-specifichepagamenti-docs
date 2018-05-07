@@ -210,7 +210,7 @@ I flussi di ingresso RPT sono sottoposti a controlli di conformità agli
 Standard di Servizio e sono accettati se trasmessi da Enti Creditori e
 diretti a PSP appartenenti al Dominio.
 
-.. _Ppagamenti-multi-beneficiario-o-multi-pagatore:
+.. _pagamenti-multi-beneficiario-o-multi-pagatore:
 
 Pagamenti multi beneficiario o multi pagatore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
