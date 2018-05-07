@@ -1244,7 +1244,7 @@ L'Ente Creditore dovrà infatti gestire una RT negativa generata dal
 NodoSPC che porta a bordo un codice esito particolare atto a segnalare
 tale fattispecie (per la ricezione delle RT :ref:`vedi § 8.2.2 <ricezione-delle-rt-e-richiesta-di-copia>`).
 
-.. _interfacce-web-service-e-dettaglio-azioni-soap:
+.. _interfacce-web-service-e-dettaglio-azioni-soapcap8:
 
 Interfacce Web service e dettaglio azioni SOAP
 ----------------------------------------------
