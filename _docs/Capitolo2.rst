@@ -1591,7 +1591,7 @@ di restituire solo una parte dei documenti che interessano quel
 particolare utilizzatore finale: tale situazione dovrà essere indicata
 nella risposta fornita al NodoSPC.
 
-.. _Limitazioni-all'utilizzo-dell'avvisatura-*pull*:
+.. _limitazioni-allutilizzo-dellavvisatura-pull:
 
 Limitazioni all'utilizzo dell'avvisatura *pull*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
