@@ -266,9 +266,10 @@ sul sito dell’Agenzia per l’Italia Digitale.
 La disponibilità del Tavolo Operativo è correlata alla disponibilità
 dei servizi erogati.
 
+.. _livelli-di-servizio:
+
 Livelli di Servizio
 -------------------
-.. _Livelli di Servizio:
 
 I livelli di servizio - intesi come tempi massimi entro cui deve
 essere fornita la risposta applicativa ad una richiesta di servizio
