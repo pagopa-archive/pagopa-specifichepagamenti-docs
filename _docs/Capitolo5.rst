@@ -29,7 +29,7 @@ sono individuate come:
 -  *Esito Revoca* (**ER**)
 
 Nel presente capitolo sono inoltre riportate le informazioni relative a
-"Tabella delle Controparti" (:ref:`§ 4.2.1 <tabella-delle-controparti>`), "Catalogo Dati Informativi" 
+"Tabella delle Controparti" (:ref:`§ 4.2.1 <tabella-delle-controparticap4>`), "Catalogo Dati Informativi" 
 (:ref:`§5.3.7 <catalogo-dati-informativi>`) e flussi inerenti i “Totali di Traffico” (:ref:`§ 4.5.1 <totali-di-traffico>`).
 
 .. _formato-dei-messaggi:
