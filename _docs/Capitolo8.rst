@@ -2697,7 +2697,7 @@ Storno del pagamento
 
 **Figura** **39 – NodoSPC/EC: Metodi di gestione dello Storno del pagamento**
 
-Con riferimento al processo di storno del pagamento (:ref:`vedi § 8.1.3 <processo-di-storno-del-pagamento-eseguito>`) 
+Con riferimento al processo di storno del pagamento (:ref:`vedi § 8.1.3 <processo-di-storno-del-pagamento-eseguitocap8>`) 
 e perla gestione dei meccanismi di richiesta e di esito dello storno, il Nodo
 dei Pagamenti-SPC rende disponibili i metodi SOAP descritti nel seguito
 ed indicati nel diagramma di Figura 39 a pagina 155:
