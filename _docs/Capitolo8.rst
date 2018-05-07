@@ -3525,7 +3525,7 @@ dove i parametri (tra parentesi quelli opzionali) sono indicati nella
 |                       | della                                                  |                       |
 |                       | **nodoInviaRPT**                                       |                       |
 |                       | (:ref:`vedi § 8.3.1 <re-direzione-dal-portale-ec-      |                       |
-|                       | verso-il-web-fesp>`).                                 |                       |
+|                       | verso-il-web-fesp>`).                                 |                        |
 +-----------------------+--------------------------------------------------------+-----------------------+
 | **esito**             | corrisponde alla                                       |                       |
 |                       | traduzione dell’esito                                  |                       |
@@ -3657,7 +3657,7 @@ indicati in Tabella 38.
 |                         |            |         |         | che consentono il pagamento attivato presso   |
 |                         |            |         |         | i PSP (cosiddetto modello 3,                  |
 |                         |            |         |         | ec-`cfr. § 2.2 <ricezione-delle-rt-e-         |
-|                         |            |         |         | richiesta-di-copia>`)                        |
+|                         |            |         |         | richiesta-di-copia>`)                         |
 +-------------------------+------------+---------+---------+-----------------------------------------------+
 | idPSP                   | an         | 0..1    | 35      | Identificativo del PSP, eventualmente         |
 |                         |            |         |         | selezionato dall'utente in sessioni           |
@@ -3793,7 +3793,7 @@ alcune precisazioni sui dati presenti da utilizzare:
 +------------------------------------------------------------------------------------------------------------------------------------+
 | Indica se mostrare o meno i servizi dei PSP che consentono il                                                                      |
 | pagamento attivato presso i PSP (cosiddetto modello 3,                                                                             |
-| :ref:`cfr. § 2.2 delle SANP <processo-di-pagamento-attivato-presso-il-psp>`)                                                      |
+| :ref:`cfr. § 2.2 delle SANP <processo-di-pagamento-attivato-presso-il-psp>`)                                                       |
 | *Note*: Nella versione corrente delle funzionalità WISP, il                                                                        |
 | parametro è ignorato.                                                                                                              |
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -3802,17 +3802,17 @@ alcune precisazioni sui dati presenti da utilizzare:
 | Identificativo del PSP, eventualmente selezionato dall'utente in                                                                   |
 | sessioni precedenti e memorizzato a cura dell'Ente Creditore.                                                                      |
 | Corrisponde al parametro O-2 della primitiva                                                                                       |
-| **nodoChiediSceltaWISP** (:ref:`vedi § 8.2.1.5 <nodochiedisceltawisp>`).                                                         |
+| **nodoChiediSceltaWISP** (:ref:`vedi § 8.2.1.5 <nodochiedisceltawisp>`).                                                           |
 +------------------------------------------------------------------------------------------------------------------------------------+
 |**tipoVersamento**                                                                                                                  |
 +------------------------------------------------------------------------------------------------------------------------------------+
 | Identificativo del tipo di versamento eventualmente selezionato                                                                    |
 | dall'utente in sessioni precedenti e memorizzato a cura dell'Ente                                                                  |
 | Creditore. Corrisponde al parametro O-5 della primitiva                                                                            |
-| **nodoChiediSceltaWISP** (:ref:`vedi § 8.2.1.5 <nodochiedisceltawisp>`).                                                         |
+| **nodoChiediSceltaWISP** (:ref:`vedi § 8.2.1.5 <nodochiedisceltawisp>`).                                                           |
 |                                                                                                                                    |
 | *Controlli*: Può assumere gli stessi valori dell’omologo campo                                                                     |
-| della RPT (:ref:`vedi § 5.3.1 <richiesta-pagamento-telematico-rpt>`).                                                            |
+| della RPT (:ref:`vedi § 5.3.1 <richiesta-pagamento-telematico-rpt>`).                                                              |
 +------------------------------------------------------------------------------------------------------------------------------------+
 |**importoTransazione**                                                                                                              |
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -3853,7 +3853,7 @@ alcune precisazioni sui dati presenti da utilizzare:
 +------------------------------------------------------------------------------------------------------------------------------------+
 | Indica se l'Ente Creditore beneficiario del pagamento dispone di                                                                   |
 | almeno un c/c postale censito nella Tabella dei c/c di accredito                                                                   |
-| di cui al :ref:`§ 4.2.3 delle SANP. <tabella-dei-cc-di-accredito>`                                                               |
+| di cui al :ref:`§ 4.2.3 delle SANP. <tabella-dei-cc-di-accredito>`                                                                 |
 |                                                                                                                                    |
 | *Valori ammessi*:                                                                                                                  |
 |                                                                                                                                    |
@@ -3870,7 +3870,7 @@ alcune precisazioni sui dati presenti da utilizzare:
 | impostare a **SI** il parametro contoPoste **è necessario che**                                                                    |
 | **tutti** gli Enti Creditori beneficiari dei pagamenti presenti nel                                                                |
 | "carrello" dispongano di almeno un c/c postale censito nella                                                                       |
-| Tabella dei c/c di accredito di cui al :ref:`§ 4.2.3 delle SANP. <tabella-dei-cc-di-accredito>`                                   | 
+| Tabella dei c/c di accredito di cui al :ref:`§ 4.2.3 delle SANP. <tabella-dei-cc-di-accredito>`                                    | 
 | In caso contrario                                                                                                                  |
 | (anche uno solo degli Enti Creditori presenti nel "carrello" non                                                                   |
 | dispone di un c/c postale) potrebbe essere scelto il PSP Poste,                                                                    |
@@ -3880,7 +3880,7 @@ alcune precisazioni sui dati presenti da utilizzare:
 +------------------------------------------------------------------------------------------------------------------------------------+
 | Indica se mostrare o meno i servizi dei PSP che consentono il                                                                      |
 | pagamento con esecuzione differita (cosiddetto modello 2,                                                                          |
-| :ref:`cfr. § 2.1.2 delle SANP <processo-di-pagamento-con-autorizzazione-gestita-dal-psp>`).                                      |
+| :ref:`cfr. § 2.1.2 delle SANP <processo-di-pagamento-con-autorizzazione-gestita-dal-psp>`).                                        |
 +------------------------------------------------------------------------------------------------------------------------------------+
 |**codiceLingua:**                                                                                                                   |
 +------------------------------------------------------------------------------------------------------------------------------------+
@@ -3945,7 +3945,7 @@ indicati in **Tabella 39**.
 |             |             |             |             | **IBAN,** qualora il parametro ibanAccredito sia   |
 |             |             |             |             | presente e il codice IBAN ivi specificato non sia  |
 |             |             |             |             | presente nella White List del NodoSPC              |
-|             |             |             |             | (:ref:`cfr.§ 4.2.3 <tabella-dei-cc-di-accredito>` |
+|             |             |             |             | (:ref:`cfr.§ 4.2.3 <tabella-dei-cc-di-accredito>`  |
 +-------------+-------------+-------------+-------------+----------------------------------------------------+
 
 .. _re-direzione-http-da-wisp-verso-il-portale-dellente-creditore---urlreturn:
@@ -4148,7 +4148,6 @@ b) il numero di file strettamente necessari a contenere tutte le
    richieste di avviso (ad esempio, se devo trasferire 250.000, saranno
    inviati 3 file).
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    Questo URL contiene l’identificativo di sessione di cui sopra e il
