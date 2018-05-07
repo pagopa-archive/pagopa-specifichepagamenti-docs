@@ -1211,7 +1211,7 @@ dal cittadino. In mancanza di un corrispondente flusso finanziario verso
 la PA, questa tipologia di Ricevute Telematiche (RT) non è soggetta a
 riconciliazione, limitatamente agli importi riguardanti il MBD.
 
-.. _Avvisatura-digitale-*push*-(su-iniziativa-dell’Ente-Creditore):
+.. _avvisatura-digitale-push-su-iniziativa-dellente-creditore:
 
 Avvisatura digitale *push* (su iniziativa dell’Ente Creditore)
 --------------------------------------------------------------
