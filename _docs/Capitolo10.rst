@@ -191,8 +191,8 @@ nella **Gestione degli errori** delle singole primitive.
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RPT_SCONOSCIUTA*          | RPT sconosciuta.                                                                           |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
-| *CANALE_RT_NON_DISPONIBILE*       | `Vedi § 9.2.2.2 <../16-Capitolo_9/Capitolo9.rst#pspchiedirt>`  **pspChiediRT** e           |
-|                                   | `§ 9.2.2.4 <../16-Capitolo_9/Capitolo9.rst#pspchiedilistart>`  **pspChiediListaRT**        |
+| *CANALE_RT_NON_DISPONIBILE*       | :ref:`Vedi § 9.2.2.2 <pspchiedirt>`  **pspChiediRT** e                                     |
+|                                   | :ref:`§ 9.2.2.4 <pspchiedilistart>`  **pspChiediListaRT**                                  |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RT_SCONOSCIUTA*           | RT sconosciuta.                                                                            |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
