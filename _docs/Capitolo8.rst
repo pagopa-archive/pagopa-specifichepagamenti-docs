@@ -57,7 +57,7 @@ dettaglio i **workflow** dei processi che sono attivati presso gli Enti
 Creditori. Sono, peraltro, qui descritti con meno dettagli anche i
 *workflow* dei processi che coinvolgono il Nodo dei Pagamenti-SPC.
 
-.. _pagamenti-attivati-presso-lente-creditore:
+.. _pagamenti-attivati-presso-lente-creditorecap8:
 
 Pagamenti attivati presso l'Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
