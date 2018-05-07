@@ -865,7 +865,7 @@ degli oggetti XML scambiato; nel caso della primitiva
 della richiesta di storno sia stata accettata dal NodoSPC e dal PSP,
 altrimenti restituisce un errore specifico.
 
-.. _processo-di-revoca-della-ricevuta-telematica:
+.. _processo-di-revoca-della-ricevuta-telematicacap8:
 
 Processo di revoca della Ricevuta Telematica
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
