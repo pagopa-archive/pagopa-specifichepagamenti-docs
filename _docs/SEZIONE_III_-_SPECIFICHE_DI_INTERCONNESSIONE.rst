@@ -154,8 +154,6 @@ aderenti.
 +---------------------------------+----------------------------------+-----------------------------------+
 
 
-:ref:`Torna all'indice <Indice>`__
-
 .. [1]
    in alcuni documenti degli Enti Creditori indicato anche come CRS.
 
