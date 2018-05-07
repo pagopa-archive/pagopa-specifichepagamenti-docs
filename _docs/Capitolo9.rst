@@ -3398,11 +3398,11 @@ sono specificati nella Tabella 41.
 |                                   | precedenza:                                                                                   |
 |                                   |                                                                                               |
 |                                   | -  parametro **I-2-c** per                                                                    |
-|                                   |    **pspInviaRPT** (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                     |
+|                                   |    **pspInviaRPT** (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                      |
 |                                   |                                                                                               |
 |                                   | -  parametro **I-5** per                                                                      |
 |                                   |    **pspInviaCarrelloRPT**                                                                    |
-|                                   |    (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                            |
+|                                   |    (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                             |
 +-----------------------------------+-----------------------------------------------------------------------------------------------+
 | **idCarrello**                    |parametro opzionale, presente nel                                                              |
 |                                   |caso sia restituito dal PSP nella                                                              |
@@ -3410,18 +3410,18 @@ sono specificati nella Tabella 41.
 |                                   |invocata in precedenza:                                                                        |
 |                                   |                                                                                               |
 |                                   |-  parametro **O-2** per                                                                       |
-|                                   |   **pspInviaRPT** (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                      |
+|                                   |   **pspInviaRPT** (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                       |
 |                                   |                                                                                               |
 |                                   |-  parametro **O-2** per                                                                       |
 |                                   |   **pspInviaCarrelloRPT**                                                                     |
-|                                   |   (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                             |
+|                                   |   (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                              |
 +-----------------------------------+-----------------------------------------------------------------------------------------------+
 | **lang** (opzionale)              |è la specifica del linguaggio                                                                  |
 |                                   |scelto dall'utilizzatore finale,                                                               |
 |                                   |qualora fornita dal Portale                                                                    |
 |                                   |dell'Ente Creditore nella                                                                      |
 |                                   |re-direzione verso il Web-FESP si veda il paragrafo                                            |
-|                                   |(:ref:`8.3.1 <re-direzione-dal-portale-ec-verso-il-web-fesp>`).                               |
+|                                   |(:ref:`8.3.1 <re-direzione-dal-portale-ec-verso-il-web-fesp>`).                                |
 |                                   |codice abbreviato identifica il                                                                |
 |                                   |Il linguaggio secondo lo standard                                                              |
 |                                   |ISO 693-3.                                                                                     |
@@ -3468,19 +3468,19 @@ Tabella 42.
 |                       |                                                                                        |
 |                       |                                                                                        |
 |                       |-  parametro **O-3** per **pspInviaRPT**                                                |
-|                       |   (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                               |
+|                       |   (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                                |
 |                       |                                                                                        |
 |                       |-  parametro **O-3** per **pspInviaCarrelloRPT**                                        |
-|                       |   (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                      |
+|                       |   (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                       |
 +-----------------------+----------------------------------------------------------------------------------------+
 | **idCarrello**        |parametro opzionale, presente nel caso sia restituito dal PSP nella *Response*          |
 | (opzionale)           |della primitiva invocata in precedenza:                                                 |
 |                       |                                                                                        |
 |                       |-  parametro **O-2** per **pspInviaRPT**                                                |
-|                       |   (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                               |
+|                       |   (:ref:`vedi § 9.2.1.1 <pspinviarpt>`)                                                |
 |                       |                                                                                        |
 |                       |-  parametro **O-2** per **pspInviaCarrelloRPT**                                        |
-|                       |   (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                      |
+|                       |   (:ref:`vedi § 9.2.1.2 <pspinviacarrellorpt>`).                                       |
 +-----------------------+----------------------------------------------------------------------------------------+
 | **codiceRitornoPSP**  | stringa contenente un parametro fornito dal PSP, il cui formato è lista di valori      |
 |                       | possibili sono concordati a priori dallo specifico PSP con il NodoSPC. Il significato  |
@@ -3591,7 +3591,7 @@ informazioni indicate in Tabella 43.
 |           |         |            |         |         | finale i dati dell'ordine.                              |
 |           |         |            |         |         |                                                         |
 |           |         |            |         |         | Per il calcolo :ref:`vedi § 9.4.5.1 <mac-di-richiesta-  |
-|           |         |            |         |         | pagamento>`                                            |
+|           |         |            |         |         | pagamento>`                                             |
 +-----------+---------+------------+---------+---------+---------------------------------------------------------+
 | DESCRORD  | 1       | an         | 1..1    | 25..140 | Descrizione dell'ordine, nonché causale del             |
 |           |         |            |         |         | pagamento.                                              |
@@ -3695,7 +3695,7 @@ informazioni di Tabella 44.
 |           |         |            |         |         | finale i dati dell'esito. Per il calcolo        |
 |           |         |            |         |         |                                                 |
 |           |         |            |         |         | :ref:`vedi § 9.4.5.2 <mac-di-confermaesito-     |
-|           |         |            |         |         | pagamento>`                                    |
+|           |         |            |         |         | pagamento>`                                     |
 +-----------+---------+------------+---------+---------+-------------------------------------------------+
 | ESITO     | 1       | n          | 1..1    | 2       | Codice che indica l’esito della transazione.    |
 |           |         |            |         |         | Vedi Tabella 45.                                |
@@ -3774,7 +3774,7 @@ autorizzazione ad esso legate.
 |            |         |            |         |         |                                                |
 |            |         |            |         |         | Per il calcolo                                 |
 |            |         |            |         |         | :ref:`vedi § 9.4.5.3 <mac-di-richiesta-della-  |
-|            |         |            |         |         | situazione-di-un-ordine>`                                   |
+|            |         |            |         |         | situazione-di-un-ordine>`                      |
 +------------+---------+------------+---------+---------+------------------------------------------------+
 
 Il servizio restituisce una risposta in formato XML, con le
@@ -3800,7 +3800,7 @@ caratteristiche riportate in Tabella 47.
 |                     |         |            |         |         | rende immodificabile da parte dell'utilizzatore  |
 |                     |         |            |         |         | finale i dati dell'ordine. Per il calcolo        |
 |                     |         |            |         |         | :ref:`vedi § 9.4.5.4 <mac-di-risposta-della-     |
-|                     |         |            |         |         | situazione-di-un-ordine>`                       |
+|                     |         |            |         |         | situazione-di-un-ordine>`                        |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
 | Dati                | 2       | s          | 1..1    |         | Struttura che contiene i dati della richiesta    |
 |                     |         |            |         |         | di situazione ordine e del messaggio di          |
@@ -4093,7 +4093,6 @@ SCT01 Application Specification - E-authorisation for the execution of
 | IDVS                              | ParticipantID                                                        |
 +-----------------------------------+----------------------------------------------------------------------+
 
-:ref:`Torna all'indice <Indice>`_
 
 .. [1]
    Si vedano i parametri delle primitive **nodoVerificaRPT**,

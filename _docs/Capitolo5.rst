@@ -441,7 +441,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | sui conti di tesoreria.,Si faccia         |
 |                         |         |            |         |         |                 | riferimento al capitolo                   |
 |                         |         |            |         |         |                 | :ref:`7.1 della presente Sezione.         |
-|                         |         |            |         |         |                 | <identificativo-univoco-versamento>`     |
+|                         |         |            |         |         |                 | <identificativo-univoco-versamento>`      |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | CodiceContesto          | 2       | an         |         | 1..35   | Message         | Codice univoco necessario a               |
 | Pagamento               |         |            |         |         | Identification  | definire il                               |
@@ -449,7 +449,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | nel quale viene effettuato                |
 |                         |         |            |         |         |                 | il versamento.                            |
 |                         |         |            |         |         |                 | Si faccia riferimento al                  |
-|                         |         |            |         |         |                 | :ref:`§ 7.3 <codice-contesto-pagamento>` |
+|                         |         |            |         |         |                 | :ref:`§ 7.3 <codice-contesto-pagamento>`  |
 |                         |         |            |         |         |                 | della presente Sezione.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | ibanAddebito            | 2       | an         |         | 1..35   | Debtor.         | Identifica l’International                |
@@ -583,7 +583,7 @@ a favore dello stesso Ente Creditore.
 |                         |         |            |         |         |                 | l’utilizzo vedi il, paragrafo             |
 |                         |         |            |         |         |                 | :ref:`8.1.1.5 <avvertenze-per-la-         |
 |                         |         |            |         |         |                 | predisposizione-e-linvio-delle-richieste- |
-|                         |         |            |         |         |                 | di-pagamento-telematiche>`              |
+|                         |         |            |         |         |                 | di-pagamento-telematiche>`                |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
 | bicAppoggio             | 3       | an         |         | 8 / 11  | Creditor        | Bank Identifier Code                      |
 |                         |         |            |         |         | Agent           | definito secondo lo standard              |
@@ -1202,7 +1202,7 @@ di pagamento per richiedere lo “storno” di un pagamento.
 |                    |         |            |         |         |                  | viene utilizzata nel processo di        |
 |                    |         |            |         |         |                  | revoca della RT                         |
 |                    |         |            |         |         |                  | (:ref:`vedi § 2.3 <revoca-della-        |
-|                    |         |            |         |         |                  | ricevuta-telematica>`).                |
+|                    |         |            |         |         |                  | ricevuta-telematica>`).                 |
 |                    |         |            |         |         |                  | Il dato è **obbligatorio** in caso      |
 |                    |         |            |         |         |                  | di utilizzo della Richiesta Revoca da   |
 |                    |         |            |         |         |                  | parte del PSP nel processo di           |
@@ -1222,7 +1222,7 @@ di pagamento per richiedere lo “storno” di un pagamento.
 |                    |         |            |         |         |                  | parte dell'Ente Creditore nel processo  |
 |                    |         |            |         |         |                  | di Storno del pagamento                 |
 |                    |         |            |         |         |                  | (:ref:`vedi § 2.1.4 <storno-del-        |
-|                    |         |            |         |         |                  | pagamento>`).                          |
+|                    |         |            |         |         |                  | pagamento>`).                           |
 +--------------------+---------+------------+---------+---------+------------------+-----------------------------------------+
 | datiSingolaRevoca  | 2       | s          | 1..1    |         |                  | Aggregazione                            |
 |                    |         |            |         |         |                  | “dati dei singoli pagamenti revocati”,  |
@@ -1451,7 +1451,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | consente i pagamenti                        |
 |                            |         |            |         |         | pressoi PSP                                 |
 |                            |         |            |         |         | (:ref:`vedi § 2.2 <processo-di-pagamento-   |
-|                            |         |            |         |         | attivato-presso-il-psp>`)                  |
+|                            |         |            |         |         | attivato-presso-il-psp>`)                   |
 |                            |         |            |         |         | può assumere i seguenti valori:             |
 |                            |         |            |         |         |                                             |
 |                            |         |            |         |         | - **0** NON consente i                      |
@@ -1475,7 +1475,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | effettuare pagamenti                        |
 |                            |         |            |         |         | spontanei presso i PSP                      |
 |                            |         |            |         |         | (:ref:`vedi § 2.2.3 <pagamento-spontaneo-   |
-|                            |         |            |         |         | presso-i-psp>`)                            |
+|                            |         |            |         |         | presso-i-psp>`)                             |
 +----------------------------+---------+------------+---------+---------+---------------------------------------------+
 | serviziModelloTreSpontaneo | 3       | s          | 0..n    |         | Struttura contenente                        |
 |                            |         |            |         |         | l'elenco dei servizi che                    |
@@ -1501,7 +1501,7 @@ Pagamenti-SPC invia ad ogni prestatore di servizi di pagamento aderente.
 |                            |         |            |         |         | le funzionalità di avvisatura               |
 |                            |         |            |         |         | digitale pull                               |
 |                            |         |            |         |         | (:ref:`vedi § 2.10 <avvisatura-digitale-    |
-|                            |         |            |         |         | pull-verifica-della-posizione-debitoria>`) |
+|                            |         |            |         |         | pull-verifica-della-posizione-debitoria>`)  |
 |                            |         |            |         |         | può assumere i seguenti valori:             |
 |                            |         |            |         |         |                                             |
 |                            |         |            |         |         | - **0 NON consente avvisatura pull**        |
@@ -1695,7 +1695,7 @@ in Tabella 7.
 |                        |         |            |         |         | consente i pagamenti                        |
 |                        |         |            |         |         | pressoi PSP                                 |
 |                        |         |            |         |         | (:ref:`vedi § 2.2 <processo-di-pagamento-   |
-|                        |         |            |         |         | attivato-presso-il-psp>`)                  |
+|                        |         |            |         |         | attivato-presso-il-psp>`)                   |
 |                        |         |            |         |         | può assumere i seguenti valori:             |
 |                        |         |            |         |         |                                             |
 |                        |         |            |         |         | - **0** NON consente i                      |
@@ -1859,13 +1859,13 @@ catalogo:
 | stornoPagamento             | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è in grado di gestire il processo di     |
 |                             |         |            |         |         | storno di un pagamento                          |
-|                             |         |            |         |         | (:ref:`cfr. § 2.1.4 <storno-del-pagamento>`).  |
+|                             |         |            |         |         | (:ref:`cfr. § 2.1.4 <storno-del-pagamento>`).   |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | marcaBolloDigitale          | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è abilitato a vendere la marca           |
 |                             |         |            |         |         | da bollo digitale                               |
 |                             |         |            |         |         | (:ref:`cfr. § 2.7 <riconciliazione-dei-         |
-|                             |         |            |         |         | pagamenti>`).                                  |
+|                             |         |            |         |         | pagamenti>`).                                   |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | logoPSP                     | 3       | an         | 1..1    |         | Logotipo                                        |
 |                             |         |            |         |         | del PSP.                                        |
@@ -1890,10 +1890,10 @@ catalogo:
 | tipoVersamento              | 4       | an         | 1..1    | 4       | Tipo di versamento associato allo specifico     |
 |                             |         |            |         |         | servizio                                        |
 |                             |         |            |         |         | (:ref:`cfr. § 5.3.1 <richiesta-pagamento-       |
-|                             |         |            |         |         | telematico-rpt>`).                             |
+|                             |         |            |         |         | telematico-rpt>`).                              |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | modelloPagamento            | 4       | n          | 1..1    | 2       | Indica quale modello di pagamento               |
-|                             |         |            |         |         | (:ref:`cfr. capitolo 2 <Capitolo2>` delle SANP)|
+|                             |         |            |         |         | (:ref:`cfr. capitolo 2 <Capitolo2>` delle SANP) |
 |                             |         |            |         |         | è gestito attraverso il canale specifico.       |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | priorita                    | 4       | n          | 1..1    | 2       | Numero intero indicante la priorità con la      |
@@ -2840,7 +2840,7 @@ gli elementi componenti il messaggio stesso, ora indicati nella Tabella
 |                                        |         |            |         |         | al versamento dall’Ente Creditore.             |
 |                                        |         |            |         |         | Si faccia riferimento al                       |
 |                                        |         |            |         |         | `capitolo 7.1 <../13-Capitolo_7/Capitolo7.rst# |
-|                                        |         |            |         |         | identificativo-univoco-versamento>`           |
+|                                        |         |            |         |         | identificativo-univoco-versamento>`            |
 |                                        |         |            |         |         | della presente Sezione.                        |
 +----------------------------------------+---------+------------+---------+---------+------------------------------------------------+
 | CodiceContestoPagamento                | 2       | s          | 1..1    | 1..35   | Codice univoco                                 |
@@ -3195,13 +3195,13 @@ in formato digitale.
 | ibanAccredito                    | 3       | an         | 0..1    | 1..35   | Vedi omonimo dato presente nella                 |
 |                                  |         |            |         |         | struttura della RPT                              |
 |                                  |         |            |         |         | (:ref:`cfr. § 5.3.1 <richiesta-pagamento-        |
-|                                  |         |            |         |         | telematico-rpt>`).                              |
+|                                  |         |            |         |         | telematico-rpt>`).                               |
 +----------------------------------+---------+------------+---------+---------+--------------------------------------------------+
 | ibanAppoggio                     | 3       | an         | 0..1    | 1..35   | Vedi omonimo dato presente nella                 |
 |                                  |         |            |         |         | struttura della RPT                              |
 |                                  |         |            |         |         |                                                  |
 |                                  |         |            |         |         | (:ref:`cfr. § 5.3.1 <richiesta-pagamento-        |
-|                                  |         |            |         |         | telematico -rpt>`).                             |
+|                                  |         |            |         |         | telematico -rpt>`).                              |
 +----------------------------------+---------+------------+---------+---------+--------------------------------------------------+
 | tipoPagamento                    | 2       | n          | 1..1    | 1       | Dato numerico                                    |
 |                                  |         |            |         |         | che indica la natura del pagamento.              |
@@ -3366,7 +3366,7 @@ Creditore con il flusso di cui sopra è indicata in Tabella 22.
 | identificativoFlusso     | 2       | an         | 1..1    | 1..70   | Identificativo del flusso così                     |
 |                          |         |            |         |         | come definito al                                   |
 |                          |         |            |         |         | :ref:`§ 8.5.2.1 <convenzioni-di-nomenclatura-dei-  |
-|                          |         |            |         |         | file-scambiati>`                                  |
+|                          |         |            |         |         | file-scambiati>`                                   |
 +--------------------------+---------+------------+---------+---------+----------------------------------------------------+
 | esitoAvvisoDigitale      | 2       | s          | 1..10   |         | Numero non definito di                             |
 |                          |         |            |         |         | occorrenze della struttura                         |
@@ -3541,7 +3541,6 @@ all'interno del WSDL del servizio.
    "importoAvviso",3,"an","1..1","3..12","Campo numerico (due cifre per la parte decimale, il separatore dei centesimi è il punto “.”), indicante l’importo relativo alla somma da versare. **Deve essere maggiore di “0.10”**."
    "descrizionePagamento",3,"an","1..1","1..249","Testo libero a disposizione dell’Ente per descrivere le motivazioni del pagamento."
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    Ai fini della corrispondenza UNIFI, il soggetto pagatore è associato
