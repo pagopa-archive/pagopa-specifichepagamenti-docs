@@ -145,7 +145,7 @@ A tale scopo questi ultimi sono tenuti ad inviare al Nodo dei
 Pagamenti-SPC l'elenco dei codici IBAN sui quali effettuare l'accredito
 delle somme dovute.
 
-.. _catalogo-dei-servizi:
+.. _catalogo-dei-servizicap4:
 
 Catalogo dei servizi
 ~~~~~~~~~~~~~~~~~~~~
