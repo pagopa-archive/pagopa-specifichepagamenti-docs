@@ -139,9 +139,10 @@ struttura **faultBean** composta così come indicato in Tabella 51.
 | *Formato:* Numerico stringa.                                          |
 +-----------------------------------------------------------------------+
 
+.. _codici-di-errore:
+
 Codici di errore
 ----------------
-.. _Codici di errore:
 
 Questo paragrafo riporta nella Tabella 52 i codici di errore
 (**faultCode**) e la relativa **faultString**, restituiti dalle
