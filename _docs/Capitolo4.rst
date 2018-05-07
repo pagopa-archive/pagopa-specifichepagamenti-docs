@@ -112,7 +112,7 @@ Pagamenti-SPC (:ref:`vedi successivo § 4.2.3 <tabella-dei-cc-di-accredito>`).
 La “Tabella delle controparti” viene aggiornata e pubblicata con cadenza
 giornaliera.
 
-.. _catalogo-dati-informativi:
+.. _catalogo-dati-informativicap4:
 
 Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~
