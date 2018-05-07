@@ -480,7 +480,7 @@ Lo SDK è disponibile in download, previa sottoscrizione di un apposito
 fornito in modalità nativa per le due principali tecnologie presenti sul
 mercato: IOS e Android.
 
-.. _Storno-del-pagamento:
+.. _storno-del-pagamentocap2:
 
 Storno del pagamento
 ~~~~~~~~~~~~~~~~~~~~
