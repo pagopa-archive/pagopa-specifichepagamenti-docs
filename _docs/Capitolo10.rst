@@ -11,9 +11,10 @@ Gestione degli Errori
 In questo capitolo sono fornite le specifiche necessarie per gestire gli
 errori all’interno del sistema pagoPA.
 
+.. _la-struttura-faultbean:
+
 La struttura faultBean
 ----------------------
-.. _La struttura faultBean:
 
 Per la **Gestione degli errori** all’interno dei messaggi scambiati tra
 i soggetti aderenti (EC e PSP) ed il NodoSPC viene utilizzata la
@@ -138,9 +139,10 @@ struttura **faultBean** composta così come indicato in Tabella 51.
 | *Formato:* Numerico stringa.                                          |
 +-----------------------------------------------------------------------+
 
+.. _codici-di-errore:
+
 Codici di errore
 ----------------
-.. _Codici di errore:
 
 Questo paragrafo riporta nella Tabella 52 i codici di errore
 (**faultCode**) e la relativa **faultString**, restituiti dalle
@@ -189,8 +191,8 @@ nella **Gestione degli errori** delle singole primitive.
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RPT_SCONOSCIUTA*          | RPT sconosciuta.                                                                           |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
-| *CANALE_RT_NON_DISPONIBILE*       | `Vedi § 9.2.2.2 <../16-Capitolo_9/Capitolo9.rst#pspchiedirt>`  **pspChiediRT** e          |
-|                                   | `§ 9.2.2.4 <../16-Capitolo_9/Capitolo9.rst#pspchiedilistart>`  **pspChiediListaRT**       |
+| *CANALE_RT_NON_DISPONIBILE*       | `Vedi § 9.2.2.2 <../16-Capitolo_9/Capitolo9.rst#pspchiedirt>`  **pspChiediRT** e           |
+|                                   | `§ 9.2.2.4 <../16-Capitolo_9/Capitolo9.rst#pspchiedilistart>`  **pspChiediListaRT**        |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 | *CANALE_RT_SCONOSCIUTA*           | RT sconosciuta.                                                                            |
 +-----------------------------------+--------------------------------------------------------------------------------------------+

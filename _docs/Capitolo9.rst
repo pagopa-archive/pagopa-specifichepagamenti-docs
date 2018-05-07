@@ -34,7 +34,7 @@ come definiti dagli *Web service* relativi e utilizzarli nei diversi
 modelli di pagamento.
 
 Tenuto conto che la descrizione dettagliata del *workflow* dei processi
-di pagamento è stata in larga parte effettuata nel :ref:`paragrafo 8.2 <interfacce-web-service-e-dettaglio-azioni-soap>`, 
+di pagamento è stata in larga parte effettuata nel :ref:`paragrafo 8.2 <interfacce-web-service-e-dettaglio-azioni-soapcap8>`, 
 nei seguenti paragrafi verranno descritte le specificità legate alla
 gestione di tali processi da parte dei PSP.
 
@@ -44,12 +44,12 @@ Pagamenti attivati presso l'Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Questi modelli di pagamento, già descritti ai paragrafi :ref:`2.1.1 <processo-di-pagamento-con-re-indirizzamento-on-line>` e 
-:ref:`2.1.2 <processo-di-pagamento-con-autorizzazione-gestita-dal-psp>`_, i
+:ref:`2.1.2 <processo-di-pagamento-con-autorizzazione-gestita-dal-psp>`, i
 prestatori dei servizi di pagamento devono consentire il pagamento
 presso i propri sistemi.
 
 Per la descrizione completa del flusso di lavoro si rimanda a quanto
-indicato al :ref:`§ 8.1.1 <pagamenti-attivati-presso-lente-creditore>`_ a partire da pagina 118.
+indicato al :ref:`§ 8.1.1 <pagamenti-attivati-presso-lente-creditorecap8>` a partire da pagina 118.
 
 .. _generazione-e-invio-della-ricevuta-telematica:
 
@@ -66,7 +66,7 @@ e rispettando le indicazioni presenti nel documento "*Indicatori di*
 Per i pagamenti eseguiti presso l'Ente Creditore, l'invio delle Ricevute
 Telematiche è consentito esclusivamente in modalità *push* (primitiva
 **nodoInviaRT**), così come indicato nel *Workflow* di chiusura della
-transazione presso EC (:ref:`vedi § 8.1.1.3 <workflow-di-chiusura-della-transazione-presso-ec>`_, 
+transazione presso EC (:ref:`vedi § 8.1.1.3 <workflow-di-chiusura-della-transazione-presso-ec>`, 
 passi da 3 a 6). Per l'invio della RT in modalità *push* si veda anche il :ref:`§ 9.2.2.1 <nodoinviart>`.
 
 Si tenga presente che nel caso in cui il PSP riceva un carrello di RPT
@@ -152,7 +152,7 @@ Il percorso "STANDARD" (vedi il *workflow* di dettaglio al :ref:`§ 9.1.2.2 <per
    NodoSPC, invia al *Back-end* dell'Ente Creditore la richiesta di
    ricevere la RPT associata all'avviso verificato dal sistema;
 
-Il percorso "ALTERNATIVO" (vedi il *workflow* di dettaglio al :ref:`§ 9.1.2.3 <percorso-alternativo-per-il-modello-3>`_) prevede, invece, i passi appresso indicati:
+Il percorso "ALTERNATIVO" (vedi il *workflow* di dettaglio al :ref:`§ 9.1.2.3 <percorso-alternativo-per-il-modello-3>`) prevede, invece, i passi appresso indicati:
 
 2) *Attivazione del pagamento*: il *Back-end* del PSP, attraverso il
    NodoSPC, invia al *Back-end* dell'Ente Creditore la richiesta di
@@ -177,7 +177,7 @@ riceverà dall'Ente Creditore.
 
 La valorizzazione del codiceContestoPagamento garantisce, a parità di
 Ente Creditore, che l’istanza della RPT, generata per il codice IUV
-specificato, risulti univoca (:ref:`vedi anche § 8.1 <workflow-dei-modelli-di-pagamento-e-dei-processi-accessori>`).
+specificato, risulti univoca (:ref:`vedi anche § 8.1 <workflow-dei-modelli-di-pagamento-e-dei-processi-accessoricap8>`).
 
 .. _presentazione-dellavviso-e-transcodifica-dei-dati-per-il-pagamento:
 
@@ -190,7 +190,7 @@ funzioni previste.
 
 Tutti *workflow* che saranno esaminati prevedono che il PSP fornisca le
 informazioni necessarie ad identificare il pagamento in attesa (:ref:`vedi §
-7.4.2 <automazione-dellavviso-di-pagamento-analogico>`_), specificando anche il tipo di parametri forniti alle varie primitive via via utilizzate.
+7.4.2 <automazione-dellavviso-di-pagamento-analogico>`), specificando anche il tipo di parametri forniti alle varie primitive via via utilizzate.
 
 In particolare, l’identificativo della codifica utilizzata per il dato
 codificaInfrastrutturaPSP [1]_ consente al NodoSPC la transcodifica del
@@ -247,7 +247,7 @@ a pagina 175 e si compone dei seguenti *step*:
 6) la componente di *Back-end* dell'Ente Creditore restituisce l'esito
    della richiesta, indicando eventuali informazioni accessorie sul
    pagamento [2]_ nel parametro O-2.f causaleVersamento (:ref:`si veda §
-   8.2.3.2 <paaattivarpt>`_), soprattutto in occasione di errori circa lo stato del
+   8.2.3.2 <paaattivarpt>`), soprattutto in occasione di errori circa lo stato del
    pagamento (pagato, scaduto, in corso, ecc.). A tal proposito, si
    veda quanto indicato al Capitolo paragrafo :ref:`§ 10.1 <la-struttura-faultbean>`
    (vedi Tabella 51 - Elementi che compongono la struttura **faultBean**);
@@ -487,7 +487,7 @@ seguenti *step*:
 13) la componente FESP del NodoSPC inoltra l'esito della richiesta alla
     componente di *Back-end* del PSP, trasportando l'eventuale
     errore emesso dall'EC nell'apposita struttura indicata al
-    :ref:`§ 10.1 <la-struttura-faultbean>`_ 
+    :ref:`§ 10.1 <la-struttura-faultbean>` 
     (vedi Tabella 51 - Elementi che compongono la struttura **faultBean**). 
     Il flusso poi prosegue al punto 15;
 
@@ -827,11 +827,11 @@ di un pagamento all’Ente Creditore presso il quale questo è stato
 disposto (c.d. storno), il Nodo dei Pagamenti-SPC mette a disposizione i
 servizi telematici necessari per gestire le richieste di storno di
 pagamenti già effettuati e per i quali potrebbe essere già stata
-restituita la Ricevuta Telematica corrispondente (:ref:`vedi anche §§ 2.1.4 <storno-del-pagamento>` e
-`4.4.5 <../09-Capitolo_4/Capitolo4.rst#storno-di-un-pagamento>`).
+restituita la Ricevuta Telematica corrispondente (:ref:`vedi anche §§ 2.1.4 <storno-del-pagamentocap2>` e
+:ref:`4.4.5 <../09-Capitolo_4/Capitolo4.rst#storno-di-un-pagamento>`).
 
 Poiché il processo di storno del pagamento prende avvio presso l'Ente
-Creditore, per il *workflow* dettagliato si faccia riferimento al :ref:`§ 8.1.3 <processo-di-storno-del-pagamento-eseguito>`.
+Creditore, per il *workflow* dettagliato si faccia riferimento al :ref:`§ 8.1.3 <processo-di-storno-del-pagamento-eseguitocap8>`.
 
 .. _processo-di-revoca-della-ricevuta-telematica:
 
@@ -843,15 +843,15 @@ annullamento di pagamenti già effettuati e per i quali è già stata
 restituita la Ricevuta Telematica corrispondente, rendendo, a questo
 scopo, disponibile un'interfaccia specifica, ad uso dei PSP, per
 richiedere all’Ente Creditore di riferimento la revoca di una RT
-specifica (:ref:`si veda anche §§ 2.3 <revoca-della-ricevuta-telematica>` e 
-`4.4.4 <../09-Capitolo_4/Capitolo4.rst#revoca-della-ricevuta-telematica>`).
+specifica (:ref:`si veda anche §§ 2.3 <revoca-della-ricevuta-telematicacap2>` e 
+:ref:`4.4.4 <revoca-della-ricevuta-telematica>`).
 
 Il *Sequence diagram* del processo di Revoca della RT è riportato in
 Figura 53 a pagina 187, nella quale:
 
 1) il *Back-office* del PSP richiede alla componente di *Back-end* del
    PSP di revocare una RT per un “annullo tecnico” oppure a seguito di
-   una richiesta effettuata da un proprio cliente :ref:`vedi § 2.3 <revoca-della-ricevuta-telematica>`;
+   una richiesta effettuata da un proprio cliente :ref:`vedi § 2.3 <revoca-della-ricevuta-telematicacap2>`;
 
 2) la componente di *Back-end* del PSP richiede la revoca di una RT
    inviando al NodoSPC la Richiesta Revoca (RR) tramite la primitiva
@@ -914,7 +914,7 @@ Processo di avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La funzione di avvisatura digitale su iniziativa dell'Ente Creditore
-(:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`) 
+(:ref:`vedi § 2.9 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`) 
 consente di inviare agli apparati elettronici degli
 utilizzatori finali avvisi di pagamento in formato elettronico, in modo
 che il correlato pagamento possa essere effettuato in modalità semplice
@@ -922,7 +922,7 @@ e con i modelli di pagamento già illustrati (c.d. modello 3).
 
 Poiché il processo di avvisatura digitale su iniziativa dell'Ente
 Creditore prende avvio presso l'Ente Creditore, per il *workflow*
-dettagliato si faccia riferimento al :ref:`§ 8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`.
+dettagliato si faccia riferimento al :ref:`§ 8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8>`.
 
 .. _processo-di-avvisatura-digitale-pull-verifica-della-posizione-debitoria:
 
@@ -932,7 +932,7 @@ Processo di avvisatura digitale *pull* (verifica della posizione debitoria)
 Il sistema mette a disposizione apposite funzioni affinché la "posizione
 debitoria" di un soggetto pagatore presso un singolo Ente Creditore
 possa essere interrogata dall'utilizzatore finale attraverso le funzioni
-messe a disposizione dai PSP aderenti all'iniziativa (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`).
+messe a disposizione dai PSP aderenti all'iniziativa (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`).
 
 Tenuto conto delle limitazioni definite al :ref:`§ 2.10.1 <limitazioni-allutilizzo-dellavvisatura-pull>`, 
 il *Sequence diagram* del processo di avvisatura digitale *pull* è riportato in
@@ -944,7 +944,7 @@ Figura 54 a pagina 188, per il quale sono previsti i seguenti passi:
 
 2) se l'Ente Creditore è tra quelli che offrono questo servizio
    (informazione reperibile dal PSP sulla Tabella delle Controparti,
-   :ref:`vedi §§ 4.2.1 <tabella-delle-controparti>` e 
+   :ref:`vedi §§ 4.2.1 <tabella-delle-controparticap4>` e 
    :ref:`5.3.6 <tabella-delle-controparti>`), il *Front-end* del PSP inoltra la richiesta
    alla componente di *Back-end* del PSP;
 
@@ -1400,7 +1400,7 @@ Di seguito i possibili valori del dato **faultBean**.faultCode:
 *CANALE_BUSTA_ERRATA*
 
 *CANALE_SEMANTICA* (vedi precisazioni dato faultBean.description al
-:ref:`§ 10.1 <la-struttura-faultbean>`_)
+:ref:`§ 10.1 <la-struttura-faultbean>`)
 
 .. _pspchiediavanzamentorpt:
 
@@ -1854,7 +1854,7 @@ generata dall’Ente Creditore.
    e. credenzialiPagatore (opzionale)
 
    f. causaleVersamento: il formato della causale di versamento deve
-          essere conforme a quanto indicato :ref:`al § 7.4.5 <comunicazioni-allutilizzatore-finale>`_
+          essere conforme a quanto indicato :ref:`al § 7.4.5 <comunicazioni-allutilizzatore-finale>`
 
 **Gestione degli errori**
 
@@ -1865,7 +1865,7 @@ funzione di faultBean.id:
 
 1. faultBean.id=<identificativoDominio>:
 *PPT_ERRORE_EMESSO_DA_PAA* (vedi contenuto dato
-faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`_)
+faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`)
 
 2. faultBean.id=“NodoDeiPagamentiSPC”:
 
@@ -2804,7 +2804,7 @@ Avvisatura digitale *pull* (verifica della posizione debitoria)
 Il sistema mette a disposizione apposite funzioni affinché la "posizione
 debitoria" di un soggetto pagatore presso un singolo Ente Creditore
 possa essere interrogata dall'utilizzatore finale attraverso le funzioni
-messe a disposizione dai PSP aderenti all'iniziativa (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`).
+messe a disposizione dai PSP aderenti all'iniziativa (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`).
 
 |image19|
 
@@ -2938,7 +2938,7 @@ Le primitive di competenza dei PSP sono riportate nello schema di Figura
 u. *pspNotificaCancellazioneRPT*, con la quale il Nodo dei Pagamenti-SPC
    comunica al PSP l’avvenuta cancellazione della RPT originaria, a
    seguito della scadenza del periodo di tempo entro cui la RPT avrebbe
-   dovuto ricevere dal PSP la corrispondente RT (:ref:`vedi § 8.1.8 <processo-di-notifica-di-chiusura-delle-operazioni-pendenti>`).
+   dovuto ricevere dal PSP la corrispondente RT (:ref:`vedi § 8.1.8 <processo-di-notifica-di-chiusura-delle-operazioni-pendenticap8>`).
 
 |image20|
 
@@ -2998,7 +2998,7 @@ seguenti primitive:
 
 v. *nodoChiediInformativaPA*, che permette di reperire le informazioni
    legate all'erogazione dei servizi, nonché l'elenco dei codici IBAN di
-   accredito degli Enti Creditori (:ref:`vedi §§ 4.2.1 <tabella-delle-controparti>` e
+   accredito degli Enti Creditori (:ref:`vedi §§ 4.2.1 <tabella-delle-controparticap4>` e
    :ref:`5.3.6 <tabella-delle-controparti>`);
 
 w. *nodoChiediTemplateInformativaPSP*, con la quale il PSP può scaricare
@@ -3075,8 +3075,8 @@ di propria competenza.
 Il *template* è costituito da un documento XML, compilato in tutte le
 parti relative alla configurazione del PSP stesso, tranne che nelle
 parti che descrivono le condizioni economiche e le priorità di scelta in
-caso di mancata indicazione del canale (:ref:`vedi anche §§ 4.2.2 <catalogo-dati-informativi>` e
-`5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`).
+caso di mancata indicazione del canale (:ref:`vedi anche §§ 4.2.2 <catalogo-dati-informativicap4>` e
+:ref:`5.3.7 <../11-Capitolo_5/Capitolo5.rst#catalogo-dati-informativi>`).
 
 Qualora non sia presente una versione corrente del "*Catalogo Dati Informativi*"
 per l'ambiente indicato, il NodoSPC restituirà un
@@ -3527,7 +3527,7 @@ seguenti due tipi di messaggi:
    (:ref:`vedi § 9.4.2 <messaggio-http-redirect-di-avvio-pagamento-verso-initiating-party>`);
 
 -  messaggio HTTP-redirect di esito pagamento da *Initiating Party*
-   (:ref:`vedi § 9.4.3 <messaggio-http-redirect-di-esito-pagamento-da-initiating-party>`_).
+   (:ref:`vedi § 9.4.3 <messaggio-http-redirect-di-esito-pagamento-da-initiating-party>`).
 
 Il colloquio prevede inoltre l’utilizzo di un ulteriore messaggio HTTP
 nei confronti di *Initiating Party* attivato tramite HTTP GET, usato per
@@ -4100,7 +4100,7 @@ SCT01 Application Specification - E-authorisation for the execution of
 
 .. [2]
    Ad esempio: importo variato, interessi di mora, ecc. Allo scopo 
-   :ref:`si veda il § 7.4.5 <comunicazioni-allutilizzatore-finale>`_
+   :ref:`si veda il § 7.4.5 <comunicazioni-allutilizzatore-finale>`
 
 .. [3]
    Vedi Nota 1.

@@ -40,11 +40,10 @@ specifiche e i meccanismi di normalizzazione, rende disponibili le
 diverse soluzioni dei PSP facendosi carico di trattare le eventuali
 specificità dei protocolli di trust e comunicazione.
 
-.. _workflow-dei-modelli-di-pagamento-e-dei-processi-accessori:
+.. _workflow-dei-modelli-di-pagamento-e-dei-processi-accessoricap8:
 
 *Workflow* dei modelli di pagamento e dei processi accessori
 ------------------------------------------------------------
-.. _*Workflow* dei modelli di pagamento e dei processi accessori:
 
 I paragrafi seguenti descrivono a livello generale, valide quindi per
 tutti i soggetti coinvolti, le interazioni tra gli Enti Creditori, il
@@ -57,7 +56,7 @@ dettaglio i **workflow** dei processi che sono attivati presso gli Enti
 Creditori. Sono, peraltro, qui descritti con meno dettagli anche i
 *workflow* dei processi che coinvolgono il Nodo dei Pagamenti-SPC.
 
-.. _pagamenti-attivati-presso-lente-creditore:
+.. _pagamenti-attivati-presso-lente-creditorecap8:
 
 Pagamenti attivati presso l'Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -113,7 +112,8 @@ di Figura 23 a pagina 118, contempla i seguenti passi:
 
 3)  *Scelta della modalità di pagamento*: l’utilizzatore finale sceglie
     un servizio di pagamento fra quelli disponibili o ne richiama
-    uno fra quelli memorizzati attraverso (:ref:`vedi § 2.1.3.1 <servizio-di-scelta-e-memorizzazione-del-  pagamento>`). In base a tale scelta, il pagamento viene indirizzato su uno dei modelli
+    uno fra quelli memorizzati attraverso (:ref:`vedi § 2.1.3.1 <servizio-di-scelta-e-memorizzazione-del-pagamento>`). 
+    In base a tale scelta, il pagamento viene indirizzato su uno dei modelli
     descritti al :ref:`paragrafo 2.1 della Sezione I <processo-di-pagamento-attivato-presso-lente-creditore>`.
 
 4)  In funzione dello strumento utilizzato, il pagamento potrà avvenire:
@@ -782,7 +782,7 @@ d) capacità di trattare le Ricevute Telematiche (RT), così come indicato
 
 Per maggiori dettagli circa il *workflow* analitico del Modello 4 :ref:`si veda il § 9.1.2.1 <presentazione-dellavviso-e-transcodifica-dei-dati-per-il-pagamento>` .
 
-.. _processo-di-storno-del-pagamento-eseguito:
+.. _processo-di-storno-del-pagamento-eseguitocap8:
 
 Processo di storno del pagamento eseguito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -975,7 +975,7 @@ in funzione della configurazione dell'Ente Creditore:
     informatico ricevuto dalla Banca Tesoriera, la componente di
     *Back-office* dell’Ente Creditore effettua la riconciliazione (:ref:`si veda il § 2.7.2 <riconciliazione-in-modalità-multipla>`).
 
-.. _processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore:
+.. _processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8:
 
 Processo di avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1191,7 +1191,7 @@ Al termine dell'elaborazione del ciclo:
 **Figura** **34 – Sequence diagram del processo di avvisatura via Web service**
 
 Il protocollo di colloquio *Web service* con la componente di *Back-end*
-dell’Ente Creditore è specificato nel :ref:`§ 8.2.7 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>` , quello con la componente
+dell’Ente Creditore è specificato nel :ref:`§ 8.2.7 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8>` , quello con la componente
 di gestione *mobile* *Back-end* del PSP è specificato nel :ref:`§ 9.2.7 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>` ; 
 per il colloquio via e-mail e sms saranno utilizzati i protocolli standard
 previsti per questi canali.
@@ -1217,13 +1217,13 @@ Processo di avvisatura digitale *pull* (verifica della posizione debitoria)
 Il sistema mette a disposizione apposite funzioni affinché la "posizione
 debitoria" di un soggetto pagatore presso un singolo Ente Creditore
 possa essere interrogata dall'utilizzatore finale attraverso le funzioni
-messe a disposizione dai PSP aderenti all'iniziativa (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`).
+messe a disposizione dai PSP aderenti all'iniziativa (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`).
 
 Poiché il processo di verifica affinché della "posizione debitoria"
 prende avvio presso il PSP, per il *workflow* dettagliato si faccia
 riferimento al :ref:`§ 9.1.6 <processo-di-avvisatura-digitale-pull-verifica-della-posizione-debitoria>`.
 
-.. _processo-di-notifica-di-chiusura-delle-operazioni-pendenti:
+.. _processo-di-notifica-di-chiusura-delle-operazioni-pendenticap8:
 
 Processo di notifica di chiusura delle "operazioni pendenti"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1243,7 +1243,7 @@ L'Ente Creditore dovrà infatti gestire una RT negativa generata dal
 NodoSPC che porta a bordo un codice esito particolare atto a segnalare
 tale fattispecie (per la ricezione delle RT :ref:`vedi § 8.2.2 <ricezione-delle-rt-e-richiesta-di-copia>`).
 
-.. _interfacce-web-service-e-dettaglio-azioni-soap:
+.. _interfacce-web-service-e-dettaglio-azioni-soapcap8:
 
 Interfacce Web service e dettaglio azioni SOAP
 ----------------------------------------------
@@ -2572,7 +2572,7 @@ Revoca della RT
 
 **Figura** **38 – NodoSPC/EC: Metodi di gestione delle Revoche di RT**
 
-Con riferimento al processo di revoca definito al :ref:`§ 8.1.4 <processo-di-revoca-della-ricevuta-telematica>`, 
+Con riferimento al processo di revoca definito al :ref:`§ 8.1.4 <processo-di-revoca-della-ricevuta-telematicacap8>`, 
 per la gestione dei meccanismi di revoca delle RT sono stati ha definiti i
 seguenti metodi SOAP, rappresentati nel diagramma di Figura 38:
 
@@ -2697,7 +2697,7 @@ Storno del pagamento
 
 **Figura** **39 – NodoSPC/EC: Metodi di gestione dello Storno del pagamento**
 
-Con riferimento al processo di storno del pagamento (:ref:`vedi § 8.1.3 <processo-di-storno-del-pagamento-eseguito>`) 
+Con riferimento al processo di storno del pagamento (:ref:`vedi § 8.1.3 <processo-di-storno-del-pagamento-eseguitocap8>`) 
 e perla gestione dei meccanismi di richiesta e di esito dello storno, il Nodo
 dei Pagamenti-SPC rende disponibili i metodi SOAP descritti nel seguito
 ed indicati nel diagramma di Figura 39 a pagina 155:
@@ -3021,7 +3021,7 @@ Avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 
 Per la gestione del processo di inoltro da parte dell’ente Creditore
 degli avvisi digitali da inviare agli utilizzatori finali (:ref:`vedi §
-8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`), 
+8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8>`), 
 il NodoSPC rende disponibile la seguente interfaccia *Web service*, riportata in Figura 41:
 
 p. *nodoInviaAvvisoDigitale*, con la quale viene sottomessa (da
@@ -3168,7 +3168,7 @@ c. identificativoDominio
 **Gestione degli errori**
 
 Se il parametro **esitoOperazione** non è OK, sarà presente un
-**faultBean** nel formato specificato nel § 10.1.
+**faultBean** nel formato specificato nel :ref:`§ 10.1 <la-struttura-faultbean>`
 
 Il **faultBean** è emesso da **Ente Creditore** (dove faultBean.id è
 uguale a <identificativoDominio>).
@@ -3195,7 +3195,7 @@ Interrogazione delle basi dati del NodoSPC
 Il Nodo dei Pagamenti-SPC, allo scopo di supportare lo scambio
 paritetico tra le parti aderenti, rende disponibile agli Enti Creditori
 collegati una interfaccia specifica per l'interrogazione del
-"*Catalogo Dati Informativi*" (:ref:`vedi §§ 4.2.2 <catalogo-dati-informativi>` e 
+"*Catalogo Dati Informativi*" (:ref:`vedi §§ 4.2.2 <catalogo-dati-informativicap4>` e 
 :ref:`5.3.7 <catalogo-dati-informativi>`) relativo ai servizi erogati
 dai PSP aderenti al sistema pagoPA.
 
@@ -3429,7 +3429,7 @@ Interfacce HTTP di re-direzione per il pagamento immediato
 Nel presente paragrafo saranno date indicazioni circa i parametri da
 utilizzare nella gestione della re-direzione del browser
 dell'utilizzatore finale nell'ambito del modello di pagamento con
-esecuzione immediata (:ref:`vedi § 8.1.1 <pagamenti-attivati-presso-lente-creditore>`).
+esecuzione immediata (:ref:`vedi § 8.1.1 <pagamenti-attivati-presso-lente-creditorecap8>`).
 
 Tali indicazioni sono valide anche per la gestione del cosiddetto
 "carrello multi beneficiario".

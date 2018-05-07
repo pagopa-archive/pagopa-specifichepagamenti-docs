@@ -183,9 +183,10 @@ Per il Nodo dei Pagamenti-SPC il periodo di archiviazione, ai fini
 gestionali, di tutti i dati scambiati è fissato in 6 mesi, salvo periodi
 di maggior durata per disposizioni di legge.
 
+.. _periodo-di-ritenzione-delle-rpt-senza-esito:
+
 Periodo di ritenzione delle RPT senza esito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Periodo di ritenzione delle RPT senza esito:
 
 Con riferimento al processo di chiusura delle RPT inviate al PSP e
 che non hanno ancora ricevuto un esito (negativo o positivo), per le

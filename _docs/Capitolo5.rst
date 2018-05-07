@@ -29,7 +29,7 @@ sono individuate come:
 -  *Esito Revoca* (**ER**)
 
 Nel presente capitolo sono inoltre riportate le informazioni relative a
-"Tabella delle Controparti" (:ref:`§ 4.2.1 <tabella-delle-controparti>`), "Catalogo Dati Informativi" 
+"Tabella delle Controparti" (:ref:`§ 4.2.1 <tabella-delle-controparticap4>`), "Catalogo Dati Informativi" 
 (:ref:`§5.3.7 <catalogo-dati-informativi>`) e flussi inerenti i “Totali di Traffico” (:ref:`§ 4.5.1 <totali-di-traffico>`).
 
 .. _formato-dei-messaggi:
@@ -1859,13 +1859,13 @@ catalogo:
 | stornoPagamento             | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è in grado di gestire il processo di     |
 |                             |         |            |         |         | storno di un pagamento                          |
-|                             |         |            |         |         | (:ref:`cfr. § 2.1.4 <storno-del-pagamento>`).   |
+|                             |         |            |         |         | (:ref:`cfr. § 2.1.4 <storno-del-pagamentocap2>`)|
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | marcaBolloDigitale          | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è abilitato a vendere la marca           |
 |                             |         |            |         |         | da bollo digitale                               |
 |                             |         |            |         |         | (:ref:`cfr. § 2.7 <riconciliazione-dei-         |
-|                             |         |            |         |         | pagamenti>`).                                   |
+|                             |         |            |         |         | pagamenticap2>`).                               |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | logoPSP                     | 3       | an         | 1..1    |         | Logotipo                                        |
 |                             |         |            |         |         | del PSP.                                        |
@@ -3549,8 +3549,7 @@ all'interno del WSDL del servizio.
    Element *Debtor*.
 
 .. [2]
-   Vedi
-   `https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
+   Vedi :role:`https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
 
 .. [3]
    Vedi nota 1.

@@ -93,7 +93,7 @@ utilizzati le tabelle seguenti:
 
 
 
-.. _tabella-delle-controparti:
+.. _tabella-delle-controparticap4:
 
 Tabella delle controparti
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -112,7 +112,7 @@ Pagamenti-SPC (:ref:`vedi successivo § 4.2.3 <tabella-dei-cc-di-accredito>`).
 La “Tabella delle controparti” viene aggiornata e pubblicata con cadenza
 giornaliera.
 
-.. _catalogo-dati-informativi:
+.. _catalogo-dati-informativicap4:
 
 Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -145,7 +145,7 @@ A tale scopo questi ultimi sono tenuti ad inviare al Nodo dei
 Pagamenti-SPC l'elenco dei codici IBAN sui quali effettuare l'accredito
 delle somme dovute.
 
-.. _catalogo-dei-servizi:
+.. _catalogo-dei-servizicap4:
 
 Catalogo dei servizi
 ~~~~~~~~~~~~~~~~~~~~
@@ -210,7 +210,7 @@ I flussi di ingresso RPT sono sottoposti a controlli di conformità agli
 Standard di Servizio e sono accettati se trasmessi da Enti Creditori e
 diretti a PSP appartenenti al Dominio.
 
-.. _Ppagamenti-multi-beneficiario-o-multi-pagatore:
+.. _pagamenti-multi-beneficiario-o-multi-pagatore:
 
 Pagamenti multi beneficiario o multi pagatore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -290,7 +290,7 @@ interazione tra:
 Storno di un pagamento
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`Come visto nel § 2.1.4 <storno-del-pagamento>` lo storno di un pagamento si esplica nell’invio
+:ref:`Come visto nel § 2.1.4 <storno-del-pagamentocap2>` lo storno di un pagamento si esplica nell’invio
 di una richiesta di revoca (RR) da parte dell’Ente Creditore, contenente
 i riferimenti della RT oggetto dello storno, al quale corrisponde la
 valutazione del PSP e la restituzione all’Ente Creditore dell’esito di
@@ -327,7 +327,7 @@ Rendicontazione per gli Enti Creditori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio “Rendicontazione” mette a disposizione degli Enti Creditori
-un flusso, generato da ogni PSP (:ref:`si confronti il § 2.7 <riconciliazione-dei-pagamenti>`), 
+un flusso, generato da ogni PSP (:ref:`si confronti il § 2.7 <riconciliazione-dei-pagamenticap2>`), 
 che riporta le informazioni necessarie per consentire all’Ente Creditore di procedere
 alla riconciliazione tra le RT ricevute e gli importi trasferiti dal PSP
 del debitore al PSP dell’Ente Creditore.
@@ -434,7 +434,8 @@ attraverso il Nodo dei Pagamenti-SPC e di stretta pertinenza del singolo
 richiedente.
 
 Il Nodo dei Pagamenti-SPC mette a disposizione dell’Ente Creditore e del
-PSP gli strumenti per la ricezione di tali flussi (:ref:`vedi §§ 8.1.5 <processo-di-riconciliazione-dei-pagamenti-eseguiti>` e `9.2.11 <../16-Capitolo_9/Capitolo9.rst#ricezione-totali-di-traffico>`).
+PSP gli strumenti per la ricezione di tali flussi (:ref:`vedi §§ 8.1.5 <processo-di-riconciliazione-dei-pagamenti-eseguiti>` e 
+:ref:`9.2.11 <ricezione-totali-di-traffico>`).
 
 Il periodo temporale durante il quale saranno disponibili i flussi
 relativi ai “Totali di Traffico” non potrà superare i 10 giorni di

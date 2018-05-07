@@ -1,6 +1,8 @@
 ﻿
 |AGID_logo_carta_intestata-02.png|
 
+.. _Capitolo16:
+
 +------------------------------------------------------------------+
 | **Capitolo 16. IL MODELLO DI FUNZIONAMENTO DEL SERVIZIO MYBANK** |
 +------------------------------------------------------------------+

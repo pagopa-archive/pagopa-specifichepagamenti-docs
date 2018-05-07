@@ -41,7 +41,7 @@ I *workflow* di seguito descritti sono parte integrante delle
 implementazioni previste nel Nodo dei Pagamenti-SPC (:ref:`vedi anche Sezione
 III <Sezione-III>`).
 
-.. _Processo-di-pagamento-attivato-presso-l’Ente-Creditore:
+.. _processo-di-pagamento-attivato-presso-lente-creditore:
 
 Processo di pagamento attivato presso l’Ente Creditore
 ------------------------------------------------------
@@ -271,7 +271,7 @@ Il regolamento dei pagamenti effettuati con questo tipo di *workflow*
 viene effettuato attraverso il bonifico bancario (SCT - SEPA Credit
 Transfer) ed il bollettino di conto corrente postale.
 
-.. _Scelta-del-servizio-di-pagamento-da-parte-dell'utilizzatore-finale:
+.. _scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale:
 
 Scelta del servizio di pagamento da parte dell'utilizzatore finale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -335,7 +335,7 @@ Si noti, che, qualora l'utilizzatore finale non effettui alcuna scelta,
 oppure si verifichi un timeout di sessione, il NodoSPC genererà una o
 più RT negative, così come indicato nei precedenti paragrafi.
 
-.. _Servizio-di-scelta-e-memorizzazione-del-pagamento:
+.. _servizio-di-scelta-e-memorizzazione-del-pagamento:
 
 Servizio di scelta e memorizzazione del pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -480,7 +480,7 @@ Lo SDK è disponibile in download, previa sottoscrizione di un apposito
 fornito in modalità nativa per le due principali tecnologie presenti sul
 mercato: IOS e Android.
 
-.. _Storno-del-pagamento:
+.. _storno-del-pagamentocap2:
 
 Storno del pagamento
 ~~~~~~~~~~~~~~~~~~~~
@@ -691,7 +691,7 @@ sostituzione della iniziale richiesta di “*verifica del pagamento in attesa*�
 con la richiesta del “*numero dell'avviso*”.
 
 Il NodoSPC riceve la richiesta del numero di avviso dal PSP, controlla
-sul Catalogo dei servizi (vedi §§ :ref:`4.2.4 <Catalogo-dei-servizicap4>` e :ref:`5.3.11 <catalogo-dei-servizi>`),
+sul Catalogo dei servizi (vedi §§ :ref:`4.2.4 <catalogo-dei-servizicap4>` e :ref:`5.3.11 <catalogo-dei-servizi>`),
 la congruità della richiesta e la inoltra all'Ente
 Creditore che, accedendo ai propri archivi, assegna alla richiesta il
 corretto numero avviso. Da questo momento in poi, il processo di
@@ -707,7 +707,7 @@ finale che consentono di identificare univocamente il pagamento presso
 l'Ente Creditore, quali, ad esempio, la targa del veicolo per il
 pagamento della tassa automobilistica.
 
-.. _Revoca-della-Ricevuta-Telematica:
+.. _Revoca-della-Ricevuta-Telematicacap2:
 
 Revoca della Ricevuta Telematica
 --------------------------------
@@ -962,7 +962,7 @@ dell’effettivo pagamento, quindi tale modello è applicabile anche ad
 altre modalità di identificazione che non richiedano l’utilizzo della
 CIE/CNS.
 
-.. _Riconciliazione-dei-pagamenti:
+.. _riconciliazione-dei-pagamenticap2:
 
 Riconciliazione dei pagamenti
 -----------------------------
@@ -1175,7 +1175,8 @@ acquisto consta dei seguenti passi:
 
    c. provincia di residenza del soggetto pagatore;
 
-5. l’utilizzatore finale viene indirizzato sul WISP (:ref:`vedi § 2.1.3 <scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale>`) che
+5. l’utilizzatore finale viene indirizzato sul WISP 
+   (:ref:`vedi § 2.1.3 <scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale>`) che
    gli consente di scegliere il servizio di pagamento che intende
    utilizzare NB: la PA deve porre attenzione alla composizione del
    carrello poiché in questa circostanza le opzioni disponibili saranno
@@ -1328,7 +1329,7 @@ L'iscrizione al servizio di avvisatura può essere effettuata
 dall'utilizzatore finale aderendo ad uno dei servizi messi a
 disposizione da parte dei Prestatori di servizi di pagamento, che
 possono scegliere di gestire il servizio sia in modalità *push*, sia in
-modalità *pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`).
+modalità *pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`).
 
 L'utilizzatore finale usa le applicazioni predisposte dai PSP che
 potranno essere utilizzate su PC, *smartphone*, *tablet*. Il PSP può
@@ -1432,7 +1433,7 @@ utilizzando il formato dati previsto dalle specifiche riportate nel §
 **Errore. L'origine riferimento non è stata trovata.**, segnalando
 all'ente eventuali difformità rispetto agli standard previsti.
 
-.. _Recapito-dell'avviso-al-debitore:
+.. _recapito-dellavviso-al-debitore:
 
 Recapito dell'avviso al debitore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -1532,7 +1533,7 @@ da quelli a disposizione dell’utilizzatore finale, in caso contrario
 l’eventuale fase di pagamento attivata successivamente all’annullo
 fornirà un errore generato dall’Ente Creditore.
 
-.. _Avvisatura-digitale-*pull*-(verifica-della-posizione-debitoria):
+.. _avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2:
 
 Avvisatura digitale *pull* (verifica della posizione debitoria)
 ---------------------------------------------------------------
@@ -1590,7 +1591,7 @@ di restituire solo una parte dei documenti che interessano quel
 particolare utilizzatore finale: tale situazione dovrà essere indicata
 nella risposta fornita al NodoSPC.
 
-.. _Limitazioni-all'utilizzo-dell'avvisatura-*pull*:
+.. _limitazioni-allutilizzo-dellavvisatura-pull:
 
 Limitazioni all'utilizzo dell'avvisatura *pull*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

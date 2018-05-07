@@ -77,9 +77,10 @@ Creditori devono implementare, nell’ambito del processo di Avvisatura
 digitale *pull* (`vedi § 2.10 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-pull-verifica-della-posizione-debitoria>`_), 
 per ricevere dal NodoSPC una richiesta relativa alla posizione debitoria di un dato utilizzatore finale.
 
+.. _web-service-tra-nodo-dei-pagamenti-spc-e-psp:
+
 *Web service* tra Nodo dei Pagamenti-SPC e PSP
 ----------------------------------------------
-.. _*Web service* tra Nodo dei Pagamenti-SPC e PSP:
 
 L’interfaccia di comunicazione tra Nodo dei Pagamenti-SPC e PSP
 definisce i web services e i metodi per realizzare il protocollo di

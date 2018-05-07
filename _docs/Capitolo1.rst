@@ -577,7 +577,7 @@ vista applicativo al fine di tenerne traccia.
 L’insieme di tali registrazioni, indipendentemente dalle peculiarità
 tecniche delle soluzioni adottate da ciascun soggetto che definisce in
 autonomia tali aspetti, costituisce il “Giornale degli Eventi” (:ref:`vedi
-paragrafo 3.2.10 <giornale-degli-eventi>`) che riporta gli estremi di tutte le situazioni
+paragrafo 3.2.10 <giornale-degli-eventi-1>`) che riporta gli estremi di tutte le situazioni
 verificatesi nell’esecuzione dell’operazione di pagamento nelle varie
 tratte coinvolte (tra Enti Creditori e NodoSPC, nel NodoSPC, tra NodoSPC
 e PSP).
