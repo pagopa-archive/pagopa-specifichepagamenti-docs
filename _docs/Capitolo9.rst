@@ -1,5 +1,7 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
+
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Capitolo9:
 
@@ -4093,7 +4095,6 @@ SCT01 Application Specification - E-authorisation for the execution of
 | IDVS                              | ParticipantID                                                        |
 +-----------------------------------+----------------------------------------------------------------------+
 
-:ref:`Torna all'indice <Indice>`_
 
 .. [1]
    Si vedano i parametri delle primitive **nodoVerificaRPT**,

@@ -1,6 +1,7 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
 
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Definizioni-e-Acronimi:
 
@@ -417,6 +418,7 @@ Definizioni e Acronimi
 |                                   | di "documenti" che                |
 |                                   | definiscono il “Web Service”.     |
 +-----------------------------------+-----------------------------------+
+
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in

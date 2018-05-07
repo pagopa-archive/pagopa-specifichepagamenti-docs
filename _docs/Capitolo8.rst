@@ -1,5 +1,7 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
+
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Capitolo8:
 +----------------------------------------------------------+
@@ -4148,7 +4150,6 @@ b) il numero di file strettamente necessari a contenere tutte le
    richieste di avviso (ad esempio, se devo trasferire 250.000, saranno
    inviati 3 file).
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    Questo URL contiene l’identificativo di sessione di cui sopra e il

@@ -1,5 +1,7 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
+
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Capitolo5:
 
@@ -3541,7 +3543,6 @@ all'interno del WSDL del servizio.
    "importoAvviso",3,"an","1..1","3..12","Campo numerico (due cifre per la parte decimale, il separatore dei centesimi è il punto “.”), indicante l’importo relativo alla somma da versare. **Deve essere maggiore di “0.10”**."
    "descrizionePagamento",3,"an","1..1","1..249","Testo libero a disposizione dell’Ente per descrivere le motivazioni del pagamento."
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    Ai fini della corrispondenza UNIFI, il soggetto pagatore è associato

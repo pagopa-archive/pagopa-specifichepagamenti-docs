@@ -1,10 +1,11 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
 
-Sezione I - REGOLE E FUNZIONAMENTO DEL SISTEMA
-==============================================
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Sezione-I:
+
+**Sezione I - REGOLE E FUNZIONAMENTO DEL SISTEMA**
 
 Obiettivo strategico del sistema pagoPA è quello di facilitare e
 diffondere gli strumenti di pagamento elettronici, in particolare,
@@ -105,7 +106,6 @@ variazioni conseguenti a modificazioni della normativa, alle mutate
 esigenze delle pubbliche amministrazioni e degli utenti, all’evoluzione
 del contesto tecnologico.
 
-:ref:`Torna all'indice <Indice>`__
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in

@@ -1,5 +1,7 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
+
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Capitolo4:
 
@@ -574,7 +576,6 @@ A richiesta, è possibile ricevere dette informazioni in modalità
 elettronica e codificate all’interno di un file di testo in formato CSV
 (*Comma-Separated Values*).
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    Ogni Richiesta di Pagamento Telematico (RPT) consente pagamenti

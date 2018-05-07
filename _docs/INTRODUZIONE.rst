@@ -1,5 +1,7 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
+
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Introduzione:
 
@@ -86,7 +88,6 @@ l’interazione tra il Nodo dei Pagamenti-SPC ed i soggetti aderenti (Enti
 Creditori e prestatori di servizi di pagamento). Il documento si
 completa con la Sezione IV .
 
-:ref:`Torna all'indice <Indice>`__
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in

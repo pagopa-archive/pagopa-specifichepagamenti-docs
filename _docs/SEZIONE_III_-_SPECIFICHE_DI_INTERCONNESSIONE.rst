@@ -1,6 +1,7 @@
-﻿
-|AGID_logo_carta_intestata-02.png|
 
++-----------------------------------------------------------------------+
+| |AGID_logo_carta_intestata-02.png|                                    |
++-----------------------------------------------------------------------+
 
 .. _Sezione-III:
 
@@ -154,7 +155,6 @@ aderenti.
 +---------------------------------+----------------------------------+-----------------------------------+
 
 
-:ref:`Torna all'indice <Indice>`__
 
 .. [1]
    in alcuni documenti degli Enti Creditori indicato anche come CRS.
