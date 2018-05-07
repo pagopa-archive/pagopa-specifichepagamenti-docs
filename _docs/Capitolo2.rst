@@ -1329,7 +1329,7 @@ L'iscrizione al servizio di avvisatura può essere effettuata
 dall'utilizzatore finale aderendo ad uno dei servizi messi a
 disposizione da parte dei Prestatori di servizi di pagamento, che
 possono scegliere di gestire il servizio sia in modalità *push*, sia in
-modalità *pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`).
+modalità *pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`).
 
 L'utilizzatore finale usa le applicazioni predisposte dai PSP che
 potranno essere utilizzate su PC, *smartphone*, *tablet*. Il PSP può
@@ -1533,7 +1533,7 @@ da quelli a disposizione dell’utilizzatore finale, in caso contrario
 l’eventuale fase di pagamento attivata successivamente all’annullo
 fornirà un errore generato dall’Ente Creditore.
 
-.. _Avvisatura-digitale-*pull*-(verifica-della-posizione-debitoria):
+.. _avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2:
 
 Avvisatura digitale *pull* (verifica della posizione debitoria)
 ---------------------------------------------------------------
