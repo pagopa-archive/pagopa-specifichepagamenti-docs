@@ -304,7 +304,8 @@ attraverso l'utilizzo di componenti del NodoSPC che consentono:
 
 -  agli Enti Creditori l'invio degli avvisi sia in modalità SFTP (File
    transfer sicuro), sia attraverso l'utilizzo di appositi *web service*
-   (vedi rispettivamente :ref:`§§ 8.5 <interfacce-per-il-servizio-di-file-transfer-sicuro>` e :ref:`8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>`);
+   (vedi rispettivamente :ref:`§§ 8.5 <interfacce-per-il-servizio-di-file-transfer-sicuro>` e 
+   :ref:`8.1.6 <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8>`);
 
 -  ai PSP di inviare via *web service* al NodoSPC le richieste di
    iscrizione al servizio (:ref:`vedi § 9.2.7 della Sezione III <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`);
