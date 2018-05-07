@@ -962,7 +962,7 @@ dell’effettivo pagamento, quindi tale modello è applicabile anche ad
 altre modalità di identificazione che non richiedano l’utilizzo della
 CIE/CNS.
 
-.. _Riconciliazione-dei-pagamenti:
+.. _riconciliazione-dei-pagamenticap2:
 
 Riconciliazione dei pagamenti
 -----------------------------
