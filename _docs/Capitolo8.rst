@@ -40,11 +40,10 @@ specifiche e i meccanismi di normalizzazione, rende disponibili le
 diverse soluzioni dei PSP facendosi carico di trattare le eventuali
 specificità dei protocolli di trust e comunicazione.
 
-.. _workflow-dei-modelli-di-pagamento-e-dei-processi-accessori:
+.. _workflow-dei-modelli-di-pagamento-e-dei-processi-accessoricap8:
 
 *Workflow* dei modelli di pagamento e dei processi accessori
 ------------------------------------------------------------
-.. _*Workflow* dei modelli di pagamento e dei processi accessori:
 
 I paragrafi seguenti descrivono a livello generale, valide quindi per
 tutti i soggetti coinvolti, le interazioni tra gli Enti Creditori, il
