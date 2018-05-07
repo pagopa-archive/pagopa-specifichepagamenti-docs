@@ -11,9 +11,10 @@ Gestione degli Errori
 In questo capitolo sono fornite le specifiche necessarie per gestire gli
 errori all’interno del sistema pagoPA.
 
+.. _la-struttura-faultbean:
+
 La struttura faultBean
 ----------------------
-.. _La struttura faultBean:
 
 Per la **Gestione degli errori** all’interno dei messaggi scambiati tra
 i soggetti aderenti (EC e PSP) ed il NodoSPC viene utilizzata la
