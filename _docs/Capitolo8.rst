@@ -3009,7 +3009,7 @@ tale occasione sarà emesso il seguente errore
 In questo caso ritentare la *request*, se il fault persiste contattare
 il gestore del NodoSPC.
 
-.. _avvisatura-digitale-push-su-iniziativa-dellente-creditore:
+.. _avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8:
 
 Avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
