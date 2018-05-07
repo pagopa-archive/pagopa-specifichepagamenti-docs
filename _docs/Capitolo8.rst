@@ -1223,7 +1223,7 @@ Poiché il processo di verifica affinché della "posizione debitoria"
 prende avvio presso il PSP, per il *workflow* dettagliato si faccia
 riferimento al :ref:`§ 9.1.6 <processo-di-avvisatura-digitale-pull-verifica-della-posizione-debitoria>`.
 
-.. _processo-di-notifica-di-chiusura-delle-operazioni-pendenti:
+.. _processo-di-notifica-di-chiusura-delle-operazioni-pendenticap8:
 
 Processo di notifica di chiusura delle "operazioni pendenti"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
