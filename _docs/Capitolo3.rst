@@ -331,7 +331,7 @@ l'utilizzo delle primitive SOAP oggi impiegate per lo scambio di
 informazioni in modalità massiva (ad esempio: i flussi di
 rendicontazione, i totali di traffico, ecc.).
 
-.. _giornale-degli-eventi:
+.. _giornale-degli-eventi-1:
 
 Giornale degli Eventi
 ~~~~~~~~~~~~~~~~~~~~~
