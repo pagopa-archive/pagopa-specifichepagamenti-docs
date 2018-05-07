@@ -1859,13 +1859,13 @@ catalogo:
 | stornoPagamento             | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è in grado di gestire il processo di     |
 |                             |         |            |         |         | storno di un pagamento                          |
-|                             |         |            |         |         | (:ref:`cfr. § 2.1.4 <storno-del-pagamento>`).   |
+|                             |         |            |         |         | (:ref:`cfr. § 2.1.4 <storno-del-pagamentocap2>`)|
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | marcaBolloDigitale          | 3       | n          | 1..1    | 1       | Indica se                                       |
 |                             |         |            |         |         | il PSP è abilitato a vendere la marca           |
 |                             |         |            |         |         | da bollo digitale                               |
 |                             |         |            |         |         | (:ref:`cfr. § 2.7 <riconciliazione-dei-         |
-|                             |         |            |         |         | pagamenti>`).                                   |
+|                             |         |            |         |         | pagamenticap2>`).                               |
 +-----------------------------+---------+------------+---------+---------+-------------------------------------------------+
 | logoPSP                     | 3       | an         | 1..1    |         | Logotipo                                        |
 |                             |         |            |         |         | del PSP.                                        |
