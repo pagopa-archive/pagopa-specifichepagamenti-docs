@@ -28,9 +28,10 @@ intermediario. La procedura di adesione:
    pagamento dei dati necessari alla fruizione del servizio, come
    specificati nell’accordo di servizio.
 
+.. _adesione-di-un-ente-creditore:
+
 Adesione di un Ente Creditore.
 ------------------------------
-.. _Adesione di un Ente Creditore.:
 
 Per la fruizione del servizio, l’Ente Creditore, sia esso una Pubblica
 Amministrazione, una società a controllo pubblico o un soggetto gestore
@@ -58,9 +59,10 @@ Le istruzioni operative necessarie per completare la fase di adesione
 sono contenute nel Manuale Utente scaricabile dal sito dell’Agenzia o
 del Portale delle Adesioni.
 
+.. _adesione-di-un-prestatore-di-servizi-di-pagamento:
+
 Adesione di un Prestatore di Servizi di pagamento
 -------------------------------------------------
-.. _Adesione di un Prestatore di Servizi di pagamento:
 
 Per la fruizione del Servizio, il prestatore di servizi di pagamento
 aderisce al sistema attraverso la compilazione e la sottoscrizione con

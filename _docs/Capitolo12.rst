@@ -35,7 +35,7 @@ Dominio deve inoltre:
 -  comunicare al proprio utilizzatore finale gli eventuali vincoli,
    disponibilità dei propri servizi con particolare riferimento ai
    pagamenti attivati presso le strutture dei prestatori di servizi
-   di pagamento (`vedi § 2.2 <../07-Capitolo_2/Capitolo2.rst#processo-di-pagamento-attivato-presso-il-psp>`);
+   di pagamento (:ref:`vedi § 2.2 <processo-di-pagamento-attivato-presso-il-psp>`);
 
 -  comunicare all’utilizzatore finale le caratteristiche tipiche dei
    servizi di pagamento offerti attraverso il Nodo dei
@@ -58,7 +58,7 @@ Dominio deve inoltre:
    flusso elaborativo (giornale degli eventi) a fronte di una
    eventuale situazione di blocco del flusso stesso;
 
--  rispettare le disponibilità di servizio indicate (`vedi § 12.5.2 <../20-Capitolo_12/Capitolo12.rst#enti-creditori>`);
+-  rispettare le disponibilità di servizio indicate (:ref:`vedi § 12.5.2 <enti-creditori>`);
 
 -  mantenere disponibili le risorse richieste in fase di attivazione
    (Referente Pagamenti, Referente Tecnico, Tavolo Operativo per la
@@ -71,14 +71,15 @@ Adempimenti specifici relativi al circuito MyBank
 
 L’Ente Creditore che consente ai propri utenti di effettuare i
 pagamenti tramite il servizio MyBank si impegna a rispettare i
-*Mandatory Requirements* tipici del circuito, di cui al `§ 16.2 dell’Appendice 2 <../26-Capitolo_16/Capitolo16.rst#mandatory-requirements-tipici-del-servizio-mybank>`.
+*Mandatory Requirements* tipici del circuito, di cui al 
+:ref:`§ 16.2 dell’Appendice 2 <mandatory-requirements-tipici-del-servizio-mybank>`.
 
 Caratteristiche e adempimenti specifici relativi al servizio di avvisatura digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Caratteristiche e adempimenti specifici relativi al servizio di avvisatura digitale:
 
 Con riferimento al servizio di avvisatura digitale su iniziativa
-dell'Ente Creditore, `illustrato al § 2.9 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-push-su-iniziativa-dellente-creditore>`, si precisa che:
+dell'Ente Creditore, :ref:`illustrato al § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`, si precisa che:
 
 -  l’Ente Creditore è sempre libero di procedere anche, in via
    preventiva o in via successiva ad avvisare l’utilizzatore finale con
@@ -121,7 +122,7 @@ censito nel Dominio deve:
 -  essere in grado di attivare i servizi di pagamento richiesti
    dall’utilizzatore finale attraverso il Nodo dei Pagamenti-SPC;
 
--  rispettare le disponibilità di servizio indicate (`vedi § 12.5.3 <../20-Capitolo_12/Capitolo12.rst#prestatori-di-servizi-di-pagamento-aderenti>`);
+-  rispettare le disponibilità di servizio indicate (:ref:`vedi § 12.5.3 <prestatori-di-servizi-di-pagamento-aderenti>`);
 
 -  segnalare o rendere disponibile al soggetto che lo richiede (Ente
    Creditore, utilizzatore finale, tavolo operativo del Nodo dei
@@ -142,7 +143,7 @@ censito nel Dominio deve:
    l’Italia Digitale in caso di loro avvicendamento.
 
 I prestatori di servizi di pagamento che offrono servizi presso proprie
-strutture e/o punti di prossimità (`vedi paragrafo 2.2 <../07-Capitolo_2/Capitolo2.rst#processo-di-pagamento-attivato-presso-il-psp>` Processo di pagamento attivato presso il PSP) dovranno comunicare agli utilizzatori
+strutture e/o punti di prossimità (:ref:`vedi paragrafo 2.2 <processo-di-pagamento-attivato-presso-il-psp>` Processo di pagamento attivato presso il PSP) dovranno comunicare agli utilizzatori
 finali tale possibilità, esponendo in loco l’apposito “Logo” registrato
 dall’Agenzia per l’Italia Digitale.
 
@@ -151,20 +152,20 @@ Adempimenti specifici relativi al servizio di avvisatura digitale
 .. _Adempimenti specifici relativi al servizio di avvisatura digitale:
 
 Con riferimento al servizio di avvisatura digitale su iniziativa
-dell'Ente Creditore, `illustrato al § 2.9 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-push-su-iniziativa-dellente-creditore>` 
-e al servizio di verifica della posizione debitoria di cui `§ 2.10 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-pull-verifica-della-posizione-debitoria>`, si precisa che è compito dei
+dell'Ente Creditore, :ref:`illustrato al § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>` 
+e al servizio di verifica della posizione debitoria di cui :ref:`§ 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`, si precisa che è compito dei
 prestatori di servizi di pagamento acquisire dall'utilizzatore finale il
 consenso per l'invio degli avvisi di pagamento in formato digitale
 presso i propri canali (*app*, home banking, ecc.).
 
 Con specifico riferimento ai servizi di avvisatura in modalità *push*
-(`vedi § 2.9 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-push-su-iniziativa-dellente-creditore>`), i PSP devono raccogliere le relative iscrizioni,
+(:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`), i PSP devono raccogliere le relative iscrizioni,
 informando l'utilizzatore finale:
 
 -  che, aderendo al servizio, potrà ricevere avvisi digitali di
    pagamento da tutti gli Enti Creditori aderenti al sistema pagoPA;
 
--  circa l'iscrizione multipla al servizio (`vedi § 2.9.1.4 <../07-Capitolo_2/Capitolo2.rst#iscrizioni-presso-più-prestatori-di-servizi-di-pagamento>`) nel caso in cui tale eventualità si verifichi e sia segnalata al PSP dal sistema
+-  circa l'iscrizione multipla al servizio (:ref:`vedi § 2.9.1.4 <iscrizioni-presso-più-prestatori-di-servizi-di-pagamento>`) nel caso in cui tale eventualità si verifichi e sia segnalata al PSP dal sistema
    pagoPA.
 
 Archiviazione dei dati
@@ -191,7 +192,7 @@ Periodo di ritenzione delle RPT senza esito
 Con riferimento al processo di chiusura delle RPT inviate al PSP e
 che non hanno ancora ricevuto un esito (negativo o positivo), per le
 quali si applica la chiusura forzata delle operazioni 
-(`vedi § 4.4.7 <../09-Capitolo_4/Capitolo4.rst#chiusura-operazioni-pendenti>`), il periodo di ritenzione sul Nodo dei Pagamenti-SPC è
+(:ref:`vedi § 4.4.7 <chiusura-operazioni-pendenti>`), il periodo di ritenzione sul Nodo dei Pagamenti-SPC è
 fissato in 90 giorni, trascorsi i quali si applica il processo sopra
 indicato.
 
@@ -266,15 +267,17 @@ sul sito dell’Agenzia per l’Italia Digitale.
 La disponibilità del Tavolo Operativo è correlata alla disponibilità
 dei servizi erogati.
 
+.. _livelli-di-servizio:
+
 Livelli di Servizio
 -------------------
-.. _Livelli di Servizio:
 
 I livelli di servizio - intesi come tempi massimi entro cui deve
 essere fornita la risposta applicativa ad una richiesta di servizio
 - di ogni soggetto appartenente al Dominio devono essere
 espressamente indicati e riportati in fase di attivazione del
-servizio (`vedi §§ 11.1 <../19-Capitolo_11/Capitolo11.rst#adesione-di-un-ente-creditore>` e `11.2 <../19-Capitolo_11/Capitolo11.rst#adesione-di-un-prestatore-di-servizi-di-pagamento>`).
+servizio (:ref:`vedi §§ 11.1 <adesione-di-un-ente-creditore>` e 
+:ref:`11.2 <adesione-di-un-prestatore-di-servizi-di-pagamento>`).
 
 I livelli di servizio degli aderenti sono rilevati tramite la
 componente Giornale degli Eventi del Nodo dei Pagamenti-SPC e resi

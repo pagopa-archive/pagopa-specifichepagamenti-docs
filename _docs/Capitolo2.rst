@@ -510,7 +510,7 @@ flussi economici.
 
 **Figura** **9 – Modello di processo di storno di un pagamento**
 
-.. _Processo-di-pagamento-attivato-presso-il-PSP:
+.. _processo-di-pagamento-attivato-presso-il-psp:
 
 Processo di pagamento attivato presso il PSP
 --------------------------------------------
@@ -1211,7 +1211,7 @@ dal cittadino. In mancanza di un corrispondente flusso finanziario verso
 la PA, questa tipologia di Ricevute Telematiche (RT) non è soggetta a
 riconciliazione, limitatamente agli importi riguardanti il MBD.
 
-.. _Avvisatura-digitale-*push*-(su-iniziativa-dell’Ente-Creditore):
+.. _avvisatura-digitale-push-su-iniziativa-dellente-creditore:
 
 Avvisatura digitale *push* (su iniziativa dell’Ente Creditore)
 --------------------------------------------------------------
