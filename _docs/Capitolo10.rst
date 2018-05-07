@@ -1,3 +1,4 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
@@ -520,7 +521,8 @@ Errori nella gestione del messaggio di ackRT
 In Tabella 53 sono riportati i codici di errore utilizzati per la
 valorizzazione dell’elemento codiceErrore qualora, nel messaggio di
 conferma di ricezione della RT al PSP, l'elemento
-statoMessaggioReferenziato assuma il valore **RJCT** (:ref:`vedi §§ 5.3.10 <messaggio-di-conferma-ricezione-della-rt-ack>`__ e `9.2.2.3 <../16-Capitolo_9/Capitolo9.rst#pspinviaackrt>`__).
+statoMessaggioReferenziato assuma il valore **RJCT** (:ref:`vedi §§ 5.3.10 <messaggio-di-conferma-ricezione-della-rt-ack>` 
+e :ref:`9.2.2.3 <pspinviaackrt>`).
 
 **Tabella** **53 - Valori dei codici di errore da utilizzare nella struttura XML ackRT**
 
@@ -544,6 +546,6 @@ statoMessaggioReferenziato assuma il valore **RJCT** (:ref:`vedi §§ 5.3.10 <me
 +-----------------------------------+-----------------------------------+
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

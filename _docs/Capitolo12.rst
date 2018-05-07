@@ -1,3 +1,4 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
@@ -78,6 +79,7 @@ Adempimenti specifici relativi al circuito MyBank
 
 L’Ente Creditore che consente ai propri utenti di effettuare i
 pagamenti tramite il servizio MyBank si impegna a rispettare i
+
 *Mandatory Requirements* tipici del circuito, di cui al :ref:`§ 16.2 dell’Appendice 2 <mandatory-requirements-tipici-del-servizio-mybank>`.
 
 .. _caratteristiche-e-adempimenti-specifici-relativi-al-servizio-di-avvisatura-digitale:
@@ -153,8 +155,6 @@ censito nel Dominio deve:
 I prestatori di servizi di pagamento che offrono servizi presso proprie
 strutture e/o punti di prossimità (:ref:`vedi paragrafo 2.2 <processo-di-pagamento-attivato-presso-il-psp>` 
 Processo di pagamento attivato presso il PSP) dovranno comunicare agli utilizzatori
-finali tale possibilità, esponendo in loco l’apposito “Logo” registrato
-dall’Agenzia per l’Italia Digitale.
 
 .. _adempimenti-specifici-relativi-al-servizio-di-avvisatura-digitale:
 
@@ -171,7 +171,6 @@ presso i propri canali (*app*, home banking, ecc.).
 
 Con specifico riferimento ai servizi di avvisatura in modalità *push*
 (:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`), i PSP devono raccogliere le relative iscrizioni,
-informando l'utilizzatore finale:
 
 -  che, aderendo al servizio, potrà ricevere avvisi digitali di
    pagamento da tutti gli Enti Creditori aderenti al sistema pagoPA;
@@ -204,7 +203,7 @@ Periodo di ritenzione delle RPT senza esito
 
 Con riferimento al processo di chiusura delle RPT inviate al PSP e
 che non hanno ancora ricevuto un esito (negativo o positivo), per le
-quali si applica la chiusura forzata delle operazioni 
+quali si applica la chiusura forzata delle operazioni
 (:ref:`vedi § 4.4.7 <chiusura-operazioni-pendenti>`), il periodo di ritenzione sul Nodo dei Pagamenti-SPC è
 fissato in 90 giorni, trascorsi i quali si applica il processo sopra
 indicato.
@@ -294,6 +293,7 @@ I livelli di servizio - intesi come tempi massimi entro cui deve
 essere fornita la risposta applicativa ad una richiesta di servizio
 - di ogni soggetto appartenente al Dominio devono essere
 espressamente indicati e riportati in fase di attivazione del
+
 servizio (:ref:`vedi §§ 11.1 <adesione-di-un-ente-creditore>` e :ref:`11.2 <adesione-di-un-prestatore-di-servizi-di-pagamento>`).
 
 I livelli di servizio degli aderenti sono rilevati tramite la
@@ -315,6 +315,6 @@ Le statistiche relative a tali indicatori saranno rese disponibili
 attraverso il Servizio di Reporting del Nodo dei Pagamenti-SPC.
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

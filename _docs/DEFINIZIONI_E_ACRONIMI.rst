@@ -1,10 +1,8 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
-+----------------------------+
-| **DEFINIZIONI E ACRONIMI** |
-+----------------------------+
 .. _Definizioni-e-Acronimi:
 
 Definizioni e Acronimi
@@ -20,7 +18,6 @@ Definizioni e Acronimi
 | Agenzia per l’Italia Digitale     | giugno 2012 convertito con        |
 |                                   | legge n. 134 del 7 agosto         |
 |                                   | 2012 (già DigitPA).               |
-|                                   |                                   |
 |                                   | Gestore del Nodo dei              |
 |                                   | Pagamenti-SPC.                    |
 +-----------------------------------+-----------------------------------+
@@ -78,7 +75,6 @@ Definizioni e Acronimi
 |                                   | stesso.                           |
 +-----------------------------------+-----------------------------------+
 | EC                                | Ente Creditore.                   |
-|                                   |                                   |
 | Ente Creditore                    | Nel contesto di pagoPA            |
 |                                   | comprende le pubbliche            |
 |                                   | amministrazioni, le società a     |
@@ -193,7 +189,6 @@ Definizioni e Acronimi
 +-----------------------------------+-----------------------------------+
 | PA                                | Pubblica Amministrazione          |
 |                                   | (Centrale e Locale).              |
-|                                   |                                   |
 |                                   | Per la nozione di pubblica        |
 |                                   | amministrazione, si rinvia a      |
 |                                   | quanto già ampiamente             |
@@ -309,7 +304,6 @@ Definizioni e Acronimi
 |                                   | l'Islanda, la Norvegia, il        |
 |                                   | Liechtenstein, la Svizzera e      |
 |                                   | il Principato di Monaco).         |
-|                                   |                                   |
 |                                   | Il progetto SEPA, avviato         |
 |                                   | oltre 10 anni fa - su impulso     |
 |                                   | delle autorità europee -          |
@@ -354,7 +348,6 @@ Definizioni e Acronimi
 |                                   | Informatizzato dei Pagamenti      |
 |                                   | della Pubblica                    |
 |                                   | Amministrazione – SIPA".          |
-|                                   |                                   |
 |                                   | Gli obiettivi del SIPA erano      |
 |                                   | la completa attuazione della      |
 |                                   | Legge 367/94 che prevedeva la     |
@@ -420,7 +413,6 @@ Definizioni e Acronimi
 +-----------------------------------+-----------------------------------+
 | WSDL                              | *Web service* Description         |
 |                                   | Language.                         |
-|                                   |                                   |
 |                                   | È un linguaggio formale           |
 |                                   | utilizzato per la creazione       |
 |                                   | di "documenti" che                |
@@ -428,6 +420,6 @@ Definizioni e Acronimi
 +-----------------------------------+-----------------------------------+
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

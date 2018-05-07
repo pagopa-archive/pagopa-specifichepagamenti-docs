@@ -1,3 +1,4 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
@@ -170,6 +171,6 @@ devono implementare, nell’ambito del processo di Avvisatura digitale
 per inviare al NodoSPC una richiesta relativa alla posizione debitoria di un dato utilizzatore finale.
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

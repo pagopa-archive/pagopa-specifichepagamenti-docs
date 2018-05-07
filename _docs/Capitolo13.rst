@@ -1,3 +1,4 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
@@ -85,6 +86,6 @@ attuative, nonché alla pubblicazione dei dati rivenienti dal
 relativo monitoraggio.
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

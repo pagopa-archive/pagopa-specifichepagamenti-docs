@@ -1,13 +1,12 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
-+------------------+
-| **INTRODUZIONE** |
-+------------------+
 .. _Introduzione:
 
-**Introduzione**
+Introduzione
+============
 
 Il Sistema pagoPA è stato realizzato dall’Agenzia per l’Italia Digitale
 (AgID) in attuazione dell’art. 5 del CAD.
@@ -90,6 +89,6 @@ Creditori e prestatori di servizi di pagamento). Il documento si
 completa con la Sezione IV .
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

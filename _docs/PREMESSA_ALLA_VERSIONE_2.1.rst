@@ -1,10 +1,8 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
-+--------------------------------+
-| **PREMESSA ALLA VERSIONE 2.1** |
-+--------------------------------+
 .. _Premessa-alla-Versione-2.1:
 
 Premessa alla Versione 2.1
@@ -42,6 +40,6 @@ I soggetti aderenti che ne faranno richiesta potranno usufruire
 anticipatamente della componente WISP 2.0.
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in

@@ -1,10 +1,5 @@
-+-----------------------------------------------------------------------+
-| |AGID_logo_carta_intestata-02.png|                                    |
-+-----------------------------------------------------------------------+
 
-+-------------------------+
-| **Stato del documento** |
-+-------------------------+
+|AGID_logo_carta_intestata-02.png|
 
 .. _Stato-del-documento:
 
@@ -93,7 +88,7 @@ Sintesi dei cambiamenti
 +-----------------------------+----------------------------+
 
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
    

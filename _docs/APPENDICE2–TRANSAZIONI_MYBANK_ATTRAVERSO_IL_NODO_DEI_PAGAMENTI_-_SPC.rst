@@ -1,13 +1,13 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
 
-+---------------------------------------------------------------------------+
-| **APPENDICE 2 – TRANSAZIONI MYBANK ATTRAVERSO IL NODO DEI PAGAMENTI-SPC** |
-+---------------------------------------------------------------------------+
 .. _APPENDICE-2:
 
 Appendice 2 – Transazioni MyBank attraverso il Nodo dei Pagamenti-SPC
+=====================================================================
+
 
 L’utilizzo del servizio di pagamento MyBank attraverso il Nodo dei
 Pagamenti-SPC si inserisce nella strategia AgID di diffusione del
@@ -27,8 +27,9 @@ Infatti l’utilizzo del servizio MyBank in tale contesto:
    pagamenti-SPC.
 
 La trattazione completa dell'argomento è consultabile nel documento
-monografico "*Transazioni MyBank attraverso il No* *do dei Pagamenti-SPC*"
+monografico "*Transazioni MyBank attraverso il Nodo dei Pagamenti-SPC*"
 pubblicato sul sito dell'Agenzia.
+
 
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in

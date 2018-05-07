@@ -1,3 +1,4 @@
+
 +-----------------------------------------------------------------------+
 | |AGID_logo_carta_intestata-02.png|                                    |
 +-----------------------------------------------------------------------+
@@ -41,7 +42,7 @@ Causale di versamento
 
 L’informazione denominata “causaleVersamento” è un dato obbligatorio
 presente sia nella struttura dati della RPT, sia nella struttura dati
-della RT (:ref:`cfr. §§ 5.3.1 <richiesta-pagamento-telematico-rpt>`__ e :ref:`5.3.2 <ricevuta-telematica-rt>`__). Tale dato contiene il codice IUV o
+della RT (:ref:`cfr. §§ 5.3.1 <richiesta-pagamento-telematico-rpt>` e :ref:`5.3.2 <ricevuta-telematica-rt>`). Tale dato contiene il codice IUV o
 l’identificativo del Flusso di Rendicontazione e deve esser conforme
 alle indicazioni riportate nella Sezione I delle Allegato A alle Linee
 guida.
@@ -53,7 +54,7 @@ Codice Contesto Pagamento
 
 L’informazione denominata “codiceContestoPagamento” è un dato
 obbligatorio presente sia nella struttura dati della RPT, sia nella
-struttura dati della RT (:ref:`cfr. §§ 5.3.1 <richiesta-pagamento-telematico-rpt>`__ e :ref:`5.3.2 <ricevuta-telematica-rt>`__) e serve a
+struttura dati della RT (:ref:`cfr. §§ 5.3.1 <richiesta-pagamento-telematico-rpt>` e :ref:`5.3.2 <ricevuta-telematica-rt>`) e serve a
 contestualizzare e rendere univoco lo specifico pagamento insieme ai
 dati Codice Fiscale dell’Ente Creditore e codice IUV.
 
@@ -63,7 +64,7 @@ Pagamenti attivati presso l’Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nel caso in cui il processo di pagamento sia attivato presso l’Ente
-Creditore (:ref:`cfr. § 2.1 <processo-di-pagamento-attivato-presso-lente-creditore>`__), il dato codiceContestoPagamento è impostato
+Creditore (:ref:`cfr. § 2.1 <processo-di-pagamento-attivato-presso-lente-creditore>`), il dato codiceContestoPagamento è impostato
 dall’Ente Creditore stesso.
 
 Per tutte le tipologie di pagamenti che non prevedono la generazione di
@@ -77,14 +78,14 @@ Pagamenti attivati presso le strutture del PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nel caso in cui il processo di pagamento sia attivato presso le
-strutture del PSP (:ref:`cfr. § 2.2 <processo-di-pagamento-attivato-presso-il-psp>`__), il dato codiceContestoPagamento contiene
+strutture del PSP (:ref:`cfr. § 2.2 <processo-di-pagamento-attivato-presso-il-psp>`), il dato codiceContestoPagamento contiene
 un codice univoco [1]_ generato a cura del prestatore di servizi di
 pagamento e fornito all’Ente Creditore dal Nodo dei Pagamenti-SPC
 nell’ambito delle varie fasi del processo (:ref:`cfr. § 9.1.2 della Sezione
-III <pagamenti-attivati-presso-il-psp>`__).
+III <pagamenti-attivati-presso-il-psp>`).
 
 Il dato codiceContestoPagamento non compare sull’avviso di pagamento
-analogico (:ref:`vedi § 2.4 <avviso-di-pagamento>`__); tale informazione serve, in combinazione con il
+analogico (:ref:`vedi § 2.4 <avviso-di-pagamento>`); tale informazione serve, in combinazione con il
 codice IUV, ad identificare univocamente la specifica operazione di
 pagamento da parte del PSP. Le specifiche di interconnessione con il
 Nodo dei Pagamenti-SPC prevedono infatti che l'Ente Creditore - che
@@ -93,7 +94,7 @@ debba inserire nella RPT da lui stesso generata; tale informazione sarà
 poi riportata anche nella RT generata a cura del PSP. In questo modo è
 possibile garantire l'identificazione corretta delle tre fasi del
 pagamento che saranno rintracciabili anche con l'ausilio del Giornale
-degli eventi (:ref:`vedi capitolo 6 <Capitolo6>`__).
+degli eventi (:ref:`vedi capitolo 6 <Capitolo6>`).
 
 .. _identificazione-del-versamento-presso-le-strutture-dei-psp:
 
@@ -101,7 +102,7 @@ Identificazione del versamento presso le strutture dei PSP
 ----------------------------------------------------------
 
 Nel caso in cui il processo di pagamento sia attivato presso le
-strutture del PSP (:ref:`vedi § 2.2 <processo-di-pagamento-attivato-presso-il-psp>`__), è necessario predisporre in modo
+strutture del PSP (:ref:`vedi § 2.2 <processo-di-pagamento-attivato-presso-il-psp>`), è necessario predisporre in modo
 appropriato le informazioni necessarie al PSP per consentire il corretto
 svolgimento dell’operazione e favorire la gestione automatica del
 processo stesso, che viene supportato da un avviso di pagamento relativo
@@ -114,7 +115,7 @@ finale di inserire le richiamate informazioni all’atto del pagamento.
 
 Inoltre è altresì necessario che gli Enti Creditori riproducano negli
 avvisi di pagamento analogici uno o più codici grafici mono o
-bidimensionali (così come indicato nel :ref:`§ 7.4.2 <automazione-dellavviso-di-pagamento-analogico>`__) che contengono le stesse
+bidimensionali (così come indicato nel :ref:`§ 7.4.2 <automazione-dellavviso-di-pagamento-analogico>`) che contengono le stesse
 informazioni già indicate in chiaro: il tutto al fine di consentire al
 PSP l’automazione della lettura delle richiamate informazioni atte ad
 identificare l’avviso di pagamento per poi procedere
@@ -164,7 +165,7 @@ La componente <**application code>** identifica, quando presente, il
 singolo archivio di pagamenti in attesa che viene indirizzato mediante i
 meccanismi di configurazione del NodoSPC, che sarà in questo modo in
 grado di individuare il canale corretto di inoltro delle richieste di
-verifica e attivazione di pagamento (:ref:`cfr. § 8.2.3 della Sezione III <pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt>`__).
+verifica e attivazione di pagamento (:ref:`cfr. § 8.2.3 della Sezione III <pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt>`).
 
 .. _automazione-dellavviso-di-pagamento-analogico:
 
@@ -183,7 +184,7 @@ Come indicato nella monografia “*L’Avviso di pagamento analogico nel*
 stampare sull’avviso di pagamento uno o più codici grafici mono o
 bidimensionali che contengono le informazioni necessarie per
 identificare in modo automatico il pagamento (vedi anche i paragrafi 0 e
-:ref:`7.4.4 <utilizzo-del-codice-a-barre-sullavviso-di-pagamento>`__).
+:ref:`7.4.4 <utilizzo-del-codice-a-barre-sullavviso-di-pagamento>`).
 
 Le informazioni inerenti il versamento, da codificare all’interno dei
 codici grafici (mono o bidimensionali) sono quelle indicate in Tabella
@@ -203,7 +204,7 @@ codici grafici (mono o bidimensionali) sono quelle indicate in Tabella
 |                          |         |            |         |         | all’avviso di pagamento. È composto secondo         |
 |                          |         |            |         |         | il formato indicato al paragrafo                    |
 |                          |         |            |         |         | :ref:`7.4.1 <il-numero-avviso-e-larchivio-dei-      |
-|                          |         |            |         |         | pagamenti-in-attesa>`_                              |
+|                          |         |            |         |         | pagamenti-in-attesa>`                              |
 +--------------------------+---------+------------+---------+---------+-----------------------------------------------------+
 | importoVersamento        | 1       | an         | 1..1    | 3..12   | Campo numerico (due cifre per la parte decimale,    |
 |                          |         |            |         |         | il separatore dei centesimi è il punto “.”),        |
@@ -217,8 +218,8 @@ stampa dell’avviso, il dato importoVersamento sarà impostato al valore
 di comodo 0: in questo caso il PSP, che recepisce tale dato
 decodificando i codici grafici stampati sull’avviso, gestisce
 l’eccezione richiedendo all’utilizzatore finale l’importo da pagare e lo
-utilizza nell’invocazione delle primitive modello 3 (:ref:`vedi §§ 9.2.3.1 <nodoverificarpt>`_ e
-:ref:`9.2.3.2 <nodoattivarpt>`_).
+utilizza nell’invocazione delle primitive modello 3 (:ref:`vedi §§ 9.2.3.1 <nodoverificarpt>` e
+:ref:`9.2.3.2 <nodoattivarpt>`).
 
 È compito dell’Ente Creditore recepire tale informazione e interagire di
 conseguenza con il proprio archivio dei pagamenti in attesa.
@@ -327,7 +328,7 @@ USS-128 tipo C, tale dato è rappresentativo del codice di conto corrente
 postale.
 
 Il Nodo dei Pagamenti-SPC si fa carico di gestire, con apposite
-funzioni, le varie codifiche supportate (:ref:`cfr. § 9.1.2 <pagamenti-attivati-presso-il-psp>`__).
+funzioni, le varie codifiche supportate (:ref:`cfr. § 9.1.2 <pagamenti-attivati-presso-il-psp>`).
 
 Le modalità di predisposizione dei codici a barre sopra citati sono
 indicate nella Sezione II della monografia “*L’Avviso di pagamento*
@@ -347,9 +348,9 @@ pagamento).
 
 Per tale comunicazione l'Ente Creditore deve utilizzare l'apposito
 parametro causaleVersamento previsto come output dalla primitiva
-**paaVerificaRPT** (:ref:`vedi § 8.2.3.1 <paaverificarpt>`__, parametro O-2), dato che sarà
+**paaVerificaRPT** (:ref:`vedi § 8.2.3.1 <paaverificarpt>`, parametro O-2), dato che sarà
 fornito al PSP come risposta alla primitiva **nodoVerificaRPT** 
-(:ref:`vedi § 9.2.3.1 <nodoverificarpt>`__, parametro O-2-f).
+(:ref:`vedi § 9.2.3.1 <nodoverificarpt>`, parametro O-2-f).
 
 Al fine di automatizzare anche la fase di comunicazioni con
 l'utilizzatore finale presso il PSP, è stato definito uno standard di
@@ -415,9 +416,9 @@ rende disponibili tali informazioni all'utilizzatore finale.
    del processo di pagamento in quanto evita preventivamente la
    ricezione di risposte negative inviate dall’Ente Creditor
 
-.. |AGID_logo_carta_intestata-02.png| image:: ../media/header.png
+.. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
-.. |NuovoQR.png| image:: ./myMediaFolder/media/image2.png
+.. |NuovoQR.png| image:: media/cap7/image2.png
    :width: 1.03125in
    :height: 1.03125in
