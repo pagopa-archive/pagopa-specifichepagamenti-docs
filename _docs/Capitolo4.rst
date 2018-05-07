@@ -93,7 +93,7 @@ utilizzati le tabelle seguenti:
 
 
 
-.. _tabella-delle-controparti:
+.. _tabella-delle-controparticap4:
 
 Tabella delle controparti
 ~~~~~~~~~~~~~~~~~~~~~~~~~
