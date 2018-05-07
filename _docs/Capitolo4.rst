@@ -290,7 +290,7 @@ interazione tra:
 Storno di un pagamento
 ~~~~~~~~~~~~~~~~~~~~~~
 
-:ref:`Come visto nel § 2.1.4 <storno-del-pagamento>` lo storno di un pagamento si esplica nell’invio
+:ref:`Come visto nel § 2.1.4 <storno-del-pagamentocap2>` lo storno di un pagamento si esplica nell’invio
 di una richiesta di revoca (RR) da parte dell’Ente Creditore, contenente
 i riferimenti della RT oggetto dello storno, al quale corrisponde la
 valutazione del PSP e la restituzione all’Ente Creditore dell’esito di
@@ -327,7 +327,7 @@ Rendicontazione per gli Enti Creditori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio “Rendicontazione” mette a disposizione degli Enti Creditori
-un flusso, generato da ogni PSP (:ref:`si confronti il § 2.7 <riconciliazione-dei-pagamenti>`), 
+un flusso, generato da ogni PSP (:ref:`si confronti il § 2.7 <riconciliazione-dei-pagamenticap2>`), 
 che riporta le informazioni necessarie per consentire all’Ente Creditore di procedere
 alla riconciliazione tra le RT ricevute e gli importi trasferiti dal PSP
 del debitore al PSP dell’Ente Creditore.
