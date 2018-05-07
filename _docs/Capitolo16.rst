@@ -84,9 +84,10 @@ servizio per lo svolgimento a titolo gratuito del ruolo di *Seller Bank*
 per gli Enti Creditori, ossia per le PA e/o i gestori di pubblici
 servizi che siano aderenti al Nodo dei Pagamenti-SPC.
 
+.. _mandatory-requirements-tipici-del-servizio-mybank:
+
 *Mandatory requirements* tipici del servizio MyBank
 ---------------------------------------------------
-.. _Mandatory requirements:
 
 Ai fini dell’esecuzione dell’operazione di pagamento, di norma, il
 servizio MyBank prevede l’interazione di quattro soggetti, e
