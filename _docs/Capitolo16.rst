@@ -12,7 +12,7 @@ Il modello di funzionamento del servizio MyBank
 
 Il modello di funzionamento del servizio MyBank si identifica con il
 “processo di pagamento con esecuzione immediata” attivato presso il
-portale della pubblica amministrazione (`vedi § 2.1.1 <../07-Capitolo_2/Capitolo2.rst#processo-di-pagamento-con-re-indirizzamento-on-line>`).
+portale della pubblica amministrazione (:ref:`vedi § 2.1.1 <processo-di-pagamento-con-re-indirizzamento-on-line>`).
 
 |image1|
 
