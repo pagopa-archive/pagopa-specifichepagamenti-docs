@@ -202,7 +202,7 @@ codici grafici (mono o bidimensionali) sono quelle indicate in Tabella
 |                          |         |            |         |         | all’avviso di pagamento. È composto secondo         |
 |                          |         |            |         |         | il formato indicato al paragrafo                    |
 |                          |         |            |         |         | :ref:`7.4.1 <il-numero-avviso-e-larchivio-dei-      |
-|                          |         |            |         |         | pagamenti-in-attesa>`                              |
+|                          |         |            |         |         | pagamenti-in-attesa>`                               |
 +--------------------------+---------+------------+---------+---------+-----------------------------------------------------+
 | importoVersamento        | 1       | an         | 1..1    | 3..12   | Campo numerico (due cifre per la parte decimale,    |
 |                          |         |            |         |         | il separatore dei centesimi è il punto “.”),        |
@@ -397,7 +397,6 @@ indicati in Tabella 33.
 L'Ente Creditore può scegliere quale tipo di formato utilizzare; il PSP
 rende disponibili tali informazioni all'utilizzatore finale.
 
-:ref:`Torna all'indice <Indice>`
 
 .. [1]
    ad esempio: il GUID (Globally Unique IDentifier, identificatore unico
