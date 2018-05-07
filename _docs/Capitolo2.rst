@@ -510,7 +510,7 @@ flussi economici.
 
 **Figura** **9 – Modello di processo di storno di un pagamento**
 
-.. _Processo-di-pagamento-attivato-presso-il-PSP:
+.. _processo-di-pagamento-attivato-presso-il-psp:
 
 Processo di pagamento attivato presso il PSP
 --------------------------------------------
