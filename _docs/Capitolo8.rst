@@ -782,7 +782,7 @@ d) capacità di trattare le Ricevute Telematiche (RT), così come indicato
 
 Per maggiori dettagli circa il *workflow* analitico del Modello 4 :ref:`si veda il § 9.1.2.1 <presentazione-dellavviso-e-transcodifica-dei-dati-per-il-pagamento>` .
 
-.. _processo-di-storno-del-pagamento-eseguito:
+.. _processo-di-storno-del-pagamento-eseguitocap8:
 
 Processo di storno del pagamento eseguito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
