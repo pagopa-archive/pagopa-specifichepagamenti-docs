@@ -198,9 +198,10 @@ o sostituzione in forza dell’avvenuta delega delle attività tecniche.
 Maggiori informazioni circa la procedura in parola saranno rese
 disponibili sul sito AgID.
 
+.. _utilizzo-del-marchio-pagopa:
+
 Utilizzo del marchio pagoPA
 ---------------------------
-.. _Utilizzo del marchio pagoPA:
 
 L’Agenzia per l’Italia Digitale ha realizzato e registrato il marchio
 pagoPA attraverso la definizione di un logotipo atto a individuare i
