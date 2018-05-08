@@ -532,7 +532,7 @@ Per rendere possibile il pagamento l’Ente Creditore ha l’obbligo di
 recapitare all’utilizzatore finale un avviso con gli estremi del
 pagamento da effettuare. Tale recapito deve obbligatoriamente avvenire
 sia in modalità analogica (tramite servizi postali), che digitale (:ref:`vedi
-successivo § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`). L’Ente Creditore può inoltre adottare ulteriori
+successivo § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2>`). L’Ente Creditore può inoltre adottare ulteriori
 misure per la diffusione degli avvisi di pagamento, per esempio rendere
 disponibili funzioni di stampa on line tramite il proprio sito.
 
@@ -1211,7 +1211,7 @@ dal cittadino. In mancanza di un corrispondente flusso finanziario verso
 la PA, questa tipologia di Ricevute Telematiche (RT) non è soggetta a
 riconciliazione, limitatamente agli importi riguardanti il MBD.
 
-.. _avvisatura-digitale-push-su-iniziativa-dellente-creditore:
+.. _avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2:
 
 Avvisatura digitale *push* (su iniziativa dell’Ente Creditore)
 --------------------------------------------------------------
