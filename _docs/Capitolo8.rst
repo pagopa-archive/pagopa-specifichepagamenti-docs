@@ -3656,8 +3656,8 @@ indicati in Tabella 38.
 | terzoModelloPagamento   | an         | 1..1    | 2       | Indica se mostrare o meno i servizi dei PSP   |
 |                         |            |         |         | che consentono il pagamento attivato presso   |
 |                         |            |         |         | i PSP (cosiddetto modello 3,                  |
-|                         |            |         |         | ec-`cfr. § 2.2 <ricezione-delle-rt-e-         |
-|                         |            |         |         | richiesta-di-copia>`)                         |
+|                         |            |         |         | :ref:`cfr. § 2.2 <processo-di-pagamento-      |
+|                         |            |         |         | attivato-presso-il-psp>`)                     |
 +-------------------------+------------+---------+---------+-----------------------------------------------+
 | idPSP                   | an         | 0..1    | 35      | Identificativo del PSP, eventualmente         |
 |                         |            |         |         | selezionato dall'utente in sessioni           |
