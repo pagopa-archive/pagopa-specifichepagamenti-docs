@@ -95,7 +95,7 @@ sostituzione delle clausole difformi apposte, senza alcun ulteriore
 consenso tra le parti sottoscrittrici.
 
 L’adesione formale al Nodo dei Pagamenti-SPC consente il censimento del
-soggetto al Dominio (`di cui al paragrafo 4.2.1 <../09-Capitolo_4/Capitolo4.rst#tabella-delle-controparti>`) e comporta la nomina di
+soggetto al Dominio (:ref:`di cui al paragrafo 4.2.1 <tabella-delle-controparticap4>`) e comporta la nomina di
 un “Referente dei pagamenti”, ossia della persona indicata dal
 prestatore di servizi di pagamento, quale unico interlocutore con
 l’Agenzia per l’Italia Digitale relativamente alle attività di carattere
@@ -130,7 +130,7 @@ dovrà:
       servizio (`vedi anche § 12.6 <../20-Capitolo_12/Capitolo12.rst#livelli-di-servizio>`);
 
    b. disponibilità dei servizi che il prestatore di servizi di
-      pagamento si impegna a rispettare (`vedi anche 12.5.3 <../20-Capitolo_12/Capitolo12.rst#prestatori-di-servizi-di-pagamento-aderenti>`);
+      pagamento si impegna a rispettare (:ref:`vedi anche 12.5.3 <prestatori-di-servizi-di-pagamento-aderenti>`);
 
    c. i riferimenti delle figure tecniche da contattare per le procedure
       di emergenza (Tavolo Operativo), eventualmente specificando l’area
@@ -148,7 +148,7 @@ Qualificazione di Intermediari e Partner tecnologici
 
 Come previsto dal modello di funzionamento, gli aderenti possono
 servirsi di Intermediari e/o Partner tecnologici per
-interconnettersi al Nodo di Pagamenti-SPC (`cfr. § 1.1.2 <../06-Capitolo_1/Capitolo1.rst#intermediari-tecnologici-e-partner-tecnologici>`).
+interconnettersi al Nodo di Pagamenti-SPC (:ref:`cfr. § 1.1.2 <intermediari-tecnologici-e-partner-tecnologici>`).
 
 Il censimento degli Intermediari e dei Partner tecnologici viene
 effettuato dall’Agenzia dell’Italia Digitale a seguito del
@@ -182,7 +182,8 @@ Una volta sottoscritto il documento di adesione (lettera di
 adesione/accordo di servizio) l’Agenzia concorda con il soggetto
 aderente (Ente Creditore/PSP) il piano di attivazione che fissa
 tutti gli elementi tecnici necessari per la pianificazione dei
-lavori e la messa in esercizio (`vedi §§ 11.1 <../19-Capitolo_11/Capitolo11.rst#adesione-di-un-ente-creditore>` e `11.2 <../19-Capitolo_11/Capitolo11.rst#adesione-di-un-prestatore-di-servizi-di-pagamento>`).
+lavori e la messa in esercizio (:ref:`vedi §§ 11.1 <adesione-di-un-ente-creditore>` e 
+:ref:`11.2 <adesione-di-un-prestatore-di-servizi-di-pagamento>`).
 
 La procedura di avvio in esercizio si conclude con la sottoscrizione da
 parte del Referente Tecnico del soggetto aderente, quale unico
