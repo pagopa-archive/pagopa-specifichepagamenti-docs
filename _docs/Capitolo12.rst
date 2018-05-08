@@ -284,9 +284,10 @@ componente Giornale degli Eventi del Nodo dei Pagamenti-SPC e resi
 disponibili attraverso il Servizio di Reporting del Nodo dei
 Pagamenti-SPC.
 
+.. _indicatori-di-qualità-del-nodo-dei-pagamenti-spc:
+
 Indicatori di qualità del Nodo dei Pagamenti-SPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Indicatori di qualità del Nodo dei Pagamenti-SPC:
 
 Gli indicatori di qualità inerenti i servizi erogati dal Nodo dei
 Pagamenti-SPC ai soggetti aderenti sono valutati sulla base di

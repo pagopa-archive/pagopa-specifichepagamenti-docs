@@ -745,7 +745,7 @@ a) dell'archivio dei pagamenti in attesa (APA), contenente tutte le
    per effettuare il pagamento;
 
 b) di un’applicazione “*server*” dedicata necessaria per trattare le
-   richieste provenienti dai PSP, come meglio dettagliato nel :ref:`§ 8.2.3 <pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt>`;
+   richieste provenienti dai PSP, come meglio dettagliato nel :ref:`§ 8.2.3 <pagamenti-in-attesa-e-richiesta-di-generazione-della-rptcap8>`;
 
 c) capacità di trattare le Ricevute Telematiche (RT), così come indicato nel :ref:`§ 8.2.2 <ricezione-delle-rt-e-richiesta-di-copia>`.
 
@@ -775,7 +775,7 @@ b) la disponibilità di un archivio contenente le informazioni relative
 c) la predisposizione di un’applicazione “*server*” dedicata
    necessaria per trattare le richieste provenienti dai PSP, che sia in
    grado di associare la richiesta ad un pagamento in attesa oppure di
-   generarlo al momento, :ref:`vedi anche § 8.2.3 <pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt>`.
+   generarlo al momento, :ref:`vedi anche § 8.2.3 <pagamenti-in-attesa-e-richiesta-di-generazione-della-rptcap8>`.
 
 d) capacità di trattare le Ricevute Telematiche (RT), così come indicato
    :ref:`nel § 8.2.2 <ricezione-delle-rt-e-richiesta-di-copia>` .
@@ -2111,7 +2111,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 *PPT_SUPERAMENTOSOGLIA*
 
-.. _pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt:
+.. _pagamenti-in-attesa-e-richiesta-di-generazione-della-rptcap8:
 
 Pagamenti in attesa e richiesta di generazione della RPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

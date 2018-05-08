@@ -2074,7 +2074,7 @@ PSP.
 **stornoPagamento (+++):**
 
 Indica se il PSP è in grado di gestire il processo di storno di
-un pagamento (:ref:`cfr. § 2.1.4 delle SANP <storno-del-pagamento>`).
+un pagamento (:ref:`cfr. § 2.1.4 delle SANP <storno-del-pagamentocap2>`).
 
 Vale per tutti servizi indicati all’interno di
 **listaInformativaDetail.**
@@ -3389,7 +3389,9 @@ Creditore o dal Nodo dei Pagamenti-SPC, per segnalare alla controparte
 la presa in carico di un file relativo allo scambio di avvisi digitali o
 del loro esito.
 
-.. csv-table:: **Tabella 23 - Tracciato XML per la segnalazione di “Presa in carico” (File di ACK)**
+**Tabella 23 - Tracciato XML per la segnalazione di “Presa in carico” (File di ACK)**
+
+.. csv-table:: 
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
@@ -3549,7 +3551,7 @@ all'interno del WSDL del servizio.
    Element *Debtor*.
 
 .. [2]
-   Vedi :role:`https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
+   Vedi :ref:`https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
 
 .. [3]
    Vedi nota 1.

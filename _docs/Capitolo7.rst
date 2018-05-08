@@ -163,7 +163,7 @@ La componente <**application code>** identifica, quando presente, il
 singolo archivio di pagamenti in attesa che viene indirizzato mediante i
 meccanismi di configurazione del NodoSPC, che sarà in questo modo in
 grado di individuare il canale corretto di inoltro delle richieste di
-verifica e attivazione di pagamento (:ref:`cfr. § 8.2.3 della Sezione III <pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt>`).
+verifica e attivazione di pagamento (:ref:`cfr. § 8.2.3 della Sezione III <pagamenti-in-attesa-e-richiesta-di-generazione-della-rptcap8>`).
 
 .. _automazione-dellavviso-di-pagamento-analogico:
 

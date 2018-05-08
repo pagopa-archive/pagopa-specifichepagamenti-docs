@@ -355,7 +355,7 @@ Al termine di detto periodo il Nodo dei Pagamenti-SPC genera in via
 automatica una RT avente esito del pagamento non determinato e la invia
 all’Ente Creditore che ha generato la RPT, nello stesso tempo
 interagisce con il PSP interessato per richiedere la cancellazione della
-RPT dall’archivio per decorrenza dei termini (:ref:`vedi anche §§ 9.1.7 <processo-di-notifica-di-chiusura-delle-operazioni-pendenti>` e `9.2.9 nella Sezione III <../16-Capitolo_9/Capitolo9.rst#notifica-di-chiusura-delle-operazioni-pendenti>`).
+RPT dall’archivio per decorrenza dei termini (:ref:`vedi anche §§ 9.1.7 <processo-di-notifica-di-chiusura-delle-operazioni-pendenti>` e :ref:`9.2.9 nella Sezione III <notifica-di-chiusura-delle-operazioni-pendenti>`).
 
 .. _modalità-unica-dinterazione---mui:
 
