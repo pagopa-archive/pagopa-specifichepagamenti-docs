@@ -265,7 +265,7 @@ all’Ente Creditore.
 .. |AGID_logo_carta_intestata-02.png| image:: media/header.png
    :width: 5.90551in
    :height: 1.30277in
-.. |image1| image:: ./myMediaFolder/media/image2.png
+.. |image1| image:: media/cap16/image2.png
    :width: 6.69306in
    :height: 3.78146in
 .. |logo_MyBank_positive.png| image:: media/cap16/image3.png
