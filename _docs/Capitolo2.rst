@@ -455,7 +455,7 @@ consapevole.
 Per questi motivi, i PSP che offrono tale servizio devono:
 
 a. indicare attraverso il *Catalogo Dati Informativi*
-   (:ref:`vedi § 4.2.2 <catalogo-dati-informativi>`) informazioni
+   (:ref:`vedi § 4.2.2 <catalogo-dati-informativicap4>`) informazioni
    diversificate per i pagamenti *on us* e i pagamenti *not* *on us*;
 
 b. inviare all’Agenzia, con le modalità da questa di volta in volta
@@ -476,7 +476,7 @@ pagoPA Evolution.
 
 Lo SDK è disponibile in download, previa sottoscrizione di un apposito
 *disclaimer*, fra gli strumenti GitHub del sito
-`https://developers.italia.it/ <https://developers.italia.it/>` e
+`https://developers.italia.it/` e
 fornito in modalità nativa per le due principali tecnologie presenti sul
 mercato: IOS e Android.
 
