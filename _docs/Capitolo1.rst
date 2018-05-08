@@ -132,7 +132,7 @@ L’utilizzo dell’infrastruttura del Nodo dei Pagamenti-SPC non altera in
 alcun modo i rapporti esistenti tra l’Ente Creditore ed il proprio
 istituto tesoriere.
 
-.. _Intermediari-tecnologici-e-partner-tecnologici:
+.. _intermediari-tecnologici-e-partner-tecnologici:
 
 Intermediari tecnologici e partner tecnologici
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
