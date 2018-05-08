@@ -3491,8 +3491,8 @@ dove i parametri (tra parentesi quelli opzionali) sono indicati nella
 | **urlPortalePA**      | è lo URL del Portale                                   |                       |
 |                       | dell'Ente Creditore.                                   |                       |
 |                       | Ad esempio:                                            |                       |
-|                       | http://www.giustizia.                                  |                       |
-|                       | it/pagamenti                                           |                       |
+|                       | http://www.giustiziait/pagamenti                       |                       |
+|                       |                                                        |                       |
 +-----------------------+--------------------------------------------------------+-----------------------+
 | **idDominio**         | identificativoDominio                                  |                       |
 |                       | dell'Ente Creditore                                    |                       |
@@ -3525,7 +3525,7 @@ dove i parametri (tra parentesi quelli opzionali) sono indicati nella
 |                       | della                                                  |                       |
 |                       | **nodoInviaRPT**                                       |                       |
 |                       | (:ref:`vedi § 8.3.1 <re-direzione-dal-portale-ec-      |                       |
-|                       | verso-il-web-fesp>`).                                 |                        |
+|                       | verso-il-web-fesp>`).                                  |                       |
 +-----------------------+--------------------------------------------------------+-----------------------+
 | **esito**             | corrisponde alla                                       |                       |
 |                       | traduzione dell’esito                                  |                       |
