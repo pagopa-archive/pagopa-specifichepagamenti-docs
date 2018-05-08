@@ -1392,7 +1392,7 @@ circa l'esito della presa in carico da parte del PSP: nel primo caso in
 modalità asincrona, sempre via file transfer; nel secondo in modalità
 sincrona all'interno della stessa chiamata SOAP.
 
-Il processo di invio degli avvisi è ampiamente dettagliato nel :ref:`§ 8.1.6 della Sezione III. <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore>` 
+Il processo di invio degli avvisi è ampiamente dettagliato nel :ref:`§ 8.1.6 della Sezione III. <processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8>` 
 
 .. _Inoltro-degli-avvisi-al-debitore:
 
