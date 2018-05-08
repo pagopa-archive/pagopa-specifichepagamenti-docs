@@ -3549,7 +3549,7 @@ all'interno del WSDL del servizio.
    Element *Debtor*.
 
 .. [2]
-   Vedi :role:`https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
+   Vedi :ref:`https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
 
 .. [3]
    Vedi nota 1.
