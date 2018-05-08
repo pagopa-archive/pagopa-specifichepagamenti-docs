@@ -32,9 +32,10 @@ c) *Collective Seller*: è l’AgID che mette a disposizione dei PSP che propong
 d) *Sub-Seller*: è l’Ente Creditore che, attraverso il Nodo dei Pagamenti-SPC, consente ai propri utenti di utilizzare il servizio
    MyBank proposto dal PSP dell’utente stesso.
 
+.. _relazioni-tra-i-soggetti:
+
 Relazioni tra i soggetti
 ------------------------
-.. _Relazioni tra i soggetti:
 
 Al fine di attivare il servizio di pagamento MyBank attraverso il Nodo
 dei Pagamenti-SPC è necessario che:
@@ -57,7 +58,8 @@ dei Pagamenti-SPC è necessario che:
    MyBank.
 
    Le **Seller Bank** sono tenute ad utilizzare le specifiche di
-   interfacciamento della componente “Wrapper MyBank” indicate al `§ 9.4 della Sezione III <../16-Capitolo_9/Capitolo9.rst#interfacce-per-la-componente-wrapper-mybank>`_.
+   interfacciamento della componente “Wrapper MyBank” indicate al 
+   :ref:`§ 9.4 della Sezione III <interfacce-per-la-componente-wrapper-mybank>`.
 
 3. AgID assuma il ruolo di “*Collective Seller*” per consentire un
    più facile e regolare funzionamento del servizio. In tale veste
@@ -76,7 +78,7 @@ dei Pagamenti-SPC è necessario che:
    in sede di adesione al Nodo dei Pagamenti-SPC a rispettare
    integralmente le Linee guida, ivi inclusi i *Mandatory requirements*
    tipici del servizio MyBank, come meglio elencati e descritti al
-   `paragrafo 16.2 <../26-Capitolo_16/Capitolo16.rst#mandatory-requirements-tipici-del-servizio-mybank>`_ che segue.
+   :ref:`paragrafo 16.2 <mandatory-requirements-tipici-del-servizio-mybank>` che segue.
 
 L’Agenzia pubblicherà sul proprio sito l’elenco dei PSP aderenti che
 abbiano sottoscritto con AgID l’apposito «addendum» all’accordo di
@@ -206,9 +208,10 @@ non discriminazione. In tale contesto, il logotipo del servizio MyBank
 deve essere riportato, unitamente al logotipo del PSP che lo espone, a
 fianco del testo che individua il servizio stesso.
 
-Tale modalità è realizzata attraverso il servizio WISP (`vedi §§ 2.1.3 <../07-Capitolo_2/Capitolo2.rst#scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale>`_ e
-`4.4.9 <../09-Capitolo_4/Capitolo4.rst#accentramento-della-scelta-del-psp>`_) che consente l'accentramento della scelta del PSP sul Nodo dei Pagamenti-SPC, rispettando quindi i *mandatory requirements* previsti da
-MyBank (`vedi § 16.2 <../26-Capitolo_16/Capitolo16.rst#mandatory-requirements-tipici-del-servizio-mybank>`_).
+Tale modalità è realizzata attraverso il servizio WISP 
+(:ref:`vedi §§ 2.1.3 <scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale>` e
+:ref:`4.4.9 <accentramento-della-scelta-del-psp>`) che consente l'accentramento della scelta del PSP sul Nodo dei Pagamenti-SPC, rispettando quindi i *mandatory requirements* previsti da
+MyBank (:ref:`vedi § 16.2 <mandatory-requirements-tipici-del-servizio-mybank>`).
 
 Causale del pagamento
 ---------------------
@@ -221,20 +224,21 @@ senza aggiungere o modificare nulla nel dato APP-SCT01-02-D13 del
 messaggio di *E-Authorisation Request* (pain.013) ricevuto attraverso il
 *Validation Service* MyBank.
 
+.. _vincoli-nellutilizzo-del-servizio-mybank:
+
 Vincoli nell’utilizzo del servizio MyBank
 -----------------------------------------
-.. _Vincoli nell’utilizzo del servizio MyBank:
 
 La soluzione MyBank è utilizzabile all’interno del processo di pagamento
 immediato e consente di gestire un solo pagamento all’interno della
 singola transazione attivata dall’utente finale, pertanto le RPT
 generate dagli Enti Creditori potranno contenere una sola occorrenza
-della struttura *datiSingoloVersamento* (`vedi § 5.3.1 <../11-Capitolo_5/Capitolo5.rst#richiesta-pagamento-telematico-rpt>`_).
+della struttura *datiSingoloVersamento* (:ref:`vedi § 5.3.1 <richiesta-pagamento-telematico-rpt>`).
 
 Per lo stesso motivo (unico pagamento all’interno della singola
 transazione), gli Enti Creditori non potranno utilizzare le funzioni di
 Nodo previste per il pagamento multi beneficiario, ovvero il cosiddetto
-“carrello di RPT” (`vedi § 4.4.2 <../09-Capitolo_4/Capitolo4.rst#pagamenti-multi-beneficiario-o-multi-pagatore>`_) con PSP che offrono il servizio MyBank.
+“carrello di RPT” (:ref:`vedi § 4.4.2 <pagamenti-multi-beneficiario-o-multi-pagatore>`) con PSP che offrono il servizio MyBank.
 
 Controlli effettuati dal Nodo dei Pagamenti-SPC
 -----------------------------------------------
@@ -242,14 +246,14 @@ Controlli effettuati dal Nodo dei Pagamenti-SPC
 
 Il servizio MyBank è individuato dal valore **OBEP**
 (*On-line banking e-payment*) relativo al dato tipoVersamento presente nella RPT
-(`vedi § 5.3.1 <../11-Capitolo_5/Capitolo5.rst#richiesta-pagamento-telematico-rpt>`_).
+(:ref:`vedi § 5.3.1 <richiesta-pagamento-telematico-rpt>`).
 
 Oltre ai controlli effettuati per verificare il rispetto dei vincoli di
-cui al `paragrafo 16.5 <../26-Capitolo_16/Capitolo16.rst#vincoli-nellutilizzo-del-servizio-mybank>`_, il Nodo dei Pagamenti-SPC controllerà, per ogni
+cui al :ref:`paragrafo 16.5 <vincoli-nellutilizzo-del-servizio-mybank>`, il Nodo dei Pagamenti-SPC controllerà, per ogni
 RPT il cui dato tipoVersamento contenga il valore **OBEP**, la
 congruenza della “*Seller Bank*” indicata dall’Ente Creditore (cfr.
-punto 4 del `§ 16.1 <../26-Capitolo_16/Capitolo16.rst#relazioni-tra-i-soggetti>`_) con il dato ibanAccredito presente nella struttura
-datiSingoloVersamento (`vedi § 5.3.1 <../11-Capitolo_5/Capitolo5.rst#richiesta-pagamento-telematico-rpt>`_).
+punto 4 del :ref:`§ 16.1 <relazioni-tra-i-soggetti>`) con il dato ibanAccredito presente nella struttura
+datiSingoloVersamento (:ref:`vedi § 5.3.1 <richiesta-pagamento-telematico-rpt>`).
 
 Le Richieste di Pagamento Telematiche non conformi saranno rifiutate
 all’Ente Creditore.

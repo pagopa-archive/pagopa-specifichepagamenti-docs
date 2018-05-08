@@ -79,7 +79,7 @@ Caratteristiche e adempimenti specifici relativi al servizio di avvisatura digit
 .. _Caratteristiche e adempimenti specifici relativi al servizio di avvisatura digitale:
 
 Con riferimento al servizio di avvisatura digitale su iniziativa
-dell'Ente Creditore, :ref:`illustrato al § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`, si precisa che:
+dell'Ente Creditore, :ref:`illustrato al § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2>`, si precisa che:
 
 -  l’Ente Creditore è sempre libero di procedere anche, in via
    preventiva o in via successiva ad avvisare l’utilizzatore finale con
@@ -152,14 +152,14 @@ Adempimenti specifici relativi al servizio di avvisatura digitale
 .. _Adempimenti specifici relativi al servizio di avvisatura digitale:
 
 Con riferimento al servizio di avvisatura digitale su iniziativa
-dell'Ente Creditore, :ref:`illustrato al § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>` 
+dell'Ente Creditore, :ref:`illustrato al § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2>` 
 e al servizio di verifica della posizione debitoria di cui :ref:`§ 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoria>`, si precisa che è compito dei
 prestatori di servizi di pagamento acquisire dall'utilizzatore finale il
 consenso per l'invio degli avvisi di pagamento in formato digitale
 presso i propri canali (*app*, home banking, ecc.).
 
 Con specifico riferimento ai servizi di avvisatura in modalità *push*
-(:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditore>`), i PSP devono raccogliere le relative iscrizioni,
+(:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2>`), i PSP devono raccogliere le relative iscrizioni,
 informando l'utilizzatore finale:
 
 -  che, aderendo al servizio, potrà ricevere avvisi digitali di
@@ -245,9 +245,10 @@ giorni lavorativi del calendario bancario italiano.
 L’assistenza di secondo livello oltre l’orario d’ufficio è garantita
 dalla reperibilità specialistica.
 
+.. _enti-creditori:
+
 Enti Creditori
 ~~~~~~~~~~~~~~
-.. _Enti Creditori:
 
 La disponibilità dei servizi erogati dagli Enti Creditori è
 dettagliata nel citato documento “” pubblicato sul sito dell’Agenzia
@@ -256,9 +257,10 @@ per l’Italia Digitale.
 In ogni caso gli Enti Creditori indicano esplicitamente sul proprio
 sito e sugli avvisi di pagamento la disponibilità di detti servizi.
 
+.. _prestatori-di-servizi-di-pagamento-aderenti:
+
 Prestatori di servizi di pagamento aderenti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Prestatori di servizi di pagamento aderenti:
 
 La disponibilità dei servizi erogati dai prestatori di servizi di
 pagamento aderenti è dettagliata nel citato documento “” pubblicato
