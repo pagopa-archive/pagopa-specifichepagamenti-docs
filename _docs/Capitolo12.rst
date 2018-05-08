@@ -245,9 +245,10 @@ giorni lavorativi del calendario bancario italiano.
 L’assistenza di secondo livello oltre l’orario d’ufficio è garantita
 dalla reperibilità specialistica.
 
+.. _enti-creditori:
+
 Enti Creditori
 ~~~~~~~~~~~~~~
-.. _Enti Creditori:
 
 La disponibilità dei servizi erogati dagli Enti Creditori è
 dettagliata nel citato documento “” pubblicato sul sito dell’Agenzia
