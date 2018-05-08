@@ -256,9 +256,10 @@ per l’Italia Digitale.
 In ogni caso gli Enti Creditori indicano esplicitamente sul proprio
 sito e sugli avvisi di pagamento la disponibilità di detti servizi.
 
+.. _prestatori-di-servizi-di-pagamento-aderenti:
+
 Prestatori di servizi di pagamento aderenti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. _Prestatori di servizi di pagamento aderenti:
 
 La disponibilità dei servizi erogati dai prestatori di servizi di
 pagamento aderenti è dettagliata nel citato documento “” pubblicato
