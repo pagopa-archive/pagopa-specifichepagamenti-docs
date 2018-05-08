@@ -2111,7 +2111,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 *PPT_SUPERAMENTOSOGLIA*
 
-.. _pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt:
+.. _pagamenti-in-attesa-e-richiesta-di-generazione-della-rptcap8:
 
 Pagamenti in attesa e richiesta di generazione della RPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
