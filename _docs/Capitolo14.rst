@@ -66,7 +66,7 @@ WSDL NodoPerPaAvvisiDigitali
 
 Questo WSDL definisce i metodi e i parametri di interfaccia che gli Enti
 Creditori devono implementare, nell’ambito del processo di Avvisatura
-digitale *push* (`vedi § 2.9 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-push-su-iniziativa-dellente-creditore>`_), per inviare al NodoSPC un avviso digitale da recapitare al PSP.
+digitale *push* (:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2>`), per inviare al NodoSPC un avviso digitale da recapitare al PSP.
 
 WSDL PaPerNodoChiediElencoAvvisiDigitali
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -74,7 +74,7 @@ WSDL PaPerNodoChiediElencoAvvisiDigitali
 
 Questo WSDL definisce i metodi e i parametri di interfaccia che gli Enti
 Creditori devono implementare, nell’ambito del processo di Avvisatura
-digitale *pull* (`vedi § 2.10 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-pull-verifica-della-posizione-debitoria>`_), 
+digitale *pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`), 
 per ricevere dal NodoSPC una richiesta relativa alla posizione debitoria di un dato utilizzatore finale.
 
 .. _web-service-tra-nodo-dei-pagamenti-spc-e-psp:
@@ -129,7 +129,7 @@ WSDL NodoPerPSPIscrizioniAvvisatura
 
 Questo WSDL definisce i metodi e i parametri di interfaccia che i PSP
 devono implementare per gestire, nell’ambito del processo di Avvisatura
-digitale *push* (`vedi § 2.9 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-push-su-iniziativa-dellente-creditore>`_), 
+digitale *push* (:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2>`), 
 le operazioni di iscrizione e cancellazione di un loro cliente.
 
 WSDL PSPPerNodoAvvisiDigitali
@@ -138,7 +138,7 @@ WSDL PSPPerNodoAvvisiDigitali
 
 Questo WSDL definisce i metodi e i parametri di interfaccia che i PSP
 devono implementare per gestire, nell’ambito del processo di Avvisatura
-digitale *push* (`vedi § 2.9 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-push-su-iniziativa-dellente-creditore>`_),
+digitale *push* (:ref:`vedi § 2.9 <avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2>),
 il recapito di un avviso digitale al proprio cliente.
 
 WSDL NodoPerPSPChiediElencoAvvisiDigitali
@@ -147,7 +147,7 @@ WSDL NodoPerPSPChiediElencoAvvisiDigitali
 
 Questo WSDL definisce i metodi e i parametri di interfaccia che i PSP
 devono implementare, nell’ambito del processo di Avvisatura digitale
-*pull* (`vedi § 2.10 <../07-Capitolo_2/Capitolo2.rst#avvisatura-digitale-pull-verifica-della-posizione-debitoria>`_),
+*pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`_),
 per inviare al NodoSPC una richiesta relativa alla posizione debitoria di un dato utilizzatore finale.
 
 
