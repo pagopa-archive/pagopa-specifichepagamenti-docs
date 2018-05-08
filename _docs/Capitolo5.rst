@@ -3444,7 +3444,9 @@ parametro avvisoDigitaleWS presente nella *request* della primitiva
 inizia da 2 in quanto descritta formalmente all'interno del WSDL del
 servizio.
 
-.. csv-table:: **Tabella 24 - Componenti del parametro avvisoDigitaleWS**
+**Tabella 24 - Componenti del parametro avvisoDigitaleWS**
+
+.. csv-table:: 
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
@@ -3456,7 +3458,9 @@ esitoAvvisoDigitaleWS presente nella *response* della primitiva
 inizia da 2 in quanto descritta formalmente all'interno del WSDL del
 servizio.
 
-.. csv-table:: **Tabella 25 - Componenti del parametro esitoAvvisoDigitaleWS**
+**Tabella 25 - Componenti del parametro esitoAvvisoDigitaleWS**
+
+.. csv-table:: 
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
@@ -3473,7 +3477,9 @@ parametro avvisoDigitale presente nella *request* della primitiva
 struttura così definita inizia da 2 in quanto descritta formalmente
 all'interno del WSDL del servizio.
 
-.. csv-table:: **Tabella 26 - Componenti del parametro avvisoDigitale**
+**Tabella 26 - Componenti del parametro avvisoDigitale**
+
+.. csv-table:: 
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
@@ -3490,7 +3496,9 @@ Le informazioni elencate di seguito definiscono la componente
 della struttura così definita inizia da 2 in quanto descritta
 formalmente all'interno del WSDL del servizio.
 
-.. csv-table:: **Tabella 27 - Componenti del parametro datiNotifica**
+**Tabella 27 - Componenti del parametro datiNotifica**
+
+.. csv-table:: 
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
 
@@ -3522,7 +3530,9 @@ messa a disposizione dall'Ente Creditore; il livello della
 struttura così definita inizia da 2 in quanto descritta formalmente
 all'interno del WSDL del servizio.
 
-.. csv-table:: **Tabella 28 - Componenti del parametro elencoAvvisiDigitali**
+**Tabella 28 - Componenti del parametro elencoAvvisiDigitali**
+
+.. csv-table:: 
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
@@ -3551,7 +3561,7 @@ all'interno del WSDL del servizio.
    Element *Debtor*.
 
 .. [2]
-   Vedi :ref:`https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
+   Vedi https://www.w3.org/TR/xmlenc-core/#sec-SHA256 <https://www.w3.org/TR/xmlenc-core/#sec-SHA256>`
 
 .. [3]
    Vedi nota 1.
