@@ -3389,7 +3389,9 @@ Creditore o dal Nodo dei Pagamenti-SPC, per segnalare alla controparte
 la presa in carico di un file relativo allo scambio di avvisi digitali o
 del loro esito.
 
-.. csv-table:: **Tabella 23 - Tracciato XML per la segnalazione di “Presa in carico” (File di ACK)**
+**Tabella 23 - Tracciato XML per la segnalazione di “Presa in carico” (File di ACK)**
+
+.. csv-table:: 
    :header: "**Dato**","**Liv**","**Genere**","**Occ**","**Len**","**Contenuto**"
    :widths: 15, 10, 30,10,10,10
    
