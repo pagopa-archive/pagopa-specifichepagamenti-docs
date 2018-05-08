@@ -2074,7 +2074,7 @@ PSP.
 **stornoPagamento (+++):**
 
 Indica se il PSP è in grado di gestire il processo di storno di
-un pagamento (:ref:`cfr. § 2.1.4 delle SANP <storno-del-pagamento>`).
+un pagamento (:ref:`cfr. § 2.1.4 delle SANP <storno-del-pagamentocap2>`).
 
 Vale per tutti servizi indicati all’interno di
 **listaInformativaDetail.**
