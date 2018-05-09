@@ -140,7 +140,7 @@ Il PSP può richiedere il *template* mediate il metodo
 **NodoPerPsp**.
 
 Il *template* è referenziato nello schema XSD di cui alla Tabella 12 del
-:ref:`§ 5.3.7 <catalogo-dati-informativi>`_.
+:ref:`§ 5.3.7 <catalogo-dati-informativi>`.
 
 Lo schema XSD di tale oggetto è disponibile con il file
 

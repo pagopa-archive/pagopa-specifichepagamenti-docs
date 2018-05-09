@@ -147,7 +147,7 @@ WSDL NodoPerPSPChiediElencoAvvisiDigitali
 
 Questo WSDL definisce i metodi e i parametri di interfaccia che i PSP
 devono implementare, nell’ambito del processo di Avvisatura digitale
-*pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`_),
+*pull* (:ref:`vedi § 2.10 <avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2>`),
 per inviare al NodoSPC una richiesta relativa alla posizione debitoria di un dato utilizzatore finale.
 
 
