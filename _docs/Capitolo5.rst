@@ -117,6 +117,8 @@ significati:
 |             |          | - an - dato alfanumerico                                                      |
 |             |          |                                                                               |
 |             |          | - n - dato numerico.                                                          |
+|             |          |                                                                               |
+|             |          | - @ - elemento con attributi                                                  |
 +-------------+----------+-------------------------------------------------------------------------------+
 | **colonna** | *Occ*    | indica le “occorrenze” del dato nel formato **min..max.**                     |
 |             |          | L’eventuale obbligatorietà di tali informazioni è legata alla                 |
@@ -1171,7 +1173,7 @@ di pagamento per richiedere lo “storno” di un pagamento.
 |                    |         |            |         |         |                  | “dati della richiesta di revoca”        |
 |                    |         |            |         |         |                  | costituita dai seguenti elementi:       |
 +--------------------+---------+------------+---------+---------+------------------+-----------------------------------------+
-| importoTotale      | 2       | an         | 1..1    | 3..12   | Amount           | Campo numerico                          |
+| importoTotale      | 2       | an         | 1..5    | 3..12   | Amount           | Campo numerico                          |
 | Revocato           |         |            |         |         |                  | (due cifre per la parte decimale,       |
 |                    |         |            |         |         |                  | il separatore dei centesimi è il        |
 |                    |         |            |         |         |                  | punto “.”),                             |
@@ -1224,7 +1226,7 @@ di pagamento per richiedere lo “storno” di un pagamento.
 |                    |         |            |         |         |                  | (:ref:`vedi § 2.1.4 <storno-del-        |
 |                    |         |            |         |         |                  | pagamento>`).                           |
 +--------------------+---------+------------+---------+---------+------------------+-----------------------------------------+
-| datiSingolaRevoca  | 2       | s          | 1..1    |         |                  | Aggregazione                            |
+| datiSingolaRevoca  | 2       | s          | 1..5    |         |                  | Aggregazione                            |
 |                    |         |            |         |         |                  | “dati dei singoli pagamenti revocati”,  |
 |                    |         |            |         |         |                  | da un minimo di uno ad un massimo       |
 |                    |         |            |         |         |                  | di 5 occorrenze di revoca,              |
@@ -1736,7 +1738,7 @@ in Tabella 8.
 |                                 |         |            |         |         | dell’Ente Creditore                          |
 |                                 |         |            |         |         | (codice utilizzato nella RPT).               |
 +---------------------------------+---------+------------+---------+---------+----------------------------------------------+
-| ragioneSociale                  | 2       | an         | 1..1    | 35      | Ragione sociale                              |
+| ragioneSociale                  | 2       | an         | 1..1    | 70      | Ragione sociale                              |
 |                                 |         |            |         |         | dell’Ente Creditore.                         |
 +---------------------------------+---------+------------+---------+---------+----------------------------------------------+
 | dataPubblicazione               | 2       | an         | 1..1    | 19      | Data e ora di “pubblicazione”                |
@@ -2682,13 +2684,6 @@ di stretta pertinenza del singolo richiedente.
 |                                   |         |            |         |         | dell’intermediario                            |
 |                                   |         |            |         |         | dell’Ente Creditore                           |
 |                                   |         |            |         |         | che può richiedere il flusso                  |
-+-----------------------------------+---------+------------+---------+---------+-----------------------------------------------+
-| quadraturaRPT                     | 1       | s          | 1..1    |         | Aggregazione                                  |
-|                                   |         |            |         |         | relativa alla quadratura delle RPT.           |
-+-----------------------------------+---------+------------+---------+---------+-----------------------------------------------+
-| listaTotali                       | 2       | s          | 1..1    |         | Aggregazione                                  |
-|                                   |         |            |         |         | corrispondente alla lista dei                 |
-|                                   |         |            |         |         | totaliAggregati                               |
 +-----------------------------------+---------+------------+---------+---------+-----------------------------------------------+
 | dataInizioPeriodo                 | 1       | an         | 1..1    | 19      | Data di inizio periodo di rilevazione dei     |
 |                                   |         |            |         |         | dati che fanno parte dei totali di traffico   |

@@ -544,7 +544,7 @@ PSP, ciascuno per le informazioni di propria competenza, un documento
 contente l’elenco ed i relativi totali, per controparte, delle RPT
 scambiate nel mese di riferimento che contengono un valore non nullo nel
 dato commissioneCaricoPA presente nella struttura della RPT denominata
-datiSingoloVersamento (:ref:`vedi § 5.3.1 della Sezione II <richiesta-pagamento-telematico-rpt>`).
+datiSingoloVersamento (:ref:`vedi § 5.3.2 della Sezione II <ricevuta-telematica-rt>`).
 
 Per ogni coppia Ente Creditore / PSP sarà generata un elenco contenente
 il dettaglio delle RPT che hanno dato luogo ad una RT recepita dal Nodo

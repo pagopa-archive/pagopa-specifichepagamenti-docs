@@ -780,7 +780,7 @@ Tavolo Operativo dell'Ente Creditore per segnalare la specifica
 fattispecie, affinché l’Ente Creditore corregga immediatamente l’errore
 segnalato.
 
-Caso B: errore verso il PSP nella fase di attivazione del pagamento
+CASO B: errore verso il PSP nella fase di attivazione del pagamento
 
 Il PSP riceve una *response* negativa in risposta alla primitiva
 **nodoAttivaRPT** oppure la sua applicazione di *Back-End* non è
@@ -1068,7 +1068,8 @@ utilizzano il protocollo *https* per il trasporto.
 Si rammenta, infine, che gli oggetti legati all'esecuzione dei pagamenti
 scambiati nel sistema [Richiesta di Pagamento Telematico (RPT), Ricevuta
 Telematica (RT), Richiesta Revoca (RR) ed Esito Revoca (ER)] sono
-univocamente identificati secondo quanto indicato al § 0.
+univocamente identificati secondo quanto indicato nell'introduzione della 
+:ref:`Sezione III <Sezione-III>`.
 
 Per ogni primitiva saranno indicati i parametri della *request*
 (**Parametri di input**), della *response* (**Parametri di output**),
@@ -3745,7 +3746,7 @@ autorizzazione ad esso legate.
 | OPERAZIONE | 1       | an         | 1..1    | 16      | Operazione richiesta. Contiene la stringa      |
 |            |         |            |         |         | "SITUAZIONEORDINE"                             |
 +------------+---------+------------+---------+---------+------------------------------------------------+
-| TIMESTAMP  | 1       | n          | 1..1    | 23      | *Timestamp* locale.                            |
+| TIMESTAMP  | 1       | an         | 1..1    | 23      | *Timestamp* locale.                            |
 |            |         |            |         |         |                                                |
 |            |         |            |         |         | Formato yyyy-MM-ddTHH:mm:ss.SSS                |
 +------------+---------+------------+---------+---------+------------------------------------------------+
@@ -3806,22 +3807,22 @@ caratteristiche riportate in Tabella 47.
 |                     |         |            |         |         | di situazione ordine e del messaggio di          |
 |                     |         |            |         |         | risposta                                         |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| RicSituazioneOrdine | 3       | S          | 1..1    |         | Struttura che contiene i dati relativi           |
+| RicSituazioneOrdine | 3       | s          | 1..1    |         | Struttura che contiene i dati relativi           |
 |                     |         |            |         |         | alla richiesta di situazione ordine              |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| TestataRichiesta    | 4       | S          | 1..1    |         | Struttura che contiene i dati relativi alla      |
+| TestataRichiesta    | 4       | s          | 1..1    |         | Struttura che contiene i dati relativi alla      |
 |                     |         |            |         |         | richiesta inviata                                |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| Idnegozio           | 5       | Num        | 1..1    | 1..50   | Deve contenere lo stesso valore dell’omonimo     |
+| Idnegozio           | 5       | n          | 1..1    | 1..50   | Deve contenere lo stesso valore dell’omonimo     |
 |                     |         |            |         |         | campo del messaggio di richiesta.                |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| Operatore           | 5       | An         | 1..1    | 8       | Deve contenere lo stesso valore dell’omonimo     |
+| Operatore           | 5       | an         | 1..1    | 8       | Deve contenere lo stesso valore dell’omonimo     |
 |                     |         |            |         |         | campo del messaggio di richiesta                 |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| ReqRefNum           | 5       | Num        | 1..1    | 32      | Deve contenere lo stesso valore dell’omonimo     |
+| ReqRefNum           | 5       | n          | 1..1    | 32      | Deve contenere lo stesso valore dell’omonimo     |
 |                     |         |            |         |         | campo del messaggio di richiesta.                |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| NumOrdine           | 4       | An         | 1..1    | 50      | Deve contenere lo stesso valore                  |
+| NumOrdine           | 4       | an         | 1..1    | 50      | Deve contenere lo stesso valore                  |
 |                     |         |            |         |         | dell’omonimo campo del messaggio                 |
 |                     |         |            |         |         | di richiesta.                                    |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
@@ -3833,19 +3834,19 @@ caratteristiche riportate in Tabella 47.
 |                     |         |            |         |         | atto a contenere il numero di elementi di        |
 |                     |         |            |         |         | tipo Autorizzazione presenti nella risposta      |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| Autorizzazione      | 3       | S          | 1..n    |         | Struttura che contiene i dati relativi alle      |
+| Autorizzazione      | 3       | s          | 1..n    |         | Struttura che contiene i dati relativi alle      |
 |                     |         |            |         |         | autorizzazioni associate all’ordine.             |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| Timestamp           | 4       | An         | 1..1    | 23      | *Timestamp* locale relativo alla data            |
+| Timestamp           | 4       | an         | 1..1    | 23      | *Timestamp* locale relativo alla data            |
 |                     |         |            |         |         | e all’ora del messaggio di risposta.             |
 |                     |         |            |         |         | Formato yyyy-MM-ddTHH:mm:ss.SSS                  |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| NumAut              | 4       | An         | 1..1    | 35      | Codice di autorizzazione                         |
+| NumAut              | 4       | an         | 1..1    | 35      | Codice di autorizzazione                         |
 |                     |         |            |         |         | (contiene l’identificativo della transazione)    |
 |                     |         |            |         |         |                                                  |
 |                     |         |            |         |         | È valorizzato in caso di esito positivo.         |
 +---------------------+---------+------------+---------+---------+--------------------------------------------------+
-| Stato               | 4       | Num        | 1..1    | 2       | Codice che indica lo stato corrente              |
+| Stato               | 4       | n          | 1..1    | 2       | Codice che indica lo stato corrente              |
 |                     |         |            |         |         | della autorizzazione.                            |
 |                     |         |            |         |         |                                                  |
 |                     |         |            |         |         | Assume i valori riportati nella Tabella 49       |
