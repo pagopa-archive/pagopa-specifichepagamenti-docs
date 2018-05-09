@@ -181,7 +181,7 @@ Come indicato nella monografia “*L’Avviso di pagamento analogico nel*
 *sistema pagoPA*”, pubblicata sul sito AgID, l’Ente Creditore deve
 stampare sull’avviso di pagamento uno o più codici grafici mono o
 bidimensionali che contengono le informazioni necessarie per
-identificare in modo automatico il pagamento (vedi anche i paragrafi 0 e
+identificare in modo automatico il pagamento (vedi anche il paragrafo
 :ref:`7.4.4 <utilizzo-del-codice-a-barre-sullavviso-di-pagamento>`).
 
 Le informazioni inerenti il versamento, da codificare all’interno dei
