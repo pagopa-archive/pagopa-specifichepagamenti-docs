@@ -9,8 +9,8 @@
 
 .. _Modelli-del-processo-di-pagamento:
 
-Modelli del processo di pagamento
-=================================
+2. Modelli del processo di pagamento
+====================================
 
 
 Gli incassi che un Ente Creditore deve gestire posso essere distinti
@@ -43,8 +43,8 @@ III <Sezione-III>`).
 
 .. _processo-di-pagamento-attivato-presso-lente-creditore:
 
-Processo di pagamento attivato presso l’Ente Creditore
-------------------------------------------------------
+2.1 Processo di pagamento attivato presso l’Ente Creditore
+----------------------------------------------------------
 
 
 Rientrano in questa categoria di pagamenti quelli richiesti
@@ -61,8 +61,8 @@ fanno riferimento.
 
 .. _Processo-di-pagamento-con-re-indirizzamento-on-line:
 
-Processo di pagamento con re indirizzamento on-line
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.1.1 Processo di pagamento con re indirizzamento on-line
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Il *workflow* descritto, già denominato “Processo di pagamento con
@@ -171,8 +171,8 @@ ed il bollettino di conto corrente postale.
 
 .. _Pagamenti-tramite-il-circuito-MyBank:
 
-Pagamenti tramite il circuito MyBank
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.1.1.1 Pagamenti tramite il circuito MyBank
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Nel caso che venga utilizzato il circuito e-commerce MyBank, che adotta
@@ -188,7 +188,7 @@ di pagamento.
 
 .. _Processo-di-pagamento-con-autorizzazione-gestita-dal-PSP:
 
-Processo di pagamento con autorizzazione gestita dal PSP
+2.1.2 Processo di pagamento con autorizzazione gestita dal PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -273,8 +273,8 @@ Transfer) ed il bollettino di conto corrente postale.
 
 .. _scelta-del-servizio-di-pagamento-da-parte-dellutilizzatore-finale:
 
-Scelta del servizio di pagamento da parte dell'utilizzatore finale
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.1.3 Scelta del servizio di pagamento da parte dell'utilizzatore finale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 |image5|
@@ -337,8 +337,8 @@ più RT negative, così come indicato nei precedenti paragrafi.
 
 .. _servizio-di-scelta-e-memorizzazione-del-pagamento:
 
-Servizio di scelta e memorizzazione del pagamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.1.3.1 Servizio di scelta e memorizzazione del pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Le funzionalità del WISP mettono a disposizione del cittadino utente di
@@ -438,8 +438,8 @@ lettere [a], [b] e [c] che precedono.
 
 .. _Individuazione-del-PSP-in-caso-di-pagamento-con-carta:
 
-Individuazione del PSP in caso di pagamento con carta
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.1.3.2 Individuazione del PSP in caso di pagamento con carta
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Nel caso di pagamento con carta di credito o di debito, la componente
@@ -464,8 +464,8 @@ b. inviare all’Agenzia, con le modalità da questa di volta in volta
 
 .. _Pacchetto-di-sviluppo-per-applicazioni-“mobile”-(SDK-pagoPA-Evolution):
    
-Pacchetto di sviluppo per applicazioni “mobile” (SDK pagoPA Evolution)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.1.3.3 Pacchetto di sviluppo per applicazioni “mobile” (SDK pagoPA Evolution)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Al fine di consentire una rapida realizzazione di una funzionalità di
@@ -482,8 +482,8 @@ mercato: IOS e Android.
 
 .. _storno-del-pagamentocap2:
 
-Storno del pagamento
-~~~~~~~~~~~~~~~~~~~~
+2.1.4 Storno del pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Qualora l’utilizzatore finale chieda a vario titolo l’annullamento
@@ -512,8 +512,8 @@ flussi economici.
 
 .. _processo-di-pagamento-attivato-presso-il-psp:
 
-Processo di pagamento attivato presso il PSP
---------------------------------------------
+2.2 Processo di pagamento attivato presso il PSP
+------------------------------------------------
 
 
 Questo *workflow* prevede che l’esecuzione del pagamento avvenga presso
@@ -627,8 +627,8 @@ esecuzione dello stesso.
 
 .. _Verifica-del-pagamento-in-attesa:
 
-Verifica del pagamento in attesa
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.2.1 Verifica del pagamento in attesa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 In questa fase l'Ente Creditore può comunicare all'utilizzatore finale
@@ -645,8 +645,8 @@ deve utilizzare le modalità indicate al :ref:`§ 7.4.5 Sezione II <comunicazion
 
 .. _Attivazione-della-richiesta-di-pagamento:
 
-Attivazione della richiesta di pagamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.2.2 Attivazione della richiesta di pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Nodo dei Pagamenti-SPC non controlla la sequenza operativa delle fasi
 del processo descritte in precedenza: pertanto, un PSP potrebbe
@@ -667,8 +667,8 @@ pagamenti in attesa.
 
 .. _Pagamento-spontaneo-presso-i-PSP:
 
-Pagamento spontaneo presso i PSP
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.2.3 Pagamento spontaneo presso i PSP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Nel modello di pagamento attivato presso il PSP, l'utilizzatore finale,
@@ -709,8 +709,8 @@ pagamento della tassa automobilistica.
 
 .. _Revoca-della-Ricevuta-Telematicacap2:
 
-Revoca della Ricevuta Telematica
---------------------------------
+2.3 Revoca della Ricevuta Telematica
+------------------------------------
 
 Qualora l’utilizzatore finale - ai sensi degli articoli 13 e 14 del
 decreto legislativo 27 gennaio 2010, n. 11, ovvero per richieste
@@ -758,8 +758,8 @@ sia dal punto di vista amministrativo, sia dal punto di vista contabile.
 
 .. _Annullo-tecnico:
 
-Annullo tecnico
-~~~~~~~~~~~~~~~
+2.3.1 Annullo tecnico
+~~~~~~~~~~~~~~~~~~~~~
 
 
 L’annullo tecnico è una casistica dell’invio di una richiesta di revoca
@@ -780,8 +780,8 @@ tecnico non è ammesso.
 
 .. _Avviso-di-pagamento:
 
-Avviso di pagamento
--------------------
+2.4 Avviso di pagamento
+-----------------------
 
 
 Come previsto dal capitolo 7 delle Linee guida, tutti i modelli di
@@ -807,8 +807,8 @@ b) **digitale**, che viene inviato al Nodo dei Pagamenti SPC per essere
 
 .. _Avviso-analogico:
 
-Avviso analogico
-~~~~~~~~~~~~~~~~
+2.4.1 Avviso analogico
+~~~~~~~~~~~~~~~~~~~~~~
 
 Per i pagamenti per i quali sono prodotti avvisi di pagamento analogici,
 oltre al logotipo del sistema pagoPA (:ref:`cfr. § 11.5 <utilizzo-del-marchio-pagopa>`),
@@ -852,8 +852,8 @@ processo di pagamento.
 
 .. _Automazione-dell’Avviso-analogico:
 
-Automazione dell’Avviso analogico
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.4.1.1 Automazione dell’Avviso analogico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Inoltre, la peculiarità di alcune postazioni messe a disposizione dai
@@ -869,8 +869,8 @@ leggibili e decodificabili da apposite apparecchiature
 
 .. _Avviso-digitale:
 
-Avviso digitale
-~~~~~~~~~~~~~~~
+2.4.2 Avviso digitale
+~~~~~~~~~~~~~~~~~~~~~
 
 
 Per i pagamenti per i quali sono messi a disposizione dell'utilizzatore
@@ -880,8 +880,8 @@ e inviarli al NodoSPC con le modalità indicate al  :ref:`§ 8.1.6 <processo-di-
 
 .. _Attestazione-del-pagamento:
 
-Attestazione del pagamento
---------------------------
+2.5 Attestazione del pagamento
+------------------------------
 
 
 L’attestazione di avvenuto pagamento è rappresentata dal documento
@@ -927,8 +927,8 @@ indicazioni di dettaglio del pagamento previste dal
 
 .. _Identificazione-dell’utilizzatore-finale:
 
-Identificazione dell’utilizzatore finale
-----------------------------------------
+2.6 Identificazione dell’utilizzatore finale
+--------------------------------------------
 
 
 Nello schema di Figura 12 è rappresentato il circuito di “trust” che si
@@ -964,8 +964,8 @@ CIE/CNS.
 
 .. _riconciliazione-dei-pagamenticap2:
 
-Riconciliazione dei pagamenti
------------------------------
+2.7 Riconciliazione dei pagamenti
+---------------------------------
 
 
 Con rifermento al “Ciclo di vita del pagamento” 
@@ -992,8 +992,8 @@ ciò che riguarda i dati del Flusso di rendicontazione.
 
 .. _Riconciliazione-in-modalità-singola:
 
-Riconciliazione in modalità singola
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.7.1 Riconciliazione in modalità singola
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Qualora, a fronte di ogni singolo set di informazioni
@@ -1030,8 +1030,8 @@ accredito inviata dal PSP all’Ente Creditore.
 
 .. _Riconciliazione-in-modalità-multipla:
 
-Riconciliazione in modalità multipla
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.7.2 Riconciliazione in modalità multipla
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Qualora il PSP effettui un’unica disposizione di pagamento nei confronti
@@ -1085,8 +1085,8 @@ rendicontazione e gli altri ricevere i dati ivi contenuti.
 
 .. _Pagamento-contenente-più-accrediti:
 
-Pagamento contenente più accrediti
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.7.3 Pagamento contenente più accrediti
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Qualora l’utilizzatore finale presenti al PSP una RPT contenente più
@@ -1098,8 +1098,8 @@ proprie procedure applicative di riconciliazione.
 
 .. _Acquisto-della-marca-da-bollo-digitale:
 
-Acquisto della marca da bollo digitale
---------------------------------------
+2.8 Acquisto della marca da bollo digitale
+------------------------------------------
 
 
 L'Agenzia delle Entrate ha realizzato il servizio @e.bollo che permette
@@ -1139,8 +1139,8 @@ informazioni necessarie alla produzione della marca da bollo digitale.
 
 .. _Workflow-di-acquisto-della-marca-da-bollo-digitale:
 
-Workflow di acquisto della marca da bollo digitale
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.8.1 Workflow di acquisto della marca da bollo digitale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Il processo descritto di seguito è un esempio di come una PA possa
@@ -1201,8 +1201,8 @@ Agenzia delle Entrate.
 
 .. _Riconciliazione-delle-Ricevute-Telematiche:
 
-Riconciliazione delle Ricevute Telematiche
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.8.2 Riconciliazione delle Ricevute Telematiche
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Nel processo di acquisto in parola la Ricevuta Telematica (RT) svolge
@@ -1213,8 +1213,8 @@ riconciliazione, limitatamente agli importi riguardanti il MBD.
 
 .. _avvisatura-digitale-push-su-iniziativa-dellente-creditorecap2:
 
-Avvisatura digitale *push* (su iniziativa dell’Ente Creditore)
---------------------------------------------------------------
+2.9 Avvisatura digitale *push* (su iniziativa dell’Ente Creditore)
+------------------------------------------------------------------
 
 
 La funzione di avvisatura digitale in modalità *push* è un servizio
@@ -1281,8 +1281,8 @@ costituiscono il processo di avvisatura digitale vero e proprio.
 
 .. _Iscrizione-al-servizio-(*enrolment*):
 
-Iscrizione al servizio (*enrolment*)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.1 Iscrizione al servizio (*enrolment*)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 L'iscrizione al servizio di avvisatura *push* può essere effettuata
@@ -1296,8 +1296,8 @@ dell'Ente Creditore.
 
 .. _Iscrizione-al-servizio-presso-pagoPA:
 
-Iscrizione al servizio presso pagoPA
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.1.1 Iscrizione al servizio presso pagoPA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Gli utenti registrati a pagoPA riceveranno gli avvisi digitali emessi da
@@ -1305,8 +1305,8 @@ parte di tutti gli EC.
 
 .. _Iscrizione-al-servizio-presso-il-portale-di-un-Ente-Creditore:
 
-Iscrizione al servizio presso il portale di un Ente Creditore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.1.2 Iscrizione al servizio presso il portale di un Ente Creditore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 L'iscrizione al servizio di avvisatura effettuata dall'utilizzatore
@@ -1321,8 +1321,8 @@ pagarli presso il PSP oppure sul portale dello stesso EC.
 
 .. _Iscrizione-al-servizio-presso-un-Prestatore-di-servizi-di-pagamento:
 
-Iscrizione al servizio presso un Prestatore di servizi di pagamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.1.3 Iscrizione al servizio presso un Prestatore di servizi di pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 L'iscrizione al servizio di avvisatura può essere effettuata
@@ -1347,8 +1347,8 @@ di inoltro *push*, è descritto nel :ref:`§ 9.2.7 della Sezione III. <avvisatur
 
 .. _Iscrizioni-presso-più-Prestatori-di-servizi-di-pagamento:
 
-Iscrizioni presso più Prestatori di servizi di pagamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.1.4 Iscrizioni presso più Prestatori di servizi di pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 L'utente finale può iscriversi al servizio di avvisatura presso più PSP:
@@ -1358,8 +1358,8 @@ servizi di pagamento che sta trattando l'operazione.
 
 .. _Revoca-di-iscrizione-al-servizio-di-avvisatura:
 
-Revoca di iscrizione al servizio di avvisatura
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.1.5 Revoca di iscrizione al servizio di avvisatura
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 La revoca dell’iscrizione al servizio di avvisatura deve essere
@@ -1396,8 +1396,8 @@ Il processo di invio degli avvisi è ampiamente dettagliato nel :ref:`§ 8.1.6 d
 
 .. _Inoltro-degli-avvisi-al-debitore:
 
-Inoltro degli avvisi al debitore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.2 Inoltro degli avvisi al debitore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 |image17|
@@ -1406,8 +1406,8 @@ Inoltro degli avvisi al debitore
 
 .. _Invio-degli-avvisi-in-modalità-File-Transfer:
 
-Invio degli avvisi in modalità File Transfer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.2.1 Invio degli avvisi in modalità File Transfer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 L'Ente Creditore invia al Nodo dei Pagamenti-SPC un flusso informativo
@@ -1423,8 +1423,8 @@ invia all'Ente Creditore emittente l'avviso.
 
 .. _Invio-degli-avvisi-in-modalità-Web-service:
 
-Invio degli avvisi in modalità Web service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.2.2 Invio degli avvisi in modalità Web service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 L'Ente Creditore invia al NodoSPC il singolo avviso digitale che intende
@@ -1435,8 +1435,8 @@ all'ente eventuali difformità rispetto agli standard previsti.
 
 .. _recapito-dellavviso-al-debitore:
 
-Recapito dell'avviso al debitore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.2.3 Recapito dell'avviso al debitore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Il recapito al debitore registrato su pagoPA avviene con le modalità da
@@ -1473,8 +1473,8 @@ PSP.
 
 .. _Comunicazione-dell'esito-del-recapito-all'Ente-creditore:
 
-Comunicazione dell'esito del recapito all'Ente creditore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.2.4 Comunicazione dell'esito del recapito all'Ente creditore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Una volta completata la fase precedente, il NodoSPC comunica all’Ente
@@ -1488,8 +1488,8 @@ b. esito del singolo avviso digitale nella *response* del *web service*
 
 .. _Pagamento-del-dovuto:
    
-Pagamento del dovuto
-~~~~~~~~~~~~~~~~~~~~
+2.9.3 Pagamento del dovuto
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Per quanto riguarda la fase del pagamento del dovuto, si ricorda che
@@ -1510,8 +1510,8 @@ conservare l’avviso per utilizzarlo in tempo successivo.
 
 .. _Modifica-e-annullamento-degli-avvisi-digitali:
 
-Modifica e annullamento degli avvisi digitali
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.9.4 Modifica e annullamento degli avvisi digitali
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Nel caso in cui l’Ente Creditore modifichi uno dei dati obbligatori
@@ -1535,8 +1535,8 @@ fornirà un errore generato dall’Ente Creditore.
 
 .. _avvisatura-digitale-pull-verifica-della-posizione-debitoriacap2:
 
-Avvisatura digitale *pull* (verifica della posizione debitoria)
----------------------------------------------------------------
+2.10 Avvisatura digitale *pull* (verifica della posizione debitoria)
+--------------------------------------------------------------------
 
 
 L'utilizzatore finale ha il diritto di conoscere l'elenco dei pagamenti
@@ -1593,8 +1593,8 @@ nella risposta fornita al NodoSPC.
 
 .. _limitazioni-allutilizzo-dellavvisatura-pull:
 
-Limitazioni all'utilizzo dell'avvisatura *pull*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+2.10.1 Limitazioni all'utilizzo dell'avvisatura *pull*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Al momento, il sistema non consente l'utilizzo del servizio di
@@ -1610,8 +1610,8 @@ dell’Agenzia per l’Italia Digitale.
 
 .. _Pagamento-del-dovuto-1:
 
-Pagamento del dovuto
-~~~~~~~~~~~~~~~~~~~~
+2.10.2 Pagamento del dovuto
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Per quanto riguarda la fase del pagamento del dovuto, si ricorda che
