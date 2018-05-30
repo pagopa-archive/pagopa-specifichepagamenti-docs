@@ -9,8 +9,8 @@
 
 .. _il-nodo-dei-pagamenti-spc:
 
-Il Nodo dei Pagamenti-SPC
-=========================
+3. Il Nodo dei Pagamenti-SPC
+============================
 
 Il Nodo dei Pagamenti-SPC è un’infrastruttura abilitante a disposizione
 di tutti gli Enti Creditori per fornire servizi e rendere disponibili
@@ -42,8 +42,8 @@ servizi di pagamento.
 
 .. _caratteristiche-generali-del-nodo-dei-pagamenti:
 
-Caratteristiche generali del Nodo dei Pagamenti-SPC
----------------------------------------------------
+3.1 Caratteristiche generali del Nodo dei Pagamenti-SPC
+-------------------------------------------------------
 
 Il Nodo dei Pagamenti-SPC è strutturato per rispondere alle necessità
 di:
@@ -106,16 +106,16 @@ dei flussi finanziari:
 
 .. _architettura-e-contenuti-del-nodo-dei-pagamenti-spc:
 
-Architettura e contenuti del Nodo dei Pagamenti-SPC
----------------------------------------------------
+3.2 Architettura e contenuti del Nodo dei Pagamenti-SPC
+-------------------------------------------------------
 
 La piattaforma del Nodo dei Pagamenti-SPC si basa sulle componenti
 appresso indicate.
 
 .. _gestore-del-workflow-applicativo:
 
-Gestore del Workflow Applicativo
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.2.1 Gestore del Workflow Applicativo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È la macro-componente principale mediante la quale istanzia i modelli di
 pagamento di cui al capitolo 2. Ha lo scopo di coordinare l’esecuzione
@@ -151,8 +151,8 @@ permettono:
 
 .. _gestore-della-porta-di-dominio:
 
-Gestore della Porta di Dominio
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.2.2 Gestore della Porta di Dominio
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Questa componente, mantenuta per retro compatibilità, si occupa dello
 scambio dei messaggi da e verso SPC per il colloquio con l’Ente
@@ -189,8 +189,8 @@ titolo esemplificativo:
 
 .. _interfaccia-di-canale:
 
-Interfaccia di Canale
-~~~~~~~~~~~~~~~~~~~~~
+3.2.3 Interfaccia di Canale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le attività svolte da questa componente sono analoghe a quelle svolte
 dal gestore della Porta di Dominio per gli Enti Creditori, ma istanziate
@@ -227,8 +227,8 @@ Di seguito le principali attività svolte dalla componente:
 
 .. _repository:
 
-Repository
-~~~~~~~~~~
+3.2.4 Repository
+~~~~~~~~~~~~~~~~
 
 Il *Repository* costituisce l’archivio in cui sono memorizzate tutte le
 Ricevute Telematiche processate dal NodoSPC e non ancora consegnate,
@@ -239,8 +239,8 @@ dei flussi di pagamento del Nodo dei Pagamenti-SPC.
 
 .. _componente-web-fesp:
 
-Componente Web-FESP
-~~~~~~~~~~~~~~~~~~~
+3.2.5 Componente Web-FESP
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La componente “Web-FESP” permette di effettuare il pagamento
 reindirizzando l’utente verso una *landing page* messa a disposizione
@@ -258,8 +258,8 @@ In questo caso:
 
    .. _componente-wisp:
    
-Componente WISP
-~~~~~~~~~~~~~~~
+3.2.6 Componente WISP
+~~~~~~~~~~~~~~~~~~~~~
 
 La componente “WISP” (*Wizard* Interattivo di Scelta del PSP) consente
 all'utilizzatore finale di effettuare la scelta del PSP in modalità
@@ -278,8 +278,8 @@ effettuare una nuova ricerca nelle occasioni successive.
 
 .. _componente-wrapper-mybank:
 
-Componente-Wrapper-MyBank
-~~~~~~~~~~~~~~~~~~~~~~~~~
+3.2.7 Componente-Wrapper-MyBank
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nell'ambito del collegamento tra il Nodo dei pagamenti-SPC ed il
 circuito *e-commerce* MyBank (:ref:`vedi Capitolo 16 in Appendice 2 <Capitolo16>`), la
@@ -296,8 +296,8 @@ componente “Wrapper MyBank”.
 
 .. _gestione-dellavvisatura-digitale-in-modalità-push:
 
-Gestione dell'avvisatura digitale in modalità *push*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.2.8 Gestione dell'avvisatura digitale in modalità *push*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La gestione dell'avvisatura digitale in modalità *push* avviene
 attraverso l'utilizzo di componenti del NodoSPC che consentono:
@@ -322,8 +322,8 @@ attraverso l'utilizzo di componenti del NodoSPC che consentono:
 	  
 .. _file-transfer-sicuro:
 
-File Transfer sicuro
-~~~~~~~~~~~~~~~~~~~~
+3.2.9 File Transfer sicuro
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Nodo dei Pagamenti-SPC mette a disposizione dei soggetti aderenti una
 piattaforma *client-server* per il trasferimento sicuro dei dati in
@@ -334,8 +334,8 @@ rendicontazione, i totali di traffico, ecc.).
 
 .. _giornale-degli-eventi-1:
 
-Giornale degli Eventi
-~~~~~~~~~~~~~~~~~~~~~
+3.2.10 Giornale degli Eventi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È la componente che evidenzia tutte le informazioni attinenti ad ogni
 singola operazione sintetizzando le registrazioni effettuate dalle
@@ -371,8 +371,8 @@ Le principali attività svolte dalla componente riguardano:
    
 .. _componenti-di-utilità:
 
-Componenti di utilità
-~~~~~~~~~~~~~~~~~~~~~
+3.2.11 Componenti di utilità
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le Componenti di utilità rappresentano un insieme di componenti “di
 servizio” invocate, in base alle necessità, dal *Workflow* Applicativo
@@ -393,8 +393,8 @@ con il gestore del *Workflow* Applicativo.
 
 .. _sistema-di-monitoring:
 
-Sistema di Monitoring
-~~~~~~~~~~~~~~~~~~~~~
+3.2.12 Sistema di Monitoring
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il sistema di Monitoring svolge attività di controllo complessivo per
 quanto attiene alle tematiche di monitoraggio. tale componente deve
@@ -415,8 +415,8 @@ dell’Agenzia per l’Italia Digitale.
 
 .. _sistema-di-gestione-del-tavolo-operativo:
 
-Sistema di Gestione del Tavolo Operativo
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+3.2.13 Sistema di Gestione del Tavolo Operativo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il sistema ha lo scopo di fornire il supporto necessario alle attività
 del Tavolo Operativo, monitorando le altre componenti applicative e
@@ -430,8 +430,8 @@ Interattiva) per istradare le chiamate vocali, integrato a un sistema di
 
 .. _sistema-di-reporting:
 
-Sistema di Reporting
-~~~~~~~~~~~~~~~~~~~~
+3.2.14 Sistema di Reporting
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il sistema assicura la produzione e pubblicazione di informazioni a
 carattere statistico, attraverso un sito all’uopo dedicato e attraverso
