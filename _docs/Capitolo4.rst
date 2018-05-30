@@ -9,8 +9,8 @@
 
 .. _il-sistema-pagopa-e-il-nodo- dei-pagamenti-spc:
 
-Il sistema pagoPA e il Nodo dei Pagamenti-SPC
-=============================================
+4. Il sistema pagoPA e il Nodo dei Pagamenti-SPC
+================================================
 
 |image1|
 
@@ -31,8 +31,8 @@ dal NodoSPC nei confronti dei soggetti aderenti.
 
 .. _connessione-al-sistema-pagopa:
 
-Connessione al sistema pagoPA
------------------------------
+4.1 Connessione al sistema pagoPA
+---------------------------------
 
 In Figura 21 è rappresentato lo schema architetturale del sistema
 pagoPA, dove il Nodo dei Pagamenti-SPC costituisce l’*Hub*
@@ -63,8 +63,8 @@ dell’Agenzia.
 
 .. _strutture-dati-di-supporto:
 
-Strutture dati di supporto
---------------------------
+4.2 Strutture dati di supporto
+------------------------------
 
 
 Il Dominio è gestito nel Nodo dei Pagamenti-SPC mediante strutture dati
@@ -95,8 +95,8 @@ utilizzati le tabelle seguenti:
 
 .. _tabella-delle-controparticap4:
 
-Tabella delle controparti
-~~~~~~~~~~~~~~~~~~~~~~~~~
+4.2.1 Tabella delle controparti
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La “Tabella delle controparti” è il documento informatico, inviato dal
 Nodo dei Pagamenti-SPC ad ogni prestatore di servizi di pagamento, che
@@ -114,8 +114,8 @@ giornaliera.
 
 .. _catalogo-dati-informativicap4:
 
-Catalogo Dati Informativi
-~~~~~~~~~~~~~~~~~~~~~~~~~
+4.2.2 Catalogo Dati Informativi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Ai fini della trasparenza delle operazioni, il Nodo dei Pagamenti-SPC
 censisce per i PSP i dati sulle condizioni di pagamento (costi massimi
@@ -132,8 +132,8 @@ cadenza giornaliera.
 
 .. _tabella-dei-cc-di-accredito:
 
-Tabella dei c/c di accredito
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.2.3 Tabella dei c/c di accredito
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Al fine di garantire la sicurezza delle transazioni processate, il Nodo
 dei Pagamenti-SPC verifica che i codici IBAN presenti nelle Richieste di
@@ -147,8 +147,8 @@ delle somme dovute.
 
 .. _catalogo-dei-servizicap4:
 
-Catalogo dei servizi
-~~~~~~~~~~~~~~~~~~~~
+4.2.4 Catalogo dei servizi
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Catalogo dei Servizi è il *repository* che contiene l’elenco dei
 servizi generalizzati, attivati dagli Enti Creditori, relativo al
@@ -160,8 +160,8 @@ giornaliera.
 
 .. _controlli:
 
-Controlli
----------
+4.3 Controlli
+-------------
 
 Tutti i flussi/dati scambiati e previsti dai Servizi di Nodo devono
 risultare conformi agli Standard di Servizio.
@@ -177,8 +177,8 @@ Servizio, il soggetto ricevente ha l’obbligo:
 
    .. _servizi-applicativi-di-base:
    
-Servizi applicativi di base
----------------------------
+4.4 Servizi applicativi di base
+-------------------------------
 
 Rientrano in questa tipologia tutte le attività per il corretto
 svolgimento delle interazioni finalizzate all’inoltro della Richiesta di
@@ -188,8 +188,8 @@ verso un Enti Creditori aderente.
 
 .. _richiesta-di-pagamento-telematico:
 
-Richiesta di Pagamento Telematico
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.1 Richiesta di Pagamento Telematico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio RPT apre il contesto del pagamento telematico. È costituito
 dalle operazioni di ricezione delle RPT dagli Enti Creditori aderenti,
@@ -212,8 +212,8 @@ diretti a PSP appartenenti al Dominio.
 
 .. _pagamenti-multi-beneficiario-o-multi-pagatore:
 
-Pagamenti multi beneficiario o multi pagatore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.2 Pagamenti multi beneficiario o multi pagatore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il processo di pagamento presso l'Ente Creditore consente di gestire
 anche pagamenti di diversi pagatori destinati a molteplici beneficiari
@@ -226,8 +226,8 @@ dello stesso intermediario tecnologico.
 
 .. _ricevuta-telematica:
 
-Ricevuta Telematica
-~~~~~~~~~~~~~~~~~~~
+4.4.3 Ricevuta Telematica
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio RT chiude il contesto di pagamento telematico ed è
 complementare al Servizio RPT. È costituito dalle operazioni di
@@ -255,8 +255,8 @@ I flussi RT di ricezione:
 
 .. _revoca-della-ricevuta-telematica:
    
-Revoca della Ricevuta Telematica
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.4 Revoca della Ricevuta Telematica
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :ref:`Come visto nel § 2.1.3.2 <individuazione-del-psp-in-caso-di-pagamento-con-carta>` la Revoca della RT si esplica nell’invio di una
 richiesta di revoca (RR) da parte del PSP, contenente i riferimenti
@@ -287,8 +287,8 @@ interazione tra:
 
 .. _storno-di-un-pagamento:
    
-Storno di un pagamento
-~~~~~~~~~~~~~~~~~~~~~~
+4.4.5 Storno di un pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 :ref:`Come visto nel § 2.1.4 <storno-del-pagamentocap2>` lo storno di un pagamento si esplica nell’invio
 di una richiesta di revoca (RR) da parte dell’Ente Creditore, contenente
@@ -323,8 +323,8 @@ al Dominio.
 
 .. _rendicontazione-per-gli-enti-creditori:
 
-Rendicontazione per gli Enti Creditori
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.6 Rendicontazione per gli Enti Creditori
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio “Rendicontazione” mette a disposizione degli Enti Creditori
 un flusso, generato da ogni PSP (:ref:`si confronti il § 2.7 <riconciliazione-dei-pagamenticap2>`), 
@@ -341,8 +341,8 @@ superiore a trenta giorni lavorativi.
 
 .. _chiusura-operazioni-pendenti:
 
-Chiusura operazioni pendenti
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.7 Chiusura operazioni pendenti
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con riferimento al modello di pagamento ad esecuzione differita (:ref:`cfr. § 2.1.2 <processo-di-pagamento-con-autorizzazione-gestita-dal-psp>`), ma applicabile a tutti i processi di pagamento previsti, è
 possibile che una Richiesta di pagamento Telematica (RPT) non abbia
@@ -359,8 +359,8 @@ RPT dall’archivio per decorrenza dei termini (:ref:`vedi anche §§ 9.1.7 <pro
 
 .. _modalità-unica-dinterazione---mui:
 
-Modalità Unica d'Interazione - MUI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.8 Modalità Unica d'Interazione - MUI
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 In relazione ai diversi modelli di processo sopra descritti, il Servizio
@@ -376,8 +376,8 @@ appositamente predisposto dal PSP stesso (:ref:`cfr. anche §2.2 <processo-di-pa
 
 .. _accentramento-della-scelta-del-psp:
 
-Accentramento della scelta del PSP
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.9 Accentramento della scelta del PSP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Nodo dei Pagamenti-SPC mette a disposizione degli Enti Creditori
 apposite pagine esposte su internet che realizzano le funzionalità WISP
@@ -388,8 +388,8 @@ pagamenti verso la Pubblica Amministrazione.
 
 .. _rendicontazione-per-lagenzia-delle-entrate:
 
-Rendicontazione per l’Agenzia delle Entrate
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.10 Rendicontazione per l’Agenzia delle Entrate
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nell’ambito della gestione dell’acquisto della marca da bollo digitale,
 una specifica funzione del Nodo dei Pagamenti-SPC provvederà
@@ -400,8 +400,8 @@ dell’Agenzia delle Entrate del 19 settembre 2014.
 
 .. _sincronizzazione-con-la-componente-di-gestione-sftp:
 
-Sincronizzazione con la componente di gestione SFTP
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.4.11 Sincronizzazione con la componente di gestione SFTP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Nodo dei Pagamenti-SPC mette a disposizione degli Enti Creditori e
 dei PSP la possibilità di completare la ricezione e l'invio di flussi
@@ -414,8 +414,8 @@ ecc.), in modalità file transfer sicuro (SFTP).
 
 .. _servizi-applicativi-opzionali:
 
-Servizi applicativi opzionali
------------------------------
+4.5 Servizi applicativi opzionali
+---------------------------------
 
 Rientrano in questa tipologia tutte le funzioni che il Servizio mette a
 disposizione dei soggetti appartenenti al Dominio e che possono da
@@ -424,8 +424,8 @@ attività.
 
 .. _totali-di-traffico:
 
-Totali di traffico
-~~~~~~~~~~~~~~~~~~
+4.5.1 Totali di traffico
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio di Quadratura dei flussi di traffico mette a disposizione
 dei soggetti appartenenti al Dominio che ne facciano richiesta, un
@@ -444,16 +444,16 @@ Digitale.
 
 .. _servizi-operativi:
 
-Servizi operativi
------------------
+4.6 Servizi operativi
+---------------------
 
 Sono classificati come Servizi Operativi tutte le attività propedeutiche
 o a supporto dell’erogazione del Servizio.
 
 .. _tavolo-operativo-e-gestione-delle-anomalie-incident:
 
-Tavolo Operativo e gestione delle anomalie (*Incident*)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.6.1 Tavolo Operativo e gestione delle anomalie (*Incident*)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio rende disponibile un Tavolo operativo di primo livello, il
 quale:
@@ -485,8 +485,8 @@ sito dell’Agenzia.
 
 .. _monitoring-e-controllo:
 
-Monitoring e controllo
-~~~~~~~~~~~~~~~~~~~~~~
+4.6.2 Monitoring e controllo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Servizio prevede la disponibilità di un sistema di tracciamento degli
 eventi e di strumenti per controllo avanzamento/stati a disposizione dei
@@ -506,8 +506,8 @@ Standard di Servizio.
 
 .. _reporting:
 
-Reporting
-~~~~~~~~~
+4.6.3 Reporting
+~~~~~~~~~~~~~~~
 
 Il Servizio rende disponibile la consultazione, l’analisi e
 l’esportazione di:
@@ -522,8 +522,8 @@ l’esportazione di:
 
 .. _report-commissioni-a-carico-pa:
    
-Report “Commissioni a carico PA”
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+4.6.3.1 Report “Commissioni a carico PA”
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Premesso che le presenti linee guida hanno come presupposto le
 disposizioni primarie in materia di pagamenti, si evidenzia che i PSP
