@@ -10,8 +10,8 @@
 
 .. _Modello-di-funzionamento:
 
-Modello di funzionamento
-========================
+1. Modello di funzionamento
+===========================
 
 |image1|
 
@@ -36,8 +36,8 @@ detto provvedimento).
 
 .. _Attori-e-ruoli-del-Sistema-pagoPA:
 
-Attori e ruoli del Sistema pagoPA
----------------------------------
+1.1 Attori e ruoli del Sistema pagoPA
+-------------------------------------
 
 
 Nello schema di Figura 1 sono evidenziati gli attori che partecipano al
@@ -121,8 +121,8 @@ figura dell’istituto tesoriere e quella di “intermediario tecnologico”.
 
 .. _Istituto-tesoriere:
 
-Istituto tesoriere dell’Ente Creditore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.1.1 Istituto tesoriere dell’Ente Creditore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il PSP che, nel rispetto delle normative vigenti, svolge le proprie
 funzioni di Tesoreria o di Cassa nei confronti dell’Ente Creditore e può
@@ -134,8 +134,8 @@ istituto tesoriere.
 
 .. _intermediari-tecnologici-e-partner-tecnologici:
 
-Intermediari tecnologici e partner tecnologici
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.1.2 Intermediari tecnologici e partner tecnologici
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Gli Enti Creditori possono offrire il servizio e accedere al Nodo dei
@@ -174,8 +174,8 @@ particolare, degli utilizzatori finali.
 
 .. _Dominio-dei-Pagamenti-dell’Ente-Creditore:
 
-Dominio dei Pagamenti dell’Ente Creditore
------------------------------------------
+1.2 Dominio dei Pagamenti dell’Ente Creditore
+---------------------------------------------
 
 Il sistema complessivo - formato dalla comunità di Enti Creditori, PSP
 ed eventuali gestori di pubblici servizi aderenti e dai loro
@@ -226,8 +226,8 @@ non autorizzati.
 
 .. _Siti-e-portali-degli-Enti-Creditori:
 
-Siti e portali degli Enti Creditori
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.2.1 Siti e portali degli Enti Creditori
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 I siti ed i portali, attraverso i quali gli Enti Creditori mettono a
@@ -238,8 +238,8 @@ Autorità di Certificazione riconosciute).
 
 .. _Siti-e-portali-delle-pubbliche-amministrazioni:
 
-Siti e portali delle pubbliche amministrazioni
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.2.1.1 Siti e portali delle pubbliche amministrazioni
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Gli indirizzi internet dei servizi dedicati ai pagamenti devono essere
@@ -259,8 +259,8 @@ del sito dell’Agenzia per l'Italia Digitale.
 
 .. _Utilizzatori-finali:
 
-Utilizzatori finali
-~~~~~~~~~~~~~~~~~~~
+1.2.2 Utilizzatori finali
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Gli utilizzatori finali non sono membri del Dominio: pertanto il loro
@@ -274,8 +274,8 @@ Digitale).
 
 .. _Governance-del-sistema:
 
-Governance del sistema
-----------------------
+1.3 Governance del sistema
+--------------------------
 
 
 Stante la valenza infrastrutturale dell’iniziativa, la guida ed il
@@ -303,8 +303,8 @@ pubblici, in particolare:
 
 .. _Ciclo-di-vita:
 
-Ciclo di vita del Pagamento
----------------------------
+1.4 Ciclo di vita del Pagamento
+-------------------------------
 
 
 Nell’ambito delle relazioni tra l’utilizzatore finale e gli Enti
@@ -346,8 +346,8 @@ della tipologia di servizio al quale si riferisce il pagamento stesso.
 
 .. _Processo-di-pagamento:
 
-Processo di pagamento
----------------------
+1.5 Processo di pagamento
+-------------------------
 
 
 L’esecuzione di pagamenti telematici prevede l’interazione e
@@ -366,8 +366,8 @@ necessarie a garantire la corretta gestione dei processi.
 
 .. _Oggetti-scambiati:
 
-Oggetti scambiati
-~~~~~~~~~~~~~~~~~
+1.5.1 Oggetti scambiati
+~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Nei ”*workflow*” applicativi gestiti dal Nodo dei Pagamenti-SPC
@@ -411,8 +411,8 @@ i Servizi applicativi opzionali (:ref:`vedi anche capitolo 4 <Capitolo4>`).
 
 .. _Identificativo-Univoco-di-Versamento:
 
-Identificativo Univoco di Versamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.5.2 Identificativo Univoco di Versamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Il codice IUV è assegnato dall’Ente Creditore attraverso le regole di
@@ -436,8 +436,8 @@ propedeutici all’erogazione del servizio.
 
 .. _Flusso-di-processo:
 
-Flusso di processo
-~~~~~~~~~~~~~~~~~~
+1.5.3 Flusso di processo
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 L’utilizzatore finale dispone il pagamento per mezzo di una RPT, tramite
 sportelli fisici o telematici messi a disposizione dall’Ente Creditore,
@@ -466,8 +466,8 @@ esterni al Nodo dei Pagamenti-SPC.
 
 .. _Compiti-degli-Enti-Creditori:
 
-Compiti degli Enti Creditori
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.5.4 Compiti degli Enti Creditori
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Al fine di gestire nel modo migliore l’iter del processo di pagamento
@@ -491,8 +491,8 @@ offerti direttamente o tramite intermediari:
 
 .. _Integrità-e-non-ripudiabilità-della-RT:
 
-Integrità e non ripudiabilità della RT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.5.5 Integrità e non ripudiabilità della RT
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Laddove il “*workflow* del procedimento amministrativo consenta
@@ -522,8 +522,8 @@ Telematica, indicando tale vincolo in un apposito elemento della RPT.
 
 .. _Trasparenza-nei-confronti-degli-utilizzatori-finali:
 
-Trasparenza nei confronti degli utilizzatori finali
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1.5.6 Trasparenza nei confronti degli utilizzatori finali
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 La trasparenza dell’operazione di pagamento deve essere garantita nei
@@ -560,8 +560,8 @@ dell’esecuzione del singolo pagamento.
 
 .. _Funzioni-accessorie-di-controllo-e-di-verifica:
 
-Funzioni accessorie di controllo e di verifica
-----------------------------------------------
+1.6 Funzioni accessorie di controllo e di verifica
+--------------------------------------------------
 
 
 Il Sistema prevede modalità di controllo focalizzate sulla verifica
@@ -592,8 +592,8 @@ XML.
 
 .. _Sicurezza-e-conservazione:
 
-Sicurezza e conservazione
--------------------------
+1.7 Sicurezza e conservazione
+-----------------------------
 
 
 Tutte le informazioni trattate nell’ambito del Sistema saranno gestite
