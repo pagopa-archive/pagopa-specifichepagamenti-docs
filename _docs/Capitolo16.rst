@@ -7,7 +7,7 @@
 | **Capitolo 16. IL MODELLO DI FUNZIONAMENTO DEL SERVIZIO MYBANK** |
 +------------------------------------------------------------------+
 
-Il modello di funzionamento del servizio MyBank
+16. Il modello di funzionamento del servizio MyBank
 ===============================================
 
 Il modello di funzionamento del servizio MyBank si identifica con il
@@ -34,7 +34,7 @@ d) *Sub-Seller*: è l’Ente Creditore che, attraverso il Nodo dei Pagamenti-SPC
 
 .. _relazioni-tra-i-soggetti:
 
-Relazioni tra i soggetti
+16.1 Relazioni tra i soggetti
 ------------------------
 
 Al fine di attivare il servizio di pagamento MyBank attraverso il Nodo
@@ -88,7 +88,7 @@ servizi che siano aderenti al Nodo dei Pagamenti-SPC.
 
 .. _mandatory-requirements-tipici-del-servizio-mybank:
 
-*Mandatory requirements* tipici del servizio MyBank
+16.2 *Mandatory requirements* tipici del servizio MyBank
 ---------------------------------------------------
 
 Ai fini dell’esecuzione dell’operazione di pagamento, di norma, il
@@ -155,7 +155,7 @@ Ente Creditore si impegna a:
    parte degli Enti Creditori, ogni altra previsione stabilita nel
    documento *Mandatory requirements* del servizio MyBank.
 
-Logotipo del servizio MyBank
+16.3 Logotipo del servizio MyBank
 ----------------------------
 .. _Logotipo del servizio MyBank:
 
@@ -197,7 +197,7 @@ tavolozza dei colori di MyBank si rimanda alla documentazione ufficiale
 di cui sopra, in particolare al documento “MyBank Style Guide for
 Businesses”.
 
-Esposizione del logotipo MyBank sul portale degli Enti Creditori
+16.3.1 Esposizione del logotipo MyBank sul portale degli Enti Creditori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Esposizione del logotipo MyBank sul portale degli Enti Creditori:
 
@@ -213,7 +213,7 @@ Tale modalità è realizzata attraverso il servizio WISP
 :ref:`4.4.9 <accentramento-della-scelta-del-psp>`) che consente l'accentramento della scelta del PSP sul Nodo dei Pagamenti-SPC, rispettando quindi i *mandatory requirements* previsti da
 MyBank (:ref:`vedi § 16.2 <mandatory-requirements-tipici-del-servizio-mybank>`).
 
-Causale del pagamento
+16.4 Causale del pagamento
 ---------------------
 .. _Causale del pagamento:
 
@@ -226,7 +226,7 @@ messaggio di *E-Authorisation Request* (pain.013) ricevuto attraverso il
 
 .. _vincoli-nellutilizzo-del-servizio-mybank:
 
-Vincoli nell’utilizzo del servizio MyBank
+16.5 Vincoli nell’utilizzo del servizio MyBank
 -----------------------------------------
 
 La soluzione MyBank è utilizzabile all’interno del processo di pagamento
@@ -240,7 +240,7 @@ transazione), gli Enti Creditori non potranno utilizzare le funzioni di
 Nodo previste per il pagamento multi beneficiario, ovvero il cosiddetto
 “carrello di RPT” (:ref:`vedi § 4.4.2 <pagamenti-multi-beneficiario-o-multi-pagatore>`) con PSP che offrono il servizio MyBank.
 
-Controlli effettuati dal Nodo dei Pagamenti-SPC
+16.6 Controlli effettuati dal Nodo dei Pagamenti-SPC
 -----------------------------------------------
 .. _Controlli effettuati dal Nodo dei Pagamenti-SPC:
 
