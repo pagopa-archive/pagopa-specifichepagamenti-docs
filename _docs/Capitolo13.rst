@@ -5,13 +5,13 @@
 | **Capitolo 13. RESPONSABILITÀ** |
 +---------------------------------+
 
-Responsabilità
+13. Responsabilità
 ==============
 
 Di seguito sono indicati gli oneri in capo ai soggetti aderenti al Nodo
 dei Pagamenti-SPC.
 
-Responsabilità dell’Ente Creditore
+13.1 Responsabilità dell’Ente Creditore
 ----------------------------------
 .. _Responsabilità dell’Ente Creditore:
 
@@ -44,7 +44,7 @@ Digitale e/o suoi aventi causa, a monitorare l’erogazione dei
 servizi offerti oggetto delle presenti specifiche tecniche, nonché
 alla pubblicazione dei dati rivenienti dal relativo monitoraggio.
 
-Responsabilità del prestatore di servizi di pagamento
+13.2 Responsabilità del prestatore di servizi di pagamento
 -----------------------------------------------------
 .. _Responsabilità del prestatore di servizi di pagamento:
 
