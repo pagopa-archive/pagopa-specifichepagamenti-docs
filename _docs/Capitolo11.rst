@@ -5,7 +5,7 @@
 | **Capitolo11. ADESIONE AL NODO DEI PAGAMENTI-SPC** |
 +----------------------------------------------------+
 
-Adesione al Nodo dei Pagamenti-SPC
+11. Adesione al Nodo dei Pagamenti-SPC
 ==================================
 
 L’adesione al Nodo dei Pagamenti-SPC è riservata agli Enti Creditori e
@@ -30,7 +30,7 @@ intermediario. La procedura di adesione:
 
 .. _adesione-di-un-ente-creditore:
 
-Adesione di un Ente Creditore.
+11.1 Adesione di un Ente Creditore.
 ------------------------------
 
 Per la fruizione del servizio, l’Ente Creditore, sia esso una Pubblica
@@ -61,7 +61,7 @@ del Portale delle Adesioni.
 
 .. _adesione-di-un-prestatore-di-servizi-di-pagamento:
 
-Adesione di un Prestatore di Servizi di pagamento
+11.2 Adesione di un Prestatore di Servizi di pagamento
 -------------------------------------------------
 
 Per la fruizione del Servizio, il prestatore di servizi di pagamento
@@ -142,7 +142,7 @@ dovrà:
       delle componenti progettuali e dell’esecuzione dei successivi test
       di accettazione.
 
-Qualificazione di Intermediari e Partner tecnologici
+11.3 Qualificazione di Intermediari e Partner tecnologici
 ----------------------------------------------------
 .. _Qualificazione di Intermediari e Partner tecnologici:
 
@@ -174,7 +174,7 @@ autocertificazione e previa nomina da parte dell’Intermediario o del
 Partner tecnologico del proprio Referente Tecnico, provvede a
 pubblicare sul proprio sito istituzionale l’elenco di tali soggetti.
 
-Completamento della procedura di avvio in esercizio.
+11.4 Completamento della procedura di avvio in esercizio.
 ----------------------------------------------------
 .. _Completamento della procedura di avvio in esercizio.:
 
@@ -201,7 +201,7 @@ disponibili sul sito AgID.
 
 .. _utilizzo-del-marchio-pagopa:
 
-Utilizzo del marchio pagoPA
+11.5 Utilizzo del marchio pagoPA
 ---------------------------
 
 L’Agenzia per l’Italia Digitale ha realizzato e registrato il marchio
