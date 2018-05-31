@@ -5,14 +5,14 @@
 | **Capitolo12. ADEMPIMENTI DURANTE L’EROGAZIONE DEL SERVIZIO** |
 +---------------------------------------------------------------+
 
-Adempimenti durante l’erogazione del Servizio
+12. Adempimenti durante l’erogazione del Servizio
 =============================================
 
 Di seguito si riportano gli adempimenti ai quali devono ottemperare gli
 aderenti al Nodo dei Pagamenti-SPC una volta che sia stato attivato il
 servizio a regime.
 
-Adempimenti dell’Ente Creditore
+12.1 Adempimenti dell’Ente Creditore
 -------------------------------
 .. _Adempimenti dell’Ente Creditore:
 
@@ -65,7 +65,7 @@ Dominio deve inoltre:
    gestione delle emergenze, ecc.) e provvedere ad aggiornare
    l’Agenzia per l’Italia Digitale in caso di loro avvicendamento.
 
-Adempimenti specifici relativi al circuito MyBank
+12.1.1 Adempimenti specifici relativi al circuito MyBank
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Adempimenti specifici relativi al circuito MyBank:
 
@@ -74,7 +74,7 @@ pagamenti tramite il servizio MyBank si impegna a rispettare i
 *Mandatory Requirements* tipici del circuito, di cui al 
 :ref:`§ 16.2 dell’Appendice 2 <mandatory-requirements-tipici-del-servizio-mybank>`.
 
-Caratteristiche e adempimenti specifici relativi al servizio di avvisatura digitale
+12.1.2 Caratteristiche e adempimenti specifici relativi al servizio di avvisatura digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Caratteristiche e adempimenti specifici relativi al servizio di avvisatura digitale:
 
@@ -109,7 +109,7 @@ portali e/o siti web, avendo cura di gestire le informazioni ai sensi
 del D.lgs. del 30 giugno 2003, n. 196 recante "*Codice in materia di*
 *protezione dei dati personali*".
 
-Adempimenti del prestatore di servizi di pagamento
+12.2 Adempimenti del prestatore di servizi di pagamento
 --------------------------------------------------
 .. _Adempimenti del prestatore di servizi di pagamento:
 
@@ -147,7 +147,7 @@ strutture e/o punti di prossimità (:ref:`vedi paragrafo 2.2 <processo-di-pagame
 finali tale possibilità, esponendo in loco l’apposito “Logo” registrato
 dall’Agenzia per l’Italia Digitale.
 
-Adempimenti specifici relativi al servizio di avvisatura digitale
+12.2.1 Adempimenti specifici relativi al servizio di avvisatura digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Adempimenti specifici relativi al servizio di avvisatura digitale:
 
@@ -168,7 +168,7 @@ informando l'utilizzatore finale:
 -  circa l'iscrizione multipla al servizio (:ref:`vedi § 2.9.1.4 <iscrizioni-presso-più-prestatori-di-servizi-di-pagamento>`) nel caso in cui tale eventualità si verifichi e sia segnalata al PSP dal sistema
    pagoPA.
 
-Archiviazione dei dati
+12.3 Archiviazione dei dati
 ----------------------
 .. _Archiviazione dei dati:
 
@@ -186,7 +186,7 @@ di maggior durata per disposizioni di legge.
 
 .. _periodo-di-ritenzione-delle-rpt-senza-esito:
 
-Periodo di ritenzione delle RPT senza esito
+12.3.1 Periodo di ritenzione delle RPT senza esito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con riferimento al processo di chiusura delle RPT inviate al PSP e
@@ -196,7 +196,7 @@ quali si applica la chiusura forzata delle operazioni
 fissato in 90 giorni, trascorsi i quali si applica il processo sopra
 indicato.
 
-Business continuity e Disaster Recovery
+12.4 Business continuity e Disaster Recovery
 ---------------------------------------
 .. _Business continuity e Disaster Recovery:
 
@@ -210,7 +210,7 @@ presso il quale si verifichi l’evento di prendere immediati
 provvedimenti, nonché darne tempestiva comunicazione all’Agenzia per
 l’Italia Digitale ed ai Tavoli Operativi delle controparti interessate.
 
-Disponibilità dei servizi
+12.5 Disponibilità dei servizi
 -------------------------
 .. _Disponibilità dei servizi:
 
@@ -219,7 +219,7 @@ le soluzioni tecniche ed organizzative secondo le indicazioni
 riportate nel documento “” pubblicato sul sito dell’Agenzia per
 l’Italia Digitale.
 
-Nodo dei Pagamenti-SPC
+12.5.1 Nodo dei Pagamenti-SPC
 ~~~~~~~~~~~~~~~~~~~~~~
 .. _Nodo dei Pagamenti-SPC:
 
@@ -247,7 +247,7 @@ dalla reperibilità specialistica.
 
 .. _enti-creditori:
 
-Enti Creditori
+12.5.2 Enti Creditori
 ~~~~~~~~~~~~~~
 
 La disponibilità dei servizi erogati dagli Enti Creditori è
@@ -259,7 +259,7 @@ sito e sugli avvisi di pagamento la disponibilità di detti servizi.
 
 .. _prestatori-di-servizi-di-pagamento-aderenti:
 
-Prestatori di servizi di pagamento aderenti
+12.5.3 Prestatori di servizi di pagamento aderenti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La disponibilità dei servizi erogati dai prestatori di servizi di
@@ -271,7 +271,7 @@ dei servizi erogati.
 
 .. _livelli-di-servizio:
 
-Livelli di Servizio
+12.6 Livelli di Servizio
 -------------------
 
 I livelli di servizio - intesi come tempi massimi entro cui deve
@@ -288,7 +288,7 @@ Pagamenti-SPC.
 
 .. _indicatori-di-qualità-del-nodo-dei-pagamenti-spc:
 
-Indicatori di qualità del Nodo dei Pagamenti-SPC
+12.6.1 Indicatori di qualità del Nodo dei Pagamenti-SPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Gli indicatori di qualità inerenti i servizi erogati dal Nodo dei
