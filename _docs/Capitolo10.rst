@@ -5,7 +5,7 @@
 | **Capitolo 10. GESTIONE DEGLI ERRORI** |
 +----------------------------------------+
 
-Gestione degli Errori
+10. Gestione degli Errori
 =====================
 
 In questo capitolo sono fornite le specifiche necessarie per gestire gli
@@ -13,7 +13,7 @@ errori all’interno del sistema pagoPA.
 
 .. _la-struttura-faultbean:
 
-La struttura faultBean
+10.1 La struttura faultBean
 ----------------------
 
 Per la **Gestione degli errori** all’interno dei messaggi scambiati tra
@@ -141,7 +141,7 @@ struttura **faultBean** composta così come indicato in Tabella 51.
 
 .. _codici-di-errore:
 
-Codici di errore
+10.2 Codici di errore
 ----------------
 
 Questo paragrafo riporta nella Tabella 52 i codici di errore
@@ -392,7 +392,7 @@ nella **Gestione degli errori** delle singole primitive.
 |                                   | scaduta.                                                                                   |
 +-----------------------------------+--------------------------------------------------------------------------------------------+
 
-Spiegazione di alcuni faultCode
+10.3 Spiegazione di alcuni faultCode
 -------------------------------
 .. _Spiegazione di alcuni faultCode:
 
@@ -506,7 +506,7 @@ faultCode emessi dai vari soggetti:
 | di avvisatura per un soggetto sconosciuto.                            |
 +-----------------------------------------------------------------------+
 
-Errori nella gestione del messaggio di ackRT
+10.4 Errori nella gestione del messaggio di ackRT
 --------------------------------------------
 .. _Errori nella gestione del messaggio di ackRT:
 
