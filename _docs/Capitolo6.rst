@@ -9,8 +9,8 @@
 
 .. _giornale-degli-eventi:
 
-Giornale degli Eventi
-=====================
+6. Giornale degli Eventi
+========================
 
 La funzione di Giornale degli Eventi è quella di consentire la
 tracciabilità di ogni operazione di pagamento attivata per il tramite
