@@ -9,7 +9,7 @@
 
 .. _interazione-tra-nodo-dei-Pagamenti-spc-e-psp:
 
-Interazione tra Nodo dei Pagamenti-SPC e PSP
+9. Interazione tra Nodo dei Pagamenti-SPC e PSP
 ============================================
 
 Questo capitolo descrive le interfacce utilizzate nella cooperazione tra
@@ -20,7 +20,7 @@ specifiche.
 
 .. _workflow-dei-modelli-di-pagamento-e-dei-processi-accessori:
 
-Workflow dei modelli di pagamento e dei processi accessori
+9.1 Workflow dei modelli di pagamento e dei processi accessori
 ----------------------------------------------------------
 
 Come già indicato nei precedenti capitoli, il Nodo dei Pagamenti-SPC
@@ -40,7 +40,7 @@ gestione di tali processi da parte dei PSP.
 
 .. _pagamenti-attivati-presso-lente-creditore:
 
-Pagamenti attivati presso l'Ente Creditore
+9.1.1 Pagamenti attivati presso l'Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Questi modelli di pagamento, già descritti ai paragrafi :ref:`2.1.1 <processo-di-pagamento-con-re-indirizzamento-on-line>` e 
@@ -53,7 +53,7 @@ indicato al :ref:`§ 8.1.1 <pagamenti-attivati-presso-lente-creditorecap8>` a pa
 
 .. _generazione-e-invio-della-ricevuta-telematica:
 
-Generazione e invio della Ricevuta Telematica
+9.1.1.1 Generazione e invio della Ricevuta Telematica
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per la generazione delle RT non è previsto dal Nodo dei Pagamenti-SPC
@@ -76,7 +76,7 @@ carrello stesso.
 
 .. _casi-di-errore-e-strategie-di-ripristino:
 
-Casi di errore e strategie di ripristino
+9.1.1.2 Casi di errore e strategie di ripristino
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dall'analisi dell’interazione complessiva è possibile individuare i
@@ -94,7 +94,7 @@ colloquio per l’allineamento dello stato, quali
 
 .. _pagamenti-attivati-presso-il-psp:
 
-Pagamenti attivati presso il PSP
+9.1.2 Pagamenti attivati presso il PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image2|
@@ -181,7 +181,7 @@ specificato, risulti univoca (:ref:`vedi anche § 8.1 <workflow-dei-modelli-di-p
 
 .. _presentazione-dellavviso-e-transcodifica-dei-dati-per-il-pagamento:
 
-Presentazione dell'avviso e transcodifica dei dati per il pagamento
+9.1.2.1 Presentazione dell'avviso e transcodifica dei dati per il pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In questa fase il *Front-end* del PSP prende in carico i dati
@@ -204,7 +204,7 @@ una regola di traduzione (:ref:`vedi § 15.5 all'Appendice 1 <identificazione-rp
 
 .. _percorso-standard-per-il-modello-3:
 
-Percorso "STANDARD" per il Modello 3
+9.1.2.2 Percorso "STANDARD" per il Modello 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image3|
@@ -395,7 +395,7 @@ fornendo l'indicazione di generare e inviare all'EC una RT positiva.
 
 .. _percorso-alternativo-per-il-modello-3:
 
-Percorso "ALTERNATIVO" per il Modello 3
+9.1.2.3 Percorso "ALTERNATIVO" per il Modello 3
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Come indicato dallo *activity diagram* di Figura 45 a pagina 173, il
@@ -525,7 +525,7 @@ fornendo l'indicazione di generare e inviare all'EC una RT negativa.
 
 .. _chiusura-della-transazione-presso-il-psp:
 
-Chiusura della transazione presso il PSP
+9.1.2.4 Chiusura della transazione presso il PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 L'ultimo passo del processo di pagamento attivato presso il PSP, come
@@ -614,7 +614,7 @@ dalle seguenti attività:
 
 .. _pagamento-spontaneo-presso-il-psp:
 
-Pagamento spontaneo presso il PSP
+9.1.2.5 Pagamento spontaneo presso il PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image7|
@@ -744,7 +744,7 @@ fornendo l'indicazione di generare e inviare all'EC una RT positiva.
 
 .. _interazioni-con-lutilizzatore-finale:
 
-Interazioni con l’utilizzatore finale
+9.1.2.6 Interazioni con l’utilizzatore finale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nelle interazioni con l’utilizzatore finale, sia che avvengano presso i
@@ -761,7 +761,7 @@ quale attestazione dell’avvenuto pagamento.
 
 .. _casi-di-errore-e-strategie-di-ripristino-1:
 
-Casi di errore e strategie di ripristino
+9.1.2.7 Casi di errore e strategie di ripristino
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image9|
@@ -819,7 +819,7 @@ il valore 9 (Pagamento eseguito in assenza di RPT).
 
 .. _processo-di-storno-del-pagamento-eseguito:
 
-Processo di storno del pagamento eseguito
+9.1.3 Processo di storno del pagamento eseguito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Qualora l’utilizzatore finale, a vario titolo, chieda la cancellazione
@@ -835,7 +835,7 @@ Creditore, per il *workflow* dettagliato si faccia riferimento al :ref:`§ 8.1.3
 
 .. _processo-di-revoca-della-ricevuta-telematica:
 
-Processo di revoca della Ricevuta Telematica
+9.1.4 Processo di revoca della Ricevuta Telematica
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il NodoSPC permette di gestire i servizi telematici per le richieste di
@@ -910,7 +910,7 @@ accettarla o rifiutarla;
 
 .. _processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditore:
 	
-Processo di avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
+9.1.5 Processo di avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La funzione di avvisatura digitale su iniziativa dell'Ente Creditore
@@ -926,7 +926,7 @@ dettagliato si faccia riferimento al :ref:`§ 8.1.6 <processo-di-avvisatura-digi
 
 .. _processo-di-avvisatura-digitale-pull-verifica-della-posizione-debitoria:
 
-Processo di avvisatura digitale *pull* (verifica della posizione debitoria)
+9.1.6 Processo di avvisatura digitale *pull* (verifica della posizione debitoria)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il sistema mette a disposizione apposite funzioni affinché la "posizione
@@ -999,7 +999,7 @@ debitoria appena interrogata.
 
 .. _processo-di-notifica-di-chiusura-delle-operazioni-pendenti:
 
-Processo di notifica di chiusura delle operazioni pendenti
+9.1.7 Processo di notifica di chiusura delle operazioni pendenti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per "operazioni pendenti" si intendono quelle operazioni associate a RPT
@@ -1054,7 +1054,7 @@ essere elaborate.
 
 .. _interfacce-web-service-e-dettaglio-azioni-soap:
 
-Interfacce Web service e dettaglio azioni SOAP
+9.2 Interfacce Web service e dettaglio azioni SOAP
 ----------------------------------------------
 
 Per gestire l'interazione Prestatori di servizi di pagamento e Nodo dei
@@ -1103,7 +1103,7 @@ standard "de facto" degli URL http:
 
 .. _invio-delle-richieste-di-pagamento-al-psp:
 
-Invio delle Richieste di pagamento al PSP
+9.2.1 Invio delle Richieste di pagamento al PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image13|
@@ -1159,7 +1159,7 @@ PSP di riferimento, i PSP rispondono alle richieste.
 
 .. _pspinviarpt:
 
-pspInviaRPT
+9.2.1.1 pspInviaRPT
 ~~~~~~~~~~~
 
 Con questa primitiva il NodoSPC invia al PSP la RPT ricevuta dall'Ente
@@ -1236,7 +1236,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _pspinviacarrellorpt:
 
-pspInviaCarrelloRPT
+9.2.1.2 pspInviaCarrelloRPT
 ~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il Nodo dei Pagamenti-SPC invia al PSP un insieme
@@ -1321,7 +1321,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _pspinviacarrellorptcarte:
 
-pspInviaCarrelloRPTCarte
+9.2.1.3 pspInviaCarrelloRPTCarte
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il Nodo dei Pagamenti-SPC invia al PSP un insieme
@@ -1405,7 +1405,7 @@ Di seguito i possibili valori del dato **faultBean**.faultCode:
 
 .. _pspchiediavanzamentorpt:
 
-pspChiediAvanzamentoRPT
+9.2.1.4 pspChiediAvanzamentoRPT
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il Nodo dei Pagamenti-SPC interroga il PSP sullo
@@ -1461,7 +1461,7 @@ Fault String: *Richiesta RPT: rifiutata per la chiave*
 
 .. _generazione-e-inoltro-delle-rt-al-nodo-dei-pagamenti-spc:
 
-Generazione e inoltro delle RT al Nodo dei Pagamenti-SPC
+9.2.2 Generazione e inoltro delle RT al Nodo dei Pagamenti-SPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image14|
@@ -1510,7 +1510,7 @@ h. *pspChiediListaRT*, con il quale il Nodo interroga il PSP per avere
 
 .. _nodoinviart:
    
-nodoInviaRT
+9.2.2.1 nodoInviaRT
 ~~~~~~~~~~~
 
 Nell'ambito del meccanismo di "RT *push*", la primitiva sottomette al
@@ -1601,7 +1601,7 @@ I parametri sono tutti obbligatori.
 
 .. _pspchiedirt:
 
-pspChiediRT
+9.2.2.2 pspChiediRT
 ~~~~~~~~~~~
 
 Nell'ambito del meccanismo di "RT *pull*", con questa primitiva il Nodo
@@ -1650,7 +1650,7 @@ Fault String: *Richiesta RPT: RT non disponibile per la chiave*
 
 .. _pspinviaackrt:
 
-pspInviaAckRT
+9.2.2.3 pspInviaAckRT
 ~~~~~~~~~~~~~
 
 Nell'ambito del meccanismo di "RT *pull*", con questa primitiva il Nodo
@@ -1713,7 +1713,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _pspchiedilistart:
 
-pspChiediListaRT
+9.2.2.4 pspChiediListaRT
 ~~~~~~~~~~~~~~~~
 
 Nell'ambito del meccanismo di "RT *pull*", con questa primitiva il Nodo
@@ -1763,7 +1763,7 @@ Fault String: *Identificativo richiedente non valido*
 
 .. _pagamenti-in-attesa-e-richiesta-di-generazione-della-rpt:
 
-Pagamenti in attesa e richiesta di generazione della RPT
+9.2.3 Pagamenti in attesa e richiesta di generazione della RPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con riferimento a quanto indicato al :ref:`§ 9.1.2 <pagamenti-attivati-presso-il-psp>` per la gestione dei
@@ -1805,7 +1805,7 @@ l. *nodoChiediNumeroAvviso*, con la quale il PSP richiede al Nodo dei
 
 .. _nodoverificarpt:
 
-nodoVerificaRPT
+9.2.3.1 nodoVerificaRPT
 ~~~~~~~~~~~~~~~
 
 Il PSP, a fronte della richiesta di pagamento ricevuta dall’utilizzatore
@@ -1914,7 +1914,7 @@ faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`)
 
 .. _nodoattivarpt:
 
-nodoAttivaRPT
+9.2.3.2 nodoAttivaRPT
 ~~~~~~~~~~~~~
 
 Con questa primitiva il PSP richiede al Nodo dei Pagamenti-SPC l'inoltro
@@ -2047,7 +2047,7 @@ faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`)
 
 .. _nodoallegarpt:
 
-nodoAllegaRPT
+9.2.3.3 nodoAllegaRPT
 ~~~~~~~~~~~~~
 
 **Si ricorda che l’attivazione sul sistema pagoPA della primitiva
@@ -2155,7 +2155,7 @@ faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`)
 
 .. _nodochiedinumeroavviso:
 
-nodoChiediNumeroAvviso
+9.2.3.4 nodoChiediNumeroAvviso
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP richiede al Nodo dei Pagamenti-SPC il Numero
@@ -2261,7 +2261,7 @@ faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`)
 
 .. _revoca-delle-rt:
 
-Revoca delle RT
+9.2.4 Revoca delle RT
 ~~~~~~~~~~~~~~~
 
 Il Nodo dei Pagamenti-SPC permette di gestire i servizi telematici per
@@ -2287,7 +2287,7 @@ n. *pspInviaRispostaRevoca*, con la quale il PSP riceve dal Nodo l’esito
 
 .. _nodoinviarichiestarevoca:
 
-nodoInviaRichiestaRevoca
+9.2.4.1 nodoInviaRichiestaRevoca
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il Nodo dei Pagamenti-SPC riceve dal PSP la
@@ -2360,7 +2360,7 @@ faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`)
 
 .. _pspinviarispostarevoca:
 
-pspInviaRispostaRevoca
+9.2.4.2 pspInviaRispostaRevoca
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP riceve dal Nodo dei Pagamenti-SPC l’esito
@@ -2398,7 +2398,7 @@ Di seguito i possibili valori del dato **faultBean**.faultCode:
 
 .. _storno-del-pagamento:
 
-Storno del pagamento
+9.2.5 Storno del pagamento
 ~~~~~~~~~~~~~~~~~~~~
 
 Il Nodo dei Pagamenti-SPC permette di gestire i servizi telematici per
@@ -2442,7 +2442,7 @@ specifico.
 
 .. _pspinviarichiestastorno:
 
-pspInviaRichiestaStorno
+9.2.5.1 pspInviaRichiestaStorno
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP riceve dal Nodo dei Pagamenti-SPC la
@@ -2487,7 +2487,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _nodoinviaesitostorno:
 
-nodoInviaEsitoStorno
+9.2.5.2 nodoInviaEsitoStorno
 ~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il NodoSPC riceve dal PSP l’esito dello storno del
@@ -2561,7 +2561,7 @@ faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`)
 
 .. _invio-flusso-di-rendicontazione:
 
-Invio flusso di rendicontazione
+9.2.6 Invio flusso di rendicontazione
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per favorire la massima efficienza ed efficacia della piattaforma dei
@@ -2650,7 +2650,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _avvisatura-digitale-push-su-iniziativa-dellente-creditore:
 
-Avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
+9.2.7 Avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La funzione di avvisatura digitale in modalità *push* è un servizio
@@ -2686,7 +2686,7 @@ utilizzano il protocollo *https* per il trasporto.
 
 .. _pspinviaavvisodigitale:
 
-pspInviaAvvisoDigitale
+9.2.7.1 pspInviaAvvisoDigitale
 ~~~~~~~~~~~~~~~~~~~~~~
 
 La primitiva **pspInviaAvvisoDigitale** fa parte del servizio (web
@@ -2733,7 +2733,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _nodoaggiornaiscrizioniavvisatura:
 
-nodoAggiornaIscrizioniAvvisatura
+9.2.7.2 nodoAggiornaIscrizioniAvvisatura
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La primitiva è di tipo sincrono e prevede che il PSP invii le iscrizioni
@@ -2799,7 +2799,7 @@ iscrizione precedente)
 
 .. _avvisatura-digitale-pull-verifica-della-posizione-debitoria:
 
-Avvisatura digitale *pull* (verifica della posizione debitoria)
+9.2.8 Avvisatura digitale *pull* (verifica della posizione debitoria)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il sistema mette a disposizione apposite funzioni affinché la "posizione
@@ -2827,7 +2827,7 @@ protocollo *https* per il trasporto.
 
 .. _nodochiedielencoavvisidigitali:
 
-nodoChiediElencoAvvisiDigitali
+9.2.8.1 nodoChiediElencoAvvisiDigitali
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La primitiva **nodoChiediElencoAvvisiDigitali** fa parte del servizio
@@ -2920,7 +2920,7 @@ faultBean.description al :ref:`§ 10.1 <la-struttura-faultbean>`).
 
 .. _notifica-di-chiusura-delle-operazioni-pendenti:
 
-Notifica di chiusura delle operazioni pendenti
+9.2.9 Notifica di chiusura delle operazioni pendenti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per la "notifica di chiusura" delle operazioni pendenti, intese come
@@ -2948,7 +2948,7 @@ u. *pspNotificaCancellazioneRPT*, con la quale il Nodo dei Pagamenti-SPC
 
 .. _pspnotificacancellazionerpt:
 
-pspNotificaCancellazioneRPT
+9.2.9.1 pspNotificaCancellazioneRPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il Nodo dei Pagamenti-SPC comunica al PSP
@@ -2982,7 +2982,7 @@ di cancellazione della RPT.
 
 .. _interrogazione-delle-basi-dati-del-nodospc:
 
-Interrogazione delle basi dati del NodoSPC
+9.2.10 Interrogazione delle basi dati del NodoSPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In questo paragrafo sono specificati i metodi che il nodo dei Pagamenti
@@ -3013,7 +3013,7 @@ x. *nodoChiediCatalogoServizi*, con la quale il PSP può scaricare dagli
    
 .. _nodochiediinformativapa:
 
-nodoChiediInformativaPA
+9.2.10.1 nodoChiediInformativaPA
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP richiede al NodoSPC le informazioni legate
@@ -3066,7 +3066,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _nodochieditemplateinformativapsp:
 
-nodoChiediTemplateInformativaPSP
+9.2.10.2 nodoChiediTemplateInformativaPSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP può scaricare dagli archivi del NodoSPC
@@ -3127,7 +3127,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _nodochiedicatalogoservizi:
 
-nodoChiediCatalogoServizi
+9.2.10.3 nodoChiediCatalogoServizi
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP richiede al NodoSPC il Catalogo dei Servizi
@@ -3181,7 +3181,7 @@ Di seguito i possibili valori dell'elemento **faultBean**.faultCode:
 
 .. _ricezione-totali-di-traffico:
 
-Ricezione Totali di Traffico
+9.2.11 Ricezione Totali di Traffico
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per la gestione dei meccanismi di invio dei flussi relativi ai "Totali
@@ -3220,7 +3220,7 @@ meccanismi di invio dei flussi relativi ai "Totali di Traffico”.
 
 .. _nodochiedielencoquadraturepsp:
 
-nodoChiediElencoQuadraturePSP
+9.2.11.1 nodoChiediElencoQuadraturePSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP richiede al NodoSPC l’elenco dei flussi
@@ -3278,7 +3278,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _nodochiediquadraturapsp:
 
-nodoChiediQuadraturaPSP
+9.2.11.2 nodoChiediQuadraturaPSP
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il PSP richiede al NodoSPC uno specifico flusso
@@ -3327,7 +3327,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _interfacce-http-di-re-direzione-per-il-pagamento-immediato:
 
-Interfacce HTTP di re-direzione per il pagamento immediato
+9.3 Interfacce HTTP di re-direzione per il pagamento immediato
 ----------------------------------------------------------
 
 Nel presente paragrafo saranno date indicazioni circa i parametri da
@@ -3348,7 +3348,7 @@ del Sistema.
 
 .. _interfacce-http-di-re-direzione-per-il-pagamento-immediato:
 
-Re-direzione dal Web-FESP verso il Portale PSP
+9.3.1 Re-direzione dal Web-FESP verso il Portale PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Portale del PSP viene richiamato dalla componente Web-FESP del
@@ -3430,7 +3430,7 @@ sono specificati nella Tabella 41.
 
 .. _re-direzione-dal-portale-psp-verso-il-web-fesp:
 
-Re-direzione dal Portale PSP verso il Web-FESP
+9.3.2 Re-direzione dal Portale PSP verso il Web-FESP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lo URL restituito dal Portale PSP al browser dell’utilizzatore finale,
@@ -3501,7 +3501,7 @@ Tabella 42.
 
 .. _interfacce-per-la-componente-wrapper-mybank:
 
-Interfacce per la componente Wrapper MyBank
+9.4 Interfacce per la componente Wrapper MyBank
 -------------------------------------------
 
 Con riferimento al modello di funzionamento del servizio MyBank
@@ -3512,7 +3512,7 @@ Pagamenti-SPC ed il *Routing Service* di MyBank.
 
 .. _colloquio-con-la-componente-wrapper-mybank:
 
-Colloquio con la componente “Wrapper MyBank”
+9.4.1 Colloquio con la componente “Wrapper MyBank”
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il colloquio tra la componente “Wrapper MyBank” del NodoSPC ed il
@@ -3544,7 +3544,7 @@ contesto del NodoSPC sinonimo di PSP dell’utilizzatore finale).
 
 .. _messaggio-http-redirect-di-avvio-pagamento-verso-initiating-party:
 
-Messaggio HTTP-redirect di avvio pagamento verso *Initiating Party*
+9.4.2 Messaggio HTTP-redirect di avvio pagamento verso *Initiating Party*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La componente *Initiating Party* viene attivata dalla componente
@@ -3603,7 +3603,7 @@ informazioni indicate in Tabella 43.
 
 .. _stringhe-url-utilizzate-per-la-redirect:
 
-Stringhe URL utilizzate per la "redirect".
+9.4.2.1 Stringhe URL utilizzate per la "redirect".
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Si fa presente che in questa fase il contenuto dei campi URLDONE,
@@ -3619,7 +3619,7 @@ Encoding” (vedasi link:
 
 .. _identificativo-per-validation-service:
 
-Identificativo per Validation Service
+9.4.2.2 Identificativo per Validation Service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il dato IDVS contiene il "Participant ID" MyBank del PSP (*Buyer Bank*)
@@ -3631,7 +3631,7 @@ Creditore.
 
 .. _messaggio-http-redirect-di-esito-pagamento-da-initiating-party:
 
-Messaggio HTTP-redirect di esito pagamento da *Initiating Party*
+9.4.3 Messaggio HTTP-redirect di esito pagamento da *Initiating Party*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con tale azione la componente *Initiating Party* comunica l’esito
@@ -3655,7 +3655,7 @@ sistema per verificare lo stato di eventuali ordini rimasti in stato
 
 .. _composizione-dei-messaggi-di-risposta:
 
-Composizione dei messaggi di risposta
+9.4.3.1 Composizione dei messaggi di risposta
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il messaggio di esito pagamento della transazione contiene le
@@ -3728,7 +3728,7 @@ l'esito della transazione sia negativo.
 
 .. _messaggio-http-di-richiesta-della-situazione-di-un-ordine-verso-initiating-party:
 
-Messaggio HTTP di richiesta della situazione di un ordine verso *Initiating Party*
+9.4.4 Messaggio HTTP di richiesta della situazione di un ordine verso *Initiating Party*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa azione la componente “Wrapper MyBank” può verificare lo stato
@@ -3896,7 +3896,7 @@ caratteristiche riportate in Tabella 47.
 
 .. _calcolo-e-verifica-del-message-authentication-code-mac:
 
-Calcolo e verifica del Message Authentication Code (MAC)
+9.4.5 Calcolo e verifica del Message Authentication Code (MAC)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Al fine di rendere sicuro il colloquio tra le componenti *Initiating Party*
@@ -3931,7 +3931,7 @@ indistintamente.
 
 .. _mac-di-richiesta-pagamento:
 
-MAC di richiesta pagamento
+9.4.5.1 MAC di richiesta pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per i messaggi di richiesta pagamento, con riferimento al :ref:`§ 9.4.2 <messaggio-http-redirect-di-avvio-pagamento-verso-initiating-party>`, 
@@ -3972,7 +3972,7 @@ fondamentale.
 
 .. _mac-di-confermaesito-pagamento:
 
-MAC di conferma/esito pagamento
+9.4.5.2 MAC di conferma/esito pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per i messaggi di conferma/esito pagamento, con riferimento al :ref:`§ 9.4.3 <messaggio-http-redirect-di-esito-pagamento-da-initiating-party>`, 
@@ -4013,7 +4013,7 @@ e sarà valorizzato con la costante “NULL”.
 
 .. _mac-di-richiesta-della-situazione-di-un-ordine:
 
-MAC di richiesta della situazione di un ordine
+9.4.5.3 MAC di richiesta della situazione di un ordine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per i messaggi di richiesta dello stato di un ordine, con riferimento al
@@ -4043,7 +4043,7 @@ fondamentale.
 
 .. _mac-di-risposta-della-situazione-di-un-ordine:
 
-MAC di risposta della situazione di un ordine
+9.4.5.4 MAC di risposta della situazione di un ordine
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per i messaggi di risposta dello stato di un ordine, con riferimento al
@@ -4064,7 +4064,7 @@ fondamentale.
 
 .. _glossario-informazioni:
 
-Glossario informazioni
+9.4.6 Glossario informazioni
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Al fine di facilitare la comprensione del testo, nella Tabella 50 è
