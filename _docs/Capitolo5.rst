@@ -9,8 +9,8 @@
 
 .. _messaggi-e-flussi-informativi:
 
-Messaggi e flussi informativi
-=============================
+5. Messaggi e flussi informativi
+================================
 
 Di seguito sono descritti i documenti che costituiscono la
 rappresentazione telematica delle informazioni che dovranno essere
@@ -34,8 +34,8 @@ Nel presente capitolo sono inoltre riportate le informazioni relative a
 
 .. _formato-dei-messaggi:
 
-Formato dei messaggi
---------------------
+5.1 Formato dei messaggi
+------------------------
 
 I formati adottati devono possedere almeno i seguenti requisiti:
 
@@ -71,8 +71,8 @@ che presentino le informazioni in modo fedele alla struttura.
 
 .. _soggetti:
 
-Soggetti
---------
+5.2 Soggetti
+------------
 
 Sono di seguito elencati i soggetti coinvolti nel processo di pagamento:
 
@@ -97,8 +97,8 @@ d. Istituto Attestante: rappresenta il Prestatore di Servizi di
 
 .. _formato-dei-dati:
    
-Formato dei dati
-----------------
+5.3 Formato dei dati
+--------------------
 
 Le colonne *Liv,* *Genere,* *Occ*, *Len* e *UNIFI* assumono i seguenti
 significati:
@@ -137,8 +137,8 @@ significati:
 
 .. _richiesta-pagamento-telematico-rpt:
 
-Richiesta Pagamento Telematico (RPT)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.1 Richiesta Pagamento Telematico (RPT)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il documento informatico predisposto da un Ente Creditore o da un suo
 intermediario per consentire all'utilizzatore finale di richiedere, al
@@ -681,8 +681,8 @@ a favore dello stesso Ente Creditore.
 
 .. _ricevuta-telematica-rt:
 
-Ricevuta Telematica (RT)
-~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.2 Ricevuta Telematica (RT)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il documento informatico rilasciato a cura dell’organizzazione che
 effettua l’operazione di pagamento di somme nei confronti di enti
@@ -1101,8 +1101,8 @@ pubblici su ordine dell'utilizzatore finale.
 
 .. _richiesta-di-revoca-rr:
 
-Richiesta di Revoca (RR)
-~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.3 Richiesta di Revoca (RR)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il documento informatico inviato dal prestatore di servizi di
 pagamento all’Ente Creditore per richiedere la revoca di un pagamento
@@ -1256,8 +1256,8 @@ di pagamento per richiedere lo “storno” di un pagamento.
 
 .. _esito-della-revoca-er:
 
-Esito della Revoca (ER)
-~~~~~~~~~~~~~~~~~~~~~~~
+5.3.4 Esito della Revoca (ER)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il documento informatico inviato dall’Ente Creditore al prestatore di
 servizi di pagamento per indicare l’esito di una richiesta di revoca di
@@ -1397,8 +1397,8 @@ relativa allo “storno” di un pagamento.
 
 .. _flusso-di-rendicontazione:
 
-Flusso di rendicontazione
-~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.5 Flusso di rendicontazione
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il flusso informatico inviato dal prestatore di servizi di pagamento o
 dal suo intermediario al Nodo dei Pagamenti-SPC e che quest’ultimo invia
@@ -1416,8 +1416,8 @@ dei gestori di pubblici servizi” alle quali si deve fare riferimento.
 
 .. _tabella-delle-controparti:
 
-Tabella delle controparti
-~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.6 Tabella delle controparti
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 La “*Tabella delle controparti*” è il documento informatico che
@@ -1634,8 +1634,8 @@ disposizione (:ref:`vedi § 9.2.10 della Sezione III <interrogazione-delle-basi-
 
 .. _informazioni-inviate-dagli-enti-creditori:
 
-Informazioni inviate dagli Enti Creditori
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.6.1 Informazioni inviate dagli Enti Creditori
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La “*Tabella delle controparti*” viene prodotta sulla base delle
 informazioni inviate dai singoli Enti Creditori all’Agenzia per l’Italia
@@ -1800,8 +1800,8 @@ in Tabella 8.
 
 .. _catalogo-dati-informativi:
 
-Catalogo Dati Informativi
-~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.7 Catalogo Dati Informativi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il catalogo dei dati informativi è lo strumento con il quale il PSP
 comunica ai propri potenziali clienti, utilizzatori del sistema pagoPA,
@@ -2492,8 +2492,8 @@ Digitale.
 
 .. _flusso-totali-di-traffico-per-gli-enti-creditori:
 
-Flusso “Totali di Traffico” per gli Enti Creditori
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.8 Flusso “Totali di Traffico” per gli Enti Creditori
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il flusso informatico inviato dal Nodo dei Pagamenti-SPC all’Ente
 Creditore o al suo intermediario e contenente tutte le interazioni (RPT
@@ -2648,8 +2648,8 @@ richiedente.
 
 .. _flusso-totali-di-traffico-per-i-prestatori-di-servizi-di-pagamento:
 
-Flusso “Totali di Traffico” per i prestatori di servizi di pagamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.9 Flusso “Totali di Traffico” per i prestatori di servizi di pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il flusso informatico inviato dal Nodo dei Pagamenti-SPC al prestatore
 di servizi di pagamento o al suo intermediario contenente tutte le
@@ -2797,8 +2797,8 @@ l'elemento identificativoDominioDestinatario.
 
 .. _messaggio-di-conferma-ricezione-della-rt-ack:
 
-Messaggio di conferma ricezione della RT (ACK)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.10 Messaggio di conferma ricezione della RT (ACK)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 È il documento informatico con il quale il Nodo dei Pagamenti-SPC
 conferma al prestatore di servizi di pagamento la ricezione della RT
@@ -2894,8 +2894,8 @@ gli elementi componenti il messaggio stesso, ora indicati nella Tabella
 
 .. _catalogo-dei-servizi:
 
-Catalogo dei servizi
-~~~~~~~~~~~~~~~~~~~~
+5.3.11 Catalogo dei servizi
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il “*Catalogo dei Servizi*” è il documento informatico che contiene
 l’elenco dei servizi, attivati dagli Enti Creditori, utilizzabili
@@ -2988,8 +2988,8 @@ a pagina 99).
 
 .. _Ddati-specifici-del-servizio-nel-caso-duso-della-tassa-automobilistica:
 
-Dati specifici del servizio nel caso d'uso della Tassa Automobilistica
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.3.11.1 Dati specifici del servizio nel caso d'uso della Tassa Automobilistica
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nella Tabella 18 sono specificate le informazioni che il PSP deve
 fornire per il pagamento della Tassa Automobilistica e che devono essere
@@ -3046,8 +3046,8 @@ con la struttura veicoloConTelaio.
 
 .. _avvisatura-digitale:
 
-Avvisatura digitale
--------------------
+5.4 Avvisatura digitale
+-----------------------
 
 Di seguito sono descritti gli oggetti che costituiscono la
 rappresentazione telematica delle informazioni che dovranno essere
@@ -3064,8 +3064,8 @@ scambiate nell’ambito del processo di avvisatura digitale in modalità
 
 .. _avviso-digitale:
 
-Avviso digitale
-~~~~~~~~~~~~~~~
+5.4.1 Avviso digitale
+~~~~~~~~~~~~~~~~~~~~~
 
 È un oggetto informatico, predisposto da un Ente Creditore o da un suo
 intermediario, per consentire l’invio al Nodo dei Pagamenti-SPC delle
@@ -3219,8 +3219,8 @@ in formato digitale.
 
 .. _esito-inoltro-di-avviso-digitale:
 
-Esito inoltro di Avviso digitale
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.2 Esito inoltro di Avviso digitale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 È un oggetto informatico, predisposto dal Nodo dei Pagamenti-SPC, per
@@ -3295,8 +3295,8 @@ di avviso di pagamento in formato digitale.
 
 .. _file-xml-scambiati-con-lente-creditore:
 
-File XML scambiati con l’Ente Creditore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.3 File XML scambiati con l’Ente Creditore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La comunicazione delle richieste via file transfer di avviso digitale
 tra Ente Creditore e Nodo dei Pagamenti-SPC è prevista mediante scambio
@@ -3309,8 +3309,8 @@ seguito.
 
 .. _file-delle-richieste-di-inoltro-dellavviso-digitale-e-di-esito:
 
-File delle richieste di inoltro dell’avviso digitale e di esito
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.3.1 File delle richieste di inoltro dell’avviso digitale e di esito
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lo schema di Tabella 19 definisce la struttura XML che l’Ente Creditore
 deve utilizzare per comporre il file contenente le richieste di inoltro
@@ -3376,8 +3376,8 @@ in un flusso scambiato è fissato in 100.000.
 
 .. _file-di-segnalazione-di-presa-in-carico:
 
-File di segnalazione di presa in carico
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.3.2 File di segnalazione di presa in carico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lo schema di Tabella 23 rappresenta il file, predisposto da un Ente
 Creditore o dal Nodo dei Pagamenti-SPC, per segnalare alla controparte
@@ -3405,8 +3405,8 @@ del loro esito.
 
 .. _scambio-informazioni-via-web-service:
    
-Scambio informazioni via web service
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.4 Scambio informazioni via web service
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Lo scambio delle informazioni relative all'avvisatura digitale tra Nodo
@@ -3430,8 +3430,8 @@ componenti i seguenti parametri:
 
 .. _invio-dellavviso-digitale-al-nodospc:
    
-Invio dell’avviso digitale al NodoSPC
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.4.1 Invio dell’avviso digitale al NodoSPC
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le informazioni elencate di seguito (vedi Tabella 26) definiscono il
 parametro avvisoDigitaleWS presente nella *request* della primitiva
@@ -3463,8 +3463,8 @@ servizio.
 
 .. _recapito-dellavviso-digitale-ai-psp:
    
-Recapito dell’avviso digitale ai PSP
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.4.2 Recapito dell’avviso digitale ai PSP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le informazioni elencate di seguito (vedi Tabella 26) definiscono il
 parametro avvisoDigitale presente nella *request* della primitiva
@@ -3482,8 +3482,8 @@ all'interno del WSDL del servizio.
 
 .. _notifica-delliscrizione-al-servizio-di-avvisatura-digitale:
    
-Notifica dell’iscrizione al servizio di avvisatura digitale
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.4.3 Notifica dell’iscrizione al servizio di avvisatura digitale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le informazioni elencate di seguito definiscono la componente
 "datiNotifica" (parametro I-5) presente nella *request* della primitiva
@@ -3512,8 +3512,8 @@ formalmente all'interno del WSDL del servizio.
    
 .. _richiesta-posizione-debitoria-presso-un-ente-creditore:   
 
-Richiesta posizione debitoria presso un Ente Creditore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5.4.4.4 Richiesta posizione debitoria presso un Ente Creditore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le informazioni elencate in Tabella 28 definiscono il parametro O-2
 elencoAvvisiDigitali presente nella *response* della primitiva
