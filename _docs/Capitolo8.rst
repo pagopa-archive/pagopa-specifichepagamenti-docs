@@ -8,8 +8,8 @@
 
 .. _interazione-tra-ente-creditore-e-nodospc:
 
-Interazione tra Ente Creditore e NodoSPC
-========================================
+8. Interazione tra Ente Creditore e NodoSPC
+===========================================
 
 Questo capitolo descrive le interfacce utilizzate nella cooperazione
 applicativa tra Nodo dei Pagamenti-SPC e Enti Creditori aderenti. L'uso
@@ -42,8 +42,8 @@ specificità dei protocolli di trust e comunicazione.
 
 .. _workflow-dei-modelli-di-pagamento-e-dei-processi-accessoricap8:
 
-*Workflow* dei modelli di pagamento e dei processi accessori
-------------------------------------------------------------
+8.1 *Workflow* dei modelli di pagamento e dei processi accessori
+----------------------------------------------------------------
 
 I paragrafi seguenti descrivono a livello generale, valide quindi per
 tutti i soggetti coinvolti, le interazioni tra gli Enti Creditori, il
@@ -58,7 +58,7 @@ Creditori. Sono, peraltro, qui descritti con meno dettagli anche i
 
 .. _pagamenti-attivati-presso-lente-creditorecap8:
 
-Pagamenti attivati presso l'Ente Creditore
+8.1.1 Pagamenti attivati presso l'Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image1|
@@ -177,7 +177,7 @@ sia per quelli con autorizzazione non contestuale gestita dal PSP
 
 .. _workflow-di-check-out-e-pagamento:
 
-Workflow di Check-out e pagamento
+8.1.1.1 Workflow di Check-out e pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Come anticipato nel paragrafo precedente, i cambiamenti ai processi
@@ -288,7 +288,7 @@ previsti per il workflow analizzato in precedenza.
 
 .. _invio-carrello-al-psp:
 
-Invio carrello al PSP
+8.1.1.2 Invio carrello al PSP
 ~~~~~~~~~~~~~~~~~~~~~
 
 |image4|
@@ -374,7 +374,7 @@ costituito da un'unica e sola RPT.
 
 .. _workflow-di-chiusura-della-transazione-presso-ec:
 
-Workflow di chiusura della transazione presso EC
+8.1.1.3 Workflow di chiusura della transazione presso EC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Come già accaduto per il paragrafo precedente, le attività in esame
@@ -547,7 +547,7 @@ fare riferimento allo Scenario a) - Pagamento con carta.
 
 .. _controllo-circa-lo-stato-di-avanzamento-di-un-pagamento:
 
-Controllo circa lo stato di avanzamento di un pagamento
+8.1.1.4 Controllo circa lo stato di avanzamento di un pagamento
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In alcune fasi del ciclo di vita del pagamento, soprattutto per quanto
@@ -612,7 +612,7 @@ per risolvere problematiche di errore (:ref:`si veda il successivo paragrafo
 
 .. _avvertenze-per-la-predisposizione-e-linvio-delle-richieste-di-pagamento-telematiche:
 
-Avvertenze per la predisposizione e l’invio delle Richieste di Pagamento Telematiche
+8.1.1.5 Avvertenze per la predisposizione e l’invio delle Richieste di Pagamento Telematiche
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La modifica del *workflow* del pagamento attivato presso l’Ente
@@ -671,7 +671,7 @@ b) usare la primitiva **nodoInviaCarrelloRPT** (in una prima fase è
 
 .. _casi-di-errore-e-strategie-di-ripristino-per-lente-creditore:
 
-Casi di errore e strategie di ripristino per l’Ente Creditore
+8.1.1.6 Casi di errore e strategie di ripristino per l’Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Dall'analisi dell’interazione complessiva esposta nei precedenti
@@ -729,7 +729,7 @@ risultati:
 
 .. _pagamento-attivato-presso-il-psp:
    
-Pagamento attivato presso il PSP
+8.1.2 Pagamento attivato presso il PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Questo modello di pagamento, conosciuto anche come "Modello 3" e già
@@ -753,7 +753,7 @@ Per maggiori dettagli circa il *workflow* analitico si :ref:`veda il § 9.1.2 <p
 
 .. _pagamento-spontaneo-presso-il-psp:
 
-Pagamento spontaneo presso il PSP
+8.1.2.1 Pagamento spontaneo presso il PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Questo modello di pagamento, conosciuto anche come "Modello 4" e già
@@ -784,7 +784,7 @@ Per maggiori dettagli circa il *workflow* analitico del Modello 4 :ref:`si veda 
 
 .. _processo-di-storno-del-pagamento-eseguitocap8:
 
-Processo di storno del pagamento eseguito
+8.1.3 Processo di storno del pagamento eseguito
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image9|
@@ -867,7 +867,7 @@ altrimenti restituisce un errore specifico.
 
 .. _processo-di-revoca-della-ricevuta-telematica:
 
-Processo di revoca della Ricevuta Telematica
+8.1.4 Processo di revoca della Ricevuta Telematica
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il NodoSPC permette di gestire i servizi telematici per le richieste di
@@ -882,7 +882,7 @@ Poiché il processo di revoca della RT si attiva presso il PSP, per il
 
 .. _processo-di-riconciliazione-dei-pagamenti-eseguiti:
 
-Processo di riconciliazione dei pagamenti eseguiti
+8.1.5 Processo di riconciliazione dei pagamenti eseguiti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Secondo quanto previsto dalle Linee guida e dal suo Allegato A
@@ -977,7 +977,7 @@ in funzione della configurazione dell'Ente Creditore:
 
 .. _processo-di-avvisatura-digitale-push-su-iniziativa-dellente-creditorecap8:
 
-Processo di avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
+8.1.6 Processo di avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La funzione di avvisatura digitale su iniziativa dell'Ente Creditore
@@ -995,7 +995,7 @@ avviso.
 
 .. _gestione-del-singolo-avviso-digitale:
 
-Gestione del singolo avviso digitale
+8.1.6.1 Gestione del singolo avviso digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La componente di avvisatura “*push*” del NodoSPC, che sovrintende
@@ -1023,7 +1023,7 @@ individuato).
 
 .. _processo-di-avvisatura-in-modalità-file-transfer:
 
-Processo di avvisatura in modalità File Transfer
+8.1.6.2 Processo di avvisatura in modalità File Transfer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La Figura 35 a pagina 138 rappresenta graficamente il processo che
@@ -1127,7 +1127,7 @@ attivare le procedure di svecchiamento e cancellazione degli avvisi.
 
 .. _processo-di-avvisatura-in-modalità-web-service:
 
-Processo di avvisatura in modalità Web service
+8.1.6.3 Processo di avvisatura in modalità Web service
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La Figura 34 rappresenta graficamente il processo che prevede l'inoltro
@@ -1198,7 +1198,7 @@ previsti per questi canali.
 
 .. _casi-di-errore-e-strategie-di-ripristino:
 
-Casi di errore e strategie di ripristino
+8.1.6.4 Casi di errore e strategie di ripristino
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nel caso di *timeout* nel corso di un invio e di altre casistiche dove
@@ -1211,7 +1211,7 @@ e gestire correttamente l’inoltro al destinatario.
 
 .. _processo-di-avvisatura-digitale-pull-verifica-della-posizione-debitoria:
 
-Processo di avvisatura digitale *pull* (verifica della posizione debitoria)
+8.1.7 Processo di avvisatura digitale *pull* (verifica della posizione debitoria)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il sistema mette a disposizione apposite funzioni affinché la "posizione
@@ -1225,7 +1225,7 @@ riferimento al :ref:`§ 9.1.6 <processo-di-avvisatura-digitale-pull-verifica-del
 
 .. _processo-di-notifica-di-chiusura-delle-operazioni-pendenticap8:
 
-Processo di notifica di chiusura delle "operazioni pendenti"
+8.1.8 Processo di notifica di chiusura delle "operazioni pendenti"
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Le "operazioni pendenti" sono quelle associate a RPT positivamente
@@ -1245,7 +1245,7 @@ tale fattispecie (per la ricezione delle RT :ref:`vedi § 8.2.2 <ricezione-delle
 
 .. _interfacce-web-service-e-dettaglio-azioni-soapcap8:
 
-Interfacce Web service e dettaglio azioni SOAP
+8.2 Interfacce Web service e dettaglio azioni SOAP
 ----------------------------------------------
 
 Per gestire l'interazione tra Enti Creditori e Nodo dei Pagamenti-SPC
@@ -1285,7 +1285,7 @@ standard "de facto" degli URL http:
 
 .. _invio-e-richiesta-dello-stato-delle-rpt:
 
-Invio e richiesta dello stato delle RPT
+8.2.1 Invio e richiesta dello stato delle RPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con riferimento a tutti i modelli di pagamento previsti relativamente
@@ -1325,7 +1325,7 @@ e. **nodoChiediSceltaWISP**, restituisce l’insieme dei parametri
 
 .. _nodoinviarpt:
 
-nodoInviaRPT
+8.2.1.1 nodoInviaRPT
 ~~~~~~~~~~~~
 
 La primitiva sottomette al Nodo dei Pagamenti-SPC una (singola) RPT. La
@@ -1447,7 +1447,7 @@ funzione di faultBean.id:
 
 .. _nodoinviacarrellorpt:
 
-nodoInviaCarrelloRPT
+8.2.1.2 nodoInviaCarrelloRPT
 ~~~~~~~~~~~~~~~~~~~~
 
 La primitiva è utilizzabile solo per gestire il *workflow* del modello
@@ -1579,7 +1579,7 @@ funzione di faultBean.id:
 
 .. _nodochiedistatorpt:
 
-nodoChiediStatoRPT
+8.2.1.3 nodoChiediStatoRPT
 ~~~~~~~~~~~~~~~~~~
 
 La primitiva restituisce lo stato di una specifica RPT e dei suoi
@@ -1776,7 +1776,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _nodochiedilistapendentirpt:
 
-nodoChiediListaPendentiRPT
+8.2.1.4 nodoChiediListaPendentiRPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La primitiva restituisce una lista di attributi delle RPT positivamente
@@ -1848,7 +1848,7 @@ Di seguito i possibili valori dell'elemento faultBean.:
 
 .. _nodochiedisceltawisp:
 
-nodoChiediSceltaWISP
+8.2.1.5 nodoChiediSceltaWISP
 ~~~~~~~~~~~~~~~~~~~~
 
 Per l'utilizzo del servizio WISP 1.3 in emulazione, il cui processo di
@@ -1954,7 +1954,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _ricezione-delle-rt-e-richiesta-di-copia:
 
-Ricezione delle RT e richiesta di copia
+8.2.2 Ricezione delle RT e richiesta di copia
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con riferimento a tutti i modelli di pagamento previsti, per la gestione
@@ -1980,7 +1980,7 @@ g. **nodoChiediCopiaRT**, con la quale gli Enti Creditori aderenti
 
 .. _paainviart:
 
-paaInviaRT
+8.2.2.1 paaInviaRT
 ~~~~~~~~~~
 
 Questa primitiva deve essere esposta da ogni Ente Creditore ed è
@@ -2042,7 +2042,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _nodochiedicopiart:
 
-nodoChiediCopiaRT
+8.2.2.2 nodoChiediCopiaRT
 ~~~~~~~~~~~~~~~~~
 
 Con questa primitiva gli Enti Creditori possono richiedere la copia di
@@ -2113,7 +2113,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _pagamenti-in-attesa-e-richiesta-di-generazione-della-rptcap8:
 
-Pagamenti in attesa e richiesta di generazione della RPT
+8.2.3 Pagamenti in attesa e richiesta di generazione della RPT
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con riferimento al modello di pagamento attivato presso i PSP (:ref:`vedi §§ 2.2 <processo-di-pagamento-attivato-presso-il-psp>` e 
@@ -2168,7 +2168,7 @@ pagamento di ticket sanitario, ecc.
 
 .. _paaverificarpt:
 
-paaVerificaRPT
+8.2.3.1 paaVerificaRPT
 ~~~~~~~~~~~~~~
 
 La primitiva effettua soltanto verifiche sullo stato del pagamento in
@@ -2251,7 +2251,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _paaattivarpt:
 
-paaAttivaRPT
+8.2.3.2 paaAttivaRPT
 ~~~~~~~~~~~~
 
 I parametri della primitiva sono sostanzialmente gli stessi della
@@ -2386,7 +2386,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _paaallegarpt:
 
-paaAllegaRPT
+8.2.3.3 paaAllegaRPT
 ~~~~~~~~~~~~
 
 Con questa primitiva il Nodo dei Pagamenti-SPC richiede all’Ente
@@ -2481,7 +2481,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _paachiedinumeroavviso:
 
-paaChiediNumeroAvviso
+8.2.3.4 paaChiediNumeroAvviso
 ~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva il Nodo dei Pagamenti-SPC richiede all'Ente
@@ -2565,7 +2565,7 @@ Di seguito i possibili valori del dato **faultBean**.faultCode:
 
 .. _revoca-della-rt:
 
-Revoca della RT
+8.2.4 Revoca della RT
 ~~~~~~~~~~~~~~~
 
 |image17|
@@ -2591,7 +2591,7 @@ rispetto alle primitive di risposta (vedi *sequence* *diagram* di Figura
 
 .. _paainviarichiestarevoca:
 
-paaInviaRichiestaRevoca
+8.2.4.1 paaInviaRichiestaRevoca
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Questa primitiva deve essere esposta dall'Ente Creditore.
@@ -2632,7 +2632,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _nodoinviarispostarevoca:
 
-nodoInviaRispostaRevoca
+8.2.4.2 nodoInviaRispostaRevoca
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva l’Ente Creditore invia al NodoSPC l’esito del
@@ -2690,7 +2690,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _storno-del-pagamento:
 
-Storno del pagamento
+8.2.5 Storno del pagamento
 ~~~~~~~~~~~~~~~~~~~~
 
 |image18|
@@ -2722,7 +2722,7 @@ altrimenti restituisce un errore specifico.
 
 .. _nodoinviarichiestastorno:
 
-nodoInviaRichiestaStorno
+8.2.5.1 nodoInviaRichiestaStorno
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Questa primitiva viene esposta dal Nodo dei Pagamenti-SPC ed è
@@ -2781,7 +2781,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _paainviaesitostorno:
 
-paaInviaEsitoStorno
+8.2.5.2 paaInviaEsitoStorno
 ~~~~~~~~~~~~~~~~~~~
 
 Questa primitiva non deve essere realizzata ed esposta dall’Ente
@@ -2833,7 +2833,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _ricezione-del-flusso-di-rendicontazione:
 
-Ricezione del flusso di rendicontazione
+8.2.6 Ricezione del flusso di rendicontazione
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Come indicato nel :ref:`paragrafo 8.1.5 <processo-di-riconciliazione-dei-pagamenti-eseguiti>`, il flusso di rendicontazione può
@@ -2863,7 +2863,7 @@ tenere conto dei singoli flussi già richiesti al NodoSPC.
 
 .. _nodochiedielencoflussirendicontazione:
 
-nodoChiediElencoFlussiRendicontazione
+8.2.6.1 nodoChiediElencoFlussiRendicontazione
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva l’Ente Creditore richiede al NodoSPC l’elenco dei
@@ -2921,7 +2921,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _nodochiediflussorendicontazione:
 
-nodoChiediFlussoRendicontazione
+8.2.6.2 nodoChiediFlussoRendicontazione
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva l’Ente Creditore richiede al NodoSPC un file XML
@@ -3011,7 +3011,7 @@ il gestore del NodoSPC.
 
 .. _avvisatura-digitale-push-su-iniziativa-dellente-creditore:
 
-Avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
+8.2.7 Avvisatura digitale *push* (su iniziativa dell'Ente Creditore)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 |image20|
@@ -3032,7 +3032,7 @@ p. *nodoInviaAvvisoDigitale*, con la quale viene sottomessa (da
 
 .. _nodoinviaavvisodigitale:
 
-nodoInviaAvvisoDigitale
+8.2.7.1 nodoInviaAvvisoDigitale
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 La primitiva **nodoInviaAvvisoDigitale** è esposta dal Nodo dei
@@ -3095,7 +3095,7 @@ funzione di faultBean.id:
 
 .. _avvisatura-digitale-pull-verifica-della-posizione-debitoria:
 
-Avvisatura digitale *pull* (verifica della posizione debitoria)
+8.2.8 Avvisatura digitale *pull* (verifica della posizione debitoria)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per la gestione dei meccanismi di consultazione degli avvisi presenti
@@ -3115,7 +3115,7 @@ q. *paaChiediElencoAvvisiDigitali*, con la quale viene sottomessa
 
 .. _paachiedielencoavvisidigitali:
 
-paaChiediElencoAvvisiDigitali
+8.2.8.1 paaChiediElencoAvvisiDigitali
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La primitiva è esposta dall'Ente Creditore ed è utilizzata in modalità
@@ -3189,7 +3189,7 @@ Di seguito i possibili valori del dato faultBean.faultCode:
 
 .. _interrogazione-delle-basi-dati-del-nodospc:
 
-Interrogazione delle basi dati del NodoSPC
+8.2.9 Interrogazione delle basi dati del NodoSPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Nodo dei Pagamenti-SPC, allo scopo di supportare lo scambio
@@ -3220,7 +3220,7 @@ Il NodoSPC restituisce un file XML, il cui tracciato è indicato al :ref:`§ 5.3
 
 .. _nodochiediinformativapsp:
 
-nodoChiediInformativaPSP
+8.2.9.1 nodoChiediInformativaPSP
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva L'Ente Creditore richiede al NodoSPC l'invio del
@@ -3274,7 +3274,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _ricezione-dei-totali-di-traffico:
 
-Ricezione dei Totali di Traffico
+8.2.10 Ricezione dei Totali di Traffico
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per la gestione dei meccanismi di ricezione dei flussi relativi ai
@@ -3312,7 +3312,7 @@ tenere conto dei singoli flussi già richiesti al NodoSPC.
 
 .. _nodochiedielencoquadraturepa:
 
-nodoChiediElencoQuadraturePA
+8.2.10.1 nodoChiediElencoQuadraturePA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva l’Ente Creditore richiede al NodoSPC l’elenco dei
@@ -3368,7 +3368,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _nodochiediquadraturapa:
 
-nodoChiediQuadraturaPA
+8.2.10.2 nodoChiediQuadraturaPA
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Con questa primitiva l’Ente Creditore richiede al NodoSPC uno specifico
@@ -3423,7 +3423,7 @@ Di seguito i possibili valori dell'elemento faultBean.faultCode:
 
 .. _interfacce-http-di-re-direzione-per-il-pagamento-immediato:
 
-Interfacce HTTP di re-direzione per il pagamento immediato
+8.3 Interfacce HTTP di re-direzione per il pagamento immediato
 ----------------------------------------------------------
 
 Nel presente paragrafo saranno date indicazioni circa i parametri da
@@ -3436,7 +3436,7 @@ Tali indicazioni sono valide anche per la gestione del cosiddetto
 
 .. _re-direzione-dal-portale-ec-verso-il-web-fesp:
 
-Re-direzione dal Portale EC verso il Web-FESP
+8.3.1 Re-direzione dal Portale EC verso il Web-FESP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La sintassi dello URL che il Portale dell'Ente Creditore deve utilizzare
@@ -3472,7 +3472,7 @@ Tabella 36:
 
 .. _re-direzione-dal-web-fesp-verso-il-portale-ec:
 
-Re-direzione dal Web-FESP verso il Portale EC
+8.3.2 Re-direzione dal Web-FESP verso il Portale EC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Lo URL restituito dal Web-FESP al browser dell’utilizzatore finale per
@@ -3594,7 +3594,7 @@ dove i parametri (tra parentesi quelli opzionali) sono indicati nella
 
 .. _interfacce-http-per-il-servizio-wisp:
 
-Interfacce HTTP per il servizio WISP
+8.4 Interfacce HTTP per il servizio WISP
 ------------------------------------
 
 Nel presente paragrafo saranno date indicazioni circa i parametri da
@@ -3607,7 +3607,7 @@ Pagamenti-SPC.
 
 .. _re-direzione-http-dal-portale-dellente-creditore-verso-la-componente-wisp:
 
-Re-direzione HTTP dal Portale dell'Ente Creditore verso la componente WISP
+8.4.1 Re-direzione HTTP dal Portale dell'Ente Creditore verso la componente WISP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il primo passo che il Portale dell'Ente Creditore deve compiere per
@@ -3908,7 +3908,7 @@ pagamento da presentare all’utilizzatore finale.
 
 .. _re-direzione-http-da-wisp-verso-il-portale-dellente-creditore--urlback:
 
-Re-direzione HTTP da WISP verso il Portale dell'Ente Creditore – urlBack
+8.4.2 Re-direzione HTTP da WISP verso il Portale dell'Ente Creditore – urlBack
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Atterrato sulle pagine del WISP, l’utente può svolgere in ogni momento
@@ -3950,7 +3950,7 @@ indicati in **Tabella 39**.
 
 .. _re-direzione-http-da-wisp-verso-il-portale-dellente-creditore---urlreturn:
 
-Re-direzione HTTP da WISP verso il Portale dell'Ente Creditore - urlReturn
+8.4.3 Re-direzione HTTP da WISP verso il Portale dell'Ente Creditore - urlReturn
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Effettuata la scelta sulle pagine del WISP, il processo si conclude con
@@ -3980,7 +3980,7 @@ viene trasferito in POST e contiene i dati indicati in Tabella 40.
 
 .. _interfacce-per-il-servizio-di-file-transfer-sicuro:
 
-Interfacce per il servizio di File Transfer Sicuro
+8.5 Interfacce per il servizio di File Transfer Sicuro
 --------------------------------------------------
 
 In questo paragrafo sono indicate le interfacce per i servizi di file
@@ -3989,7 +3989,7 @@ Creditori.
 
 .. _specifiche-di-interfaccia-per-il-trasferimento-dei-flussi-di-rendicontazione:
 
-Specifiche di interfaccia per il trasferimento dei flussi di rendicontazione
+8.5.1 Specifiche di interfaccia per il trasferimento dei flussi di rendicontazione
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il *work flow* del processo di riconciliazione dei pagamenti eseguiti è
@@ -4003,7 +4003,7 @@ richiesto direttamente sulle proprie macchine, per cui agirà da
 
 .. _dati-tecnici:
 
-Dati tecnici
+8.5.1.1 Dati tecnici
 ~~~~~~~~~~~~
 
 Il *client* SFTP del Nodo dei Pagamenti-SPC si collegherà al *server*
@@ -4022,7 +4022,7 @@ trasferimento del file.
 
 .. _convenzioni-dei-nomi-file-e-formato-file:
 
-Convenzioni dei nomi file e formato file
+8.5.1.2 Convenzioni dei nomi file e formato file
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Indipendentemente dalla posizione di salvataggio del file, esso verrà
@@ -4040,7 +4040,7 @@ nome logico del flusso di rendicontazione (parametro I-6 della primitiva
 
 .. _politica-di-ritrasmissione:
 
-Politica di ritrasmissione
+8.5.1.3 Politica di ritrasmissione
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Se, per qualsiasi motivo tecnico, il trasferimento si interrompe o
@@ -4054,7 +4054,7 @@ primitiva **nodoChiediFlussoRendicontazione**.
 
 .. _specifiche-di-interfaccia-per-il-trasferimento-delle-richieste-di-avviso-digitale:
 
-Specifiche di interfaccia per il trasferimento delle richieste di Avviso Digitale
+8.5.2 Specifiche di interfaccia per il trasferimento delle richieste di Avviso Digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il *work flow* del processo di avvisatura digitale *push* via File
@@ -4083,7 +4083,7 @@ I flussi scambiati devono essere compressi con l'algoritmo gzip
 
 .. _convenzioni-di-nomenclatura-dei-file-scambiati:
 
-Convenzioni di nomenclatura dei file scambiati
+8.5.2.1 Convenzioni di nomenclatura dei file scambiati
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nello scambio SFTP dei flussi tra Enti Creditori e Nodo dei
@@ -4129,7 +4129,7 @@ Di seguito si riportano alcuni esempi di nomenclatura di flussi:
 
 .. _invio-delle-richieste-di-avviso-da-ec-al-nodo-dei-pagamenti-spc:
 
-Invio delle richieste di avviso da EC al Nodo dei Pagamenti-SPC
+8.5.2.2 Invio delle richieste di avviso da EC al Nodo dei Pagamenti-SPC
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 La struttura ed il contenuto dei file trasferiti sono indicati in
