@@ -5,7 +5,7 @@
 | **Capitolo 15. SPECIFICHE – XSD** |
 +-----------------------------------+
 
-Specifiche – XSD
+15. Specifiche – XSD
 ================
 .. _Specifiche – XSD:
 
@@ -15,7 +15,7 @@ Tutti i file XSD elencati nel seguito e la relativa documentazione di
 dettaglio sono forniti in formato elettronico nell’apposita sezione del
 sito dell’Agenzia per l’Italia Digitale.
 
-Oggetti scambiati per la gestione del processo di pagamento
+15.1 Oggetti scambiati per la gestione del processo di pagamento
 -----------------------------------------------------------
 .. _Oggetti scambiati per la gestione del processo di pagamento:
 
@@ -41,7 +41,7 @@ Per il pagamento della marca da bollo digitale (:ref:`vedi § 2.8 <acquisto-dell
 
 **MarcaDaBollo_ <versione>.xsd.**
 
-Avvisatura digitale
+15.2 Avvisatura digitale
 -------------------
 .. _Avvisatura digitale:
 
@@ -59,7 +59,7 @@ Gli schemi XSD sopra indicati condividono con il WSDL
 
 **sac-common-types_<versione>.xsd.**
 
-Informazioni per gli aderenti al sistema
+15.3 Informazioni per gli aderenti al sistema
 ----------------------------------------
 .. _Informazioni per gli aderenti al sistema:
 
@@ -72,7 +72,7 @@ Nella tabella delle controparti sono indicate le condizioni tecniche ed
 i livelli di servizio relativi previsti da parte degli Enti Creditori
 nei confronti dell’utilizzatore finale.
 
-Informativa da Ente Creditore
+15.3.1 Informativa da Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Informativa da Ente Creditore:
 
@@ -100,7 +100,7 @@ Lo schema XSD di tale oggetto è disponibile con il file
 
 **InformativaContoAccredito_<versione>.xsd.**
 
-Informativa fornita dal Nodo ai PSP
+15.3.2 Informativa fornita dal Nodo ai PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Informativa fornita dal Nodo ai PSP:
 
@@ -118,7 +118,7 @@ Lo schema XSD di tale oggetto è disponibile con il file
 
 **TabellaDelleContropartiEstesa_<versione>.xsd.**
 
-Catalogo Dati Informativi
+15.3.3 Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Catalogo Dati Informativi:
 
@@ -146,7 +146,7 @@ Lo schema XSD di tale oggetto è disponibile con il file
 
 **CatalogoDatiInformativi_<versione>.xsd.**
 
-Informativa fornita dal Nodo all’Ente Creditore
+15.3.4 Informativa fornita dal Nodo all’Ente Creditore
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Informativa fornita dal Nodo all’Ente Creditore:
 
@@ -162,7 +162,7 @@ Lo schema XSD di tale oggetto è disponibile con il file
 
 **CatalogoDatiInformativi_<versione>.xsd.**
 
-Totali dei flussi di traffico
+15.4 Totali dei flussi di traffico
 -----------------------------
 .. _Totali dei flussi di traffico:
 
@@ -179,7 +179,7 @@ Il file XML è fornito dal Nodo dei Pagamenti-SPC al richiedente mediante
 i metodi web service dell'interfaccia di riferimento del richiedente
 (Ente Creditore o PSP).
 
-Flussi di traffico per gli Enti Creditori
+15.4.1 Flussi di traffico per gli Enti Creditori
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Flussi di traffico per gli Enti Creditori:
 
@@ -200,7 +200,7 @@ Lo schema XSD di tale oggetto è disponibile con il file
 
 **QuadraturePA_<versione>.xsd.**
 
-Flussi di traffico per PSP
+15.4.2 Flussi di traffico per PSP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. _Flussi di traffico per PSP:
 
@@ -217,7 +217,7 @@ il Nodo dei Pagamenti-SPC mediante il metodo
 con il metodo **nodoChiediQuadraturaPSP** (:ref:`vedi § 9.2.11 <ricezione-totali-di-traffico>`), nell’ambito
 del WSDL **NodoPerPsp**.
 
-Identificazione RPT in attesa
+15.5 Identificazione RPT in attesa
 -----------------------------
 .. _Identificazione RPT in attesa:
 
@@ -286,7 +286,7 @@ input. Si precisa che Il Nodo dei Pagamenti-SPC gestisce in maniera
 automatica detti codici convertendoli sempre nel corretto dato
 codiceIdentificativoEnte dello specifico Ente Creditore.
 
-Acknowledgement Pagamenti Telematici
+15.6 Acknowledgement Pagamenti Telematici
 ------------------------------------
 .. _Acknowledgement Pagamenti Telematici:
 
