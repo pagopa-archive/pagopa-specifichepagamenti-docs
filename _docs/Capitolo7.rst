@@ -9,8 +9,8 @@
 
 .. _identificazione-del-versamento:
 
-Identificazione del versamento
-==============================
+7. Identificazione del versamento
+=================================
 
 Nel presente capitolo sono date indicazioni circa le modalità con le
 quali deve essere gestito il codice che identifica in modo univoco, a
@@ -19,8 +19,8 @@ livello di Ente Creditore, l’operazione di pagamento nell’ambito del
 
 .. _identificativo-univoco-versamento:
 
-Identificativo Univoco Versamento
----------------------------------
+7.1 Identificativo Univoco Versamento
+-------------------------------------
 
 L’elemento “IdentificativoUnivocoVersamento” (detto anche codice IUV) è
 presente nelle strutture dati definite nel CAPITOLO 5 (Richiesta di
@@ -35,8 +35,8 @@ documento Allegato A alle Linee guida.
 
 .. _causale-di-versamento:
 
-Causale di versamento
----------------------
+7.2 Causale di versamento
+-------------------------
 
 L’informazione denominata “causaleVersamento” è un dato obbligatorio
 presente sia nella struttura dati della RPT, sia nella struttura dati
@@ -47,8 +47,8 @@ guida.
 
 .. _codice-contesto-pagamento:
 
-Codice Contesto Pagamento
--------------------------
+7.3 Codice Contesto Pagamento
+-----------------------------
 
 L’informazione denominata “codiceContestoPagamento” è un dato
 obbligatorio presente sia nella struttura dati della RPT, sia nella
@@ -58,8 +58,8 @@ dati Codice Fiscale dell’Ente Creditore e codice IUV.
 
 .. _pagamenti-attivati-presso-lente-creditore:
 
-Pagamenti attivati presso l’Ente Creditore
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.3.1 Pagamenti attivati presso l’Ente Creditore
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nel caso in cui il processo di pagamento sia attivato presso l’Ente
 Creditore (:ref:`cfr. § 2.1 <processo-di-pagamento-attivato-presso-lente-creditore>`), il dato codiceContestoPagamento è impostato
@@ -72,8 +72,8 @@ specifiche).
 
 .. _pagamenti-attivati-presso-le-strutture-del-psp:
 
-Pagamenti attivati presso le strutture del PSP
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.3.2 Pagamenti attivati presso le strutture del PSP
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nel caso in cui il processo di pagamento sia attivato presso le
 strutture del PSP (:ref:`cfr. § 2.2 <processo-di-pagamento-attivato-presso-il-psp>`), il dato codiceContestoPagamento contiene
@@ -96,8 +96,8 @@ degli eventi (:ref:`vedi capitolo 6 <Capitolo6>`).
 
 .. _identificazione-del-versamento-presso-le-strutture-dei-psp:
 
-Identificazione del versamento presso le strutture dei PSP
-----------------------------------------------------------
+7.4 Identificazione del versamento presso le strutture dei PSP
+--------------------------------------------------------------
 
 Nel caso in cui il processo di pagamento sia attivato presso le
 strutture del PSP (:ref:`vedi § 2.2 <processo-di-pagamento-attivato-presso-il-psp>`), è necessario predisporre in modo
@@ -121,8 +121,8 @@ all’inizializzazione della relativa operazione.
 
 .. _il-numero-avviso-e-larchivio-dei-pagamenti-in-attesa:
 
-Il Numero Avviso e l’archivio dei pagamenti in attesa
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.4.1 Il Numero Avviso e l’archivio dei pagamenti in attesa
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Sulla base dei requisiti sopra indicati gli Enti Creditori devono
 definire e alimentare l’Archivio dei pagamenti in attesa, che è
@@ -167,8 +167,8 @@ verifica e attivazione di pagamento (:ref:`cfr. § 8.2.3 della Sezione III <paga
 
 .. _automazione-dellavviso-di-pagamento-analogico:
 
-Automazione dell’avviso di pagamento analogico
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.4.2 Automazione dell’avviso di pagamento analogico
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Al fine di gestire gli avvisi di pagamento con strumenti che consentano
 l’acquisizione automatica dei dati presenti sull’avviso stesso, gli Enti
@@ -224,8 +224,8 @@ conseguenza con il proprio archivio dei pagamenti in attesa.
 
 .. _utilizzo-del-qr-code-sullavviso-di-pagamento:
 
-Utilizzo del QR code sull’avviso di pagamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.4.3 Utilizzo del QR code sull’avviso di pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Il Codice QR (in inglese QR Code) è un codice a barre bidimensionale
 adottato da ISO (*ISO/IEC 18004:2015 Information technology - Automatic*
@@ -306,8 +306,8 @@ essere applicate nella generazione del QRcode.
 
 .. _utilizzo-del-codice-a-barre-sullavviso-di-pagamento:
 
-Utilizzo del codice a barre sull’avviso di pagamento
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.4.4 Utilizzo del codice a barre sull’avviso di pagamento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per codificare le informazioni di cui sopra all’interno di codici a bare
 monodimensionali si potrà fare riferimento, a titolo di esempio, alla
@@ -334,8 +334,8 @@ indicate nella Sezione II della monografia “*L’Avviso di pagamento*
 
 .. _comunicazioni-allutilizzatore-finale:
 
-Comunicazioni all'utilizzatore finale
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+7.4.5 Comunicazioni all'utilizzatore finale
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Nel *workflow* del processo di pagamento attivato presso le strutture
 del PSP è importante fornire all'utilizzatore finale informazioni circa
