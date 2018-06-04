@@ -238,25 +238,25 @@ a favore dello stesso Ente Creditore.
 | anagraficaVersante      | 2       | an         |         | 1..70   | Name            | Indica il nominativo o la ragione         |
 |                         |         |            |         |         |                 | sociale del versante.                     |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| indirizzoVersante       | 3       | an         |         | 1..70   | StreetName      | Indica l’indirizzo del versante.          |
+| indirizzoVersante       | 2       | an         |         | 1..70   | StreetName      | Indica l’indirizzo del versante.          |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| civicoVersante          | 3       | an         |         | 1..16   | Building        | Indica il                                 |
+| civicoVersante          | 2       | an         |         | 1..16   | Building        | Indica il                                 |
 |                         |         |            |         |         | Number          | numero civico del versante.               |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| capVersante             | 3       | an         |         | 1..16   | Postal Code     | Indica il                                 |
+| capVersante             | 2       | an         |         | 1..16   | Postal Code     | Indica il                                 |
 |                         |         |            |         |         |                 | CAP del versante.                         |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| localitaVersante        | 3       | an         |         | 1..35   | Town Name       | Indica la                                 |
+| localitaVersante        | 2       | an         |         | 1..35   | Town Name       | Indica la                                 |
 |                         |         |            |         |         |                 | località del versante.                    |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| provinciaVersante       | 3       | an         |         | 1..35   | Country         | Indica la                                 |
+| provinciaVersante       | 2       | an         |         | 1..35   | Country         | Indica la                                 |
 |                         |         |            |         |         | SubDivision     | provincia del versante.                   |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| nazioneVersante         | 3       | an         |         | 2       | Country         | Indica il                                 |
+| nazioneVersante         | 2       | an         |         | 2       | Country         | Indica il                                 |
 |                         |         |            |         |         |                 | codice nazione del versante               |
 |                         |         |            |         |         |                 | secondo lo standard ISO 3166.             |
 +-------------------------+---------+------------+---------+---------+-----------------+-------------------------------------------+
-| e-mailVersante          | 3       | an         |         | 1..256  | Remittance      | Indirizzo                                 |
+| e-mailVersante          | 2       | an         |         | 1..256  | Remittance      | Indirizzo                                 |
 |                         |         |            |         |         | Location        | di posta elettronica del versante.        |
 |                         |         |            |         |         | Electronic      |                                           |
 |                         |         |            |         |         | Address         |                                           |
@@ -1146,7 +1146,7 @@ di pagamento per richiedere lo “storno” di un pagamento.
 |                    |         |            |         |         |                  |                                         |
 |                    |         |            |         |         |                  | Riporta le stesse informazioni          |
 |                    |         |            |         |         |                  | presenti nel blocco                     |
-|                    |         |            |         |         |                  | “soggettoAttestante” della              |
+|                    |         |            |         |         |                  | “istitutoAttestante” della              |
 |                    |         |            |         |         |                  | Ricevuta Telematica                     |
 |                    |         |            |         |         |                  | **(RT)** cui si riferisce il            |
 |                    |         |            |         |         |                  | messaggio di Richiesta di Revoca.       |
