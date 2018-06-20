@@ -938,7 +938,7 @@ flusso prosegue su iniziativa dell'Ente Creditore:
 
 8) la componente di *Back-end* dell’Ente Creditore determina
    l'identificativo flusso da ottenere [3]_ e lo richiede al NodoSPC per
-   mezzo della primitiva **nodoChiedFlussoRendicontazione**;
+   mezzo della primitiva **nodoChiediFlussoRendicontazione**;
 
 in funzione della configurazione dell'Ente Creditore:
 
@@ -2848,7 +2848,7 @@ n. **nodoChiediElencoFlussiRendicontazione**, con la quale l’Ente
    sistema fornisce l'elenco completo dei flussi dell'ente presenti sul
    NodoSPC al momento della richiesta;
 
-o. **nodoChiedFlussoRendicontazione**, con la quale l’Ente Creditore
+o. **nodoChiediFlussoRendicontazione**, con la quale l’Ente Creditore
    richiede al NodoSPC uno specifico flusso di rendicontazione presente
    nell'elenco scaricato con la primitiva di cui al punto precedente.
 
