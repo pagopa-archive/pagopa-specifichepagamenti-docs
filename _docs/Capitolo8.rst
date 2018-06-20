@@ -2854,7 +2854,7 @@ o. **nodoChiedFlussoRendicontazione**, con la quale l’Ente Creditore
 
 Come già indicato, il NodoSPC non tiene traccia dei singoli flussi di
 rendicontazione richiesti dall’Ente Creditore con la primitiva
-**nodoChiedFlussoRendicontazione**, pertanto è compito di quest'ultimo
+**nodoChiediFlussoRendicontazione**, pertanto è compito di quest'ultimo
 tenere conto dei singoli flussi già richiesti al NodoSPC.
 
 |image19|
@@ -4161,7 +4161,7 @@ b) il numero di file strettamente necessari a contenere tutte le
 .. [3]
    Il Nodo dei Pagamenti-SPC non tiene traccia dei singoli flussi di
    rendicontazione richiesti dall’Ente Creditore con la primitiva
-   **nodoChiedFlussoRendicontazione**, pertanto è compito di
+   **nodoChiediFlussoRendicontazione**, pertanto è compito di
    quest'ultimo richiedere i flussi di proprio interesse.
 
 .. [4]
