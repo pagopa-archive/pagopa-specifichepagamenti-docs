@@ -2676,7 +2676,7 @@ r. *pspInviaAvvisoDigitale*, metodo esposto dal PSP con il quale il Nodo
    all'utilizzatore finale usufruendo del canale messo a disposizione
    dal PSP;
 
-s. *nodoAggiornaIscrizioneAvvisatura*, metodo esposto dal NodoSPC che
+s. *nodoAggiornaIscrizioniAvvisatura*, metodo esposto dal NodoSPC che
    consente ai canali “mobile” di segnalare gli utilizzatori finali che
    hanno sottoscritto il servizio di avvisatura presso il PSP e
    intendono ricevere gli avvisi di pagamento digitali.
