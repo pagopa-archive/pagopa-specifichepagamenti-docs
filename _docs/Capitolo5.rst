@@ -3426,7 +3426,7 @@ componenti i seguenti parametri:
    **pspInviaAvvisoDigitale**
 
 4) I-5 datiNotifica, *request* della primitiva
-   **nodoAggiornaIscrizioneAvvisatura**
+   **nodoAggiornaIscrizioniAvvisatura**
 
 .. _invio-dellavviso-digitale-al-nodospc:
    
@@ -3487,7 +3487,7 @@ all'interno del WSDL del servizio.
 
 Le informazioni elencate di seguito definiscono la componente
 "datiNotifica" (parametro I-5) presente nella *request* della primitiva
-**nodoAggiornaIscrizioneAvvisatura** (:ref:`cfr. § 9.2.7.2 <nodoaggiornaiscrizioniavvisatura>`); il livello
+**nodoAggiornaIscrizioniAvvisatura** (:ref:`cfr. § 9.2.7.2 <nodoaggiornaiscrizioniavvisatura>`); il livello
 della struttura così definita inizia da 2 in quanto descritta
 formalmente all'interno del WSDL del servizio.
 
