@@ -52,6 +52,7 @@
 				</xsd:complexType>
 			</xsd:element>
 		</xsd:schema>
+		
 		<xsd:schema  targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo"  version="1.1">
 			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPa.xsd" />
 			

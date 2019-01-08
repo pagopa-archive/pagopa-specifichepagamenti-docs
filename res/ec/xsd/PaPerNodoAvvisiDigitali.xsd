@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/ec"
+    elementFormDefault="qualified" attributeFormDefault="unqualified" version="6.2.0"
+    xmlns:pay="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/ec"   
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"  >
+    
+    
+    
+    <xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/" schemaLocation="../../common/pagoPa_avvisi.xsd"/>
+    
+    <xsd:complexType name="risposta">
+        <xsd:sequence>
+            <xsd:element name="fault" type="pay:ctFaultBean" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+    
+
+    <xsd:complexType name="ctPaaChiediElencoAvvisiDigitali">
+        <xsd:sequence>
+            <xsd:element name="identificativoPSP" type="pay:stText35"/>
+            <xsd:element name="codiceFiscaleDebitore" type="pay:stText35"/>
+            <xsd:element name="codiceServizio" type="pay:stCodiceServizio" minOccurs="0" maxOccurs="1"/>
+            <xsd:element name="periodoRiferimento" type="pay:ctPeriodoRiferimento" minOccurs="0" maxOccurs="1"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+    <xsd:complexType name="ctPaaChiediElencoAvvisiDigitaliRisposta">
+        <xsd:complexContent>
+            <xsd:extension base="tns:risposta">
+                <xsd:sequence>
+                    <xsd:element name="esitoOperazione" type="pay:stCodiceEsito"/>
+                    <xsd:element name="elencoAvvisiDigitali" type="pay:ctElencoAvvisiDigitali"/>
+                </xsd:sequence>
+            </xsd:extension>
+        </xsd:complexContent>
+    </xsd:complexType>
+    
+    
+</xsd:schema>
+

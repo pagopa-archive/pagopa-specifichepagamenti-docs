@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            version="1.0"            
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:pay_i="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+            xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+            targetNamespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/">
+
+    
+    <xsd:include schemaLocation="pagoPa_complexTypes.xsd"  />
+    
+    
+    
+    
+    <xsd:simpleType name="stCodiceServizio">
+        <xsd:annotation>
+            <xsd:documentation>da completare</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">           
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="ctPeriodoRiferimento">
+        <xsd:annotation>
+            <xsd:documentation>da completare</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">           
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="stCodiceAvviso">
+        <xsd:annotation>
+            <xsd:documentation>da completare</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">           
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="stIdentificativoFlusso">
+        <xsd:annotation>
+            <xsd:documentation>da completare</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">           
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    
+    
+    <xsd:simpleType name="stCellulareSoggetto">
+        <xsd:annotation>
+            <xsd:documentation>da completare</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">           
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    
+    
+	<xsd:simpleType name="stTassonomiaAvviso">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{2,2}" />
+			<xsd:enumeration value="00"/> <!--cartelle esattoriali -->
+            <xsd:enumeration value="01"/> <!--diritti e concessioni -->
+            <xsd:enumeration value="02"/> <!--imposte e tasse -->
+            <xsd:enumeration value="03"/> <!--imu tasi e altre tasse comunali -->
+            <xsd:enumeration value="04"/> <!--ingressi a mostre e musei -->
+            <xsd:enumeration value="05"/> <!--multe e sanzioni amministrative -->
+            <xsd:enumeration value="06"/> <!--previdenza e infortuni -->
+            <xsd:enumeration value="07"/> <!--servizi erogati dal comune -->
+            <xsd:enumeration value="08"/> <!--servizi erogati da altri enti -->
+            <xsd:enumeration value="09"/> <!--servizi scolastici -->
+            <xsd:enumeration value="10"/> <!--tassa automobilistica -->
+            <xsd:enumeration value="11"/> <!--ticket e prestazioni sanitarie -->
+            <xsd:enumeration value="12"/> <!--trasporti, mobilità e parcheggi -->
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!-- AVVISI -->
+    <xsd:complexType name="ctAvvisoDigitale">
+        <xsd:sequence>
+            <xsd:element name="identificativoDominio" type="pay_i:stText35"/>
+            <xsd:element name="anagraficaBeneficiario" type="pay_i:stText35"/>
+            <xsd:element name="identificativoMessaggioRichiesta" type="pay_i:stIdentificativoMessaggioRichiesta"/>
+            <xsd:element name="tassonomiaAvviso" type="tns:stTassonomiaAvviso"/>
+            <xsd:element name="codiceAvviso" type="pay_i:stCodiceAvviso"/>
+            <xsd:element name="soggettoPagatore" type="pay_i:ctSoggettoPagatore"/>
+            <xsd:element name="dataScadenzaPagamento" type="pay_i:stISODate"/>
+            <xsd:element name="dataScadenzaAvviso" type="pay_i:stISODate"/>
+            <xsd:element name="importoAvviso" type="pay_i:stImporto"/>
+            <xsd:element name="eMailSoggetto" type="pay_i:stEMail" minOccurs="0" />
+            <xsd:element name="cellulareSoggetto" type="pay_i:stCellulareSoggetto" minOccurs="0" />
+            <xsd:element name="descrizionePagamento" type="pay_i:stText140"/>
+            <xsd:element name="urlAvviso" type="pay_i:stText140" minOccurs="0"/>
+			<xsd:element name="datiSingoloVersamento" type="tns:ctDatiSingoloVersamento" maxOccurs="5"/>
+			<xsd:element name="tipoPagamento" type="pay_i:stTipoPagamento"/>  
+			<xsd:element name="tipoOperazione" type="tns:stTipoOperazione"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    
+    <!-- ESITI AVVISI -->
+    <xsd:simpleType name="stCodiceEsito">
+        <xsd:restriction base="xsd:integer">
+            <xsd:minInclusive value="0" />
+            <xsd:maxInclusive value="99999" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="stTipoCanaleEsito">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{1,1}" />
+            <xsd:enumeration value="0"/><!-- nessun canale -->
+            <xsd:enumeration value="1"/><!-- SMS -->
+            <xsd:enumeration value="2"/><!-- e-mail -->
+            <xsd:enumeration value="3"/><!-- mobile payment -->
+            <xsd:enumeration value="4"/><!-- altro canale PSP -->
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:complexType name="ctEsitoAvvisatura">
+        <xsd:sequence>
+            <xsd:element name="tipoCanaleEsito" type="pay_i:stTipoCanaleEsito" />
+            <xsd:element name="identificativoCanale" type="pay_i:stText35" minOccurs="0" />
+            <xsd:element name="dataEsito" type="pay_i:stISODate" />
+            <xsd:element name="codiceEsito" type="pay_i:stCodiceEsito" />
+            <xsd:element name="descrizioneEsito" type="pay_i:stText140" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="ctEsitoAvvisoDigitale">
+        <xsd:sequence>
+            <xsd:element name="identificativoDominio" type="pay_i:stText35" />
+            <xsd:element name="identificativoMessaggioRichiesta" type="pay_i:stIdentificativoMessaggioRichiesta" />
+            <xsd:element name="esitoAvvisatura" type="pay_i:ctEsitoAvvisatura" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="listaEsitoAvvisiDigitali">
+        <xsd:sequence>
+            <xsd:element name="versioneOggetto" type="pay_i:stText16" />
+            <xsd:element name="identificativoFlusso" type="pay_i:stIdentificativoFlusso" />
+            <xsd:element name="esitoAvvisoDigitale" type="pay_i:ctEsitoAvvisoDigitale" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+	
+	<xsd:complexType name="ctDatiSingoloVersamento">
+        <xsd:sequence>
+            <xsd:element name="ibanAccredito" type="pay_i:stIBANIdentifier" minOccurs="0"/>
+            <xsd:element name="ibanAppoggio" type="pay_i:stIBANIdentifier" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+	
+    <xsd:simpleType name="stTipoOperazione">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="1"/>
+            <xsd:enumeration value="C"/><!-- Creazione di un nuovo avviso-->
+            <xsd:enumeration value="U"/><!-- Modifica di un avviso esistente -->
+            <xsd:enumeration value="D"/><!-- Cancellazione di un avviso esistente -->
+        </xsd:restriction>
+    </xsd:simpleType>
+   							
+	<xsd:complexType name="ctElencoAvvisiDigitali">
+                <xsd:sequence>
+                    <xsd:element name="avvisoDigitale" type="pay_i:ctAvvisoDigitale" minOccurs="0" maxOccurs="unbounded"/>
+                </xsd:sequence>
+            </xsd:complexType>
+
+   
+
+
+	
+
+	
+	
+</xsd:schema>

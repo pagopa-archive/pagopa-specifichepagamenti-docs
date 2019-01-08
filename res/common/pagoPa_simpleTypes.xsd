@@ -12,6 +12,21 @@
         <xsd:restriction base="xsd:date"/>
     </xsd:simpleType>
 
+    <xsd:simpleType name="stIdentificativoMessaggioRichiesta">
+        <xsd:annotation>
+            <xsd:documentation>da completare </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:date"/>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="stTipoPagamento">
+        <xsd:annotation>
+            <xsd:documentation> da completare </xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string"/>
+    </xsd:simpleType>
+    
+
     <xsd:simpleType name="stISODate">
         <xsd:annotation>
             <xsd:documentation>rappresenta una data </xsd:documentation>
