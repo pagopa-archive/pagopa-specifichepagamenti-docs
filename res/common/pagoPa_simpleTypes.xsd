@@ -2,7 +2,8 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
     elementFormDefault="qualified" attributeFormDefault="unqualified" version="6.2.0"
-    xmlns="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/">
+    xmlns="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0"  >
 
 
     <xsd:simpleType name="stISO76_iuv">
@@ -276,5 +277,18 @@
             <xsd:enumeration value="PO" />
         </xsd:restriction>
     </xsd:simpleType>
+    
+    <xsd:complexType name="ctFaultBean">
+        <xsd:sequence>
+            <xsd:element name="faultCode" type="xsd:string" />
+            <xsd:element name="faultString" type="xsd:string" />
+            <xsd:element name="id" type="xsd:string" />
+            <xsd:element name="description" type="xsd:string" minOccurs="0" />
+            <xsd:element name="serial" type="xsd:int" minOccurs="0" />
+            <xsd:element name="originalFaultCode" type="xsd:string"  minOccurs="0"  />
+            <xsd:element name="originalFaultString" type="xsd:string"  minOccurs="0"  />
+            <xsd:element name="originalDescription" type="xsd:string" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
     
 </xsd:schema>
