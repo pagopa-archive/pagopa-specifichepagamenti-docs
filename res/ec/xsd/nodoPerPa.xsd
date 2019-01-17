@@ -5,10 +5,9 @@
     elementFormDefault="qualified" attributeFormDefault="unqualified" version="6.2.0"
     xmlns:pay="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
     xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/nodo"
-    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"  >
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0"   >
     
     
-    <xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/" schemaLocation="../../common/pagoPa_complexTypes.xsd"/>
     <xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/" schemaLocation="../../common/pagoPa_simpleTypes.xsd" />
     
 	<xsd:complexType name="risposta">

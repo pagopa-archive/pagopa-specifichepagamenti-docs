@@ -6,7 +6,7 @@
     
     <xs:include schemaLocation="./pagoPa_simpleTypes.xsd"></xs:include>
     <xs:include schemaLocation="./pagoPa_complexTypes.xsd"></xs:include>
-
+  
 
 <!-- Richiesta Pagamento Telematico (RPT)-->
     <xs:complexType name="ctRichiestaPagamentoTelematico">

@@ -6,7 +6,7 @@
   Renaming delle primitive.
 -->
 <wsdl:definitions
-       
+
         xmlns:ppt="http:///www.agid.gov.it/schemas/pagoPa/ppthead"
         xmlns:nodo ="http://www.agid.gov.it/schemas/pagoPa/nodo"
         xmlns:tns="http://www.agid.gov.it/services/pagoPa/nodo"
@@ -99,11 +99,6 @@
     		<xsd:element name="nodoChiediSceltaWISP" type="nodo:ctNodoChiediSceltaWISP" />
 			<xsd:element name="nodoChiediSceltaWISPRisposta" type="nodo:ctNodoChiediSceltaWISPRisposta" />
 
-			
-
-			
-
-		
 		</xsd:schema>
     </wsdl:types>
 	<wsdl:message name="nodoChiediStatoRPT">

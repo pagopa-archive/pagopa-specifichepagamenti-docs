@@ -68,6 +68,13 @@
             <xsd:maxLength value="35"/>
         </xsd:restriction>
     </xsd:simpleType>
+    
+    <xsd:simpleType name="stText25">
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+            <xsd:maxLength value="25"/>
+        </xsd:restriction>
+    </xsd:simpleType>
 
     <xsd:simpleType name="stText70">
         <xsd:restriction base="xsd:string">
