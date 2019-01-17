@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Questo WSDL rappresenta l'interfaccia esposta dal Nodo dei Pagamenti Telematici
+  per la verifica dei pagamenti in attesa verso i PSP.
+-->
+<wsdl:definitions name="PPT" 
+  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+  xmlns:nodo ="http://www.agid.gov.it/schemas/pagoPa/nodo"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+  xmlns:tns="http://www.agid.gov.it/services/pagoPa/nodo" 
+  xmlns:pay_i="http://www.digitpa.gov.it/schemas/2011/Pagamenti/" 
+  targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo">
+<!--   xmlns:pay_j="http://www.cnipa.gov.it/schemas/2010/Pagamenti/Ack_1_0/" --> 
+  
+	<wsdl:types>
+		<xsd:schema version="2.1.2" targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo">
+			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPsp.xsd" />
+
+			<!-- Wrapper Elements -->
+			<xsd:element name="nodoInviaRT" type="nodo:ctNodoInviaRT" />
+			<xsd:element name="nodoInviaRTRisposta" type="nodo:ctNodoInviaRTRisposta" />
+			
+			<xsd:element name="nodoVerificaRPT" type="nodo:ctNodoVerificaRPT" />
+			<xsd:element name="nodoVerificaRPTRisposta" type="nodo:ctNodoVerificaRPTRisposta" />
+
+			<xsd:element name="nodoAttivaRPT" type="nodo:ctNodoAttivaRPT" />
+			<xsd:element name="nodoAttivaRPTRisposta" type="nodo:ctNodoAttivaRPTRisposta" />
+
+			<xsd:element name="nodoInviaFlussoRendicontazione" type="nodo:ctNodoInviaFlussoRendicontazione" />
+			<xsd:element name="nodoInviaFlussoRendicontazioneRisposta" type="nodo:ctNodoInviaFlussoRendicontazioneRisposta" />
+
+			<xsd:element name="nodoChiediInformativaPA" type="nodo:ctNodoChiediInformativaPA" />
+			<xsd:element name="nodoChiediInformativaPARisposta" type="nodo:ctNodoChiediInformativaPARisposta" />
+
+			<xsd:element name="nodoChiediTemplateInformativaPSP" type="nodo:ctNodoChiediTemplateInformativaPSP" />
+			<xsd:element name="nodoChiediTemplateInformativaPSPRisposta" type="nodo:ctNodoChiediTemplateInformativaPSPRisposta" />
+
+			<xsd:element name="nodoChiediElencoQuadraturePSP" type="nodo:ctNodoChiediElencoQuadraturePSP" />
+			<xsd:element name="nodoChiediElencoQuadraturePSPRisposta" type="nodo:ctNodoChiediElencoQuadraturePSPRisposta" />
+
+			<xsd:element name="nodoChiediQuadraturaPSP" type="nodo:ctNodoChiediQuadraturaPSP" />
+			<xsd:element name="nodoChiediQuadraturaPSPRisposta" type="nodo:ctNodoChiediQuadraturaPSPRisposta" />
+
+			<xsd:element name="nodoInviaEsitoStorno" type="nodo:ctNodoInviaEsitoStorno" />
+			<xsd:element name="nodoInviaEsitoStornoRisposta" type="nodo:ctNodoInviaEsitoStornoRisposta" />
+			
+			<xsd:element name="nodoInviaRichiestaRevoca" type="nodo:ctNodoInviaRichiestaRevoca" />
+			<xsd:element name="nodoInviaRichiestaRevocaRisposta" type="nodo:ctNodoInviaRichiestaRevocaRisposta" />
+		</xsd:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="nodoVerificaRPT">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoVerificaRPT" />
+	</wsdl:message>
+	<wsdl:message name="nodoVerificaRPTResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoVerificaRPTRisposta" />
+	</wsdl:message>
+
+	<wsdl:message name="nodoAttivaRPT">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoAttivaRPT" />
+	</wsdl:message>
+	<wsdl:message name="nodoAttivaRPTResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoAttivaRPTRisposta" />
+	</wsdl:message>
+	
+	<wsdl:message name="nodoInviaRT">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaRT" />
+	</wsdl:message>
+	<wsdl:message name="nodoInviaRTResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoInviaRTRisposta" />
+	</wsdl:message>
+
+	<wsdl:message name="nodoInviaFlussoRendicontazione">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaFlussoRendicontazione" />
+	</wsdl:message>
+	<wsdl:message name="nodoInviaFlussoRendicontazioneResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoInviaFlussoRendicontazioneRisposta" />
+	</wsdl:message>
+
+	<wsdl:message name="nodoChiediInformativaPA">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediInformativaPA" />
+	</wsdl:message>
+	<wsdl:message name="nodoChiediInformativaPAResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoChiediInformativaPARisposta" />
+	</wsdl:message>
+
+	<wsdl:message name="nodoChiediTemplateInformativaPSP">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediTemplateInformativaPSP" />
+	</wsdl:message>
+	<wsdl:message name="nodoChiediTemplateInformativaPSPResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoChiediTemplateInformativaPSPRisposta" />
+	</wsdl:message>
+
+	<wsdl:message name="nodoChiediElencoQuadraturePSP">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediElencoQuadraturePSP" />
+	</wsdl:message>
+	<wsdl:message name="nodoChiediElencoQuadraturePSPResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoChiediElencoQuadraturePSPRisposta" />
+	</wsdl:message>
+
+	<wsdl:message name="nodoChiediQuadraturaPSP">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediQuadraturaPSP" />
+	</wsdl:message>
+	<wsdl:message name="nodoChiediQuadraturaPSPResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoChiediQuadraturaPSPRisposta" />
+	</wsdl:message>
+
+	<wsdl:message name="nodoInviaEsitoStorno">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaEsitoStorno" />
+	</wsdl:message>
+	<wsdl:message name="nodoInviaEsitoStornoResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoInviaEsitoStornoRisposta" />
+	</wsdl:message>
+	
+	<wsdl:message name="nodoInviaRichiestaRevoca">
+		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaRichiestaRevoca" />
+	</wsdl:message>
+	<wsdl:message name="nodoInviaRichiestaRevocaResponse">
+		<wsdl:part name="bodyrisposta" element="tns:nodoInviaRichiestaRevocaRisposta" />
+	</wsdl:message>
+	
+	<wsdl:portType name="PagamentiTelematiciPspNodo">
+		<wsdl:operation name="nodoVerificaRPT">
+			<wsdl:input message="tns:nodoVerificaRPT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoVerificaRPTRichiesta" />
+			<wsdl:output message="tns:nodoVerificaRPTResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoVerificaRPTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoAttivaRPT">
+			<wsdl:input message="tns:nodoAttivaRPT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoAttivaRPTRichiesta" />
+			<wsdl:output message="tns:nodoAttivaRPTResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoAttivaRPTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaRT">
+			<wsdl:input message="tns:nodoInviaRT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaRTRichiesta" />
+			<wsdl:output message="tns:nodoInviaRTResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaRTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediInformativaPA">
+			<wsdl:input message="tns:nodoChiediInformativaPA" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediInformativaPARichiesta" />
+			<wsdl:output message="tns:nodoChiediInformativaPAResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediInformativaPARisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediTemplateInformativaPSP">
+			<wsdl:input message="tns:nodoChiediTemplateInformativaPSP" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediTemplateInformativaPSPRichiesta" />
+			<wsdl:output message="tns:nodoChiediTemplateInformativaPSPResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediTemplateInformativaPSPRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaFlussoRendicontazione">
+			<wsdl:input message="tns:nodoInviaFlussoRendicontazione" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaFlussoRendicontazioneRichiesta" />
+			<wsdl:output message="tns:nodoInviaFlussoRendicontazioneResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaFlussoRendicontazioneRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediElencoQuadraturePSP">
+			<wsdl:input message="tns:nodoChiediElencoQuadraturePSP" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediElencoQuadraturePSPRichiesta" />
+			<wsdl:output message="tns:nodoChiediElencoQuadraturePSPResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediElencoQuadraturePSPRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediQuadraturaPSP">
+			<wsdl:input message="tns:nodoChiediQuadraturaPSP" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediQuadraturaPSPRichiesta" />
+			<wsdl:output message="tns:nodoChiediQuadraturaPSPResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediQuadraturaPSPRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaEsitoStorno">
+			<wsdl:input message="tns:nodoInviaEsitoStorno" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaEsitoStornoRichiesta" />
+			<wsdl:output message="tns:nodoInviaEsitoStornoResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaEsitoStornoRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaRichiestaRevoca">
+			<wsdl:input message="tns:nodoInviaRichiestaRevoca" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaRichiestaRevocaRichiesta" />
+			<wsdl:output message="tns:nodoInviaRichiestaRevocaResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoInviaRichiestaRevocaRisposta" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PagamentiTelematiciPspNodobinding" type="tns:PagamentiTelematiciPspNodo">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="nodoVerificaRPT">
+			<soap:operation soapAction="nodoVerificaRPT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoAttivaRPT">
+			<soap:operation soapAction="nodoAttivaRPT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaRT">
+			<soap:operation soapAction="nodoInviaRT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediInformativaPA">
+			<soap:operation soapAction="nodoChiediInformativaPA" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediTemplateInformativaPSP">
+			<soap:operation soapAction="nodoChiediTemplateInformativaPSP" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaFlussoRendicontazione">
+			<soap:operation soapAction="nodoInviaFlussoRendicontazione" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediElencoQuadraturePSP">
+			<soap:operation soapAction="nodoChiediElencoQuadraturePSP" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoChiediQuadraturaPSP">
+			<soap:operation soapAction="nodoChiediQuadraturaPSP" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaEsitoStorno">
+			<soap:operation soapAction="nodoInviaEsitoStorno" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="nodoInviaRichiestaRevoca">
+			<soap:operation soapAction="nodoRichiestaRevoca" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PagamentiTelematiciPspNodoservice">
+		<wsdl:port name="PPTPort" binding="tns:PagamentiTelematiciPspNodobinding">
+			<soap:address location="http://PuntoAccessoPSP.spcoop.gov.it/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
