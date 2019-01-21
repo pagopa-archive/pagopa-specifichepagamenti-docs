@@ -224,7 +224,7 @@
                                         <xsd:documentation>Lettura tramite QR-CODE disponibile all'interno dell'avviso di pagamento </xsd:documentation>
                                     </xsd:annotation>
                                 </xsd:enumeration>
-                                <xsd:enumeration value="aim-128">
+                                <xsd:enumeration value="BARCODE-128-AIM">
                                     <xsd:annotation>
                                         <xsd:documentation>Lettura tramite data-matrix del bollettino postale PA </xsd:documentation>
                                     </xsd:annotation>
@@ -238,12 +238,12 @@
                         </xsd:annotation>
                         <xsd:complexType>
                             <xsd:choice>
-                                <xsd:element minOccurs="0" maxOccurs="1" ref="tns:QrCode">
+                                <xsd:element minOccurs="1" maxOccurs="1" ref="tns:QrCode">
                                     <xsd:annotation>
                                         <xsd:documentation>struttura che contiene i dati raccolti tramite QR-CODE</xsd:documentation>
                                     </xsd:annotation>
                                 </xsd:element>
-                                <xsd:element minOccurs="0" maxOccurs="1" ref="tns:aim128">
+                                <xsd:element minOccurs="1" maxOccurs="1" ref="tns:aim128">
                                     <xsd:annotation>
                                         <xsd:documentation>struttura che contiene i dati raccolti tramite bollettino postale </xsd:documentation>
                                     </xsd:annotation>
