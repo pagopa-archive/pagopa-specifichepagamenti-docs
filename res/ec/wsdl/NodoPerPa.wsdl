@@ -228,6 +228,7 @@
 
 	<wsdl:portType name="PagamentiTelematiciRPT">
 		<wsdl:operation name="nodoChiediStatoRPT">
+			<wsdl:documentation> descrizione dell'operazione  </wsdl:documentation>
 			<wsdl:input name="nodoChiediStatoRPT" message="tns:nodoChiediStatoRPT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediStatoRPTRichiesta" wsaw:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediStatoRPTRichiesta">
 			</wsdl:input>
 			<wsdl:output name="nodoChiediStatoRPTResponse" message="tns:nodoChiediStatoRPTResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediStatoRPTRisposta" wsaw:Action="http://ws.pagamenti.telematici.gov/PPT/nodoChiediStatoRPTRisposta">
@@ -300,6 +301,7 @@
 	<wsdl:binding name="PagamentiTelematiciRPTbinding" type="tns:PagamentiTelematiciRPT">
 		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
 		<wsdl:operation name="nodoChiediStatoRPT">
+			<wsdl:documentation>La primitiva restituisce lo stato di una specifica RPT e dei suoi pagamenti, consentendo all’applicazione dell'Ente Creditore di realizzare funzionalità di monitoraggio verso l’utilizzatore finale. Poiché la response contiene le informazioni di redirect allo stesso modo della primitiva nodoInviaRPT, questa primitiva consente di recuperare, se necessario, il caso in cui la response di una precedente nodoInviaRPT sia stata perduta.</wsdl:documentation>			
 			<soap:operation soapAction="nodoChiediStatoRPT" style="document" />
 			<wsdl:input name="nodoChiediStatoRPT">
 				<soap:body use="literal" />
@@ -310,6 +312,7 @@
 		</wsdl:operation>
 
 		<wsdl:operation name="nodoChiediListaPendentiRPT">
+			<wsdl:documentation>La primitiva restituisce una lista di attributi delle RPT positivamente inviate al PSP a cui non corrisponde la ricezione di una RT correlata. La lista restituisce l'elenco di tali transazioni al momento della richiesta effettuata da un singolo Ente Creditore. </wsdl:documentation>			
 			<soap:operation soapAction="nodoChiediListaPendentiRPT" style="document" />
 			<wsdl:input name="nodoChiediListaPendentiRPT">
 				<soap:body use="literal" />
