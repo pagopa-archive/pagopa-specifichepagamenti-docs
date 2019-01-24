@@ -299,4 +299,11 @@
         </xsd:sequence>
     </xsd:complexType>
     
+    <xsd:simpleType name="stEsito">
+    <xsd:restriction base="xsd:string">
+        <xsd:enumeration value="OK" /> 
+        <xsd:enumeration value="KO" />
+    </xsd:restriction>
+    </xsd:simpleType>
+    
 </xsd:schema>
