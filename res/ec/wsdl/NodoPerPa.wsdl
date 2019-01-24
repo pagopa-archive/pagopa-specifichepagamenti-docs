@@ -348,6 +348,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediCopiaRT">
+			<wsdl:documentation>Con questa primitiva gli Enti Creditori possono richiedere la copia di una ricevuta telematica precedentemente inviata dal Nodo dei Pagamenti-SPC all'ente stesso.</wsdl:documentation>
 			<soap:operation soapAction="nodoChiediCopiaRT" style="document" />
 			<wsdl:input name="nodoChiediCopiaRT">
 				<soap:body use="literal" />
