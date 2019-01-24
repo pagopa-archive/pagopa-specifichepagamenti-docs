@@ -358,6 +358,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediInformativaPSP">
+			<wsdl:documentation>tramite questa primitiva l'EC richiede la visione del catalogo dei informativi </wsdl:documentation>
 			<soap:operation soapAction="nodoChiediInformativaPSP" style="document" />
 			<wsdl:input name="nodoChiediInformativaPSP">
 				<soap:body use="literal" />
@@ -366,7 +367,7 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="nodoPAChiediInformativaPA">
+		<wsdl:operation name="nodoPAChiediInformativaPA">  <!-- NON PRESENTE NELLE SANP-->
 			<soap:operation soapAction="nodoPAChiediInformativaPA" style="document" />
 			<wsdl:input name="nodoPAChiediInformativaPA">
 				<soap:body use="literal" />
@@ -376,6 +377,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediElencoQuadraturePA">
+			<wsdl:documentation>l’Ente Creditore richiede al NodoSPC l’elenco dei flussi contenenti i "Totali di Traffico" di sua competenza memorizzati presso la piattaforma. </wsdl:documentation>
 			<soap:operation soapAction="nodoChiediElencoQuadraturePA" style="document" />
 			<wsdl:input name="nodoChiediElencoQuadraturePA">
 				<soap:body use="literal" />
