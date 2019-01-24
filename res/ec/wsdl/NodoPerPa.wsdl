@@ -334,6 +334,9 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoInviaCarrelloRPT">
+			<wsdl:documentation>La primitiva è utilizzabile solo per gestire il workflow del modello di pagamento con esecuzione immediata e sottomette al Nodo dei Pagamenti-SPC un “carrello” costituito da una lista di RPT. La lista di RPT è accettata, e quindi presa in carico dal Nodo dei Pagamenti-SPC, oppure respinta per intero con errore.
+				La response contiene l’URL di re-direzione per il pagamento online relativo all’intero “carrello”.
+			</wsdl:documentation>
 			<soap:operation soapAction="nodoInviaCarrelloRPT" style="document" />
 			<wsdl:input name="nodoInviaCarrelloRPT">
 				<soap:header message="tns:nodoInviaCarrelloRPT" part="header" use="literal">
