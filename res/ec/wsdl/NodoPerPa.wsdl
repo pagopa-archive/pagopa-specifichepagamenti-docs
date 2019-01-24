@@ -358,7 +358,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediInformativaPSP">
-			<wsdl:documentation>tramite questa primitiva l'EC richiede la visione del catalogo dei informativi </wsdl:documentation>
+			<wsdl:documentation>--DEPRECATA-- tramite questa primitiva l'EC richiede la visione del catalogo dei informativi </wsdl:documentation>
 			<soap:operation soapAction="nodoChiediInformativaPSP" style="document" />
 			<wsdl:input name="nodoChiediInformativaPSP">
 				<soap:body use="literal" />
@@ -376,8 +376,8 @@
 				<soap:body use="literal" />
 			</wsdl:output>
 		</wsdl:operation>
-		<wsdl:operation name="nodoChiediElencoQuadraturePA">
-			<wsdl:documentation>l’Ente Creditore richiede al NodoSPC l’elenco dei flussi contenenti i "Totali di Traffico" di sua competenza memorizzati presso la piattaforma. </wsdl:documentation>
+		<wsdl:operation name="nodoChiediElencoQuadraturePA"> 
+			<wsdl:documentation>-- DEPRECATA -- l’Ente Creditore richiede al NodoSPC l’elenco dei flussi contenenti i "Totali di Traffico" di sua competenza memorizzati presso la piattaforma. </wsdl:documentation>
 			<soap:operation soapAction="nodoChiediElencoQuadraturePA" style="document" />
 			<wsdl:input name="nodoChiediElencoQuadraturePA">
 				<soap:body use="literal" />
@@ -387,6 +387,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediQuadraturaPA">
+			<wsdl:documentation>--DEPRECATA--</wsdl:documentation>
 			<soap:operation soapAction="nodoChiediQuadraturaPA" style="document" />
 			<wsdl:input name="nodoChiediQuadraturaPA">
 				<soap:body use="literal" />
@@ -396,6 +397,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediElencoFlussiRendicontazione">
+			<wsdl:documentation>Con questa primitiva l’Ente Creditore richiede al NodoSPC l’elenco dei flussi di rendicontazione di sua competenza memorizzati presso la piattaforma.</wsdl:documentation>
 			<soap:operation soapAction="nodoChiediElencoFlussiRendicontazione" style="document" />
 			<wsdl:input name="nodoChiediElencoFlussiRendicontazione">
 				<soap:body use="literal" />

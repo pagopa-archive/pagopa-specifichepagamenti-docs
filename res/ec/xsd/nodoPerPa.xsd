@@ -377,7 +377,7 @@
 				</xsd:sequence>
 			</xsd:complexType>
 
-			
+		
 
 			<xsd:complexType name="ctTipoElementoListaRPT">
 				<xsd:sequence>
@@ -430,8 +430,6 @@
 				</xsd:complexContent>
 			</xsd:complexType>
 
-			
-
 			<xsd:complexType name="ctNodoChiediListaPendentiRPT">
 				<xsd:complexContent>
 					<xsd:extension base="tns:richiestaPa">
@@ -481,10 +479,6 @@
 					</xsd:extension>
 				</xsd:complexContent>
 			</xsd:complexType>
-
-			
-
-			
 
 			<xsd:complexType name="ctNodoChiediInformativaPSP">
 				<xsd:sequence>
@@ -550,10 +544,6 @@
 				</xsd:complexContent>
 			</xsd:complexType>
 
-			
-
-		
-
 			<xsd:complexType name="ctNodoChiediQuadraturaPA">
 				<xsd:sequence>
 					<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
@@ -575,16 +565,19 @@
 			</xsd:complexType>
 
 			<xsd:complexType name="ctNodoChiediElencoFlussiRendicontazione">
-				<xsd:sequence>
-					<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="password" type="pay:stPassword" />
-					<xsd:element name="identificativoDominio" type="pay:stText35" minOccurs="0" />
-					<xsd:element name="identificativoPSP" type="pay:stText35" minOccurs="0" />
-				</xsd:sequence>
+				<xsd:complexContent>
+					<xsd:extension base="tns:richiestaPa">
+						<xsd:sequence>							
+							<xsd:element name="identificativoPSP" type="pay:stText35" minOccurs="0" >
+								<xsd:annotation>
+									<xsd:documentation>Specifica i flussi di un PSP particolare, se omesso si intende tutti i PSP</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+				
 			</xsd:complexType>
-
-			
 
 			<xsd:complexType name="ctTipoElencoFlussiRendicontazione">
 				<xsd:sequence>
@@ -597,7 +590,11 @@
 		<xsd:complexContent>
 			<xsd:extension base="tns:risposta">
 				<xsd:sequence>
-					<xsd:element name="elencoFlussiRendicontazione" type="tns:ctTipoElencoFlussiRendicontazione" minOccurs="0" />
+					<xsd:element name="elencoFlussiRendicontazione" type="tns:ctTipoElencoFlussiRendicontazione" minOccurs="0" >
+						<xsd:annotation>
+							<xsd:documentation>Elenco di Flussi di Rendicontazione</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:extension>
 		</xsd:complexContent>
@@ -605,8 +602,16 @@
 	
 			<xsd:complexType name="ctTipoIdRendicontazione">
 				<xsd:sequence>
-					<xsd:element name="identificativoFlusso" type="xsd:string" />
-					<xsd:element name="dataOraFlusso" type="xsd:dateTime" />
+					<xsd:element name="identificativoFlusso" type="pay:stFlusso" >
+						<xsd:annotation>
+							<xsd:documentation> identificativo flusso </xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="dataOraFlusso" type="xsd:dateTime" >
+						<xsd:annotation>
+							<xsd:documentation>data ora di generazione del flusso</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
 				</xsd:sequence>
 			</xsd:complexType>
 
