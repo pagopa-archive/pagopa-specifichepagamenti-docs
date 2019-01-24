@@ -425,6 +425,8 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediSceltaWISP">
+			<wsdl:documentation>primitiva per l'utilizzo del servizio WISP 2.0 in modalità EMULATA.
+			</wsdl:documentation>
 			<soap:operation soapAction="nodoChiediSceltaWISP" style="document" />
 			<wsdl:input name="nodoChiediSceltaWISP">
 				<soap:body use="literal" />

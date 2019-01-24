@@ -541,24 +541,33 @@
 			</xsd:complexType>
 
 			<xsd:complexType name="ctNodoChiediSceltaWISP">
-				<xsd:sequence>
-					<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="password" type="pay:stPassword" />
-					<xsd:element name="identificativoDominio" type="pay:stText35" />
-					<xsd:element name="keyPA" type="pay:stText40" />
-					<xsd:element name="keyWISP" type="pay:stText40" />
-				</xsd:sequence>
+				<xsd:complexContent>
+					<xsd:extension base="tns:richiestaPa">
+						<xsd:sequence>					
+							<xsd:element name="keyPA" type="pay:stText40" >
+								<xsd:annotation>
+									<xsd:documentation>token generato dall'EC che identifica la sessione di scelta del PSP da parte dell'utilizzatore finale</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="keyWISP" type="pay:stText40" >
+								<xsd:annotation>
+									<xsd:documentation>token generato dal WISP al momento della chiusura del processo di scelta del PSP (simulato per modalità emulata) </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+				
 			</xsd:complexType>
 
 			<xsd:complexType name="ctNodoChiediSceltaWISPRisposta">
 				<xsd:complexContent>
 					<xsd:extension base="tns:risposta">
 						<xsd:sequence>
-							<xsd:element name="effettuazioneScelta" type="pay:stEffettuazioneScelta" minOccurs="0" />
-							<xsd:element name="identificativoPSP" type="pay:stText35"  minOccurs="0" />
-							<xsd:element name="identificativoIntermediarioPSP" type="pay:stText35" minOccurs="0" />
-							<xsd:element name="identificativoCanale" type="pay:stText35" minOccurs="0" />
+							<xsd:element name="effettuazioneScelta" type="pay:stEffettuazioneScelta" fixed="SI" minOccurs="1" />
+							<xsd:element name="identificativoPSP" type="pay:stText35"  fixed="AGID_01" minOccurs="1" />
+							<xsd:element name="identificativoIntermediarioPSP" type="pay:stText35" fixed="97735020584" minOccurs="1" />
+							<xsd:element name="identificativoCanale" type="pay:stText35" fixed="97735020584_02" minOccurs="1" />
 							<xsd:element name="tipoVersamento" type="pay:stTipoVersamento" minOccurs="0" />
 						</xsd:sequence>
 					</xsd:extension>

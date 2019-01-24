@@ -280,8 +280,9 @@
     <xsd:simpleType name="stEffettuazioneScelta">
         <xsd:restriction base="xsd:string">
             <xsd:enumeration value="SI" />
-            <xsd:enumeration value="NO" />
-            <xsd:enumeration value="PO" />
+           <!-- Valori non più ammessi, funzione emulata 
+               <xsd:enumeration value="NO" />
+            <xsd:enumeration value="PO" />-->
         </xsd:restriction>
     </xsd:simpleType>
     
