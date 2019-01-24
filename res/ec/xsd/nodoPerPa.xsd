@@ -15,46 +15,185 @@
 			<xsd:element name="fault" type="pay:ctFaultBean" minOccurs="0" />
 		</xsd:sequence>
 	</xsd:complexType>
+	
+	<xsd:complexType name="richiestaPa">
+		<xsd:sequence>
+			<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" >
+				<xsd:annotation>
+					<xsd:documentation>identificativo dell'intermediario PA mittente della richiesta</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" >
+				<xsd:annotation>
+					<xsd:documentation>identificativo della stazione utilizzata per il trasporto del messaggio</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="password" type="pay:stPassword">
+				<xsd:annotation>
+					<xsd:documentation>codice di sicurezza per la trasmissione</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="identificativoDominio" type="pay:stText35" >
+				<xsd:annotation>
+					<xsd:documentation>identificativo dell'EC mittente</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
     
     	<xsd:complexType name="ctNodoChiediStatoRPT">
-				<xsd:sequence>
-					<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="password" type="pay:stPassword"/>
-					<xsd:element name="identificativoDominio" type="pay:stText35" />
-					<xsd:element name="identificativoUnivocoVersamento" type="pay:stText35" />
-					<xsd:element name="codiceContestoPagamento" type="pay:stText35" />
-				</xsd:sequence>
+    		<xsd:complexContent>
+    		<xsd:extension base="tns:richiestaPa">
+    			<xsd:sequence>    				
+    				<xsd:element name="identificativoUnivocoVersamento" type="pay:stText35" >
+    					<xsd:annotation>
+    						<xsd:documentation>identificativo univoco del versamento (IUV) </xsd:documentation>
+    					</xsd:annotation>
+    				</xsd:element>
+    				<xsd:element name="codiceContestoPagamento" type="pay:stText35" >
+    					<xsd:annotation>
+    						<xsd:documentation>definisce il contensto del pagamento </xsd:documentation>
+    					</xsd:annotation>
+    				</xsd:element>
+    			</xsd:sequence>
+    		</xsd:extension>
+    		</xsd:complexContent>
+				
 			</xsd:complexType>
 
+
+<xsd:simpleType name="stStatoRPT">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="RPT_RICEVUTA_NODO">
+			<xsd:annotation>
+				<xsd:documentation>RPT ricevuta dal Nodo e in attesa di essere processata</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RPT_RIFIUTATA_NODO">
+			<xsd:annotation>
+				<xsd:documentation>RPT rifiutata dal Nodo per sintassi o semantica errata</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RPT_ACCETTATA_NODO">
+			<xsd:annotation>
+				<xsd:documentation>RPT accettata dal Nodo come valida</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RPT_RIFIUTATA_PSP">
+			<xsd:annotation>
+				<xsd:documentation>RPT rifiutata dall'Intermediario PSP per sintassi o semantica errata</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RPT_ERRORE_INVIO_A_PSP">
+			<xsd:annotation>
+				<xsd:documentation>RPT inviata all'Intermediario PSP - indisponibilità del ricevente</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RPT_INVIATA_A_PSP">
+			<xsd:annotation>
+				<xsd:documentation>RPT inviata all'Intermediario PSP - azione in attesa di risposta</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RPT_ACCETTATA_PSP">
+			<xsd:annotation>
+				<xsd:documentation>RPT ricevuta ed accettata dall'Intermediario PSP come valida</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RPT_DECORSI_TERMINI">
+			<xsd:annotation>
+				<xsd:documentation>RPT ha superato il periodo di decorrenza termini nel Nodo</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RT_RICEVUTA_NODO">
+			<xsd:annotation>
+				<xsd:documentation>RT ricevuta dal Nodo</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RT_RIFIUTATA_NODO">
+			<xsd:annotation>
+				<xsd:documentation>RT rifiutata dal Nodo per sintassi o semantica errata</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RT_ACCETTATA_NODO">
+			<xsd:annotation>
+				<xsd:documentation>RT accettata dal Nodo come valida ed in corso di invio all'Intermediario dell’Ente Creditore</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RT_ACCETTATA_PA">
+			<xsd:annotation>
+				<xsd:documentation>RT ricevuta dall'Intermediario dell’Ente Creditore ed accettata</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RT_RIFIUTATA_PA">
+			<xsd:annotation>
+				<xsd:documentation>RT ricevuta dall'Intermediario dell’Ente Creditore e rifiutata</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+		<xsd:enumeration value="RT_ESITO_SCONOSCIUTO">
+			<xsd:annotation>
+				<xsd:documentation>Esito dell'accettazione RT dell'Intermediario dell’Ente Creditore non interpretabile</xsd:documentation>
+			</xsd:annotation>
+		</xsd:enumeration>
+	</xsd:restriction>
+</xsd:simpleType>
+	
+	
 			<xsd:complexType name="ctNodoChiediStatoRPTRisposta">
 				<xsd:complexContent>
 					<xsd:extension base="tns:risposta">
-						<xsd:sequence>
-							<xsd:element name="esito" type="tns:ctEsitoChiediStatoRPT" minOccurs="0" />
+						<xsd:sequence>							
+							<xsd:element name="stato" type="tns:stStatoRPT" minOccurs="1" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>stato attuale del pagamento</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>														
+							<xsd:element name="redirect" type="xsd:boolean" default="0" minOccurs="0" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>specifica se il pagamento prescelto dall'utente prevede la re-direzione dell'utilizzatore final</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="url" type="xsd:string" default="" minOccurs="0" maxOccurs="1">
+								<xsd:annotation>
+									<xsd:documentation>URL a cui redigere il browser dell'utilizzatore finale contenente la chiave sessione, utile per recuperare nel caso la risposta alla nodoInviaCarrelloRPT sia stata persa</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="elementoStoricoRPT"  nillable="true" minOccurs="0" maxOccurs="unbounded" >
+								<xsd:annotation>
+									<xsd:documentation>Contiene i vari stati che la RPT ha assunto durante la sua storia</xsd:documentation>
+								</xsd:annotation>
+								<xsd:complexType>
+									<xsd:sequence>
+										<xsd:element name="data" type="xsd:dateTime" >
+											<xsd:annotation>
+												<xsd:documentation>data dell'evento </xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="stato" type="tns:stStatoRPT" >
+											<xsd:annotation>
+												<xsd:documentation> stato dell'RPT</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+										<xsd:element name="descrizione" type="xsd:string" >
+											<xsd:annotation>
+												<xsd:documentation>descrizione dello stato alla data</xsd:documentation>
+											</xsd:annotation>
+										</xsd:element>
+									</xsd:sequence>
+								</xsd:complexType>								
+							</xsd:element>
+							<xsd:element name="elementoStoricoVersamento" type="tns:ctTipoStoricoVersamento" nillable="true" minOccurs="0" maxOccurs="unbounded" >
+								<xsd:annotation>
+									<xsd:documentation>DEPRECATO</xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>							
 						</xsd:sequence>
 					</xsd:extension>
 				</xsd:complexContent>
 			</xsd:complexType>
 
-			<xsd:complexType name="ctEsitoChiediStatoRPT">
-				<xsd:sequence>
-					<xsd:element name="stato" type="xsd:string" />
-					<xsd:element name="redirect" type="xsd:int" default="0" minOccurs="0" />
-					<xsd:element name="url" type="xsd:string" default="" minOccurs="0" />
-					<xsd:element name="elementoStoricoRPT" type="tns:ctTipoStoricoRPT" nillable="true" minOccurs="0" maxOccurs="unbounded" />
-					<xsd:element name="elementoStoricoVersamento" type="tns:ctTipoStoricoVersamento" nillable="true" minOccurs="0" maxOccurs="unbounded" />
-				</xsd:sequence>
-			</xsd:complexType>
+	
 
-			<xsd:complexType name="ctTipoStoricoRPT">
-				<xsd:sequence>
-					<xsd:element name="data" type="xsd:dateTime" />
-					<xsd:element name="stato" type="xsd:string" />
-					<xsd:element name="descrizione" type="xsd:string" />
-				</xsd:sequence>
-			</xsd:complexType>
-
+	<!--	ctTipoStoricoVersamento	DEPRECATO INIZIO-->
 			<xsd:complexType name="ctTipoStoricoVersamento">
 				<xsd:sequence>
 					<xsd:element name="progressivo" type="xsd:int" />
@@ -63,6 +202,7 @@
 					<xsd:element name="descrizione" type="xsd:string" />
 				</xsd:sequence>
 			</xsd:complexType>
+	<!--	ctTipoStoricoVersamento	DEPRECATO FINE-->
 
 			<xsd:complexType name="ctNodoChiediCopiaRT">
 				<xsd:sequence>

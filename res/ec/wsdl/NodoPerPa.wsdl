@@ -69,7 +69,11 @@
 			<xsd:element name="nodoChiediListaPendentiRPT" type="nodo:ctNodoChiediListaPendentiRPT" />
 			<xsd:element name="nodoChiediListaPendentiRPTRisposta" type="nodo:ctNodoChiediListaPendentiRPTRisposta" />
 
-			<xsd:element name="nodoChiediStatoRPT" type="nodo:ctNodoChiediStatoRPT" />
+			<xsd:element name="nodoChiediStatoRPT" type="nodo:ctNodoChiediStatoRPT" >
+				<xsd:annotation>
+					<xsd:documentation> La primitiva restituisce lo stato di una specifica RPT e dei suoi pagamenti, consentendo all’applicazione dell'Ente Creditore di realizzare funzionalità di monitoraggio verso l’utilizzatore finale. Poiché la response contiene le informazioni di redirect allo stesso modo della primitiva nodoInviaRPT, questa primitiva consente di recuperare, se necessario, il caso in cui la response di una precedente nodoInviaRPT sia stata perduta.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
 			<xsd:element name="nodoChiediStatoRPTRisposta" type="nodo:ctNodoChiediStatoRPTRisposta" />
 
 			<xsd:element name="nodoInviaRPT" type="nodo:ctNodoInviaRPT" />
