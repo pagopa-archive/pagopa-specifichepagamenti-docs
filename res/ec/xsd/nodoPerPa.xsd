@@ -616,21 +616,34 @@
 			</xsd:complexType>
 
 			<xsd:complexType name="ctNodoChiediFlussoRendicontazione">
-				<xsd:sequence>
-					<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
-					<xsd:element name="password" type="pay:stPassword" />
-					<xsd:element name="identificativoDominio" type="pay:stText35" minOccurs="0" />
-					<xsd:element name="identificativoPSP" type="pay:stText35" minOccurs="0" />
-					<xsd:element name="identificativoFlusso" type="xsd:string" />
-				</xsd:sequence>
+			<xsd:complexContent>
+					<xsd:extension base="tns:richiestaPa">
+						<xsd:sequence>					
+							<xsd:element name="identificativoPSP" type="pay:stText35" minOccurs="0" >
+								<xsd:annotation>
+									<xsd:documentation> identificativo del PSP </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+							<xsd:element name="identificativoFlusso" type="pay:stFlusso" >
+								<xsd:annotation>
+									<xsd:documentation> identificativo del flusso  </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
+						</xsd:sequence>
+					</xsd:extension>			
+			</xsd:complexContent>
+				
 			</xsd:complexType>
 
 			<xsd:complexType name="ctNodoChiediFlussoRendicontazioneRisposta">
 				<xsd:complexContent>
 					<xsd:extension base="tns:risposta">
 						<xsd:sequence>
-							<xsd:element name="xmlRendicontazione" type="xsd:base64Binary" minOccurs="0" xmime:expectedContentTypes="application/octet-stream" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" />
+							<xsd:element name="xmlRendicontazione" type="xsd:base64Binary" minOccurs="0" maxOccurs="1" xmime:expectedContentTypes="application/octet-stream" xmlns:xmime="http://www.w3.org/2005/05/xmlmime" >
+							<xsd:annotation>
+									<xsd:documentation> file XML codificato base64 relativo al flusso richiesto </xsd:documentation>
+								</xsd:annotation>
+							</xsd:element>
 						</xsd:sequence>
 					</xsd:extension>
 				</xsd:complexContent>

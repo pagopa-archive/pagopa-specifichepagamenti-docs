@@ -407,6 +407,7 @@
 			</wsdl:output>
 		</wsdl:operation>
 		<wsdl:operation name="nodoChiediFlussoRendicontazione">
+		<wsdl:documentation>Con questa primitiva l’Ente Creditore richiede al NodoSPC un file XML relativo ad uno specifico flusso di rendicontazione relativo ad un PSP; Il flusso deve essere presente nell'elenco scaricato con la primitiva nodoChiediElencoFlussiRendicontazione.</wsdl:documentation>			
 			<soap:operation soapAction="nodoChiediFlussoRendicontazione" style="document" />
 			<wsdl:input name="nodoChiediFlussoRendicontazione">
 				<soap:body use="literal" />
