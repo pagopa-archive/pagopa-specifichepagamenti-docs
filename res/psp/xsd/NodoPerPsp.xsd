@@ -276,18 +276,37 @@
     </xsd:complexType>
 
     <xsd:complexType name="ctNodoInviaRT">
-        <xsd:sequence>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoDominio" type="pay:stText35"/>
-            <xsd:element name="identificativoUnivocoVersamento" type="pay:stText35"/>
-            <xsd:element name="codiceContestoPagamento" type="pay:stText35"/>
-            <xsd:element name="tipoFirma" type="xsd:string" minOccurs="0"/>
-            <xsd:element name="forzaControlloSegno" type="tns:stForzaControlloSegno" minOccurs="0"/>
-            <xsd:element name="rt" type="xsd:base64Binary"/>
-        </xsd:sequence>
+      <xsd:complexContent>
+        <xsd:extension base="tns:richiestaPsp">
+          <xsd:sequence>
+              <xsd:element name="identificativoUnivocoVersamento" type="pay:stText35">
+                  <xsd:annotation>
+                    <xsd:documentation> identificativo del versamento effettuato</xsd:documentation>
+                  </xsd:annotation>
+              </xsd:element>
+              <xsd:element name="codiceContestoPagamento" type="pay:stText35">
+                <xsd:annotation>
+                  <xsd:documentation> identificativo del contesto del pagamento </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+              <xsd:element name="tipoFirma" type="xsd:string" fixed="0" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation> DEPRECATO </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+              <xsd:element name="forzaControlloSegno" type="tns:stForzaControlloSegno" minOccurs="0">
+                <xsd:annotation>
+                  <xsd:documentation> disabilita i controlli di coerenza del Nodo, sovrascrivendo lo stato del pagamento</xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+              <xsd:element name="rt" type="xsd:base64Binary">
+                <xsd:annotation>
+                  <xsd:documentation> Contiene il documento XML codificato base64 </xsd:documentation>
+                </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:extension>
+      </xsd:complexContent>
     </xsd:complexType>
 
     <xsd:complexType name="ctNodoInviaRTRisposta">
@@ -295,6 +314,8 @@
             <xsd:element name="ctNodoInviaRTRisposta" type="tns:ctEsitoNodoInviaRTRisposta"/>
         </xsd:sequence>
     </xsd:complexType>
+
+
     <xsd:complexType name="ctEsitoNodoInviaRTRisposta">
         <xsd:complexContent>
             <xsd:extension base="tns:risposta">

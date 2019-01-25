@@ -3,17 +3,17 @@
   Questo WSDL rappresenta l'interfaccia esposta dal Nodo dei Pagamenti Telematici
   per la verifica dei pagamenti in attesa verso i PSP.
 -->
-<wsdl:definitions name="PPT" 
-  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+<wsdl:definitions name="PPT"
+  xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
   xmlns:nodo ="http://www.agid.gov.it/schemas/pagoPa/nodo"
-  xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
-  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
-  xmlns:tns="http://www.agid.gov.it/services/pagoPa/nodo" 
-  xmlns:pay_i="http://www.digitpa.gov.it/schemas/2011/Pagamenti/" 
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+  xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+  xmlns:tns="http://www.agid.gov.it/services/pagoPa/nodo"
+  xmlns:pay_i="http://www.digitpa.gov.it/schemas/2011/Pagamenti/"
   targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo">
-<!--   xmlns:pay_j="http://www.cnipa.gov.it/schemas/2010/Pagamenti/Ack_1_0/" --> 
-  
+<!--   xmlns:pay_j="http://www.cnipa.gov.it/schemas/2010/Pagamenti/Ack_1_0/" -->
+
 	<wsdl:types>
 		<xsd:schema version="2.1.2" targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo">
 			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPsp.xsd" />
@@ -21,7 +21,7 @@
 			<!-- Wrapper Elements -->
 			<xsd:element name="nodoInviaRT" type="nodo:ctNodoInviaRT" />
 			<xsd:element name="nodoInviaRTRisposta" type="nodo:ctNodoInviaRTRisposta" />
-			
+
 			<xsd:element name="nodoVerificaRPT" type="nodo:ctNodoVerificaRPT" />
 			<xsd:element name="nodoVerificaRPTRisposta" type="nodo:ctNodoVerificaRPTRisposta" />
 
@@ -45,12 +45,12 @@
 
 			<xsd:element name="nodoInviaEsitoStorno" type="nodo:ctNodoInviaEsitoStorno" />
 			<xsd:element name="nodoInviaEsitoStornoRisposta" type="nodo:ctNodoInviaEsitoStornoRisposta" />
-			
+
 			<xsd:element name="nodoInviaRichiestaRevoca" type="nodo:ctNodoInviaRichiestaRevoca" />
 			<xsd:element name="nodoInviaRichiestaRevocaRisposta" type="nodo:ctNodoInviaRichiestaRevocaRisposta" />
 		</xsd:schema>
 	</wsdl:types>
-	
+
 	<wsdl:message name="nodoVerificaRPT">
 		<wsdl:part name="bodyrichiesta" element="tns:nodoVerificaRPT" />
 	</wsdl:message>
@@ -64,7 +64,7 @@
 	<wsdl:message name="nodoAttivaRPTResponse">
 		<wsdl:part name="bodyrisposta" element="tns:nodoAttivaRPTRisposta" />
 	</wsdl:message>
-	
+
 	<wsdl:message name="nodoInviaRT">
 		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaRT" />
 	</wsdl:message>
@@ -113,16 +113,17 @@
 	<wsdl:message name="nodoInviaEsitoStornoResponse">
 		<wsdl:part name="bodyrisposta" element="tns:nodoInviaEsitoStornoRisposta" />
 	</wsdl:message>
-	
+
 	<wsdl:message name="nodoInviaRichiestaRevoca">
 		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaRichiestaRevoca" />
 	</wsdl:message>
 	<wsdl:message name="nodoInviaRichiestaRevocaResponse">
 		<wsdl:part name="bodyrisposta" element="tns:nodoInviaRichiestaRevocaRisposta" />
 	</wsdl:message>
-	
+
 	<wsdl:portType name="PagamentiTelematiciPspNodo">
 		<wsdl:operation name="nodoVerificaRPT">
+      	<wsdl:documentation>La primitiva sottomette al Nodo dei Pagamenti-SPC una RT. Il processo di invio è sincrono e la RT è accettata ed inoltrata con successo alla PA, oppure respinta con errore.	</wsdl:documentation>
 			<wsdl:input message="tns:nodoVerificaRPT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoVerificaRPTRichiesta" />
 			<wsdl:output message="tns:nodoVerificaRPTResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/nodoVerificaRPTRisposta" />
 		</wsdl:operation>
