@@ -156,6 +156,8 @@
             <!--- Pagamento attivato presso PSP -->
             <xsd:enumeration value="OBEP"/>
             <!--- On-line Banking E-Payment -->
+			<xsd:enumeration value="JIF"/>
+            <!--- bancomat Pay -->
             <xsd:enumeration value="OTH"/>
             <!-- Altre forme di versamento -->
             <xsd:maxLength value="4"/>

@@ -429,6 +429,7 @@
                     <xsd:documentation>- AD  - Addebito diretto.</xsd:documentation>
                     <xsd:documentation>- CP  - Carta di Pagamento.</xsd:documentation>
                     <xsd:documentation>- PO  - Pagamento attivato presso PSP.</xsd:documentation>
+					<xsd:documentation>- JIF  - Bancomat Pay</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
             <xsd:element minOccurs="1" name="identificativoUnivocoVersamento" type="pay_i:stText35">
