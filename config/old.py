@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 
 # -- PROJECT Variables ----------------------------------------------------
-settings_project_name = "Specifiche Attuative del Nodo dei Pagamenti-SPC"
+settings_project_name = "Specifiche Attuative del Nodo dei Pagamenti-SPC 2.2"
 settings_copyright_copyleft = 'AgID - Team Digitale'
 settings_editor_name = 'AgID - Team Digitale'
 settings_doc_version = 'version: latest'
 settings_doc_release = 'version: latest'
-settings_basename = 'pagopa-specifichepagamenti-docs'
-settings_file_name = 'pagopa-specifichepagamenti-docs'
+settings_basename = 'sanp-test'
+settings_file_name = 'sanp-test'
 
 # -- No need to change below here
 
@@ -48,7 +48,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.ifconfig',
-    'docs-italia-theme',
+    'docs-italia-theme'
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -123,7 +123,6 @@ html_theme_options = {
     # This option can be used with docs-italia-theme to customise how the versions "badge" is shown:
     # 'False': default (alabaster) badge | 'True': custom (italia) badge
     'custom_versions_badge': 'True',
-    'collapse_navigation': 'True'
 }
 # -- ReadTheDoc requirements and local template generation---------------------
 
@@ -281,4 +280,3 @@ texinfo_documents = [
 ]
 
 numfig = True
-
