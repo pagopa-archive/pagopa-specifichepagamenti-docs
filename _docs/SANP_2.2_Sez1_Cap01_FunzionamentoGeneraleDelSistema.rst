@@ -137,11 +137,11 @@ linea generale, seguono un preordinato “Ciclo di vita” schematizzato nella F
 
 1. L’esigenza del pagamento può nascere in due modi che innescano processi di business differenti:
 
--  su iniziativa dell’Utilizzatore finale che necessita dell’erogazione di un servizio da parte
-   dell’EC
+   -  su iniziativa dell’Utilizzatore finale che necessita dell’erogazione di un servizio da parte
+      dell’EC
 
--  su iniziativa dell’EC che deve richiedere all’Utilizzatore finale l’estinzione di un debito
-   creatosi nei suoi confronti.
+   -  su iniziativa dell’EC che deve richiedere all’Utilizzatore finale l’estinzione di un debito
+      creatosi nei suoi confronti.
 
 2. L’esigenza del pagamento si concretizza attraverso la generazione di una **posizione debitoria**,
    cioè l’insieme di informazioni che l’Ente Creditore deve memorizzare in appositi archivi per

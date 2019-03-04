@@ -430,7 +430,8 @@ Strategie di *retry* per il recapito della RT
 |                                                 | -  il NodoSPC ha replicato mediante *response*  |
 |                                                 |    KO emanando un *faultBean* il cui            |
 |                                                 |    *faultBean.faultCode* è pari a               |
-|                                                 |    PPT_STAZIONE_INT_PA_TIMEOUT                  |
+|                                                 |    PPT_STAZIONE_INT_PA_TIMEOUT oppure           |
+|                                                 |    PPT_STAZIONE_INT_PA_IRRAGGIUNGIBILE          |
 |                                                 |                                                 |
 |                                                 | oppure                                          |
 |                                                 |                                                 |
@@ -655,8 +656,8 @@ Richiesta di avanzamento RT
    :width: 6.69583in
    :height: 2.54792in
 .. |image9| image:: media_FunzioniStrategieRecupero/media/image10.png
-   :width: 6.4087in
-   :height: 7.94936in
+   :width: 6.09091in
+   :height: 7.55518in
 .. |pspChiediAvanzamentoRPT| image:: media_FunzioniStrategieRecupero/media/image11.png
    :width: 5.91319in
    :height: 2.98264in

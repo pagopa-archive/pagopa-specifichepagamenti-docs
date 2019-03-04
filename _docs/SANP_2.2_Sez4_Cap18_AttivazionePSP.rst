@@ -1,4 +1,4 @@
-Attivazione di un PSP sul sistema pagoPA
+ATTIVAZIONE DI UN PSP SUL SISTEMA PAGOPA
 ========================================
 
 Per aderire a pagoPA il PSP sottoscrive con AgID un atto, l’\ **Accordo di servizio**, che delinea
@@ -91,11 +91,11 @@ segue:
    RS deve compilare il documento di manleva affinchè AgID lo possa validare e chiudere formalmente
    la fase di Pre-Esercizio;
 
-8. Al fine di completare il processo, il RS deve fornire ad AgID tutte le informazioni riguardanti
-   il “Tavolo operativo”.
+Al fine di completare il processo, il RS deve fornire ad AgID tutte le informazioni riguardanti il
+“Tavolo operativo”.
 
-   2. .. rubric:: Configurazione del POS virtuale
-         :name: configurazione-del-pos-virtuale
+Configurazione del POS virtuale 
+--------------------------------
 
 I PSP che intendono accettare pagamenti con carta tramite pagoPA devono configurare, sul POS
 virtuale centralizzato esposto dal WISP, una coppia di punti vendita per ogni circuito, uno dei
