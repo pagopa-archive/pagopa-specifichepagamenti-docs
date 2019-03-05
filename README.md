@@ -1,3 +1,3 @@
-# pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC 
+# pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC
 
-Specifiche Attuative del Nodo dei Pagamenti-SPC di pagoPA versione 2.1
+Ramo di sviluppo relativo agli schemi XSD e WSDL.
