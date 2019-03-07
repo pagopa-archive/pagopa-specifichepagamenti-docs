@@ -14,42 +14,7 @@
   targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo">
 <!--   xmlns:pay_j="http://www.cnipa.gov.it/schemas/2010/Pagamenti/Ack_1_0/" -->
 
-	<wsdl:types>
-		<xsd:schema version="2.1.2" targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo">
-			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPsp.xsd" />
 
-			<!-- Wrapper Elements -->
-			<xsd:element name="nodoInviaRT" type="nodo:ctNodoInviaRT" />
-			<xsd:element name="nodoInviaRTRisposta" type="nodo:ctNodoInviaRTRisposta" />
-
-			<xsd:element name="nodoVerificaRPT" type="nodo:ctNodoVerificaRPT" />
-			<xsd:element name="nodoVerificaRPTRisposta" type="nodo:ctNodoVerificaRPTRisposta" />
-
-			<xsd:element name="nodoAttivaRPT" type="nodo:ctNodoAttivaRPT" />
-			<xsd:element name="nodoAttivaRPTRisposta" type="nodo:ctNodoAttivaRPTRisposta" />
-
-			<xsd:element name="nodoInviaFlussoRendicontazione" type="nodo:ctNodoInviaFlussoRendicontazione" />
-			<xsd:element name="nodoInviaFlussoRendicontazioneRisposta" type="nodo:ctNodoInviaFlussoRendicontazioneRisposta" />
-
-			<xsd:element name="nodoChiediInformativaPA" type="nodo:ctNodoChiediInformativaPA" />
-			<xsd:element name="nodoChiediInformativaPARisposta" type="nodo:ctNodoChiediInformativaPARisposta" />
-
-			<xsd:element name="nodoChiediTemplateInformativaPSP" type="nodo:ctNodoChiediTemplateInformativaPSP" />
-			<xsd:element name="nodoChiediTemplateInformativaPSPRisposta" type="nodo:ctNodoChiediTemplateInformativaPSPRisposta" />
-
-			<xsd:element name="nodoChiediElencoQuadraturePSP" type="nodo:ctNodoChiediElencoQuadraturePSP" />
-			<xsd:element name="nodoChiediElencoQuadraturePSPRisposta" type="nodo:ctNodoChiediElencoQuadraturePSPRisposta" />
-
-			<xsd:element name="nodoChiediQuadraturaPSP" type="nodo:ctNodoChiediQuadraturaPSP" />
-			<xsd:element name="nodoChiediQuadraturaPSPRisposta" type="nodo:ctNodoChiediQuadraturaPSPRisposta" />
-
-			<xsd:element name="nodoInviaEsitoStorno" type="nodo:ctNodoInviaEsitoStorno" />
-			<xsd:element name="nodoInviaEsitoStornoRisposta" type="nodo:ctNodoInviaEsitoStornoRisposta" />
-
-			<xsd:element name="nodoInviaRichiestaRevoca" type="nodo:ctNodoInviaRichiestaRevoca" />
-			<xsd:element name="nodoInviaRichiestaRevocaRisposta" type="nodo:ctNodoInviaRichiestaRevocaRisposta" />
-		</xsd:schema>
-	</wsdl:types>
 
 	<wsdl:message name="nodoVerificaRPT">
 		<wsdl:part name="bodyrichiesta" element="tns:nodoVerificaRPT" />

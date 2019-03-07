@@ -10,13 +10,13 @@
     
     <xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/" schemaLocation="../../common/pagoPa_simpleTypes.xsd" />
     
-	<xsd:complexType name="risposta">
+			<xsd:complexType name="risposta">
 		<xsd:sequence>
 			<xsd:element name="fault" type="pay:ctFaultBean" minOccurs="0" />
 		</xsd:sequence>
 	</xsd:complexType>
 	
-	<xsd:complexType name="richiestaPa">
+			<xsd:complexType name="richiestaPa">
 		<xsd:sequence>
 			<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" >
 				<xsd:annotation>
@@ -41,7 +41,7 @@
 		</xsd:sequence>
 	</xsd:complexType>
     
-    	<xsd:complexType name="ctNodoChiediStatoRPT">
+			<xsd:complexType name="ctNodoChiediStatoRPT">
     		<xsd:complexContent>
     		<xsd:extension base="tns:richiestaPa">
     			<xsd:sequence>    				
@@ -62,7 +62,7 @@
 			</xsd:complexType>
 
 
-<xsd:simpleType name="stStatoRPT">
+			<xsd:simpleType name="stStatoRPT">
 	<xsd:restriction base="xsd:string">
 		<xsd:enumeration value="RPT_RICEVUTA_NODO">
 			<xsd:annotation>
@@ -682,4 +682,81 @@
 					</xsd:extension>
 				</xsd:complexContent>
 			</xsd:complexType>
-</xsd:schema>
+
+			
+			<!-- ELEMENTES  -->
+			
+			<xsd:element name="intestazionePPT" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">			
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
+						<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
+						<xsd:element name="identificativoDominio" type="pay:stText35" />
+						<xsd:element name="identificativoUnivocoVersamento" type="pay:stText35" />
+						<xsd:element name="codiceContestoPagamento" type="pay:stText35" />
+					</xsd:sequence>
+					<xsd:attribute ref="soapenv:actor" use="optional" />
+					<xsd:attribute ref="soapenv:mustUnderstand" use="optional" />
+				</xsd:complexType>
+			</xsd:element>
+			
+			<xsd:element name="intestazioneCarrelloPPT" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
+						<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
+						<xsd:element name="identificativoCarrello" type="pay:stText35" />
+					</xsd:sequence>
+					<xsd:attribute ref="soapenv:actor" use="optional" />
+					<xsd:attribute ref="soapenv:mustUnderstand" use="optional" />
+				</xsd:complexType>
+			</xsd:element>
+			
+			
+			<xsd:element name="nodoChiediCopiaRTRisposta" type="tns:ctNodoChiediCopiaRTRisposta"  />
+			<xsd:element name="nodoChiediCopiaRT" type="tns:ctNodoChiediCopiaRT" />
+			
+			<xsd:element name="nodoInviaRichiestaStorno" type="tns:ctNodoInviaRichiestaStorno" />
+			<xsd:element name="nodoInviaRichiestaStornoRisposta" type="tns:ctNodoInviaRichiestaStornoRisposta" />
+
+			<xsd:element name="nodoInviaRispostaRevoca" type="tns:ctNodoInviaRispostaRevoca" />
+			<xsd:element name="nodoInviaRispostaRevocaRisposta" type="tns:ctNodoInviaRispostaRevocaRisposta" />
+
+			<xsd:element name="nodoChiediListaPendentiRPT" type="tns:ctNodoChiediListaPendentiRPT" />
+			<xsd:element name="nodoChiediListaPendentiRPTRisposta" type="tns:ctNodoChiediListaPendentiRPTRisposta" />
+
+			<xsd:element name="nodoChiediStatoRPT" type="tns:ctNodoChiediStatoRPT" >
+				<xsd:annotation>
+					<xsd:documentation> La primitiva restituisce lo stato di una specifica RPT e dei suoi pagamenti, consentendo all’applicazione dell'Ente Creditore di realizzare funzionalità di monitoraggio verso l’utilizzatore finale. Poiché la response contiene le informazioni di redirect allo stesso modo della primitiva nodoInviaRPT, questa primitiva consente di recuperare, se necessario, il caso in cui la response di una precedente nodoInviaRPT sia stata perduta.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="nodoChiediStatoRPTRisposta" type="tns:ctNodoChiediStatoRPTRisposta" />
+
+			<xsd:element name="nodoInviaRPT" type="tns:ctNodoInviaRPT" />
+			<xsd:element name="nodoInviaRPTRisposta" type="tns:ctNodoInviaRPTRisposta" />
+
+			<xsd:element name="nodoInviaCarrelloRPT" type="tns:ctNodoInviaCarrelloRPT" />
+			<xsd:element name="nodoInviaCarrelloRPTRisposta" type="tns:ctNodoInviaCarrelloRPTRisposta" />
+
+			<xsd:element name="nodoChiediInformativaPSP" type="tns:ctNodoChiediInformativaPSP" />
+			<xsd:element name="nodoChiediInformativaPSPRisposta" type="tns:ctNodoChiediInformativaPSPRisposta" />
+
+			<xsd:element name="nodoPAChiediInformativaPA" type="tns:ctNodoPAChiediInformativaPA" />
+			<xsd:element name="nodoPAChiediInformativaPARisposta" type="tns:ctNodoPAChiediInformativaPARisposta" />
+
+        	<xsd:element name="nodoChiediElencoQuadraturePA" type="tns:ctNodoChiediElencoQuadraturePA" />
+        	<xsd:element name="nodoChiediElencoQuadraturePARisposta" type="tns:ctNodoChiediElencoQuadraturePARisposta" />
+
+        	<xsd:element name="nodoChiediQuadraturaPA" type="tns:ctNodoChiediQuadraturaPA" />
+        	<xsd:element name="nodoChiediQuadraturaPARisposta" type="tns:ctNodoChiediElencoQuadraturePARisposta" />
+
+        	<xsd:element name="nodoChiediElencoFlussiRendicontazione" type="tns:ctNodoChiediElencoFlussiRendicontazione" />
+        	<xsd:element name="nodoChiediElencoFlussiRendicontazioneRisposta" type="tns:ctNodoChiediElencoFlussiRendicontazioneRisposta" />
+
+        	<xsd:element name="nodoChiediFlussoRendicontazione" type="tns:ctNodoChiediFlussoRendicontazione" />
+        	<xsd:element name="nodoChiediFlussoRendicontazioneRisposta" type="tns:ctNodoChiediFlussoRendicontazioneRisposta" />
+
+    		<xsd:element name="nodoChiediSceltaWISP" type="tns:ctNodoChiediSceltaWISP" />
+			<xsd:element name="nodoChiediSceltaWISPRisposta" type="tns:ctNodoChiediSceltaWISPRisposta" />
+			
+			</xsd:schema>

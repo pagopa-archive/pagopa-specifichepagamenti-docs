@@ -525,5 +525,35 @@
         </xsd:complexContent>
     </xsd:complexType>
 
+	<!-- Wrapper Elements -->
+			<xsd:element name="nodoInviaRT" type="tns:ctNodoInviaRT" />
+			<xsd:element name="nodoInviaRTRisposta" type="tns:ctNodoInviaRTRisposta" />
+
+			<xsd:element name="nodoVerificaRPT" type="tns:ctNodoVerificaRPT" />
+			<xsd:element name="nodoVerificaRPTRisposta" type="tns:ctNodoVerificaRPTRisposta" />
+
+			<xsd:element name="nodoAttivaRPT" type="tns:ctNodoAttivaRPT" />
+			<xsd:element name="nodoAttivaRPTRisposta" type="tns:ctNodoAttivaRPTRisposta" />
+
+			<xsd:element name="nodoInviaFlussoRendicontazione" type="tns:ctNodoInviaFlussoRendicontazione" />
+			<xsd:element name="nodoInviaFlussoRendicontazioneRisposta" type="tns:ctNodoInviaFlussoRendicontazioneRisposta" />
+
+			<xsd:element name="nodoChiediInformativaPA" type="tns:ctNodoChiediInformativaPA" />
+			<xsd:element name="nodoChiediInformativaPARisposta" type="tns:ctNodoChiediInformativaPARisposta" />
+
+			<xsd:element name="nodoChiediTemplateInformativaPSP" type="tns:ctNodoChiediTemplateInformativaPSP" />
+			<xsd:element name="nodoChiediTemplateInformativaPSPRisposta" type="tns:ctNodoChiediTemplateInformativaPSPRisposta" />
+
+			<xsd:element name="nodoChiediElencoQuadraturePSP" type="tns:ctNodoChiediElencoQuadraturePSP" />
+			<xsd:element name="nodoChiediElencoQuadraturePSPRisposta" type="tns:ctNodoChiediElencoQuadraturePSPRisposta" />
+
+			<xsd:element name="nodoChiediQuadraturaPSP" type="tns:ctNodoChiediQuadraturaPSP" />
+			<xsd:element name="nodoChiediQuadraturaPSPRisposta" type="tns:ctNodoChiediQuadraturaPSPRisposta" />
+
+			<xsd:element name="nodoInviaEsitoStorno" type="tns:ctNodoInviaEsitoStorno" />
+			<xsd:element name="nodoInviaEsitoStornoRisposta" type="tns:ctNodoInviaEsitoStornoRisposta" />
+
+			<xsd:element name="nodoInviaRichiestaRevoca" type="tns:ctNodoInviaRichiestaRevoca" />
+			<xsd:element name="nodoInviaRichiestaRevocaRisposta" type="tns:ctNodoInviaRichiestaRevocaRisposta" />
 
 </xsd:schema>

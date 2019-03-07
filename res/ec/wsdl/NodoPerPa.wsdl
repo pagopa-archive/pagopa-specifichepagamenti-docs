@@ -20,91 +20,10 @@
    
         xmlns:pay="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
 >
-	<wsdl:types>
-		<xsd:schema version="2.1.2" targetNamespace="http:///www.agid.gov.it/schemas/pagoPa/ppthead">
-			<xsd:import schemaLocation="http://schemas.xmlsoap.org/soap/envelope/" namespace="http://schemas.xmlsoap.org/soap/envelope/" />
-			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/" schemaLocation="../../common/pagoPa_complexTypes.xsd"/>
-			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/" schemaLocation="../../common/pagoPa_simpleTypes.xsd" />
-			
-			
-			<xsd:element name="intestazionePPT" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
-						<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
-						<xsd:element name="identificativoDominio" type="pay:stText35" />
-						<xsd:element name="identificativoUnivocoVersamento" type="pay:stText35" />
-						<xsd:element name="codiceContestoPagamento" type="pay:stText35" />
-					</xsd:sequence>
-					<xsd:attribute ref="soapenv:actor" use="optional" />
-					<xsd:attribute ref="soapenv:mustUnderstand" use="optional" />
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="intestazioneCarrelloPPT" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
-				<xsd:complexType>
-					<xsd:sequence>
-						<xsd:element name="identificativoIntermediarioPA" type="pay:stText35" />
-						<xsd:element name="identificativoStazioneIntermediarioPA" type="pay:stText35" />
-						<xsd:element name="identificativoCarrello" type="pay:stText35" />
-					</xsd:sequence>
-					<xsd:attribute ref="soapenv:actor" use="optional" />
-					<xsd:attribute ref="soapenv:mustUnderstand" use="optional" />
-				</xsd:complexType>
-			</xsd:element>
-		</xsd:schema>
-		
-		<xsd:schema  targetNamespace="http://www.agid.gov.it/services/pagoPa/nodo"  version="1.1">
-			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPa.xsd" />
-			
-				
-			<xsd:element name="nodoChiediCopiaRTRisposta" type="nodo:ctNodoChiediCopiaRTRisposta"  />
-			<xsd:element name="nodoChiediCopiaRT" type="nodo:ctNodoChiediCopiaRT" />
-			
-			<xsd:element name="nodoInviaRichiestaStorno" type="nodo:ctNodoInviaRichiestaStorno" />
-			<xsd:element name="nodoInviaRichiestaStornoRisposta" type="nodo:ctNodoInviaRichiestaStornoRisposta" />
 
-			<xsd:element name="nodoInviaRispostaRevoca" type="nodo:ctNodoInviaRispostaRevoca" />
-			<xsd:element name="nodoInviaRispostaRevocaRisposta" type="nodo:ctNodoInviaRispostaRevocaRisposta" />
+	<wsdl:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPa.xsd" />
 
-			<xsd:element name="nodoChiediListaPendentiRPT" type="nodo:ctNodoChiediListaPendentiRPT" />
-			<xsd:element name="nodoChiediListaPendentiRPTRisposta" type="nodo:ctNodoChiediListaPendentiRPTRisposta" />
-
-			<xsd:element name="nodoChiediStatoRPT" type="nodo:ctNodoChiediStatoRPT" >
-				<xsd:annotation>
-					<xsd:documentation> La primitiva restituisce lo stato di una specifica RPT e dei suoi pagamenti, consentendo all’applicazione dell'Ente Creditore di realizzare funzionalità di monitoraggio verso l’utilizzatore finale. Poiché la response contiene le informazioni di redirect allo stesso modo della primitiva nodoInviaRPT, questa primitiva consente di recuperare, se necessario, il caso in cui la response di una precedente nodoInviaRPT sia stata perduta.</xsd:documentation>
-				</xsd:annotation>
-			</xsd:element>
-			<xsd:element name="nodoChiediStatoRPTRisposta" type="nodo:ctNodoChiediStatoRPTRisposta" />
-
-			<xsd:element name="nodoInviaRPT" type="nodo:ctNodoInviaRPT" />
-			<xsd:element name="nodoInviaRPTRisposta" type="nodo:ctNodoInviaRPTRisposta" />
-
-			<xsd:element name="nodoInviaCarrelloRPT" type="nodo:ctNodoInviaCarrelloRPT" />
-			<xsd:element name="nodoInviaCarrelloRPTRisposta" type="nodo:ctNodoInviaCarrelloRPTRisposta" />
-
-			<xsd:element name="nodoChiediInformativaPSP" type="nodo:ctNodoChiediInformativaPSP" />
-			<xsd:element name="nodoChiediInformativaPSPRisposta" type="nodo:ctNodoChiediInformativaPSPRisposta" />
-
-			<xsd:element name="nodoPAChiediInformativaPA" type="nodo:ctNodoPAChiediInformativaPA" />
-			<xsd:element name="nodoPAChiediInformativaPARisposta" type="nodo:ctNodoPAChiediInformativaPARisposta" />
-
-        	<xsd:element name="nodoChiediElencoQuadraturePA" type="nodo:ctNodoChiediElencoQuadraturePA" />
-        	<xsd:element name="nodoChiediElencoQuadraturePARisposta" type="nodo:ctNodoChiediElencoQuadraturePARisposta" />
-
-        	<xsd:element name="nodoChiediQuadraturaPA" type="nodo:ctNodoChiediQuadraturaPA" />
-        	<xsd:element name="nodoChiediQuadraturaPARisposta" type="nodo:ctNodoChiediElencoQuadraturePARisposta" />
-
-        	<xsd:element name="nodoChiediElencoFlussiRendicontazione" type="nodo:ctNodoChiediElencoFlussiRendicontazione" />
-        	<xsd:element name="nodoChiediElencoFlussiRendicontazioneRisposta" type="nodo:ctNodoChiediElencoFlussiRendicontazioneRisposta" />
-
-        	<xsd:element name="nodoChiediFlussoRendicontazione" type="nodo:ctNodoChiediFlussoRendicontazione" />
-        	<xsd:element name="nodoChiediFlussoRendicontazioneRisposta" type="nodo:ctNodoChiediFlussoRendicontazioneRisposta" />
-
-    		<xsd:element name="nodoChiediSceltaWISP" type="nodo:ctNodoChiediSceltaWISP" />
-			<xsd:element name="nodoChiediSceltaWISPRisposta" type="nodo:ctNodoChiediSceltaWISPRisposta" />
-
-		</xsd:schema>
-    </wsdl:types>
+	
 	<wsdl:message name="nodoChiediStatoRPT">
 		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediStatoRPT">
 		</wsdl:part>
