@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/common/"
     elementFormDefault="qualified" attributeFormDefault="unqualified" version="6.2.0"
-    xmlns:pay_i="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    xmlns:pay_i="http://www.agid.gov.it/schemas/pagoPa/common/"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"  >
     
 	<xsd:include schemaLocation="pagoPa_simpleTypes.xsd"/>

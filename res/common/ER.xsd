@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    xmlns:core="http://www.agid.gov.it/schemas/pagoPa/common/"
+    xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/payment/"
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/payment/"
+    vc:minVersion="1.1">
+    
+    <xs:import namespace="http://www.agid.gov.it/schemas/pagoPa/common/" schemaLocation="./pagoPa_complexTypes.xsd"></xs:import>
+    
+    
+    <!-- Dati singolo esito revoca -->
+    <xs:complexType name="ctDatiSingoloEsitoRevoca">
+        <xs:sequence>
+            <xs:element name="singoloImportoRevocato" type="core:stImporto" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Campo numerico (due cifre per la parte decimale, il separatore dei centesimi è il punto "."), indicante l’importo relativo alla somma revocata. Se la richiesta non è stata accolta deve essere impostato a 0.00.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="identificativoUnivocoRiscossione" type="core:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta la stessa informazione presente nel dato "identificativoUnivocoRiscossione" della Richiesta di Revoca (RR).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="causaleEsito" type="core:stText140" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Rappresenta la descrizione dell’esito della revoca.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="datiAggiuntiviEsito" type="core:stText140" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Informazioni aggiuntive circa il provvedimento adottato dall’ente creditore.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    
+    <xs:complexType name="ctDatiEsitoRevoca">
+        <xs:sequence>
+            <xs:element name="importoTotaleRevocato" type="core:stImporto" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Campo numerico (due cifre per la parte decimale, il separatore dei centesimi è il punto "."), indicante l’importo relativo al totale delle somme versate. Deve essere uguale alla somma delle varie occorrenze (da 1 a 5) dell’informazione singoloImportoRevocato presente nella struttura DatiSingolaRevoca.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="identificativoUnivocoVersamento" type="core:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta la stessa informazione presente nel dato "identificativoUnivocoVersamento" della Richiesta di Revoca (RR).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="codiceContestoPagamento" type="core:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta la stessa informazione presente nel dato "codiceContestoPagamento" della Richiesta di Revoca (RR).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="datiSingolaRevoca" type="tns:ctDatiSingoloEsitoRevoca" minOccurs="0" maxOccurs="5">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione "dati dei singoli pagamenti revocati", da un minimo di uno ad un massimo di 5 occorrenze di revoca, facenti capo ad un unico identificativoUnivocoVersamento.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Esito Revoca (ER)-->
+    <xs:complexType name="ctEsitoRevoca">
+        <xs:sequence>
+            <xs:element name="versioneOggetto" type="core:stText16" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta la stessa informazione presente nel dato "versioneOggetto" della Richiesta di Revoca (RR).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dominio" type="core:ctDominio" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "Dominio" della Richiesta di Revoca (RR).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="identificativoMessaggioEsito" type="core:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identificativo legato alla trasmissione del messaggio Esito Revoca.</xs:documentation>
+                    <xs:documentation>Deve essere univoco nell’ambito della stessa data riferita all’elemento dataMessaggioRevoca.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dataOraMessaggioEsito" type="core:stISODateTime" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Indica la data e ora del messaggio di Esito Revoca, secondo il formato ISO 8601</xs:documentation>
+                    <xs:documentation>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="riferimentoMessaggioRevoca" type="core:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Con riferimento al messaggio di Esito Revoca (ER) l’elemento contiene il dato identificativoMessaggioRevoca legato alla trasmissione della Richiesta di Revoca (RR).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="riferimentoDataRevoca" type="core:stISODate" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Indica la data secondo il formato ISO 8601 [YYYY]-[MM]-[DD] cui si riferisce la generazione del dato riferimentoMessaggioRevoca.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="istitutoAttestante" type="core:ctIstitutoAttestante" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "istitutoAttestante" della Richiesta di Revoca (RR) cui si riferisce il messaggio di Esito Revoca.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="soggettoVersante" type="core:ctSoggettoVersante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "soggettoVersante" del messaggio Richiesta di Revoca (RR) cui si riferisce il messaggio di Esito Revoca.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="soggettoPagatore" type="core:ctSoggettoPagatore" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "soggettoPagatore" del messaggio Richiesta di Revoca (RR) cui si riferisce il messaggio di Esito Revoca.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="datiRevoca" type="tns:ctDatiEsitoRevoca" minOccurs="1">
+                <xs:annotation >
+                    <xs:documentation>Aggregazione "dati del versamento"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <!-- **** END: tipi complessi  ****-->
+    
+</xs:schema>

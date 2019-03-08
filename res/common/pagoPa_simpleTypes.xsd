@@ -1,16 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/common/"
+    xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/common/"
     elementFormDefault="qualified" attributeFormDefault="unqualified" version="6.2.0"
-    xmlns="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0"  >
 
 
-    <xsd:simpleType name="stISO76_iuv">
-        <xsd:annotation>
-            <xsd:documentation>rappresenta un Identificativo Univoco pagamento </xsd:documentation>
-        </xsd:annotation>
-        <xsd:restriction base="xsd:date"/>
+    <xsd:simpleType name="stAuxDigit">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="1" />
+            <xsd:pattern value="[0-9]" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="stCodIUV">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{15}|[0-9]{17}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="stApplicationCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[0-9]{2}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <!-- complex types -->
+    <xsd:complexType name="ctNumeroAvviso">
+        <xsd:sequence>
+            <xsd:element type="stAuxDigit" name="auxDigit"/>
+            <xsd:element type="stApplicationCode" name="applicationCode" minOccurs="0"/>
+            <xsd:element type="stCodIUV" name="IUV"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+
+    <xsd:simpleType name="stText6">
+        <xsd:restriction base="xsd:string">
+            <xsd:length value="6" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+<xsd:simpleType name="stModelloPagamento">
+    <xsd:restriction base="xsd:int">
+        <xsd:enumeration value="0"/> <!-- Modello di pagamento immediato (con redirezione) -->
+        <xsd:enumeration value="1"/> <!-- Modello di pagamento immediato multibeneficiario -->
+        <xsd:enumeration value="2"/> <!-- Modello di pagamento differito -->
+        <xsd:enumeration value="4"/> <!--- Modello di pagamento attivato presso il psp -->
+    </xsd:restriction>
     </xsd:simpleType>
 
     <xsd:simpleType name="stIdentificativoMessaggioRichiesta">
@@ -310,7 +347,7 @@
     
     <xsd:simpleType name="stFlusso">
         <xsd:restriction base="xsd:string">
-		 <xsd:pattern value="(\d{4})-(\d{2})-(\d{2})([a-zA-Z0-9]){8,11}-([a-zA-z0-9-_]){1,12}"/>
+		 <xsd:pattern value="(\d{4})-(\d{2})-(\d{2})([a-zA-Z0-9]){8,11}-([a-zA-z0-9-_]){1,12}" />
           <xsd:maxLength value="35"/>
         </xsd:restriction>
     </xsd:simpleType>

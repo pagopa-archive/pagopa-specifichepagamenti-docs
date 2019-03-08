@@ -7,7 +7,7 @@
 -->
 <wsdl:definitions
 
-        xmlns:ppt="http:///www.agid.gov.it/schemas/pagoPa/ppthead"
+       
         xmlns:nodo ="http://www.agid.gov.it/schemas/pagoPa/nodo"
         xmlns:tns="http://www.agid.gov.it/services/pagoPa/nodo"
         xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata"
@@ -20,128 +20,131 @@
    
         xmlns:pay="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
 >
-
-	<wsdl:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPa.xsd" />
-
 	
+<wsdl:types>
+	<xsd:schema>
+		<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/nodo" schemaLocation="../xsd/nodoPerPa.xsd"></xsd:import>
+	</xsd:schema>
+</wsdl:types>
+		
 	<wsdl:message name="nodoChiediStatoRPT">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediStatoRPT">
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoChiediStatoRPT">
 		</wsdl:part>
 	</wsdl:message>
 	<wsdl:message name="nodoChiediStatoRPTResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoChiediStatoRPTRisposta">
+		<wsdl:part name="bodyrisposta" element="nodo:nodoChiediStatoRPTRisposta">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediCopiaRT">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediCopiaRT">
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoChiediCopiaRT">
 		</wsdl:part>
 	</wsdl:message>
 	<wsdl:message name="nodoChiediCopiaRTResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoChiediCopiaRTRisposta">
+		<wsdl:part name="bodyrisposta" element="nodo:nodoChiediCopiaRTRisposta">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoInviaRPT">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaRPT">
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoInviaRPT">
 		</wsdl:part>
-		<wsdl:part name="header" element="ppt:intestazionePPT">
+		<wsdl:part name="header" element="nodo:intestazionePPT">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoInviaRPTResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoInviaRPTRisposta">
+		<wsdl:part name="bodyrisposta" element="nodo:nodoInviaRPTRisposta">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoInviaCarrelloRPT">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoInviaCarrelloRPT">
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoInviaCarrelloRPT">
 		</wsdl:part>
-		<wsdl:part name="header" element="ppt:intestazioneCarrelloPPT">
+		<wsdl:part name="header" element="nodo:intestazioneCarrelloPPT">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoInviaCarrelloRPTResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoInviaCarrelloRPTRisposta">
+		<wsdl:part name="bodyrisposta" element="nodo:nodoInviaCarrelloRPTRisposta">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediListaPendentiRPT">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediListaPendentiRPT">
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoChiediListaPendentiRPT">
 		</wsdl:part>
 	</wsdl:message>
 	<wsdl:message name="nodoChiediListaPendentiRPTResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoChiediListaPendentiRPTRisposta">
+		<wsdl:part name="bodyrisposta" element="nodo:nodoChiediListaPendentiRPTRisposta">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediInformativaPSP">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediInformativaPSP" />
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoChiediInformativaPSP" />
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediInformativaPSPResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoChiediInformativaPSPRisposta" />
+		<wsdl:part name="bodyrisposta" element="nodo:nodoChiediInformativaPSPRisposta" />
 	</wsdl:message>
 
 	<wsdl:message name="nodoPAChiediInformativaPA">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoPAChiediInformativaPA">
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoPAChiediInformativaPA">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoPAChiediInformativaPAResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoPAChiediInformativaPARisposta">
+		<wsdl:part name="bodyrisposta" element="nodo:nodoPAChiediInformativaPARisposta">
 		</wsdl:part>
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediElencoQuadraturePA">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediElencoQuadraturePA" />
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoChiediElencoQuadraturePA" />
 	</wsdl:message>
 	<wsdl:message name="nodoChiediElencoQuadraturePAResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoChiediElencoQuadraturePARisposta" />
+		<wsdl:part name="bodyrisposta" element="nodo:nodoChiediElencoQuadraturePARisposta" />
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediQuadraturaPA">
-		<wsdl:part name="parameters" element="tns:nodoChiediQuadraturaPA" />
+		<wsdl:part name="parameters" element="nodo:nodoChiediQuadraturaPA" />
 	</wsdl:message>
 	<wsdl:message name="nodoChiediQuadraturaPAResponse">
-		<wsdl:part name="parameters" element="tns:nodoChiediQuadraturaPARisposta" />
+		<wsdl:part name="parameters" element="nodo:nodoChiediQuadraturaPARisposta" />
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediElencoFlussiRendicontazione">
-		<wsdl:part name="parameters" element="tns:nodoChiediElencoFlussiRendicontazione" />
+		<wsdl:part name="parameters" element="nodo:nodoChiediElencoFlussiRendicontazione" />
 	</wsdl:message>
 	<wsdl:message name="nodoChiediElencoFlussiRendicontazioneResponse">
-		<wsdl:part name="parameters" element="tns:nodoChiediElencoFlussiRendicontazioneRisposta" />
+		<wsdl:part name="parameters" element="nodo:nodoChiediElencoFlussiRendicontazioneRisposta" />
 	</wsdl:message>
 
 	<wsdl:message name="nodoChiediFlussoRendicontazione">
-		<wsdl:part name="parameters" element="tns:nodoChiediFlussoRendicontazione" />
+		<wsdl:part name="parameters" element="nodo:nodoChiediFlussoRendicontazione" />
 	</wsdl:message>
 	<wsdl:message name="nodoChiediFlussoRendicontazioneResponse">
-		<wsdl:part name="parameters" element="tns:nodoChiediFlussoRendicontazioneRisposta" />
+		<wsdl:part name="parameters" element="nodo:nodoChiediFlussoRendicontazioneRisposta" />
 	</wsdl:message>
 
 	<wsdl:message name="nodoInviaRichiestaStorno">
-		<wsdl:part name="parameters" element="tns:nodoInviaRichiestaStorno" />
+		<wsdl:part name="parameters" element="nodo:nodoInviaRichiestaStorno" />
 	</wsdl:message>
 	<wsdl:message name="nodoInviaRichiestaStornoResponse">
-		<wsdl:part name="parameters" element="tns:nodoInviaRichiestaStornoRisposta" />
+		<wsdl:part name="parameters" element="nodo:nodoInviaRichiestaStornoRisposta" />
 	</wsdl:message>
 
 	<wsdl:message name="nodoInviaRispostaRevoca">
-		<wsdl:part name="parameters" element="tns:nodoInviaRispostaRevoca" />
+		<wsdl:part name="parameters" element="nodo:nodoInviaRispostaRevoca" />
 	</wsdl:message>
 	<wsdl:message name="nodoInviaRispostaRevocaResponse">
-		<wsdl:part name="parameters" element="tns:nodoInviaRispostaRevocaRisposta" />
+		<wsdl:part name="parameters" element="nodo:nodoInviaRispostaRevocaRisposta" />
 	</wsdl:message>
 
 
 	<wsdl:message name="nodoChiediSceltaWISP">
-		<wsdl:part name="bodyrichiesta" element="tns:nodoChiediSceltaWISP">
+		<wsdl:part name="bodyrichiesta" element="nodo:nodoChiediSceltaWISP">
 		</wsdl:part>
 	</wsdl:message>
 	<wsdl:message name="nodoChiediSceltaWISPResponse">
-		<wsdl:part name="bodyrisposta" element="tns:nodoChiediSceltaWISPRisposta">
+		<wsdl:part name="bodyrisposta" element="nodo:nodoChiediSceltaWISPRisposta">
 		</wsdl:part>
 	</wsdl:message>
 

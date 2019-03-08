@@ -3,20 +3,20 @@
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://www.agid.gov.it/schemas/pagoPa/nodo" elementFormDefault="qualified"
     attributeFormDefault="unqualified" version="6.2.0"
-    xmlns:pay="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    xmlns:core="http://www.agid.gov.it/schemas/pagoPa/common/"
     xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/nodo"
     xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" vc:minVersion="1.0">
 
 
-    <xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
-        schemaLocation="../../common/pagoPa_complexTypes.xsd"/>
+    <xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/common/"
+        schemaLocation="../../common/pagoPa_simpleTypes.xsd"/>
 
 
 
     <xsd:complexType name="ctSpezzoniCausaleVersamento">
         <xsd:sequence minOccurs="1" maxOccurs="6">
             <xsd:choice>
-                <xsd:element type="pay:stText35" name="spezzoneCausaleVersamento" minOccurs="1"/>
+                <xsd:element type="core:stText35" name="spezzoneCausaleVersamento" minOccurs="1"/>
                 <xsd:element type="tns:ctSpezzoneStrutturatoCausaleVersamento"
                     name="spezzoneStrutturatoCausaleVersamento" minOccurs="1"/>
             </xsd:choice>
@@ -25,8 +25,8 @@
 
     <xsd:complexType name="ctSpezzoneStrutturatoCausaleVersamento">
         <xsd:sequence>
-            <xsd:element type="pay:stText25" name="causaleSpezzone" minOccurs="1"/>
-            <xsd:element type="pay:stImporto" name="importoSpezzone" minOccurs="1"/>
+            <xsd:element type="core:stText25" name="causaleSpezzone" minOccurs="1"/>
+            <xsd:element type="core:stImporto" name="importoSpezzone" minOccurs="1"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -44,22 +44,22 @@
 
     <xsd:complexType name="richiestaPsp">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35">
+            <xsd:element name="identificativoPSP" type="core:stText35">
                 <xsd:annotation>
                     <xsd:documentation>identifica il mittente ( PSP ) della chiamata attraverso il suo codice identificativo</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35">
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35">
                 <xsd:annotation>
                     <xsd:documentation>identifica l'intermediario PSP utilizzato per inoltrare il messaggio al nodo dei pagamenti. Nel caso di connessione diretta coincide con l'identificativoPSP</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element name="identificativoCanale" type="pay:stText35">
+            <xsd:element name="identificativoCanale" type="core:stText35">
                 <xsd:annotation>
                     <xsd:documentation>identifica il canale del PSP utilizzato attraverso il quale giunge la chiamata</xsd:documentation>
                 </xsd:annotation>
             </xsd:element>
-            <xsd:element name="password" type="pay:stPassword">
+            <xsd:element name="password" type="core:stPassword">
                 <xsd:annotation>
                     <xsd:documentation>contiene la password scambiata tra NodoSPC e PSP alfine di autorizzare le chiamate attraverso il canale.</xsd:documentation>
                 </xsd:annotation>
@@ -69,7 +69,7 @@
 
     <xsd:complexType name="risposta">
         <xsd:sequence>
-            <xsd:element name="fault" type="pay:ctFaultBean" minOccurs="0"/>
+            <xsd:element name="fault" type="core:ctFaultBean" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
 
@@ -83,13 +83,13 @@
 
     <xsd:complexType name="ctNodoTipoDatiPagamentoPA">
         <xsd:sequence>
-            <xsd:element name="importoSingoloVersamento" type="pay:stImporto" minOccurs="1"> </xsd:element>
-            <xsd:element name="ibanAccredito" type="pay:stIBANIdentifier" minOccurs="0"> </xsd:element>
-            <xsd:element name="bicAccredito" type="pay:stBICIdentifier" minOccurs="0"> </xsd:element>
-            <xsd:element name="enteBeneficiario" type="pay:ctEnteBeneficiario" minOccurs="0"/>
-            <xsd:element name="credenzialiPagatore" type="pay:stText35" minOccurs="0"> </xsd:element>
+            <xsd:element name="importoSingoloVersamento" type="core:stImporto" minOccurs="1"> </xsd:element>
+            <xsd:element name="ibanAccredito" type="core:stIBANIdentifier" minOccurs="0"> </xsd:element>
+            <xsd:element name="bicAccredito" type="core:stBICIdentifier" minOccurs="0"> </xsd:element>
+            <xsd:element name="enteBeneficiario" type="core:ctEnteBeneficiario" minOccurs="0"/>
+            <xsd:element name="credenzialiPagatore" type="core:stText35" minOccurs="0"> </xsd:element>
             <xsd:choice minOccurs="1">
-                <xsd:element name="causaleVersamento" type="pay:stText140"/>
+                <xsd:element name="causaleVersamento" type="core:stText140"/>
                 <xsd:element name="spezzoniCausaleVersamento" type="tns:ctSpezzoniCausaleVersamento"
                 />
             </xsd:choice>
@@ -98,13 +98,13 @@
 
     <xsd:complexType name="ctNodoTipoDatiPagamentoPSP">
         <xsd:sequence>
-            <xsd:element name="importoSingoloVersamento" type="pay:stImporto" minOccurs="1"> </xsd:element>
-            <xsd:element name="ibanAppoggio" type="pay:stIBANIdentifier" minOccurs="0"> </xsd:element>
-            <xsd:element name="bicAppoggio" type="pay:stBICIdentifier" minOccurs="0"> </xsd:element>
-            <xsd:element name="soggettoVersante" type="pay:ctSoggettoVersante" minOccurs="0"/>
-            <xsd:element name="ibanAddebito" type="pay:stIBANIdentifier" minOccurs="0"> </xsd:element>
-            <xsd:element name="bicAddebito" type="pay:stBICIdentifier" minOccurs="0"> </xsd:element>
-            <xsd:element name="soggettoPagatore" type="pay:ctSoggettoPagatore" minOccurs="0"/>
+            <xsd:element name="importoSingoloVersamento" type="core:stImporto" minOccurs="1"> </xsd:element>
+            <xsd:element name="ibanAppoggio" type="core:stIBANIdentifier" minOccurs="0"> </xsd:element>
+            <xsd:element name="bicAppoggio" type="core:stBICIdentifier" minOccurs="0"> </xsd:element>
+            <xsd:element name="soggettoVersante" type="core:ctSoggettoVersante" minOccurs="0"/>
+            <xsd:element name="ibanAddebito" type="core:stIBANIdentifier" minOccurs="0"> </xsd:element>
+            <xsd:element name="bicAddebito" type="core:stBICIdentifier" minOccurs="0"> </xsd:element>
+            <xsd:element name="soggettoPagatore" type="core:ctSoggettoPagatore" minOccurs="0"/>
         </xsd:sequence>
 
     </xsd:complexType>
@@ -129,7 +129,7 @@
     <xsd:element name="QrCode">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element type="pay:stPIVA" name="CF" minOccurs="1">
+                <xsd:element type="core:stPIVA" name="CF" minOccurs="1">
                     <xsd:annotation>
                         <xsd:documentation>
                             Paritita Iva ( idDominio ) dell'Ente Creditore che ha generato l'avviso di pagamento
@@ -150,7 +150,7 @@
                     </xsd:documentation>
                     </xsd:annotation>
                 </xsd:element>
-                <xsd:element type="pay:stText35" name="CodIUV" minOccurs="1">
+                <xsd:element type="core:stText35" name="CodIUV" minOccurs="1">
                     <xsd:annotation>
                         <xsd:documentation>
                        Codice IUV riportato all'interno dell'Avviso di pagamento
@@ -192,7 +192,7 @@
                         </xsd:documentation>
                     </xsd:annotation>
                 </xsd:element>
-                <xsd:element type="pay:stText35" name="CodIUV" minOccurs="1">
+                <xsd:element type="core:stText35" name="CodIUV" minOccurs="1">
                     <xsd:annotation>
                         <xsd:documentation>
                             Codice IUV riportato all'interno dell'Avviso di pagamento
@@ -208,7 +208,7 @@
         <xsd:complexContent>
             <xsd:extension base="tns:richiestaPsp">
                 <xsd:sequence>
-                    <xsd:element name="codiceContestoPagamento" type="pay:stText35">
+                    <xsd:element name="codiceContestoPagamento" type="core:stText35">
                         <xsd:annotation>
                             <xsd:documentation>definisce il contesto di un pagamento.</xsd:documentation>
                         </xsd:annotation>
@@ -279,12 +279,12 @@
       <xsd:complexContent>
         <xsd:extension base="tns:richiestaPsp">
           <xsd:sequence>
-              <xsd:element name="identificativoUnivocoVersamento" type="pay:stText35">
+              <xsd:element name="identificativoUnivocoVersamento" type="core:stText35">
                   <xsd:annotation>
                     <xsd:documentation> identificativo del versamento effettuato</xsd:documentation>
                   </xsd:annotation>
               </xsd:element>
-              <xsd:element name="codiceContestoPagamento" type="pay:stText35">
+              <xsd:element name="codiceContestoPagamento" type="core:stText35">
                 <xsd:annotation>
                   <xsd:documentation> identificativo del contesto del pagamento </xsd:documentation>
                 </xsd:annotation>
@@ -329,13 +329,13 @@
 
     <xsd:complexType name="ctNodoAttivaRPT">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
-            <xsd:element name="codiceContestoPagamento" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSPPagamento" type="pay:stText35"/>
-            <xsd:element name="identificativoCanalePagamento" type="pay:stText35"/>
+            <xsd:element name="identificativoPSP" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35"/>
+            <xsd:element name="identificativoCanale" type="core:stText35"/>
+            <xsd:element name="password" type="core:stPassword"/>
+            <xsd:element name="codiceContestoPagamento" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSPPagamento" type="core:stText35"/>
+            <xsd:element name="identificativoCanalePagamento" type="core:stText35"/>
             <xsd:element name="codificaInfrastrutturaPSP" type="xsd:string"/>
             <xsd:element name="codiceIdRPT" type="tns:ctNodoTipoCodiceIdRPT"/>
             <xsd:element name="datiPagamentoPSP" type="tns:ctNodoTipoDatiPagamentoPSP"/>
@@ -361,11 +361,11 @@
 
     <xsd:complexType name="ctNodoInviaFlussoRendicontazione">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35" minOccurs="0"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35" minOccurs="0"/>
-            <xsd:element name="password" type="pay:stPassword"/>
-            <xsd:element name="identificativoDominio" type="pay:stText35"/>
+            <xsd:element name="identificativoPSP" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35" minOccurs="0"/>
+            <xsd:element name="identificativoCanale" type="core:stText35" minOccurs="0"/>
+            <xsd:element name="password" type="core:stPassword"/>
+            <xsd:element name="identificativoDominio" type="core:stText35"/>
             <xsd:element name="identificativoFlusso" type="xsd:string"/>
             <xsd:element name="dataOraFlusso" type="xsd:dateTime"/>
             <xsd:element name="xmlRendicontazione" type="xsd:base64Binary"
@@ -385,11 +385,11 @@
 
     <xsd:complexType name="ctNodoChiediInformativaPA">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35" minOccurs="0"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
-            <xsd:element name="identificativoDominio" type="pay:stText35" minOccurs="0"/>
+            <xsd:element name="identificativoPSP" type="core:stText35" minOccurs="0"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35"/>
+            <xsd:element name="identificativoCanale" type="core:stText35"/>
+            <xsd:element name="password" type="core:stPassword"/>
+            <xsd:element name="identificativoDominio" type="core:stText35" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ctNodoChiediInformativaPARisposta">
@@ -406,10 +406,10 @@
 
     <xsd:complexType name="ctNodoChiediTemplateInformativaPSP">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
+            <xsd:element name="identificativoPSP" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35"/>
+            <xsd:element name="identificativoCanale" type="core:stText35"/>
+            <xsd:element name="password" type="core:stPassword"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ctNodoChiediTemplateInformativaPSPRisposta">
@@ -425,11 +425,11 @@
     </xsd:complexType>
     <xsd:complexType name="ctNodoChiediElencoQuadraturePSP">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
-            <xsd:element name="identificativoDominio" type="pay:stText35" minOccurs="0"/>
+            <xsd:element name="identificativoPSP" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35"/>
+            <xsd:element name="identificativoCanale" type="core:stText35"/>
+            <xsd:element name="password" type="core:stPassword"/>
+            <xsd:element name="identificativoDominio" type="core:stText35" minOccurs="0"/>
         </xsd:sequence>
     </xsd:complexType>
     <xsd:complexType name="ctNodoChiediElencoQuadraturePSPRisposta">
@@ -458,10 +458,10 @@
 
     <xsd:complexType name="ctNodoChiediQuadraturaPSP">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
+            <xsd:element name="identificativoPSP" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35"/>
+            <xsd:element name="identificativoCanale" type="core:stText35"/>
+            <xsd:element name="password" type="core:stPassword"/>
             <xsd:element name="identificativoFlusso" type="xsd:string"/>
         </xsd:sequence>
     </xsd:complexType>
@@ -479,13 +479,13 @@
 
     <xsd:complexType name="ctNodoInviaEsitoStorno">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
-            <xsd:element name="identificativoDominio" type="pay:stText35"/>
-            <xsd:element name="identificativoUnivocoVersamento" type="pay:stText35"/>
-            <xsd:element name="codiceContestoPagamento" type="pay:stText35"/>
+            <xsd:element name="identificativoPSP" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35"/>
+            <xsd:element name="identificativoCanale" type="core:stText35"/>
+            <xsd:element name="password" type="core:stPassword"/>
+            <xsd:element name="identificativoDominio" type="core:stText35"/>
+            <xsd:element name="identificativoUnivocoVersamento" type="core:stText35"/>
+            <xsd:element name="codiceContestoPagamento" type="core:stText35"/>
             <xsd:element name="er" type="xsd:base64Binary" minOccurs="0"
                 xmime:expectedContentTypes="application/octet-stream"
                 xmlns:xmime="http://www.w3.org/2005/05/xmlmime"/>
@@ -504,13 +504,13 @@
 
     <xsd:complexType name="ctNodoInviaRichiestaRevoca">
         <xsd:sequence>
-            <xsd:element name="identificativoPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoIntermediarioPSP" type="pay:stText35"/>
-            <xsd:element name="identificativoCanale" type="pay:stText35"/>
-            <xsd:element name="password" type="pay:stPassword"/>
-            <xsd:element name="identificativoDominio" type="pay:stText35"/>
-            <xsd:element name="identificativoUnivocoVersamento" type="pay:stText35"/>
-            <xsd:element name="codiceContestoPagamento" type="pay:stText35"/>
+            <xsd:element name="identificativoPSP" type="core:stText35"/>
+            <xsd:element name="identificativoIntermediarioPSP" type="core:stText35"/>
+            <xsd:element name="identificativoCanale" type="core:stText35"/>
+            <xsd:element name="password" type="core:stPassword"/>
+            <xsd:element name="identificativoDominio" type="core:stText35"/>
+            <xsd:element name="identificativoUnivocoVersamento" type="core:stText35"/>
+            <xsd:element name="codiceContestoPagamento" type="core:stText35"/>
             <xsd:element name="rr" type="xsd:base64Binary"/>
         </xsd:sequence>
     </xsd:complexType>
