@@ -28,9 +28,9 @@
     <!-- complex types -->
     <xsd:complexType name="ctNumeroAvviso">
         <xsd:sequence>
-            <xsd:element type="stAuxDigit" name="auxDigit"/>
-            <xsd:element type="stApplicationCode" name="applicationCode" minOccurs="0"/>
-            <xsd:element type="stCodIUV" name="IUV"/>
+            <xsd:element type="tns:stAuxDigit" name="auxDigit"/>
+            <xsd:element type="tns:stApplicationCode" name="applicationCode" minOccurs="0"/>
+            <xsd:element type="tns:stCodIUV" name="IUV"/>
         </xsd:sequence>
     </xsd:complexType>
     
@@ -168,7 +168,7 @@
     </xsd:simpleType>
 
     <xsd:simpleType name="stImportoDiversoDaZero">
-        <xsd:restriction base="stImporto">
+        <xsd:restriction base="tns:stImporto">
             <xsd:minInclusive value="0.01"/>
         </xsd:restriction>
     </xsd:simpleType>
