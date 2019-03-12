@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Questo WSDL rappresenta l'interfaccia esposta dalla PAA
+  per la ricezione delle Ricevute Telematiche
+-->
+<wsdl:definitions 
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:ppt="http://ws.pagamenti.telematici.gov/" 
+	xmlns:ppthead="http://ws.pagamenti.telematici.gov/ppthead" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://www.agid.gov.it/services/pagoPa/paa"
+	xmlns:paa="http://www.agid.gov.it/schemas/pagoPa/paa"
+	targetNamespace="http://www.agid.gov.it/services/pagoPa/paa"
+	>
+	
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/paa" schemaLocation="../xsd/paPerNodo.xsd"/>
+		</xsd:schema>
+    </wsdl:types>
+	
+	
+	<wsdl:message name="paaInviaRT">
+		<wsdl:part name="bodyrichiesta" element="paa:paaInviaRT" />
+		<wsdl:part name="header" element="paa:intestazionePPT" />
+	</wsdl:message>
+	<wsdl:message name="paaInviaRTResponse">
+		<wsdl:part name="bodyrisposta" element="paa:paaInviaRTRisposta" />
+	</wsdl:message>
+	<wsdl:message name="paaInviaEsitoStorno">
+		<wsdl:part name="bodyrichiesta" element="paa:paaInviaEsitoStorno" />
+	</wsdl:message>
+	<wsdl:message name="paaInviaEsitoStornoResponse">
+		<wsdl:part name="bodyrisposta" element="paa:paaInviaEsitoStornoRisposta" />
+	</wsdl:message>
+	<wsdl:message name="paaInviaRichiestaRevoca">
+		<wsdl:part name="bodyrichiesta" element="paa:paaInviaRichiestaRevoca" />
+	</wsdl:message>
+	<wsdl:message name="paaInviaRichiestaRevocaResponse">
+		<wsdl:part name="bodyrisposta" element="paa:paaInviaRichiestaRevocaRisposta" />
+	</wsdl:message>
+	<wsdl:portType name="PagamentiTelematiciRT">
+		<wsdl:operation name="paaInviaRT">
+			<wsdl:input message="tns:paaInviaRT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaInviaRTRichiesta" />
+			<wsdl:output message="tns:paaInviaRTResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaInviaRTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="paaInviaEsitoStorno">
+			<wsdl:input message="tns:paaInviaEsitoStorno" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaInviaEsitoStornoRichiesta" />
+			<wsdl:output message="tns:paaInviaEsitoStornoResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaInviaEsitoStornoRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="paaInviaRichiestaRevoca">
+			<wsdl:input message="tns:paaInviaRichiestaRevoca" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaInviaRichiestaRevocaRichiesta" />
+			<wsdl:output message="tns:paaInviaRichiestaRevocaResponse" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaInviaRichiestaRevocaRisposta" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PagamentiTelematiciRTbinding" type="tns:PagamentiTelematiciRT">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="paaInviaRT">
+			<soap:operation soapAction="paaInviaRT" />
+			<wsdl:input>
+				<soap:body parts="bodyrichiesta" use="literal" />
+				<soap:header message="tns:paaInviaRT" part="header" use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="paaInviaEsitoStorno">
+			<soap:operation soapAction="paaInviaEsitoStorno" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="paaInviaRichiestaRevoca">
+			<soap:operation soapAction="paaInviaRichiestaRevoca" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PagamentiTelematiciRTservice">
+		<wsdl:port name="PPTPort" binding="tns:PagamentiTelematiciRTbinding">
+			<soap:address location="http://NodoPagamentiSPC.spcoop.gov.it/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

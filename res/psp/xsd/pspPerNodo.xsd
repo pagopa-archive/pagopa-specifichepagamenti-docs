@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.0" 
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/psp" 
+    version="6.2.0"
+    xmlns:core="http://www.agid.gov.it/schemas/pagoPa/common/"
+    xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/psp"
+    >
+    
+    <xs:import namespace="http://www.agid.gov.it/schemas/pagoPa/common/"
+        schemaLocation="../../common/pagoPa_simpleTypes.xsd"/>
+    
+	<xs:simpleType name="stTipologiaMessaggioReferenziato">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="RPT"/>
+			<xs:enumeration value="RT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+    
+	<xs:simpleType name="stStatoMessaggio">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ACTC"/>
+			<xs:enumeration value="RJCT"/>
+		</xs:restriction>
+	</xs:simpleType>
+    
+	<!-- Dati relativi al messaggio referenziato -->
+	<xs:complexType name="ctDatiMessaggioReferenziato">
+		<xs:sequence>
+			<xs:element name="identificativoDominio" type="core:stPIVA">
+				<xs:annotation>
+					<xs:documentation>Campo alfanumerico contenente il codice fiscale della struttura che inoltra la richiesta di pagamento.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identificativoUnivocoVersamento" type="core:stText35">
+				<xs:annotation>
+					<xs:documentation>Riferimento univoco assegnato al versamento dall’ente beneficiario</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="codiceContestoPagamento" type="core:stText35">
+				<xs:annotation>
+					<xs:documentation>Campo alfanumerico contenente il codice contesto di pagamento.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="identificativoMessaggioReferenziato" type="core:stText35">
+				<xs:annotation>
+					<xs:documentation>Campo alfanumerico contenente l'identificativo del messaggio referenziato, legato alla trasmissione della quietanza telematica.</xs:documentation>
+					<xs:documentation>Si riferisce al campo identificativoMessaggio presente nel messaggio di riferimento.</xs:documentation>
+					<xs:documentation>Risulta univoco nell’ambito della stessa data riferita all’elemento dataOraMessaggioReferenziato.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataOraMessaggioReferenziato" type="core:stISODateTime">
+				<xs:annotation>
+					<xs:documentation>Data e ora di generazione del messaggio referenziato secondo il formato ISO 8601</xs:documentation>
+					<xs:documentation>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="tipologiaMessaggioReferenziato" type="tns:stTipologiaMessaggioReferenziato">
+				<xs:annotation>
+					<xs:documentation>Tipologia di messaggio referenziato (RPT o RT)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mittenteMessaggioReferenziato" type="core:stText25">
+				<xs:annotation>
+					<xs:documentation>Mittente del messaggio al quale l'ACK si riferisce</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Informazioni sullo stato del messaggio referenziato -->
+	<xs:complexType name="ctStatoDelMessaggioReferenziato">
+		<xs:sequence>
+			<xs:element name="statoMessaggioReferenziato" type="tns:stStatoMessaggio">
+				<xs:annotation>
+					<xs:documentation>Stato del messaggio referenziato.</xs:documentation>
+					<xs:documentation>Può assumere i seguenti valori: ACTC (accettato), RJCT (rifiutato).</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="motivazioneStatoErrato" type="tns:ctMotivazioneStatoErrato" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Nel caso di stato rifiutato, dà informazioni riguardo all'errore riscontrato.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- Dettagli sullo stato errato del messaggio referenziato -->
+	<xs:complexType name="ctMotivazioneStatoErrato">
+		<xs:sequence>
+			<xs:element name="codiceErrore" type="core:stText25">
+				<xs:annotation>
+					<xs:documentation>Codice di errore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="elementoReferenziato" type="core:stText140" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Elemento sul quale è stato rilevato l'errore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="InformazioniAggiuntive" type="core:stText140" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Informazioni aggiuntive sullo stato di errore.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+    
+    
+	<xs:complexType name="ctMessaggioDiAcknowledgement">
+		<xs:sequence>
+			<xs:element name="identificativoACK" type="core:stText35">
+				<xs:annotation>
+					<xs:documentation>Identificativo legato alla trasmissione del file di ACK</xs:documentation>
+					<xs:documentation>Deve essere univoco nell’ambito della stessa data definita da dataOraACK.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dataOraACK" type="core:stISODateTime">
+				<xs:annotation>
+					<xs:documentation>Data e ora di generazione del messaggio di ACK secondo il formato ISO 8601</xs:documentation>
+					<xs:documentation>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="mittenteACK" type="core:stText25">
+				<xs:annotation>
+					<xs:documentation>Mittente del messaggio di ACK</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="datiMessaggioReferenziato" type="tns:ctDatiMessaggioReferenziato">
+				<xs:annotation>
+					<xs:documentation>Dati relativi al messaggio referenziato</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="informazioniStatoMessaggioReferenziato" type="tns:ctStatoDelMessaggioReferenziato">
+				<xs:annotation>
+					<xs:documentation>Informazioni sullo stato del messaggio referenziato</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+			
+			
+			
+			<xs:complexType name="pspInviaRPT">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoPSP" type="core:stText35" minOccurs="0" />
+					<xs:element name="identificativoIntermediarioPSP" type="core:stText35" minOccurs="0" />
+					<xs:element name="identificativoCanale" type="core:stText35" minOccurs="0" />
+					<xs:element name="modelloPagamento" type="core:stModelloPagamento" minOccurs="0" />
+					<xs:element name="elementoListaRPT" type="tns:tipoElementoListaRPT" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspInviaRPTResponse">
+				<xs:sequence>
+					<xs:element name="pspInviaRPTResponse" type="tns:esitoPspInviaRPT" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="esitoPspInviaRPT">
+				<xs:sequence>
+					<xs:element name="esitoComplessivoOperazione" type="xs:string" />
+					<xs:element name="identificativoCarrello" type="core:stText35" minOccurs="0" />
+					<xs:element name="parametriPagamentoImmediato" type="xs:string" minOccurs="0" />
+					<xs:element name="listaErroriRPT" type="tns:listaErroriRPT" minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspInviaCarrelloRPT">
+				<xs:sequence>
+					<xs:element name="identificativoPSP" type="core:stText35" />
+					<xs:element name="identificativoIntermediarioPSP" type="core:stText35" />
+					<xs:element name="identificativoCanale" type="core:stText35" />
+					<xs:element name="modelloPagamento" type="core:stModelloPagamento" />
+					<xs:element name="parametriProfiloPagamento" type="xs:string" minOccurs="0"/>
+					<xs:element name="listaRPT" type="tns:tipoListaRPT" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspInviaCarrelloRPTCarte">
+				<xs:complexContent>
+					<xs:extension base="tns:pspInviaCarrelloRPT">
+						<xs:sequence>
+							<xs:element name="rrn" type="xs:string" />
+							<xs:element name="esitoTransazioneCarta" type="xs:string" />
+							<xs:element name="importoTotalePagato" type="core:stImporto" />
+							<xs:element name="timestampOperazione" type="core:stISODateTime" />
+							<xs:element name="codiceAutorizzativo" type="core:stText6"/>
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="tipoListaRPT">
+				<xs:sequence>
+					<xs:element name="elementoListaCarrelloRPT" type="tns:tipoElementoListaCarrelloRPT" minOccurs="1" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="pspInviaCarrelloRPTResponse">
+				<xs:sequence>
+					<xs:element name="pspInviaCarrelloRPTResponse" type="tns:esitoPspInviaCarrelloRPT" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspInviaCarrelloRPTCarteResponse">
+				<xs:complexContent>
+					<xs:extension base="tns:pspInviaCarrelloRPTResponse"/>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="esitoPspInviaCarrelloRPT">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="esitoComplessivoOperazione" type="xs:string" />
+							<xs:element name="identificativoCarrello" type="core:stText35" minOccurs="0" />
+							<xs:element name="parametriPagamentoImmediato" type="xs:string" minOccurs="0" />
+							<xs:element name="listaErroriRPT" type="tns:listaErroriRPT" minOccurs="0" />
+						</xs:sequence>
+					</xs:extension>	
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="risposta">
+				<xs:sequence>
+				    <xs:element name="fault" type="core:ctFaultBean" minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="pspInviaRichiestaStorno">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+					<xs:element name="rr" type="xs:base64Binary" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspInviaRichiestaStornoResponse">
+				<xs:sequence>
+					<xs:element name="pspInviaRichiestaStornoResponse" type="tns:tipoInviaRichiestaStornoResponse" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tipoInviaRichiestaStornoResponse">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="esito" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="pspInviaRispostaRevoca">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+					<xs:element name="er" type="xs:base64Binary" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspInviaRispostaRevocaResponse">
+				<xs:sequence>
+					<xs:element name="pspInviaRispostaRevocaResponse" type="tns:tipoInviaRispostaRevocaResponse" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tipoInviaRispostaRevocaResponse">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="esito" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="pspChiediRT">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspChiediRTResponse">
+				<xs:sequence>
+					<xs:element name="pspChiediRTResponse" type="tns:valoreRT" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="valoreRT">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="tipoFirma" type="xs:string" minOccurs="0" />
+							<xs:element name="rt" type="xs:base64Binary" minOccurs="0" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="pspInviaAckRT">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+					<xs:element name="ackRT" type="tns:ctMessaggioDiAcknowledgement" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspInviaAckRTResponse">
+				<xs:sequence>
+					<xs:element name="pspInviaAckRTResponse" type="tns:tipoInviaAckRTResponse" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tipoInviaAckRTResponse">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="esito" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="pspChiediAvanzamentoRPT">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspChiediAvanzamentoRPTResponse">
+				<xs:sequence>
+					<xs:element name="pspChiediAvanzamentoRPTResponse" type="tns:valoreAvanzamentoRPT" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="valoreAvanzamentoRPT">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="value" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="pspChiediListaRT">
+				<xs:sequence>
+					<xs:element name="identificativoRichiedente" type="core:stText35" />
+					<xs:element name="identificativoIntermediarioPSP" type="core:stText35" minOccurs="0" />
+					<xs:element name="identificativoCanale" type="core:stText35" minOccurs="0" />
+					<xs:element name="modelloPagamento" type="core:stModelloPagamento" minOccurs="0" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspChiediListaRTResponse">
+				<xs:sequence>
+					<xs:element name="pspChiediListaRTResponse" type="tns:chiediListaRTResponse" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="chiediListaRTResponse">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="elementoListaRTResponse" type="tns:valoreListaRT"
+								minOccurs="0" maxOccurs="unbounded" nillable="true" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+			<xs:complexType name="valoreListaRT">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="tipoElementoListaRPT">
+				<xs:sequence>
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+					<xs:element name="parametriProfiloPagamento" type="xs:string" minOccurs="0"/>
+					<xs:element name="tipoFirma" type="xs:string" minOccurs="0" />
+					<xs:element name="rpt" type="xs:base64Binary" />
+				</xs:sequence>
+			</xs:complexType>
+
+			<xs:complexType name="tipoElementoListaCarrelloRPT">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+					<xs:element name="tipoFirma" type="xs:string" minOccurs="0" />
+					<xs:element name="rpt" type="xs:base64Binary" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="listaErroriRPT">
+				<xs:sequence>
+					<xs:element name="fault" type="core:ctFaultBean" minOccurs="0" maxOccurs="unbounded" />
+				</xs:sequence>
+			</xs:complexType>
+			
+			<xs:complexType name="pspNotificaCancellazioneRPT">
+				<xs:sequence>
+					<xs:element name="identificativoDominio" type="core:stText35" />
+					<xs:element name="identificativoUnivocoVersamento" type="core:stText35" />
+					<xs:element name="codiceContestoPagamento" type="core:stText35" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="pspNotificaCancellazioneRPTResponse">
+				<xs:sequence>
+					<xs:element name="pspNotificaCancellazioneRPTResponse" type="tns:valoreNotificaCancellazioneRPT" />
+				</xs:sequence>
+			</xs:complexType>
+			<xs:complexType name="valoreNotificaCancellazioneRPT">
+				<xs:complexContent>
+					<xs:extension base="tns:risposta">
+						<xs:sequence>
+							<xs:element name="esito" type="xs:string" minOccurs="0" />
+						</xs:sequence>
+					</xs:extension>
+				</xs:complexContent>
+			</xs:complexType>
+    
+    <!-- Wrapper Elements -->
+    <xs:element name="pspInviaRPT" type="tns:pspInviaRPT" />
+    <xs:element name="pspInviaRPTResponse" type="tns:pspInviaRPTResponse" />
+    <xs:element name="pspInviaCarrelloRPT" type="tns:pspInviaCarrelloRPT" />
+    <xs:element name="pspInviaCarrelloRPTResponse" type="tns:pspInviaCarrelloRPTResponse" />
+    <xs:element name="pspInviaCarrelloRPTCarte" type="tns:pspInviaCarrelloRPTCarte" />
+    <xs:element name="pspInviaCarrelloRPTCarteResponse" type="tns:pspInviaCarrelloRPTCarteResponse" />
+    <xs:element name="pspInviaRichiestaStorno" type="tns:pspInviaRichiestaStorno" />
+    <xs:element name="pspInviaRichiestaStornoResponse" type="tns:pspInviaRichiestaStornoResponse" />
+    <xs:element name="pspInviaRispostaRevoca" type="tns:pspInviaRispostaRevoca" />
+    <xs:element name="pspInviaRispostaRevocaResponse" type="tns:pspInviaRispostaRevocaResponse" /> 
+    <xs:element name="pspChiediRT" type="tns:pspChiediRT" />
+    <xs:element name="pspChiediRTResponse" type="tns:pspChiediRTResponse" />
+    <xs:element name="pspInviaAckRT" type="tns:pspInviaAckRT" />
+    <xs:element name="pspInviaAckRTResponse" type="tns:pspInviaAckRTResponse" />
+    <xs:element name="pspChiediAvanzamentoRPT" type="tns:pspChiediAvanzamentoRPT" />
+    <xs:element name="pspChiediAvanzamentoRPTResponse" type="tns:pspChiediAvanzamentoRPTResponse" />
+    <xs:element name="pspChiediListaRT" type="tns:pspChiediListaRT" />
+    <xs:element name="pspChiediListaRTResponse" type="tns:pspChiediListaRTResponse" />
+    <xs:element name="pspNotificaCancellazioneRPT" type="tns:pspNotificaCancellazioneRPT" />
+    <xs:element name="pspNotificaCancellazioneRPTResponse" type="tns:pspNotificaCancellazioneRPTResponse" />
+    <!-- Element Definition -->
+    
+</xs:schema>

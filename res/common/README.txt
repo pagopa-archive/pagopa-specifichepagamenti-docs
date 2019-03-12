@@ -1,0 +1,1 @@
+Questa cartella contiene gli XSD comuni ad un PSP ed EC.

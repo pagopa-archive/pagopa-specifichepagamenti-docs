@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pay_i="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1">
+    
+    <xs:include schemaLocation="./pagoPa_simpleTypes.xsd"></xs:include>
+    <xs:include schemaLocation="./pagoPa_complexTypes.xsd"></xs:include>
+  
+
+<!-- Richiesta Pagamento Telematico (RPT)-->
+    <xs:complexType name="ctRichiestaPagamentoTelematico">
+        <xs:sequence>          
+            <xs:element name="dominio" type="pay_i:ctDominio" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione "dominio" che riporta le informazioni che consentono di individuare univocamente l’ambito di applicazione della richiesta.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="identificativoMessaggioRichiesta" type="pay_i:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identificativo legato alla trasmissione della richiesta di pagamento.</xs:documentation>
+                    <xs:documentation>Deve essere univoco nell’ambito della stessa data definita da Data_Ora_ messaggio_richiesta.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dataOraMessaggioRichiesta" type="pay_i:stISODateTime" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Indica la data e l’ora di generazione del messaggio di richiesta di pagamento secondo il formato ISO 8601</xs:documentation>
+                    <xs:documentation>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="autenticazioneSoggetto" type="pay_i:stAutenticazioneSoggetto" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Contiene la modalità di identificazione  applicata  al soggetto che deve essere addebitato per il pagamento</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="soggettoVersante" type="pay_i:ctSoggettoVersante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione "versante" che riporta le informazioni concernenti il soggetto che effettua il pagamento per conto del soggetto Pagatore.</xs:documentation>
+                    <xs:documentation>Se coincide con il soggetto Pagatore deve essere omesso.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="soggettoPagatore" type="pay_i:ctSoggettoPagatore" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione "soggetto pagatore" che riporta le informazioni concernenti il soggetto che effettua il pagamento.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="enteBeneficiario" type="pay_i:ctEnteBeneficiario" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione "ente beneficiario" creditore di somme nei confronti del soggetto pagatore.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="datiVersamento" type="pay_i:ctDatiVersamentoRPT" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione "dati del versamento".</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+       
+    
+<xs:simpleType name="stCurrVersioneOggetto">
+    <xs:annotation>
+        <xs:documentation>Versione che identifica l’oggetto scambiato.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+        <xs:pattern value="6.2.*"></xs:pattern>
+    </xs:restriction>
+</xs:simpleType>
+
+    <xs:element name="RPT">
+        <xs:complexType>            
+        <xs:complexContent>
+            <xs:extension base="pay_i:ctRichiestaPagamentoTelematico">
+                <xs:sequence>
+                    <xs:element name="versionOggetto" type="pay_i:stCurrVersioneOggetto">                        
+                    </xs:element>                                         
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+        
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

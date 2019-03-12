@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pay_i="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/Pagamenti/"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    vc:minVersion="1.1">
+    
+    <xs:include schemaLocation="./pagoPa_simpleTypes.xsd"></xs:include>
+    <xs:include schemaLocation="./pagoPa_complexTypes.xsd"></xs:include>
+    
+    
+<xs:complexType name="ctRicevutaTelematica">
+        <xs:sequence>          
+            <xs:element name="dominio" type="pay_i:ctDominio" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "Dominio" della Richiesta di Pagamento Telematico (RPT)</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="identificativoMessaggioRicevuta" type="pay_i:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Identificativo legato alla trasmissione della quietanza telematica.</xs:documentation>
+                    <xs:documentation>Deve essere univoco nell’ambito della stessa data riferita all’elemento dataMessaggioRicevuta.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="dataOraMessaggioRicevuta" type="pay_i:stISODateTime" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Indica la data del messaggio di quietanza, secondo il formato ISO 8601</xs:documentation>
+                    <xs:documentation>[YYYY]-[MM]-[DD]T[hh]:[mm]:[ss]</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="riferimentoMessaggioRichiesta" type="pay_i:stText35" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Con riferimento al messaggio di Ricevuta Telematica (RT) l’elemento contiene il dato identificativoMessaggioRichiesta legato alla trasmissione della Richiesta di Pagamento Telematico (RPT).</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="riferimentoDataRichiesta" type="pay_i:stISODate" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Indica la data secondo il formato ISO 8601 [YYYY]-[MM]-[DD] cui si riferisce la generazione del dato riferimentoMessaggioRichiesta.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="istitutoAttestante" type="pay_i:ctIstitutoAttestante" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione relativa al soggetto Prestatore dei servizi di Pagamento che emette il documento di attestazione dell’avvenuto versamento. </xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="enteBeneficiario" type="pay_i:ctEnteBeneficiario" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "Ente Beneficiario" della Richiesta di Pagamento Telematico (RPT) cui si riferisce il messaggio di Ricevuta Telematica.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="soggettoVersante" type="pay_i:ctSoggettoVersante" minOccurs="0">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "Soggetto Versante" della Richiesta di Pagamento Telematico (RPT) cui si riferisce il messaggio di Ricevuta Telematica.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="soggettoPagatore" type="pay_i:ctSoggettoPagatore" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Riporta le stesse informazioni presenti nel blocco "Soggetto Pagatore" della Richiesta di Pagamento Telematico (RPT) cui si riferisce il messaggio di Ricevuta Telematica.</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="datiPagamento" type="pay_i:ctDatiVersamentoRT" minOccurs="1">
+                <xs:annotation>
+                    <xs:documentation>Aggregazione "dati del versamento"</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    	
+	
+<xs:simpleType name="stCurrVersioneOggetto">
+    <xs:annotation>
+        <xs:documentation>Versione che identifica l’oggetto scambiato.</xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+        <xs:pattern value="6.2.*"></xs:pattern>
+    </xs:restriction>
+</xs:simpleType>
+
+
+    <xs:element name="RPT">
+        <xs:complexType>            
+        <xs:complexContent>
+            <xs:extension base="pay_i:ctRicevutaTelematica">
+                <xs:sequence>
+                    <xs:element name="versionOggetto" type="pay_i:stCurrVersioneOggetto">                        
+                    </xs:element>                                         
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+        
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

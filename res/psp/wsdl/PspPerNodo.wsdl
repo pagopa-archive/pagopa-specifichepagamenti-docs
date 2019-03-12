@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Questo WSDL rappresenta l'interfaccia esposta dal PSP -->
+<wsdl:definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" 
+	xmlns:wsp="http://www.w3.org/ns/ws-policy" 
+	xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" 
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://www.agid.gov.it/services/pagoPa/psp" 
+	xmlns:psp="http://www.agid.gov.it/schemas/pagoPa/psp" 
+	targetNamespace="http://www.agid.gov.it/services/pagoPa/psp">
+	
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import schemaLocation="../xsd/pspPerNodo.xsd" namespace="http://www.agid.gov.it/schemas/pagoPa/psp" />
+		</xsd:schema>
+	</wsdl:types>
+	
+	
+	
+	<wsdl:message name="pspInviaRPT">
+		<wsdl:part name="bodyRequest" element="psp:pspInviaRPT" />
+	</wsdl:message>
+	<wsdl:message name="pspInviaRPTResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspInviaRPTResponse" />
+	</wsdl:message>
+	<wsdl:message name="pspInviaCarrelloRPT">
+		<wsdl:part name="bodyRequest" element="psp:pspInviaCarrelloRPT" />
+	</wsdl:message>
+	<wsdl:message name="pspInviaCarrelloRPTCarte">
+		<wsdl:part name="bodyRequest" element="psp:pspInviaCarrelloRPTCarte"/>
+	</wsdl:message>
+	<wsdl:message name="pspInviaCarrelloRPTResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspInviaCarrelloRPTResponse" />
+	</wsdl:message>
+	<wsdl:message name="pspInviaCarrelloRPTCarteResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspInviaCarrelloRPTCarteResponse" />
+	</wsdl:message>
+	<wsdl:message name="pspChiediRT">
+		<wsdl:part name="bodyRequest" element="psp:pspChiediRT" />
+	</wsdl:message>
+	<wsdl:message name="pspChiediRTResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspChiediRTResponse" />
+	</wsdl:message>
+	<wsdl:message name="pspInviaAckRT">
+		<wsdl:part name="bodyRequest" element="psp:pspInviaAckRT" />
+	</wsdl:message>
+	<wsdl:message name="pspInviaAckRTResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspInviaAckRTResponse" />
+	</wsdl:message>
+	<wsdl:message name="pspChiediAvanzamentoRPT">
+		<wsdl:part name="bodyRequest" element="psp:pspChiediAvanzamentoRPT" />
+	</wsdl:message>
+	<wsdl:message name="pspChiediAvanzamentoRPTResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspChiediAvanzamentoRPTResponse" />
+	</wsdl:message>
+	<wsdl:message name="pspChiediListaRT">
+		<wsdl:part name="bodyRequest" element="psp:pspChiediListaRT" />
+	</wsdl:message>
+	<wsdl:message name="pspChiediListaRTResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspChiediListaRTResponse" />
+	</wsdl:message>
+	<wsdl:message name="pspNotificaCancellazioneRPT">
+		<wsdl:part name="bodyRequest" element="psp:pspNotificaCancellazioneRPT"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="pspNotificaCancellazioneRPTResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspNotificaCancellazioneRPTResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="pspInviaRichiestaStorno">
+		<wsdl:part name="bodyRequest" element="psp:pspInviaRichiestaStorno"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="pspInviaRichiestaStornoResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspInviaRichiestaStornoResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="pspInviaRispostaRevoca">
+		<wsdl:part name="bodyRequest" element="psp:pspInviaRispostaRevoca"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="pspInviaRispostaRevocaResponse">
+		<wsdl:part name="bodyResponse" element="psp:pspInviaRispostaRevocaResponse"></wsdl:part>
+	</wsdl:message>
+	<wsdl:portType name="FespPsp">
+		<wsdl:operation name="pspInviaRPT">
+			<wsdl:input message="tns:pspInviaRPT" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaRPT" />
+			<wsdl:output message="tns:pspInviaRPTResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaRPTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaCarrelloRPT">
+			<wsdl:input message="tns:pspInviaCarrelloRPT" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaCarrelloRPT" />
+			<wsdl:output message="tns:pspInviaCarrelloRPTResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaCarrelloRPTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaCarrelloRPTCarte">
+			<wsdl:input message="tns:pspInviaCarrelloRPTCarte" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaCarrelloRPTCarte" />
+			<wsdl:output message="tns:pspInviaCarrelloRPTCarteResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaCarrelloRPTCarteRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="pspChiediRT">
+			<wsdl:input message="tns:pspChiediRT" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspChiediRT" />
+			<wsdl:output message="tns:pspChiediRTResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspChiediRTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaAckRT">
+			<wsdl:input message="tns:pspInviaAckRT" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaAckRT" />
+			<wsdl:output message="tns:pspInviaAckRTResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaAckRTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="pspChiediAvanzamentoRPT">
+			<wsdl:input message="tns:pspChiediAvanzamentoRPT" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspChiediAvanzamentoRPT" />
+			<wsdl:output message="tns:pspChiediAvanzamentoRPTResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspChiediAvanzamentoRPTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="pspChiediListaRT">
+			<wsdl:input message="tns:pspChiediListaRT" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspChiediListaRT" />
+			<wsdl:output message="tns:pspChiediListaRTResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspChiediListaRTRisposta" />
+		</wsdl:operation>
+		<wsdl:operation name="pspNotificaCancellazioneRPT">
+			<wsdl:input message="tns:pspNotificaCancellazioneRPT" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspNotificaCancellazioneRPT"></wsdl:input>
+			<wsdl:output message="tns:pspNotificaCancellazioneRPTResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspNotificaCancellazioneRPTRisposta"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaRichiestaStorno">
+			<wsdl:input message="tns:pspInviaRichiestaStorno" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaRichiestaStorno"></wsdl:input>
+			<wsdl:output message="tns:pspInviaRichiestaStornoResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaRichiestaStornoRisposta"></wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaRispostaRevoca">
+			<wsdl:input message="tns:pspInviaRispostaRevoca" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaRispostaRevoca"></wsdl:input>
+			<wsdl:output message="tns:pspInviaRispostaRevocaResponse" wsam:Action="http://nodoPSP.fesp.it/ws/FespPsp/PSP/pspInviaRispostaRevocaRisposta"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="FespPspBinding" type="tns:FespPsp">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="pspInviaRPT">
+			<soap:operation soapAction="pspInviaRPT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaCarrelloRPT">
+			<soap:operation soapAction="pspInviaCarrelloRPT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaCarrelloRPTCarte">
+			<soap:operation soapAction="pspInviaCarrelloRPTCarte" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspChiediRT">
+			<soap:operation soapAction="pspChiediRT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaAckRT">
+			<soap:operation soapAction="pspInviaAckRT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspChiediAvanzamentoRPT">
+			<soap:operation soapAction="pspChiediAvanzamentoRPT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspChiediListaRT">
+			<soap:operation soapAction="pspChiediListaRT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspNotificaCancellazioneRPT">
+			<soap:operation soapAction="pspNotificaCancellazioneRPT" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaRichiestaStorno">
+			<soap:operation soapAction="pspInviaRichiestaStorno" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="pspInviaRispostaRevoca">
+			<soap:operation soapAction="pspInviaRispostaRevoca" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="FespPspService">
+		<wsdl:port name="PSPPort" binding="tns:FespPspBinding">
+			<soap:address location="http://PuntoAccessoPSP.spcoop.gov.it/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
