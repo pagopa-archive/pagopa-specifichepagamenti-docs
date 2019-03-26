@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Questo WSDL rappresenta l'interfaccia esposta dalla PAA
+  per la verifica dei pagamenti in attesa.
+-->
+	
+	<wsdl:definitions 
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:ppt="http://ws.pagamenti.telematici.gov/" 
+	xmlns:ppthead="http://ws.pagamenti.telematici.gov/ppthead" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://www.agid.gov.it/services/pagoPa/paa"
+	xmlns:paa="http://www.agid.gov.it/schemas/pagoPa/paa"
+	targetNamespace="http://www.agid.gov.it/services/pagoPa/paa"
+	>
+	
+	
+	<wsdl:types>
+		<xsd:schema>
+			<xsd:import namespace="http://www.agid.gov.it/schemas/pagoPa/paa" schemaLocation="../xsd/paPerNodoPagamentoPsp.xsd"/>
+		</xsd:schema>
+    </wsdl:types>
+	
+	
+	
+	<wsdl:message name="paaVerificaRPT">
+		<wsdl:part name="bodyrichiesta" element="paa:paaVerificaRPT"/>
+		<wsdl:part name="header" element="paa:intestazionePPT"/>
+	</wsdl:message>
+	<wsdl:message name="paaVerificaRPTRisposta">
+		<wsdl:part name="bodyrisposta" element="paa:paaVerificaRPTRisposta"/>
+	</wsdl:message>
+	<wsdl:message name="paaAttivaRPT">
+		<wsdl:part name="bodyrichiesta" element="paa:paaAttivaRPT"/>
+		<wsdl:part name="header" element="paa:intestazionePPT"/>
+	</wsdl:message>
+	<wsdl:message name="paaAttivaRPTRisposta">
+		<wsdl:part name="bodyrisposta" element="paa:paaAttivaRPTRisposta"/>
+	</wsdl:message>
+	<wsdl:portType name="PagamentiTelematiciCCP">
+		<wsdl:operation name="paaVerificaRPT">
+			<wsdl:input message="tns:paaVerificaRPT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaVerificaRPTRichiesta"/>
+			<wsdl:output message="tns:paaVerificaRPTRisposta" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaVerificaRPTRisposta"/>
+		</wsdl:operation>
+		<wsdl:operation name="paaAttivaRPT">
+			<wsdl:input message="tns:paaAttivaRPT" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaAttivaRPTRichiesta"/>
+			<wsdl:output message="tns:paaAttivaRPTRisposta" wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaAttivaRPTRisposta"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="PagamentiTelematiciCCPbinding" type="tns:PagamentiTelematiciCCP">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="paaAttivaRPT">
+			<soap:operation soapAction="paaAttivaRPT"/>
+			<wsdl:input>
+				<soap:body parts="bodyrichiesta" use="literal"/>
+				<soap:header message="tns:paaAttivaRPT" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		<wsdl:operation name="paaVerificaRPT">
+			<soap:operation soapAction="paaVerificaRPT"/>
+			<wsdl:input>
+				<soap:body parts="bodyrichiesta" use="literal"/>
+				<soap:header message="tns:paaVerificaRPT" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="PagamentiTelematiciCCPservice">
+		<wsdl:port name="PPTPort" binding="tns:PagamentiTelematiciCCPbinding">
+			<soap:address location="http://NodoPagamentiSPC.spcoop.gov.it/"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
+
