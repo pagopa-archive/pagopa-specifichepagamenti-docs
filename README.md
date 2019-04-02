@@ -10,7 +10,7 @@ pagoPA è un sistema per rendere più semplici, sicuri e trasparenti tutti i pag
 Il sistema dei pagamenti elettronici a favore della Pubblica Amministrazione, il Sistema pagoPA, garantisce agli Utilizzatori finali (cittadini e imprese) di effettuare pagamenti elettronici alla Pubblica Amministrazione in modo sicuro e affidabile, semplice, in totale trasparenza nei costi di commissione e in funzione delle proprie esigenze.
 
 
-### Come creare una segnalazione
+## Come creare una segnalazione
 
 Creare una segnalazione in Github é molto semplice e puoi farlo direttamente dal tuo account.
 
