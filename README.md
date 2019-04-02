@@ -19,7 +19,7 @@ Se non hai già un account su github lo puoi creare registandoti
 
 Una volta registato, puoi aggiungere una nuova _issue_ cliccando sul pulsante indicato di seguito:
 
-![Issue](_docs/images/issue.png)
+![Issue](/italia/pagopa-specifichepagamenti-docs/raw/master/_docs/images/issue.png)
 
 ## Importante
 Per favore, **non inserire dati sensibili dei cittadini**. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale. Non ci sono problemi invece nell'inserire dei codici di richiesta o identificativi di scheda, per esempio.
