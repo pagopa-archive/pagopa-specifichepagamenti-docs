@@ -15,7 +15,7 @@ Creare una segnalazione in Github é molto semplice e puoi farlo direttamente da
 Se non hai già un account su github lo puoi creare registandoti
 [https://github.com/join?source=login](https://github.com/join?source=login) usando sia la tua mail personale che aziendale.
 
-Una volta registato, puoi aggiungere una nuova _issue_ cliccando sul pulsante indicato di seguito:
+Una volta registato, puoi aggiungere una nuova segnalazione _(New issue)_ cliccando sul pulsante verde indicato di seguito:
 
 ![Issue](_docs/images/newissue.png)
 
