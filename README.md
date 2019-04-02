@@ -24,5 +24,5 @@ Per favore, **non inserire segnalazioni riguardanti pagamenti**. Evita, per esem
 
 Inoltre, **non inserire nessun dato relativo a configurazioni di sicurezza, quali certificati o password.**
 
-In ogni caso, ricordati di inserire una descrizione accurata della segnalazione.
+In ogni caso è opportuno inserire una descrizione accurata della tematica che si vuole segnalare.
 
