@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" elementFormDefault="qualified"
+    targetNamespace="http://www.agid.gov.it/schemas/pagoPa/paa"
+    attributeFormDefault="unqualified" version="6.2.0"
+    xmlns:core="http://www.agid.gov.it/schemas/pagoPa/common/"
+    xmlns:tns="http://www.agid.gov.it/schemas/pagoPa/paa"
+    >
+    
+    <xs:import namespace="http://www.agid.gov.it/schemas/pagoPa/common/" schemaLocation="../../common/pagoPa_complexTypes.xsd" />
+    
+    
+	<xsd:complexType name="ctRisposta">
+				<xsd:sequence>
+					<xsd:element name="fault" type="core:ctFaultBean"
+						minOccurs="0" />
+				</xsd:sequence>
+			</xsd:complexType>
+	
+    <xs:element name="intestazionePPT_RichiestaAvvisi">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="identificativoIntermediarioPA" type="core:stText35" />
+                <xs:element name="identificativoStazioneIntermediarioPA" type="core:stText35" />
+                <xs:element name="identificativoDominio" type="core:stPIVA" />               
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+	
+	<xsd:complexType name="ctSpezzoniCausaleVersamento">
+				<xsd:sequence minOccurs="1" maxOccurs="6">
+					<xsd:choice>
+						<xsd:element type="core:stText35" name="spezzoneCausaleVersamento" />
+						<xsd:element type="tns:ctSpezzoneStrutturatoCausaleVersamento" name="spezzoneStrutturatoCausaleVersamento" />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="ctSpezzoneStrutturatoCausaleVersamento">
+				<xsd:sequence>
+					<xsd:element type="core:stText25" name="causaleSpezzone" />
+					<xsd:element type="core:stImporto" name="importoSpezzone" />
+				</xsd:sequence>
+			</xsd:complexType>
+			
+    
+<xsd:complexType name="ctDatiPagamentoPA">
+				<xsd:sequence>
+					<xsd:element name="importoSingoloVersamento" type="core:stImporto" />
+					<xsd:element name="ibanAccredito" type="core:stIBANIdentifier" />
+					<xsd:element name="bicAccredito" type="core:stBICIdentifier" minOccurs="0" />
+					<xsd:element name="enteBeneficiario" type="core:ctEnteBeneficiario" minOccurs="0" />
+					<xsd:element name="credenzialiPagatore" type="core:stText35" minOccurs="0" />
+					<xsd:choice>
+						<xsd:element name="causaleVersamento" type="core:stText140" />
+						<xsd:element name="spezzoniCausaleVersamento" type="tns:ctSpezzoniCausaleVersamento" />
+					</xsd:choice>
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="ctEsitoChiediNumeroAvviso">
+				<xsd:complexContent>
+					<xsd:extension base="tns:ctRisposta">
+						<xsd:sequence>
+							<xsd:element name="esito" type="xsd:string" minOccurs="1" />
+							<xsd:element name="numeroAvviso" type="core:ctNumeroAvviso" minOccurs="0" />
+							<xsd:element name="datiPagamentoPA" type="tns:ctDatiPagamentoPA" minOccurs="0" />
+						</xsd:sequence>
+					</xsd:extension>
+				</xsd:complexContent>
+			</xsd:complexType>
+			
+
+   
+			
+
+			<!-- Wrapper Elements -->
+			<xsd:element name="paaChiediNumeroAvviso" type="tns:paaChiediNumeroAvviso" />
+			<xsd:element name="paaChiediNumeroAvvisoRisposta" type="tns:paaChiediNumeroAvvisoRisposta" />
+    
+    <!-- Element Definition -->
+   <xsd:complexType name="paaChiediNumeroAvviso">
+				<xsd:sequence>
+					<xsd:element name="identificativoPSP" type="core:stText35" />
+					<xsd:element name="datiSpecificiServizio" type="xsd:base64Binary" />
+				</xsd:sequence>
+			</xsd:complexType>
+
+			<xsd:complexType name="paaChiediNumeroAvvisoRisposta">
+				<xsd:sequence>
+					<xsd:element name="paaChiediNumeroAvvisoRisposta" type="tns:ctEsitoChiediNumeroAvviso" />
+				</xsd:sequence>
+			</xsd:complexType>
+    
+</xs:schema>

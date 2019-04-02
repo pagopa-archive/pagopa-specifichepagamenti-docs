@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Questo WSDL rappresenta l'interfaccia esposta dalla PAA per la verifica 
+	dei pagamenti in attesa. -->
+<wsdl:definitions 
+	xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" 
+	xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+	xmlns:ppt="http://ws.pagamenti.telematici.gov/" 
+	xmlns:ppthead="http://ws.pagamenti.telematici.gov/ppthead" 
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" 
+	xmlns:tns="http://www.agid.gov.it/services/pagoPa/paa"
+	xmlns:paa="http://www.agid.gov.it/schemas/pagoPa/paa"
+	targetNamespace="http://www.agid.gov.it/services/pagoPa/paa"
+	>
+	
+	<wsdl:message name="paaChiediNumeroAvviso">
+		<wsdl:part name="bodyrichiesta" element="paa:paaChiediNumeroAvviso" />
+		<wsdl:part name="header" element="ppthead:intestazionePPT" />
+	</wsdl:message>
+	<wsdl:message name="paaChiediNumeroAvvisoRisposta">
+		<wsdl:part name="bodyrisposta" element="paa:paaChiediNumeroAvvisoRisposta" />
+	</wsdl:message>
+
+	<wsdl:portType name="GenerazioneAvvisi">
+		<wsdl:operation name="paaChiediNumeroAvviso">
+			<wsdl:input message="tns:paaChiediNumeroAvviso"
+				wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaChiediNumeroAvvisoRichiesta" />
+			<wsdl:output message="tns:paaChiediNumeroAvvisoRisposta"
+				wsam:Action="http://ws.pagamenti.telematici.gov/PPT/paaChiediNumeroAvvisoRisposta" />
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="GenerazioneAvvisibinding" type="tns:GenerazioneAvvisi">
+		<soap:binding style="document"
+			transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="paaChiediNumeroAvviso">
+			<soap:operation soapAction="paaChiediNumeroAvviso" />
+			<wsdl:input>
+				<soap:header message="tns:paaChiediNumeroAvviso" part="header" use="literal" />
+				<soap:body parts="bodyrichiesta" use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="GenerazioneAvvisiservice">
+		<wsdl:port name="PPTPort" binding="tns:GenerazioneAvvisibinding">
+			<soap:address location="http://NodoPagamentiSPC.spcoop.gov.it/" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
