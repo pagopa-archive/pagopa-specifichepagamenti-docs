@@ -1,69 +1,3 @@
-|logo-pagopa-2.0.1_cmyk|
-
-+------------------------------------------+
-|    **Sistema pagoPA**                    |
-|                                          |
-|    **Change Management**                 |
-|                                          |
-|    **Versione** **1.0 –** **Marzo 2019** |
-+------------------------------------------+
-
-Stato del documento
-
-+---------------+------------+----------------+
-| **revisione** | **data**   | **note**       |
-+---------------+------------+----------------+
-| 1.0           | Marzo 2019 | Documento base |
-+---------------+------------+----------------+
-|               |            |                |
-+---------------+------------+----------------+
-|               |            |                |
-+---------------+------------+----------------+
-|               |            |                |
-+---------------+------------+----------------+
-|               |            |                |
-+---------------+------------+----------------+
-|               |            |                |
-+---------------+------------+----------------+
-
-Sintesi dei cambiamenti
-
-+------------------------------------------------------------------------+--+
-| **Lista dei principali cambiamenti rispetto la revisione precedente:** |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-|                                                                        |  |
-+------------------------------------------------------------------------+--+
-
-**Indice dei contenuti**
-
-`Stato del documento 2 <#_Toc6576420>`__
-
-`Premessa 4 <#_Toc311040586>`__
-
-`1 Codifica delle versioni 4 <#codifica-delle-versioni>`__
-
-`2 Metodologia di aggiornamento 6 <#_Toc6576423>`__
-
 Premessa
 
 Il presente capitolo descrive le convenzioni e i processi adottati per gestire i cambiamenti della documentazione tecnica pagoPA.
@@ -208,7 +142,3 @@ Nel seguito sono descritte le regole che esprimono la semantica della codifica a
 8. La precedenza si riferisce a come le versioni sono confrontate l’una con l’altra quando poste in relazione d’ordine. La precedenza DEVE essere
    calcolata separando gli identificatori nell’ordine seguente: **Major**, **Minor**, **Patch** e **Pre**-**release**. La precedenza è determinata
    dalla prima discrepanza quando si confrontano ognuno di tali identificatori da sinistra a destra.
-
-.. |logo-pagopa-2.0.1_cmyk| image:: media_ChangeManagement/media/image1.png
-   :width: 1.96457in
-   :height: 1.96457in
