@@ -48,15 +48,15 @@ La procedura di adesione:
 Adesione di un Ente Creditore.
 ------------------------------
 
-Per aderire a pagoPA in qualità di Ente Creditore, le PA, i gestori di pubblici servizi e le società a controllo pubblico devono utilizzare
-il \ **Portale delle Adesioni** che rende disponibili funzionalità per la compilazione, in via automatica, della lettera di adesione e l’invio della
-stessa all’Agenzia per l’Italia Digitale.
+Per aderire a pagoPA in qualità di Ente Creditore, le PA, i gestori di pubblici servizi e le società a controllo pubblico devono utilizzare il
+**Portale delle Adesioni** che rende disponibili funzionalità per la compilazione, in via automatica, della lettera di adesione e l’invio della stessa
+all’Agenzia per l’Italia Digitale.
 
 Il Portale delle Adesioni è uno strumento Web predisposto da AgID al fine di supportare gli Enti Creditori nei processi di adesione e di attivazione
 su pagoPA ed è messo a disposizione di tutti i soggetti che, con ruoli differenti, intervengono in tali processi.
 
-Per accedere al Portale delle Adesioni, gli Enti devono richiedere ad AgID (via PEC all’indirizzo \ protocollo@pec.agid.gov.it) le credenziali di
-primo accesso. Preventivamente alla compilazione della lettera di adesione, l’Ente Creditore dovrà aver individuato il nominativo del “Referente dei
+Per accedere al Portale delle Adesioni, gli Enti devono richiedere ad AgID (via PEC all’indirizzo protocollo@pec.agid.gov.it) le credenziali di primo
+accesso. Preventivamente alla compilazione della lettera di adesione, l’Ente Creditore dovrà aver individuato il nominativo del “Referente dei
 Pagamenti”, ossia della persona indicata quale interlocutore unico con l’Agenzia per l’Italia Digitale relativamente alle attività di carattere
 amministrativo ed al quale l’Agenzia provvederà tramite PEC ad inviare le credenziali nominali di accesso.
 
@@ -77,18 +77,22 @@ servizi di pagamento, aderiscono su base volontaria al sistema pagoPA per erogar
 Sia i PSP che i consorzi o le associazioni di categoria possono aderire in qualità di “intermediari tecnologici” a supporto di altri PSP o degli Enti
 Creditori.
 
-Per formalizzare l’adesione i PSP sottoscrivono con l’AgID appositi Accordi di servizio, secondo i seguenti modelli:
+Per formalizzare l’adesione i PSP o soggetti che vogliano erogare servizi ai PSP sottoscrivono con l’AgID appositi Accordi di servizio, secondo i
+seguenti modelli:
 
--  Accordo di servizio per PSP, nel caso in cui il PSP voglia aderire al Sistema pagoPA esclusivamente per l'erogazione di servizi di pagamento,
+-  Accordo di servizio per PSP, nel caso in cui il PSP voglia aderire al Sistema pagoPA esclusivamente per l'erogazione di servizi di pagamento,
    eventualmente anche usufruendo dell'attività di intermediazione di un PSP già aderente;
 
--  Accordo di servizio per PSP anche intermediario tecnologico, nel caso in cui il PSP voglia aderire al Sistema pagoPA svolgendo anche l'attività di
-   intermediazione per altri soggetti.
+-  Accordo di servizio per PSP anche intermediario tecnologico, nel caso in cui il PSP voglia aderire al Sistema pagoPA svolgendo anche l'attività di
+   intermediazione per altri soggetti.
 
-Entrambi i modelli, validati anche dall’ABI-Associazione Bancaria Italiana, sono pubblicati sul sito dell’Agenzia per l’Italia Digitale.
+-  Accordo di servizio per solo intermediario tecnologico, nel caso in cui un soggetto non PSP voglia aderire al Nodo dei Pagamenti-SPC svolgendo la
+   sola attività di intermediazione per PSP.
+
+Tali modelli, validati anche dall’ABI-Associazione Bancaria Italiana, sono pubblicati sul sito dell’Agenzia per l’Italia Digitale.
 
 L’accordo di servizio deve essere compilato e sottoscritto digitalmente dal legale rappresentante del PSP o da chi ha potere di firma. L’accordo, così
-completato, deve essere inviato tramite PEC all’indirizzo \ protocollo@pec.agid.gov.it, specificando nell’oggetto della email “Adesione al sistema dei
+completato, deve essere inviato tramite PEC all’indirizzo protocollo@pec.agid.gov.it, specificando nell’oggetto della email “Adesione al sistema dei
 Pagamenti”.
 
 Con la sottoscrizione dell’accordo di servizio e la conseguente accettazione di quanto stabilito nelle Linee Guida e nei relativi allegati, il PSP, a

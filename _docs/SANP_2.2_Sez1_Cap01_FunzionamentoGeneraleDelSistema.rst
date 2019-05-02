@@ -209,7 +209,7 @@ Ogni Ente Creditore infine ha l’obbligo di costituire un tavolo operativo per 
 risoluzione delle anomalie o incidenti che si dovessero verificare. La disponibilità del tavolo operativo è la stessa dei sistemi di pagamento per i
 quali è necessario un presidio.
 
-Interfaccia WISP
+Interfaccia WISP 
 -----------------
 
 Per garantire la trasparenza dell’operazione di pagamento nei confronti dell’Utilizzatore finale, il NodoSPC mette a disposizione una applicazione che
@@ -225,7 +225,7 @@ tecnologie IOS e Android.
 La funzione WISP mantiene inalterata la facoltà in capo al Prestatore di Servizi di Pagamento di stabilire costi di servizio di maggior favore per
 gruppi o singoli Utilizzatori finali, purché non ricada sul NodoSPC l’onere di promuovere e pubblicizzare tali specificità.
 
-Funzioni accessorie di controllo
+Funzioni accessorie di controllo 
 ---------------------------------
 
 Il Sistema prevede modalità di controllo focalizzate sulla verifica della corretta applicazione degli Standard di Servizio (p.e. norme di

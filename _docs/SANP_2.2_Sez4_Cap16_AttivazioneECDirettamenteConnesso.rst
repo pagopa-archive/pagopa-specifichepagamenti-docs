@@ -9,39 +9,11 @@ Il Referente Tecnico, ricevuta la nomina e le credenziali di accesso al Portale 
 adeguata per realizzare il **collegamento fisico** al Nodo-SPC.
 
 Il **collegamento fisico** si riferisce alla tipologia del supporto di rete utilizzato per connettere la piattaforma del soggetto aderente al
-Nodo-SPC; l’individuazione del collegamento fisico prevede la raccolta di tutte le informazioni tecniche che lo rendono possibile: indirizzi IP, porte
-IP assegnate, configurazioni firewall, ecc.
+Nodo-SPC; l’individuazione del collegamento fisico prevede la raccolta delle informazioni tecniche che lo rendono possibile: indirizzi IP, porte
+assegnate, ecc.
 
-Allo stato attuale il Nodo-SPC può raggiungere il perimetro dell’Ente Creditore utilizzando i seguenti tipi di connettività:
-
--  SPC
-
--  Internet
-
--  Linea dedicata
-
-Per la connettività SPC possono essere utilizzare le seguenti modalità di colloquio applicativo:
-
--  PdD: Porta di Dominio
-
--  SGPdD: Software di Gestione Porta di Dominio (Porta di Dominio equivalente)
-
--  GAD: Gateway Accesso Diretto
-
-Per la connettività Internet possono essere utilizzare le seguenti modalità di colloquio applicativo:
-
--  GAD: Gateway Accesso Diretto
-
-Per la connettività su Linea dedicata possono essere utilizzare le seguenti modalità di colloquio applicativo:
-
--  GTS: Gateway Trasporto Sicuro
-
-Il set di dati necessario alla configurazione della connettività tramite PdD è identico al set di dati di configurazione di una SGPdD.
-
-Qualora il soggetto che intende connettersi direttamente al Nodo sia un **Ente Creditore** i collegamenti fisici possono essere di tipo PdD o GAD.
-
-Qualora il soggetto che intende connettersi direttamente al Nodo sia un **Partner Tecnologico** i collegamenti fisici possono essere di tipo: SGPdD o
-GTS o GAD.
+Le modalità di collegamento con cui un Ente Creditore può connettersi al Nodo-SPC sono descritte nel documento “\ *Specifiche di connessione al
+Sistema pagoPA*\ ”.
 
 Il Nodo-SPC è strutturato in due ambienti distinti e indipendenti: un ambiente di Test Esterno (disponibile per eseguire tutti i test di attivazione e
 integrazione previsti da AgID) ed uno per l'Esercizio.

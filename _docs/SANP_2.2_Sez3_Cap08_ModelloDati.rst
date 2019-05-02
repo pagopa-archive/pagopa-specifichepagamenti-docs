@@ -163,7 +163,8 @@ previste dall’Agenzia per le Entrate. A tal fine è necessario che almeno un s
    *hash* da utilizzare per produrre l’impronta è lo SHA-256. La stringa di 256 bit (32 ottetti) risultato di tale algoritmo deve essere convertita in
    base64;
 
--  *provinciaResidenza*: sigla automobilistica della provincia di residenza del soggetto pagatore.
+-  *provinciaResidenza*: sigla automobilistica della provincia di residenza del soggetto pagatore. Nel caso di soggetto residente all’estero indicare
+   la provincia della sede legale dell’Ente Creditore
 
 La valorizzazione della presente struttura dati istruisce il NodoSPC a rendere disponibili all’Utilizzatore finale, durante il processo di selezione
 dei PSP, quelli convenzionati con l’Agenzia delle Entrate per l’acquisto della Marca da Bollo Digitale (sistema @e.bollo).
@@ -508,6 +509,9 @@ errore (*faultString*).
 +--------------------------------------------------------------------------+--------------------------------------------------------------------------+
 | *PPT_WISP_TIMEOUT_RECUPERO_SCELTA*                                       | La tripletta *idDominio*\ +\ *keyPA*\ +\ *keyWISP* è relativa ad una     |
 |                                                                          | scelta effettuata scaduta                                                |
++--------------------------------------------------------------------------+--------------------------------------------------------------------------+
+| *PPT_STAZIONE_INT_PA_TIMEOUT*                                            | Il messaggio non riesce ad essere inoltrato nei tempi attesi alla        |
+|                                                                          | controparte EC                                                           |
 +--------------------------------------------------------------------------+--------------------------------------------------------------------------+
 
 **Tabella** **1: Codici di errore**

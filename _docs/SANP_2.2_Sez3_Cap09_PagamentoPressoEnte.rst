@@ -74,7 +74,7 @@ L’evoluzione nel tempo del processo di pagamento è la seguente:
 
 ..
 
-   <Anno(4)><idDominio(11)><codice Sorgente(2)><Progressivo(19)>
+   <Anno(4)><idDominio(11)><codice Sorgente(2)><Progressivo(18)>
 
    Dove:
 
