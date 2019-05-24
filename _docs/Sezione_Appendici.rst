@@ -1,6 +1,6 @@
-+-----------------------------+
-| |AGID_logo_carta_intestata| |
-+-----------------------------+
++-------------------------------+
+| |pagoPA_logo_carta_intestata| |
++-------------------------------+
 
 
 **********
@@ -14,6 +14,4 @@ APPENDICI
 
 
 
-.. |AGID_logo_carta_intestata| image:: media/AGID_logo.png
-
-	
+.. |pagoPA_logo_carta_intestata| image:: _docs/media/pagoPA.png

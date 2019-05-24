@@ -1,3 +1,6 @@
+Premessa alla Codifica delle versioni
+=====================================
+
 Il presente capitolo descrive le convenzioni e i processi adottati per gestire i cambiamenti della documentazione tecnica pagoPA.
 
 Sulla base delle seguenti necessità:

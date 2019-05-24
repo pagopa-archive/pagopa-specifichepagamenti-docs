@@ -496,59 +496,6 @@ L’evoluzione temporale è la seguente:
 |                          | PPT_ERRORE_EMESSO_DA_PAA | Attivazione TAVOLO OPERATIVO  |
 +--------------------------+--------------------------+-------------------------------+
 
-**RT mancante per timeout Controparti**
-
-+-----------------+-----------------------------------------------------------------------------------------------------------------+
-| Pre-condizione  | Il pagamento si trova nello stato *RT PSP*                                                                      |
-+=================+=================================================================================================================+
-| Descrizione     | Tale scenario può verificarsi per le seguenti condizioni:                                                       |
-|                 |                                                                                                                 |
-|                 | -  *Timeout*/Congestione del NodoSPC                                                                            |
-|                 |                                                                                                                 |
-|                 | -  *Timeout*/Congestione dell’EC                                                                                |
-|                 |                                                                                                                 |
-|                 | -  *Timeout*/Congestione del PSP nella ricezione della *response* inerente la primitiva *nodoInviaRT*           |
-|                 |                                                                                                                 |
-|                 | In tutti i casi il PSP predispone la RT nell’archivio per il *recovery* in modalità PULLL da parte del NodoSPC. |
-+-----------------+-----------------------------------------------------------------------------------------------------------------+
-| Post-condizione | Lo stato del pagamento permane in *RT PSP*                                                                      |
-+-----------------+-----------------------------------------------------------------------------------------------------------------+
-
-|SD_RT_TIMEOUT_CONTROPARTIpng|
-
-**Figura** **7: Scenario RT mancante per timeout controparti**
-
-1. il PSP invia la RT al NodoSPC mediante la primitiva *nodoInviaRT;*
-
-..
-
-   L’EC riscontra condizioni di *timeout* per le quali:
-
-2. il NodoSPC mediante la primitiva *paaInviaRT* non riesce a recapitare la RT all’EC
-
-oppure
-
-3. il NodoSPC mediante la primitiva *paaInviaRT* recapita la RT all’EC;
-
-4. la *response* fornita dall’EC non è recapitata al NodoSPC;
-
-5. il Nodo replica alla primitiva di cui al punto 1 emettendo un *faultBean* il cui *faultBean.faultCode* è rappresentativo dell’errore riscontrato:
-
-   -  PPT_STAZIONE_INT_PA_IRRAGGIUNGIBILE: il NodoSPC riscontra condizioni di *timeout* nella *request* verso l’EC o nella ricezione della relativa
-      *response*.
-
-..
-
-   *Timeout* NodoSPC / PSP
-
-6. il NodoSPC riscontra condizioni di *timeout;*
-
-+--------------------------+-----------------------------+----------------------------------------------------+
-| Strategia di risoluzione | Tipologia Errore            | Azione di Controllo Suggerita                      |
-+==========================+=============================+====================================================+
-|                          | PPT_STAZIONE_INT_PA_TIMEOUT | Predisposizione RT in archivio per *recovery* PULL |
-+--------------------------+-----------------------------+----------------------------------------------------+
-
 .. |SD_PAGAMENTO_PRESSO_EC| image:: media_PagamentoPressoEnte/media/image1.png
    :width: 7.44792in
    :height: 6.11042in
@@ -567,6 +514,3 @@ oppure
 .. |sd_RT_RIUTATA_EC| image:: media_PagamentoPressoEnte/media/image6.png
    :width: 5.72917in
    :height: 2.79167in
-.. |SD_RT_TIMEOUT_CONTROPARTIpng| image:: media_PagamentoPressoEnte/media/image7.png
-   :width: 6.6875in
-   :height: 3.95833in

@@ -225,11 +225,11 @@ Seppur meno utilizzate nella pratica comune, si citano di seguito alcune ulterio
 I dettagli relativi alle suddette funzioni sono riportati nella sezione III
 
 .. |image0| image:: media_FunzioniAccessorie/media/image1.png
-   :width: 5.14583in
-   :height: 5.49029in
+   :width: 4.96319in
+   :height: 5.16052in
 .. |image1| image:: media_FunzioniAccessorie/media/image2.png
-   :width: 4.95415in
-   :height: 4.36631in
+   :width: 5.52049in
+   :height: 4.83819in
 .. |image2| image:: media_FunzioniAccessorie/media/image3.png
-   :width: 4.24028in
-   :height: 4.04722in
+   :width: 5.13699in
+   :height: 4.56458in

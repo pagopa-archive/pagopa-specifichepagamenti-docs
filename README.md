@@ -1,4 +1,4 @@
-﻿![pagoPA](_docs/images/pagoPA.png)
+﻿![pagoPA](_docs/media/pagoPA.png)
 
 # pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.2
 
@@ -17,7 +17,7 @@ Se non hai già un account su github lo puoi creare registandoti
 
 Una volta registato, puoi aggiungere una nuova segnalazione _(New issue)_ cliccando sul pulsante verde indicato di seguito:
 
-![Issue](_docs/images/newissue.png)
+![Issue](_docs/media/newissue.png)
 
 ## Importante
 Per favore, **non inserire segnalazioni riguardanti pagamenti**. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale.

@@ -1,6 +1,6 @@
-+-----------------------------+
-| |AGID_logo_carta_intestata| |
-+-----------------------------+
++-------------------------------+
+| |pagoPA_logo_carta_intestata| |
++-------------------------------+
 
 
 #############################################################
@@ -53,4 +53,4 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.2
 	_docs/Sezione_Appendici.rst
 
 
-.. |AGID_logo_carta_intestata| image:: _docs/media/AGID_logo.png
+.. |pagoPA_logo_carta_intestata| image:: _docs/media/pagoPA.png
