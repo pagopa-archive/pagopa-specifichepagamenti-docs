@@ -219,7 +219,7 @@ L’evoluzione temporale è la seguente:
 |                                    | Creditore non interpretabile       |                                    |                                    |
 +------------------------------------+------------------------------------+------------------------------------+------------------------------------+
 
-Tabella 4 Stato RPT
+Tabella Stato RPT
 
 Richiesta Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -416,44 +416,6 @@ Richiesta informativa PA
 
 3. il NodoSPC replica con esito KO emanando un *faultBean* il cui *faultBean*.\ *faultCode* è PPT_SINTASSI_EXTRAXSD.
 
-Richiesta Stato Elaborazione Flusso di Rendicontazione
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Pre-Condizione  | Il PSP ha sottomesso un file XML di rendicontazione al NodoSPC (mediante SOAP *request* o componente SFTP_NodoSPC)             |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Trigger         | Il PSP necessita di conoscere lo stato di elaborazione del file XML di rendicontazione                                         |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Descrizione     | Il PSP sottomette la richiesta passando come parametro di input *l’identificativoFlusso* del flusso di rendicontazione inviato |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-| Post-Condizione | Il NodoSPC replica fornendo lo stato di elaborazione del flusso di rendicontazione                                             |
-+-----------------+--------------------------------------------------------------------------------------------------------------------------------+
-
-**Tabella** **9: Richiesta Stato Elaborazione Flusso di Rendicontazione**
-
-|sd_nodoChiediStatoElaborazioneFlussoRendicontazione|
-
-**Figura** **10: Richiesta Stato Elaborazione Flusso di Rendicontazione**
-
-1. il PSP, attraverso la primitiva *nodoChiediStatoFlussoRendicontazione*, sottomette al NodoSPC la richiesta di conoscere lo stato di elaborazione di
-   un flusso XML di rendicontazione precedentemente inviato valorizzando il parametro di input *identificaficativoFlusso*
-
-**Caso OK**
-
-2. il NodoSPC replica positivamente alla primitiva precedente fornendo lo stato di elaborazione del flusso XML; in particolare:
-
-   a. FLUSSO_IN_ELABORAZIONE: il flusso XML è in fase di elaborazione/storicizzazione sulle basi di dati del NodoSPC
-
-   b. FLUSSO_ELABORATO: Il flusso è stato correttamente elaborato e storicizzato dal NodoSPC
-
-   c. FLUSSO_SCONOSCIUTO: il Nodo non conosce il flusso richiesto
-
-   d. FLUSSO_DUPLICATO: il Nodo rileva che il flusso inviato è già stato sottomesso.
-
-**Caso KO**
-
-3. Il NodoSPC il NodoSPC replica con esito KO emanando un *faultBean* il cui *faultBean*.\ *faultCode* è PPT_SEMANTICA.
-
 Strategie di *retry* per il recapito della RT 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -490,7 +452,7 @@ Strategie di *retry* per il recapito della RT
 
 **Tabella** **10: Strategie di retry per il recapito della RT**
 
-|image10|
+|image9|
 
 **Figura** **11: meccanismi di recovery per RT PUSH**
 
@@ -606,45 +568,6 @@ Richiesta avanzamento RPT
 
    -  CANALE \_RPT_RIFIUTATA: la RPT o il carrello di RPT sottomessi dal NodoSPC sono stati rifiutati dal PSP.
 
-Richiesta di avanzamento RT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Pre-Condizione  | Il NodoSPC verifica lo stato avanzamento di una RT                                                                               |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Trigger         | Il NodoSPC necessita di verificare lo stato di avanzamento della produzione della RT associata ad una RPT o a un carrello di RPT |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Descrizione     | Il NodoSPC sottomette la richiesta di ricevere lo stato di una RT                                                                |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Post-Condizione | Il NodoSPC riceve lo stato della RT                                                                                              |
-+-----------------+----------------------------------------------------------------------------------------------------------------------------------+
-
-**Tabella** **12: Richiesta di avanzamento RT**
-
-|pspChiediAvanzamentoRT|
-
-**Figura** **13: Richiesta di avanzamento RT**
-
-1. il NodoSPC, mediante la primitiva *pspChiediAvanzamentoRT,* richiede al PSP informazioni in merito allo stato di avanzamento della RT;
-
-2. Il PSP ricerca la RT nel proprio archivio;
-
-..
-
-   **Caso OK**
-
-3. il PSP replica con esito OK fornendo lo stato della RT, specificando eventualmente il tempo richiesto per la sua generazione ed invio;
-
-..
-
-   **Caso KO**
-
-4. il PSP replica con esito KO emanando un *faultBean* il cui *faultBean.faultCode* è rappresentativo dell’errore riscontrato; in particolare:
-
-   -  CANALE_RT_SCONOSCIUTA: non è stata trovata la RT per la quale si richiede di conoscere lo stato di avanzamento
-
-   -  CANALE_RT_RIFIUTATA_EC: la RT è stata rifiutata dall’EC.
-
 Richiesta di cancellazione di una RPT per decorrenza dei termini
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -669,7 +592,7 @@ Richiesta di cancellazione di una RPT per decorrenza dei termini
 
 **Tabella** **13: Richiesta di cancellazione di una RT**
 
-|image13|
+|image11|
 
 **Tabella** **14: Richiesta di cancellazione di una RPT per decorrenza dei termini**
 
@@ -740,17 +663,11 @@ Il NodoSPC a seguito del termine del periodo di *retention*:
 .. |SD_nodoChiediInformativaPA| image:: media_FunzioniStrategieRecupero/media/image9.png
    :width: 5.53889in
    :height: 2.47847in
-.. |sd_nodoChiediStatoElaborazioneFlussoRendicontazione| image:: media_FunzioniStrategieRecupero/media/image10.png
-   :width: 6.69583in
-   :height: 2.54792in
-.. |image10| image:: media_FunzioniStrategieRecupero/media/image11.png
+.. |image9| image:: media_FunzioniStrategieRecupero/media/image10.png
    :width: 5.5in
    :height: 6.82222in
-.. |pspChiediAvanzamentoRPT| image:: media_FunzioniStrategieRecupero/media/image12.png
+.. |pspChiediAvanzamentoRPT| image:: media_FunzioniStrategieRecupero/media/image11.png
    :width: 5.91319in
    :height: 2.98264in
-.. |pspChiediAvanzamentoRT| image:: media_FunzioniStrategieRecupero/media/image13.png
-   :width: 5.74792in
-   :height: 2.98264in
-.. |image13| image:: media_FunzioniStrategieRecupero/media/image14.png
+.. |image11| image:: media_FunzioniStrategieRecupero/media/image12.png
 

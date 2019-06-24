@@ -46,35 +46,48 @@ Il processo di revoca può essere a sua volta diversificato sulla base delle mot
 
 **Tabella** **2: Descrizione sintetica delle motivazioni per l'innesco dei processi di revoca e storno**
 
+Si fa presente che per i pagamenti attivati presso l’Ente Creditore mediante carta non è possibile procedere alla revoca della RT per Annullo Tecnico
+
 Processo di Revoca per Annullo Tecnico
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Il processo di revoca di una ricevuta telematica per Annullo Tecnico consente il rientro da situazioni anomale o di incoerenza nello stato di fatto del pagamento rispetto a quanto rappresentato dalla RT generata dal PSP attestante il pagamento. Il
-caso d’uso nominale è rappresentato nella tabella successiva.
+Il processo di revoca di una ricevuta telematica per Annullo Tecnico consente il rientro per il PSP da situazioni anomale o di incoerenza nello stato di fatto del pagamento rispetto a quanto rappresentato dalla RT generata dal PSP attestante il
+pagamento. Si ricorre a questa funzione nel caso in cui Il PSP non disponga di alternative.
 
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Pre-Condizione  | -  è stata recapitata all’EC una RT positiva, ma l’Utilizzatore finale non è stato addebitato                                                             |
-|                 |                                                                                                                                                           |
-|                 | -  è stata recapitata all’EC una RT negativa, ma l’Utilizzatore finale è stato addebitato                                                                 |
-|                 |                                                                                                                                                           |
-|                 | -  la richiesta di Annullo Tecnico è avanzata entro le ore 01:00 del giorno solare successivo a quello di creazione della RT (*dataOraMessaggioRicevuta*) |
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Trigger         | Il PSP ha evidenza di una squadratura puntuale fra incasso e relativa RT .                                                                                |
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Descrizione     | -  il PSP sottomette al NodoSPC la richiesta di revoca di una RT;                                                                                         |
-|                 |                                                                                                                                                           |
-|                 | -  il NodoSPC valida la richiesta e la accetta;                                                                                                           |
-|                 |                                                                                                                                                           |
-|                 | -  l’EC riceve mediante il NodoSPC la richiesta di revoca;                                                                                                |
-|                 |                                                                                                                                                           |
-|                 | -  l’EC valida la richiesta di revoca producendo il relativo esito;                                                                                       |
-|                 |                                                                                                                                                           |
-|                 | -  l’EC invia al PSP, mediante il NodoSPC, l’esito della richiesta di revoca                                                                              |
-|                 |                                                                                                                                                           |
-|                 | -  Il PSP produce e invia la RT che sovrascrive quella revocata                                                                                           |
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Post-Condizione | -  Il pagamento transisce allo stato *Pagamento_revocato*                                                                                                 |
-+-----------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+Non è possibile attivare una procedura di revoca per annullo tecnico per pagamenti per pagamenti con carta attivati presso l’Ente Creditore. L’EC è obbligato a accettare la revoca per annullo tecnico a meno che il pagamento si riferisca a un servizio
+che sia già stato erogato.
+
+Il caso d’uso nominale è rappresentato nella tabella successiva.
+
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Pre-Condizione                                                                                                             | 1. è stata recapitata all’EC una RT positiva, ma l’Utilizzatore finale non è stato addebitato né il PSP ha emesso alcuna   |
+|                                                                                                                            |    attestazione diesito pagamento (scontrino, ricevuta, e-mail, ecc). NB. Tale condizione non si può verificare per        |
+|                                                                                                                            |    pagamenti con carta attivati presso l’Ente Creditore                                                                    |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | 2. è stata recapitata all’EC una RT negativa, ma l’Utilizzatore finale è stato addebitato e il PSP ha emesso alcuna        |
+|                                                                                                                            |    attestazione di pagamento (scontrino, ricevuta, e-mail, ecc)                                                            |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | 3. la richiesta di Annullo Tecnico è avanzata entro le ore 01:00 del giorno solare successivo a quello di creazione della  |
+|                                                                                                                            |    RT (*dataOraMessaggioRicevuta*)                                                                                         |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | 4. il pagamento di cui la RT da revocare non è contestuale all’erogazione di un servizio                                   |
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Trigger                                                                                                                    | Il PSP ha evidenza di una squadratura puntuale fra incasso e relativa RT .                                                 |
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Descrizione                                                                                                                | -  il PSP sottomette al NodoSPC la richiesta di revoca di una RT;                                                          |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | -  il NodoSPC valida la richiesta e la accetta;                                                                            |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | -  l’EC riceve mediante il NodoSPC la richiesta di revoca;                                                                 |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | -  l’EC valida la richiesta di revoca producendo il relativo esito;                                                        |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | -  l’EC invia al PSP, mediante il NodoSPC, l’esito della richiesta di revoca                                               |
+|                                                                                                                            |                                                                                                                            |
+|                                                                                                                            | -  Il PSP produce e invia la RT che sovrascrive quella revocata                                                            |
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
+| Post-Condizione                                                                                                            | -  Il pagamento transisce allo stato *Pagamento_revocato*                                                                  |
++----------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------+
 
 **Tabella** **3: Caso d'uso del processo di revoca per annullo tecnico**
 
