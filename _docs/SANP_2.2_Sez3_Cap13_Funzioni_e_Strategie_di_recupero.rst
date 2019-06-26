@@ -174,6 +174,10 @@ L’evoluzione temporale è la seguente:
 |                                    |                                    |                                    |                                    |
 |                                    |                                    |                                    | **IUV**\  [2]_                     |
 +====================================+====================================+====================================+====================================+
+| *RPT_PARCHEGGIATA_NODO*            | RPT parcheggiata sul nodo in       | Oper. aperta                       | NO                                 |
+|                                    | attesa di essere sbloccata per il  |                                    |                                    |
+|                                    | pagamento con WISP 2.0             |                                    |                                    |
++------------------------------------+------------------------------------+------------------------------------+------------------------------------+
 | *RPT_RICEVUTA_NODO*                | RPT ricevuta dal Nodo e in attesa  | Oper. aperta                       | NO                                 |
 |                                    | di essere processata               |                                    |                                    |
 +------------------------------------+------------------------------------+------------------------------------+------------------------------------+
@@ -219,7 +223,7 @@ L’evoluzione temporale è la seguente:
 |                                    | Creditore non interpretabile       |                                    |                                    |
 +------------------------------------+------------------------------------+------------------------------------+------------------------------------+
 
-Tabella Stato RPT
+Tabella 4 Stato RPT
 
 Richiesta Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
