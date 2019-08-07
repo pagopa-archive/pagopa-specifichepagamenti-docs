@@ -223,7 +223,7 @@ L’evoluzione temporale è la seguente:
 |                                    | Creditore non interpretabile       |                                    |                                    |
 +------------------------------------+------------------------------------+------------------------------------+------------------------------------+
 
-Tabella 4 Stato RPT
+Tabella Stato RPT
 
 Richiesta Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -492,6 +492,10 @@ facoltà di reiterare un ulteriore tentativo di invio della RT in modalità PUSH
 +-----------------------------+----------------------+
 | 5                           | 80                   |
 +-----------------------------+----------------------+
+
+Si fa presente che ogni tentativo di *retry* deve essere effettuato dopo aver atteso sempre il tempo di timeout della primitiva pari a 40 secondi. Ad
+esempio il primo tentativo di recuperò deve essere effettuato dopo 45 secondi (40 di timeout e 5 di attesa), il secondo dopo 50 secondi (40 di timeout
+e 10 di attesa) e così via.
 
 Si possono presentare i seguenti due scenari alternativi:
 
