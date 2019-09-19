@@ -223,7 +223,7 @@ L’evoluzione temporale è la seguente:
 |                                    | Creditore non interpretabile       |                                    |                                    |
 +------------------------------------+------------------------------------+------------------------------------+------------------------------------+
 
-Tabella Stato RPT
+Tabella 4 Stato RPT
 
 Richiesta Catalogo Dati Informativi
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -501,7 +501,12 @@ Si possono presentare i seguenti due scenari alternativi:
 
 **Response ad uno dei tentativi di recupero**
 
-5. Il PSP riceve la *response*, termina qualsiasi attività di recupero della RT
+5. Il PSP riceve la *response*. In caso di esito OK termina qualsiasi attività di recupero; in caso di esito KO provvede a gestire l’errore
+   riscontrato.
+
+Si fa presente che nel caso di *response* negativa con *faultBean*.\ *faultCode* PPT_RT_IN_GESTIONE il PSP dovrà attuare la strategia di *retry* in
+modalità PUSH per un massimo di 3 iterazioni. Terminate tutte le interazioni previste senza aver potuto recapitare le RT, procede ad attivare il
+tavolo operativo.
 
 **Esaurimento dei tentativi di recupero**
 
