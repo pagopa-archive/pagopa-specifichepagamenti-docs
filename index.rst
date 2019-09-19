@@ -4,7 +4,7 @@
 
 
 ##############################################################
-Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.2.5
+Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.2.6
 ##############################################################
 
 
