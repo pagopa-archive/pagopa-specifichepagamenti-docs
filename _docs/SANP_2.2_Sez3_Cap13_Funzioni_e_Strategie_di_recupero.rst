@@ -72,7 +72,7 @@ L’EC ha facoltà di richiedere una copia della RT precedentemente recapitata.
 Richiesta della Lista delle RPT Pendenti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-L’EC ha facoltà di domandare la lista delle RPT correttamente inviate al PSP tramite il NodoSPC per le quali ancora non sono state ricevute le RT.
+L’EC ha facoltà di domandare la lista delle RPT correttamente inviate tramite il NodoSPC per le quali ancora non sono state ricevute le RT.
 
 +-----------------+------------------------------------------------------------------------------+
 | Pre-Condizione  | L’EC ha sottomesso al NodoSPC un certo numero di RPT e non ha ricevuto le RT |
@@ -90,15 +90,14 @@ L’EC ha facoltà di domandare la lista delle RPT correttamente inviate al PSP 
 
 **Figura** **3: Richiesta della Lista delle RPT Pendenti**
 
-1. l’EC, mediante la primitiva *nodoChiediListaPendentiRPT* richiede al NodoSPC il numero e le RPT correttamente sottomesse ai PSP per le quali ancora
-   non è stata ricevuta alcuna RT;
+1. l’EC, mediante la primitiva *nodoChiediListaPendentiRPT* richiede al NodoSPC il numero e le RPT correttamente sottomesse per le quali ancora non è
+   stata ricevuta alcuna RT;
 
 ..
 
    **Caso OK**
 
-2. il NodoSPC replica con esito OK indicando il numero totale e le RPT pendenti consegnate al PSP scelto dall’Utilizzatore finale per le quali ancora
-   non è stata consegnata al NodoSPC alcuna RT;
+2. il NodoSPC replica con esito OK indicando il numero totale e le RPT per le quali ancora non è stata consegnata attraverso il NodoSPC alcuna RT;
 
 ..
 
@@ -454,7 +453,7 @@ Strategie di *retry* per il recapito della RT
 | Post-Condizione                                                          | Al termine della procedura il pagamento transisce nello stato RT_EC      |
 +--------------------------------------------------------------------------+--------------------------------------------------------------------------+
 
-**Tabella** **10: Strategie di retry per il recapito della RT**
+**Tabella** **9: Strategie di retry per il recapito della RT**
 
 |image9|
 
@@ -464,7 +463,7 @@ Strategie di *retry* per il recapito della RT
 
 Si possono presentare i seguenti due scenari alternativi:
 
-**EC indisponibile**
+**EC indisponibile (condizione determinata dalle rilevazioni del sistema di monitoraggio del Nodo)**
 
 2. Il NodoSPC replica emanando un *faultBean* il cui *faultBean.faultCode* è pari a: PPT_STAZIONE_INT_PA_TIMEOUT (indisponibilità funzionale della
    controparte) oppure PPT_STAZIONE_INT_PA_IRRAGGIUNGIBILE (mancata raggiungibilità della controparte); il PSP pone la RT nella coda PULL.
@@ -472,12 +471,12 @@ Si possono presentare i seguenti due scenari alternativi:
 *NB: nel caso di indisponibilità funzionale della controparte, per gestire l’eventualità di interruzione del servizio di breve durata, il PSP ha
 facoltà di reiterare un ulteriore tentativo di invio della RT in modalità PUSH.*
 
-**Nodo non disponibile**
+**Superamento del limite di timeout**
 
 3. Il PSP non riceve alcuna risposta alla primitiva di cui al punto 1
 
-4. Il PSP ritenta nuovamente l’invio della RT in modalità PUSH per un massimo di ulteriori cinque tentativi di recupero, attenendosi alla seguente
-   schedulazione:
+4. Il PSP ritenta nuovamente l’invio della RT in modalità PUSH per un massimo di ulteriori cinque tentativi di recupero (nel caso persista la
+   condizione di *timeout*), attenendosi alla seguente schedulazione progressivamente crescente:
 
 +-----------------------------+----------------------+
 | **# Tentativo di recupero** | **Attesa (secondi)** |
@@ -493,20 +492,23 @@ facoltà di reiterare un ulteriore tentativo di invio della RT in modalità PUSH
 | 5                           | 80                   |
 +-----------------------------+----------------------+
 
-Si fa presente che ogni tentativo di *retry* deve essere effettuato dopo aver atteso sempre il tempo di timeout della primitiva pari a 40 secondi. Ad
-esempio il primo tentativo di recuperò deve essere effettuato dopo 45 secondi (40 di timeout e 5 di attesa), il secondo dopo 50 secondi (40 di timeout
-e 10 di attesa) e così via.
+**Tabella** **10: Strategia di recupero per il recapito di una RT in modalità PUSH**
 
-Si possono presentare i seguenti due scenari alternativi:
+Si fa presente che ogni tentativo di *retry* deve essere effettuato dopo aver atteso sempre il tempo di *timeout* della primitiva pari a 40 secondi.
+Ad esempio il primo tentativo di recuperò deve essere effettuato dopo 45 secondi (40 di *timeout* e 5 di attesa), il secondo dopo 50 secondi (40 di
+*timeout* e 10 di attesa) e così via.
+
+Durante l’esecuzione della schedulazione si possono presentare i seguenti due scenari alternativi:
 
 **Response ad uno dei tentativi di recupero**
 
 5. Il PSP riceve la *response*. In caso di esito OK termina qualsiasi attività di recupero; in caso di esito KO provvede a gestire l’errore
    riscontrato.
 
-Si fa presente che nel caso di *response* negativa con *faultBean*.\ *faultCode* PPT_RT_IN_GESTIONE il PSP dovrà attuare la strategia di *retry* in
-modalità PUSH per un massimo di 3 iterazioni. Terminate tutte le interazioni previste senza aver potuto recapitare le RT, procede ad attivare il
-tavolo operativo.
+Si fa presente che nel caso di *response* negativa con *faultBean*.\ *faultCode* PPT_RT_IN_GESTIONE il PSP dovrà interrompere la strategia di recupero
+riportata nella tabella precedente, procedendo con tre ulteriori tentativi di invio della RT in modalità PUSH dopo un tempo di attesa fisso pari a 120
+secondi per ciascun tentativo. Nel caso di *response* come sopra e terminati inutilmente i tentativi senza aver potuto recapitare la RT, interrompe la
+procedura di invio e (non disponendo di informazioni sufficienti a porre la RT nella coda PULL), procede ad attivare il tavolo operativo.
 
 **Esaurimento dei tentativi di recupero**
 
@@ -603,11 +605,11 @@ Richiesta di cancellazione di una RPT per decorrenza dei termini
 |                                                                          | richieste                                                                |
 +--------------------------------------------------------------------------+--------------------------------------------------------------------------+
 
-**Tabella** **13: Richiesta di cancellazione di una RT**
+**Tabella** **12: Richiesta di cancellazione di una RT**
 
 |image11|
 
-**Tabella** **14: Richiesta di cancellazione di una RPT per decorrenza dei termini**
+**Tabella** **13: Richiesta di cancellazione di una RPT per decorrenza dei termini**
 
 Il NodoSPC a seguito del termine del periodo di *retention*:
 
