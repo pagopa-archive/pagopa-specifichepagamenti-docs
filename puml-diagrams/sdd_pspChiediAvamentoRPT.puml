@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+autonumber
+
+
+participant NodoSPC
+participant PSP
+
+NodoSPC -> PSP : req pspChiediAvamentoRPT 
+PSP -> PSP : ricerca archivio
+alt
+PSP -[#0000FF]-> NodoSPC : resp OK, pspChiediAvanzamentoRPT
+else
+PSP  -[#0000FF]-> NodoSPC : resp KO, pspChiediAvanzamentoRPT
+note right PSP : CANALE_RPT_SCONOSCIUTA\nCANALE_RPT_RIFIUTATA
+end
+
+
+@enduml

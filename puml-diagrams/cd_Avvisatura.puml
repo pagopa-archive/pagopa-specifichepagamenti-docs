@@ -1,0 +1,58 @@
+@startuml
+
+
+
+
+
+
+
+
+class Avvisatura {
+#codiceAvviso
+#dataScadenzaAvviso
+#importoAvviso
+#descrizionePagamento
+#tipoOperazione
+#identificativoMessaggioRichiesta
+
++tassonomiaAvviso
++dataScadenzaPagamento
++urlAvviso
++tipoPagamento
+
+}
+
+class EC {
+#identificativoDominio
+#anagraficaBeneficiario
+
+
+}
+
+
+
+class Soggetto {
+#anagraficaPagatore
+
+}
+
+class identificativoUnivocoPagatore{
+#tipoIdentificativoUnivoco
+#codiceIdentificativoUnivoco
+}
+
+
+class Pagamento {
+#ibanAccredito
+
++ibanAppoggio
+}
+
+
+Avvisatura *-- Soggetto : soggettoPagatore
+Avvisatura o-- EC : anagrafica beneficiario
+Avvisatura *-- Pagamento : datiSingoloPagamento
+Soggetto   *-- identificativoUnivocoPagatore : identificativoUnivocoPagatore
+
+
+@enduml

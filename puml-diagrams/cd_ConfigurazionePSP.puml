@@ -1,0 +1,89 @@
+@startuml
+
+
+
+
+
+class ACQUIRER {
++terminID
++merchantID
++3dsKey
++bin : (Mastercard ICA e visa processo BIN)
+}
+
+ACQUIRER o-- Canale : Canale ON_US
+ACQUIRER o-- Canale : Canale NOT_ON_US (opzionale)
+
+class PSP {
++ragioneSociale
++identificativoPSP
++indentificativoFlusso 
+}
+
+class Pubblicazione {
++dataPubblicazione
++dataInizioValidita
++urlInformazioniPSP
++stornoPagamento
++marcaBolloDigitale
++logoPSP
+}
+
+class Canale{
++identificativoIntermediario
++identificativoCanale
++tipoVersamento
++modelloPagamento
++priorita
++canaleApp
++servizioAlleImprese
+}
+
+class ParoleChiave {
++parolaChiave
+}
+
+class Costi {
++tipoCostoTransazione
++tipoCommissione
++tipoCanaleServizio
++plateaErogazioneServizio
+}
+
+class FasceCostoServizio{
++fasciCostoServizio
++ImportoMassimoFascia
++costoFisso
++valoreCommissione
+}
+
+class Servizio{
++nomeServizio
++logoServizio
+}
+
+class InformazioniServizio {
++codiceLingua
++descrizioneServizio
++disponibilitaServizio
++limitazioniServizio
++urlInfomazioniCanale
++TavoloOperativo
+}
+
+class plugIn {
++parametriPagamentoImmediato :struct
++parametriProfiloPagamento :struct 
+}
+
+
+
+PSP *-- Pubblicazione 
+PSP *-- Canale
+Canale *-- InformazioniServizio
+InformazioniServizio *-- plugIn
+Canale *-- Servizio
+Canale *-- ParoleChiave
+Canale *-- Costi
+Costi *-- FasceCostoServizio
+@enduml

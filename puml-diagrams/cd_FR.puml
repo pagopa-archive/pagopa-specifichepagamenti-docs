@@ -1,0 +1,47 @@
+@startuml
+
+title Relationships - Class Diagram
+
+
+
+
+
+class FR {
+
+dataRegolamento
+numTotalePagamenti
+importoTotalePagamenti
+}
+
+class SCT {
+
+}
+
+
+class PSP {
+}
+
+
+class SingoloPagamento {
+singoloImportoPagato
+codiceEsitoSingoloPagamento
+dataEsitoSingoloPagamento
+}
+
+class RT{
+}
+
+class PosizioneDebitoria {
+}
+
+
+FR *-- PSP : istitutoMittente
+FR *-- EC : Istituto Ricevente
+FR *-- SingoloPagamento : dati Singoli Pagamenti
+SingoloPagamento o-- RT : identificativoUnivocoRiscossione
+SingoloPagamento o-- RT : indiceDatiSingoloPagamento
+SingoloPagamento o-- PosizioneDebitoria : identificativoUnivocoVersamento
+FR o-- SCT : identificativoFlusso
+FR o-- SCT :identificativoUnivocoRegolamento 
+
+@enduml

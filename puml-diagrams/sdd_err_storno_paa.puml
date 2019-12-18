@@ -1,0 +1,21 @@
+@startuml
+hide footbox
+autonumber
+actor Utilizzatore_Finale
+participant EC
+participant NodoSPC
+participant PSP
+... passi precedenti non tracciati...
+PSP->PSP: Predisposizione documento ER
+PSP -> NodoSPC: nodoInviaEsitoStorno
+NodoSPC->NodoSPC:Valida ER
+NodoSPC -> EC : req paaInviaEsitoStorno
+EC -[#blue]-> NodoSPC : resp KO paa InviaEsitoStorno
+note left:PAA_SINTASSI_EXTRAXSD\nPAA_SINTASSI_XSD\nPAA_ER_DUPLICATA\nPAA_RR_SCONOSCIUTA\nPAA_SEMANTICA
+
+NodoSPC -[#blue]-> PSP : resp KO nodoInviaEsitoStorno
+note left : Propaga Errore - PPT_ERRORE_EMESSO_DA_PAA
+EC -> Utilizzatore_Finale : Esito
+
+
+@enduml

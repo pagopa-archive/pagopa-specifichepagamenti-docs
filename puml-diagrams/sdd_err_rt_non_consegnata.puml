@@ -1,0 +1,35 @@
+@startuml
+hide footbox
+autonumber 
+
+
+participant PSP
+participant NodoSPC
+participant EC
+
+hnote over NodoSPC : RT Nodo
+
+NodoSPC -> EC : req paaInviaRT
+
+
+alt PAA_RT_DUPLICATA
+EC -[#blue]-> NodoSPC : resp KO paaInviaRT
+note right : PAA_RT_DUPLICATA
+NodoSPC -[#blue]-> PSP : resp KO nodoInviaRT
+note right : PPT_ERRORE_EMESSO_DA_PA
+PSP -> PSP : Verifica RT
+
+else errore semantico
+EC -[#blue]-> NodoSPC : resp KO paaInviaRT
+note right : PAA_SEMANTICA\nPAA_RPT_SCONOSCIUTA
+NodoSPC -[#blue]-> PSP : resp KO nodoInviaRT
+note right  : PPT_ERRORE_EMESSO_DA_PA
+PSP -> PSP : Gestione errore
+else timeout
+NodoSPC -> NodoSPC : Timeout
+NodoSPC -[#blue]-> PSP : resp KO nodoInviaRT
+PSP -> PSP : ArchiviaRT
+end
+
+
+@enduml

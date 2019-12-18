@@ -1,0 +1,22 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+agent Nodo
+note left of Nodo: Verifica/Gestione Errori
+agent EC
+note left of EC: Ripristino/Gestione degli Errori
+agent PSP
+note right of PSP: Interrogazione Base di Dati del Nodo
+rectangle Nodo(Erogatore) {
+  EC-- (RPT Pendenti)
+  EC-- (copia RT)
+  (Informativa PSP) -- PSP
+  (Informativa PA) -- PSP
+  (Catalogo dei Servizi)--PSP
+}
+
+rectangle PSP(Erogatore) {
+    (Avanzamento RPT) -- Nodo
+    (Avanzamento RT) -- Nodo
+}
+@enduml

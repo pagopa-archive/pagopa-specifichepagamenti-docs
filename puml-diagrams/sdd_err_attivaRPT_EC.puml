@@ -1,0 +1,29 @@
+@startuml
+autonumber
+
+
+actor "Utilizzatore Finale" as Cittadino
+participant PSP
+participant NodoSPC
+participant EC
+
+
+hnote over NodoSPC : PD In Attesa
+
+PSP -> NodoSPC : req nodoAttivaRPT
+EC -> EC : valida la richiesta
+
+NodoSPC -> EC: paaAttivaRPT
+
+
+EC -[#0000FF]-> NodoSPC: resp KO , paaAttivaRPT
+note right EC :  PAA_PAGAMENTO_DUPLICATO \n PAA_PAGAMENTO_IN_CORSO \n PAA_PAGAMENTO_ANNULLATO \n PAA_PAGAMENTO_SCADUTO
+note right EC : PAA_ATTIVA_RPT_IMPORTO_NON_VALIDO
+note right EC : PAA_PAGAMENTO_SCONOSCIUTO
+
+
+NodoSPC -[#0000FF]-> PSP: resp KO, nodoAttivaRPT
+
+
+
+@enduml

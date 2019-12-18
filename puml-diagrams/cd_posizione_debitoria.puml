@@ -1,0 +1,42 @@
+@startuml
+
+
+
+class Pagamento {
+  +CCP : string
+  +dataOraMessaggioRichiesta : string
+  +identificativoMessaggioRichiesta : string
+}
+
+
+class PosizioneDebitoria {
++IUV : string
++Entereditore : string
+}
+
+
+
+class "RichiestaPagamentoTelematica" as RPT  {
+} 
+
+class "RicevutaTelematica" as RT  {
+} 
+
+class "RichiestaRevoca" as RR {
+}
+
+class "EsitoRevoca" as ER {
+}
+
+class FlussoDiRendicontazione {
+}
+
+
+Pagamento "*" o-right-> "1" PosizioneDebitoria
+RT "0..1" o-up-> "0..1" Pagamento
+RPT "0..1" o-up-> "0..1" Pagamento
+RR "0..1" -up-> "0..1" RT
+ER -left-->  RR
+PosizioneDebitoria "*" o-down-> "1" FlussoDiRendicontazione
+hide circle 
+@enduml

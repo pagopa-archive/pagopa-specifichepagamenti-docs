@@ -1,0 +1,52 @@
+@startuml
+hide footbox
+autonumber 
+
+
+participant PSP
+participant NodoSPC
+participant EC
+
+
+
+
+PSP -> NodoSPC : req nodoAttivaRPT
+NodoSPC -[#blue]-> PSP :resp OK nodoAttivaRPT
+
+hnote over NodoSPC :RPT_ATTIVATA
+
+
+
+alt 
+NodoSPC -x PSP : req nodoInviaRPT
+PSP -> PSP : pagamento
+hnote over PSP : TAVOLO OPERATIVO
+hnote over NodoSPC : RPT_PAGATA
+PSP -> PSP : predisposizione flusso cod 9
+
+else
+NodoSPC -> PSP : req nodoInviaRPT
+PSP -> PSP : Verificao Richiesta 
+
+    alt
+    PSP -[#blue]-> NodoSPC : resp KO pspInviaRPT
+    note left PSP : CANALE_RPT_DUPLICATA
+    else
+     PSP -[#blue]-> NodoSPC : resp KO pspInviaRPT
+     note left PSP : CANALE_SEMANTICA\nCANALE_SINTASSI_XSD\nCANALE_SINTASSI_EXTRAXSD
+     PSP -> PSP : genera RT
+     PSP -> NodoSPC : req nodoInviaRT
+    end
+
+end
+
+
+
+
+
+
+
+
+
+
+@enduml

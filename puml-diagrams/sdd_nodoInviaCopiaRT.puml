@@ -1,0 +1,13 @@
+@startuml
+autonumber
+
+EC -> NodoSPC: nodoChiediCopiaRT
+alt
+NodoSPC -[#blue]-> EC: resp OK
+note right NodoSPC:  fileXML codificato base64
+else RT non trovata
+NodoSPC -[#blue]-> EC:resp KO
+note right NodoSPC:  PPT_SINTASSI_XSD\nPPT_SINTASSI_EXTRAXSD\nPPT_SEMANTICA\nPPT_RT_SCONOSICUTA\nPPT_RT_NONDISPONIBILE
+end alt
+
+@enduml

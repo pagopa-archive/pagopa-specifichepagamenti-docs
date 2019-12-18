@@ -1,0 +1,11 @@
+@startuml
+
+class IscrizioneServizio {
+azioneDiAggiornamento
+}
+
+class Soggetto{
+}
+
+IscrizioneServizio *-- Soggetto 
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+autonumber
+
+EC -> NodoSPC: nodoChiediStatoRPT
+alt
+NodoSPC -[#blue]-> EC:resp OK
+note right: parametri processo di pagamento\nstato della RPT
+else
+NodoSPC -[#blue]-> EC:resp KO
+note right:PPT_SINTASSI_EXTRAXSD\nPPT_SEMANTICA\nPPT_RPT_SCONOSCIUTA
+
+end alt
+
+@enduml

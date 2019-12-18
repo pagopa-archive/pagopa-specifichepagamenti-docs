@@ -1,0 +1,17 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+agent EC
+note left of EC: Iniziato dall'Ente Creditore
+agent PSP
+note right of PSP: Iniziato dal PSP (su o meno iniziativa utente)
+
+rectangle RevocaRT {
+  (Charge-Back Utente) -- PSP
+  (Annullo Tecnico) -- PSP
+}
+
+rectangle Storno {
+ EC -- (Richiesta Storno)
+}
+@enduml

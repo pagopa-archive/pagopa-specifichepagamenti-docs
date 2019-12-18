@@ -1,0 +1,32 @@
+@startuml
+
+title Relationships - Class Diagram
+
+
+
+
+
+class RR {
+}
+
+class Dominio{
+ 
+}
+
+class Soggetto {
+
+}
+class PSP {
+}
+
+
+class Pagamento {
+}
+
+RR *-- Soggetto : soggettoVersante 
+RR *-- Soggetto : soggettoPagatore
+RR *-- Dominio : dominio
+RR *-- PSP : istitutoAttestante
+RR *-- Pagamento : datiRevoca
+
+@enduml

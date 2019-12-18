@@ -1,0 +1,50 @@
+@startuml
+hide footbox
+autonumber
+
+participant Cittadino
+participant EC
+participant NodoSPC
+participant Acquirer
+participant PSP
+
+
+NodoSPC -> Acquirer : req prenotazione del credito
+Acquirer -> Acquirer : verifica del credito
+Acquirer -[#blue]-> NodoSPC : resp OK prenotazione del credito
+
+NodoSPC -> NodoSPC : Messaggio presa in carico
+NodoSPC -> NodoSPC : costruzione URl redirect
+
+Cittadino -[#green]> : redirect EC (queryString con idSession ed Esito)
+NodoSPC -> PSP : req pspInviaCarrelloRPTCarte
+
+
+alt
+PSP -[#blue]-> NodoSPC : resp KO pspInviaCarrelloRPTCarte
+hnote over NodoSPC : PAGAMENTO RIFIUTATO
+NodoSPC -> NodoSPC : Annullo prenotazione credito
+NodoSPC -> NodoSPC : genera RT negativa
+
+else condizioni di timeout 
+
+NodoSPC -> NodoSPC : Timeout
+NodoSPC -> PSP : req pspChiediStatoAvanzamentoRPT
+PSP -> PSP : ricerca RPT
+
+    alt RPT trovata
+    note right PSP : il PSP emetterà RT
+    PSP -[#blue]-> NodoSPC : resp OK  pspChiediStatoAvanzamentoRPT
+    hnote over NodoSPC : RT_PSP
+    else RPT Rifiutata
+    PSP -[#blue]-> NodoSPC : resp KO  pspChiediStatoAvanzamentoRPT
+    hnote over NodoSPC : PAGAMENTO_RIFIUTATO
+    NodoSPC -> NodoSPC : Annulla prenotazione credito
+    NodoSPC -> NodoSPC : Genera RT negativa
+    
+    end
+    
+end
+
+
+@enduml

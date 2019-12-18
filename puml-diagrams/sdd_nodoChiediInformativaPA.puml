@@ -1,0 +1,14 @@
+@startuml
+autonumber
+
+PSP -> Nodo: nodoChiediInformativaPA
+alt
+Nodo -[#blue]-> PSP:resp OK
+note right: XML Tabella Controparti EC (Base64)
+else
+Nodo -[#blue]-> PSP:resp KO
+note right:PPT_SINTASSI_EXTRAXSD
+
+end alt
+
+@enduml

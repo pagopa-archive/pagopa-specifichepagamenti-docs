@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+autonumber
+actor Utilizzatore_Finale
+participant EC
+participant NodoSPC
+participant PSP
+... passi precedenti non tracciati...
+PSP->PSP: Predisposizione documento ER
+PSP -> NodoSPC: nodoInviaEsitoStorno
+NodoSPC->NodoSPC:Valida ER
+
+NodoSPC -[#blue]-> PSP : resp KO nodoInviaEsitoStorno
+
+
+note left:PPT_SINTASSI_EXTRAXSD\nPPT_SINTASSI_XSD\nPPT_ER_DUPLICATA\nPPT_RR_SCONOSCIUTA\nPPT_SEMANTICA
+
+
+@enduml

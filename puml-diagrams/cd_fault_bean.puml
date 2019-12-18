@@ -1,0 +1,18 @@
+@startuml
+
+
+
+class faultBean {
+  id
+  faultCode
+  faultString
+  description
+  serial
+  originalFaultCode
+  originalFaultString
+  originalDescription
+  
+}
+
+
+@enduml

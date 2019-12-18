@@ -1,0 +1,37 @@
+@startuml
+hide footbox
+autonumber
+participant PSP
+PSP -> PSP: Genera Flusso di Rendicontazione
+PSP -> Banca_Tesoriera: Acredto Bonifico SCT
+PSP -> NodoSPC: req. nodoInviaFlussoRendicontazione
+NodoSPC -> NodoSPC: Verifica XML rendicontazione
+NodoSPC -> NodoSPC: Elaborazione XML rendicontazione
+
+
+NodoSPC -> NodoSPC: Store Flusso
+NodoSPC -[#blue]-> PSP:resp OK nodoInviaFlussoRendicontazione
+
+EC->NodoSPC:req. nodoChiediElencoFlussiRendicontazione
+NodoSPC -> NodoSPC :Elaborazione Richiesta
+NodoSPC -[#blue]->EC: resp. OK nodoChiediElencoFlussiRendicontazione
+note left NodoSPC : Elenco flussi disponibili
+
+EC -> NodoSPC: req. nodoChiediFlussoRendicontazione
+
+NodoSPC -> NodoSPC : Elaborazione richiesta
+NodoSPC-[#blue]-> EC: resp. OK nodoChiediElencoFlussoRendicontazione
+
+EC->EC : Elabora flusso
+Banca_Tesoriera -> EC : Notifica Incasso 
+note right : per mezzo di OIL/OPI \n o altri mezzi telelematici
+EC->EC:Effettua Riconciliazione Contabile
+
+
+
+
+
+participant NodoSPC
+participant EC
+participant Banca_Tesoriera
+@enduml

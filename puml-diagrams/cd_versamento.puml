@@ -1,0 +1,34 @@
+@startuml
+
+class Versamento {
+dataEsecuzionePagamento
+importoTotaleDaVersare
+tipoVersamento
+ibanAddebito
+bicAddebito
+firmaRicevuta
+}
+
+
+class datiSingoloVersamento{
+importoSingoloVersamento
+commissioneCaricoPA
+ibanAccredito
+bicAccredito
+ibanAppoggio
+credenzialiPagatore
+vausaleVersamento
+datiSpecificiRiscossione
+datiMarcaBolloDigitale
+}
+
+class datiMarcaBolloDigitale{
+tipoBollo
+hashDocumento
+provinciaResidenza
+}
+
+Versamento  *-down- datiSingoloVersamento
+
+datiSingoloVersamento  *-down- datiMarcaBolloDigitale
+@enduml
