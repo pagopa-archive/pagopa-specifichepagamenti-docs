@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/italia/pagopa-specifichepagamenti-docs.git"
   },
-  "keywords": [pagopa],
+  "keywords": ["pagopa"],
   "license": "cc0-1.0",
   "bugs": {
     "url": "https://github.com/italia/pagopa-specifichepagamenti-docs/issues"
