@@ -1,7 +1,7 @@
 {
   "name": "tst-myFirstPrj",
   "version": "1.0.0",
-  "description": "test repository",
+  "description": "Specifiche Attuative Nodo dei Pagamenti (SANP)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,15 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gammam/tst-myFirstPrj.git"
+    "url": "git+https://github.com/italia/pagopa-specifichepagamenti-docs.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [pagopa],
+  "license": "cc0-1.0",
   "bugs": {
-    "url": "https://github.com/gammam/tst-myFirstPrj/issues"
+    "url": "https://github.com/italia/pagopa-specifichepagamenti-docs/issues"
   },
-  "homepage": "https://github.com/gammam/tst-myFirstPrj#readme",
+  "homepage": "https://github.com/italia/pagopa-specifichepagamenti-docs#readme",
   "devDependencies": {
     "fs-extra": "^8.1.0",
     "node-pandoc": "^0.3.0",
