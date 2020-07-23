@@ -1,0 +1,35 @@
+@startuml
+
+title Relationships - Class Diagram
+
+
+class RT {
+  
+}
+
+class RPT
+
+class Dominio{
+ 
+}
+
+class Soggetto {
+
+}
+class PSP {
+}
+
+class EC {
+}
+
+class Pagamento {
+}
+
+RT *-- Soggetto : soggettoVersante 
+RT *-- Soggetto : soggettoPagatore
+RT *-- Dominio : dominio
+RT *-- EC : enteBeneficiario
+RT *-- PSP : istitutoAttestante
+RT *-- Pagamento : datiPagamento
+RT o-- RPT : richiesta
+@enduml

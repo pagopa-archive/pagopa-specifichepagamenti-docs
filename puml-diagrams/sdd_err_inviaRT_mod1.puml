@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+autonumber
+
+
+participant EC
+participant NodoSPC
+participant PSP
+
+hnote over NodoSPC : RT_PSP
+
+PSP -> NodoSPC : req nodoInviaRT
+
+note left PSP : PPT_SINTASSI_EXTRAXSD\nPPT_SINTASSI_XSD\nPPT_RT_DUPLICATA\nPPT_SEMANTICA
+
+NodoSPC -[#blue]-> : resp KO nodoInviaRT
+
+
+@enduml

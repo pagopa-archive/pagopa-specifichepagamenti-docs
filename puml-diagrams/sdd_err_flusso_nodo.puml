@@ -1,0 +1,17 @@
+@startuml
+hide footbox
+autonumber
+
+participant PSP
+participant NodoSPC
+participant EC
+
+
+...  passi non tracciati ...
+
+EC -> NodoSPC : req nodoChiediFlussoRendicontazione
+NodoSPC -> EC : resp KO nodoChiediFlussoRendicontazione
+note left NodoSPC : PPT_SINTASSI_EXTRAXSD\nPPT_ID_FLUSSO_SCONOSCIUTO\nPPT_SYSTEM_ERROR\nPPT_FLUSSO_ESISTENTE
+
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+
+
+class ER{
+}
+
+class Dominio{
+ 
+}
+
+class Soggetto {
+
+}
+class PSP {
+}
+
+
+class Pagamento {
+}
+
+ER o-- RR : riferimento
+ER *-- Soggetto : soggettoVersante 
+ER *-- Soggetto : soggettoPagatore
+ER *-- Dominio : dominio
+ER *-- PSP : istitutoAttestante
+ER *-- Pagamento : datiRevoca
+
+@enduml

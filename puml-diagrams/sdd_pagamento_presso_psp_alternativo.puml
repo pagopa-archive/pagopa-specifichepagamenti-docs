@@ -1,0 +1,70 @@
+@startuml
+hide footbox
+autonumber 
+participant Cittadino as "Utilizzatore Finale"
+participant PSP
+participant NodoSPC
+participant EC
+
+hnote over NodoSPC : PD in Attesa
+
+Cittadino [#000000]-> PSP: Presenta l'avviso
+
+
+PSP -> PSP: Elabora dati avviso 
+PSP -> NodoSPC: req nodoVerificaRPT
+NodoSPC -> NodoSPC : controllo verificaRPT
+
+
+NodoSPC -> EC: paaVerificaRPT
+EC -> EC : verifica RPT
+EC -[#0000FF]-> NodoSPC: resp OK , paaVerificaRPT
+NodoSPC -[#0000FF]-> PSP: resp OK, nodoVerificaRPT
+
+
+PSP [#000000]-> Cittadino : presentazione dell'avviso
+
+
+
+Cittadino [#000000]-> PSP : Autorizza il pagamento
+
+PSP->PSP:  Pagamento
+PSP [#black]-> Cittadino : rilascio attestazione
+
+PSP -> NodoSPC: req nodoAttivaRPT
+NodoSPC -> NodoSPC : controllo attivaRPT
+
+NodoSPC -> EC : req paaAttivaRPT
+EC -> EC : Attiva RPT
+EC -[#0000FF]> NodoSPC : resp OK, paaAttivaRPT
+
+NodoSPC -[#0000FF]-> PSP : resp OK, nodoAttivaRPT
+
+hnote over NodoSPC : RPT Attivata
+...
+EC -> NodoSPC : req nodoInviaRPT
+NodoSPC -> NodoSPC : controllo inviaRPT
+
+NodoSPC -[#0000FF]-> EC : resp OK, nodoInviaRPT
+hnote over NodoSPC : Pagamento Autorizzato
+
+
+NodoSPC -> PSP : req pspInviaRPT
+PSP -[#0000FF]-> NodoSPC : resp OK, pspInviaRPT
+
+hnote over NodoSPC : RPT Pagata
+
+PSP -> PSP: genera RT
+
+PSP -> NodoSPC : req nodoInviaRT
+NodoSPC -> NodoSPC : controlo inviaRT
+
+hnote over NodoSPC : RT Nodo
+NodoSPC -> EC : paaInviaRT
+EC -> EC : aggiorna Pagamento
+EC -[#0000FF]-> NodoSPC : resp OK, paaInviaRT
+NodoSPC -[#0000FF]-> PSP : resp OK, nodoInviaRT
+hnote over NodoSPC : RT EC
+PSP -> PSP : Chiudi Pagamento
+
+@enduml

@@ -1,0 +1,40 @@
+name: Publish RST docs
+
+on: 
+  pull_request:
+    types: closed 
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - name: pandoc
+      uses: r-lib/actions/setup-pandoc@v1
+      with:
+        pandoc-version: '2.8' # The pandoc version to download (if necessary) and use.:  
+    - name: npm install
+      if: github.event.pull_request.merged
+      run: |
+        npm install
+        npm run start
+    - name: push
+      if: github.event.pull_request.merged
+      uses: github-actions-x/commit@v2.4
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: 'master'
+        commit-message: 'publish documentation '
+        force-add: 'true'
+        name: publish-docs-action
+        

@@ -1,0 +1,23 @@
+@startuml
+hide footbox
+autonumber
+actor Utente
+participant EC
+participant NodoSPC
+participant PSP
+Utente -> EC: Richiede storno di un pagamento
+EC->EC: Genera documento RR
+EC -> NodoSPC: req nodoInviaRichiestaStorno
+NodoSPC->NodoSPC: Valida RR
+NodoSPC->PSP:req pspInviaRichiestaStorno
+PSP-[#blue]->NodoSPC: resp OK pspInviaRichiestaStorno
+NodoSPC-[#blue]->EC: resp OK nodoInviaRichiestaStorno
+
+PSP->PSP: Predisposizione documento ER
+PSP->NodoSPC: req nodoInviaEsitoStorno
+NodoSPC->NodoSPC: valida ER
+NodoSPC -> EC:req paaInviaEsitoStorno
+EC-[#blue]->NodoSPC: resp OK paaInviaEsitoStorno
+NodoSPC -[#blue]-> PSP: resp OK nodoInviaEsitoStorno
+EC -> Utente: Esito
+@enduml

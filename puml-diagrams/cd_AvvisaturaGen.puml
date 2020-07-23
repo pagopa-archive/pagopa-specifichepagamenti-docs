@@ -1,0 +1,34 @@
+@startuml
+
+
+
+class Avvisatura {
+
+}
+
+class EsitoInoltroAvvisatura {
+}
+
+
+
+class ListaEsitoAvvisi{
+}
+
+class ListaAvvisiDigitali {
+}
+
+
+
+class IscrizioneServizio {
+}
+
+class Soggetto {
+}
+
+
+EsitoInoltroAvvisatura o-- Avvisatura : identificativo messaggio richiesta 
+ListaAvvisiDigitali *-- Avvisatura
+ListaEsitoAvvisi    *-- EsitoInoltroAvvisatura
+
+IscrizioneServizio *-- Soggetto 
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+hide footbox
+autonumber
+
+
+participant EC
+participant NodoSPC
+participant PSP
+
+hnote over NodoSPC : RT_PSP
+
+PSP -> NodoSPC : req nodoInviaRT
+
+NodoSPC -> EC : req paaInviaRT
+
+note left PSP : PAA_SINTASSI_EXTRAXSD\nPAA_SINTASSI_XSD\nPAA_RT_DUPLICATA\nPAA_SEMANTICA
+
+
+EC -[#blue]-> NodoSPC : resp KO paaInviaRT
+NodoSPC -[#blue]-> : resp KO nodoInviaRT
+note left NodoSPC : PPT_ERRORE_EMESSO_DA_PAA
+
+@enduml

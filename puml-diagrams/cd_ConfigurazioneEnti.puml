@@ -1,0 +1,52 @@
+@startuml
+
+
+
+class EnteCreditore {
++idDominio
++ragioneSociale
++pagamentiPressoPSP
++contactCenterEnteCreditore
++modelloTreSpontaneo
++avvisaturaPull
+
+
+}
+
+
+class serviziModelloTreSpontaneo {
++idServizio
++dataInizioAttivazione
+}
+
+class erogazioneServizio {
++disponibilita
++tipoPeriodo
++giorno
++fasciaOraria
++fasciaOrariaDa
++fasciaOrariaA
++indisponibilita
+}
+
+class XSDSchemaServizio {
+}
+
+class informativaContoAccredito {
++dataAttivazioneIban
++ibanAccredito
++sellerBank
++idNegozio
+}
+
+
+
+
+
+EnteCreditore *-- serviziModelloTreSpontaneo
+EnteCreditore *-- erogazioneServizio
+EnteCreditore *-- informativaContoAccredito : Conto Accredito
+EnteCreditore *-- informativaContoAccredito : Conto Appoggio
+serviziModelloTreSpontaneo o-- XSDSchemaServizio
+
+@enduml

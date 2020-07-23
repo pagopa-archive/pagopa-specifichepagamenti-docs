@@ -1,0 +1,79 @@
+@startuml
+hide footbox
+autonumber
+
+participant Cittadino as "Utilizzatore finale"
+participant EC
+participant NodoSPC
+participant Acquirer
+participant PSP
+
+
+Cittadino -> EC: avvio flusso pagamento\n il cittadino esegue checkout 
+EC -> NodoSPC: req nodoInviaCarrelloRPT
+
+
+NodoSPC -> NodoSPC: valida la richiesta
+
+
+NodoSPC -[#0000FF]-> EC: resp OK, nodoInviaCarrelloRPT
+hnote over NodoSPC : RPT inviata
+note right: restituisce URL WISP 
+EC->EC: Predispone HTTP Redirect verso WISP
+Cittadino [#00FF0F]-> NodoSPC: redirect (query string con idSessione)
+note right: Effetttua Autenticazione e sceglie il metodo di pagamento
+
+
+alt  Carta di Pagamento
+NodoSPC-> Acquirer : req prenotazione del credito
+Acquirer -> Acquirer : verifica del credito
+Acquirer  -[#0000FF]-> NodoSPC : resp OK prenotazione del credito
+NodoSPC ->NodoSPC: Messaggio presa in carico
+
+NodoSPC ->NodoSPC: Costruisce URL Redirect
+Cittadino [#00FF0F]-> EC: redirect EC (queryString con isSession ed ESITO=DIFFERITO)
+
+
+
+
+NodoSPC -> PSP : req pspInviaCarrelloCarteRPT
+PSP -> PSP : Controllo semantico Carrello
+
+PSP  -[#0000FF]-> NodoSPC : resp OK pspInviaCarrelloCarteRPT
+hnote over NodoSPC : RT PSP
+NodoSPC->NodoSPC: Contabilizza credito prenotato
+
+else Pagamento mediante altri strumenti
+
+
+NodoSPC -> PSP : req pspInviaCarrelloRPT 
+PSP -[#0000FF]-> NodoSPC : resp OK pspInviaCarrelloRPT
+hnote over NodoSPC : RT PSP
+alt Pagamento mediante Re-indirizzamento on-line
+NodoSPC -> NodoSPC : Costruzione URL di Redirect
+note right: reindirizza al sito del PSP (CANALE)
+Cittadino [#00FF0F]-> PSP : get PSP url
+Cittadino -> PSP: Completa Transazione sul PSP
+PSP->PSP: Predispone HTTP Redirect verso WISP
+note right: reindirizza al WISP
+Cittadino [#00FF0F]-> NodoSPC : redirect su WISP
+
+else Pagamento con Autorizzazione gestita dal PSP
+Cittadino -> PSP: Autorizzazione del Pagamento
+note right: Processo stabilito dal PSP
+end
+
+
+NodoSPC -> NodoSPC: WISP - Esito Pagamento
+
+Cittadino-[#00FF0F]->EC : redirect su EC (queryString con idSession ed Esito)
+note left: ritorno sul sito dell'ente
+end
+PSP-> PSP: Generazione RT
+PSP -> NodoSPC: req nodoInviaRT
+NodoSPC -> EC : req paaInviaRT
+EC -[#0000FF]-> NodoSPC : resp OK paaInviaRT
+hnote over NodoSPC : RT EC
+NodoSPC  -[#0000FF]-> PSP : resp OK nodoInviaRT
+hnote over PSP : RT EC
+@enduml

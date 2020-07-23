@@ -1,0 +1,32 @@
+@startuml
+
+
+
+class Avvisatura {
+
+}
+
+class EsitoInoltroAvvisatura {
+
+}
+
+class EsitoAvvisatura {
++tipoCanaleEsito
++identificativoCanale
++dataEsito
++codiceEsito
++descrizioneEsito
+}
+
+class Dominio {
+}
+
+
+
+
+EsitoInoltroAvvisatura *-- EsitoAvvisatura
+EsitoInoltroAvvisatura *-- Dominio : identificativoDominio
+EsitoInoltroAvvisatura *-- Avvisatura : IdentificativoMessaggioRichiesta
+
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+autonumber
+
+
+actor "Utilizzatore Finale" as Cittadino
+participant PSP
+participant NodoSPC
+participant EC
+
+
+hnote over NodoSPC : PD In Attesa
+
+PSP -> NodoSPC : req nodoAttivaRPT
+NodoSPC -> NodoSPC : valida la richiesta
+
+
+NodoSPC -[#0000FF]-> PSP: resp KO , nodoAttivaRPT
+note right NodoSPC :  PPT_SINTASSI_XSD\nPPT_SINTASSI_EXTRAXSD\nPPT_ID_CARRELLO_DUPLICATO\nPPT_SEMANTICA\nPPT_IBAN_NON_CENSITO
+NodoSPC -[#0000FF]-> PSP: resp KO, nodoAttivaRPT
+
+
+
+@enduml

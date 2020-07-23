@@ -1,0 +1,23 @@
+@startuml
+hide footbox
+autonumber
+
+participant PSP
+participant NodoSPC
+participant EC
+
+PSP -> NodoSPC: nodoInviaRichiestaRevoca
+note left  PSP : Compone RR \n tipoRevoca=1
+NodoSPC->NodoSPC: Validazione Richiesta Revoca
+NodoSPC -> EC: paaInviaRichiestaRevoca
+EC-[#blue]->NodoSPC: resp OK paaInviaRichiestaRevoca
+NodoSPC -[#blue]-> PSP: resp OK nodoInviaRichiestaRevoca
+EC ->EC: Predisposizione ER
+EC -> NodoSPC: nodoInviaRispostaRevoca
+NodoSPC ->NodoSPC: Validazione ER
+NodoSPC -> PSP: pspInviaRispostaRevoca
+PSP-[#blue]->NodoSPC: resp OK pspInviaRispostaRevoca
+NodoSPC -[#blue]-> EC: resp OK nodoInviaRispostaRevoca
+
+
+@enduml

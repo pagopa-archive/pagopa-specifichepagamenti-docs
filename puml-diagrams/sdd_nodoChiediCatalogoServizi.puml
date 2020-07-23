@@ -1,0 +1,14 @@
+@startuml
+autonumber
+
+PSP -> Nodo: nodoChiediCatalogoServizi
+alt
+Nodo -[#0000FF]-> PSP:resp OK
+note right: XML Catalogo Servizi Base64
+else
+Nodo -[#0000FF]-> PSP:resp KO
+note right:PPT_SINTASSI_EXTRAXSD
+
+end alt
+
+@enduml

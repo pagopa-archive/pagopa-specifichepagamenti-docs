@@ -1,0 +1,20 @@
+@startuml
+hide footbox
+autonumber
+
+participant PSP
+participant NodoSPC
+participant Banca_Tesoriera
+
+
+PSP -> PSP : Genera XML di Rendicontazione
+PSP -> Banca_Tesoriera : Accredito bonifico SCT
+PSP -> NodoSPC : req nodoInviaFlussoRendicontazione
+...
+PSP -> NodoSPC : req nodoChiediStatoElaborazioneFlussoRendicontazione
+NodoSPC -> NodoSPC : Controllo stato Elaborazione
+NodoSPC -[#blue]-> PSP : resp OK nodoChiediStatoElaborazioneFlussoRendicontazione
+note right : FLUSSO_IN_ELABORAZIONE\nFLUSSO_ELABORATO
+PSP -> PSP : Gestione Stato
+
+@enduml

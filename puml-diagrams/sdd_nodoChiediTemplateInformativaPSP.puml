@@ -1,0 +1,17 @@
+@startuml
+autonumber
+
+PSP -> Nodo: nodoChiediTemplateInformativaPSP
+alt
+Nodo -[#blue]-> PSP:resp OK
+note right: XML Catalogo Dati Informativi (Base64)
+else
+Nodo -[#blue]-> PSP:resp OK
+note right: Template XML Catalogo Dati Informativi (Base64)
+else
+Nodo -[#blue]-> PSP:resp KO
+note right:PPT_SINTASSI_EXTRAXSD
+
+end alt
+
+@enduml

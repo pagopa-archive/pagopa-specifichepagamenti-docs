@@ -1,0 +1,29 @@
+{
+  "name": "tst-myFirstPrj",
+  "version": "1.0.0",
+  "description": "Specifiche Attuative Nodo dei Pagamenti (SANP)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "md2rst": "node script/md2rst.js",
+    "puml2png": "node script/puml2png.js",
+    "build-media": "node script/media2media.js",
+    "start": "npm run build-media && npm run puml2png && npm run md2rst"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/italia/pagopa-specifichepagamenti-docs.git"
+  },
+  "keywords": ["pagopa"],
+  "license": "cc0-1.0",
+  "bugs": {
+    "url": "https://github.com/italia/pagopa-specifichepagamenti-docs/issues"
+  },
+  "homepage": "https://github.com/italia/pagopa-specifichepagamenti-docs#readme",
+  "devDependencies": {
+    "fs-extra": "^8.1.0",
+    "node-pandoc": "^0.3.0",
+    "node-plantuml": "^0.9.0",
+    "pwd-fs": "^1.2.12"
+  }
+}

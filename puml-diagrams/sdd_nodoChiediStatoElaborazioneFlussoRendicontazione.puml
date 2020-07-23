@@ -1,0 +1,14 @@
+@startuml
+autonumber
+
+PSP -> Nodo: nodoChiediStatoElaborazioneFlussoRendicontazione
+alt
+Nodo -[#blue]-> PSP:resp OK
+note right: FLUSSO_IN_ELABORAZIONE\nFLUSSO_ELABORATO\nFLUSSO_SCONOSCIUTO\nFLUSSO_DUPLICATO
+else
+Nodo -[#blue]-> PSP:resp KO
+note right:PPT_SEMANTICA
+
+end alt
+
+@enduml

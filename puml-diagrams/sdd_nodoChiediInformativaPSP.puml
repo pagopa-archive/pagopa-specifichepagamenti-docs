@@ -1,0 +1,14 @@
+@startuml
+autonumber
+
+EC -> NodoSPC: nodoChiediInformativaPSP
+alt
+NodoSPC -[#blue]-> EC:resp OK
+note right: file XML Catalogo Dati informativi\ncodificato Base64
+else
+NodoSPC -[#blue]-> EC:resp KO
+note right:PPT_SINTASSI_EXTRAXSD\nPPT_SEMANTICA\nPPT_SYSTEM_ERROR\nPPT_INFORMATIVAPSP_NON_PRESENTE
+
+end alt
+
+@enduml

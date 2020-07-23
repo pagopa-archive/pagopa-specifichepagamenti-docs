@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+autonumber
+actor Utente
+participant EC
+participant NodoSPC
+participant PSP
+Utente -> EC: Richiede storno di un pagamento
+EC->EC: Genera documento RR
+EC -> NodoSPC: req nodoInviaRichiestaStorno
+NodoSPC->NodoSPC: Valida RR
+NodoSPC -[#0000FF]-> EC: resp KO nodoInviaRichiestaStorno
+note right:PPT_SINTASSI_EXTRAXSD\nPPT_SINTASSI_XSD\nPPT_CANALE_ERRORE\nPPT_CANALE_ERRORE_RESPONSE\nPPT_OPER_NON_STORNABILE\nPPT_RT_SCONOSCIUTA\nPPT_SEMANTICA
+EC->Utente: Esito KO operazione
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+hide footbox
+autonumber
+
+participant Cittadino
+participant EC
+participant NodoSPC
+participant Acquirer
+participant PSP
+
+NodoSPC-> Acquirer : req prenotazione del credito
+
+alt
+Acquirer -> Acquirer : verifica del credito
+Acquirer  -[#0000FF]-> NodoSPC : resp KO prenotazione del credito
+
+else
+NodoSPC -> NodoSPC : TimeOut 
+end
+hnote over NodoSPC : PAGAMENTO RIFIUTATO
+NodoSPC-> NodoSPC : Esito Pagamento ( NEGATIVO)
+NodoSPC-> NodoSPC : Costruisce url redirect
+Cittadino [#00FF0F]-> EC : redirect EC (queryString con idSession ed Esito)
+
+NodoSPC -> NodoSPC : genera RT negativa
+@enduml

@@ -1,0 +1,26 @@
+@startuml
+hide footbox
+autonumber
+
+participant Cittadino
+participant EC
+participant NodoSPC
+participant Acquirer
+participant PSP
+
+
+Cittadino -> EC: avvio flusso pagamento\n il cittadino esegue checkout 
+EC -> NodoSPC: req nodoInviaCarrelloRPT
+
+
+NodoSPC -> NodoSPC: valida la richiesta
+
+
+NodoSPC -[#0000FF]-> EC: resp KO, nodoInviaCarrelloRPT
+note right: PPT_SINTASSI_EXTRAXSD\nPPT_SINTASSI_XSD\nPPT_SEMANTICA\nPPT_IBAN_NON_CENSITO
+hnote over NodoSPC : RPT Rifiutata
+
+EC -> Cittadino: Notifica operazione KO
+note left EC: CIttadino contatta assistenza EC
+
+@enduml

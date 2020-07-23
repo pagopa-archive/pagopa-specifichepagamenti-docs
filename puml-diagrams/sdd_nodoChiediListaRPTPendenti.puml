@@ -1,0 +1,14 @@
+@startuml
+autonumber
+
+EC -> NodoSPC: nodoChiediListaRPTPendenti
+alt
+NodoSPC -[#blue]-> EC:resp OK
+note right: Numero RPT Pendenti, RPT pendenti (se presenti)
+else
+NodoSPC -[#blue]-> EC:resp KO
+note right:PPT_SINTASSI_EXTRAXSD\nPPT_SEMANTICA
+
+end alt
+
+@enduml
