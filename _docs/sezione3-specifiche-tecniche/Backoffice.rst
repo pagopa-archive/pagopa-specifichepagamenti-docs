@@ -20,7 +20,7 @@ stesso. Al variare del soggetto istanziante e delle motivazioni che
 innescano l’esecuzione del processo, possono verificarsi le situazioni
 mostrate nella figura seguente.
 
-|image0|
+|image1|
 
 **Figura** **1: Attori coinvolti nell’innesco dei processi di revoca e
 storno di una RT**
@@ -123,7 +123,7 @@ nella tabella successiva.
 
 L’evoluzione temporale del processo di revoca è il seguente:
 
-|image1|
+|image2|
 
 **Figura** **2: Diagramma di sequenza del processo di revoca di una RT
 per Annullo Tecnico**
@@ -208,7 +208,7 @@ nella figura successiva, avendo cura di notare che il caso d’uso
 rappresenta lo scenario in cui le cui invocazioni SOAP si concludono con
 esito positivo (esito: OK come parametro di *output*).
 
-|image2|
+|image3|
 
 **Figura** **3: Diagramma di sequenza del processo di revoca per
 charge-back**
@@ -271,7 +271,7 @@ l’evoluzione temporale sono mostrate nella figura successiva.
 
 **Tabella** **5: Caso d’uso del processo di storno di un pagamento**
 
-|image3|
+|image4|
 
 **Figura** **4: Evoluzione temporale del processo di storno di un
 pagamento**
@@ -373,7 +373,7 @@ saranno utilizzati i seguenti termini:
 
 L’evoluzione temporale è la seguente:
 
-|image4|
+|image5|
 
 **Figura** **5: Diagramma di sequenza del processo di riconciliazione
 contabile**
@@ -820,7 +820,7 @@ processo di revoca del pagamento.
 
 **Tabella** **9: RR Rifiutata dal NodoSPC**
 
-|image5|
+|image6|
 
 **Figura** **6: Diagramma di sequenza nel caso di RR rifiutata dal
 Nodo**
@@ -912,7 +912,7 @@ Nodo**
 | dizione |                                                            |
 +---------+------------------------------------------------------------+
 
-|image6|
+|image7|
 
 **Figura** **7: Diagramma di sequenza per il caso di errore di RR
 rifiutata dall’EC**
@@ -964,7 +964,7 @@ dall’EC**
 | one         |                                                        |
 +-------------+--------------------------------------------------------+
 
-|image7|
+|image8|
 
 **Figura** **8: Diagramma di sequenza per lo scenario di ER rifiutata
 dal Nodo**
@@ -1045,7 +1045,7 @@ di ER rifiutata dal Nodo**
 | one       |                                                        |
 +-----------+--------------------------------------------------------+
 
-|image8|
+|image9|
 
 **Figura** **9: Diagramma di sequenza per il caso ER rifiutata dal PSP**
 
@@ -1107,7 +1107,7 @@ l’esito positivo o meno del processo di storno del pagamento.
 | e           |                                                      |
 +-------------+------------------------------------------------------+
 
-|image9|
+|image10|
 
 **Figura** **10: Diagramma di sequenza dello scenario richiesta storno
 rifiutata dal Nodo**
@@ -1193,7 +1193,7 @@ Richiesta Storno rifiutata dal Nodo**
 | t-condizione |                                                     |
 +--------------+-----------------------------------------------------+
 
-|image10|
+|image11|
 
 **Figura** **11: Evoluzione temporale dello scenario richiesta storno
 rifiutata dal PSP**
@@ -1251,7 +1251,7 @@ Richiesta Storno rifiutata dal PSP**
 | izione |                                                           |
 +--------+-----------------------------------------------------------+
 
-|image11|
+|image12|
 
 **Figura** **12: Scenario Esito Storno rifiutato dal Nodo**
 
@@ -1338,7 +1338,7 @@ Nodo**
 | izione |                                                           |
 +--------+-----------------------------------------------------------+
 
-|image12|
+|image13|
 
 **Figura** **13: Scenario Esito Storno rifiutato da EC**
 
@@ -1403,7 +1403,7 @@ caso in cui le parti riscontrassero fenomeni di timeout.
 | one |                                                              |
 +-----+--------------------------------------------------------------+
 
-|image13|
+|image14|
 
 **Figura** **14: Evoluzione temporale dello scenario Esito Storno
 mancate per timeout**
@@ -1683,7 +1683,7 @@ il NodoSPC non risponde manifestando una condizione di *timeout*;
 | zione |                                                            |
 +-------+------------------------------------------------------------+
 
-|image14|
+|image15|
 
 **Figura** **17: Richiesta lista flussi di rendicontazione rifiutata dal
 NodoSPC**
@@ -1741,7 +1741,7 @@ lista flussi rifiutata dal Nodo**
 | e    |                                                             |
 +------+-------------------------------------------------------------+
 
-|image15|
+|image16|
 
 **Figura** **18: Evoluzione temporale dello scenario richiesta Flusso
 rifiutata dal Nodo / Flusso mancate**
@@ -1804,19 +1804,19 @@ presente**
 .. [3]
    Per i dettagli del Tavolo Operativo si rimanda alla sezione IV.
 
-.. |image0| image:: ../diagrams/bdd_backoffice.png
-.. |image1| image:: ../diagrams/sdd_richiesta_revoca.png
-.. |image2| image:: ../diagrams/sdd_charge_back.png
-.. |image3| image:: ../diagrams/sdd_richiesta_storno.png
-.. |image4| image:: ../diagrams/sdd_riconciliazione.png
-.. |image5| image:: ../diagrams/sdd_err_revoca.png
-.. |image6| image:: ../diagrams/sdd_err_revoca_ec.png
-.. |image7| image:: ../diagrams/sdd_err_revoca_rifiutoER.png
-.. |image8| image:: ../diagrams/sdd_err_revoca_psp.png
-.. |image9| image:: ../diagrams/sdd_err_storno.png
-.. |image10| image:: ../diagrams/sdd_err_storno_psp.png
-.. |image11| image:: ../diagrams/sdd_err_storno_nodo.png
-.. |image12| image:: ../diagrams/sdd_err_storno_paa.png
-.. |image13| image:: ../diagrams/sdd_err_storno_timeout.png
-.. |image14| image:: ../diagrams/sdd_err_chiedi_flusso_nodo.png
-.. |image15| image:: ../diagrams/sdd_err_flusso_nodo.png
+.. |image1| image:: ../diagrams/bdd_backoffice.png
+.. |image2| image:: ../diagrams/sdd_richiesta_revoca.png
+.. |image3| image:: ../diagrams/sdd_charge_back.png
+.. |image4| image:: ../diagrams/sdd_richiesta_storno.png
+.. |image5| image:: ../diagrams/sdd_riconciliazione.png
+.. |image6| image:: ../diagrams/sdd_err_revoca.png
+.. |image7| image:: ../diagrams/sdd_err_revoca_ec.png
+.. |image8| image:: ../diagrams/sdd_err_revoca_rifiutoER.png
+.. |image9| image:: ../diagrams/sdd_err_revoca_psp.png
+.. |image10| image:: ../diagrams/sdd_err_storno.png
+.. |image11| image:: ../diagrams/sdd_err_storno_psp.png
+.. |image12| image:: ../diagrams/sdd_err_storno_nodo.png
+.. |image13| image:: ../diagrams/sdd_err_storno_paa.png
+.. |image14| image:: ../diagrams/sdd_err_storno_timeout.png
+.. |image15| image:: ../diagrams/sdd_err_chiedi_flusso_nodo.png
+.. |image16| image:: ../diagrams/sdd_err_flusso_nodo.png

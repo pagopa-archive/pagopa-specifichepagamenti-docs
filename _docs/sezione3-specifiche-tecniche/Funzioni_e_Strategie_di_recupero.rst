@@ -18,7 +18,7 @@ attori coinvolti. A sua volta, anche il NodoSPC, in qualità di fruitore,
 utilizza le funzionalità ausiliarie messe a disposizione dai PSP per la
 verifica e gestione degli errori nei processi di pagamento.
 
-|image0|
+|image1|
 
 **Figura** **1: Rappresentazione degli erogatori e fruitori delle
 funzionalità di supporto**
@@ -59,7 +59,7 @@ recapitata.
 
 **Tabella** **1: Richiesta della copia di una RT**
 
-   |image1|
+   |image2|
 
 **Figura** **2: Richiesta della copia di una RT**
 
@@ -108,7 +108,7 @@ RT.
 
 **Tabella** **2: Richiesta della Lista delle RPT Pendenti**
 
-|image2|
+|image3|
 
 **Figura** **3: Richiesta della Lista delle RPT Pendenti**
 
@@ -147,7 +147,7 @@ Verifica dello stato di una RPT
 
 **Tabella** **3: Verifica dello stato di una RPT**
 
-|image3|
+|image4|
 
 **Figura** **4: Verifica dello stato di una RPT**
 
@@ -212,7 +212,7 @@ Richiesta Catalogo Dati Informativi
 
 **Tabella** **4: Richiesta Catalogo Dati Informativi**
 
-|image4|
+|image5|
 
 **Figura** **5: Richiesta Catalogo Dati Informativi**
 
@@ -266,7 +266,7 @@ utilizzare nell’ambito del Pagamento Spontaneo presso i PSP.
 
 **Tabella** **5: Richiesta del Catalogo dei Servizi**
 
-|image5|
+|image6|
 
 **Figura** **6: Richiesta del Catalogo dei Servizi**
 
@@ -303,7 +303,7 @@ aggiornamenti
 
 **Tabella** **6: Richiesta template del Catalogo Dati Informativi**
 
-|image6|
+|image7|
 
 **Figura** **7: Richiesta template del Catalogo Dati Informativi**
 
@@ -342,7 +342,7 @@ Richiesta informativa PA
 
 **Tabella** **7: Richiesta informativa PA**
 
-|image7|
+|image8|
 
 **Figura** **8: Richiesta informativa PA**
 
@@ -381,7 +381,7 @@ Richiesta Stato Elaborazione Flusso di Rendicontazione
 **Tabella** **8: Richiesta Stato Elaborazione Flusso di
 Rendicontazione**
 
-|image8|
+|image9|
 
 **Figura** **9: Richiesta Stato Elaborazione Flusso di Rendicontazione**
 
@@ -449,7 +449,7 @@ Strategie di *retry* per il recapito della RT
 
 **Tabella** **9: Strategie di retry per il recapito della RT**
 
-|image9|
+|image10|
 
 **Figura** **10: meccanismi di recovery per RT PUSH**
 
@@ -552,7 +552,7 @@ Richiesta avanzamento RPT
 
 **Tabella** **10: Richiesta avanzamento RPT**
 
-|image10|
+|image11|
 
 **Figura** **11: Richiesta avanzamento RPT**
 
@@ -601,7 +601,7 @@ Richiesta di avanzamento RT
 
 **Tabella** **11: Richiesta di avanzamento RT**
 
-|image11|
+|image12|
 
 **Figura** **12: Richiesta di avanzamento RT**
 
@@ -621,15 +621,15 @@ Richiesta di avanzamento RT
       richiede di conoscere lo stato di avanzamento
    -  CANALE_RT_RIFIUTATA_EC: la RT è stata rifiutata dall’EC.
 
-.. |image0| image:: ../diagrams/uc_funzioni_recupero.png
-.. |image1| image:: ../diagrams/sdd_nodoInviaCopiaRT.png
-.. |image2| image:: ../diagrams/sdd_nodoChiediListaRPTPendenti.png
-.. |image3| image:: ../diagrams/sdd_nodoChiediStatoRPT.png
-.. |image4| image:: ../diagrams/sdd_nodoChiediInformativaPSP.png
-.. |image5| image:: ../diagrams/sdd_nodoChiediCatalogoServizi.png
-.. |image6| image:: ../diagrams/sdd_nodoChiediTemplateInformativaPSP.png
-.. |image7| image:: ../diagrams/sdd_nodoChiediInformativaPA.png
-.. |image8| image:: ../diagrams/sdd_nodoChiediStatoElaborazioneFlussoRendicontazione.png
-.. |image9| image:: ../diagrams/sdd_recovery_PULL.png
-.. |image10| image:: ../diagrams/sdd_pspChiediAvamentoRPT.png
-.. |image11| image:: ../diagrams/sdd_pspChiediAvamentoRT.png
+.. |image1| image:: ../diagrams/uc_funzioni_recupero.png
+.. |image2| image:: ../diagrams/sdd_nodoInviaCopiaRT.png
+.. |image3| image:: ../diagrams/sdd_nodoChiediListaRPTPendenti.png
+.. |image4| image:: ../diagrams/sdd_nodoChiediStatoRPT.png
+.. |image5| image:: ../diagrams/sdd_nodoChiediInformativaPSP.png
+.. |image6| image:: ../diagrams/sdd_nodoChiediCatalogoServizi.png
+.. |image7| image:: ../diagrams/sdd_nodoChiediTemplateInformativaPSP.png
+.. |image8| image:: ../diagrams/sdd_nodoChiediInformativaPA.png
+.. |image9| image:: ../diagrams/sdd_nodoChiediStatoElaborazioneFlussoRendicontazione.png
+.. |image10| image:: ../diagrams/sdd_recovery_PULL.png
+.. |image11| image:: ../diagrams/sdd_pspChiediAvamentoRPT.png
+.. |image12| image:: ../diagrams/sdd_pspChiediAvamentoRT.png

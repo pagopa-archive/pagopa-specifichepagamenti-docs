@@ -105,7 +105,7 @@ Pagamento mediante Avviso (scenario principale)
 |                                   | lo stato *RT EC*.                 |
 +-----------------------------------+-----------------------------------+
 
-|image0|
+|image1|
 
 **Figura** **1: Pagamento mediante Avviso**
 
@@ -281,7 +281,7 @@ Pagamento mediante Avviso (scenario alternativo) DEPRECATO
 |                                   | lo stato RT EC.                   |
 +-----------------------------------+-----------------------------------+
 
-|image1|
+|image2|
 
 **Figura** **2: Diagramma di sequenza del pagamento con avviso di
 pagamento ( scenario alternativo)**
@@ -420,7 +420,7 @@ interface* messe a disposizione dal PSP.
 Pagamento spontaneo
 -------------------
 
-|image2|
+|image3|
 
 +-----------------------------------+-----------------------------------+
 | Pre-condizioni                    | Un Ente Erogatore ha messo a      |
@@ -531,7 +531,7 @@ Paragrafo precedente.
 |                                   | modificato                        |
 +-----------------------------------+-----------------------------------+
 
-|image3|
+|image4|
 
 **Figura** **3: Errore di Attivazione/Verifica**
 
@@ -634,7 +634,7 @@ Le possibili azioni di controllo sono riportate nella Tabella seguente:
 |                                   | modificato                        |
 +-----------------------------------+-----------------------------------+
 
-|image4|
+|image5|
 
 **Figura** **4: Pagamento non eseguibile**
 
@@ -774,7 +774,7 @@ Le possibili azioni di controllo sono riportate nella Tabella seguente.
 | Post-Condizione                   | N/A                               |
 +-----------------------------------+-----------------------------------+
 
-|image5|
+|image6|
 
 **Figura** **5: Pagamento eseguito in assenza di RPT**
 
@@ -865,7 +865,7 @@ Le possibili azioni di controllo sono riportate nella Tabella seguente.
 | izione   |                                                           |
 +----------+-----------------------------------------------------------+
 
-|image6|
+|image7|
 
 **Figura** **6: RT respinta dal NodoSPC**
 
@@ -948,7 +948,7 @@ Le possibili azioni di controllo sono riportate nella Tabella seguente.
 |                                   | la modalità PULL                  |
 +-----------------------------------+-----------------------------------+
 
-|image7|
+|image8|
 
 **Figura** **7: RT non consegnata all’EC**
 
@@ -1066,11 +1066,11 @@ Le possibili azioni di controllo sono riportate nella Tabella seguente.
 |                                   | stato del pagamento è PAGATO      |
 +-----------------------------------+-----------------------------------+
 
-.. |image0| image:: ../diagrams/sdd_pagamento_presso_psp.png
-.. |image1| image:: ../diagrams/sdd_pagamento_presso_psp_alternativo.png
-.. |image2| image:: ../images/wip.png
-.. |image3| image:: ../diagrams/sdd_err_attivaRPT.png
-.. |image4| image:: ../diagrams/sdd_err_attivaRPT_EC.png
-.. |image5| image:: ../diagrams/sdd_err_attivaRPT_consegnaRPT.png
-.. |image6| image:: ../diagrams/sdd_err_inviaRT.png
-.. |image7| image:: ../diagrams/sdd_err_rt_non_consegnata.png
+.. |image1| image:: ../diagrams/sdd_pagamento_presso_psp.png
+.. |image2| image:: ../diagrams/sdd_pagamento_presso_psp_alternativo.png
+.. |image3| image:: ../images/wip.png
+.. |image4| image:: ../diagrams/sdd_err_attivaRPT.png
+.. |image5| image:: ../diagrams/sdd_err_attivaRPT_EC.png
+.. |image6| image:: ../diagrams/sdd_err_attivaRPT_consegnaRPT.png
+.. |image7| image:: ../diagrams/sdd_err_inviaRT.png
+.. |image8| image:: ../diagrams/sdd_err_rt_non_consegnata.png
