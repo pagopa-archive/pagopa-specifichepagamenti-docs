@@ -20,6 +20,12 @@ Ogni file markdown non contiene immagini/diagrammi ma riferimenti ad essi.
 La cartella *puml-diagrams* contiene tutti gli schemi UML in formato PlantUML che vengono geneati nella cartella *diagrams* ed utilizzati all'interno del documento.
 La cartella *images* contiene tutte le immagini utilizzate nel documento.
 
+
+## install
+
+install java  brew cask install java 
+install pandoc brew install pandoc 
+
 ## Come aggiornare la documentazione
 
 Per modificare la documentazione, esegui *commit* sul relativo capitolo inserendo un messaggio esplicativo della modifica ed eventualmente facendo riferimento ad un *issue*
@@ -29,14 +35,20 @@ Per fare riferimento ad un immagine  utilizza il percorso *../images/<nome-file-
 Per modifica un diagramma , modifica ( o aggiungi ) il relativo file .puml all'interno della cartella *puml-diagrams*
 Per modificare un immagine, modifica ( o aggiungi) il relativo file all'interno della cartella *images*
 
-### pubblicazione DocsItalia
-Le Specifiche attuative sono disponibili anche su docsItalia il quale utilizza il formato rst.
-su docsItalia viene pubblicato tutto il contenuto della cartella *_docs*
+### generazione della documentazione
+
 
 Per generare la documentazione da pubblicare su docsItalia utilizzate *npm start* verranno generati i diagrammi,le immagini ed i relativi documenti rst convertiti da markdown.
 
 bisogna poi eseguire commit dei file aggiornati.
 
+### pubblicazione generazione di test 
+un qualsiasi ramo di progetto può essere pubblicato tramite il progetto [readTheDocs](https://readthedocs.org/projects/pagopa-specifichepagamenti-docs/versions/)
+
+
+### pubblicazione su DocsItalia
+Le Specifiche attuative sono disponibili anche su docsItalia il quale utilizza il formato rst.
+su docsItalia viene pubblicato tutto il contenuto della cartella *_docs*
 
 ## Come creare una segnalazione
 
