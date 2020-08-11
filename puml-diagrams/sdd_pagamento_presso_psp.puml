@@ -31,13 +31,14 @@ PSP [#black]-> Cittadino: rilascio attestazione
 
 EC -> NodoSPC : req nodoInviaRPT
 NodoSPC -> NodoSPC : controllo inviaRPT
-
+NodoSPC -> PSP : req pspInviaRPT
+PSP -[#0000FF]-> NodoSPC : resp OK, pspInviaRPT
 NodoSPC -[#0000FF]-> EC : resp OK, nodoInviaRPT
 hnote over NodoSPC : Pagamento Autorizzato
 
 
-NodoSPC -> PSP : req pspInviaRPT
-PSP -[#0000FF]-> NodoSPC : resp OK, pspInviaRPT
+
+
 
 
 hnote over NodoSPC : RPT Pagata
