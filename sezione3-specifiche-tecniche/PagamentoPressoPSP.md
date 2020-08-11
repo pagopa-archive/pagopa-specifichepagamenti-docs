@@ -209,11 +209,7 @@ interface* messe a disposizione dal PSP.
     invia al NodoSPC;
 19. il NodoSPC effettua controlli semantici e sintattici della richiesta
     pervenuta;
-20. il NodoSPC instrada la RT all’EC;
-21. l’EC, ricevuta la RT, procede ad aggiornare l’Archivio dei Pagamenti
-    in Attesa, lo stato del pagamento viene modificato in PAGATO;
-22. l’EC notifica l’avvenuta ricezione della RT al NodoSPC;
-23. il NodoSPC notifica al PSP la ricezione dell’RT da parte dell’EC.
+20. il NodoSPC notifica al PSP la ricezione dell’RT.
 
 Pagamento mediante Avviso (scenario alternativo) DEPRECATO
 ----------------------------------------------------------
