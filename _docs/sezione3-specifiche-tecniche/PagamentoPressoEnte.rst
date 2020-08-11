@@ -210,12 +210,11 @@ finale visualizza l’esito del pagamento.
 27. Il PSP genera la RT.
 28. Il PSP invia la RT all’EC attraverso il NodoSPC mediante la
     primitiva *nodoInviaRT*.
-29. Il NodoSPC inoltra la RT all’EC attraverso la primitiva
-    *paaInviaRT*.
-30. L’EC replica all’invocazione precedente e lo stato del pagamento
+29. Il NodoSPC prende in carico la consegna della RT verso l’EC.
+30. Il NodoSPC invia la RT all’EC.
+31. L’EC replica all’invocazione precedente e lo stato del pagamento
     transisce a RT EC ad indicare che la ricevuta telematica è stata
     consegnata all’Ente Creditore.
-31. Il NodoSPC inoltra la *response* fornita dall’EC al PSP.
 
 Caso acquisto Marca da bollo digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
