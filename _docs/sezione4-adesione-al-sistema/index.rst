@@ -23,7 +23,6 @@ Sezione 4 - Adesione
    attivazione-psp
    psp-config-convenzione
    adempimenti
-   utilizzo-marchio
    disponibiita-servizi
    livelli-servizio
    responsabilita

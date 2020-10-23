@@ -189,53 +189,6 @@ L’evoluzione temporale è la seguente:
    -  PPT_SINTASSI_EXTRAXSD: Errore nella composizione della SOAP
       *request*
 
-Richiesta Catalogo Dati Informativi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+--------+-----------------------------------------------------------+
-| Pre    | n.a.                                                      |
-| -Condi |                                                           |
-| zione  |                                                           |
-+--------+-----------------------------------------------------------+
-| T      | L’EC necessita di conoscere il Catalogo Dati Informativi  |
-| rigger | elaborato dal NodoSPC per verificare i servizi erogati    |
-|        | dai PSP                                                   |
-+--------+-----------------------------------------------------------+
-| Des    | L’EC sottomette la richiesta di scaricare il Catalogo     |
-| crizio | Dati Informativi messo a disposizione dal NodoSPC         |
-| ne     |                                                           |
-+--------+-----------------------------------------------------------+
-| Pos    | L’EC riceve il Catalogo Dati Informativi                  |
-| t-Cond |                                                           |
-| izione |                                                           |
-+--------+-----------------------------------------------------------+
-
-**Tabella** **4: Richiesta Catalogo Dati Informativi**
-
-|image5|
-
-**Figura** **5: Richiesta Catalogo Dati Informativi**
-
-L’evoluzione temporale è la seguente:
-
-1. l’EC richiede al NodoSPC il Catalogo Dati Informativi mediante la
-   primitiva *nodoChiediInformativaPSP;*
-
-2. il NodoSPC replica all’invocazione precedente fornendo *response* OK
-   ed il file XML relativo al Catalogo Dati Informativi dei PSP
-   codificato in Base64;
-
-3. il NodoSPC replica negativamente alla richiesta di cui al punto 1
-   emanando un *faultBean* il cui *faultBean*.\ *faultCode* è
-   rappresentativo dell’errore riscontrato; in particolare:
-
-   -  PPT_SINTASSI_EXTRAXSD: Errore nella SOAP *request*
-   -  PPT_SEMANTICA: Errore semantico
-   -  PPT_INFORMATIVAPSP_PRESENTE: il NodoSPC ha già depositato il file
-      XML richiesto nella directory assegnata all’EC sulla componente
-      SFTP_NodSPC
-   -  PPT_SYSTEM_ERROR: errore nella generazione del file XML richiesto.
-
 Funzioni ausiliarie per il PSP
 ------------------------------
 
@@ -266,7 +219,7 @@ utilizzare nell’ambito del Pagamento Spontaneo presso i PSP.
 
 **Tabella** **5: Richiesta del Catalogo dei Servizi**
 
-|image6|
+|image5|
 
 **Figura** **6: Richiesta del Catalogo dei Servizi**
 
@@ -277,47 +230,6 @@ utilizzare nell’ambito del Pagamento Spontaneo presso i PSP.
    Catalogo dei Servizi codificato in Base64;
 
 3. Il NodoSPC replica con *response* KO emanando un *faultBean* il cui
-   *faultBean*.\ *faultCode* è PPT_SINTASSI_EXTRAXSD.
-
-Richiesta template del Catalogo Dati Informativi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Il PSP ha facoltà di richiedere al NodoSPC l’ultima versione del
-Catalogo Dati Informativi comunicato per motivazioni di verifica o
-aggiornamenti
-
-+----------+---------------------------------------------------------+
-| Pre      | Il PSP ha (o meno) precedentemente comunicato al Nodo   |
-| -Condizi | il Catalogo Dati Informativi                            |
-| one      |                                                         |
-+----------+---------------------------------------------------------+
-| Trigger  | Necessità del PSP di aggiornare il proprio Catalogo     |
-+----------+---------------------------------------------------------+
-| Des      | Il PSP sottomette la richiesta di ricevere il file XML  |
-| crizione | attestante l’ultimo Catalogo Dati inviato               |
-+----------+---------------------------------------------------------+
-| Pos      | Il PSP riceve il Catalogo Dati Informativi di propria   |
-| t-Condiz | competenza (o il *template*)                            |
-| ione     |                                                         |
-+----------+---------------------------------------------------------+
-
-**Tabella** **6: Richiesta template del Catalogo Dati Informativi**
-
-|image7|
-
-**Figura** **7: Richiesta template del Catalogo Dati Informativi**
-
-1. il PSP richiede al NodoSPC, attraverso la primitiva
-   *nodoChiediTemplateInformativaPSP,* l’ultima versione del Catalogo
-   Dati Informativi precedentemente inviato;
-
-2. il PSP riceve *response* OK ed il file XML del Catalogo Dati
-   Informativi in formato Base64 precedentemente inviato;
-
-3. il PSP riceve *response* OK e solo il *template* del Catalogo Dati
-   Informativi;
-
-4. il PSP riceve *response KO* emanando un *faultBean* il cui
    *faultBean*.\ *faultCode* è PPT_SINTASSI_EXTRAXSD.
 
 Richiesta informativa PA
@@ -342,7 +254,7 @@ Richiesta informativa PA
 
 **Tabella** **7: Richiesta informativa PA**
 
-|image8|
+|image6|
 
 **Figura** **8: Richiesta informativa PA**
 
@@ -381,7 +293,7 @@ Richiesta Stato Elaborazione Flusso di Rendicontazione
 **Tabella** **8: Richiesta Stato Elaborazione Flusso di
 Rendicontazione**
 
-|image9|
+|image7|
 
 **Figura** **9: Richiesta Stato Elaborazione Flusso di Rendicontazione**
 
@@ -433,7 +345,7 @@ Richiesta avanzamento RPT
 
 **Tabella** **10: Richiesta avanzamento RPT**
 
-|image10|
+|image8|
 
 **Figura** **11: Richiesta avanzamento RPT**
 
@@ -482,7 +394,7 @@ Richiesta di avanzamento RT
 
 **Tabella** **11: Richiesta di avanzamento RT**
 
-|image11|
+|image9|
 
 **Figura** **12: Richiesta di avanzamento RT**
 
@@ -506,10 +418,8 @@ Richiesta di avanzamento RT
 .. |image2| image:: ../diagrams/sdd_nodoInviaCopiaRT.png
 .. |image3| image:: ../diagrams/sdd_nodoChiediListaRPTPendenti.png
 .. |image4| image:: ../diagrams/sdd_nodoChiediStatoRPT.png
-.. |image5| image:: ../diagrams/sdd_nodoChiediInformativaPSP.png
-.. |image6| image:: ../diagrams/sdd_nodoChiediCatalogoServizi.png
-.. |image7| image:: ../diagrams/sdd_nodoChiediTemplateInformativaPSP.png
-.. |image8| image:: ../diagrams/sdd_nodoChiediInformativaPA.png
-.. |image9| image:: ../diagrams/sdd_nodoChiediStatoElaborazioneFlussoRendicontazione.png
-.. |image10| image:: ../diagrams/sdd_pspChiediAvamentoRPT.png
-.. |image11| image:: ../diagrams/sdd_pspChiediAvamentoRT.png
+.. |image5| image:: ../diagrams/sdd_nodoChiediCatalogoServizi.png
+.. |image6| image:: ../diagrams/sdd_nodoChiediInformativaPA.png
+.. |image7| image:: ../diagrams/sdd_nodoChiediStatoElaborazioneFlussoRendicontazione.png
+.. |image8| image:: ../diagrams/sdd_pspChiediAvamentoRPT.png
+.. |image9| image:: ../diagrams/sdd_pspChiediAvamentoRT.png
