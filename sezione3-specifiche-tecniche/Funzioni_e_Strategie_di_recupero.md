@@ -172,48 +172,6 @@ L’evoluzione temporale è la seguente:
     -   PPT\_SINTASSI\_EXTRAXSD: Errore nella composizione della SOAP
         *request*
 
-### Richiesta Catalogo Dati Informativi
-
-  --------- --------------------------------------------------------------
-  Pre-Condi n.a.
-  zione     
-
-  Trigger   L’EC necessita di conoscere il Catalogo Dati Informativi
-            elaborato dal NodoSPC per verificare i servizi erogati dai PSP
-
-  Descrizio L’EC sottomette la richiesta di scaricare il Catalogo Dati
-  ne        Informativi messo a disposizione dal NodoSPC
-
-  Post-Cond L’EC riceve il Catalogo Dati Informativi
-  izione    
-  --------- --------------------------------------------------------------
-
-**Tabella** **4: Richiesta Catalogo Dati Informativi**
-
-![](../diagrams/sdd_nodoChiediInformativaPSP.png)
-
-**Figura** **5: Richiesta Catalogo Dati Informativi**
-
-L’evoluzione temporale è la seguente:
-
-1.  l’EC richiede al NodoSPC il Catalogo Dati Informativi mediante la
-    primitiva *nodoChiediInformativaPSP;*
-
-2.  il NodoSPC replica all’invocazione precedente fornendo *response* OK
-    ed il file XML relativo al Catalogo Dati Informativi dei PSP
-    codificato in Base64;
-
-3.  il NodoSPC replica negativamente alla richiesta di cui al punto 1
-    emanando un *faultBean* il cui *faultBean*.*faultCode* è
-    rappresentativo dell’errore riscontrato; in particolare:
-    -   PPT\_SINTASSI\_EXTRAXSD: Errore nella SOAP *request*
-    -   PPT\_SEMANTICA: Errore semantico
-    -   PPT\_INFORMATIVAPSP\_PRESENTE: il NodoSPC ha già depositato il
-        file XML richiesto nella directory assegnata all’EC sulla
-        componente SFTP\_NodSPC
-    -   PPT\_SYSTEM\_ERROR: errore nella generazione del file XML
-        richiesto.
-
 Funzioni ausiliarie per il PSP
 ------------------------------
 
@@ -253,44 +211,6 @@ utilizzare nell’ambito del Pagamento Spontaneo presso i PSP.
     Catalogo dei Servizi codificato in Base64;
 
 3.  Il NodoSPC replica con *response* KO emanando un *faultBean* il cui
-    *faultBean*.*faultCode* è PPT\_SINTASSI\_EXTRAXSD.
-
-### Richiesta template del Catalogo Dati Informativi
-
-Il PSP ha facoltà di richiedere al NodoSPC l’ultima versione del
-Catalogo Dati Informativi comunicato per motivazioni di verifica o
-aggiornamenti
-
-  ----------- ------------------------------------------------------------
-  Pre-Condizi Il PSP ha (o meno) precedentemente comunicato al Nodo il
-  one         Catalogo Dati Informativi
-
-  Trigger     Necessità del PSP di aggiornare il proprio Catalogo
-
-  Descrizione Il PSP sottomette la richiesta di ricevere il file XML
-              attestante l’ultimo Catalogo Dati inviato
-
-  Post-Condiz Il PSP riceve il Catalogo Dati Informativi di propria
-  ione        competenza (o il *template*)
-  ----------- ------------------------------------------------------------
-
-**Tabella** **6: Richiesta template del Catalogo Dati Informativi**
-
-![](../diagrams/sdd_nodoChiediTemplateInformativaPSP.png)
-
-**Figura** **7: Richiesta template del Catalogo Dati Informativi**
-
-1.  il PSP richiede al NodoSPC, attraverso la primitiva
-    *nodoChiediTemplateInformativaPSP,* l’ultima versione del Catalogo
-    Dati Informativi precedentemente inviato;
-
-2.  il PSP riceve *response* OK ed il file XML del Catalogo Dati
-    Informativi in formato Base64 precedentemente inviato;
-
-3.  il PSP riceve *response* OK e solo il *template* del Catalogo Dati
-    Informativi;
-
-4.  il PSP riceve *response KO* emanando un *faultBean* il cui
     *faultBean*.*faultCode* è PPT\_SINTASSI\_EXTRAXSD.
 
 ### Richiesta informativa PA
