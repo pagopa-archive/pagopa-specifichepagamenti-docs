@@ -27,10 +27,10 @@ La cartella `images` contiene tutte le immagini utilizzate nel documento.
 
 ## Come aggiornare la documentazione
 
-Per modificare la documentazione, esegui [commit](https://github.com/git-guides/git-commit) sul relativo capitolo inserendo un messaggio esplicativo della modifica ed eventualmente facendo riferimento ad un [issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue)
-Per fare riferimento ad un diagramma utilizza il percorso `../diagrams/<nome-file-puml>.png`
-Per fare riferimento ad un immagine  utilizza il percorso `../images/<nome-file-img>`
+Per modificare la documentazione, esegui [commit](https://github.com/git-guides/git-commit) sul relativo capitolo inserendo un messaggio esplicativo della modifica ed eventualmente facendo riferimento ad un [issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue).
 
+- Per fare riferimento ad un diagramma utilizza il percorso `../diagrams/<nome-file-puml>.png`
+- Per fare riferimento ad un immagine  utilizza il percorso `../images/<nome-file-img>`
 - Per modifica un diagramma , modifica ( o aggiungi ) il relativo file `.puml` all'interno della cartella `puml-diagrams`
 - Per modificare un immagine, modifica ( o aggiungi) il relativo file all'interno della cartella `images`
 
