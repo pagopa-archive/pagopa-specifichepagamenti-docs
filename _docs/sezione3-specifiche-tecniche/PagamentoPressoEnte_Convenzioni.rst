@@ -6,7 +6,7 @@ prezzo inferiore a fronte di una convenzione tra il PSP ed uno o più
 Enti Creditori.
 
 Per poter usufruire di tali commissioni, l’Ente Creditore dovrà essere
-in possesse dell’appropriato *codiceConvenzione*, ed inserirlo
+in possesso dell’appropriato *codiceConvenzione*, ed inserirlo
 all’interno delle chiamate nodoInviaCarrelloRPT all’interno
 dell’apposito campo.
 
@@ -55,7 +55,7 @@ Response:
    </soapenv:Envelope>
 
 Una volta rendirizzato l’utente verso l’url ottenuta in risposta, il
-WISP mostrerà gli strumenti di pagamento con commissioni in linea con la
+WISP mostrerà gli strumenti di pagamento con commissioni in linea con il
 codiceConvenzione indicato.
 
 Qualora la convenzione in essere tra EC e PSP indichi eventuali costi di
