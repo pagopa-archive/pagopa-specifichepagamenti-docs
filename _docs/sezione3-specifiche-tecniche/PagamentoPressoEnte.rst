@@ -79,7 +79,7 @@ interattiva di selezione del PSP**
 
 L’evoluzione nel tempo del processo di pagamento è la seguente:
 
-|image1|
+|image0|
 
 **Figura** **1: Diagramma di sequenza del processo di pagamento iniziato
 presso l'EC**
@@ -275,7 +275,7 @@ l’\ *Acquirer* non autorizza il pagamento con carta.
 | st-condizione | rifiutato*                                           |
 +---------------+------------------------------------------------------+
 
-|image2|
+|image1|
 
 **Figura** **2: Diagramma di sequenza della prenotazione rifiutata**
 
@@ -328,7 +328,7 @@ riportate nel Paragrafo precedente.
 | ost-condizione |                                                     |
 +----------------+-----------------------------------------------------+
 
-|image3|
+|image2|
 
 **Figura** **3: Scenario RPT rifiutata dal Nodo**
 
@@ -421,7 +421,7 @@ rifiutato dal Nodo**
 | ost-condizione | rifiutato*                                          |
 +----------------+-----------------------------------------------------+
 
-|image4|
+|image3|
 
 **Figura** **4: Diagramma di sequenza del pagamento non contabilizzato**
 
@@ -500,7 +500,7 @@ Lo stato del pagamento transisce a *RT PSP.*
 | ost-condizione |                                                     |
 +----------------+-----------------------------------------------------+
 
-|image5|
+|image4|
 
 **Figura** **5: Scenario RT rifiutata Nodo**
 
@@ -567,7 +567,7 @@ Nodo**
 | st-condizione |                                                      |
 +---------------+------------------------------------------------------+
 
-|image6|
+|image5|
 
 **Figura** **6: Scenario RT rifiutata dall'EC**
 
@@ -600,9 +600,9 @@ L’evoluzione temporale è la seguente:
 |                   |                          | OPERATIVO             |
 +-------------------+--------------------------+-----------------------+
 
-.. |image1| image:: ../diagrams/sd_pagamento_presso_ec.png
-.. |image2| image:: ../diagrams/sdd_err_prenotazione.png
-.. |image3| image:: ../diagrams/sdd_err_RPT_rifiutata_PSP.png
-.. |image4| image:: ../diagrams/sdd_err_contabilizzazione.png
-.. |image5| image:: ../diagrams/sdd_err_inviaRT_mod1.png
-.. |image6| image:: ../diagrams/sdd_err_inviaRT_EC.png
+.. |image0| image:: ../diagrams/sd_pagamento_presso_ec.png
+.. |image1| image:: ../diagrams/sdd_err_prenotazione.png
+.. |image2| image:: ../diagrams/sdd_err_RPT_rifiutata_PSP.png
+.. |image3| image:: ../diagrams/sdd_err_contabilizzazione.png
+.. |image4| image:: ../diagrams/sdd_err_inviaRT_mod1.png
+.. |image5| image:: ../diagrams/sdd_err_inviaRT_EC.png
