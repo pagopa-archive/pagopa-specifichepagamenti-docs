@@ -18,7 +18,7 @@ attori coinvolti. A sua volta, anche il NodoSPC, in qualità di fruitore,
 utilizza le funzionalità ausiliarie messe a disposizione dai PSP per la
 verifica e gestione degli errori nei processi di pagamento.
 
-|image0|
+|image1|
 
 **Figura** **1: Rappresentazione degli erogatori e fruitori delle
 funzionalità di supporto**
@@ -59,7 +59,7 @@ recapitata.
 
 **Tabella** **1: Richiesta della copia di una RT**
 
-   |image1|
+   |image2|
 
 **Figura** **2: Richiesta della copia di una RT**
 
@@ -108,7 +108,7 @@ RT.
 
 **Tabella** **2: Richiesta della Lista delle RPT Pendenti**
 
-|image2|
+|image3|
 
 **Figura** **3: Richiesta della Lista delle RPT Pendenti**
 
@@ -147,7 +147,7 @@ Verifica dello stato di una RPT
 
 **Tabella** **3: Verifica dello stato di una RPT**
 
-|image3|
+|image4|
 
 **Figura** **4: Verifica dello stato di una RPT**
 
@@ -188,53 +188,6 @@ L’evoluzione temporale è la seguente:
    -  PPT_SEMANTICA: nel caso di errori semantici
    -  PPT_SINTASSI_EXTRAXSD: Errore nella composizione della SOAP
       *request*
-
-Richiesta Catalogo Dati Informativi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+--------+-----------------------------------------------------------+
-| Pre    | n.a.                                                      |
-| -Condi |                                                           |
-| zione  |                                                           |
-+--------+-----------------------------------------------------------+
-| T      | L’EC necessita di conoscere il Catalogo Dati Informativi  |
-| rigger | elaborato dal NodoSPC per verificare i servizi erogati    |
-|        | dai PSP                                                   |
-+--------+-----------------------------------------------------------+
-| Des    | L’EC sottomette la richiesta di scaricare il Catalogo     |
-| crizio | Dati Informativi messo a disposizione dal NodoSPC         |
-| ne     |                                                           |
-+--------+-----------------------------------------------------------+
-| Pos    | L’EC riceve il Catalogo Dati Informativi                  |
-| t-Cond |                                                           |
-| izione |                                                           |
-+--------+-----------------------------------------------------------+
-
-**Tabella** **4: Richiesta Catalogo Dati Informativi**
-
-|image4|
-
-**Figura** **5: Richiesta Catalogo Dati Informativi**
-
-L’evoluzione temporale è la seguente:
-
-1. l’EC richiede al NodoSPC il Catalogo Dati Informativi mediante la
-   primitiva *nodoChiediInformativaPSP;*
-
-2. il NodoSPC replica all’invocazione precedente fornendo *response* OK
-   ed il file XML relativo al Catalogo Dati Informativi dei PSP
-   codificato in Base64;
-
-3. il NodoSPC replica negativamente alla richiesta di cui al punto 1
-   emanando un *faultBean* il cui *faultBean*.\ *faultCode* è
-   rappresentativo dell’errore riscontrato; in particolare:
-
-   -  PPT_SINTASSI_EXTRAXSD: Errore nella SOAP *request*
-   -  PPT_SEMANTICA: Errore semantico
-   -  PPT_INFORMATIVAPSP_PRESENTE: il NodoSPC ha già depositato il file
-      XML richiesto nella directory assegnata all’EC sulla componente
-      SFTP_NodSPC
-   -  PPT_SYSTEM_ERROR: errore nella generazione del file XML richiesto.
 
 Funzioni ausiliarie per il PSP
 ------------------------------
@@ -279,47 +232,6 @@ utilizzare nell’ambito del Pagamento Spontaneo presso i PSP.
 3. Il NodoSPC replica con *response* KO emanando un *faultBean* il cui
    *faultBean*.\ *faultCode* è PPT_SINTASSI_EXTRAXSD.
 
-Richiesta template del Catalogo Dati Informativi
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Il PSP ha facoltà di richiedere al NodoSPC l’ultima versione del
-Catalogo Dati Informativi comunicato per motivazioni di verifica o
-aggiornamenti
-
-+----------+---------------------------------------------------------+
-| Pre      | Il PSP ha (o meno) precedentemente comunicato al Nodo   |
-| -Condizi | il Catalogo Dati Informativi                            |
-| one      |                                                         |
-+----------+---------------------------------------------------------+
-| Trigger  | Necessità del PSP di aggiornare il proprio Catalogo     |
-+----------+---------------------------------------------------------+
-| Des      | Il PSP sottomette la richiesta di ricevere il file XML  |
-| crizione | attestante l’ultimo Catalogo Dati inviato               |
-+----------+---------------------------------------------------------+
-| Pos      | Il PSP riceve il Catalogo Dati Informativi di propria   |
-| t-Condiz | competenza (o il *template*)                            |
-| ione     |                                                         |
-+----------+---------------------------------------------------------+
-
-**Tabella** **6: Richiesta template del Catalogo Dati Informativi**
-
-|image6|
-
-**Figura** **7: Richiesta template del Catalogo Dati Informativi**
-
-1. il PSP richiede al NodoSPC, attraverso la primitiva
-   *nodoChiediTemplateInformativaPSP,* l’ultima versione del Catalogo
-   Dati Informativi precedentemente inviato;
-
-2. il PSP riceve *response* OK ed il file XML del Catalogo Dati
-   Informativi in formato Base64 precedentemente inviato;
-
-3. il PSP riceve *response* OK e solo il *template* del Catalogo Dati
-   Informativi;
-
-4. il PSP riceve *response KO* emanando un *faultBean* il cui
-   *faultBean*.\ *faultCode* è PPT_SINTASSI_EXTRAXSD.
-
 Richiesta informativa PA
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -342,7 +254,7 @@ Richiesta informativa PA
 
 **Tabella** **7: Richiesta informativa PA**
 
-|image7|
+|image6|
 
 **Figura** **8: Richiesta informativa PA**
 
@@ -381,7 +293,7 @@ Richiesta Stato Elaborazione Flusso di Rendicontazione
 **Tabella** **8: Richiesta Stato Elaborazione Flusso di
 Rendicontazione**
 
-|image8|
+|image7|
 
 **Figura** **9: Richiesta Stato Elaborazione Flusso di Rendicontazione**
 
@@ -409,125 +321,6 @@ Rendicontazione**
 3. Il NodoSPC il NodoSPC replica con esito KO emanando un *faultBean* il
    cui *faultBean*.\ *faultCode* è PPT_SEMANTICA.
 
-Strategie di *retry* per il recapito della RT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-+-----------------------------------+-----------------------------------+
-| Pre-Condizione                    | Il pagamento è nello stato RT-PSP |
-+-----------------------------------+-----------------------------------+
-| Trigger                           | Il PSP ha tentato l’invio di una  |
-|                                   | RT e                              |
-|                                   |                                   |
-|                                   | -  il NodoSPC ha replicato        |
-|                                   |    mediante *response* KO         |
-|                                   |    emanando un *faultBean* il cui |
-|                                   |    *faultBean.faultCode* è pari a |
-|                                   |    PPT_STAZIONE_INT_PA_TIMEOUT    |
-|                                   |    oppure                         |
-|                                   |    PPT_STAZIONE_INT_PA_IRRAGGIU   |
-|                                   |    NGIBILE                        |
-|                                   |                                   |
-|                                   | oppure                            |
-|                                   |                                   |
-|                                   | -  non ha ricevuto risposta entro |
-|                                   |    i termini previsti             |
-+-----------------------------------+-----------------------------------+
-| Descrizione                       | Il PSP esegue fino a cinque       |
-|                                   | tentativi di invio della RT in    |
-|                                   | modalità PUSH attendendo          |
-|                                   | intervalli di tempo crescenti.    |
-|                                   |                                   |
-|                                   | Se l’esecuzione di tutti i        |
-|                                   | tentativi di invio non ha esito   |
-|                                   | positivo, pone la RT nella coda   |
-|                                   | PULL                              |
-+-----------------------------------+-----------------------------------+
-| Post-Condizione                   | Al termine della procedura il     |
-|                                   | pagamento transisce nello stato   |
-|                                   | RT_EC                             |
-+-----------------------------------+-----------------------------------+
-
-**Tabella** **9: Strategie di retry per il recapito della RT**
-
-|image9|
-
-**Figura** **10: meccanismi di recovery per RT PUSH**
-
-1. Il PSP sottomette al NodoSPC la RT attraverso la primitiva
-   *nodoInviaRT*:
-
-Si possono presentare i seguenti due scenari alternativi:
-
-**EC indisponibile**
-
-2. Il NodoSPC replica emanando un *faultBean* il cui
-   *faultBean.faultCode* è pari a: PPT_STAZIONE_INT_PA_TIMEOUT
-   (indisponibilità funzionale della controparte) oppure
-   PPT_STAZIONE_INT_PA_IRRAGGIUNGIBILE (mancata raggiungibilità della
-   controparte); il PSP pone la RT nella coda PULL.
-
-*NB: nel caso di indisponibilità funzionale della controparte, per
-gestire l’eventualità di interruzione del servizio di breve durata, il
-PSP ha facoltà di reiterare l’invio della RT in modalità PUSH.*
-
-**Nodo non disponibile**
-
-3. Il PSP non riceve alcuna risposta alla primitiva di cui al punto 1
-4. Il PSP ritenta nuovamente l’invio della RT in modalità PUSH per un
-   massimo di ulteriori cinque tentativi di recupero, attenendosi alla
-   seguente schedulazione:
-
-=========================== ====================
-**# Tentativo di recupero** **Attesa (secondi)**
-=========================== ====================
-1                           5
-2                           10
-3                           20
-4                           40
-5                           80
-=========================== ====================
-
-Si possono presentare i seguenti due scenari alternativi:
-
-**Response ad uno dei tentativi di recupero**
-
-5. Il PSP riceve la *response*, termina qualsiasi attività di recupero
-   della RT
-
-**Esaurimento dei tentativi di recupero**
-
-6. Il PSP non riceve alcuna *response* nei tempi previsti
-   all’invocazione di cui al punto 4
-7. Il PSP colloca la RT nella coda PULL terminando le azioni di recupero
-
-**Processo di recupero RT in modalità PULL**
-
-8.  Il NodoSPC, mediante la SOAP *request* *pspChiediListaRT* chiede al
-    PSP la lista delle RT da recuperare
-9.  Il PSP replica alla primitiva di cui al punto precedente fornendo
-    *response* OK e la lista delle RT da prelevare
-10. Il NodoSPC preleva la RT mediante la primitiva *pspChiediRT*
-11. Il PSP replica con *response* OK fornendo al RT richiesta
-12. Il NodoSPC valida la RT prelevata precedentemente
-
-Si possono presentare i seguenti due scenari alternativi:
-
-**In caso di RT corretta**
-
-13. Il NodoSPC invia conferma al PSP dell’avvenuta ricezione della RT
-    mediante la primitiva *pspInviaAckRT*. Il messaggio di ackRT
-    riporterà nel dato *statoMessaggioReferenziato* il valore ACTC.
-14. Il PSP elimina la RT dalla coda PULL
-15. Il PSP replica fornendo esito OK alla primitiva di cui al punto 14.
-
-**In caso di RT non corretta**
-
-16. Il NodoSPC notifica al PSP il rifiuto della RT mediante la primitiva
-    *pspInviaAckRT*. Il messaggio di *ackRT* riporterà nel dato
-    *statoMessaggioReferenziato* il valore RJCT.
-17. Il PSP replica fornendo esito OK alla primitiva di cui al punto
-    precedente
-
 Funzioni Ausiliarie per il NodoSPC
 ----------------------------------
 
@@ -552,7 +345,7 @@ Richiesta avanzamento RPT
 
 **Tabella** **10: Richiesta avanzamento RPT**
 
-|image10|
+|image8|
 
 **Figura** **11: Richiesta avanzamento RPT**
 
@@ -601,7 +394,7 @@ Richiesta di avanzamento RT
 
 **Tabella** **11: Richiesta di avanzamento RT**
 
-|image11|
+|image9|
 
 **Figura** **12: Richiesta di avanzamento RT**
 
@@ -621,15 +414,12 @@ Richiesta di avanzamento RT
       richiede di conoscere lo stato di avanzamento
    -  CANALE_RT_RIFIUTATA_EC: la RT è stata rifiutata dall’EC.
 
-.. |image0| image:: ../diagrams/uc_funzioni_recupero.png
-.. |image1| image:: ../diagrams/sdd_nodoInviaCopiaRT.png
-.. |image2| image:: ../diagrams/sdd_nodoChiediListaRPTPendenti.png
-.. |image3| image:: ../diagrams/sdd_nodoChiediStatoRPT.png
-.. |image4| image:: ../diagrams/sdd_nodoChiediInformativaPSP.png
+.. |image1| image:: ../diagrams/uc_funzioni_recupero.png
+.. |image2| image:: ../diagrams/sdd_nodoInviaCopiaRT.png
+.. |image3| image:: ../diagrams/sdd_nodoChiediListaRPTPendenti.png
+.. |image4| image:: ../diagrams/sdd_nodoChiediStatoRPT.png
 .. |image5| image:: ../diagrams/sdd_nodoChiediCatalogoServizi.png
-.. |image6| image:: ../diagrams/sdd_nodoChiediTemplateInformativaPSP.png
-.. |image7| image:: ../diagrams/sdd_nodoChiediInformativaPA.png
-.. |image8| image:: ../diagrams/sdd_nodoChiediStatoElaborazioneFlussoRendicontazione.png
-.. |image9| image:: ../diagrams/sdd_recovery_PULL.png
-.. |image10| image:: ../diagrams/sdd_pspChiediAvamentoRPT.png
-.. |image11| image:: ../diagrams/sdd_pspChiediAvamentoRT.png
+.. |image6| image:: ../diagrams/sdd_nodoChiediInformativaPA.png
+.. |image7| image:: ../diagrams/sdd_nodoChiediStatoElaborazioneFlussoRendicontazione.png
+.. |image8| image:: ../diagrams/sdd_pspChiediAvamentoRPT.png
+.. |image9| image:: ../diagrams/sdd_pspChiediAvamentoRT.png

@@ -79,7 +79,7 @@ interattiva di selezione del PSP**
 
 L’evoluzione nel tempo del processo di pagamento è la seguente:
 
-|image0|
+|image1|
 
 **Figura** **1: Diagramma di sequenza del processo di pagamento iniziato
 presso l'EC**
@@ -210,12 +210,11 @@ finale visualizza l’esito del pagamento.
 27. Il PSP genera la RT.
 28. Il PSP invia la RT all’EC attraverso il NodoSPC mediante la
     primitiva *nodoInviaRT*.
-29. Il NodoSPC inoltra la RT all’EC attraverso la primitiva
-    *paaInviaRT*.
-30. L’EC replica all’invocazione precedente e lo stato del pagamento
+29. Il NodoSPC prende in carico la consegna della RT verso l’EC.
+30. Il NodoSPC invia la RT all’EC.
+31. L’EC replica all’invocazione precedente e lo stato del pagamento
     transisce a RT EC ad indicare che la ricevuta telematica è stata
     consegnata all’Ente Creditore.
-31. Il NodoSPC inoltra la *response* fornita dall’EC al PSP.
 
 Caso acquisto Marca da bollo digitale
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -276,7 +275,7 @@ l’\ *Acquirer* non autorizza il pagamento con carta.
 | st-condizione | rifiutato*                                           |
 +---------------+------------------------------------------------------+
 
-|image1|
+|image2|
 
 **Figura** **2: Diagramma di sequenza della prenotazione rifiutata**
 
@@ -329,7 +328,7 @@ riportate nel Paragrafo precedente.
 | ost-condizione |                                                     |
 +----------------+-----------------------------------------------------+
 
-|image2|
+|image3|
 
 **Figura** **3: Scenario RPT rifiutata dal Nodo**
 
@@ -422,7 +421,7 @@ rifiutato dal Nodo**
 | ost-condizione | rifiutato*                                          |
 +----------------+-----------------------------------------------------+
 
-|image3|
+|image4|
 
 **Figura** **4: Diagramma di sequenza del pagamento non contabilizzato**
 
@@ -501,7 +500,7 @@ Lo stato del pagamento transisce a *RT PSP.*
 | ost-condizione |                                                     |
 +----------------+-----------------------------------------------------+
 
-|image4|
+|image5|
 
 **Figura** **5: Scenario RT rifiutata Nodo**
 
@@ -568,7 +567,7 @@ Nodo**
 | st-condizione |                                                      |
 +---------------+------------------------------------------------------+
 
-|image5|
+|image6|
 
 **Figura** **6: Scenario RT rifiutata dall'EC**
 
@@ -601,9 +600,9 @@ L’evoluzione temporale è la seguente:
 |                   |                          | OPERATIVO             |
 +-------------------+--------------------------+-----------------------+
 
-.. |image0| image:: ../diagrams/sd_pagamento_presso_ec.png
-.. |image1| image:: ../diagrams/sdd_err_prenotazione.png
-.. |image2| image:: ../diagrams/sdd_err_RPT_rifiutata_PSP.png
-.. |image3| image:: ../diagrams/sdd_err_contabilizzazione.png
-.. |image4| image:: ../diagrams/sdd_err_inviaRT_mod1.png
-.. |image5| image:: ../diagrams/sdd_err_inviaRT_EC.png
+.. |image1| image:: ../diagrams/sd_pagamento_presso_ec.png
+.. |image2| image:: ../diagrams/sdd_err_prenotazione.png
+.. |image3| image:: ../diagrams/sdd_err_RPT_rifiutata_PSP.png
+.. |image4| image:: ../diagrams/sdd_err_contabilizzazione.png
+.. |image5| image:: ../diagrams/sdd_err_inviaRT_mod1.png
+.. |image6| image:: ../diagrams/sdd_err_inviaRT_EC.png

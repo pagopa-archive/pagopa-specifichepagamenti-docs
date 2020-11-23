@@ -12,7 +12,6 @@ rectangle Nodo(Erogatore) {
   EC-- (copia RT)
   (Informativa PSP) -- PSP
   (Informativa PA) -- PSP
-  (Catalogo dei Servizi)--PSP
 }
 
 rectangle PSP(Erogatore) {

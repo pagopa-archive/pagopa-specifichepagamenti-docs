@@ -173,10 +173,6 @@ servizio del PSP scelto dall’Utilizzatore finale:
          telematico da parte del Prestatore di Servizi di Pagamento,
          attraverso canali da questo messi a disposizione (ad esempio:
          home banking, notifica su app per smartphone o tablet, ecc.).
-         Assimilabile a tale tipologia è il caso di una transazione
-         Mybank: il carrello si ferma a una componente del Nodo, il
-         Wrapper, che quindi ingaggia la componente *Initiating Party*
-         della *Seller Bank*, per la gestione delle fasi successive.
       -  Tutte i percorsi precedenti, incluso il ramo derivante
          dall’autorizzazione al pagamento con carta, confluiscono nel
          punto in cui risulta noto l’esito del pagamento disposto

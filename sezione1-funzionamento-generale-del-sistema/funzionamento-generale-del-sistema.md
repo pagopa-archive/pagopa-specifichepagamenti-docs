@@ -373,16 +373,3 @@ In merito, si rammenta che la conservazione è finalizzata a proteggere
 nel tempo i documenti informatici e i dati ivi contenuti, assicurandone,
 tra l'altro, l\'integrità al fine di preservare il valore probatorio del
 documento informatico.
-
-*Software Development KIT* per applicazioni "mobile"
-----------------------------------------------------
-
-Per supportare lo sviluppo di App *mobile* rilasciate dagli Enti
-Creditori, che includano funzionalità di pagamento, l'Agenzia per
-l'Italia Digitale rende disponibile un SDK (Software Development Kit)
-che consente una rapida integrazione delle funzioni del NodoSPC.
-
-Lo SDK è disponibile in download, previa sottoscrizione di un apposito
-*disclaimer*, fra gli strumenti GitHub del sito
-<https://developers.italia.it/> e fornito in modalità nativa per le due
-principali tecnologie presenti sul mercato: IOS e Android.

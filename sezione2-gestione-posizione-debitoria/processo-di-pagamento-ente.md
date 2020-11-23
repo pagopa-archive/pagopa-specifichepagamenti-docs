@@ -153,22 +153,18 @@ servizio del PSP scelto dall'Utilizzatore finale:
         delle modalità di autorizzazione del pagamento adottate dal
         Prestatore di Servizi di Pagamento. Si distingue quindi
         l'autorizzazione:
-        -   contestuale alla richiesta effettuata, in funzione dei
+        - contestuale alla richiesta effettuata, in funzione dei
             livelli di servizio pattuiti con il Prestatore di Servizi di
             Pagamento, se l'utilizzatore finale ha pre-autorizzato il
             pagamento (ad esempio: lettera di manleva o altro strumento
             contrattuale);
-        -   non contestuale, se l'autorizzazione viene rilasciata
+        - non contestuale, se l'autorizzazione viene rilasciata
             successivamente alla ricezione della richiesta di pagamento
             telematico da parte del Prestatore di Servizi di Pagamento,
             attraverso canali da questo messi a disposizione (ad
             esempio: home banking, notifica su app per smartphone o
-            tablet, ecc.). Assimilabile a tale tipologia è il caso di
-            una transazione Mybank: il carrello si ferma a una
-            componente del Nodo, il Wrapper, che quindi ingaggia la
-            componente *Initiating Party* della *Seller Bank*, per la
-            gestione delle fasi successive.
-        -   Tutte i percorsi precedenti, incluso il ramo derivante
+            tablet, ecc.).
+        - Tutte i percorsi precedenti, incluso il ramo derivante
             dall'autorizzazione al pagamento con carta, confluiscono nel
             punto in cui risulta noto l'esito del pagamento disposto
             dall'Utilizzatore finale e quindi il PSP possa inoltrare le
