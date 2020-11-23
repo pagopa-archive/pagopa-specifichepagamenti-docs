@@ -3,7 +3,7 @@ Attivare un pagamento on-line in Convenzione
 
 Un PSP ha la possibilità di offrire i suoi strumenti di pagamento ad un prezzo inferiore a fronte di una convenzione tra il PSP ed uno o più Enti Creditori.
 
-Per poter usufruire di tali commissioni, l'Ente Creditore dovrà essere in possesse dell'appropriato *codiceConvenzione*, ed inserirlo all'interno delle chiamate nodoInviaCarrelloRPT all'interno dell'apposito campo.
+Per poter usufruire di tali commissioni, l'Ente Creditore dovrà essere in possesso dell'appropriato *codiceConvenzione*, ed inserirlo all'interno delle chiamate nodoInviaCarrelloRPT all'interno dell'apposito campo.
 
 
 Esempio :
@@ -49,7 +49,7 @@ Response:
 </soapenv:Envelope>
 ```
 
-Una volta rendirizzato l'utente verso l'url ottenuta in risposta, il WISP mostrerà gli strumenti di pagamento con commissioni in linea con la codiceConvenzione indicato.
+Una volta rendirizzato l'utente verso l'url ottenuta in risposta, il WISP mostrerà gli strumenti di pagamento con commissioni in linea con il codiceConvenzione indicato.
 
 Qualora la convenzione in essere tra EC e PSP indichi eventuali costi di transazione a carico dell'Ente Creditore, le RT generate conterranno il paramentro [commissioniApplicatePA](https://github.com/pagopa/pagopa-api/blob/68eb34f55cf6c846009644889d15345fa4162b6c/general/PagInf_RPT_RT_6_2_0.xsd#L673) valorizzato con l'importo da sostenere dall'EC creditore.
 
