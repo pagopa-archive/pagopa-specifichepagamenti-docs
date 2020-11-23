@@ -199,8 +199,8 @@ l’Utilizzatore finale potrà memorizzare gli strumenti di pagamento
 utilizzati, evitando di dover effettuare una nuova ricerca nelle
 occasioni successive.
 
-Componente per la gestione dell'avvisatura digitale in modalità push
---------------------------------------------------------------------
+Componente per la gestione dell'avvisatura digitale in modalità push (DEPRECATO)
+--------------------------------------------------------------------------------
 
 La gestione dell'avvisatura digitale in modalità *push* avviene
 attraverso l'utilizzo di componenti del NodoSPC che consentono:
