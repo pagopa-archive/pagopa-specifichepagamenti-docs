@@ -1,5 +1,5 @@
 @startuml
-kinparam style strictuml
+skinparam style strictuml
 hide methods
 
 class notice as "Avviso di Pagamento" {
@@ -13,6 +13,7 @@ class pagamento as "Pagamento" {
 }
 
 class ricevuta as "Ricevuta" {
+
 }
 
 class carrello as "Carrello di Pagamenti"{
