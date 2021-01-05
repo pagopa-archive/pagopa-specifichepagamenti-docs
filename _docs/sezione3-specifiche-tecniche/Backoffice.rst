@@ -73,7 +73,7 @@ saranno utilizzati i seguenti termini:
 
 L’evoluzione temporale è la seguente:
 
-|image0|
+|image1|
 
 **Figura** **5: Diagramma di sequenza del processo di riconciliazione
 contabile**
@@ -698,7 +698,7 @@ il NodoSPC non risponde manifestando una condizione di *timeout*;
 | zione |                                                            |
 +-------+------------------------------------------------------------+
 
-|image1|
+|image2|
 
 **Figura** **17: Richiesta lista flussi di rendicontazione rifiutata dal
 NodoSPC**
@@ -756,7 +756,7 @@ lista flussi rifiutata dal Nodo**
 | e    |                                                             |
 +------+-------------------------------------------------------------+
 
-|image2|
+|image3|
 
 **Figura** **18: Evoluzione temporale dello scenario richiesta Flusso
 rifiutata dal Nodo / Flusso mancate**
@@ -813,6 +813,6 @@ presente**
 .. [1]
    Per i dettagli del Tavolo Operativo si rimanda alla sezione IV.
 
-.. |image0| image:: ../diagrams/sdd_riconciliazione.png
-.. |image1| image:: ../diagrams/sdd_err_chiedi_flusso_nodo.png
-.. |image2| image:: ../diagrams/sdd_err_flusso_nodo.png
+.. |image1| image:: ../diagrams/sdd_riconciliazione.png
+.. |image2| image:: ../diagrams/sdd_err_chiedi_flusso_nodo.png
+.. |image3| image:: ../diagrams/sdd_err_flusso_nodo.png
