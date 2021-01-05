@@ -8,10 +8,8 @@ Il numero avviso è composto da 18 caratteri e deve identificare in maniera univ
 ```javascript
 <aux-digit>(1n)<position-global-id>(17)
 ```
-Dove:
 
-- aux-digit : può assumere valori 0,1,3 dipende dalla configurazione delle stazioni dell'ente.
-Il valore *aux-digit* codica il tipo di configurazione dell'EC alla piattaforma, a seconda del suo valore, il campo *position-global-id* può assumere codifiche differenti.
+L' *aux-digit*  ( che può assumere i valori 0,1,3 ) codifica il tipo di configurazione dell'EC alla piattaforma, a seconda del suo valore il campo *position-global-id* può assumere codifiche differenti.
 
 ## aux-digit=1
 l'EC dispone di un unica stazione, pertanto il *position-global-id* identifica in maniera univoca la posizione debitoria all'interno dell'EC.
@@ -29,4 +27,3 @@ l'EC dispone di diverse stazioni, l'identificazione della posizione debitoria è
 
 ### check-digit
 il check-digit viene calcolato come resto della divisione per 93 del numero ottenuto concatenando tutti i caratteri precedenti
-

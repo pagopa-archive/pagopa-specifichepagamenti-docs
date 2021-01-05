@@ -1,36 +1,5 @@
-Sezione 3 - Specifiche Tecniche
-===============================
-
-Questa sezione contiene una descrizione delle specifiche tecniche per
-l’integrazione di EC e PSP alla piattaforma pagoPA. I dettagli di tutte
-le interfacce e la documentazione di dettaglio è reperibile tramite il
-repository github [pagopa-api] (https://github.com/pagopa/pagopa-api) o
-in formato web tramite `portale degli
-sviluppatori <https://pagopa.github.io/pagopa-api/>`__.
-
-Descrizione della sezione
--------------------------
-
-La sezione è suddivisa in due macro-aree ognuna delle quali contiene
-tutte le informazioni necessarie per uno dei soggetti aderenti.
-
-In particolare ,
-
-l’area dedicata per un EC per un EC i capitoli di interesse sono :
-
--  `pagamento on-line <./3_01_00_pagamento_online.rst>`__
--  `avviso di pagamento <./3_02_00_avviso_di_pagamento.rst>`__
--  `ricevute di pagamento <./3_03_00_ricevute_di_pagamento.rst>`__
--  `rendicontazione e
-   riconciliazione <./3_04_00_rendicontazione_e_accredito.rst>`__
-
-per un PSP i capitoli di interesse sono :
-
-*TBD*
-
-\*\* Nota: All’interno della sezione, è possibile che vengano fatti
-esempi di scenari di pagamento. Questi devono essere presi come esempi e
-non indicano alcun comportamento verso l’EC. \*\*
+Sezione 3 - Sezione Generale
+============================
 
 Stazioni e Canali
 -----------------

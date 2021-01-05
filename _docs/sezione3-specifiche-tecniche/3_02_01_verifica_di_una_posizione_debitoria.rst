@@ -51,7 +51,7 @@ opzione disponibile ( dal momemto della ricezione della ricevuta ) sarà
 la seconda rata semestrale.
 
 Opzione Multipla di Pagamento
-=============================
+-----------------------------
 
 In tale scenario il medesimo avviso di pagamento fà riferimento ad una
 posizione debitoria il cui ammontare può variare a seconda delle

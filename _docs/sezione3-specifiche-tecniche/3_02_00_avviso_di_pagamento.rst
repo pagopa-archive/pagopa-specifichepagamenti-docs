@@ -16,12 +16,9 @@ essere composto seguendo il seguente *pattern*
 
    <aux-digit>(1n)<position-global-id>(17)
 
-Dove:
-
--  aux-digit : può assumere valori 0,1,3 dipende dalla configurazione
-   delle stazioni dell’ente. Il valore *aux-digit* codica il tipo di
-   configurazione dell’EC alla piattaforma, a seconda del suo valore, il
-   campo *position-global-id* può assumere codifiche differenti.
+L’ *aux-digit* ( che può assumere i valori 0,1,3 ) codifica il tipo di
+configurazione dell’EC alla piattaforma, a seconda del suo valore il
+campo *position-global-id* può assumere codifiche differenti.
 
 aux-digit=1
 -----------

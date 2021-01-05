@@ -19,4 +19,4 @@ pagopa -[#green]-> ec: <urlPortalePA>?&idSession=<idSession>& esito=<esito>
 ...
 pagopa -> ec : paaSendRT
 ec -[#blue]-> pagopa : resp OK
-
+@enduml

@@ -1,4 +1,5 @@
-skinparam style strictuml
+@startuml
+kinparam style strictuml
 hide methods
 
 class notice as "Avviso di Pagamento" {
@@ -30,3 +31,5 @@ pagamento "1" -"1" ricevuta
 ricevuta "*" -d-"1" fdr
 
 carrello "1" -"*" pagamento
+
+@enduml

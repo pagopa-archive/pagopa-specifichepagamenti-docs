@@ -30,7 +30,7 @@ Nel caso invece l'utente abbia pagamento la rata unica, da quel momento in poi l
 
 Nel caso in cui l'utente effettui il pagamento della prima rata, l'unica opzione disponibile ( dal momemto della ricezione della ricevuta ) sarà la seconda rata semestrale.
 
-# Opzione Multipla di Pagamento
+## Opzione Multipla di Pagamento
 
 In tale scenario il medesimo avviso di pagamento fà riferimento ad una posizione debitoria il cui ammontare può variare a seconda delle condizioni al contorno.
 Prendiamo ad esempio il caso di un pagamento di una multa stradale che tipicamente prevede tre opzioni di pagamento :

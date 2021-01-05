@@ -39,7 +39,7 @@ E' possibile sostituire il logo pagoPA all'interno della landing-page del WISP c
 
 ## Compatibilità Browser
 
-Lo sviluppo del WISP segue le [linee guida di design per i servizi digitali della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html) per il _TBD_
+Lo sviluppo del WISP segue le [linee guida di design per i servizi digitali della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html).
 
 In particolare viene assicurata la compatibilità con versioni dei browser che abbiano una penetrazione media tra la popolazione di almeno 1 persona ogni 100 abitati
 

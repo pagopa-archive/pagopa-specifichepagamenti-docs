@@ -62,8 +62,7 @@ Compatibilità Browser
 
 Lo sviluppo del WISP segue le `linee guida di design per i servizi
 digitali della
-PA <https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html>`__
-per il *TBD*
+PA <https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html>`__.
 
 In particolare viene assicurata la compatibilità con versioni dei
 browser che abbiano una penetrazione media tra la popolazione di almeno
