@@ -14,10 +14,9 @@ l'EC può recuperare i flussi di rendicontazione prodotti seguendo il seguente s
 
 Il Flusso di rendicontazione ottenuto descrive l'elenco dei pagamenti (*datiSingoloPagamento*) riversati, ognuno dei quali è associabile ad una ricevuta di pagamento.
 
-## ricevuta tramite paaInviaRT (deprecata)
+## ricevuta tramite paaInviaRT
 
-E' possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso d
-rendicontazione tramite i parametri :
+L'interfaccia *paaInviaRT* già contenuta nelle prcedenti versioni, continuerà ad essere utilizzata e supportata sino al 31/12/2021. In tali casi, è possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso di rendicontazione tramite i parametri :
 
 - *identificativoUnivocoVersamento*
 - *identificativoUnivocoRiscossione*
@@ -26,7 +25,6 @@ La ricevuta potrebbe contenere diversi versamenti, per identificare il versament
 
 ## ricevuta paSendRT
 
-E' possibile rintracciare la ricevuta di  un cersamento contenuto all'interno del flusso di rendicontazione tramite il parametro 
-*identificativoUnivocoRiscossione* che conterrà il valore del campo request-id della ricevuta.
+E' possibile rintracciare la ricevuta di  un cersamento contenuto all'interno del flusso di rendicontazione tramite il parametro *identificativoUnivocoRiscossione* che conterrà il valore del campo request-id della ricevuta.
 
 La ricevuta potrebbe contenere diversi versamenti, per identificare il versamento corrispondente è possibile utilizzare il campo *indiceDatiSingoloPagamento* che conterrà il valore del *trasfer-id* all'interno della ricevuta.

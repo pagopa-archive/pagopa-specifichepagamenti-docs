@@ -1,7 +1,7 @@
 Verifica di una posizione debitoria
 =====================
 
-un EC connesso alla piattaforma deve offrire il servizio di interrogazione delle proprie posizioni  debitorie *paaVerifyPaymentNotice*.
+un EC connesso alla piattaforma deve offrire il servizio di interrogazione delle proprie posizioni  debitorie con la primitiva *paaVerifyPaymentNotice*;
 
 Ogni posizione debitoria ottenuta, può contenere più opzioni di pagamento. Ogni opzione di pagamento definisce un importo, data di scadenza, ed una descrizione.
 
@@ -47,9 +47,12 @@ Attraverso la *paaVerifyPaymentNotice* verranno quindi proposte tutte le opzioni
 - l'EC diviene in possesso della data di notifica, pertanto può aggiornare le opzioni di pagamento inserendo la data di scadenza corretta per ognuna delle opzioni.
 
 ## Pignoramenti/ Acconti
-_TBD_
 
 In tale scenario l'avviso di pagamento fa riferimento ad una posizione debitoria la quale indica un importo figurativo , ma ammette la possibilità che sia l'utente , di volta in volta, a definire l'importo da versare. La posizione debitoria si considererà conclusa una volta raggiunta la somma totale riportata all'interno dell'avviso.
 Prendiamo ad esempio il caso di un pignoramento, dove l'avviso di pagamento viene notificato, ma l'utente ha disponibilità solo parziale dell'importo richiesto.
 
-In tal caso esiste un unica opzione di pagamento che specifica un importo totale il quale può ammettere valori minori () 
+In tal caso esiste un unica opzione di pagamento che specifica un importo totale il quale può ammettere valori minori al dato mostrato. Pertanto una qualsiasi richiesta di pagamento verrà accettata per importi anche diversi ( <= ) da quello riportato all'interno della risposta della chiamata.
+
+# paaVerificaRPT
+
+L'interfaccia *paaVerificaRPT* già contenuta nelle prcedenti versioni, continuerà ad essere utilizzata e supportata sino al 31/12/2021.

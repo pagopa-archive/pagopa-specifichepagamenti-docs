@@ -1,4 +1,4 @@
-Sezione 3 - Sezione Generale
+Specifiche Tecniche Generali
 ====================================
 
 ## Stazioni e Canali

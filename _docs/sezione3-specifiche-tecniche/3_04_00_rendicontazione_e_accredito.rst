@@ -24,11 +24,13 @@ Il Flusso di rendicontazione ottenuto descrive l’elenco dei pagamenti
 (*datiSingoloPagamento*) riversati, ognuno dei quali è associabile ad
 una ricevuta di pagamento.
 
-ricevuta tramite paaInviaRT (deprecata)
----------------------------------------
+ricevuta tramite paaInviaRT
+---------------------------
 
-E’ possibile rintracciare la ricevuta di un versamento contenuto
-all’interno del flusso d rendicontazione tramite i parametri :
+L’interfaccia *paaInviaRT* già contenuta nelle prcedenti versioni,
+continuerà ad essere utilizzata e supportata sino al 31/12/2021. In tali
+casi, è possibile rintracciare la ricevuta di un versamento contenuto
+all’interno del flusso di rendicontazione tramite i parametri :
 
 -  *identificativoUnivocoVersamento*
 -  *identificativoUnivocoRiscossione*
