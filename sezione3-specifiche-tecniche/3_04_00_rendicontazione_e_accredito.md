@@ -1,11 +1,13 @@
 Rendicontazione ed Accredito
 ================================
 
-Ogni PSP aderente alla piattaforma, a D+2 rendiconta il dettaglio dei riversamenti effettuati verso i conti di accredito dei pagamenti avvenuti nella giornata operativa S.
+Ogni PSP aderente alla piattaforma, in data D+2 rendiconta il dettaglio dei riversamenti effettuati verso i conti di accredito dei pagamenti avvenuti nella giornata operativa D.
 
-l'EC può recuperare i flussi di rendicontazione prodotti seguendo il seguente scehma
+L'EC può recuperare i flussi di rendicontazione prodotti seguendo il seguente schema:
 
 ![sd_ec_richiesta_flussi](../diagrams/sd_ec_richiesta_flussi.png)
+
+`[TBD check sequence diagram]`
 
 1. l'EC richiede l'elenco dei flussi di rendicontazione disponibili
 2. la piattaforma restituisce l'elenco dei flussi di rendicontazione
@@ -16,15 +18,15 @@ Il Flusso di rendicontazione ottenuto descrive l'elenco dei pagamenti (*datiSing
 
 ## ricevuta tramite paaInviaRT
 
-L'interfaccia *paaInviaRT* già contenuta nelle prcedenti versioni, continuerà ad essere utilizzata e supportata sino al 31/12/2021. In tali casi, è possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso di rendicontazione tramite i parametri :
+La primitiva *paaInviaRT* già contenuta nelle precedenti versioni, continuerà ad essere utilizzata e supportata sino al 31/12/2021. In tali casi è possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso di rendicontazione tramite i parametri:
 
-- *identificativoUnivocoVersamento*
-- *identificativoUnivocoRiscossione*
+* *identificativoUnivocoVersamento*
+* *identificativoUnivocoRiscossione*
 
 La ricevuta potrebbe contenere diversi versamenti, per identificare il versamento corrispondente è possibile utilizzare il campo *indiceDatiSingoloPagamento*.
 
 ## ricevuta paSendRT
 
-E' possibile rintracciare la ricevuta di  un cersamento contenuto all'interno del flusso di rendicontazione tramite il parametro *identificativoUnivocoRiscossione* che conterrà il valore del campo request-id della ricevuta.
+E' possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso di rendicontazione tramite il parametro *identificativoUnivocoRiscossione* che conterrà il valore del campo _request-id_ della ricevuta.
 
 La ricevuta potrebbe contenere diversi versamenti, per identificare il versamento corrispondente è possibile utilizzare il campo *indiceDatiSingoloPagamento* che conterrà il valore del *trasfer-id* all'interno della ricevuta.
