@@ -1,5 +1,5 @@
 Avviso di Pagamento
-=================
+===================
 
 Tramite la piattaforma pagoPA, un EC può innescare un pagamento presso un qualsiasi canale dei PSP aderenti tramite un codice *numero avviso* abbinato al codice fiscale dell'EC.
 

@@ -1,5 +1,5 @@
 Pagamento multi beneficiario
-===================================
+============================
 
 E' possibile che per talune posizioni debitorie la somma totale del debito debba essere ripartita tra più Enti Creditori (tutti aderenti alla piattaforma pagoPA).
 

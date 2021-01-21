@@ -1,5 +1,5 @@
 Convenzioni con PSP
-=======================
+===================
 
 Uno dei principali scopi della piattaforma pagoPA è _disintermediare_ le comunicazioni tra EC e PSP, ciò implica che gli EC non hanno bisogno di stipulare convenzioni con i singoli PSP al fine di poter disporre di strumenti di pagamento al cittadino.
 

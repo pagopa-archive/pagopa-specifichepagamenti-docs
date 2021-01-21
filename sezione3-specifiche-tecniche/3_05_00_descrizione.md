@@ -1,7 +1,7 @@
 Pagamento presso il Prestatore di Servizi di Pagamento
 ======================================================
 
-Nel seguito viene descritto il processo in cui l'esecuzione del pagamento avviene presso le infrastrutture messe a disposizione dal Prestatore di Servizi di Pagamento (PSP) come ad esempio: home banking, mobile payment, uffici postali, ricevitorie, etc.
+Nel seguito viene descritto il processo in cui l'esecuzione del pagamento avviene presso le infrastrutture messe a disposizione dal Prestatore di Servizi di Pagamento (PSP), come ad esempio: home banking, mobile payment, uffici postali, ricevitorie, etc.
 
 L'Ente Creditore beneficiario del pagamento deve rendere disponibile, con le modalità previste dalla piattaforma pagoPA, un archivio delle posizioni debitorie (Archivio Pagamenti in Attesa). Inoltre, l'Ente Creditore deve aver reso disponibile all’utilizzatore finale - nelle varie modalità previste - un Avviso con gli estremi del pagamento da effettuare; tali estremi sono necessari per poter effettuare un pagamento su pagoPA.
 

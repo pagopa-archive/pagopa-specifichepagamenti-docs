@@ -1,5 +1,5 @@
 Marca da Bollo (@e.bollo)
-===================
+=========================
 
 Tramite la piattaforma pagoPA è possibile richiedere pagamenti di Posizioni Debitorie che contengano una marca da bollo digitale ("@e.bollo").
 

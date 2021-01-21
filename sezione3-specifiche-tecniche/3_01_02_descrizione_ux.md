@@ -1,5 +1,5 @@
-Descrizione UX ( WISP )
-===============================
+Descrizione UX (WISP)
+=====================
 
 Il WISP (*Wizard Interattivo di Scelta del Prestatore di Servizi di Pagamento*) è un'applicazione web che consente ad un utente la navigazione degli strumenti di pagamento resi disponibili dai PSP aderenti alla piattaforma pagoPA.
 
