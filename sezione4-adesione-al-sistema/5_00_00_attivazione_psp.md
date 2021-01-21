@@ -63,7 +63,7 @@ All’interno del Sistema pagoPA i ruoli dei soggetti che intervengono nel servi
 MyBank viene proposto come uno dei servizi di pagamento offerti dai Prestatori aderenti che possono svolgere il ruolo di SELLER BANK, per il convenzionamento di Amministrazioni ed Enti pubblici, o il ruolo di BUYER BANK, consentendo ai clienti di pagare tramite il proprio banking online in PagoPA senza sviluppi e costi aggiuntivi.
 
 La documentazione relativa a tale servizio è disponibile sul sito istituzionale di PagoPA S.p.A..
-
+`[TBD rimando alla sez.3 apposita 3_07_00_integrazione_wallet ?]`
 
 ### PSP che intendono svolgere il ruolo di Banca Buyer
 
