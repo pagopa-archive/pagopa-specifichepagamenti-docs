@@ -1,5 +1,5 @@
 Specifiche Tecniche Generali
-====================================
+============================
 
 ## Stazioni e Canali
 
