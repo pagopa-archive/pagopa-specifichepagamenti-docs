@@ -13,27 +13,29 @@ L’infrastruttura abilitante che consente il dialogo tecnico tra Enti Creditori
 
 Il modello di funzionamento della piattaforma pagoPA fa riferimento ai principi del Four Corners model definito dall’European Payment Council (`[TBD riportare il diagramma di Figura 1]`).
 
+![four-corners-model](../images/four_corners_model.png){width="3.39472in" height="2.11312in"}
+
 La seguente tabella elenca i soggetti coinvolti nel pagamento:
 
 | Termine | Significato |
 | ------- | ----------- |
 | PSP (Debtor Bank) | Prestatore Servizi di Pagamento: Banca, Istituto di moneta elettronica o Istituto di pagamento, autorizzato ad operare in Italia, che rende disponibili ai propri clienti servizi di pagamento tramite la piattaforma PagoPA. |
 | EC (Creditor) | Ente Creditore: Soggetto che aderisce a pagoPA per l’incasso di somme che gli sono a vario titolo dovute. |
-| Soggetto debitore (Debtor) | Rappresenta il privato cittadino, il professionista o l’impresa che deve effettuare un pagamento in favore di un Ente Creditore o perché intende usufruire di un servizio o perchè deve saldare una posizione debitoria come contribuente. |
+| Soggetto debitore (Debtor) | Rappresenta il privato cittadino, il professionista o l’impresa che deve effettuare un pagamento in favore di un Ente Creditore o perché intende usufruire di un servizio o perché deve saldare una posizione debitoria come contribuente. |
 | Utente, Utilizzatore finale o soggetto versante (User) | Rappresenta il soggetto che effettua pagamenti a favore di un EC attraverso i servizi pagoPA erogati dal PSP di cui è cliente |
 
 Il perfezionamento delle operazioni disposte tramite pagoPA avviene attraverso il sistema di regolamento e compensazione (CSM) utilizzando le regole SEPA.
 
 Il sistema pagoPA prevede la possibilità che le attività legate all’effettuazione dei pagamenti siano eseguite, in tutto od in parte, da Intermediari tecnologici (soggetti pubblici e/o privati) per conto sia degli Enti Creditori che dei Prestatori di Servizi di Pagamento. A tale proposito si definisce:
 
-* **Intermediario tecnologico** come un soggetto appartenente alla Pubblica Amministrazione che offre - previa adesione alla piattaforma pagoPA - ad altri soggetti aderenti, PSP e/o Enti Creditori, un servizio tecnologico per il collegamento e per lo scambio dei flussi con la piattaforma pagoPA, nel pieno rispetto delle Linee Guida `[TBD riferimento alle linee guida ?]` e dei relativi standard tecnici.
+* **Intermediario tecnologico** come un soggetto appartenente alla Pubblica Amministrazione che offre - previa adesione alla piattaforma pagoPA - ad altri soggetti aderenti, PSP e/o Enti Creditori, un servizio tecnologico per il collegamento e per lo scambio dei flussi con la piattaforma pagoPA, nel pieno rispetto delle Linee Guida `[TBD riferimento alle linee guida in GU https://www.gazzettaufficiale.it/eli/id/2018/07/03/18A04494/sg ?]` e dei relativi standard tecnici.
 * **Partner tecnologico** è un soggetto imprenditoriale di cui l’Ente Creditore si avvale in via strumentale per l’esecuzione delle attività tecniche relative alla fornitura dei servizi IT, non necessariamente caratterizzabili, per l’interfacciamento con la piattaforma pagoPA. Ciò ferma restando la responsabilità nei confronti di PagoPA in capo all’Ente Creditore.
 
 ## Ciclo di vita del pagamento
 
 Il pagamento mediante la piattaforma pagoPA è operazione complessa, composta di diverse fasi, che, in linea generale, seguono un preordinato “Ciclo di vita” schematizzato nella Figura 2.
 
-`[TBD inserire Figura 2 - Ciclo di vita del pagamento]`
+![payment_lifecycle](../images/payment_lifecycle.png){width="6.43198in" height="0.93413in"}
 
 Si distinguono due processi di pagamento che differiscono per l’inizializzazione:
 
@@ -50,7 +52,7 @@ Si distinguono due processi di pagamento che differiscono per l’inizializzazio
 
 **Pagamento con avviso PagoPA**
 
-1. L’Ente Creditore, generata una posizione debitoria, distribuisce o invia l’avviso di pagamento pagoPA al soggetto debitore. L’avviso può essere anche in formato digitale e ricevuto tramite App IO `[TBD inserire link ad IO]`;
+1. L’Ente Creditore, generata una posizione debitoria, distribuisce o invia l’avviso di pagamento pagoPA al soggetto debitore. L’avviso può essere anche in formato digitale e ricevuto tramite [App IO](https://io.italia.it/)
 2. Il debitore può pagare l’avviso in diverse modalità:
 	* allo sportello di un ufficio postale
 	* presso un esercizio commerciale di PSP che gestisce una rete di terminali
@@ -74,7 +76,7 @@ Quindi è PagoPA S.p.A. che incide direttamente sulle posizioni giuridiche/patri
 
 Gli aspetti sub (a), (b) e (c), nell'ambito del quadro generale di funzionamento fissato dalle Linee Guida e dalle convenzioni tra PagoPA S.p.A. e gli EC e tra PagoPA S.p.A. ed i PSP, trovano concreta esplicitazione nelle modalità di funzionamento dei singoli servizi erogati.
 
-## L’adesione al Sistema pagoPA
+## L'adesione al Sistema pagoPA
 
 L’utilizzo dei servizi messi a disposizione da pagoPA è attivato attraverso apposite procedure, descritte in maggior dettaglio nella Sezione IV `[TBD link]`, che prevedono:
 
