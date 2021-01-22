@@ -11,7 +11,7 @@ L’adesione a pagoPA consente all’Ente Creditore di beneficiare dei servizi d
 
 L’infrastruttura abilitante che consente il dialogo tecnico tra Enti Creditori e Prestatori di Servizi di Pagamento è la piattaforma pagoPA. Tramite tale piattaforma l’Ente Creditore fornisce al PSP i dati necessari a erogare il servizio di pagamento e ottiene, in maniera standardizzata ed indipendente dallo strumento di pagamento utilizzato, i dati di rendicontazione necessari alla riconciliazione contabile,  semplificando così i processi di gestione del back office.
 
-Il modello di funzionamento della piattaforma pagoPA fa riferimento ai principi del Four Corners model definito dall’European Payment Council (`[TBD riportare il diagramma di Figura 1]`).
+Il modello di funzionamento della piattaforma pagoPA fa riferimento ai principi del Four Corners model definito dall’European Payment Council:
 
 ![four-corners-model](../images/four_corners_model.png)
 
@@ -35,7 +35,7 @@ Il sistema pagoPA prevede la possibilità che le attività legate all’effett
 
 Il pagamento mediante la piattaforma pagoPA è operazione complessa, composta di diverse fasi, che, in linea generale, seguono un preordinato “Ciclo di vita” schematizzato nella Figura 2.
 
-![payment_lifecycle](../images/payment_lifecycle.png){width="6.43198in" height="0.93413in"}
+![payment_lifecycle](../images/payment_lifecycle.png)
 
 Si distinguono due processi di pagamento che differiscono per l’inizializzazione:
 
