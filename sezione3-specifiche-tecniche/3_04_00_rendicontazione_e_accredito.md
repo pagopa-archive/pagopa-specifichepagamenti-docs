@@ -7,7 +7,7 @@ L'EC può recuperare i flussi di rendicontazione prodotti seguendo il seguente s
 
 ![sd_ec_richiesta_flussi](../diagrams/sd_ec_richiesta_flussi.png)
 
-`[TBD check sequence diagram]`
+`[TBD check sequence diagram-- updated]`
 
 1. l'EC richiede l'elenco dei flussi di rendicontazione disponibili
 2. la piattaforma restituisce l'elenco dei flussi di rendicontazione
@@ -29,4 +29,4 @@ La ricevuta potrebbe contenere diversi versamenti, per identificare il versament
 
 E' possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso di rendicontazione tramite il parametro *identificativoUnivocoRiscossione* che conterrà il valore del campo _request-id_ della ricevuta.
 
-La ricevuta potrebbe contenere diversi versamenti, per identificare il versamento corrispondente è possibile utilizzare il campo *indiceDatiSingoloPagamento* che conterrà il valore del *trasfer-id* all'interno della ricevuta. `[TBD chk transfer-id]`
+La ricevuta potrebbe contenere diversi versamenti, per identificare il versamento corrispondente è possibile utilizzare il campo *indiceDatiSingoloPagamento* che conterrà il valore del *idTransfer* all'interno della ricevuta.

@@ -1,0 +1,8 @@
+autonumber 
+participant psp  as "PSP"
+participant nodo as "pagoPA"
+
+psp -> nodo : req verifyPaymentNotice (qrcode data)
+
+nodo -[#blue]-> psp : resp OK (PaymentNotice)
+ 

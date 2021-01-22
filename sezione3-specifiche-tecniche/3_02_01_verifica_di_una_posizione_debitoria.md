@@ -46,7 +46,7 @@ Attraverso la *paaVerifyPaymentNotice* verranno quindi proposte tutte le opzioni
 
 ## Pignoramenti / Acconti
 
-In tale scenario l'avviso di pagamento fa riferimento ad una posizione debitoria la quale indica un importo figurativo, ma ammette la possibilità che sia l'utente, di volta in volta, a definire l'importo da versare. La posizione debitoria si considererà conclusa una volta raggiunta la somma totale riportata all'interno dell'avviso `[TBD è comunque cura dell'EC aggiornare la Posizione Debitoria secondo tali logiche]`
+In tale scenario l'avviso di pagamento fa riferimento ad una posizione debitoria la quale indica un importo figurativo, ma ammette la possibilità che sia l'utente, di volta in volta, a definire l'importo da versare. La posizione debitoria si considererà conclusa una volta raggiunta la somma totale riportata all'interno dell'avviso, è comunque cura dell'EC aggiornare la Posizione Debitoria secondo tali logiche
 
 Si prenda ad esempio il caso di un pignoramento, dove l'avviso di pagamento viene notificato, ma l'utente ha disponibilità solo parziale dell'importo richiesto.
 

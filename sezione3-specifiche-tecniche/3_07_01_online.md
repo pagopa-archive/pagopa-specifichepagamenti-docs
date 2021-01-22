@@ -1,6 +1,6 @@
 ## on-line
 
-`[TBD rif https://github.com/pagopa/pagopa-api/blob/master/ec/wisp.md]`
+`[TBD rif https://github.com/pagopa/pagopa-api/blob/master/ec/wisp.md --riferimento errato]`
 
 Il presente capitolo vuole dare indicazioni circa i parametri da utilizzare nella gestione della re-direzione del browser dell'utente nell'ambito del modello di pagamento presso il sito web dell'EC.
 

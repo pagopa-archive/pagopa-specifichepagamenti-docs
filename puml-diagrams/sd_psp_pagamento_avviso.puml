@@ -1,0 +1,10 @@
+autonumber 
+participant psp  as "PSP"
+participant nodo as "pagoPA"
+
+psp -> nodo : req activatePaymentNotice (qrcode data, idempotencyKey )
+
+nodo -[#blue]-> psp : resp OK (paymentToken)
+
+psp -> nodo : sendPaymentOutcome(paymentToken)
+nodo -[#blue]-> psp : resp OK

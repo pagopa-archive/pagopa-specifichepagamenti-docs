@@ -6,7 +6,7 @@ participant ec as "EC"
 participant pagopa as "pagoPA"
 
 ec -> pagopa : nodoChiediListaFlussiDiRendicontazione 
-pagopa -[#blue]-> : resp OK  ( lista FDR)
+pagopa -[#blue]-> ec : resp OK  ( lista FDR)
 ...
 ec -> pagopa: nodoChiediFlussoDiRendicontazione(idFlusso)
 pagopa -> pagopa : update FDR
