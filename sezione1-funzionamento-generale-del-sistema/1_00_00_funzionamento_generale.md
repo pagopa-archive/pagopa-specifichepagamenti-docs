@@ -13,11 +13,7 @@ L’infrastruttura abilitante che consente il dialogo tecnico tra Enti Creditori
 
 Il modello di funzionamento della piattaforma pagoPA fa riferimento ai principi del Four Corners model definito dall’European Payment Council (`[TBD riportare il diagramma di Figura 1]`).
 
-<!--
-![four-corners-model](../images/four_corners_model.png){ width="3.39472in" height="2.11312in"}
--->
-
-<img src="../images/four_corners_model.png" width="3.39472in" height="2.11312in" alt="four corner model" />
+![four-corners-model](../images/four_corners_model.png)
 
 La seguente tabella elenca i soggetti coinvolti nel pagamento:
 
