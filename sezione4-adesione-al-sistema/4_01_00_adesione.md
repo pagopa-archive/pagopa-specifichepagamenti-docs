@@ -13,8 +13,8 @@ Il D.Lgs. n. 175/2016, all'articolo 2, lettera m), ha delineato il concetto di s
 2. Le società in cui un'altra società dispone di voti sufficienti per esercitare un'influenza dominante nell'assemblea ordinaria;
 3. Le società che sono sotto influenza dominante di un'altra società in virtù di particolari vincoli contrattuali con essa.
 
-L'articolo 2359 del codice civile precisa che ai fini dell'applicazione dei numeri (1) e (2) che precedono si computano anche i voti spettanti a società controllate, a società fiduciarie e a persona interposta; non si computano i voti spettanti per conto di terzi. Sono considerate collegate le società sulle quali un'altra società esercita un'influenza notevole. L'influenza si presume quando nell'assemblea ordinaria può essere esercitato almeno un quinto dei voti ovvero un decimo se la società ha azioni quotate in borsa”.
-Infine, all'articolo 2 del D.Lgs. n. 175/2016 è ulteriormente precisato che “Il controllo può sussistere anche quando, in applicazione di norme di legge o statutarie o di patti parasociali, per le decisioni finanziarie e gestionali strategiche relative all'attività sociale è richiesto il consenso unanime di tutte le parti che condividono il controllo”.
+L'articolo 2359 del codice civile precisa che ai fini dell'applicazione dei numeri (1) e (2) che precedono si computano anche i voti spettanti a società controllate, a società fiduciarie e a persona interposta; non si computano i voti spettanti per conto di terzi. Sono considerate collegate le società sulle quali un'altra società esercita un'influenza notevole. L'influenza si presume quando nell'assemblea ordinaria può essere esercitato almeno un quinto dei voti ovvero un decimo se la società ha azioni quotate in borsa".
+Infine, all'articolo 2 del D.Lgs. n. 175/2016 è ulteriormente precisato che "Il controllo può sussistere anche quando, in applicazione di norme di legge o statutarie o di patti parasociali, per le decisioni finanziarie e gestionali strategiche relative all'attività sociale è richiesto il consenso unanime di tutte le parti che condividono il controllo".
 
 Infine, si precisa che i soggetti obbligati all'utilizzo di pagoPA, siano essi PA o gestori di pubblici servizi o società a controllo pubblico, ove ricorrano tutti i requisiti (nessuno escluso) indicati nella lettera di esenzione, possono fare istanza alla PagoPA S.p.A. (via mail all'indirizzo `helpdesk@pagopa.it`), inviando in allegato la lettera di esenzione debitamente compilata e sottoscritta digitalmente.
 I Prestatori di Servizi di Pagamento (PSP), come le banche, le poste, gli istituti di moneta elettronica, gli istituti di pagamento e ogni altro soggetto abilitato ad eseguire servizi di pagamento, aderiscono su base volontaria al sistema pagoPA per erogare i propri servizi di pagamento a cittadini e imprese.
@@ -26,9 +26,9 @@ Per aderire a pagoPA in qualità di Ente Creditore le Pubbliche Amministrazioni,
 
 Il processo di adesione di un soggetto in qualità di Ente Creditore prevede che:
 
-* L'Ente faccia richiesta alla casella di posta helpdesk@pagopa.it delle credenziali di “primo accesso” per adesione;
+* L'Ente faccia richiesta alla casella di posta helpdesk@pagopa.it delle credenziali di "primo accesso" per adesione;
 * Con le credenziali ricevute si esegue il primo accesso al Portale delle Adesioni e si nomina il Referente dei Pagamenti;
-* Il Referente dei Pagamenti, con le credenziali nominali ricevute contestualmente alla nomina, accede al Portale delle Adesioni e procede con la compilazione della Lettera di Adesione. Sarà sua cura farla firmare digitalmente dal “firmatario” dichiarato in fase di compilazione e caricarla sul Portale delle Adesioni per ottenerne la validazione da parte di PagoPA S.p.A, così da completare il processo di adesione. 
+* Il Referente dei Pagamenti, con le credenziali nominali ricevute contestualmente alla nomina, accede al Portale delle Adesioni e procede con la compilazione della Lettera di Adesione. Sarà sua cura farla firmare digitalmente dal "firmatario" dichiarato in fase di compilazione e caricarla sul Portale delle Adesioni per ottenerne la validazione da parte di PagoPA S.p.A, così da completare il processo di adesione. 
 
 ## Adesione di un Prestatore di Servizi di Pagamento
 
@@ -59,6 +59,6 @@ L'**Intermediario tecnologico** è un Ente Creditore, già aderente ed attivo su
 
 Il **Partner Tecnologico** è un soggetto imprenditoriale, non sottoposto ad alcun obbligo di adesione a pagoPA, che si occupa delle attività tecniche necessarie alla connessione con la piattaforma pagoPA, ferma restando la responsabilità nei confronti di PagoPA S.p.A. in capo all'Ente Creditore. 
 
-I **Partner Tecnologici** possono decidere di sottoporsi ad una procedura di qualificazione e sottoscrivere un accordo di servizio con PagoPA S.p.A.. Lo scopo di tale procedura è quello di mettere un Ente Creditore nella condizione di poter analizzare e valutare i servizi offerti dai soggetti “qualificati” e tenerne conto nella scelta di un Partner Tecnologico.
+I **Partner Tecnologici** possono decidere di sottoporsi ad una procedura di qualificazione e sottoscrivere un accordo di servizio con PagoPA S.p.A.. Lo scopo di tale procedura è quello di mettere un Ente Creditore nella condizione di poter analizzare e valutare i servizi offerti dai soggetti "qualificati" e tenerne conto nella scelta di un Partner Tecnologico.
 
 Gli Enti Creditori possono connettersi alla piattaforma dei pagamenti delegando le attività tecniche ad uno o più Intermediari e/o Partner Tecnologici contemporaneamente, visto che i servizi di pagamento possono essere erogati da una molteplicità di soggetti, sempre nel rispetto delle Linee Guida.
