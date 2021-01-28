@@ -45,9 +45,9 @@ Per gli utilizzatori finali che scelgono di registrarsi al Sistema pagoPA sono a
 
 I dati personali raccolti saranno trattati, nel rispetto della normativa vigente, solo per consentire l'erogazione dei servizi richiesti.
 
-Pertanto, detti dati saranno trattati esclusivamente per consentire agli utenti delle pubbliche amministrazioni e degli altri soggetti aderenti al Sistema pagoPA di richiedere e ottenere i servizi di pagamento erogati dai PSP abilitati sul Sistema pagoPA, nonché per richiedere e ottenere parimenti i servizi di identificazione e memorizzazione erogati da AgID `[TBD da AgID ?]` sul Sistema pagoPA.
+Pertanto, detti dati saranno trattati esclusivamente per consentire agli utenti delle pubbliche amministrazioni e degli altri soggetti aderenti al Sistema pagoPA di richiedere e ottenere i servizi di pagamento erogati dai PSP abilitati sul Sistema pagoPA, nonché per richiedere e ottenere parimenti i servizi di identificazione e memorizzazione erogati da PagoPA S.p.A. sul Sistema pagoPA.
 
-Il conferimento dei dati ed il trattamento degli stessi da parte di AgID `[TBD da AgID ?]` per tali finalità è dunque obbligatorio e non richiede un esplicito consenso, pena l'impossibilità per l'AgID `[TBD da AgID ?]` di erogare i servizi sopra citati.
+Il conferimento dei dati ed il trattamento degli stessi da parte di PagoPA S.p.A. per tali finalità è dunque obbligatorio e non richiede un esplicito consenso, pena l'impossibilità per PagoPA S.p.A. di erogare i servizi sopra citati.
 
 Autorizzazione del pagamento
 ----------------------------
@@ -64,7 +64,7 @@ Il processo di pagamento segue percorsi differenti a seconda del servizio del PS
 		- non contestuale, se l'autorizzazione viene rilasciata successivamente alla ricezione della richiesta di pagamento telematico da parte del PSP, attraverso canali da questo messi a disposizione (ad esempio: home banking, notifica su app per smartphone o tablet, etc).
 		- Tutti i percorsi precedenti, incluso il ramo derivante dall'autorizzazione al pagamento con carta, confluiscono nel punto in cui risulta noto l'esito del pagamento disposto dall'Utilizzatore finale e quindi il PSP possa inoltrare le RT da esso prodotte (*Task* T2.1.12).
 
-L'EC riceve tutte le RT, comprese quelle negative generate dal NodoSPC (*Task* T2.1.14). Il Prestatore di Servizi di Pagamento deve restituire la ricevuta telematica nei tempi stabiliti dal documento "*Indicatori di qualità per i soggetti aderenti*" `[TBD link qui]` pubblicato sul sito istituzionale dell'AgID `[TBD da AgID ?]`, in modo da consentire all'Utilizzatore finale di usufruire dei servizi per cui ha pagato.
+L'EC riceve tutte le RT, comprese quelle negative generate dal NodoSPC (*Task* T2.1.14). Il Prestatore di Servizi di Pagamento deve restituire la ricevuta telematica nei tempi stabiliti dal documento "*Indicatori di qualità per i soggetti aderenti*" `[TBD link qui]` pubblicato sul sito di PagoPA S.p.A., in modo da consentire all'Utilizzatore finale di usufruire dei servizi per cui ha pagato.
 
 L'EC può mettere a disposizione dell'Utilizzatore finale una ricevuta (*Task* T2.1.15) e terminare il processo. Sul portale dell'EC devono essere messe a disposizione le funzioni che permettono all'Utilizzatore finale di interrogare lo stato della sua richiesta di pagamento, scaricare una copia di ricevuta o quietanza di pagamento, scaricare copia analogica e/o duplicato del documento informatico Ricevuta Telematica.
 
