@@ -27,11 +27,11 @@ Nel Sistema pagoPA ogni pagamento presuppone la creazione propedeutica, nel sist
 
 Contestualmente alla creazione di una posizione debitoria, l'Ente Creditore, se ne ricorrono le condizioni, deve predisporre un avviso di pagamento che rappresenta lo strumento che rende possibile l'innesco del pagamento stesso presso i PSP.
 
-L'Ente Creditore genera il tradizionale avviso di pagamento **analogico** (sotto forma di avviso cartaceo o file stampabile) ogni qualvolta le norme lo obbligano a notificare a un debitore (cittadino o impresa) l'insorgenza di una posizione debitoria aperta nei suoi confronti. Tutte le norme di dettaglio che regolano la produzione di un avviso di pagamento analogico sono incluse nel documento collegato *"Il nuovo avviso di pagamento analogico nel sistema pagoPA"*. `[TBD inserire un link di riferimento ?]`
+L'Ente Creditore genera il tradizionale avviso di pagamento **analogico** (sotto forma di avviso cartaceo o file stampabile) ogni qualvolta le norme lo obbligano a notificare a un debitore (cittadino o impresa) l'insorgenza di una posizione debitoria aperta nei suoi confronti. Tutte le norme di dettaglio che regolano la produzione di un avviso di pagamento analogico sono incluse nel documento collegato *"Il nuovo avviso di pagamento analogico nel sistema pagoPA"* ([disponibile qui](https://github.com/pagopa/lg-pagopa-docs/blob/master/documentazione_tecnica_collegata/documentazione_collegata/guidatecnica_avvisoanalogico_v2.2.1_con_alleg.pdf)).
 
 L'EC continua a recapitare l'avviso analogico all'Utilizzatore finale con le modalità tradizionali a cui può affiancare funzioni di stampa a carico dell'Utilizzatore finale dopo il downloading del documento.
 
-L'avviso di pagamento analogico, oltre al logotipo del Sistema pagoPA, contiene le informazioni indispensabili per l\'esecuzione del pagamento, che sono dettagliate nella Sezione III.
+L'avviso di pagamento analogico, oltre al logotipo del Sistema pagoPA, contiene le informazioni indispensabili per l'esecuzione del pagamento, che sono dettagliate nella Sezione III. `[TBD oppure usiamo "Sez.3" ?]`
 
 Si noti che l'importo contenuto nell'avviso di pagamento analogico è quello corrispondente al momento della produzione di tale documento e quindi può essere soggetto a variazioni (in più o in meno) al momento in cui ne viene richiesto il pagamento da parte dell'utilizzatore finale, nel caso sia intervenuto un aggiornamento della posizione debitoria, purché tale possibilità sia stata effettivamente esplicitata in una avvertenza sull'avviso.
 
