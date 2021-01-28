@@ -1,5 +1,4 @@
-Gestione della Posizione Debitoria
-==================================
+**SEZIONE II -- REGOLE DI FUNZIONAMENTO DEL SISTEMA**
 
 `[TBD ## 2_01_00 gestione della posizione debitoria]`
 `[TBD ## 2_02_00 processo di pagamento attivato presso EC]`
