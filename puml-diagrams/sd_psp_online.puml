@@ -1,0 +1,11 @@
+autonumber 
+participant psp  as "PSP"
+participant nodo as "pagoPA"
+participant user 
+
+nodo -> psp : req nodoInviaCarrelloRPT
+psp -[#blue]-> : resp OK (parametriProfiloPagamento, parametriPagamentoImmediato)
+
+user -[#green]> psp : re-direct to PSP service url
+
+
