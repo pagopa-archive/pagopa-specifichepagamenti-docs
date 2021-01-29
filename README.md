@@ -13,68 +13,56 @@
 
 **pagoPA** _è un sistema per rendere più semplici, sicuri e trasparenti tutti i pagamenti verso la Pubblica Amministrazione._
 
-Il sistema dei pagamenti elettronici a favore della Pubblica Amministrazione, il sistema **pagoPA**, garantisce agli utilizzatori finali (cittadini e imprese) di effettuare pagamenti elettronici alla Pubblica Amministrazione in modo sicuro e affidabile, semplice, in totale trasparenza nei costi di commissione e in funzione delle proprie esigenze.
+Il sistema dei pagamenti elettronici a favore della Pubblica Amministrazione, il sistema **pagoPA**, garantisce agli utilizzatori finali (cittadini e imprese) di effettuare pagamenti elettronici verso la Pubblica Amministrazione in modo sicuro, affidabile, semplice, e in totale trasparenza nei costi di commissione e in funzione delle proprie esigenze.
 
-Le specifiche attuative del nodo dei pagamenti sono descritte in formato markdown e suddivise nelle cartelle :
+Le Specifiche Attuative del Nodo dei Pagamenti (SANP) sono descritte in formato markdown e suddivise nelle cartelle :
 
-- _sezione1-funzionamento-generale-del-sistema_
-- _sezione2-gestione-posizione-debitoria_
-- _sezione3-specifiche-tecniche_
-- _sezione4-adesione-al-sistema_
+* _sezione1-funzionamento-generale-del-sistema_
+* _sezione2-gestione-posizione-debitoria_
+* _sezione3-specifiche-tecniche_
+* _sezione4-adesione-al-sistema_
 
-Ogni cartella contiene più file `.md` che rappresentano i diversi capitoli del documento ed un file `index.rst` che rappresenta l'indice della sezione.
-Ogni file markdown non contiene immagini/diagrammi ma riferimenti ad essi.
+Ogni cartella contiene più file `.md` che rappresentano i diversi capitoli del documento ed un file `index.rst` che rappresenta l'indice della sezione. Ogni file markdown non contiene immagini/diagrammi ma riferimenti ad essi.
 
-La cartella `puml-diagrams` contiene tutti gli schemi UML in formato [PlantUML](https://plantuml.com/) che vengono geneati nella cartella `diagrams` ed utilizzati all'interno del documento.
-La cartella `images` contiene tutte le immagini utilizzate nel documento.
+La cartella `puml-diagrams` contiene tutti gli schemi UML in formato [PlantUML](https://plantuml.com/) che vengono generati nella cartella `diagrams` ed utilizzati all'interno del documento. La cartella `images` contiene tutte le immagini utilizzate nel documento.
 
 ## install
 
-`install java  brew cask install java`
-`install pandoc brew install pandoc`
+`$ install java  brew cask install java`
+
+`$ install pandoc brew install pandoc`
 
 ## Come aggiornare la documentazione
 
-Per modificare la documentazione, esegui [commit](https://github.com/git-guides/git-commit) sul relativo capitolo inserendo un messaggio esplicativo della modifica ed eventualmente facendo riferimento ad un [issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue).
+Per modificare la documentazione, è sufficiente eseguire [commit](https://github.com/git-guides/git-commit) sul relativo capitolo inserendo un messaggio esplicativo della modifica ed eventualmente facendo riferimento ad un [issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue).
 
-- Per fare riferimento ad un diagramma utilizza il percorso `../diagrams/<nome-file-puml>.png`
-- Per fare riferimento ad un immagine  utilizza il percorso `../images/<nome-file-img>`
-- Per modifica un diagramma , modifica ( o aggiungi ) il relativo file `.puml` all'interno della cartella `puml-diagrams`
-- Per modificare un immagine, modifica ( o aggiungi) il relativo file all'interno della cartella `images`
+* Per fare riferimento ad un diagramma utilizzare il percorso `../diagrams/<nome-file-puml>.png`
+* Per fare riferimento ad un'immagine utilizzare il percorso `../images/<nome-file-img>`
+* Per modifica un diagramma, modificare (o aggiungere) il relativo file `.puml` all'interno della cartella `puml-diagrams`
+* Per modificare un'immagine, modificare (o aggiungire) il relativo file all'interno della cartella `images`
 
-### Pubblicazione DocsItalia
+### Pubblicazione su DocsItalia
 
-Le Specifiche attuative sono disponibili anche su docsItalia il quale utilizza il formato rst.
-su docsItalia viene pubblicato tutto il contenuto della cartella *_docs*
+Le SNAP sono disponibili anche su DocsItalia, il quale utilizza il formato `rst`, dove viene pubblicato tutto il contenuto della cartella `_docs`.
 
-Per generare la documentazione da pubblicare su [docsItalia](https://docs.italia.it/) utilizzare `npm start`. 
+Per generare la documentazione da pubblicare su [DocsItalia](https://docs.italia.it/) utilizzare `npm start`. 
 
-Verranno generati i diagrammi, le immagini ed i relativi documenti rst convertiti da markdown.
+Verranno generati i diagrammi, le immagini ed i relativi documenti `rst` convertiti da markdown.
 
-### pubblicazione generazione di test
+Per ulteriori dettagli sul processo di modifica [vedere qui](./howto_change_sanp_wf/README.md).
 
-un qualsiasi ramo di progetto può essere pubblicato tramite il progetto [readTheDocs](https://readthedocs.org/projects/pagopa-specifichepagamenti-docs/versions/)
+### Pubblicazione rami di test
 
-### pubblicazione su DocsItalia
-
-Le Specifiche attuative sono disponibili anche su docsItalia il quale utilizza il formato rst.
-su docsItalia viene pubblicato tutto il contenuto della cartella *_docs*
-Bisogna poi eseguire commit dei file aggiornati.
-> il processo di modifica è documentato in dettaglio [qui](./howto_change_sanp_wf/README.md)
+Un qualsiasi ramo di progetto può essere pubblicato tramite  [Read The Docs](https://readthedocs.org/projects/pagopa-specifichepagamenti-docs/versions/).
 
 ## Come creare una segnalazione
 
-Creare una segnalazione in `Github` é molto semplice e puoi farlo direttamente dal tuo account.
-> Se non hai già un account su Github lo puoi creare [registandoti](https://github.com/) usando sia la tua mail personale che aziendale.
+Creare una segnalazione in `Github` è molto semplice e può essere fatto all'interno del proprio account Github (se non si dispone di un account è possibile crearlo [da qui](https://github.com)).
 
-Una volta registato, puoi aggiungere una nuova segnalazione _(New issue)_ cliccando sul pulsante verde indicato di seguito:
+Una volta registratisi, è possibile aggiungere una nuova segnalazione con il pulsante in verde "New issue":
 
-![Issue](_docs/media/newissue.png)
+![new-issue](_docs/media/newissue.png)
 
-## Importante
-
-Per favore, **non inserire segnalazioni riguardanti pagamenti**. Evita, per esempio, qualsiasi nome, cognome, o codice fiscale.
-
-Inoltre, **non inserire nessun dato relativo a configurazioni di sicurezza, quali certificati o password.**
+**IMPORTANTE** - per favore, si prega di **non inserire segnalazioni riguardanti pagamenti**. Evitare, per esempio, qualsiasi riferimenti a nome, cognome, codice fiscale, etc. Inoltre, **non inserire nessun dato relativo a configurazioni di sicurezza, quali certificati o password.**
 
 In ogni caso è opportuno inserire una descrizione accurata della tematica che si vuole segnalare.
