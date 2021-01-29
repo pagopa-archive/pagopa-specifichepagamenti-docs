@@ -22,8 +22,6 @@ Per i PSP che intendono erogare servizi quali CBILL e/o MyBank o che vogliono sv
 
 ## Attivazione di un PSP che si collega direttamente al Nodo
 
-`[TBD Collaudo || Test Esterno ?]`
-
 Il Referente del Prestatore che intende attivarsi sul sistema pagoPA attraverso un collegamento diretto alla piattaforma deve individuare la soluzione più adeguata per realizzare un collegamento fisico atto a garantire i livelli di servizio imposti da PagoPA S.p.A. e prevedere anche un piano per il disaster recovery.
 Il processo di avvio in Esercizio del Prestatore che si collega direttamente alla piattaforma dei pagamenti prevede il soddisfacimento di alcuni requisiti: 
 
@@ -42,7 +40,7 @@ Al fine di ultimare il processo di attivazione, il Referente del Prestatore comp
 
 ## Attivazione di un PSP che svolge il ruolo di Acquirer
 
-L'attivazione di un PSP che intende svolgere il ruolo di Acquirer comporta l'indicazione da parte dello stesso dell'utilizzo di un POS di proprietà o messo a disposizione da terze parti. In entrambi i casi, le attività di integrazione e configurazione potranno essere realizzate solamente dopo opportuna interlocuzione con il gruppo che si fa carico di gestire questa tipologia di interventi `[TBD occorre specificare quale sia il gruppo ?]`.
+L'attivazione di un PSP che intende svolgere il ruolo di Acquirer comporta l'indicazione da parte dello stesso dell'utilizzo di un POS di proprietà o messo a disposizione da terze parti. In entrambi i casi, le attività di integrazione e configurazione potranno essere realizzate solamente dopo opportuna interlocuzione con il gruppo che si fa carico di gestire questa tipologia di interventi `[TBD occorre specificare quale sia il gruppo ? -> non direi, unico punto di contatto da mettere nelle SANP sono github + helpdesk]`.
 
 ## Attivazione di un PSP che offre il servizio MyBank
 
@@ -63,12 +61,7 @@ All'interno del Sistema pagoPA i ruoli dei soggetti che intervengono nel servizi
 MyBank viene proposto come uno dei servizi di pagamento offerti dai Prestatori aderenti che possono svolgere il ruolo di SELLER BANK, per il convenzionamento di Amministrazioni ed Enti pubblici, o il ruolo di BUYER BANK, consentendo ai clienti di pagare tramite il proprio banking online in PagoPA senza sviluppi e costi aggiuntivi.
 
 La documentazione relativa a tale servizio è disponibile sul sito istituzionale di PagoPA S.p.A..
-`[TBD rimando alla sez.3 apposita 3_07_00_integrazione_wallet ?]`
-
-### PSP che intendono svolgere il ruolo di Banca Buyer
-
-`[TBD in verifica di revisione]`
-
+`[TBD rimando alla sez.3 apposita 3_07_00_integrazione_wallet ? -> io qui dovrei descrivere come devi compilare il CDI per configurare questo servizio]`
 
 ### PSP che intendono svolgere il ruolo di Banca Seller
 

@@ -1,10 +1,6 @@
 
 ## Banca Seller
-
-`[TBD rif https://docs.google.com/document/d/1M5OEfN5RZSfBSKRuhYWX3WZkWVcivD4WpRxsjwyEUzE/view]`
-
-Con riferimento alla Sez.4 `[TBD link a 5_00_00_attivazione_psp]` in questo capitolo si specificano le modalità di integrazione nel wallet dei pagamenti.
-
+`[TBD da ricontrollare ]`
 MyBank compare come un unico strumento di pagamento all’interno della componente WISP del sistema pagoPA. La Banca Buyer viene selezionata dall’utente dalla lista delle banche che offrono il servizio MyBank, mentre la Banca Seller viene proposta in maniera automatica tramite un algoritmo (`[TBD vedi Selezione della Banca Seller]`), l’utente potrà eventualmente rifiutare la selezione proposta dal sistema ed effettuare una scelta dalla lista dei PSP che offrono il servizio di banca seller.
 
 ### Workflow di pagamento

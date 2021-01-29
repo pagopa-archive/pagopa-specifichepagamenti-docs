@@ -1,7 +1,5 @@
 ## Acquirer
 
-`[TBD todo  ## 3_07_02 Acquirer]`
-
 Tramite la piattaforma pagoPA è possibile offrire il pagamento tramite carta di credito/debito in due diverse modalità :
 
 1. configurandosi come acquirer all'interno del servizio VPOS offerto da SIA S.p.A.

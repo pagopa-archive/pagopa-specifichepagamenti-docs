@@ -75,6 +75,6 @@ Nella giornata successiva all'incasso, il PSP accredita le somme sul conto dell'
 
 Nella giornata successiva all'accredito, il PSP invia al NodoSPC i dati relativi alla rendicontazione (*Task* T2.1.17).
 
-Il NodoSPC mantiene disponibili per l'EC i dati di rendicontazione nei dieci giorni `[TBD 10gg ?]` successivi (*Task* T2.1.18).
+Il NodoSPC mantiene disponibili per l'EC i dati di rendicontazione nei dieci giorni `[TBD 10gg -> si, a termine dei 10 giorni, i flussi sono sul nodo ma archiviati ?]` successivi (*Task* T2.1.18).
 
 L'EC recupera i dati di rendicontazione (*Task* T2.1.19) e può quindi avviare il processo di riconciliazione.

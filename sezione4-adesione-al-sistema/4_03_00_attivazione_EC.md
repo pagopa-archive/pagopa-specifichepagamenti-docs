@@ -12,20 +12,18 @@ La piattaforma dei pagamenti dispone di due ambienti, distinti e indipendenti:
 * un ambiente di Test Esterno (disponibile per eseguire tutti i test di attivazione e integrazione previsti da PagoPA S.p.A.);
 * un ambiente di Esercizio.
 
-Gli ambienti di Test Esterno e di Esercizio della piattaforma dei pagamenti saranno sempre allineati alle Specifiche Attuative di riferimento, eccezion fatta per i periodi in cui si lavorerà all'implementazione di nuove specifiche. Ad esempio può accadere che l'ambiente di Collaudo `[TBD Test Esterno ?]` stia recependo delle evoluzioni di prossimo rilascio in ambiente di Esercizio.
+Gli ambienti di Test Esterno e di Esercizio della piattaforma dei pagamenti saranno sempre allineati alle Specifiche Attuative di riferimento, eccezion fatta per i periodi in cui si lavorerà all'implementazione di nuove specifiche. Ad esempio può accadere che l'ambiente di Test Esterno stia recependo delle evoluzioni di prossimo rilascio in ambiente di Esercizio.
 
 ## Processo di avvio in Esercizio
-
-`[TBD Collaudo || Test Esterno ?]`
 
 Il processo di avvio in Esercizio di un Ente Creditore direttamente connesso prevede il soddisfacimento di alcuni prerequisiti che riguardano la predisposizione di un ambiente di Collaudo, di un ambiente di Esercizio e di un piano per il disaster recovery.
 
 Infatti, l'Ente Creditore che sulla base dei modelli dichiarati vuole rendere disponibili i propri servizi di pagamento sul Sistema pagoPA è tenuto ad attivare:
 
-* Un collegamento fisico (di Collaudo);
+* Un collegamento fisico (di Test Esterno);
 * Un collegamento fisico (di Esercizio).
 
-L'Ente, per completare la configurazione, dovrà fornire anche tutte le informazioni necessarie all'attivazione di almeno una Stazione in ambiente di Collaudo ed almeno una Stazione in ambiente di Esercizio. La definizione della Stazione è di competenza del soggetto collegato direttamente alla piattaforma.
+L'Ente, per completare la configurazione, dovrà fornire anche tutte le informazioni necessarie all'attivazione di almeno una Stazione in ambiente di Test Esterno ed almeno una Stazione in ambiente di Esercizio. La definizione della Stazione è di competenza del soggetto collegato direttamente alla piattaforma.
 
 Ogni collegamento fisico può avere, in funzione dei modelli di pagamento implementati e delle regole/preferenze del soggetto direttamente connesso, un numero variabile di Stazioni. La configurazione di un Ente sulla piattaforma si completa con l'associazione dell'Ente ad almeno una delle sue Stazioni. Tutte queste attività devono essere eseguite dal Referente Tecnico attraverso il Portale delle Adesioni (per ulteriori dettagli si rimanda al Manuale Utente).
 
@@ -35,10 +33,10 @@ Nel documento di manleva, il Referente Tecnico dichiara di voler rendere disponi
 
 Per l'avvio in esercizio di un Ente Creditore, il Referente Tecnico può agire come segue:
 
-1. Decidere se procedere o meno con i test previsti per l'ambiente di Collaudo, magari avvalendosi del supporto del personale di PagoPA S.p.A. Nel caso in cui decida di effettuare i test deve:
-	* fornire gli IBAN di accredito da utilizzare in ambiente di Collaudo;
+1. Decidere se procedere o meno con i test previsti per l'ambiente di Test Esterno, magari avvalendosi del supporto del personale di PagoPA S.p.A. Nel caso in cui decida di effettuare i test deve:
+	* fornire gli IBAN di accredito da utilizzare in ambiente di Test Esterno;
 	* proporre a PagoPA S.p.A. una data di inizio dei test, al fine di coordinare le attività previste;
-2. Configurati gli IBAN di Collaudo ed ultimati i test con il supporto di PagoPA S.p.A., il RT compila il "Verbale di Collaudo" e rimane in attesa che PagoPA S.p.A. lo validi e chiuda formalmente la fase di Collaudo;
+2. Configurati gli IBAN di Test Esterno ed ultimati i test con il supporto di PagoPA S.p.A., il RT compila il "Verbale di Collaudo" e rimane in attesa che PagoPA S.p.A. lo validi e chiuda formalmente la fase di Collaudo;
 3. Terminata la fase di Collaudo (2), che può avvenire anche senza il diretto coinvolgimento di PagoPA S.p.A., il RT decide se procedere con l'esecuzione dei test previsti per l'ambiente di Esercizio, magari avvalendosi del supporto del personale PagoPA S.p.A.. Nel caso in cui decida di effettuare i test deve:
 	* fornire gli IBAN di accredito da utilizzare in ambiente di Esercizio (potrebbe inserirne di nuovi o utilizzare IBAN già attivi per quell'Ente);
 	* configurati gli IBAN in fase di Pre-Esercizio ed ultimati i test con il supporto di PagoPA S.p.A., il RT compila il "Verbale di Pre-Esercizio" e rimane in attesa che PagoPA S.p.A. lo validi per chiudere le attività.
