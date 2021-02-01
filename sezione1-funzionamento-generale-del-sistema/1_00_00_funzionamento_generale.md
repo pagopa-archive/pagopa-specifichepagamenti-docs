@@ -1,9 +1,8 @@
 **SEZIONE I -- FUNZIONAMENTO GENERALE DEL SISTEMA**
 
-Funzionamento Generale del Sistema
-==================================
-'
-Obiettivo strategico della piattaforma pagoPA è quello di facilitare e diffondere, a beneficio dei cittadini e delle imprese, l'utilizzo di strumenti evoluti nei pagamenti in favore della Pubblica Amministrazione, delle Società a controllo pubblico e dei Gestori dei Pubblici servizi. Si denominano i soggetti che hanno aderito a pagoPA in attuazione dell'art 5 del CAD `[TBD inserire rif esplicito al CAD]`, con il nome collettivo di **Ente Creditore**.
+#Funzionamento Generale del Sistema
+
+Obiettivo strategico della piattaforma pagoPA è quello di facilitare e diffondere, a beneficio dei cittadini e delle imprese, l'utilizzo di strumenti evoluti nei pagamenti in favore della Pubblica Amministrazione, delle Società a controllo pubblico e dei Gestori dei Pubblici servizi. Si denominano i soggetti che hanno aderito a pagoPA in attuazione dell'art 5 del CAD, con il nome collettivo di **Ente Creditore**.
 
 L'adesione a pagoPA di tutti i più importanti PSP, ovvero Prestatori di Servizi di Pagamento (Banche, Istituti di moneta elettronica e Istituti di pagamento) consente ai loro clienti l'accesso ad una vastissima gamma di strumenti di pagamento in continua espansione. Ad esempio, possono pagare con pagoPA i possessori di carte di credito dei circuiti Visa, Mastercard, American Express, i possessori di un account PayPal e di app per il pagamento con dispositivi _mobile_.
 
@@ -28,7 +27,7 @@ Il perfezionamento delle operazioni disposte tramite pagoPA avviene attraverso i
 
 Il sistema pagoPA prevede la possibilità che le attività legate all'effettuazione dei pagamenti siano eseguite, in tutto od in parte, da Intermediari tecnologici (soggetti pubblici e/o privati) per conto sia degli Enti Creditori che dei Prestatori di Servizi di Pagamento. A tale proposito si definisce:
 
-* **Intermediario tecnologico** come un soggetto appartenente alla Pubblica Amministrazione che offre - previa adesione alla piattaforma pagoPA - ad altri soggetti aderenti, PSP e/o Enti Creditori, un servizio tecnologico per il collegamento e per lo scambio dei flussi con la piattaforma pagoPA, nel pieno rispetto delle Linee Guida `[TBD riferimento alle linee guida in GU https://www.gazzettaufficiale.it/eli/id/2018/07/03/18A04494/sg ?]` e dei relativi standard tecnici.
+* **Intermediario tecnologico** come un soggetto appartenente alla Pubblica Amministrazione che offre - previa adesione alla piattaforma pagoPA - ad altri soggetti aderenti, PSP e/o Enti Creditori, un servizio tecnologico per il collegamento e per lo scambio dei flussi con la piattaforma pagoPA, nel pieno rispetto delle [Linee Guida](https://www.gazzettaufficiale.it/eli/id/2018/07/03/18A04494/sg) e dei relativi standard tecnici.
 * **Partner tecnologico** è un soggetto imprenditoriale di cui l'Ente Creditore si avvale in via strumentale per l'esecuzione delle attività tecniche relative alla fornitura dei servizi IT, non necessariamente caratterizzabili, per l'interfacciamento con la piattaforma pagoPA. Ciò ferma restando la responsabilità nei confronti di PagoPA in capo all'Ente Creditore.
 
 ## Ciclo di vita del pagamento
@@ -62,7 +61,6 @@ Si distinguono due processi di pagamento che differiscono per l'inizializzazione
 3. Il PSP che gestisce il pagamento, tramite la piattaforma pagoPA, interopera con l'EC, garantendo la correttezza ed efficacia al pagamento;
 4. La piattaforma pagoPA genera la Ricevuta Telematica liberatoria e la invia all'EC assumendosene la responsabilità. Anche in questo caso la RT garantisce all'EC la ricezione dei fondi.
 
-`[TBD occorre una intestazione di livello 2 qui per spezzare ?]`
 
 La Piattaforma pagoPA, prodotto della omonima PagoPA S.p.A., funzionalmente assume un ruolo determinante all'interno del processo di esecuzione di un pagamento in favore di un EC:
 
@@ -78,7 +76,7 @@ Gli aspetti sub (a), (b) e (c), nell'ambito del quadro generale di funzionamento
 
 ## L'adesione al Sistema pagoPA
 
-L'utilizzo dei servizi messi a disposizione da pagoPA è attivato attraverso apposite procedure, descritte in maggior dettaglio nella Sezione IV `[TBD link]`, che prevedono:
+L'utilizzo dei servizi messi a disposizione da pagoPA è attivato attraverso apposite procedure, descritte in maggior dettaglio nella Sezione IV, che prevedono:
 
 * per gli EC l'invio a PagoPA S.p.A. di una lettera di adesione, di formato predeterminato, sottoscritta dal legale rappresentante;
 * per i PSP la sottoscrizione con PagoPA S.p.A., su base volontaria, di atti bilaterali denominati "Accordi di Servizio".
