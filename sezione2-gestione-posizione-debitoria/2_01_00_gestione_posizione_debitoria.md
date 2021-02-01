@@ -1,5 +1,4 @@
-Gestione della Posizione Debitoria
-==================================
+# Gestione della Posizione Debitoria
 
 I due diversi *workflow* gestiti sul Sistema pagoPA si differenziano principalmente in base al soggetto che innesca il pagamento. Si avrà quindi un processo diverso se l'utilizzatore finale accede al servizio di pagamento attraverso tecnologie e funzioni messe a disposizione da un Ente Creditore ovvero attraverso tecnologie e funzioni messe a disposizione da un Prestatore di Servizi di Pagamento.
 
@@ -38,6 +37,4 @@ Si noti che l'importo contenuto nell'avviso di pagamento analogico è quello cor
 La peculiarità di alcune postazioni messe a disposizione dai Prestatori di Servizi di Pagamento rende necessario automatizzare l'acquisizione dei dati presenti sull'avviso di pagamento. Per questo motivo tale documento deve essere corredato, oltre che dati essenziali sopra citati, anche da un insieme di elementi grafici facilmente leggibili e decodificabili da apposite apparecchiature.
 
 I processi di creazione, aggiornamento, chiusura o annullamento di una posizione debitoria sono interni al sistema informativo dell'Ente Creditore. Nei casi previsti tali operazioni possono scatenare l'invio di un avviso di pagamento con strumenti digitali.
-
-`[TBD "Avvisatura digitale push e pull" deprecate]`
 
