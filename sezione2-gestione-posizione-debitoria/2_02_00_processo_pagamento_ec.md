@@ -1,5 +1,4 @@
-Il Processo di pagamento attivato presso l'Ente Creditore
-=========================================================
+# Il Processo di pagamento attivato presso l'Ente Creditore
 
 Rientrano in questa categoria di pagamenti quelli richiesti dall'Utilizzatore finale attraverso i siti web o *mobile app* o altri strumenti tecnologici messi a disposizione dagli Enti Creditori per i pagamenti elettronici. Il processo di pagamento attivato presso l'Ente Creditore risulta particolarmente congeniale al caso di pagamenti spontanei (con generazione della posizione debitoria), ma deve gestire anche il caso in cui l'utilizzatore finale abbia ricevuto un avviso di pagamento. 
 
@@ -18,15 +17,13 @@ Nel processo schematizzato in **Figura 2** sono coinvolti quattro soggetti:
 
 ![bpmn-pagamento-ec](../images/bpmn_ec.png)
 
-Avvio del pagamento
--------------------
+## Avvio del pagamento
 
 Come descritto nei paragrafi precedenti, l'Utilizzatore finale può eseguire un pagamento per ragioni diverse che generano due diramazioni distinte (*Gateway* G2.1.1) nel caso abbia disponibile o meno un avviso di pagamento (sia questo digitale o analogico).
 
 In entrambi i casi l'EC rende disponibile all'Utilizzatore finale un'interfaccia utente al fine di reperire i dati necessari a comporre una o più RPT e innescare il pagamento.
 
-Generazione posizione debitoria
--------------------------------
+## Generazione posizione debitoria
 
 La generazione di una posizione debitoria è l'evento propedeutico al pagamento sul Sistema pagoPA.
 
@@ -34,8 +31,7 @@ In determinate circostanze, previste nello specifico dalla vigente normativa, un
 
 Nel caso non sussistano le circostanze sopra indicate, l'Utilizzatore finale può comunque assumere l'iniziativa di avviare il pagamento (si parla in questo caso di _pagamento spontaneo_) accedendo - ad esempio - al portale messo a disposizione dall'Ente Creditore; in tal caso l'EC genera la relativa posizione debitoria (*Task* T2.1.1). È facoltà dell'EC esporre delle funzioni che producano, per lo stesso pagamento, un avviso (analogico o digitale), da utilizzare in seguito per disporre il pagamento presso un PSP.
 
-Scelta canale di pagamento
---------------------------
+## Scelta canale di pagamento
 
 L'utilizzatore finale accede ai sistemi dell'EC per pagare uno o più avvisi che gli sono stati recapitati e/o uno o più pagamenti spontanei e l'EC genera il carrello di richieste di pagamento telematico reindirizzando l'utilizzatore finale sul portale WISP (*Task* T2.1.2).
 
@@ -49,14 +45,13 @@ Pertanto, detti dati saranno trattati esclusivamente per consentire agli utenti 
 
 Il conferimento dei dati ed il trattamento degli stessi da parte di PagoPA S.p.A. per tali finalità è dunque obbligatorio e non richiede un esplicito consenso, pena l'impossibilità per PagoPA S.p.A. di erogare i servizi sopra citati.
 
-Autorizzazione del pagamento
-----------------------------
+## Autorizzazione del pagamento
 
 Il processo di pagamento segue percorsi differenti a seconda del servizio del PSP scelto dall'Utilizzatore finale:
 
 - In caso di pagamento con carta (di credito o di debito) (*Gateway* G2.1.2), l'Utilizzatore finale immette (o recupera nel caso li abbia precedentemente memorizzati) i dati della carta (*Task* T2.1.4) e quindi decide se autorizzare il pagamento (*Gateway* G2.1.5).
     - Il pagamento con carta è gestito da un POS virtuale del NodoSPC con due differenti esperienze utente. Nel caso di pagamento *on us* il NodoSPC riconosce dai dati della carta immessi che il PSP emittente (*issuer*) è aderente al sistema pagoPA e quindi lo propone come gestore del pagamento (*acquirer*) di default. Altrimenti, casistica *not on us,* tale scelta è compiuta esplicitamente dall'Utilizzatore finale a cui viene proposta una lista di PSP.
-    - I PSP che offrono il servizio di gestione del pagamento con carta devono preventivamente configurarsi come tali. I dettagli delle procedure da seguire  sono riportati nella Sezione IV `[TBD o Sez.4 ?]`.
+    - I PSP che offrono il servizio di gestione del pagamento con carta devono preventivamente configurarsi come tali. I dettagli delle procedure da seguire  sono riportati nella Sezione IV.
 - Per tutte le altre tipologie di pagamento, dopo che l'Utilizzatore finale ha selezionato un PSP sul *front-end* del sistema, il NodoSPC inoltra in *back-end* il carrello allo stesso PSP responsabile dell'esecuzione (*Task* T2.1.5).
     -  L'esperienza utente del processo di pagamento può proseguire in un *front-end* gestito dal PSP (quindi esterno al sistema pagoPA), che prevede l'identificazione del soggetto versante (*Task* T2.1.8) e la successiva autorizzazione (*Gateway* G2.1.4).
     - In caso contrario, l'Utilizzatore finale viene reindirizzato al *front-end* dell'EC da cui era stato avviato il pagamento (*Task* T2.1.7). In questo caso l'autorizzazione del pagamento da parte dell'Utilizzatore finale avviene mediante l'interazione con strumenti messi a disposizione dal PSP. L'esecuzione del pagamento ed il rilascio della relativa attestazione (RT) avvengono in funzione delle modalità di autorizzazione del pagamento adottate dal PSP. Si distingue quindi l'autorizzazione:
@@ -68,8 +63,7 @@ L'EC riceve tutte le RT, comprese quelle negative generate dal NodoSPC (*Task* T
 
 L'EC può mettere a disposizione dell'Utilizzatore finale una ricevuta (*Task* T2.1.15) e terminare il processo. Sul portale dell'EC devono essere messe a disposizione le funzioni che permettono all'Utilizzatore finale di interrogare lo stato della sua richiesta di pagamento, scaricare una copia di ricevuta o quietanza di pagamento, scaricare copia analogica e/o duplicato del documento informatico Ricevuta Telematica.
 
-Accredito e rendiconto
-----------------------
+## Accredito e rendiconto
 
 Nella giornata successiva all'incasso, il PSP accredita le somme sul conto dell'EC (*Task* T2.1.16).
 
