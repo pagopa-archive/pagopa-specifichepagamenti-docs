@@ -79,7 +79,7 @@ Dove
 
 ### Catalogo Dati Informativi
 
-`[TBD riversiamo qui il contenuto del doc "MyBank CDI Update" ? - https://docs.google.com/document/d/16-Kl8jyItkeQqNq7l62kMkt1u1VXn7XB7QNS2_C_yjw]`
+`[TBD riversiamo qui il contenuto del doc "MyBank CDI Update" ? - https://docs.google.com/document/d/16-Kl8jyItkeQqNq7l62kMkt1u1VXn7XB7QNS2_C_yjw] -> io direi di no, dovrebbe stare ( in un futuro nella sez. IV `
 
 
 

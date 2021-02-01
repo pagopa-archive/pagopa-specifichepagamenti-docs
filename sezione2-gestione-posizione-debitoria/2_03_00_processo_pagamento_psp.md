@@ -3,7 +3,7 @@ Processo di pagamento attivato presso il Prestatore di Servizi di Pagamento
 
 Questo processo prevede che l'esecuzione del pagamento avvenga presso le infrastrutture messe a disposizione dal PSP quali, ad esempio, sportelli ATM, applicazioni di *Home banking* e *mobile* *payment*, uffici postali, punti della rete di vendita dei generi di Monopolio (Tabaccai), SISAL e Lottomatica, casse predisposte presso la Grande Distribuzione Organizzata, etc.
 
-L'EC beneficiario del pagamento deve rendere accessibile ai PSP, con le modalità mediate dal NodoSPC, un archivio nel quale siano state preventivamente memorizzate le posizioni debitorie (Archivio Pagamenti in Attesa).
+L'EC beneficiario del pagamento deve rendere accessibile ai PSP, con le modalità mediate dal NodoSPC, un archivio nel quale siano state preventivamente memorizzate le posizioni debitorie (Archivio Pagamenti in Attesa). `[TBD - questo eliminerei]`
 
 Per rendere possibile il pagamento l'EC ha l'obbligo di recapitare all'utilizzatore finale un avviso con gli estremi del pagamento da effettuare. Tale recapito deve obbligatoriamente avvenire sia in modalità analogica (tramite servizi postali), che digitale. L'EC può inoltre adottare ulteriori misure per la diffusione degli avvisi di pagamento, per esempio rendere disponibili funzioni di stampa on line tramite il proprio sito.
 
@@ -37,6 +37,7 @@ La generazione della posizione debitoria è l'evento che costituisce la premessa
 In determinate circostanze, previste nello specifico dalla vigente normativa, un soggetto matura un debito in favore di una Pubblica Amministrazione (centrale o locale). In questo caso lo stesso EC assume l'iniziativa di generare una posizione debitoria e provvede a notificare l'avviso di pagamento al soggetto pagatore. Questa casistica prende il nome di _pagamento dovuto_. Nel caso che l'EC sia tenuto ad accompagnare la notifica con un avviso di pagamento analogico, provvede anche a inviare al NodoSPC di un avviso digitale. Con questi strumenti si innesca il pagamento presso il PSP.
 
 Nel caso in cui non sussistano le circostanze sopra indicate e quindi l'Utilizzatore finale non sia in possesso di un avviso digitale, l'Utilizzatore stesso può assumere l'iniziativa di avviare il pagamento (si parla in questo caso di _pagamento spontaneo_), purché il PSP disponga della relativa funzione. In questo caso l'Utilizzatore finale interagisce con uno specifico servizio messo a disposizione dal PSP e, tramite questo, richiede all'EC la generazione della posizione debitoria (*Task* T2.2.1). L'EC risponde con l'invio al PSP di un avviso (*Task* T2.2.2) che può entrare nella disponibilità all'Utilizzatore finale (*Task* T2.2.3) il quale dunque dispone degli elementi per decidere se autorizzare il pagamento (*Task* T2.2.8). Dopo tale fase preliminare il workflow di pagamento risulta indistinguibile da quello innescato da un avviso.
+`[TBD- eliminerei il pagamento spontaneo, in quanto al momento esiste solo il bollo auto ed è un eccezione al modello]`
 
 Verifica posizione debitoria e attivazione della richiesta di pagamento
 -----------------------------------------------------------------------
@@ -45,21 +46,23 @@ Nel caso in cui l'Utilizzatore finale inneschi il pagamento con un avviso, il PS
 
 - La funzione opzionale di verifica per controllare lo stato della posizione debitoria attraverso l'EC, verificando la sussistenza e la consistenza del debito, che può aver subito variazioni decorsi i termini del pagamento (per esempio potrebbe essere variato l'importo a causa dell'aggiungersi di interessi di
     mora)
-- La funzione necessaria di attivazione che richiede all'EC l'invio di una Richiesta di pagamento telematica
-    (RPT), ovvero il documento necessario a regolare il pagamento. `[TBD rifrasare meglio per il nuovo mod 3 ?]`
+- La funzione necessaria di attivazione che richiede la creazione di una sessione di pagamento esclusiva dell'avviso. `[TBD rifrasare meglio per il nuovo mod 3 ? -->updated]`
 
 È facoltà del Prestatore di Servizi di Pagamento eseguire preliminarmente la verifica della posizione debitoria (*Gateway* G2.2.3) dando luogo a una diramazione del processo:
 
-1. Nel caso venga eseguita la verifica l'EC risponde (*Task* T2.2.5) fornendo i dati previsti riguardo lo stato della posizione debitoria, nonché le possibili variazioni dell'importo dovute ad eventi successivi all'invio dell'avviso. L'invocazione della funzione di verifica non ha effetti sullo stato della posizione debitoria. In caso di sussistenza della posizione debitoria l'Utilizzatore finale deve decidere se procedere (*Gateway* G2.2.2):
+1. Nel caso venga eseguita la verifica, il PSP acquisisce i dati riguardo la posizione debitoria, nonché le possibili variazioni dell'importo dovute ad eventi successivi all'invio dell'avviso e le diverse opzioni di pagamento previste all'interno dell'avviso. L'invocazione della funzione di verifica non ha effetti sullo stato della posizione debitoria. In caso di sussistenza della posizione debitoria l'Utilizzatore finale deve decidere se procedere (*Gateway* G2.2.2):
 	* (a) Se l'Utilizzatore finale rifiuta di procedere il processo termina (*Task* T2.2.4), senza alcuna segnalazione all'EC.
-    * (b) Se l'Utilizzatore finale decide di procedere, il PSP esegue l'incasso e il processo prosegue, nella seconda diramazione, con l'attivazione della RPT (*Task* T2.2.7) e la generazione di una RT positiva (*Task* T2.2.11) `[TBD chk]`
-2. Il PSP, che ha facoltà di non eseguire la diramazione precedente, richiede l'attivazione della RPT (*Task* T2.2.6). L'EC risponde (*Task* T2.2.7) fornendo, come nel caso della funzione di verifica, i dati riguardo lo stato della posizione debitoria, nonché le possibili variazioni dell'importo dovute ad eventi successivi all'invio dell'avviso. L'invocazione della funzione di attivazione genera un token di pagamento che, oltre ad avere effetto sullo stato della posizione debitoria che viene posta nello stato "paying", inibisce l'apertura di sessioni di pagamento concorrenti per la stessa posizione debitoria. Il PSP chiede all'Utilizzatore finale di autorizzare il pagamento (*Gateway* G2.2.4):
-	* Se il pagamento è autorizzato, il PSP incassa il pagamento (*Task* T2.2.9) e genera una RT positiva
+    * (b) Se l'Utilizzatore finale decide di procedere, il PSP con la creazione della sessione di pagamento , l'incasso  e la generazione di un'esito dell'operazione  `[TBD chk --> updated]`
+  
+2. Il PSP, che ha facoltà di non eseguire la diramazione precedente, richiede una sessione di pagamento. L'invocazione della funzione di attivazione genera un token di pagamento che, oltre ad avere effetto sullo stato della posizione debitoria che viene posta nello stato "paying", inibisce l'apertura di sessioni di pagamento concorrenti per la stessa posizione debitoria. Il PSP chiede all'Utilizzatore finale di autorizzare il pagamento (*Gateway* G2.2.4):
+	* Se il pagamento è autorizzato, il PSP incassa il pagamento (*Task* T2.2.9) e genera un esito positivo
     (*Task* T2.2.11)
-	* Se il pagamento non è autorizzato, il PSP genera una RT negativa (*Task* T2.2.10) `[TBD check]`
+	* Se il pagamento non è autorizzato, il PSP genera un'esito negativo (*Task* T2.2.10) `[TBD check]`
 
-Nel caso di emissione di ricevuta telematica positiva il PSP consegna all'Utilizzatore finale un'attestazione di
-pagamento, contenente le informazioni specificate nella Sezione III. `[TBD o Sez.3 ?]`
+E' possibile richiedere una sessione di pagamento valida per un arco temporale limitato, in tal caso, in assenza di esiti la posizione debitoria verrà riaperta.
+
+Nel caso di esito positivo il PSP consegna all'Utilizzatore finale un'attestazione di
+pagamento, contenente le informazioni specificate nella Sezione III. `[TBD o Sez.3 ? --> è descritta in 2_04_00_funzioni_accessorie]`
 Tale attestazione è opponibile all'EC.
 
 Le ricevute telematiche vengono trasmesse al NodoSPC. Il NodoSPC mette la ricevuta telematica a disposizione dell'EC (*Task* 2.2.12) che a sua volta può mettere a disposizione dell'Utilizzatore finale una ricevuta (*Task* T2.2.13).
@@ -71,9 +74,7 @@ Trasmissione dati di accredito e rendicontazione
 
 `[TBD uniformare al caso di pagamento presso EC ?]`
 
-Dopo aver effettuato il pagamento, il PSP accredita il conto dell'EC specificato dalla richiesta di pagamento telematico ed invia al NodoSPC i dati relativi alla ricevuta telematica accreditata (*Task* T2.2.15).
-
-Nel caso che in cui venga effettuato un accredito cumulativo il PSP invia i dati relativi alla rendicontazione al NodoSPC (*Task* T2.2.16).
+Il PSP accrediterà le somme sui conti dell'EC  ricevuti durante la creazione della sessione di pagamento , per mezzo di bonifico SCT, il giorno successivo ( D+1 ), mentre entro due giorni ( D+2 ) invierà il flusso di rendicontazione dettagliando l'elenco puntuali dei pagamenti contenuti all'interno dei diversi bonifici effettuati.
 
 Il NodoSPC mette a disposizione i dati di rendicontazione per l'EC (*Task* T2.2.17).
 
@@ -82,7 +83,7 @@ L'EC recupera i dati di rendicontazione (*Task* T2.2.18) e può quindi avviare i
 Attivazione della richiesta di pagamento
 ----------------------------------------
 
-`[TBD rivedere !]`
+`[TBD rivedere --> da cancellare!]`
 
 Il NodoSPC non controlla l'effettiva sequenza operativa scelta dal PSP, relativa alle fasi del processo descritte in precedenza: pertanto, un PSP potrebbe effettuare la richiesta di attivazione della richiesta di pagamento telematico senza aver preventivamente effettuato la fase di verifica. Con questo approccio è sconsigliato far precedere l'incasso alla richiesta di attivazione della richiesta di pagamento telematico (*Task* T2.2.6), in quanto sul Sistema pagoPA non è gestito automaticamente il caso in cui l'EC non riesca a inviare la richiesta di pagamento telematico prevista dal *workflow*: per esempio, nel caso in cui il pagamento sia già stato eseguito con un altro canale oppure perché l'importo dovuto sia diverso da quello stampato sull'avviso.
 
