@@ -43,7 +43,7 @@ Ogni chiamata viene autorizzata verificando che la stazione riportata sia stata 
 Ogni chiamata verso la piattaforma pagoPA è autenticata per mezzo di tre parametri contenuti all'interno del body del messaggio SOAP:
 
 * *idPSP*: identificativo del PSP per conto del quale si sta effettuando la chiamata
-* *intermeidBrokerPSPdiarioPSP*: identificativo dell'intermediario che sta effettuando la chiamata `[TBD check]`
+* *idBrokerPSP*: identificativo dell'intermediario che sta effettuando la chiamata
 * *idChannel*: identificativo del canale utilizzato per effettuare la chiamata
 * *password*: password del canale
 
