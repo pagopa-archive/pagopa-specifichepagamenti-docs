@@ -46,4 +46,4 @@ N.B. Si fa presente che i paragrafi per i quali è prevista una proposta evoluti
 
 ![work-in-progress](../images/wip.png) **Paragrafo soggetto a proposta di modifica**
 
-La presente versione (3.0.0-RC) propone le modifiche introdotte con il [Processo di pagamento presso il PSP con Ente multi-beneficiario](https://docs.google.com/document/d/1qmQ12SfkhjJGss--d5mQwqrcMCb9pF4JHj-k8w8X9jM). A tal proposito si ricorda che l'attuale modello di pagamento presso il PSP resta fruibile ed ben documentato nella precedente versione delle SANP 2.6. `[TBD check-->updated]`
+La presente versione (3.0.0-RC) propone le modifiche introdotte con il [Processo di pagamento presso il PSP con Ente multi-beneficiario](https://docs.google.com/document/d/1qmQ12SfkhjJGss--d5mQwqrcMCb9pF4JHj-k8w8X9jM). A tal proposito si ricorda che l'attuale modello di pagamento presso il PSP resta fruibile ed è ben documentato nella precedente versione delle SANP 2.2.6.
