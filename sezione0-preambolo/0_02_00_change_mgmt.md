@@ -20,7 +20,7 @@ Rappresentare l'entità dei cambiamenti attraverso una codifica delle versioni p
 
 Nel seguito sono descritte le regole che esprimono la semantica della codifica adottata:
 
-1. La base documentale pagoPA è costituita da diversi documenti reperibili sul sito DOCS Italia `[TBD cambiare ?]`. Come riferimento orientativo, segue un elenco non esaustivo e soggetto a evoluzione nel tempo:
+1. La base documentale pagoPA è costituita da diversi documenti reperibili sul sito DOCS Italia. Come riferimento orientativo, segue un elenco non esaustivo e soggetto a evoluzione nel tempo:
 	* Linee guida
 		* Linee Guida per l'Effettuazione dei Pagamenti Elettronici a favore delle Pubbliche Amministrazioni e dei Gestori di Pubblici Servizi
 		* Allegato A - Specifiche Attuative dei Codici Identificativi di versamento, riversamento e rendicontazione (SACI)
@@ -38,11 +38,9 @@ Nel seguito sono descritte le regole che esprimono la semantica della codifica a
 		* Il pagamento presso POS fisici nel sistema pagoPA
 		* Allegato tecnico Agenzia delle entrate-Riscossione per integrazione su pagoPA di bollettini RAV per pagamento presso PSP
 		* Allegato tecnico Pagamento della Tassa Automobilistica presso i PSP
-	* Materiale per sviluppatori `[TBD portare fuori dalla SANP]`
+	* Materiale per sviluppatori
 		* WSDL
 		* Schema XSD
-		* SDK Android
-		* SDK iOS
 2. Ogni elemento documentale pubblicato è caratterizzato da una versione espressa da una tripletta numerica: **Major.Minor.Patch**. Una versione di pre-rilascio PUÒ essere indicata aggiungendo immediatamente dopo la versione **Patch** un trattino e una serie di identificatori separati dal punto. Una versione di pre-rilascio indica comunque una versione instabile che non riflette il comportamento del sistema.
 3. Una volta che un documento versionato è stato rilasciato, i contenuti NON POSSONO essere modificati. Qualsiasi modifica DEVE essere rilasciata come una nuova versione dello stesso documento.
 4. Ogni numero della tripletta è un intero positivo maggiore o uguale a zero, il cui incremento rappresenta l'entità ed il significato delle modifiche intervenute nel testo. Le convenzioni sui numeri di versione, ed il modo in cui essi cambiano, comunicano il significato complessivo relativamente a cosa è stato modificato nell'avanzamento di versione.
@@ -64,7 +62,6 @@ Nel seguito sono descritte le regole che esprimono la semantica della codifica a
 		* cambiamenti alla configurazione;
 		* piano di rilasci;
 		* termini ultimi di adeguamento delle controparti;
-	* l’avanzamento di versione **Major** avviene al massimo una volta ogni anno solare;
 	* NON PUÒ includere contemporanee modifiche di livello **Minor** e **patch**.
 	* le versioni **Patch** e **Minor** DEVONO essere reimpostate a 0 quando la versione **Major** è incrementata.
 8. La precedenza si riferisce a come le versioni sono confrontate l'una con l'altra quando poste in relazione d'ordine. La precedenza DEVE essere calcolata separando gli identificatori nell’ordine seguente: **Major**, **Minor**, **Patch** e **Pre**-**release**. La precedenza è determinata dalla prima discrepanza quando si confrontano ognuno di tali identificatori da sinistra a destra.
