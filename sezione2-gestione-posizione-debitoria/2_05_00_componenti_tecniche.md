@@ -38,7 +38,7 @@ La connessione al Nodo in applicazione al vigente modello di interoperabilità a
 
 ## Gestore della Porta di Dominio
 
-`[TBD soon deprecated]`
+![work-in-progress](../images/wip.png) **Paragrafo soggetto a proposta di modifica**
 
 Questa componente, deprecata e mantenuta per retro compatibilità, si occupa dello scambio dei messaggi da e verso SPC per il colloquio con l'EC secondo gli accordi di servizio stabiliti dalle regole tecniche SPCoop e pubblicati sui registri SICA. In coerenza con le logiche SPCoop, permette di reindirizzare i messaggi alle Pubbliche Amministrazioni aderenti a SPC anche in via indiretta attraverso le reti territoriali, eventualmente per mezzo di soggetti intermediari.
 
@@ -55,7 +55,7 @@ Tra le principali attività svolte dalla componente si richiamano, a titolo esem
 
 ## Interfaccia di Canale
 
-Le attività svolte da questa componente sono analoghe a quelle svolte dal gestore della Porta di Dominio per gli Enti Creditori, ma istanziate per il rapporto con i singoli PSP. A tale scopo, il Nodo espone una modalità standard di colloquio verso i PSP, descritta nella Sezione IV `[TBD o Sez.4 ?]`. Nel caso di peculiari modalità tecnico trasmissive richieste dai PSP, sempre che di validità generale, possono essere realizzate allo scopo specifiche interfacce software.
+Le attività svolte da questa componente sono analoghe a quelle svolte dal gestore della Porta di Dominio per gli Enti Creditori, ma istanziate per il rapporto con i singoli PSP. A tale scopo, il Nodo espone una modalità standard di colloquio verso i PSP, descritta nella Sezione IV. Nel caso di peculiari modalità tecnico trasmissive richieste dai PSP, sempre che di validità generale, possono essere realizzate allo scopo specifiche interfacce software.
 
 Qualora il PSP lo richieda, la componente permette di interfacciare il PSP attraverso un intermediario (soggetto giuridico o circuito) scelto dallo stesso PSP. Tutti gli oneri derivanti sono a carico del PSP che mantiene la
 titolarità del rapporto con il Nodo.
