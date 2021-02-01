@@ -11,8 +11,7 @@ La modellazione segue le notazioni dello standard *Business Process Model and No
 ![bpmn_elements](../images/bpmn_elements.png)
 
 
-La posizione debitoria
-======================
+## La posizione debitoria
 
 Come previsto dalle Linee guida, tutte le tipologie di pagamento gestite dal Sistema pagoPA prevedono che l'Ente Creditore, per rendere realizzabile un pagamento, registri e metta a disposizione dell'utilizzatore finale le informazioni necessarie per effettuare il pagamento. Si definisce "posizione debitoria" l'insieme di tali informazioni.
 
@@ -29,11 +28,10 @@ L'Ente Creditore genera il tradizionale avviso di pagamento **analogico** (sotto
 
 L'EC continua a recapitare l'avviso analogico all'Utilizzatore finale con le modalità tradizionali a cui può affiancare funzioni di stampa a carico dell'Utilizzatore finale dopo il downloading del documento.
 
-L'avviso di pagamento analogico, oltre al logotipo del Sistema pagoPA, contiene le informazioni indispensabili per l'esecuzione del pagamento, che sono dettagliate nella Sezione III. `[TBD oppure usiamo "Sez.3" ? -> direi che il riferimento sopra dovrebbe rispondere a questa frase.]`
+L'avviso di pagamento analogico, oltre al logotipo del Sistema pagoPA, contiene le informazioni indispensabili per l'esecuzione del pagamento, che sono dettagliate nella Sezione III.
 
 Si noti che l'importo contenuto nell'avviso di pagamento analogico è quello corrispondente al momento della produzione di tale documento e quindi può essere soggetto a variazioni (in più o in meno) al momento in cui ne viene richiesto il pagamento da parte dell'utilizzatore finale, nel caso sia intervenuto un aggiornamento della posizione debitoria, purché tale possibilità sia stata effettivamente esplicitata in una avvertenza sull'avviso.
 
 La peculiarità di alcune postazioni messe a disposizione dai Prestatori di Servizi di Pagamento rende necessario automatizzare l'acquisizione dei dati presenti sull'avviso di pagamento. Per questo motivo tale documento deve essere corredato, oltre che dati essenziali sopra citati, anche da un insieme di elementi grafici facilmente leggibili e decodificabili da apposite apparecchiature.
 
 I processi di creazione, aggiornamento, chiusura o annullamento di una posizione debitoria sono interni al sistema informativo dell'Ente Creditore. Nei casi previsti tali operazioni possono scatenare l'invio di un avviso di pagamento con strumenti digitali.
-
