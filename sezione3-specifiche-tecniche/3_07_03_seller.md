@@ -1,22 +1,35 @@
-
 ## Banca Seller
-`[TBD da ricontrollare ]`
-MyBank compare come un unico strumento di pagamento all’interno della componente WISP del sistema pagoPA. La Banca Buyer viene selezionata dall’utente dalla lista delle banche che offrono il servizio MyBank, mentre la Banca Seller viene proposta in maniera automatica tramite un algoritmo (`[TBD vedi Selezione della Banca Seller]`), l’utente potrà eventualmente rifiutare la selezione proposta dal sistema ed effettuare una scelta dalla lista dei PSP che offrono il servizio di banca seller.
+`[TBD da ricontrollare --> updated]`
+MyBank compare come un unico strumento di pagamento all’interno della componente WISP del sistema pagoPA.
+Secondo il paradigma di pagamento proprio di MyBank, un PSP aderente a pagoPA può offire il servizio di pagamento con MyBank operando come Banca Seller. 
 
-### Workflow di pagamento
+All'interno del WISP, l'utente trova esposto il servizio MyBank con il relativo logo; Selezionando il servizio viene presentata una pagina di selezione dove l'utente può ricercare e selezionare la propria banca ( *Banca Buyer* ).
+Una volta selezionata la banca, la piattaforma individuerà una PSP aderente come *Banca Seller* della transazione.
 
-1. L’utente procedere come consueto all’autenticazione nel WISP prima di procedere con il pagamento.
-2. All’interno del WISP l’utente trova esposto il servizio MyBank con il relativo logo; il servizio non ha associato alcun esplicito riferimento al costo dell’operazione.
-3. Selezionato il servizio MyBank viene presentata la pagina di selezione della banca Buyer. L’utente può ricercare e selezionare la propria banca da una lista, oppure può digitare la denominazione della propria banca in modo che la lista delle banche disponibili venga  dinamicamente aggiornata (essa viene mostrata nella lingua selezionata dall’utente in fase di accesso).
-4. Una volta selezionata la banca buyer, il sistema presenta una pagina di riepilogo che mostrerà il logo MyBank, la banca Seller proposta dal sistema per inizializzare la transazione ed il costo della commissione richiesta per il servizio. All’utente è sempre concessa la possibilità di modificare la scelta della Banca Seller proposta dal sistema accedendo a un'apposita schermata che mostra le Banche Seller disponibili ed i costi di commissione richiesti. Si noti che il costo della commissione visualizzato è quello richiesto dalla Banca Seller (l’utente viene avvisato che il costo complessivo _è comprensivo_ anche delle commissioni applicate dalla Banca Buyer)
-5. Su pressione del tasto "continua" nella pagina di riepilogo, l’utente viene indirizzato direttamente presso il sito web della Banca Buyer selezionata per autorizzare il pagamento. La Banca Seller riceve dal sistema i seguenti messaggi: `[TBD occorre dare tutti i dettagli qui ?]`
-	* `pspInviaCarrelloRPT` con specificato all’interno del parametro `parametriProfiloPagamento` il campo `ValidationServiceID` con il valore associato alla selezione della Banca Buyer da parte dell’utente.
-	* redirect verso il servizio web esposto dal servizio MyBank della banca Seller selezionata specificando all’interno dei parametri del canale. Durante la redirect viene utilizzato il medesimo `parametriProfiloPagamento` inviato nella primitiva `pspInviaCarrelloRPT`.
-6. Il servizio web esposto dalla Banca Seller deve elaborare i dati ricevuti ed inoltrare automaticamente il Browser dell’utente verso la Banca Buyer istruendo il pagamento MyBank, dove l’utente segue tutti i passi necessari per poter autorizzare il pagamento.
-7. Concluso il pagamento, la Banca Buyer effettua un redirect sul portale della Banca Seller la quale, preso nota dell’esito della transazione effettua redirect verso il WISP comunicando l’esito della transazione (OK o KO).
+La Banca Seller proposta in maniera automatica (ON_US) applicherà nell’ordine i seguenti criteri:
+
+* La stessa Banca Buyer nel caso sia essa eroghi il servizio di Banca Seller.
+* La Banca Seller di preferenza indicata dalla Banca Buyer. La Banca Buyer può esprimere tale preferenza purché essa stessa sia aderente a pagoPA.
+* La Banca Seller presso la quale l’Ente Creditore detenga il conto descritto nel tag Ibanaccredito nella prima RPT del carrello.
+
+Nel caso in cui nessuno dei criteri precedenti non sia applicabile, la Banca Seller sarà selezionata (NOT_ON_US) con algoritmo round-robin tra quelle aderenti a pagoPA.
+*Nota: i costi di commissione esposti all'utente sul WISP sono i costi di commissioni applicati dalla Banca Seller , ai quali si aggiungono eventuali costi aggiuntivi propri della Banca Buyer e che dipendono dal rapporto tra l'utente e la propria banca.
+
+UNa volta selezionata la Banca Seller, il processo di pagamento continue secondo il seguente diagramma
+![sdd_mybank.puml](../diagrams/sdd_mybank.png)
+
+1. la piattaforma invia i dettagli del pagamento alla Banca Seller , tramite la `pspInviaCarrelloRPT` con specificato all’interno del parametro `parametriProfiloPagamento` il campo `ValidationServiceID` con il valore associato alla selezione della Banca Buyer da parte dell’utente.
+2. il PSP valida le informazioni ricevute e notifica la presa in carico del pagamento.
+3. l'utente viene re-indirizzato verso il servizio web esposto dal servizio MyBank della banca Seller selezionata specificando all’interno dei parametri del canale. Durante la redirect viene utilizzato il medesimo `parametriProfiloPagamento` inviato nella primitiva `pspInviaCarrelloRPT`.
+4. Il servizio web esposto dalla Banca Seller deve elaborare i dati ricevuti ed inoltrare automaticamente il Browser dell’utente verso la Banca Buyer istruendo il pagamento MyBank, dove l’utente segue tutti i passi necessari per poter autorizzare il pagamento.
+5. L'utente conclude l'operazione di pagamento all'interno del portale della Banca Buyer 
+6. Concluso il pagamento, la Banca Buyer effettua un redirect sul portale della Banca Seller.
+7.  Preso nota dell’esito della transazione , la Banca Seller effettua redirect verso il WISP comunicando l’esito della transazione (OK o KO).
 8. Il WISP mostra una pagina di riepilogo del pagamento avvenuto evidenziandone l’esito.
-9. La Banca Seller provvede, in base all’esito ricevuto, ad emettere una RT verso l’EC.
-10. La Banca Seller provvederà, in base all’esito ricevuto, ad emettere il flusso di rendicontazione entro D+2.
+9. La Banca Seller provvede, in base all’esito ricevuto, ad emettere una RT.
+
+La Banca Seller provvederà, in base all’esito ricevuto, ad emettere il flusso di rendicontazione entro D+2.
+
 
 ### Workflow di riconciliazione
 
@@ -75,12 +88,6 @@ Dove
 * `parametriPagamentoImmediato` - query string contenente parametri specifici del PSP, deve contenere il medesimo valore della redirect verso il servizio del PSP
 * `idCarrello` - identificativo del carrello di cui si indica l’esito, deve contenere il medesimo valore della redirect verso il servizio del PSP
 * `codiceRitornoPSP` - definisce l’esito dell’operazione, può assumere i valori: OK | KO | DIFFERITO
-
-
-### Catalogo Dati Informativi
-
-`[TBD riversiamo qui il contenuto del doc "MyBank CDI Update" ? - https://docs.google.com/document/d/16-Kl8jyItkeQqNq7l62kMkt1u1VXn7XB7QNS2_C_yjw] -> io direi di no, dovrebbe stare ( in un futuro nella sez. IV `
-
 
 
 

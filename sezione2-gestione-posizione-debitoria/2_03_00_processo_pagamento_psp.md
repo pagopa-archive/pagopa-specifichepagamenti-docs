@@ -52,7 +52,7 @@ Nel caso in cui l'Utilizzatore finale inneschi il pagamento con un avviso, il PS
 2. Il PSP, che ha facoltà di non eseguire la diramazione precedente, richiede una sessione di pagamento. L'invocazione della funzione di attivazione genera un token di pagamento che, oltre ad avere effetto sullo stato della posizione debitoria che viene posta nello stato "paying", inibisce l'apertura di sessioni di pagamento concorrenti per la stessa posizione debitoria. Il PSP chiede all'Utilizzatore finale di autorizzare il pagamento (*Gateway* G2.2.4):
 	* Se il pagamento è autorizzato, il PSP incassa il pagamento (*Task* T2.2.9) e genera un esito positivo
     (*Task* T2.2.11)
-	* Se il pagamento non è autorizzato, il PSP genera un'esito negativo (*Task* T2.2.10) `[TBD check]`
+	* Se il pagamento non è autorizzato, il PSP genera un'esito negativo (*Task* T2.2.10) `[TBD check--> updated]`
 
 Nel caso di emissione di esito positivo il PSP consegna all'Utilizzatore finale un'attestazione di
 pagamento, contenente le informazioni specificate nella Sezione III.

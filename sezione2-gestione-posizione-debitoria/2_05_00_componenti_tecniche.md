@@ -1,11 +1,11 @@
 Componenti tecniche del Nodo
 ============================
 
-Il Nodo definisce modalità standard per la gestione dei flussi finanziari:
+Il Nodo definisce modalità standard per la gestione dei flussi finanziari `[TBD in realtà noi non facciamo flussi finanziari]`:
 
 * adotta gli standard [XML ISO 20022](https://en.wikipedia.org/wiki/ISO_20022) per i tracciati dei flussi finanziari correlati alle singole operazioni;
 * introduce uno standard per la richiesta di pagamento telematico e per la ricevuta telematica di pagamento adottato a livello nazionale su qualunque canale di pagamento, al fine di automatizzare la tratta G2B (*Government to Bank*);
-* nell'ambito delle attività legate al commercio elettronico abilita l'interconnessione con i circuiti internazionali di autorizzazione di tali pagamenti;
+* nell'ambito delle attività legate al commercio elettronico abilita l'interconnessione con i circuiti internazionali di autorizzazione di tali pagamenti; `[TBD- eliminerei]`
 * assicura l'univocità del pagamento attraverso la definizione di un codice identificativo del pagamento (IUV). Al suddetto identificativo può essere associato uno o più oggetti grafici (codice a barre, glifo, QR-code, etc), al fine di consentire e facilitare l'effettuazione del pagamento attraverso qualunque canale oggi esistente;
 * de-materializza tutte le ricevute di pagamento restituite all'EC;
 * de-materializza gli avvisi di pagamento.
@@ -146,6 +146,7 @@ Qualora fosse riscontrata una mancata conformità a detti Standard di Servizio, 
 ## Servizi applicativi opzionali
 
 Rientrano in questa tipologia le funzioni che il Servizio mette a disposizione dei soggetti appartenenti al Dominio e che possono da questi essere utilizzate nell'ambito dello svolgimento delle proprie attività.
+`[TBD check-> da eliminare]`
 
 ### Totali di traffico
 
@@ -153,4 +154,4 @@ Il servizio di quadratura dei flussi di traffico mette a disposizione dei sogget
 
 Il Nodo mette a disposizione dell'EC e del PSP gli strumenti per la ricezione di tali flussi.
 
-Il periodo temporale durante il quale saranno disponibili i flussi relativi ai "Totali di Traffico" non potrà superare i 10 giorni di calendario e sarà comunque pubblicato sul sito di PagoPA S.p.A. `[TBD check]`
+Il periodo temporale durante il quale saranno disponibili i flussi relativi ai "Totali di Traffico" non potrà superare i 10 giorni di calendario e sarà comunque pubblicato sul sito di PagoPA S.p.A. `[TBD check-> mai messo in piedi, da eliminare]`
