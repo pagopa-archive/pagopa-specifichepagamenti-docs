@@ -20,7 +20,7 @@ Le Pubbliche Amministrazioni potranno consentire ai cittadini l’acquisto di ma
 
 Nel processo di acquisto in parola la Ricevuta Telematica (RT) svolge unicamente il ruolo di vettore della marca da bollo digitale acquistata dal cittadino. In mancanza di un corrispondente flusso finanziario verso la Pubblica Amministrazione, questa tipologia di ricevute telematiche (RT) non è soggetta a riconciliazione, limitatamente agli importi riguardanti la marca da bollo.
 
-Il caso d'uso del pagamento della marca da bollo digitale è descritto nel dettaglio nella Sezione III `[TBD o Sez.3]` del presente documento.
+Il caso d'uso del pagamento della marca da bollo digitale è descritto nel dettaglio nella Sezione III del presente documento.
 
 **APPENDICE II – APPROFONDIMENTI (PRESTATORI DI SERVIZI DI PAGAMENTO)**
 
