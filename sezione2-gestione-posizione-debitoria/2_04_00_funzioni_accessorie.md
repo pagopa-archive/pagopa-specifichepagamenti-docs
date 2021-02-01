@@ -2,7 +2,7 @@ Funzioni accessorie
 ===================
 
 ## Storno del pagamento
-`[TBD da verificare]`
+`[TBD da verificare -> da cancellare ]`
 
 Qualora l'Utilizzatore finale chieda a vario titolo l'annullamento (storno) di un pagamento all'EC presso il quale questo è stato disposto, il sistema pagoPA mette a disposizione dell'EC e del PSP idonee funzionalità del NodoS per gestire detta operazione.
 
@@ -47,7 +47,7 @@ Le copie analogiche prodotte dall'EC o dai PSP devono necessariamente contenere,
 
 Con rifermento alle macro-fasi del processo, una volta effettuata la fase di "Regolamento contabile" da parte del PSP, l'EC provvede a riconciliare le ricevute telematiche (RT) con le informazioni contabili fornite dal proprio istituto tesoriere, o da Poste Italiane, in relazione agli incassi avvenuti sui c/c postali (ad esempio: Giornale di Cassa per le Pubbliche Amministrazioni che utilizzano il formato OIL/OPI; altre modalità per le Pubbliche Amministrazioni centrali che possono richiedere tali informazioni alla Ragioneria Generale dello Stato).
 
-Secondo quanto indicato dalle Linee guida e dal suo Allegato A *"Specifiche attuative dei codici identificativi di versamento, riversamento e rendicontazione*", il PSP che riceve l'ordine dal proprio cliente o che esegue l'incasso per conto dell'EC può regolare contabilmente l'operazione in modalità singola o in modalità cumulativa, il che comporta per l'Ente Creditore due diverse modalità di riconciliazione. `[TBD chk SACI modalità singola ancora presente ?]`
+Secondo quanto indicato dalle Linee guida e dal suo Allegato A *"Specifiche attuative dei codici identificativi di versamento, riversamento e rendicontazione*", il PSP che riceve l'ordine dal proprio cliente o che esegue l'incasso per conto dell'EC può regolare contabilmente l'operazione in modalità singola o in modalità cumulativa, il che comporta per l'Ente Creditore due diverse modalità di riconciliazione. `[TBD chk SACI modalità singola ancora presente ? --> e' ancora presente ma facciamo come se fosse inesistente. il riconciliamento è gia descritto nei paragrafi precedenti]`
 
 ### Riconciliazione in modalità multipla
 
@@ -64,7 +64,7 @@ Il Nodo fornisce apposite funzioni centralizzate a disposizione dei PSP e degli 
 
 ### Pagamento contenente più accrediti
 
-`[TBD da verificare]`
+`[TBD da verificare] -> in realtà la riconciliazione deve avvenire per IUR e non IUV`
 
 Qualora l'Utilizzatore finale presenti al PSP una RPT contenente più pagamenti, ovvero presenti un "carrello" di richieste di pagamento telematico aventi più beneficiari, il PSP deve effettuare un unico addebito verso l'Utilizzatore finale al quale attribuisce lo stesso identificativo univoco di riscossione: pertanto l'EC dovrà opportunamente tenerne conto nelle proprie procedure applicative di riconciliazione.
 
@@ -76,4 +76,4 @@ Seppur meno utilizzate nella pratica comune, si citano di seguito alcune ulterio
 * Richiesta dell'elenco delle richieste di pagamento telematico pendenti
 * Gestione della ricevuta telematica di notifica decorrenza termini
 
-I dettagli relativi alle suddette funzioni sono riportati nella Sezione III `[TBD o Sez.3]` `[TBD check presenza nella Sez.3]`
+I dettagli relativi alle suddette funzioni sono riportati nella Sezione III `[TBD o Sez.3]` `[TBD check presenza nella Sez.3] -> eliminerei`
