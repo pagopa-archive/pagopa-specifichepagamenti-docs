@@ -30,7 +30,7 @@ Carrello di pagamento: un insieme di pagamenti.
 
 ## Autenticazione 
 
-Ogni connessione verso la piattaforma avviene tramite canale HTTPS con mutua autenticazione. Per dettagli su come instaurare la connessione con la piattaforma fare riferimento alla Sez.IV.
+Ogni connessione verso la piattaforma avviene tramite canale HTTPS con mutua autenticazione. Per dettagli su come instaurare la connessione con la piattaforma fare riferimento alla Sez-IV.
 
 ### Autenticazione EC 
 

@@ -76,7 +76,7 @@ Gli aspetti sub (a), (b) e (c), nell'ambito del quadro generale di funzionamento
 
 ## L'adesione al Sistema pagoPA
 
-L'utilizzo dei servizi messi a disposizione da pagoPA è attivato attraverso apposite procedure, descritte in maggior dettaglio nella Sezione IV, che prevedono:
+L'utilizzo dei servizi messi a disposizione da pagoPA è attivato attraverso apposite procedure, descritte in maggior dettaglio nella Sez-IV, che prevedono:
 
 * per gli EC l'invio a PagoPA S.p.A. di una lettera di adesione, di formato predeterminato, sottoscritta dal legale rappresentante;
 * per i PSP la sottoscrizione con PagoPA S.p.A., su base volontaria, di atti bilaterali denominati "Accordi di Servizio".

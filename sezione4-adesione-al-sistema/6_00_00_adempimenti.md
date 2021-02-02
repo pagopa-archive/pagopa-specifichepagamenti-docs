@@ -1,5 +1,4 @@
-Adempimenti durante l'erogazione del servizio
-=============================================
+# Adempimenti durante l'erogazione del servizio
 
 Gli adempimenti che gli Enti Creditori, i Prestatori di Servizi di Pagamento e i Partner Tecnologici sono tenuti ad osservare durante l'erogazione del servizio, dipendono dalle modalità con cui sono attestati sulla piattaforma dei pagamenti pagoPA.
 
@@ -22,7 +21,7 @@ PagoPA S.p.A. metterà a disposizione dei Tavoli Operativi un strumento dedicato
 I soggetti direttamente collegati alla piattaforma pagoPA devono:
 
 * utilizzare un sistema che monitori lo stato del servizio e sia disponibile anche al Tavolo Operativo;
-* implementare il "Giornale degli Eventi", come indicato nella Sezione 3 delle presenti "Specifiche Attuative del Nodo dei Pagamenti-SPC"
+* implementare il "Giornale degli Eventi", come indicato nella Sez-III delle presenti "Specifiche Attuative del Nodo dei Pagamenti-SPC"
 * registrare e classificare le segnalazioni pervenute al Tavolo Operativo al fine di favorire lo scambio di informazioni con PagoPA S.p.A..
 
 ### Business continuity e Disaster Recovery
