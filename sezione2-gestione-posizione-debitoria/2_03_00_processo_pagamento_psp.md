@@ -2,8 +2,6 @@
 
 Questo processo prevede che l'esecuzione del pagamento avvenga presso le infrastrutture messe a disposizione dal PSP quali, ad esempio, sportelli ATM, applicazioni di *Home banking* e *mobile* *payment*, uffici postali, punti della rete di vendita dei generi di Monopolio (Tabaccai), SISAL e Lottomatica, casse predisposte presso la Grande Distribuzione Organizzata, etc.
 
-L'EC beneficiario del pagamento deve rendere accessibile ai PSP, con le modalità mediate dal NodoSPC, un archivio nel quale siano state preventivamente memorizzate le posizioni debitorie (Archivio Pagamenti in Attesa). `[TBD - questo eliminerei]`
-
 Per rendere possibile il pagamento l'EC ha l'obbligo di recapitare all'utilizzatore finale un avviso con gli estremi del pagamento da effettuare. Tale recapito deve obbligatoriamente avvenire sia in modalità analogica (tramite servizi postali), che digitale. L'EC può inoltre adottare ulteriori misure per la diffusione degli avvisi di pagamento, per esempio rendere disponibili funzioni di stampa on line tramite il proprio sito.
 
 Nello schema che segue è trattato il caso in cui l'utilizzatore finale, già in possesso dell'avviso di pagamento analogico fornito dall'Ente, si rechi presso le strutture del PSP e comunichi il codice dell'avviso di pagamento. Si tenga presente che il caso d'uso descritto non dipende dalla concreta modalità in cui tale dato entra in possesso del PSP: il codice potrebbe essere comunicato a un operatore di sportello, letto automaticamente tramite dispositivi ottici, inserito manualmente dal soggetto versante su interfacce messe a disposizione dai PSP (un terminale ATM, una pagina WEB, etc), ovvero, da ultimo, comunicato tramite avviso digitale.
@@ -20,7 +18,6 @@ Nel processo schematizzato sono coinvolti quattro soggetti:
 * Prestatore Servizi di Pagamento (PSP) dell'Utilizzatore finale
 
 ![bpmn-pagamento-psp](../images/bpmn_psp.png)
-
 
 ## Avvio del pagamento
 
@@ -55,7 +52,7 @@ Nel caso in cui l'Utilizzatore finale inneschi il pagamento con un avviso, il PS
 	* Se il pagamento non è autorizzato, il PSP genera un'esito negativo (*Task* T2.2.10) `[TBD check--> updated]`
 
 Nel caso di emissione di esito positivo il PSP consegna all'Utilizzatore finale un'attestazione di
-pagamento, contenente le informazioni specificate nella Sezione III.
+pagamento, contenente le informazioni specificate nella Sez-III.
 Tale attestazione è opponibile all'EC.
 
 Le ricevute telematiche vengono trasmesse al NodoSPC. Il NodoSPC mette la ricevuta telematica a disposizione dell'EC (*Task* 2.2.12) che a sua volta può mettere a disposizione dell'Utilizzatore finale una ricevuta (*Task* T2.2.13).
@@ -71,10 +68,3 @@ Il PSP accrediterà le somme sui conti dell'EC  ricevuti durante la creazione de
 Il NodoSPC mette a disposizione i dati di rendicontazione per l'EC (*Task* T2.2.17).
 
 L'EC recupera i dati di rendicontazione (*Task* T2.2.18) e può quindi avviare il processo di riconciliazione.
-
-## Attivazione della richiesta di pagamento
-`[TBD rivedere ! --> da cancellare]`
-
-Il NodoSPC non controlla l'effettiva sequenza operativa scelta dal PSP, relativa alle fasi del processo descritte in precedenza: pertanto, un PSP potrebbe effettuare la richiesta di attivazione della richiesta di pagamento telematico senza aver preventivamente effettuato la fase di verifica. Con questo approccio è sconsigliato far precedere l'incasso alla richiesta di attivazione della richiesta di pagamento telematico (*Task* T2.2.6), in quanto sul Sistema pagoPA non è gestito automaticamente il caso in cui l'EC non riesca a inviare la richiesta di pagamento telematico prevista dal *workflow*: per esempio, nel caso in cui il pagamento sia già stato eseguito con un altro canale oppure perché l'importo dovuto sia diverso da quello stampato sull'avviso.
-
-In questo caso il PSP avrebbe incassato dei fondi ai quali non può essere associata una Ricevuta Telematica da inviare all'EC. Per questo caso, nella Sezione III, sono previste delle gestioni semi-manuali. A tal proposito si ricorda che, ai sensi delle Linee guida, i pagamenti effettuati attraverso il NodoSPC sono liberatori del debito _a condizione_ che la Ricevuta Telematica sia congruente con le informazioni presenti sulla relativa richiesta di pagamento telematico e quindi sull'archivio dei pagamenti in attesa.

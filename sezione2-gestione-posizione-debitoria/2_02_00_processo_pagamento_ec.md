@@ -8,7 +8,7 @@ Al fine di rendere processo di pagamento attraverso l'Ente Creditore immediatame
 
 ![flow-pagamento-ec](../images/business_ec.png)
 
-Nel processo schematizzato in **Figura 2** sono coinvolti quattro soggetti:
+Nel processo schematizzato sono coinvolti quattro soggetti:
 
 * Utilizzatore finale
 * Ente Creditore (EC)
@@ -27,7 +27,7 @@ In entrambi i casi l'EC rende disponibile all'Utilizzatore finale un'interfaccia
 
 La generazione di una posizione debitoria è l'evento propedeutico al pagamento sul Sistema pagoPA.
 
-In determinate circostanze, previste nello specifico dalla vigente normativa, un soggetto matura un debito in favore di una Pubblica Amministrazione (centrale o locale). In questo caso lo stesso EC assume l'iniziativa di generare una posizione debitoria e provvede, se del caso, a notificare l'avviso di pagamento al soggetto pagatore. Questa casistica prende il nome di _pagamento dovuto_. Nel caso che l'EC sia tenuto ad accompagnare la notifica con un avviso di pagamento analogico, provvede anche a inviare al NodoSPC un avviso digitale. `[TBD- da cancellare ultima frase]`
+In determinate circostanze, previste nello specifico dalla vigente normativa, un soggetto matura un debito in favore di una Pubblica Amministrazione (centrale o locale). In questo caso lo stesso EC assume l'iniziativa di generare una posizione debitoria e provvede, se del caso, a notificare l'avviso di pagamento al soggetto pagatore. Questa casistica prende il nome di _pagamento dovuto_.
 
 Nel caso non sussistano le circostanze sopra indicate, l'Utilizzatore finale può comunque assumere l'iniziativa di avviare il pagamento (si parla in questo caso di _pagamento spontaneo_) accedendo - ad esempio - al portale messo a disposizione dall'Ente Creditore; in tal caso l'EC genera la relativa posizione debitoria (*Task* T2.1.1). È facoltà dell'EC esporre delle funzioni che producano, per lo stesso pagamento, un avviso, da utilizzare in seguito per disporre il pagamento presso un PSP.
 
@@ -43,8 +43,7 @@ I dati personali raccolti saranno trattati, nel rispetto della normativa vigente
 
 Pertanto, detti dati saranno trattati esclusivamente per consentire agli utenti delle pubbliche amministrazioni e degli altri soggetti aderenti al Sistema pagoPA di richiedere e ottenere i servizi di pagamento erogati dai PSP abilitati sul Sistema pagoPA, nonché per richiedere e ottenere parimenti i servizi di identificazione e memorizzazione erogati da PagoPA S.p.A. sul Sistema pagoPA.
 
-Il conferimento dei dati ed il trattamento degli stessi da parte di PagoPA S.p.A. per tali finalità è dunque obbligatorio e non richiede un esplicito consenso, pena l'impossibilità per PagoPA S.p.A. di erogare i servizi sopra citati.
-`[TBD la parte sui dati personali la eliminerei]`
+Il conferimento dei dati ed il trattamento degli stessi da parte di PagoPA S.p.A. per tali finalità è dunque obbligatorio e non richiede un esplicito consenso, pena l'impossibilità per PagoPA S.p.A. di erogare i servizi sopra citati. `[TBD eliminare parte su dati e trattamento ?]`
 
 ## Autorizzazione del pagamento
 
@@ -52,7 +51,7 @@ Il processo di pagamento segue percorsi differenti a seconda del servizio del PS
 
 - In caso di pagamento con carta (di credito o di debito) (*Gateway* G2.1.2), l'Utilizzatore finale immette (o recupera nel caso li abbia precedentemente memorizzati) i dati della carta (*Task* T2.1.4) e quindi decide se autorizzare il pagamento (*Gateway* G2.1.5).
     - Il pagamento con carta è gestito da un POS virtuale del NodoSPC con due differenti esperienze utente. Nel caso di pagamento *on us* il NodoSPC riconosce dai dati della carta immessi che il PSP emittente (*issuer*) è aderente al sistema pagoPA e quindi lo propone come gestore del pagamento (*acquirer*) di default. Altrimenti, casistica *not on us,* viene proposto l'*acquirer* con il costo delle commissioni più basse realativamente al pagamento in essere.Tale scelta può essere esplicitamente modificata dall'Utilizzatore finale a cui viene proposta una lista di PSP.
-    - I PSP che offrono il servizio di gestione del pagamento con carta devono preventivamente configurarsi come tali. I dettagli delle procedure da seguire  sono riportati nella Sezione IV `[TBD o Sez.4 ? Io eliminerei. Nella sezione 3 si dice come sviluppare, nella 4 come configurarsi]`.
+    - I PSP che offrono il servizio di gestione del pagamento con carta devono preventivamente configurarsi come tali. I dettagli delle procedure da seguire sono riportati nella Sez-IV.
 - Per tutte le altre tipologie di pagamento, dopo che l'Utilizzatore finale ha selezionato un PSP sul *front-end* del sistema, il NodoSPC inoltra in *back-end* il carrello allo stesso PSP responsabile dell'esecuzione (*Task* T2.1.5).
     -  L'esperienza utente del processo di pagamento può proseguire in un *front-end* gestito dal PSP (quindi esterno al sistema pagoPA), che prevede l'identificazione del soggetto versante (*Task* T2.1.8) e la successiva autorizzazione (*Gateway* G2.1.4).
     - In caso contrario, l'Utilizzatore finale viene reindirizzato al *front-end* dell'EC da cui era stato avviato il pagamento (*Task* T2.1.7). In questo caso l'autorizzazione del pagamento da parte dell'Utilizzatore finale avviene mediante l'interazione con strumenti messi a disposizione dal PSP. L'esecuzione del pagamento ed il rilascio della relativa attestazione (RT) avvengono in funzione delle modalità di autorizzazione del pagamento adottate dal PSP. Si distingue quindi l'autorizzazione:

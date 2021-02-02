@@ -59,5 +59,3 @@ Seppur meno utilizzate nella pratica comune, si citano di seguito alcune ulterio
 * Richiesta di una copia della ricevuta telematica
 * Richiesta dell'elenco delle richieste di pagamento telematico pendenti
 * Gestione della ricevuta telematica di notifica decorrenza termini
-
-I dettagli relativi alle suddette funzioni sono riportati nella Sezione III `[TBD o Sez.3]` `[TBD check presenza nella Sez.3] -> eliminerei`

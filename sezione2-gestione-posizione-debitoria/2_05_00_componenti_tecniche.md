@@ -1,5 +1,4 @@
-Componenti tecniche del Nodo
-============================
+# Componenti tecniche del Nodo
 
 Il Nodo definisce modalità standard per la gestione dei flussi finanziari `[TBD in realtà noi non facciamo flussi finanziari]`:
 
@@ -55,7 +54,7 @@ Tra le principali attività svolte dalla componente si richiamano, a titolo esem
 
 ## Interfaccia di Canale
 
-Le attività svolte da questa componente sono analoghe a quelle svolte dal gestore della Porta di Dominio per gli Enti Creditori, ma istanziate per il rapporto con i singoli PSP. A tale scopo, il Nodo espone una modalità standard di colloquio verso i PSP, descritta nella Sezione IV. Nel caso di peculiari modalità tecnico trasmissive richieste dai PSP, sempre che di validità generale, possono essere realizzate allo scopo specifiche interfacce software.
+Le attività svolte da questa componente sono analoghe a quelle svolte dal gestore della Porta di Dominio per gli Enti Creditori, ma istanziate per il rapporto con i singoli PSP. A tale scopo, il Nodo espone una modalità standard di colloquio verso i PSP, descritta nella Sez-IV. Nel caso di peculiari modalità tecnico trasmissive richieste dai PSP, sempre che di validità generale, possono essere realizzate allo scopo specifiche interfacce software.
 
 Qualora il PSP lo richieda, la componente permette di interfacciare il PSP attraverso un intermediario (soggetto giuridico o circuito) scelto dallo stesso PSP. Tutti gli oneri derivanti sono a carico del PSP che mantiene la
 titolarità del rapporto con il Nodo.
@@ -142,16 +141,3 @@ Qualora fosse riscontrata una mancata conformità a detti Standard di Servizio, 
 
 * di bloccare l'esecuzione del relativo flusso elaborativo e di trattamento dei dati;
 * rendere disponibile un'evidenza dello stato del flusso a fronte di una eventuale situazione di blocco del flusso stesso.
-
-## Servizi applicativi opzionali
-
-Rientrano in questa tipologia le funzioni che il Servizio mette a disposizione dei soggetti appartenenti al Dominio e che possono da questi essere utilizzate nell'ambito dello svolgimento delle proprie attività.
-`[TBD check-> da eliminare]`
-
-### Totali di traffico
-
-Il servizio di quadratura dei flussi di traffico mette a disposizione dei soggetti appartenenti al Dominio che ne facciano richiesta, un flusso periodico relativo a tutte le interazioni (RPT e RT) transitate attraverso il Nodo e di stretta pertinenza del singolo richiedente.
-
-Il Nodo mette a disposizione dell'EC e del PSP gli strumenti per la ricezione di tali flussi.
-
-Il periodo temporale durante il quale saranno disponibili i flussi relativi ai "Totali di Traffico" non potrà superare i 10 giorni di calendario e sarà comunque pubblicato sul sito di PagoPA S.p.A. `[TBD check-> mai messo in piedi, da eliminare]`
