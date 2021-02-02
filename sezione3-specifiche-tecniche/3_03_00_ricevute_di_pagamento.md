@@ -3,7 +3,7 @@ Ricevute di pagamento
 
 A fronte di qualsiasi pagamento avvenuto sulla piattaforma pagoPA viene generata, e notificata tempestivamente, una ricevuta che attesta il pagamento avvenuto con i riferimenti alla posizione debitoria e relativi dettagli.
 
-`[TBD digramma sendRPT()]`
+![sd_ec_receipt](../diagrams/sd_ec_receipt.png)
 
 Le ricevute vengono inviate:
 
