@@ -3,6 +3,9 @@
 Specifiche Tecniche Generali
 ============================
 
+Questa sezione è rivolta agli sviluppatori e descrive in maniera generale tutti i flussi informativi necessari per l'integrazione con la piattaforma. 
+Maggior dettagli sono disponibili all'interno del (portale degli sviluppatori)[https://pagopa.github.io/pagopa-api/]
+
 ## Stazioni e Canali
 
 I soggetti aderenti Enti Creditori (EC) e Prestatori di Servizi di Pagamento (PSP), si connettono alla piattaforma rispettivamente per mezzo di *stazioni* e *canali* che rappresentano le piattaforme tecnologiche di partner ed intermediari connessi tramite public-internet o connessioni VPN dedicate.

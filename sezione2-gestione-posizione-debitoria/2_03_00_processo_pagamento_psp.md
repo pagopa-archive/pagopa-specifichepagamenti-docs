@@ -73,7 +73,7 @@ Il NodoSPC mette a disposizione i dati di rendicontazione per l'EC (*Task* T2.2.
 L'EC recupera i dati di rendicontazione (*Task* T2.2.18) e può quindi avviare il processo di riconciliazione.
 
 ## Attivazione della richiesta di pagamento
-`[TBD rivedere !]`
+`[TBD rivedere ! --> da cancellare]`
 
 Il NodoSPC non controlla l'effettiva sequenza operativa scelta dal PSP, relativa alle fasi del processo descritte in precedenza: pertanto, un PSP potrebbe effettuare la richiesta di attivazione della richiesta di pagamento telematico senza aver preventivamente effettuato la fase di verifica. Con questo approccio è sconsigliato far precedere l'incasso alla richiesta di attivazione della richiesta di pagamento telematico (*Task* T2.2.6), in quanto sul Sistema pagoPA non è gestito automaticamente il caso in cui l'EC non riesca a inviare la richiesta di pagamento telematico prevista dal *workflow*: per esempio, nel caso in cui il pagamento sia già stato eseguito con un altro canale oppure perché l'importo dovuto sia diverso da quello stampato sull'avviso.
 
