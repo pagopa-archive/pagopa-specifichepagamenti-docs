@@ -13,3 +13,4 @@ PSP -> NodoSPC: req. nodoInviaFlussoRendicontazione
 NodoSPC -> NodoSPC: Verifica XML rendicontazione
 
 NodoSPC -[#blue]-> PSP:resp OK nodoInviaFlussoRendicontazione
+@enduml

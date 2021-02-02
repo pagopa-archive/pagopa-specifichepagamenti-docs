@@ -12,3 +12,4 @@ psp -[#blue]-> nodo : resp OK
 
 psp -> nodo : req pspInviaRT
 nodo -[#blue]-> psp : resp OK
+@enduml

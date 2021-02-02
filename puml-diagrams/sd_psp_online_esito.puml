@@ -12,3 +12,4 @@ psp -> psp : gestione pagamento
 user -[#green]> nodo : re-direct to pagoPA
 
 nodo -> nodo : LandingPage Esito
+@enduml

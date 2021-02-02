@@ -1,3 +1,4 @@
+@startuml
 autonumber 
 participant vpos  as "VPOS"
 participant nodo as "pagoPA"
@@ -11,3 +12,4 @@ psp -[#blue]-> nodo : resp OK
 
 nodo -> vpos : req contabilizzazione
 vpos -[#blue]-> : resp OK
+@enduml

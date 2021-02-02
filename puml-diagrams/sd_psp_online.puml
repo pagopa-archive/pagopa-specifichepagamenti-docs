@@ -1,3 +1,4 @@
+@startuml
 autonumber 
 participant psp  as "PSP"
 participant nodo as "pagoPA"
@@ -9,3 +10,4 @@ psp -[#blue]-> user : resp OK (parametriProfiloPagamento, parametriPagamentoImme
 user -[#green]> psp : re-direct to PSP service url
 
 
+@enduml
