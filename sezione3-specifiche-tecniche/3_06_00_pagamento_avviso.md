@@ -14,7 +14,7 @@ Il Prestatore di Servizi di Pagamento (PSP) è in possesso di un Avviso di Pagam
 
 Attraverso la lettura del _QR Code_, o attraverso l'inserimento manuale dei dati (`codice fiscale`, `importo`, `numeroAvviso`), si richiedono alla piattaforma pagoPA, mediante la primitiva `verifyPaymentNotice`​, i dati aggiornati del​l’Avviso di Pagamento.
 
-![sd_psp_verifica_avviso](../diagrams/sd_psp_verifica_avviso.png)
+![sd_psp_verifica_avviso](../diagrams/sd_psp_verifica_avviso.png) `[TBD da fare]`
 
 In risposta alla richiesta la piattaforma restituisce le informazioni aggiornate dell’Avviso di Pagamento, in particolare:
 
@@ -36,7 +36,7 @@ Il Prestatore di Servizi di Pagamento (PSP) apre una sessione di pagamento di un
 
 Se risulta aperta una precedente sessione di pagamento la piattaforma risponde con un `KO`: ciò inibisce ad altri PSP l’apertura di sessioni di pagamento concorrenti per lo stesso Avviso.
 
-In risposta la piattaforma pagoPA genera il token necessario per eseguire il pagamento e successivamente comunicare l’esito alla piattaforma stessa. Inoltre vengono restituiti tutti dati della richiesta di pagamento, in particolare quelli necessari per le operazioni di addebito ed accredito (es: importo totale con lista dei conti di accredito e quota parte dell’importo). Lo stato della Richiesta di Pagamento è posto in ​_paying_.
+In risposta la piattaforma pagoPA genera il token necessario per eseguire il pagamento e successivamente comunicare l’esito alla piattaforma stessa. Inoltre vengono restituiti tutti dati della richiesta di pagamento, in particolare quelli necessari per le operazioni di addebito ed accredito (es: importo totale con lista dei conti di accredito e quota parte dell’importo). Lo stato della Richiesta di Pagamento è posto in ​*paying*.
 
 ### Pagamento
 
@@ -51,9 +51,9 @@ Il Prestatore di Servizi di Pagamento (PSP) effettua l’addebito dell’importo
 * data di accredito
 * dettagli degli IBAN di accredito e relativi importi.
 
-La Richiesta di Pagamento è posto in stato ​`paid` e la sessione di pagamento viene chiusa. L'avviso di pagamento rimarrà bloccato sino a quanto la ricevuta di pagamento non sarà consegnata all'EC `[TBD check --updated]`
+La Richiesta di Pagamento è posto in stato ​`paid` e la sessione di pagamento viene chiusa. L'avviso di pagamento rimarrà bloccato sino a quanto la ricevuta di pagamento non sarà consegnata all'EC:
 
-![sd_psp_pagamento_avviso](../diagrams/sd_psp_pagamento_avviso.png)
+![sd_psp_pagamento_avviso](../diagrams/sd_psp_pagamento_avviso.png) `[TBD da fare]`
 
 ## Eccezioni
 

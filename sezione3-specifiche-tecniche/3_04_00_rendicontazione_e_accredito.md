@@ -1,11 +1,11 @@
 Rendicontazione ed Accredito
 ================================
 
-Ogni PSP aderente alla piattaforma, in data D+2 rendiconta il dettaglio dei riversamenti effettuati ( nella giornata D+1 ) verso i conti di accredito dei pagamenti avvenuti nella giornata operativa D.
+Ogni PSP aderente alla piattaforma, in data D+2 rendiconta il dettaglio dei riversamenti effettuati (nella giornata D+1) verso i conti di accredito dei pagamenti avvenuti nella giornata operativa D.
 
 L'EC può recuperare i flussi di rendicontazione prodotti seguendo il seguente schema:
 
-![sd_ec_richiesta_flussi](../diagrams/sd_ec_richiesta_flussi.png)
+![sd_ec_richiesta_flussi](../diagrams/sd_ec_richiesta_flussi.png) `[TBD rigenerare il diagramma]`
 
 1. l'EC richiede l'elenco dei flussi di rendicontazione disponibili
 2. la piattaforma restituisce l'elenco dei flussi di rendicontazione

@@ -1,7 +1,6 @@
 ## BancomatPay
 
-`[TBD todo  ## 3_07_04 BancomatPay  Credo lo possiamo cancellare per il momento.]`
-Al fine di poter realizzare 
+![work-in-progress](../images/wip.png) **Soggetto a proposta di modifica**
 
 ### BancomatPay
 

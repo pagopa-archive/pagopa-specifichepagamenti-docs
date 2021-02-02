@@ -4,7 +4,7 @@ Specifiche Tecniche Generali
 ============================
 
 Questa sezione è rivolta agli sviluppatori e descrive in maniera generale tutti i flussi informativi necessari per l'integrazione con la piattaforma. 
-Maggior dettagli sono disponibili all'interno del (portale degli sviluppatori)[https://pagopa.github.io/pagopa-api/]
+Maggior dettagli sono disponibili all'interno del [portale degli sviluppatori](https://pagopa.github.io/pagopa-api/)
 
 ## Stazioni e Canali
 
@@ -30,7 +30,7 @@ Carrello di pagamento: un insieme di pagamenti.
 
 ## Autenticazione 
 
-Ogni connessione verso la piattaforma avviene tramite canale HTTPS con mutua autenticazione. Per dettagli su come instaurare la connessione con la piattaforma fare riferimento alla Sez. IV`[TBD link --> updated]`.
+Ogni connessione verso la piattaforma avviene tramite canale HTTPS con mutua autenticazione. Per dettagli su come instaurare la connessione con la piattaforma fare riferimento alla Sez.IV.
 
 ### Autenticazione EC 
 

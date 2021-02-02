@@ -10,7 +10,7 @@ In entrambi gli scenari , il processo di pagamento è descritto dal diagramma se
 1. L'utente inserisce i dati carta all'interno della piattaforma pagoPA
 2. la piattaforma seleziona il servizio di acquiring secondo il seguente principio :
    1. Viene selezionato il servizio di pagamento del PSP Issuer della carta emessa. 
-   2. Viene selezionato il servizio di pagamento del PSP ( che gestisce il circuito di appartenenza della carta ) che rappresenta il costo di commissione più basso per l'operazione in corso
+   2. Viene selezionato il servizio di pagamento del PSP (che gestisce il circuito di appartenenza della carta) che rappresenta il costo di commissione più basso per l'operazione in corso
 3. L'utente ha SEMPRE la possibilità di modificare la selezione proposta dalla piattaforma.
 4. Viene mostrata una pagina di riepilogo del pagamento
 5. Alla conferma dell'operazione viene effettuato il pagamento nelle modalità di integrazione del canale selezionato.
@@ -18,21 +18,21 @@ In entrambi gli scenari , il processo di pagamento è descritto dal diagramma se
 ## Acquirer su VPOS
 
 In questo scenario, il pagamento avviene attraverso il servizio VPOS. 
-E' necessario configurare 2 negozi ( 3DS 2.0 ):
+E' necessario configurare 2 negozi (3DS 2.0):
 
-- canale con obbligatorierà del codice di controllo della carta ( CVC ) , utilizzato per on-boarding della carta.
-- canale senza obbligatorierà del codice di controllo della carta ( CVC ) , per pagamenti di utenti registrati.
+- canale con obbligatorietà del codice di controllo della carta (CVC), utilizzato per on-boarding della carta.
+- canale senza obbligatorietà del codice di controllo della carta (CVC), per pagamenti di utenti registrati.
 
-Come da direttiva PSD2, durante ogni pagamento sarà responsabilità dell'Issuer richiedere ( o meno ) il codice di autorizzazione per procedere con il pagamento.
+Come da direttiva PSD2, durante ogni pagamento sarà responsabilità dell'Issuer richiedere (o meno) il codice di autorizzazione per procedere con il pagamento.
 L'operazione di pagamento avviene in due fasi :
 
 - prenotazione del credito
 - contabilizzazione
 
-![sd_vpos.puml](../diagrams/sd_vpos.png)
+![sd_vpos.puml](../diagrams/sd_vpos.png) `[TBD da fare]`
 
 1. Avvenuta la selezione dell'acquirer, la piattaforma richiedere verifica la disponibilità dell'import verso l'acquirer tramite il VPOS.
-2. il VPOS restituisce l'esito dell'operazione
+2. Il VPOS restituisce l'esito dell'operazione
 3. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato l'operazione avvenuta presso l'acquirer.
 4. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme.
 
@@ -40,4 +40,4 @@ Nel caso in cui il PSP rifiuti l'operazione avvenuta, la piattaforma esegue la c
 
 ## Payment Gateway
 
-In questo scenario PagoPA S.p.A. si rende disponibile ad un integrazione specifica con il PSP secondo modi e tempi da concordare.
+In questo scenario PagoPA S.p.A. si rende disponibile ad un'integrazione specifica con il PSP secondo modi e tempi da concordare.

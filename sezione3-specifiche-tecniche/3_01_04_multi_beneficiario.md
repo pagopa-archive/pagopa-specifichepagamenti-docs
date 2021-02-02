@@ -1,6 +1,8 @@
 Pagamento multi beneficiario
 ============================
 
+![work-in-progress](../images/wip.png) **Soggetto a proposta di modifica**
+
 E' possibile che per talune posizioni debitorie la somma totale del debito debba essere ripartita tra più Enti Creditori (tutti aderenti alla piattaforma pagoPA).
 
 In tali casi la stessa posizione debitoria dovrà essere scomposta in diverse RPT ognuna delle quali afferente ad un Ente Creditore coinvolto, tenendo conto delle seguenti osservazioni:

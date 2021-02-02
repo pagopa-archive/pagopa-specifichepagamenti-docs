@@ -30,5 +30,3 @@ L'EC dispone di diverse stazioni, l'identificazione della posizione debitoria è
 ### check-digit
 
 Il check-digit viene calcolato come resto della divisione per 93 del numero ottenuto concatenando tutti i caratteri precedenti.
-
-`[TBD riferimento alle SACI per maggiori dettagli ? -> non credo ci siano dettagli uleteriori]`

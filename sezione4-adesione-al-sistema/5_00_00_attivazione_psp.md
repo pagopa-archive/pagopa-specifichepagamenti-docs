@@ -40,33 +40,7 @@ Al fine di ultimare il processo di attivazione, il Referente del Prestatore comp
 
 ## Attivazione di un PSP che svolge il ruolo di Acquirer
 
-L'attivazione di un PSP che intende svolgere il ruolo di Acquirer comporta l'indicazione da parte dello stesso dell'utilizzo di un POS di proprietà o messo a disposizione da terze parti. In entrambi i casi, le attività di integrazione e configurazione potranno essere realizzate solamente dopo opportuna interlocuzione con il gruppo che si fa carico di gestire questa tipologia di interventi `[TBD occorre specificare quale sia il gruppo ? -> non direi, unico punto di contatto da mettere nelle SANP sono github + helpdesk]`.
-
-## Attivazione di un PSP che offre il servizio MyBank
-
-Un pagamento MyBank avviene mediante l'interazione fra due PSP, di cui uno svolge il ruolo di Banca Buyer (banca dell'utilizzatore finale) e l'altro quello di Banca Seller (banca che consente il pagamento attraverso la Banca Buyer, sul Sistema pagoPA). 
-
-Il servizio MyBank della piattaforma pagoPA riguarda solamente i pagamenti attivati presso l'Ente Creditore che prevedono il seguente processo di pagamento online:
-
-* attivazione presso il sito web dell'Ente Creditore beneficiario del pagamento;
-* selezione del servizio MyBank tramite la componente WISP di pagoPA;
-* individuazione della Banca Buyer e della Banca Seller;
-* esecuzione del pagamento presso i sistemi del Prestatore.
-
-All'interno del Sistema pagoPA i ruoli dei soggetti che intervengono nel servizio MyBank sono così identificati:
-
-* la *Banca Buyer* è il PSP presso il quale l'utente detiene un conto corrente. Non è richiesta l'adesione di tale PSP a pagoPA.
-* la *Banca Seller* è un PSP aderente a pagoPA che offre la soluzione MyBank; esso si occupa di inizializzare il pagamento verso una Banca Buyer ed è responsabile della transazione in caso di contenziosi.
-
-MyBank viene proposto come uno dei servizi di pagamento offerti dai Prestatori aderenti che possono svolgere il ruolo di SELLER BANK, per il convenzionamento di Amministrazioni ed Enti pubblici, o il ruolo di BUYER BANK, consentendo ai clienti di pagare tramite il proprio banking online in PagoPA senza sviluppi e costi aggiuntivi.
-
-La documentazione relativa a tale servizio è disponibile sul sito istituzionale di PagoPA S.p.A..
-`[TBD rimando alla sez.3 apposita 3_07_00_integrazione_wallet ? -> io qui dovrei descrivere come devi compilare il CDI per configurare questo servizio]`
-
-### PSP che intendono svolgere il ruolo di Banca Seller
-
-`[TBD in verifica di revisione]`
-
+L'attivazione di un PSP che intende svolgere il ruolo di Acquirer comporta l'indicazione da parte dello stesso dell'utilizzo di un Payment Gateway di proprietà o tramite il servizio VPOS di SIA SpA.
 
 ## Attivazione di un PSP che offre il servizio CBILL
 

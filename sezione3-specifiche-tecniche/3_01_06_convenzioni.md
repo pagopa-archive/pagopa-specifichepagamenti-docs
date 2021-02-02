@@ -58,5 +58,3 @@ Esempio:
 Una volta che l'utente viene reindirizzato verso l'url ottenuta in risposta, il WISP mostrerà gli strumenti di pagamento con commissioni in linea con il _codiceConvenzione_ indicato.
 
 Qualora la convenzione in essere tra EC e PSP indichi eventuali costi di transazione a carico dell'Ente Creditore, le RT generate conterranno il parametro [`commissioniApplicatePA`](https://github.com/pagopa/pagopa-api/blob/68eb34f55cf6c846009644889d15345fa4162b6c/general/PagInf_RPT_RT_6_2_0.xsd#L673) valorizzato con l'importo da sostenere dall'EC creditore.
-
-`[TBD non sarebbe meglio rimandare al DevPortal per tutti i dettagli ? Al momento non abbiamo esempi sul portale]`

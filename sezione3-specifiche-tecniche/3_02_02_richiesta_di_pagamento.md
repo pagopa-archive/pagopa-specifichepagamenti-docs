@@ -15,7 +15,7 @@ In aggiunta, l'EC può definire una data di validità delle informazioni inviate
 
 La primitiva *paaAttivaRPT* già contenuta nelle precedenti versioni, continuerà ad essere utilizzata e supportata sino al 31/12/2021.
 
-![paaAttivaRPT](../diagrams/sd_paaAttivaRPT.png)
+![paaAttivaRPT](../diagrams/sd_paaAttivaRPT.png) `[TBD diagramma puml da aggiornare]`
 
 1. la piattaforma richiede un'occorrenza di pagamento (distinta attraverso un codice di contesto pagamento) all'EC tramite la primitiva *paaAttivaRPT* specificando l'avviso di pagamento (identificato da IUV e CF).
 2. l'EC verifica lo stato della posizione debitoria correlata e restituisce i dati necessari per il pagamento (importo ed iban di accreditamento)
