@@ -1,4 +1,5 @@
 @startuml
+hide footbox
 autonumber 
 
 participant vpos  as "VPOS"
