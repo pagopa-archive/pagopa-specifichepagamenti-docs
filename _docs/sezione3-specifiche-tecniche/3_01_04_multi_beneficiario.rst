@@ -1,8 +1,10 @@
 Pagamento multi beneficiario
 ============================
 
+|work-in-progress| **Soggetto a proposta di modifica**
+
 E’ possibile che per talune posizioni debitorie la somma totale del
-debito debba essere ripartita tra più Enti Creditori ( tutti aderenti
+debito debba essere ripartita tra più Enti Creditori (tutti aderenti
 alla piattaforma pagoPA).
 
 In tali casi la stessa posizione debitoria dovrà essere scomposta in
@@ -11,26 +13,28 @@ tenendo conto delle seguenti osservazioni:
 
 -  la prima RPT dell’elenco dovrà essere riferita all’EC che sta
    inizializzando il carrello.
--  Ogni RPT dovrà contenere la descrizione della quota parte di
+-  ogni RPT dovrà contenere la descrizione della quota parte di
    pagamento del singolo EC.
--  Ogni RPT contiene conti di accredito intestati all’EC a cui è
+-  ogni RPT contiene i conti di accredito intestati all’EC a cui è
    riferita l’RPT.
 
-Le ricevute di tale pagamento saranno consegnate a :
+Le ricevute di tale pagamento saranno consegnate:
 
 -  alla stazione dalla quale è partita la richiesta di pagamento
--  tutte le stazioni degli EC coinvolti e dedite alla ricezione di
-   pagamento per conto terzi ( paramentro della stazione broadcast )
+-  a tutte le stazioni degli EC coinvolti e dedite alla ricezione di
+   pagamento per conto terzi (parametro della stazione broadcast)
 
-Esempio : Prendiamo ad esempio il pagamento di un tributo TARI/TEFA pari
-ad un totale di 110 EUR. In tale scenario il comune ( codice fiscale
-777777777 ) dovrà istruire un pagamento per l’accredito del contributo
-TARI (100 EUR) verso lo stesso comune, ed il contributo TEFA ( 10EUR )
-verso la sua provincia di competenza ( codice fiscale 999999999 ).
+**Esempio**
 
-Il carrello dovrà essere così composto da due RPT così composte
+Il pagamento di un tributo TARI/TEFA pari ad un totale di 110 EUR. In
+tale scenario il Comune (codice fiscale 777777777) dovrà istruire un
+pagamento per l’accredito del contributo TARI (100 EUR) verso lo stesso
+comune, ed il contributo TEFA (10 EUR) verso la sua Provincia di
+competenza (codice fiscale 999999999).
 
-RPT1
+Il carrello dovrà essere composto da due RPT così composte:
+
+``RPT 1``
 
 .. code:: xml
 
@@ -77,7 +81,7 @@ RPT1
      </datiVersamento>
    </RPT>
 
-RPT 2
+``RPT 2``
 
 .. code:: xml
 
@@ -123,3 +127,5 @@ RPT 2
        </datiSingoloVersamento>
      </datiVersamento>
    </RPT>
+
+.. |work-in-progress| image:: ../images/wip.png

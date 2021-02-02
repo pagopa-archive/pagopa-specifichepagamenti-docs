@@ -18,7 +18,7 @@ Nel caso in cui nessuno dei criteri precedenti sia applicabile, la Banca Seller 
 
 Una volta selezionata la Banca Seller, il processo di pagamento continue secondo il seguente diagramma:
 
-![sdd_mybank.puml](../diagrams/sdd_mybank.png) `[TBD da fare]`
+![sdd_mybank.puml](../diagrams/sdd_mybank.png) 
 
 1. la piattaforma invia i dettagli del pagamento alla banca Seller, tramite la primitiva `pspInviaCarrelloRPT` con specificato all’interno del parametro `parametriProfiloPagamento` il campo `ValidationServiceID` con il valore associato alla selezione della banca Buyer da parte dell’utente.
 2. il PSP valida le informazioni ricevute e notifica la presa in carico del pagamento.

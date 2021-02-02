@@ -10,7 +10,7 @@ Possiamo scomporre il processo in due macro-fasi :
 
 In questa fase l'utente individua il servizio di pagamento offerto tra quelli offerti dalla piattaforma.
 
-![sd_psp_online](../diagrams/sd_psp_online.png) `[TBD da fare]`
+![sd_psp_online](../diagrams/sd_psp_online.png) 
 
 1. Alla selezione del servizio di pagamento del PSP, la piattaforma pagoPA invia i dettagli del pagamento attraverso la primita _nodoInviaCarrelloRPT_
 2. il PSP acquisisce i dettagli del pagamento, crea una sessione di pagamento , e restituisce i parametri da utilizzare per identificare la sessione di pagamento appena creata.
@@ -40,7 +40,7 @@ Di default:
 
 In questa fase, l'utente utilizza il portale messo a disposizione dal PSP per procedere con l'operazione di pagamento.
 
-![sd_psp_online_esito](../diagrams/sd_psp_online_esito.png) `[TBD da fare]`
+![sd_psp_online_esito](../diagrams/sd_psp_online_esito.png) 
 
 1. L'utente esegue tutte le operazione proprie del servizio offerto dal PSP concludendo l'operazione di pagamento.
 2. il PSP gestisce l'operazione di pagamento.

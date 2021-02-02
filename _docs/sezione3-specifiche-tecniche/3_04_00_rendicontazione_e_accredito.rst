@@ -1,12 +1,12 @@
 Rendicontazione ed Accredito
 ============================
 
-Ogni PSP aderente alla piattaforma, a D+2 rendiconta il dettaglio dei
-riversamenti effettuati verso i conti di accredito dei pagamenti
-avvenuti nella giornata operativa S.
+Ogni PSP aderente alla piattaforma, in data D+2 rendiconta il dettaglio
+dei riversamenti effettuati (nella giornata D+1) verso i conti di
+accredito dei pagamenti avvenuti nella giornata operativa D.
 
-l’EC può recuperare i flussi di rendicontazione prodotti seguendo il
-seguente scehma
+L’EC può recuperare i flussi di rendicontazione prodotti seguendo il
+seguente schema:
 
 .. figure:: ../diagrams/sd_ec_richiesta_flussi.png
    :alt: sd_ec_richiesta_flussi
@@ -27,10 +27,10 @@ una ricevuta di pagamento.
 ricevuta tramite paaInviaRT
 ---------------------------
 
-L’interfaccia *paaInviaRT* già contenuta nelle prcedenti versioni,
+La primitiva *paaInviaRT* già contenuta nelle precedenti versioni,
 continuerà ad essere utilizzata e supportata sino al 31/12/2021. In tali
-casi, è possibile rintracciare la ricevuta di un versamento contenuto
-all’interno del flusso di rendicontazione tramite i parametri :
+casi è possibile rintracciare la ricevuta di un versamento contenuto
+all’interno del flusso di rendicontazione tramite i parametri:
 
 -  *identificativoUnivocoVersamento*
 -  *identificativoUnivocoRiscossione*
@@ -42,12 +42,12 @@ versamento corrispondente è possibile utilizzare il campo
 ricevuta paSendRT
 -----------------
 
-E’ possibile rintracciare la ricevuta di un cersamento contenuto
+E’ possibile rintracciare la ricevuta di un versamento contenuto
 all’interno del flusso di rendicontazione tramite il parametro
 *identificativoUnivocoRiscossione* che conterrà il valore del campo
-request-id della ricevuta.
+*request-id* della ricevuta.
 
 La ricevuta potrebbe contenere diversi versamenti, per identificare il
 versamento corrispondente è possibile utilizzare il campo
-*indiceDatiSingoloPagamento* che conterrà il valore del *trasfer-id*
+*indiceDatiSingoloPagamento* che conterrà il valore del *idTransfer*
 all’interno della ricevuta.

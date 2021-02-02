@@ -10,7 +10,7 @@ Il presente capitolo descrive le molteplici possibilità di integrazione di un m
 
 Indipendentemente dal tipo di servizio integrato, il processo di pagamento verso il PSP può essere ricondotto al seguente schema
 
-![sd_pagamento_wallet](../diagrams/sd_pagamento_wallet.png) `[TBD da fare]`
+![sd_pagamento_wallet](../diagrams/sd_pagamento_wallet.png) 
 
 1. la piattaforma notifica al PSP un insieme di richieste di pagamento. La primitiva utilizzata può dipendere dal tipo di integrazione.
 2. il PSP verifica le informazioni ed accetta le richieste pervenute.

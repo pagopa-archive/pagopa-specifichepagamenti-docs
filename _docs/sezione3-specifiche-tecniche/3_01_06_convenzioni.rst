@@ -1,21 +1,26 @@
 Convenzioni con PSP
 ===================
 
-pagoPA disintermedia l’associazione tra EC e PSP, ciò vuol dire che che
-l’EC non deve necessariamente più stipulare convenzioni con alcun PSP al
-fine di poter disporre di strumenti di pagamento al cittadino. Ogni
-cittadino / utilizzatore della piattaforma potrà selezionare lo
-strumento di pagamento tra tutti quelli offerti tra i PSP aderenti per
+Uno dei principali scopi della piattaforma pagoPA è *disintermediare* le
+comunicazioni tra EC e PSP, ciò implica che gli EC non hanno bisogno di
+stipulare convenzioni con i singoli PSP al fine di poter disporre di
+strumenti di pagamento al cittadino.
+
+Ogni cittadino, o utilizzatore della piattaforma, potrà selezionare lo
+strumento di pagamento tra tutti quelli offerti dai PSP aderenti per
 completare l’operazione di pagamento.
 
 Ciò nonostante, viene comunque consentita la possibilità di stipulare
 convenzioni specifiche con uno o più PSP al fine di poter offrire
 strumenti di pagamento ad un costo di commissioni agevolato.
 
-Per poter usufruire di una convenzione in essere tra PSP ed EC è
+Per poter usufruire di una convenzione in essere tra EC e PSP è
 necessario inserire all’interno della primitiva *nodoInviaCarrelloRPT*
+l’opportuno ``codiceConvenzione``.
 
-Esempio : Request
+Esempio:
+
+``Request``
 
 .. code:: xml
 
@@ -46,7 +51,7 @@ Esempio : Request
       </soapenv:Body>
    </soapenv:Envelope>
 
-Response:
+``Response``
 
 .. code:: xml
 
@@ -59,12 +64,12 @@ Response:
       </soapenv:Body>
    </soapenv:Envelope>
 
-Una volta rendirizzato l’utente verso l’url ottenuta in risposta, il
-WISP mostrerà gli strumenti di pagamento con commissioni in linea con il
-codiceConvenzione indicato.
+Una volta che l’utente viene reindirizzato verso l’url ottenuta in
+risposta, il WISP mostrerà gli strumenti di pagamento con commissioni in
+linea con il *codiceConvenzione* indicato.
 
 Qualora la convenzione in essere tra EC e PSP indichi eventuali costi di
 transazione a carico dell’Ente Creditore, le RT generate conterranno il
-paramentro
-`commissioniApplicatePA <https://github.com/pagopa/pagopa-api/blob/68eb34f55cf6c846009644889d15345fa4162b6c/general/PagInf_RPT_RT_6_2_0.xsd#L673>`__
+parametro
+```commissioniApplicatePA`` <https://github.com/pagopa/pagopa-api/blob/68eb34f55cf6c846009644889d15345fa4162b6c/general/PagInf_RPT_RT_6_2_0.xsd#L673>`__
 valorizzato con l’importo da sostenere dall’EC creditore.

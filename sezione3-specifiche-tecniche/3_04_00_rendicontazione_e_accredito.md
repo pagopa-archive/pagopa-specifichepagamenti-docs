@@ -5,7 +5,7 @@ Ogni PSP aderente alla piattaforma, in data D+2 rendiconta il dettaglio dei rive
 
 L'EC può recuperare i flussi di rendicontazione prodotti seguendo il seguente schema:
 
-![sd_ec_richiesta_flussi](../diagrams/sd_ec_richiesta_flussi.png) `[TBD rigenerare il diagramma]`
+![sd_ec_richiesta_flussi](../diagrams/sd_ec_richiesta_flussi.png)
 
 1. l'EC richiede l'elenco dei flussi di rendicontazione disponibili
 2. la piattaforma restituisce l'elenco dei flussi di rendicontazione

@@ -29,7 +29,7 @@ L'operazione di pagamento avviene in due fasi :
 - prenotazione del credito
 - contabilizzazione
 
-![sd_vpos.puml](../diagrams/sd_vpos.png) `[TBD da fare]`
+![sd_vpos.puml](../diagrams/sd_vpos.png) 
 
 1. Avvenuta la selezione dell'acquirer, la piattaforma richiedere verifica la disponibilità dell'import verso l'acquirer tramite il VPOS.
 2. Il VPOS restituisce l'esito dell'operazione

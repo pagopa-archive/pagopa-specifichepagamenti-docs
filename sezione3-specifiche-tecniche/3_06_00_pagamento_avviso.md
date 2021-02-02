@@ -14,7 +14,7 @@ Il Prestatore di Servizi di Pagamento (PSP) è in possesso di un Avviso di Pagam
 
 Attraverso la lettura del _QR Code_, o attraverso l'inserimento manuale dei dati (`codice fiscale`, `importo`, `numeroAvviso`), si richiedono alla piattaforma pagoPA, mediante la primitiva `verifyPaymentNotice`​, i dati aggiornati del​l’Avviso di Pagamento.
 
-![sd_psp_verifica_avviso](../diagrams/sd_psp_verifica_avviso.png) `[TBD da fare]`
+![sd_psp_verifica_avviso](../diagrams/sd_psp_verifica_avviso.png) 
 
 In risposta alla richiesta la piattaforma restituisce le informazioni aggiornate dell’Avviso di Pagamento, in particolare:
 
@@ -53,7 +53,7 @@ Il Prestatore di Servizi di Pagamento (PSP) effettua l’addebito dell’importo
 
 La Richiesta di Pagamento è posto in stato ​`paid` e la sessione di pagamento viene chiusa. L'avviso di pagamento rimarrà bloccato sino a quanto la ricevuta di pagamento non sarà consegnata all'EC:
 
-![sd_psp_pagamento_avviso](../diagrams/sd_psp_pagamento_avviso.png) `[TBD da fare]`
+![sd_psp_pagamento_avviso](../diagrams/sd_psp_pagamento_avviso.png) 
 
 ## Eccezioni
 
