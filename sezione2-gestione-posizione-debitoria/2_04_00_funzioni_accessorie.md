@@ -1,21 +1,5 @@
-Funzioni accessorie
-===================
+# Funzioni accessorie
 
-## Storno del pagamento
-`[TBD da verificare -> da cancellare ]`
-
-Qualora l'Utilizzatore finale chieda a vario titolo l'annullamento (storno) di un pagamento all'EC presso il quale questo è stato disposto, il sistema pagoPA mette a disposizione dell'EC e del PSP idonee funzionalità del NodoS per gestire detta operazione.
-
-L'EC deve predisporre - e darne evidenza sul proprio sito attraverso il quale sono effettuati i pagamenti - apposite procedure amministrative di back-office al fine di gestire, nel rispetto della normativa vigente, le richieste di storno del pagamento ed i relativi flussi economici:
-
-![bpmn-storno](../images/bpmn_storno.png)
-
-Il processo di storno viene iniziato dall'Utilizzatore finale che lo richiede all'EC (*Task* T5.1).
-
-L'EC esamina la richiesta (*Gateway* G5.1):
-
-* In caso di esito negativo, l'EC comunica l'informazione all'Utilizzatore finale (*Task* T5.2) che ne apprende l'esito (*Task* T5.3)
-* In caso contrario l'EC, entro tempi compatibili con il procedimento richiesto, esamina la richiesta e invia l'esito dello storno, aggiornando i propri archivi informatici e riaprendo la posizione debitoria se necessario (*Task* T5.4). L'esito positivo è trasmesso dal Nodo al PSP (*Task* T5.5), il quale esegue il riaccredito verso l'Utilizzatore finale (*Task* T5.6) che lo riceve direttamente senza l'intervento del Nodo (*Task* T5.7). Il PSP recupera la somma dovuta compensandola sui successivi accrediti da effettuare verso l'EC ed espone la cifra (negativa) sul successivo rendiconto (*Task* T5.8) che viene trasmesso all'EC attraverso il Nodo (*Task* T5.8). A questo punto l'EC è in grado di riconciliare correttamente gli importi (*Task* T5.10).
 
 ## Attestazione del pagamento
 
