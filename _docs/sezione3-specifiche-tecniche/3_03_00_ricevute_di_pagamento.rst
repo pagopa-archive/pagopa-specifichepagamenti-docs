@@ -6,7 +6,10 @@ generata, e notificata tempestivamente, una ricevuta che attesta il
 pagamento avvenuto con i riferimenti alla posizione debitoria e relativi
 dettagli.
 
-``[TBD digramma sendRPT()]``
+.. figure:: ../diagrams/sd_ec_receipt.png
+   :alt: sd_ec_receipt
+
+   sd_ec_receipt
 
 Le ricevute vengono inviate:
 
