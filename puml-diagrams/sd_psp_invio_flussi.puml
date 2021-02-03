@@ -1,0 +1,16 @@
+@startuml
+hide footbox
+autonumber
+
+participant PSP as "PSP"
+participant NodoSPC as "pagoPA"
+participant Banca_Tesoriera as "Banca Tesoriera"
+particpant EC as "EC"
+
+PSP -> PSP: Genera Flusso di Rendicontazione
+PSP -> Banca_Tesoriera: Acredto Bonifico SCT
+PSP -> NodoSPC: req. nodoInviaFlussoRendicontazione
+NodoSPC -> NodoSPC: Verifica XML rendicontazione
+
+NodoSPC -[#blue]-> PSP:resp OK nodoInviaFlussoRendicontazione
+@enduml

@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+autonumber 
+participant psp  as "PSP"
+participant nodo as "pagoPA"
+participant user 
+
+user -[#green]> psp : accesso al servizio  
+
+psp -> psp : gestione pagamento 
+
+user -[#green]> nodo : re-direct to pagoPA
+
+nodo -> nodo : LandingPage Esito
+@enduml

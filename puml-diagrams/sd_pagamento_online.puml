@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+autonumber
+
+participant cit as "Utilizzatore finale"
+participant ec as "EC"
+participant pagopa as "pagoPA"
+
+
+ec -> pagopa : nodoInviaCarrelloRPT 
+pagopa -> pagopa : crea sessione di pagamento 
+pagopa -[#blue]-> ec : resp OK (*url*)
+...
+cit -[#green]> pagopa : <url>[&lang="xy”][&logo="1239338234242_01"] 
+pagopa -> pagopa : WISP landingPage
+cit -[#green]> pagopa : Seleziona Strumento di pagamento
+pagopa -> pagopa : elaborazione pagamento
+pagopa -[#green]-> ec: <urlPortalePA>?&idSession=<idSession>& esito=<esito>
+...
+pagopa -> ec : paaSendRT
+ec -[#blue]-> pagopa : resp OK
+@enduml

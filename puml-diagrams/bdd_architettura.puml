@@ -1,0 +1,28 @@
+@startuml
+
+class ec as "EC" {
+
+}
+
+class partner as "PT" {
+
+}
+
+class psp as "PSP" {
+
+}
+
+class intermediario as "Intermediario"
+
+class pagopa as "pagoPA" {
+
+}
+
+
+
+ec - partner
+psp - intermediario
+
+partner - pagopa
+intermediario - pagopa
+@enduml

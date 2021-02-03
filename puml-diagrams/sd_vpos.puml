@@ -1,0 +1,15 @@
+@startuml
+autonumber 
+participant vpos  as "VPOS"
+participant nodo as "pagoPA"
+participant psp as "PSP"
+
+nodo -> vpos : req prenotazione ( acquirer )
+vpos -[#blue]-> nodo : resp OK 
+
+nodo -> psp : req nodoInviaCarrelloRPT
+psp -[#blue]-> nodo : resp OK
+
+nodo -> vpos : req contabilizzazione
+vpos -[#blue]-> : resp OK
+@enduml

@@ -1,0 +1,36 @@
+@startuml
+skinparam style strictuml
+hide methods
+
+class notice as "Avviso di Pagamento" {
+  
+  }
+class pos as "Posizione Debitoria" {
+ 
+}
+
+class pagamento as "Pagamento" {
+}
+
+class ricevuta as "Ricevuta" {
+
+}
+
+class carrello as "Carrello di Pagamenti"{
+}
+
+class fdr as "Flusso di Rendicontazione" {
+}
+
+notice "1" - "1" pos 
+
+
+notice "1" -d- "*" pagamento
+
+pagamento "1" -"1" ricevuta
+
+ricevuta "*" -d-"1" fdr
+
+carrello "1" -"*" pagamento
+
+@enduml

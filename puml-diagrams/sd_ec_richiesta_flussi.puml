@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+autonumber
+
+participant ec as "EC"
+participant pagopa as "pagoPA"
+
+ec -> pagopa : nodoChiediListaFlussiDiRendicontazione 
+pagopa -[#blue]-> ec : resp OK  ( lista FDR)
+...
+ec -> pagopa: nodoChiediFlussoDiRendicontazione(idFlusso)
+pagopa -> pagopa : update FDR
+pagopa -[#blue]-> ec : resp OK ( FDR)
+@enduml

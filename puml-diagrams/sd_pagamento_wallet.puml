@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+autonumber 
+
+participant vpos  as "VPOS"
+participant nodo as "pagoPA"
+participant psp as "PSP"
+
+
+nodo -> psp : req nodoInviaCarrelloRPT() / nodoInviaCarrelloRPTCarte ()
+psp -[#blue]-> nodo : resp OK
+
+psp -> nodo : req pspInviaRT
+nodo -[#blue]-> psp : resp OK
+@enduml

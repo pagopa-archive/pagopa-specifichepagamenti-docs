@@ -30,7 +30,7 @@ dei seguenti eventi:
 Il seguente *class diagram* mostra le relazioni che si instaurano tra
 gli elementi durante un tentativo di pagamento andato a buon fine.
 
-|image0|
+|image1|
 
 **Figura** **1: Diagramma delle classi del pagamento**
 
@@ -102,7 +102,7 @@ attributi che vengono utilizzati per filtrare i PSP in grado di erogare
 il servizio di pagamento richiesto durante il processo di selezione
 degli stessi da parte dell’Utilizzatore finale.
 
-|image1|
+|image2|
 
 **Figura** **3: Diagramma delle classi del versamento**
 
@@ -210,7 +210,7 @@ da una richiesta di pagamento (RPT) ed attesta, qualora l’esito sia
 positivo, l’esecuzione del versamento e la chiusura della Posizione
 Debitoria.
 
-|image2|
+|image3|
 
 **Figura** **4: Diagramma delle classi della RT**
 
@@ -246,7 +246,7 @@ Richiesta di revoca (RR)
 La RR contiene tutte le informazioni necessarie per gestire sia la
 revoca che lo storno di un pagamento, definiti in sezione II.
 
-|image3|
+|image4|
 
 **Figura** **5: Diagramma delle classi della Richiesta di Revoca**
 
@@ -302,7 +302,7 @@ ai soggetti interessati a cura del PSP che ha effettuato l’operazione di
 accredito. Il FR deve essere reso disponibile all’EC nella giornata
 successiva a quella durante la quale è stato disposto il bonifico (D+2).
 
-|image4| **Figura** **7: Diagramma delle classi del Flusso di
+|image5| **Figura** **7: Diagramma delle classi del Flusso di
 Rendicontazione**
 
 In particolare, il FR è identificato dai seguenti parametri:
@@ -344,7 +344,7 @@ aderenti (EC e PSP) ed il NodoSPC, i relativi messaggi di errore vengono
 descritti utilizzando la struttura **faultBean** mostrata nel seguente
 diagramma.
 
-|image5|
+|image6|
 
 **Figura** **8: Oggetto faultBean**
 
@@ -637,7 +637,7 @@ Avvisatura digitale
 -------------------
 
 +----------------------------------------+-----------------------------+
-| |image6| **Paragrafo soggetto a        |                             |
+| |image7| **Paragrafo soggetto a        |                             |
 | proposta di modifica**                 |                             |
 +----------------------------------------+-----------------------------+
 
@@ -757,7 +757,7 @@ Iscrizione al servizio
 Definisce lo schema secondo il quale un PSP richiede al NodoSPC di
 ricevere le avvisature destinate ad un Soggetto Pagatore.
 
-|image7|
+|image8|
 
 **Figura** **12: Diagramma delle classi dell’iscrizione al servizio**
 
@@ -803,7 +803,7 @@ deve essere resa disponibile alle controparti è raccolta nel documento
 Tabella delle Controparti che il NodoSPC rende disponibile tramite
 primitive SOAP descritte fra le funzioni ausiliarie.
 
-|image8|
+|image9|
 
 **Figura** **13: Diagramma delle classi per la configurazione di un EC**
 
@@ -820,7 +820,7 @@ caratterizzato dalle seguenti proprietà:
 -  specifica sulla pubblicazione delle informazioni;
 -  dettaglio dei servizi di pagamento attivati (canali).
 
-|image9|
+|image10|
 
 **Figura** **14: Diagramma delle classi per la configurazione di un
 PSP**
@@ -1433,15 +1433,15 @@ pagamento) così valorizzando i seguenti campi del giornale:
 -  *categoriaEvento* a “INTERNO”;
 -  *identificativoErogatore* a “GENERAZIONE-RT”.
 
-.. |image0| image:: ../diagrams/cd_posizione_debitoria.png
-.. |image1| image:: ../diagrams/cd_versamento.png
-.. |image2| image:: ../diagrams/cd_RT.png
-.. |image3| image:: ../diagrams/cd_RR.png
-.. |image4| image:: ../diagrams/cd_FR.png
-.. |image5| image:: ../diagrams/cd_fault_bean.png
-.. |image6| image:: ../images/wip.png
-.. |image7| image:: ../diagrams/cd_IscrizioneServizio.png
+.. |image1| image:: ../diagrams/cd_posizione_debitoria.png
+.. |image2| image:: ../diagrams/cd_versamento.png
+.. |image3| image:: ../diagrams/cd_RT.png
+.. |image4| image:: ../diagrams/cd_RR.png
+.. |image5| image:: ../diagrams/cd_FR.png
+.. |image6| image:: ../diagrams/cd_fault_bean.png
+.. |image7| image:: ../images/wip.png
+.. |image8| image:: ../diagrams/cd_IscrizioneServizio.png
    :width: 2.98958in
    :height: 2.125in
-.. |image8| image:: ../diagrams/cd_ConfigurazioneEnti.png
-.. |image9| image:: ../diagrams/cd_ConfigurazionePSP.png
+.. |image9| image:: ../diagrams/cd_ConfigurazioneEnti.png
+.. |image10| image:: ../diagrams/cd_ConfigurazionePSP.png

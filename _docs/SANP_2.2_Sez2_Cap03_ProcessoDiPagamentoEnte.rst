@@ -108,8 +108,7 @@ Il processo di pagamento segue percorsi differenti a seconda del servizio del PS
 
       -  non contestuale, se l’autorizzazione viene rilasciata successivamente alla ricezione della richiesta di pagamento telematico da parte del
          Prestatore di Servizi di Pagamento, attraverso canali da questo messi a disposizione (ad esempio: home banking, notifica su app per
-         smartphone o tablet, ecc.). Assimilabile a tale tipologia è il caso di una transazione Mybank: il carrello si ferma a una componente del
-         Nodo, il Wrapper, che quindi ingaggia la componente *Initiating Party* della *Seller Bank*, per la gestione delle fasi successive.
+         smartphone o tablet, ecc.).
 
       -  Tutte i percorsi precedenti, incluso il ramo derivante dall’autorizzazione al pagamento con carta, confluiscono nel punto in cui risulta noto
          l’esito del pagamento disposto dall’Utilizzatore finale e quindi il PSP possa inoltrare le RT da esso prodotte (*Task* T2.1.12).
