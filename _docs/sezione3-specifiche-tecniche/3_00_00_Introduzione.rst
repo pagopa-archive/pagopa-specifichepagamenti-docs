@@ -5,8 +5,12 @@ Specifiche Tecniche Generali
 
 Questa sezione è rivolta agli sviluppatori e descrive in maniera
 generale tutti i flussi informativi necessari per l’integrazione con la
-piattaforma. Maggior dettagli sono disponibili all’interno del `portale
-degli sviluppatori <https://pagopa.github.io/pagopa-api/>`__
+piattaforma.
+
+**NB**: Informazioni di dettaglio (es: metodi e parametri delle
+chiamate) sono disponibili all’interno del `Portale degli
+Sviluppatori <https://pagopa.github.io/pagopa-api/>`__ che ne
+rappresenta la fonte aggiornata.
 
 Stazioni e Canali
 -----------------
