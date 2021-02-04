@@ -1,4 +1,4 @@
-Introduzione alla versione 3.0.0-RC
+Introduzione alla versione 2.4.0-RC
 ===================================
 
 Il sistema dei pagamenti elettronici a favore della Pubblica
