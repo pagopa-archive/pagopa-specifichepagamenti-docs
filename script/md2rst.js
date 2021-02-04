@@ -5,7 +5,8 @@ const  __rootDir = path.dirname(__dirname,'..');
 const stdArgs ='-f markdown -t rst';
 
 // set the input chapter 
-const docChapters= ['sezione1-funzionamento-generale-del-sistema',
+const docChapters= ['sezione0-preambolo',
+	                'sezione1-funzionamento-generale-del-sistema',
 					'sezione2-gestione-posizione-debitoria',
 					'sezione3-specifiche-tecniche',
 					'sezione4-adesione-al-sistema'
