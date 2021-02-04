@@ -9,7 +9,7 @@ piattaforma.
 
 **NB**: Informazioni di dettaglio (es: metodi e parametri delle
 chiamate) sono disponibili all’interno del `Portale degli
-Sviluppatori <https://pagopa.github.io/pagopa-api/>`__ che ne
+Sviluppatori <https://pagopa.github.io/pagopa-api/>`_  che ne
 rappresenta la fonte aggiornata.
 
 Stazioni e Canali
