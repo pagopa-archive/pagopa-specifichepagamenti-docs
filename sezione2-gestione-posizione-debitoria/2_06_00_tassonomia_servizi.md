@@ -46,7 +46,7 @@ Nel caso in cui vi sia una tipologia di incasso che ingloba al suo interno sia u
 Per ogni codice tassonomico vengono indicate anche il numero della versione, la data di inizio e fine validità con lo scopo che eventuali modifiche possano essere facilmente individuate da parte degli attori coinvolti. `[TBD link a documento e repo github per i codici tassonomici]`
 
 ## Decorrenza
-
+`[TBD]`
 Tali modifiche entrano in vigore a partire dal **01/03/2021**.
 
 A decorrere dalla data di pubblicazione del documento monografico, gli Enti Creditori ed i Partner Tecnologici Pubblici e Privati, hanno 5 mesi di tempo per adeguare i loro automatismi in fase di creazione della RPT al fine dell'inserimento dei codici della Tassonomia in modo da avere le informazioni dettagliate su ogni singolo pagamento, ​*pena lo scarto della RPT*.​
