@@ -11,10 +11,10 @@ Sezione 3 - Specifiche Tecniche  EC
    :hidden:
 
    3_01_00_pagamento_online
-   3_01_02_descrizione_ux
-   3_01_04_multi_beneficiario
-   3_01_05_marca_da_bollo
-   3_01_06_convenzioni
+   3_01_01_descrizione_ux
+   3_01_02_multi_beneficiario
+   3_01_03_marca_da_bollo
+   3_01_04_convenzioni
    3_02_00_avviso_di_pagamento
    3_02_01_verifica_di_una_posizione_debitoria
    3_02_02_richiesta_di_pagamento
