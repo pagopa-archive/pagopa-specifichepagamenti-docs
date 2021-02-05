@@ -2,6 +2,42 @@
 
 Questo processo prevede che l'esecuzione del pagamento avvenga presso le infrastrutture messe a disposizione dal PSP quali, ad esempio, sportelli ATM, applicazioni di *Home banking* e *mobile* *payment*, uffici postali, punti della rete di vendita dei generi di Monopolio (Tabaccai), SISAL e Lottomatica, casse predisposte presso la Grande Distribuzione Organizzata, etc.
 
+L'acquisizione delle informazioni necessarie per colloquiare con la piattaforma sono contenute all'interno di un QR-CODE presente all'interno dell'avviso di pagamento che può facilitare l'inserimento dei dati. Le stesse informazioni sono presenti in chiaro all'interno dell'avviso e consentono un inserimento manuale dei dati da parte di un utente (o operatore)
+
+Vengono rese al PSP due funzioni principali :
+
+- verifica dell'avviso di pagamento : 
+- pagamento di un avviso di pagamento : attraverso questa funzione il PSP 
+
+## verifica di un avviso di pagamento
+
+Attraverso questa funzione il PSP è in grado di acquisire informazioni di dettaglio relative alle modalità di pagamento e l'importo dell'avviso.
+Tale funzione è utilizzabile a discrezione del PSP.
+
+## Pagamento di un avviso di pagamento
+
+Attraverso tale funzione il PSP è in grado di aprire una sessione di pagamento che preventivamente bloccherà i tentativi di pagamento di altri PSP per il medesimo avvviso. Attraverso la medesima chiamata, il PSP acquisce l'importo del pagamento ed i dati necessari per il riversamento della somma,in particolare ogni versamento :
+
+- importo parziale
+- codice fiscale dell'ente
+- IBAN
+
+A seguito dell'operazione di incasso, il PSP notifica alla piattaforma l'esito del pagamento.
+
+Per agevolare l'integrazione dei diversi sistemi di incasso, la sessione di pagamento può essere richiesta con un tempo limite. A scadenza di tale tempo, il pagamento si considererà non avvenuto.
+
+a termine dell'operazione il PSP , in linea con le norme vigenti, consegna un attestazione di pagamento la quale dovrà contenere ( in aggiunta da quanto previsto da eventuali normative ) l'identificativo della sessione di pagamento ottenuto durante le operazioni di pagamento (*paymentToken*)
+
+l'EC riceverà contestualmente una ricevuta telematica dell'operazione notificata dal PSP (solo in caso di pagamento concluso con esito positivo)
+
+## Trasmissione dati di accredito e rendicontazione
+
+Il PSP accrediterà le somme sui conti dell'EC  ricevuti durante la creazione della sessione di pagamento , per mezzo di bonifico SCT, il giorno successivo ( D+1 ), mentre entro due giorni ( D+2 ) invierà il flusso di rendicontazione dettagliando l'elenco puntuali dei pagamenti contenuti all'interno dei diversi bonifici effettuati.
+
+
+`[TBD da cancella re]`
+Questo processo prevede che l'esecuzione del pagamento avvenga presso le infrastrutture messe a disposizione dal PSP quali, ad esempio, sportelli ATM, applicazioni di *Home banking* e *mobile* *payment*, uffici postali, punti della rete di vendita dei generi di Monopolio (Tabaccai), SISAL e Lottomatica, casse predisposte presso la Grande Distribuzione Organizzata, etc.
+
 Per rendere possibile il pagamento l'EC ha l'obbligo di recapitare all'utilizzatore finale un avviso con gli estremi del pagamento da effettuare. Tale recapito deve obbligatoriamente avvenire sia in modalità analogica (tramite servizi postali), che digitale. L'EC può inoltre adottare ulteriori misure per la diffusione degli avvisi di pagamento, per esempio rendere disponibili funzioni di stampa on line tramite il proprio sito.
 
 Nello schema che segue è trattato il caso in cui l'utilizzatore finale, già in possesso dell'avviso di pagamento analogico fornito dall'Ente, si rechi presso le strutture del PSP e comunichi il codice dell'avviso di pagamento. Si tenga presente che il caso d'uso descritto non dipende dalla concreta modalità in cui tale dato entra in possesso del PSP: il codice potrebbe essere comunicato a un operatore di sportello, letto automaticamente tramite dispositivi ottici, inserito manualmente dal soggetto versante su interfacce messe a disposizione dai PSP (un terminale ATM, una pagina WEB, etc), ovvero, da ultimo, comunicato tramite avviso digitale.

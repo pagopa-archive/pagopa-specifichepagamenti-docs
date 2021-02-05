@@ -1,3 +1,4 @@
+`[TBD da cancellare tutto ]`
 # Funzioni accessorie
 
 
