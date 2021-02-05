@@ -1,6 +1,6 @@
 **SEZIONE I -- FUNZIONAMENTO GENERALE DEL SISTEMA**
 
-#Funzionamento Generale del Sistema
+# Funzionamento Generale del Sistema
 
 Obiettivo strategico della piattaforma pagoPA è quello di facilitare e diffondere, a beneficio dei cittadini e delle imprese, l'utilizzo di strumenti evoluti nei pagamenti in favore della Pubblica Amministrazione, delle Società a controllo pubblico e dei Gestori dei Pubblici servizi. Si denominano i soggetti che hanno aderito a pagoPA in attuazione dell'art 5 del CAD, con il nome collettivo di **Ente Creditore**.
 
