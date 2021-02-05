@@ -1,97 +1,63 @@
-# Procedure emissioni nuove `SANP`
+# Procedure emissione nuove `SANP`
 
-<p align="center">
-  <img src="pagoPA.png" />
-</p>
+<p align="center"> <img src="../images/pagoPA.png" /> </p>
 
-- [Procedure emissioni nuove `SANP`](#procedure-emissioni-nuove-sanp)
-  - [Executive Summary](#executive-summary)
-  - [Requirements](#requirements)
-  - [Usage](#usage)
-  - [Guidelines](#guidelines)
-  - [Useful links](#useful-links)
+- [Procedure emissione nuove `SANP`](#procedure-emissioni-nuove-sanp)
+  - [Introduzione](#introduzione)
+  - [Requisiti](#requisiti)
+  - [Uso](#uso)
+  - [Link utili](#link-utili)
 
-## Executive Summary
+## Introduzione
 
-Lo scopo del seguente documento è quello di definire una procedura di come si emettono nuove versioni (proposte evolutive/correttive), relative alle `SANP` _Specifiche Attuative del Nodo dei Pagamenti_, a partire dal repo [ufficiale](https://github.com/pagopa/pagopa-specifichepagamenti-docs) GitHub di `PagoPA`.
+Lo scopo del seguente documento è definire una procedura per l'emissione di una nuove versione (o proposte evolutive/correttive) delle `SANP`, _Specifiche Attuative del Nodo dei Pagamenti_, a partire dal repository [ufficiale](https://github.com/pagopa/pagopa-specifichepagamenti-docs) di PagoPA.
 
-## Requirements
+## Requisiti
 
-Per poter collaborare e apportare modifiche al repo della documentazione occorre per prima cosa aver installato sulla propria macchina [git](https://git-scm.com/downloads), ovvero l'interfaccia a riga di comando del controllo di versione distribuito, che verrà utilizzato per poter interagire con i repos GitHub dell'organizzaione `PagoPA`.
+Prerequisito è aver installato il tool [git](https://git-scm.com/downloads) necessario per operare sui repository dell'organizzazione PagoPA.
 
-Prima di procedere all'installazione, verifare la presenza di `git` sulla propria macchina digitando il seguente comando da un terminale qualsiasi:
+Prima di procedere all'installazione, verificare la presenza di `git` digitando il seguente comando da  terminale: `git --version`
 
-```
-git --version
-```
+Se già presente, verrà mostrata la versione installata nel sistema (es: `git version 2.25.0`)
 
-se già presente, verrà mostrata la versione installata nel sistema, ad esempio:
+E' ovviamente possibile utilizzare il comando git integrato nel proprio _IDE_ di preferenza. A titolo di esempio si riportano le [Development Guidelines](https://github.com/pagopa/io-handbook/blob/master/development-guidelines.md#editors-code-formatting-linting) di [IO](https://io.italia.it/).
 
-```
-git version 2.24.3 (Apple Git-128)
-```
+## Uso
 
-> **NOTA** : (_OPTIONAL_) Installazione di un _IDE_ per la modifica del contenuto dei repo(s).
+Per poter modificare il repository [ufficiale delle `SANP`](https://github.com/pagopa/pagopa-specifichepagamenti-docs) occorre eseguire i seguenti passi:
 
-Per poter modificare il contenuto del documentazione non è necessario un tool specifico, in quanto può essere fatto tramite un qualsiasi editor di testo, di seguito viene indicato quello consigliato nelle linee guida di [IO](https://io.italia.it/) nelle sue [development-guidelines](https://github.com/pagopa/io-handbook/blob/master/development-guidelines.md#editors-code-formatting-linting)
-
-- download & install [Visual Studio Code](https://code.visualstudio.com/)
-
-Nel prossimo paragrafo verrà mostrato anche un suo utilizzo per la modifica dei contenuti.
-
-## Usage
-
-Per poter collaborare e modificare il repo [ufficiale](https://github.com/pagopa/pagopa-specifichepagamenti-docs) delle `SANP` eseguire i seguenti passi :
-
-1. _PRIMA VOLTA_
-
-crearsi una copia locale del repo sulla propria macchina digitando su un terminale il seguente comando, in una cartella a propria scelta :
+Anzitutto occorre avere una copia locale del repository:
 
 ```
-git clone https://github.com/pagopa/pagopa-specifichepagamenti-docs pagopa-specifichepagamenti-docs && cd $_
+$ git clone https://github.com/pagopa/pagopa-specifichepagamenti-docs pagopa-specifichepagamenti-docs && cd $_
 ```
 
-2. _VOLTE SUCCESSIVE : già si ha in locale un copia del repo delle `SANP`_
-
-aprire un terminale e digitare il seguente comando :
+Successivamente occorre aggiornare la copia locale con il contenuto remoto:
 
 ```
-cd <PATH-DOVE-SI-TROVA-IL-REPO-SANP>
+$ git checkout master && git pull
 ```
 
-da qui digitare poi :
-
-```
-git checkout master && git pull
-```
-
-Adesso che abbiamo eseguito il passo 1) o il passo 2) proviamo a fare una modifica alla documentazione per farne una nuova versione.
-
-3. digitare da terminale, dalla cartella del repo precedente clonato e aggiornato al `master` il comando :
+A questo punto è possibile apportare una modifica:
 
 ```
 code .
 ```
 
-se tutto va bene dovrebbe apparire qualcosa di simile :
+dovrebbe apparire una finestra simile (dipendente dal proprio _IDE_):
 
-![](2020-10-09-11-04-10.png)
+![](001.jpg)
 
-4. aprire il file che si vuole modificare tramite il `Project explorer` mostrato a destra e apportare le modifiche desiderate come in qualunque editor di testo.
+Aprire il file che si vuole modificare tramite il `Project explorer` a destra ed apportare le modifiche desiderate
 
-> **NOTA** : nell'esempio è stata modificata la parte della `sezione3-specifiche-tecniche` nello specifico aggiungendo una breve descrizione del _Nuovo Modello 3_ nella sezione `PagamentoPressoPSP.md`
+![](002.jpg)
 
-![](2020-10-09-13-01-55.png)
-
-5. Fatta la modifica (o le modifiche) salvare il file e ritornare nel terminale dove si era dato il comando `code`
-
-6. da qui lanciando il comando `git status` dovremmo vedere una cosa del genere il
+Eseguite le modifiche salvare il file e ritornare nel terminale, dove lanciando il comando `git status` avremo un output simile:
 
 ```
-git status
+$ git status
 On branch master
 Your branch is up to date with 'origin/master'.
-
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git restore <file>..." to discard changes in working directory)
@@ -100,90 +66,68 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-che ci indica che stiamo sul ramo `master` e che è stato modificato il file `PagamentoPressoPSP.md`
+che indica che ci troviamo sul ramo `master` e che è stato modificato il file `PagamentoPressoPSP.md`
 
-7. Ora per poter riversare le nostre modifiche sul repo GitHub di `PagoPA` faremo cosi, prima creiamo una `branch` con le nostre modifiche digitando :
-
-```
-git stash && git stash branch <NOME_BRACH_MODIFICHE>
-```
-
-ad esempio per le modifche fatte nell'esmepio potremmo digitare
+Per poter riversare le nostre modifiche sul repo Github di `PagoPA` occorre anzitutto creare un `branch` con le nostre modifiche:
 
 ```
-git stash && git stash branch pspica-aggiunto-mod3
+$ git stash && git stash branch <branch-name>
+```
 
+Ad esempio:
+
+```
+$ git stash && git stash branch aggiunto-mod3
 Saved working directory and index state WIP on master: 00d68d9 publish documentation
-Switched to a new branch 'pspica-aggiunto-mod3'
-On branch pspica-aggiunto-mod3
+Switched to a new branch 'aggiunto-mod3'
+On branch aggiunto-mod3
 Changes not staged for commit:
 (use "git add <file>..." to update what will be committed)
 (use "git restore <file>..." to discard changes in working directory)
 modified: sezione3-specifiche-tecniche/PagamentoPressoPSP.md
-
 no changes added to commit (use "git add" and/or "git commit -a")
 Dropped refs/stash@{0} (b253cacc7f8675b8acafc9c75f312430f35b1862)
 ```
 
-8. Poi daremo un breve commento descrittivo alle modifiche apportate sul repo _PagoPA_ digitando :
+Successivamente inseriremo un breve commento descrittivo delle modifiche apportate:
 
 ```
-git commit -a -m “<REASON>”
+$ git commit -a -m "<reason>"
 ```
 
-ad esempio
+Ad esempio:
 
 ```
-git commit -a -m “aggiunta descrizione nuovo modello 3 per TARI e TEFA”
+$ git commit -a -m "aggiunta descrizione nuovo modello 3"
 ```
 
-9. e poi il comando con `push` riversare tutte le modifche sul repo pubblico delle **SANP**
+Saremo il comando con `push` per riversare tutte le modifiche:
 
 ```
-git push --set-upstream origin <NOME_BRACH_MODIFICHE>
+$ git push --set-upstream origin <branch-name>
 ```
 
-che nel nostro esempio sarebbe
+Ad esempio:
 
 ```
-git push --set-upstream origin pspica-aggiunto-mod3
+$ git push --set-upstream origin aggiunto-mod3
 ```
 
-10. ora tramite il browser accedimo al repo delle [SANP](https://github.com/pagopa/pagopa-specifichepagamenti-docs)
+Ora accedendo tramite il browser al repo delle [SANP](https://github.com/pagopa/pagopa-specifichepagamenti-docs) otterremo:
 
-![](2020-10-12-09-24-25.png)
+![](003.jpg)
 
-e selezioniamo la nostra `branch` tra quelle disponibili e clicchiamo sul bottone `Pull request` per richidere che le nostre modifiche vengano accettate.
+Selezionando il nostri `branch` tra quelli disponibili e clicchiamo sul pulsante `Pull request` (maggiori [info qui](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#pull-reques)) per richiedere che le nostre modifiche vengano accettate:
 
-11. Se tutto va bene dovrebbe apparire qualcosa di simile
-    ![](2020-10-12-09-28-24.png)
+![](004.jpg)
 
-dove inseire una descrione breve (che subito consenta di capire il tipo di modifica fatta) e una più estesa che spiega in dettaglio ciò che è stato fatto, e alla fine cliccare su `Create Pull Request`
+dove inserire una descrizione breve e chiara, unitamente ad una più estesa che spieghi in dettaglio ciò che è stato fatto. Quindi clicchiamo su `Create Pull Request`.
 
-12. Da qui partirà in automatico una richiesta di `review` ai reviewer di `PagoPA` (_ToDeDefine : WHO ?_) incaricati di controllare le modifiche e solo a valle del loro check la nostra branch sarà _mergiata_ nel `master`.
+A questo punto verrà inviata una richiesta automatico di `review` a `PagoPA` incaricata di controllare le modifiche ed eventualmente accettarle ed incorporarle (_merge_) nel ramo `master`.
 
-13. Quando una nuova branch è versata nel `master` a quest'ultimo viene associato un nuovo `tag` secondo le linee guida [MAJOR.MINOR.PATCH](https://semver.org/), con l'aggiunta del suffisso `-RC.x`, ossia `release candidate` numero `x`. Tale suffisso indica che la presente versione potrebbe essere o in **SIT** o in **UAT**.
+In seguito verrà creato un nuovo tag per la versione "release candidate", secondo una policy di "semantic versioning" come esplicitato all'interno delle SANP stesse.
 
-> **NOTA** : l'associazione del nuovo `tag` sarà cura del _ToDeDefine ... reviewer ?? owner della PR_
-
-1.  La rimozione del `-RC.x` avverrà in modo manuale, quando ci sarà una nuova versione in **PROD** corrispondente con quella etichattata, si cancellerà il vecchio `tag` associandone uno nuovo. 
-    > _In attessa dell'automatismo sarà fatto manualmente._ _WIP : ToDeDefine : HowTo_
-
-> _Esempio :_ Se attualmente in **PROD** c'è la versione `2.2.6` ed è stata creata una nuova release `2.2.7.RC.1`, appena ci si accorgerà che tale versione è passata dall'ambiente **UAT** a quello di **PROD** si rimuoverà il tag `2.2.7.RC.1` e se ne crearà uno nuovo `2.2.7`
-
-## Guidelines
-
-In generela quindi la procedura da seguire per emettere nuove versioni delle **SANP** è :
-
-1. fare il `clone` del repo [ufficiale](https://github.com/pagopa/pagopa-specifichepagamenti-docs)
-2. creare, a partire da li, una nuova `branch` con le proprie proposte di modifiche
-3. riversrare tutto su **GitHub** tramite `push`
-4. Creare la [PR](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github/github-glossary#pull-request)
-5. Attendere il `merge` della nuova `branch` sul `master` a valle del check dei reviewer
-6. Creazione nuovo `tag` per la nuova `release candidate`
-7. Verifica che la nuova release sia passata da **SIT**/**UAT** a **PROD** e rimozione suffisso `-RC.x`
-
-## Useful links
+## Link utili
 
 - [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 - [git-cheatsheet](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet)
