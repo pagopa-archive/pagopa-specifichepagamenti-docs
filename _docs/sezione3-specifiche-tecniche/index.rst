@@ -22,6 +22,6 @@ I dettagli di tutte le interfacce e la documentazione di dettaglio è reperibile
    :numbered:
    :hidden:
 
-   3_00_00_Introduzione
+   3_00_00_introduzione
    index_ec
    index_psp
