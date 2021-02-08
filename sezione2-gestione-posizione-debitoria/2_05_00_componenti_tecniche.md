@@ -1,10 +1,10 @@
 # Componenti tecniche del Nodo
 
-Il Nodo definisce modalità standard per la gestione dei flussi finanziari `[TBD in realtà noi non facciamo flussi finanziari]`:
+Il Nodo definisce modalità standard per la gestione dei flussi finanziari:
 
 * adotta gli standard [XML ISO 20022](https://en.wikipedia.org/wiki/ISO_20022) per i tracciati dei flussi finanziari correlati alle singole operazioni;
 * introduce uno standard per la richiesta di pagamento telematico e per la ricevuta telematica di pagamento adottato a livello nazionale su qualunque canale di pagamento, al fine di automatizzare la tratta G2B (*Government to Bank*);
-* nell'ambito delle attività legate al commercio elettronico abilita l'interconnessione con i circuiti internazionali di autorizzazione di tali pagamenti; `[TBD- eliminerei]`
+* nell'ambito delle attività legate al commercio elettronico abilita l'interconnessione con i circuiti internazionali di autorizzazione di tali pagamenti;
 * assicura l'univocità del pagamento attraverso la definizione di un codice identificativo del pagamento (IUV). Al suddetto identificativo può essere associato uno o più oggetti grafici (codice a barre, glifo, QR-code, etc), al fine di consentire e facilitare l'effettuazione del pagamento attraverso qualunque canale oggi esistente;
 * de-materializza tutte le ricevute di pagamento restituite all'EC;
 * de-materializza gli avvisi di pagamento.
@@ -13,7 +13,6 @@ Nella figura che segue sono evidenziate le componenti ed i soggetti che interagi
 
 ![architettura-pagoPA](../images/bbd_architettura.png)
 
-`[TBD check]`
 Si noti che sebbene le funzionalità di alto livello ed i relativi flussi di informazione siano ben definiti, le sottostanti implementazioni e le architetture interne possono evolvere nel tempo (es: le PdD sono state deprecate nel 2017 ma attualmente ancora utilizzate).
 
 ## Gestore del Workflow Applicativo
@@ -90,54 +89,6 @@ La componente WISP inoltre fornisce all'Utilizzatore finale funzioni di supporto
 
 ## File Transfer sicuro
 
+![work-in-progress](../images/wip.png) **Paragrafo soggetto a proposta di modifica**
+
 Il Nodo mette a disposizione dei soggetti aderenti una piattaforma *client-server* per il trasferimento sicuro dei dati in modalità *File Transfer*. Tale piattaforma sostituirà progressivamente l'utilizzo delle primitive oggi impiegate per lo scambio di informazioni in modalità massiva (ad esempio: i flussi di rendicontazione, i totali di traffico, etc).
-
-## Giornale degli Eventi
-
-È la componente che raccoglie tutte le informazioni attinenti ad ogni singola operazione sintetizzando le registrazioni effettuate dalle singole componenti del Nodo: FESP; Web FESP; *Repository*, etc
-
-Le principali attività svolte dalla componente riguardano:
-
-* la raccolta delle informazioni attinenti alle operazioni svolte dalle componenti del Nodo, come ad esempio:
-	* tipo di operazione (RPT; RT; ...),
-    * identificativo univoco associato all'operazione,
-    * timestamp dell'evento e della registrazione, componente in cui si verifica l'evento (FESP; Web-FESP; Repository);
-	* esposizione di un'interfaccia di interrogazione per l'accesso alle registrazioni degli eventi che consente:
-		* la selezione degli eventi in base a criteri di ricerca (tipo di operazione, id, ecc.),
-		* l'esame nel dettaglio di un evento selezionato;
-		* la disponibilità di dati di sintesi (totali di tipo di operazione per stato, per intervallo temporale, ecc.).
-
-## Componenti di utilità
-
-`[TBD valutare la rimozione dalle SANP]`
-
-Le componenti di utilità rappresentano un insieme di componenti "di servizio" invocate, in base alle necessità, dal *Workflow Applicativo* per svolgere ruoli informativi specifici e utilizzabili da più servizi applicativi all'interno del Nodo:
-
-* traduttore XML: struttura e assembla i messaggi XML dei servizi;
-* modulo crittografia: cifra/decifra informazioni e gestisce i certificati crittografici;
-* modulo diagnostico: effettua controlli di natura sintattica e alcuni controlli semantici.
-
-Ognuna delle componenti di utilità, oltre ad attività specifiche alla propria funzione, svolge le attività di interfacciamento ed integrazione con il gestore del *Workflow Applicativo*.
-
-## Sistema di monitoring
-
-`[TBD valutare la rimozione dalle SANP]`
-
-Il sistema di *monitoring* svolge attività di controllo complessivo per quanto attiene alle tematiche di monitoraggio. Tale componente deve essere considerata come una entità logica indipendente, con un proprio *workflow* specifico e proprie regole di funzionamento, in grado, quindi, di verificare malfunzionamenti e condizioni di errore di qualsiasi altro modulo.
-
-Nel sistema di *monitoring* è allocata la funzione di *throttling* che limita l'utilizzo del Sistema pagoPA oltre le possibilità di carico da cui possa conseguire il verificarsi di disservizi generali. Tale funzionalità viene innescata automaticamente nel caso in cui un EC tenti di avviare, nell'unità di tempo, un numero di operazioni di pagamento superiori ai fabbisogni da esso stesso dichiarati. Le regole di *throttling* sono indicate nel documento "*Indicatori di qualità per i Soggetti Aderenti*" `[TBD url]` pubblicato sul sito di PagoPA S.p.A.
-
-## Sistema di Gestione del Tavolo Operativo
-
-Il sistema Sistema di Gestione del Tavolo Operativo ha lo scopo di fornire il supporto necessario alle attività del Tavolo Operativo, monitorando le altre componenti applicative e avendo accesso alle informazioni relative ad ogni richiesta di intervento.
-
-Fra le funzioni di supporto al Tavolo operativo è messo a disposizione un sistema di *Interactive Voice Response* (IVR, Risposta Vocale Interattiva) per istradare le chiamate vocali, integrato a un sistema di *trouble-ticketing* per tracciare tutte le attività di assistenza.
-
-## Controlli
-
-Tutti i flussi/dati scambiati e previsti dai Servizi di Nodo devono risultare conformi agli Standard di Servizio.
-
-Qualora fosse riscontrata una mancata conformità a detti Standard di Servizio, il soggetto ricevente ha l'obbligo:
-
-* di bloccare l'esecuzione del relativo flusso elaborativo e di trattamento dei dati;
-* rendere disponibile un'evidenza dello stato del flusso a fronte di una eventuale situazione di blocco del flusso stesso.

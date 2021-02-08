@@ -7,15 +7,6 @@ I due diversi *workflow* gestiti sul Sistema pagoPA si differenziano principalme
 
 Si avrà quindi un processo diverso se l'utilizzatore finale accede al servizio di pagamento attraverso tecnologie e funzioni messe a disposizione da un Ente Creditore ovvero attraverso tecnologie e funzioni messe a disposizione da un Prestatore di Servizi di Pagamento.
 
-`[TBD - eliminerei]` 
-Nella presente sezione è modellato il processo di scambio dati tra i sistemi informativi dei tre soggetti che partecipano, sempre, a ogni processo di pagamento mediati dal NodoSPC.
-
-La modellazione risultante descrive quindi, da una parte, le specifiche che definiscono il comportamento progettato del NodoSPC, riportando un set di informazioni certe e conosciute (le primitive rese disponibili dai Web Services, i dati di configurazione, etc.) e, in un'altra parte, il comportamento atteso dei sistemi intermediati riportando l'insieme di informazioni minime indispensabili alle funzioni informatiche effettivamente sviluppate dai soggetti aderenti in qualità di Enti Creditori o Prestatori di Servizi di Pagamento.
-
-La modellazione segue le notazioni dello standard *Business Process Model and Notation* (BPMN) versione 2.0, di cui si riportano i simboli utilizzati e il loro significato:
-
-![bpmn_elements](../images/bpmn_elements.png)
-
 ## La posizione debitoria
 
 Come previsto dalle Linee guida, tutte le tipologie di pagamento gestite dal Sistema pagoPA prevedono che l'Ente Creditore, per rendere realizzabile un pagamento, registri e metta a disposizione dell'utilizzatore finale le informazioni necessarie per effettuare il pagamento. Si definisce "posizione debitoria" l'insieme di tali informazioni.
@@ -27,7 +18,6 @@ Nel Sistema pagoPA ogni pagamento presuppone la creazione propedeutica, nel sist
 3.  Trasferimento. La posizione debitoria è posta nello stato di "Trasferita" nel caso in cui la competenza dell'incasso passi a un altro Ente Creditore (es. iscrizione in ruolo). 
 4.  Chiusura. L'Ente Creditore pone la posizione debitoria nello stato "Chiusa" ogni qualvolta viene effettuato un pagamento che salda il debito o intervengano eventi che la rendano non più pagabile. Tale stato è reversibile nel caso in cui intervenga una revoca del pagamento che pone di nuovo la posizione debitoria in una nuova versione dello stato di "Aperta".
 
-`[TBD aggiunta]`
 Ogni posizione debitoria è identificata dai seguenti elementi :
 
 - soggetto pagatore: intestatario della posizione
@@ -39,16 +29,15 @@ Un opzione di pagamento rappresenta le modalità di pagamento definite dall'EC e
 - importo
 - causale di versamento
 - tassonomia del servizio
-- conto corrente, dove accreditare le somme 
+- conto corrente, dove accreditare le somme
 
 Ad esempio, una delle opzioni più comuni di pagamento per un tributo annuale sono :
 
 - pagamento rata unica
 - pagamento prima rata
-- pagamento seconda rata
+- pagamento ennesima rata
   
 ### Tassonomia dei servizi 
-`[TBD copiato in parte]`
 
 Il codice tassonomico identifica ogni singolo servizio incassato tramite i versamenti descritti all'interno della posizione debitoria.
 Il codice è così composto :
@@ -75,6 +64,7 @@ Esempio:
 	* Comune - Tributi - TARI - Imposta
 	* `9/0101002IM/`
 
+L'elenco completo ed aggiornato della tassonomia è disponibile [qui]() `[TBD aggiungere link]`
 *Nota*: Nel caso in cui vi sia una tipologia di incasso che ingloba al suo interno sia una percentuale a titolo di imposta che una percentuale a titolo di tassa, l'indicazione segue la tipologia *del tributo prevalente*.
 
 ## Avviso di Pagamento
@@ -96,7 +86,7 @@ Le copie analogiche prodotte devono necessariamente contenere, oltre al logo del
 * Data e ora dell'operazione
 * Codice fiscale e denominazione dell'EC
 * Identificativo univoco versamento (IUV) - Identificativo univoco assegnato dall'EC
-* Codice identificativo del PSP
+* Indentificazione del PSP ( esempio : ragione sociale, codice fiscale, abi )
 * Numero univoco assegnato al pagamento dal PSP
 * Importo dell'operazione
 * Causale del versamento indicata nella richiesta di pagamento telematico.
