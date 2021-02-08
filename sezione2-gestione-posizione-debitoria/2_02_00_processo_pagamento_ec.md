@@ -32,6 +32,17 @@ Tramite le informazioni presenti all'interno dei flussi (resi disponibili immedi
 
 Per ultetiori dettagli, fare riferimento all'apposita sezione *Riconciliazione dei pagamenti*
 
+## Riconciliazione dei pagamenti 
+
+Una volta effettuata la fase di "Regolamento contabile" da parte del PSP, l'EC provvede a riconciliare le ricevute telematiche con le informazioni contabili fornite dal proprio istituto tesoriere, o da Poste Italiane, in relazione agli incassi avvenuti sui c/c postali (ad esempio: Giornale di Cassa per le Pubbliche Amministrazioni che utilizzano il formato OIL/OPI; altre modalità per le Pubbliche Amministrazioni centrali che possono richiedere tali informazioni alla Ragioneria Generale dello Stato).
+
+La riconciliazione deve essere effettuata in due fasi:
+
+* nella prima fase il dato identificativo del flusso - presente nella causale del SEPA Credit Transfer inviato dal PSP all'EC - deve essere abbinato con quello presente nel Flusso di Rendicontazione inviato all'EC dal PSP che ha eseguito i pagamenti.
+* nella seconda fase della riconciliazione l'EC abbinerà i dati contenuti nel Flusso di Rendicontazione di cui sopra con i dati presenti nelle ricevute telematiche memorizzate presso di sé sulla base della seguente coppia di informazioni:
+    * (a) identificavito univoco di riscossione (IUR) presente all'interno del flusso pari all'identidificativo univoco della ricevuta.
+    * (b) identificazione del versamento all'interno della ricevuta tramite i dati di importo, IUV, ed indice del versamento.
+
 `[TBD da cancellare]`
 Al fine di rendere processo di pagamento attraverso l'Ente Creditore immediatamente leggibile la descrizione del suo *workflow* è stata aggregata in sotto-paragrafi secondo lo schema logico che segue:
 

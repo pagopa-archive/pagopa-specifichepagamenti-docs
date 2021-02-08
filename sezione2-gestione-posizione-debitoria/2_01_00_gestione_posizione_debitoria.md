@@ -90,3 +90,13 @@ Affiancato all'avviso *analogico* le medesime informazioni (in particolare numer
 ## Ricevuta di Pagamento
 
 Ogni operazione di pagamento è attestata con la generazione ( e consegna ) all'EC di una ricevuta telematica che l'EC deve rendere disponibile, su richiesta dell'Utilizzatore finale, sia sotto forma di duplicato informatico che sotto forma di copia analogica dello stesso.
+
+Le copie analogiche prodotte devono necessariamente contenere, oltre al logo del sistema pagoPA, almeno le seguenti informazioni:
+
+* Data e ora dell'operazione
+* Codice fiscale e denominazione dell'EC
+* Identificativo univoco versamento (IUV) - Identificativo univoco assegnato dall'EC
+* Codice identificativo del PSP
+* Numero univoco assegnato al pagamento dal PSP
+* Importo dell'operazione
+* Causale del versamento indicata nella richiesta di pagamento telematico.

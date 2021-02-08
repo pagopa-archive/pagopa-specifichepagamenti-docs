@@ -6,7 +6,7 @@ L'acquisizione delle informazioni necessarie per colloquiare con la piattaforma 
 
 Vengono rese al PSP due funzioni principali :
 
-- verifica dell'avviso di pagamento : 
+- verifica dell'avviso di pagamento :
 - pagamento di un avviso di pagamento : attraverso questa funzione il PSP 
 
 ## verifica di un avviso di pagamento
@@ -29,6 +29,18 @@ Per agevolare l'integrazione dei diversi sistemi di incasso, la sessione di paga
 a termine dell'operazione il PSP , in linea con le norme vigenti, consegna un attestazione di pagamento la quale dovrà contenere ( in aggiunta da quanto previsto da eventuali normative ) l'identificativo della sessione di pagamento ottenuto durante le operazioni di pagamento (*paymentToken*)
 
 l'EC riceverà contestualmente una ricevuta telematica dell'operazione notificata dal PSP (solo in caso di pagamento concluso con esito positivo)
+
+## Attestazione di pagamento
+
+Le copie analogiche prodotte dal PSP a fronte di un pagamento devono necessariamente contenere almeno le seguenti informazioni:
+
+* Data e ora dell'operazione
+* Codice fiscale e denominazione dell'EC
+* Identificativo univoco versamento (IUV) - Identificativo univoco assegnato dall'EC
+* identificativo del PSP ( esempio : ragione sociale, codice fiscale)
+* Numero univoco assegnato al pagamento dal PSP
+* Importo dell'operazione
+* Causale del versamento
 
 ## Trasmissione dati di accredito e rendicontazione
 
