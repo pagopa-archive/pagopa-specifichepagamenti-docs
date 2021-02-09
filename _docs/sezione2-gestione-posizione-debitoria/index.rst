@@ -21,3 +21,4 @@ Sezione 2 - Gestione della posizione debitoria
    2_02_00_processo_pagamento_ec
    2_03_00_processo_pagamento_psp
    2_05_00_componenti_tecniche
+   2_06_00_tassonomia_servizi
