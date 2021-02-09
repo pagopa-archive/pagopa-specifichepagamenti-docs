@@ -1,6 +1,7 @@
 **SEZIONE I – FUNZIONAMENTO GENERALE DEL SISTEMA**
 
-#Funzionamento Generale del Sistema
+Funzionamento Generale del Sistema
+==================================
 
 Obiettivo strategico della piattaforma pagoPA è quello di facilitare e
 diffondere, a beneficio dei cittadini e delle imprese, l’utilizzo di

@@ -2,33 +2,15 @@ Gestione della Posizione Debitoria
 ==================================
 
 I due diversi *workflow* gestiti sul Sistema pagoPA si differenziano
-principalmente in base al soggetto che innesca il pagamento. Si avrà
-quindi un processo diverso se l’utilizzatore finale accede al servizio
-di pagamento attraverso tecnologie e funzioni messe a disposizione da un
-Ente Creditore ovvero attraverso tecnologie e funzioni messe a
-disposizione da un Prestatore di Servizi di Pagamento.
+principalmente in base al punto di innesco del pagamento:
 
-Nella presente sezione è modellato il processo di scambio dati tra i
-sistemi informativi dei tre soggetti che partecipano, sempre, a ogni
-processo di pagamento mediati dal NodoSPC.
+-  sito istituzionale dell’Ente Creditore
+-  servizio offerto direttamente del PSP (sportello, ATM, APP, web, etc)
 
-La modellazione risultante descrive quindi, da una parte, le specifiche
-che definiscono il comportamento progettato del NodoSPC, riportando un
-set di informazioni certe e conosciute (le primitive rese disponibili
-dai Web Services, i dati di configurazione, etc.) e, in un’altra parte,
-il comportamento atteso dei sistemi intermediati riportando l’insieme di
-informazioni minime indispensabili alle funzioni informatiche
-effettivamente sviluppate dai soggetti aderenti in qualità di Enti
-Creditori o Prestatori di Servizi di Pagamento.
-
-La modellazione segue le notazioni dello standard *Business Process
-Model and Notation* (BPMN) versione 2.0, di cui si riportano i simboli
-utilizzati e il loro significato:
-
-.. figure:: ../images/bpmn_elements.png
-   :alt: bpmn_elements
-
-   bpmn_elements
+Si avrà quindi un processo diverso se l’utilizzatore finale accede al
+servizio di pagamento attraverso tecnologie e funzioni messe a
+disposizione da un Ente Creditore ovvero attraverso tecnologie e
+funzioni messe a disposizione da un Prestatore di Servizi di Pagamento.
 
 La posizione debitoria
 ----------------------
@@ -36,7 +18,7 @@ La posizione debitoria
 Come previsto dalle Linee guida, tutte le tipologie di pagamento gestite
 dal Sistema pagoPA prevedono che l’Ente Creditore, per rendere
 realizzabile un pagamento, registri e metta a disposizione
-dell’utilizzatore finale le informazioni necessarie per effettuare il
+dell’Utilizzatore finale le informazioni necessarie per effettuare il
 pagamento. Si definisce “posizione debitoria” l’insieme di tali
 informazioni.
 
@@ -58,7 +40,9 @@ attività di:
    Creditore ogni qualvolta intervengano eventi che ne modificano le
    informazioni associate (es sanzioni per decorrenza dei termini).
    L’attività di aggiornamento provoca un avanzamento di versione della
-   posizione debitoria che permane nello stato di “Aperta”.
+   posizione debitoria che permane nello stato di “Aperta”. Le
+   operazioni di pagamento assicurano che la posizione debitoria sia
+   sempre aggiornata.
 3. Trasferimento. La posizione debitoria è posta nello stato di
    “Trasferita” nel caso in cui la competenza dell’incasso passi a un
    altro Ente Creditore (es. iscrizione in ruolo).
@@ -69,44 +53,133 @@ attività di:
    pagamento che pone di nuovo la posizione debitoria in una nuova
    versione dello stato di “Aperta”.
 
+Ogni posizione debitoria è identificata dai seguenti elementi:
+
+-  soggetto pagatore: intestatario della posizione
+-  opzioni di pagamento
+
+Un’opzione di pagamento rappresenta le modalità di pagamento definite
+dall’EC e consistono in un elenco di versamenti, ognuno dei quali è
+specificato da:
+
+-  codice fiscale dell’Ente beneficiario (può non coincidere con l’EC)
+-  importo
+-  causale di versamento
+-  tassonomia del servizio
+-  conto corrente, dove accreditare le somme
+
+Ad esempio, una delle opzioni più comuni di pagamento per un tributo
+annuale sono:
+
+-  pagamento rata unica
+-  pagamento prima rata
+-  pagamento ennesima rata
+
+Tassonomia dei servizi
+~~~~~~~~~~~~~~~~~~~~~~
+
+Il codice tassonomico identifica ogni singolo servizio incassato tramite
+i versamenti descritti all’interno della posizione debitoria. Tale
+codice è così composto:
+
+-  *Tipo Ente Creditore*\ ​ (​due cifre):​ identifica la tipologia di
+   Ente titolare dell’incasso;
+-  *Numero progressivo macro-area* per Ente Creditore ​(due cifre):
+   individua le singole macro-aree di aggregazione degli incassi;
+
+   -  Macro-area: ​aggregazione di servizi sulla base di caratteristiche
+      comuni (definiti da PagoPA S.p.A. per fini statistici);
+   -  Descrizione macro area: ​descrizione caratteristiche comuni di
+      aggregazione.
+
+-  *Codice Tipologia Servizi* ​(tre cifre): identifica la singola voce
+   di incasso;
+
+   -  Tipo servizio:​ tipologia di incasso;
+   -  Descrizione tipo servizio:​ descrizione dettagliata di ogni
+      dovuto;
+
+-  *Motivo giuridico* della riscossione:
+
+   -  IM (Imposta) - Prelievo coattivo volto a finanziare genericamente
+      l’attività dell’Amministrazione;
+   -  TS (Tassa) - Tipo di ​tributo applicato come controprestazione per
+      un’attività legata a una funzione erogata dall’Amministrazione;
+   -  SP (Servizio Pubblico) - Corrispettivo pagato dal cittadino per
+      usufruire di un servizio pubblico;
+   -  SA (Sanzioni) - Pena pecuniaria irrogata a fronte della violazione
+      di obblighi previsti dalla Legge (es:multe, ammende, sanzioni
+      amministrative e civili);
+   -  (AP) -​ Altri Pagamenti.
+
+-  *Dati specifici di incasso*: codice identificativo dell’incasso
+   composto dalla seguente concatenazione in una stringa:
+
+   -  separatore (“/”) - ​Con tale simbolo è possibile far seguire al
+      codice tassonomico ulteriori dati, a discrezione dell’EC, senza
+      inficiare la descrizione dell’entrata.
+
+::
+
+   9/[Codice Ente creditore][Progressivo Macroarea][Codice tipologia servizio][Motivo giuridico riscossione][/]
+
+Esempio:
+
+-  Comune - Tributi - TARI - Imposta
+-  ``9/0101002IM/``
+
+L’elenco completo ed aggiornato della tassonomia è disponibile `in
+Github <>`__ ``[TBD link in construzione]``
+
+Maggiori dettagli sulla Tassonomia dei Servizi sono presenti
+nell’apposito capitolo in questa stessa Sezione.
+
+Avviso di Pagamento
+-------------------
+
 Contestualmente alla creazione di una posizione debitoria, l’Ente
-Creditore, se ne ricorrono le condizioni, deve predisporre un avviso di
-pagamento che rappresenta lo strumento che rende possibile l’innesco del
-pagamento stesso presso i PSP.
+Creditore, deve predisporre un avviso di pagamento che rappresenta lo
+strumento che rende possibile l’innesco del pagamento stesso presso i
+PSP.
 
-L’Ente Creditore genera il tradizionale avviso di pagamento
-**analogico** (sotto forma di avviso cartaceo o file stampabile) ogni
-qualvolta le norme lo obbligano a notificare a un debitore (cittadino o
-impresa) l’insorgenza di una posizione debitoria aperta nei suoi
-confronti. Tutte le norme di dettaglio che regolano la produzione di un
-avviso di pagamento analogico sono incluse nel documento collegato *“Il
-nuovo avviso di pagamento analogico nel sistema pagoPA”* (`disponibile
+Tutte le norme di dettaglio che regolano la produzione di un avviso di
+pagamento analogico sono incluse nel documento collegato *“Il nuovo
+avviso di pagamento analogico nel sistema pagoPA”* (`disponibile
 qui <https://github.com/pagopa/lg-pagopa-docs/blob/master/documentazione_tecnica_collegata/documentazione_collegata/guidatecnica_avvisoanalogico_v2.2.1_con_alleg.pdf>`__).
-
 L’EC continua a recapitare l’avviso analogico all’Utilizzatore finale
 con le modalità tradizionali a cui può affiancare funzioni di stampa a
-carico dell’Utilizzatore finale dopo il downloading del documento.
-
-L’avviso di pagamento analogico, oltre al logotipo del Sistema pagoPA,
-contiene le informazioni indispensabili per l’esecuzione del pagamento,
-che sono dettagliate nella Sez-III.
+carico dell’Utilizzatore finale dopo il download del documento stesso.
 
 Si noti che l’importo contenuto nell’avviso di pagamento analogico è
-quello corrispondente al momento della produzione di tale documento e
-quindi può essere soggetto a variazioni (in più o in meno) al momento in
-cui ne viene richiesto il pagamento da parte dell’utilizzatore finale,
+quello corrispondente al momento della produzione di tale documento.
+Quindi può essere soggetto a variazioni (in più o in meno) al momento in
+cui ne viene richiesto il pagamento da parte dell’Utilizzatore finale,
 nel caso sia intervenuto un aggiornamento della posizione debitoria,
 purché tale possibilità sia stata effettivamente esplicitata in una
 avvertenza sull’avviso.
 
-La peculiarità di alcune postazioni messe a disposizione dai Prestatori
-di Servizi di Pagamento rende necessario automatizzare l’acquisizione
-dei dati presenti sull’avviso di pagamento. Per questo motivo tale
-documento deve essere corredato, oltre che dati essenziali sopra citati,
-anche da un insieme di elementi grafici facilmente leggibili e
-decodificabili da apposite apparecchiature.
+Affiancato all’avviso *analogico* le medesime informazioni (in
+particolare numeroAvviso e codice fiscale dell’EC) possono essere
+veicolate digitalmente per mezzo della piattaforma IO.
 
-I processi di creazione, aggiornamento, chiusura o annullamento di una
-posizione debitoria sono interni al sistema informativo dell’Ente
-Creditore. Nei casi previsti tali operazioni possono scatenare l’invio
-di un avviso di pagamento con strumenti digitali.
+Ricevuta di Pagamento
+---------------------
+
+Ogni operazione di pagamento è attestata con la generazione (e consegna
+) all’EC di una Ricevuta Telematica che l’EC deve rendere disponibile,
+su richiesta dell’Utilizzatore finale, sia sotto forma di duplicato
+informatico che sotto forma di copia analogica dello stesso.
+
+Le copie analogiche prodotte devono necessariamente contenere, oltre al
+logo del sistema pagoPA, almeno le seguenti informazioni:
+
+-  Data e ora dell’operazione
+-  Codice fiscale e denominazione dell’EC
+-  Identificativo univoco versamento (IUV) - Identificativo univoco
+   assegnato dall’EC
+-  Identificazione del PSP (es: ragione sociale, codice fiscale, codice
+   abi)
+-  Numero univoco assegnato al pagamento dal PSP
+-  Importo dell’operazione
+-  Causale del versamento indicata nella richiesta di pagamento
+   telematico.

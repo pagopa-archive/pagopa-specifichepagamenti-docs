@@ -132,8 +132,8 @@ contrassegnati dalla seguente dicitura:
 
 |work-in-progress| **Paragrafo soggetto a proposta di modifica**
 
-La presente versione (3.0.0-RC) propone le modifiche introdotte con il
-`Processo di pagamento presso il PSP con Ente
+La presente versione propone le modifiche introdotte con il `Processo di
+pagamento presso il PSP con Ente
 multi-beneficiario <https://docs.google.com/document/d/1qmQ12SfkhjJGss--d5mQwqrcMCb9pF4JHj-k8w8X9jM>`__.
 A tal proposito si ricorda che l’attuale modello di pagamento presso il
 PSP resta fruibile ed è ben documentato nella precedente versione delle
