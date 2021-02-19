@@ -66,7 +66,7 @@ Esempio:
 * Comune - Tributi - TARI - Imposta
 * `9/0101002IM/`
 
-L'elenco completo ed aggiornato della tassonomia è disponibile [in Github]() `[TBD link in construzione]`
+L'elenco completo ed aggiornato della tassonomia è disponibile nel repository [in Github](https://github.com/pagopa/pagopa-api).
 
 Maggiori dettagli sulla Tassonomia dei Servizi sono presenti nell'apposito capitolo in questa stessa Sezione.
 
