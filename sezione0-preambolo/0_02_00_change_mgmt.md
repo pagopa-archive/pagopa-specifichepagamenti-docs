@@ -26,10 +26,9 @@ Nel seguito sono descritte le regole che esprimono la semantica della codifica a
 		* Allegato A - Specifiche Attuative dei Codici Identificativi di versamento, riversamento e rendicontazione (SACI)
 		* Allegato B - Specifiche Attuative del Nodo dei Pagamenti-SPC (SANP)
 	* Regolamento logo
-		* Regolamento inerente l'uso del marchio collettivo registrato "pagoPA"
-		* Allegato A al "Regolamento inerente l’uso del marchio collettivo registrato pagoPA"
-		* Allegato B al "Regolamento inerente l’uso del marchio collettivo registrato pagoPA"
-		* Richiesta di concessione del Marchio pagoPA per partner tecnologico
+		* Regolamento d’uso del marchio collettivo pagoPA
+		* Allegato 1 Brand Guidelines
+		* Allegato 2 Richiesta di concessione del Marchio pagoPA
 	* Documentazione tecnica collegata
 		* Il nuovo avviso di pagamento analogico nel sistema pagoPA
 		* Specifiche di connessione al sistema pagoPA.
