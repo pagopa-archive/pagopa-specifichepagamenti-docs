@@ -2,9 +2,9 @@
 
 # Funzionamento Generale del Sistema
 
-Obiettivo strategico della piattaforma pagoPA è quello di facilitare e diffondere, a beneficio dei cittadini e delle imprese, l'utilizzo di strumenti evoluti nei pagamenti in favore della Pubblica Amministrazione, delle Società a controllo pubblico e dei Gestori dei Pubblici servizi. Si denominano i soggetti che hanno aderito a pagoPA in attuazione dell'art 5 del CAD, con il nome collettivo di **Ente Creditore**.
+Obiettivo strategico della piattaforma pagoPA è quello di facilitare e diffondere, a beneficio dei cittadini e delle imprese, l'utilizzo di strumenti evoluti nei pagamenti in favore della Pubblica Amministrazione, delle Società a controllo pubblico e dei Gestori dei Pubblici servizi. Si denominano i soggetti che hanno aderito a pagoPA in attuazione dell'art. 5 del CAD, con il nome collettivo di **Ente Creditore**.
 
-L'adesione a pagoPA di tutti i più importanti PSP, ovvero Prestatori di Servizi di Pagamento (Banche, Istituti di moneta elettronica e Istituti di pagamento) consente ai loro clienti l'accesso ad una vastissima gamma di strumenti di pagamento in continua espansione. Ad esempio, possono pagare con pagoPA i possessori di carte di credito dei circuiti Visa, Mastercard, American Express, i possessori di un account PayPal e di app per il pagamento con dispositivi _mobile_.
+L'adesione a pagoPA di tutti i più importanti PSP, ovvero Prestatori di Servizi di Pagamento (Banche, Istituti di moneta elettronica e Istituti di pagamento) consente ai loro clienti l'accesso ad una vastissima gamma di strumenti di pagamento in continua espansione. Ad esempio, possono pagare con pagoPA i possessori di carte di credito dei circuiti Visa, Mastercard, American Express, i possessori di un account PayPal e di app per il pagamento con dispositivi _mobile_, nonché i titolari di Home banking integrati con la piattaforma pagoPA o direttamente o tramite il servizio MyBank.
 
 L'adesione a pagoPA consente all'Ente Creditore di beneficiare dei servizi di pagamento senza la necessità di instaurare una esplicita relazione con i PSP che li erogano ai loro clienti.
 
@@ -57,10 +57,9 @@ Si distinguono due processi di pagamento che differiscono per l'inizializzazione
 	* presso un esercizio commerciale di PSP che gestisce una rete di terminali
 	* inquadrando il QRcode con un'App di pagamento o con l'App IO
 	* accedendo alle funzioni internet banking di un PSP aderente alla piattaforma
-	* accedendo al sito dell'Ente creditore che ha emesso l'avviso
-3. Il PSP che gestisce il pagamento, tramite la piattaforma pagoPA, interopera con l'EC, garantendo la correttezza ed efficacia al pagamento;
-4. La piattaforma pagoPA genera la Ricevuta Telematica liberatoria e la invia all'EC assumendosene la responsabilità. Anche in questo caso la RT garantisce all'EC la ricezione dei fondi.
-
+	* accedendo al sito dell'Ente Creditore che ha emesso l'avviso
+3. Il PSP che gestisce il pagamento, tramite la piattaforma pagoPA, interopera con l'EC, garantendo la correttezza ed efficacia del pagamento;
+4. La piattaforma pagoPA genera la Ricevuta Telematica e la invia all'EC assumendosene la responsabilità. La RT garantisce all'EC la ricezione dei fondi.
 
 La Piattaforma pagoPA, prodotto della omonima PagoPA S.p.A., funzionalmente assume un ruolo determinante all'interno del processo di esecuzione di un pagamento in favore di un EC:
 
@@ -68,7 +67,7 @@ La Piattaforma pagoPA, prodotto della omonima PagoPA S.p.A., funzionalmente assu
 * (b) perché abilita il pagamento della posizione debitoria (e ne garantisce la sua estinzione) senza che vi sia un rapporto diretto tra PSP e EC;
 * (c) per la garanzia assicurata all'Ente erogatore della finalizzazione del pagamento.
 
-Queste funzionalità fanno assumere alla ricevuta emessa dalla PagoPA ed inviata all'EC, il valore liberatorio del pagamento nei confronti del cittadino, garantendo alla PA l'accredito delle somme, autorizzando l'erogazione del servizio e consentendo inoltre l'attivazione di processi amministrativi digitalizzati.
+Queste funzionalità fanno assumere alla ricevuta emessa dalla PagoPA ed inviata all'EC, il valore liberatorio del pagamento nei confronti del cittadino, garantendo all'EC l'accredito delle somme, autorizzando l'erogazione del servizio e consentendo inoltre l'attivazione di processi amministrativi digitalizzati.
 
 Quindi è PagoPA S.p.A. che incide direttamente sulle posizioni giuridiche/patrimoniali sia dell'EC sia del cittadino, a prescindere da quando (e se) le somme verranno accreditate/addebitate (con conseguente estinzione della posizione debitoria). 
 
@@ -79,12 +78,12 @@ Gli aspetti sub (a), (b) e (c), nell'ambito del quadro generale di funzionamento
 L'utilizzo dei servizi messi a disposizione da pagoPA è attivato attraverso apposite procedure, descritte in maggior dettaglio nella Sez-IV, che prevedono:
 
 * per gli EC l'invio a PagoPA S.p.A. di una lettera di adesione, di formato predeterminato, sottoscritta dal legale rappresentante;
-* per i PSP la sottoscrizione con PagoPA S.p.A., su base volontaria, di atti bilaterali denominati "Accordi di Servizio".
+* per i PSP la sottoscrizione con PagoPA S.p.A., su base volontaria, di un atto bilaterale denominato "Accordi di Servizio".
 
-Ogni soggetto aderente che, per lo svolgimento delle attività tecniche di interfacciamento alla piattaforma pagoPA, utilizza soggetti intermediari, rimane comunque responsabile in quanto mittente o destinatario logico dei flussi informativi.
+Ogni soggetto aderente che, per lo svolgimento delle attività tecniche di interfacciamento alla Piattaforma pagoPA, utilizza soggetti intermediari, rimane comunque responsabile in quanto mittente o destinatario logico dei flussi informativi.
 
 ## Sicurezza e conservazione
 
-Tutte le informazioni trattate nell'ambito del Sistema saranno gestite dai diversi attori che interagiscono con la piattaforma pagoPA, ciascuno nell'ambito della propria competenza e responsabilità, nel rispetto della vigente normativa in materia di conservazione dei documenti informatici e di sicurezza dei dati.
+Tutte le informazioni trattate nell'ambito del Sistema saranno gestite dai diversi attori che interagiscono con la Piattaforma pagoPA, ciascuno nell'ambito della propria competenza e responsabilità, nel rispetto della vigente normativa in materia di conservazione dei documenti informatici e di sicurezza dei dati.
 
 In merito, si rammenta che la conservazione è finalizzata a proteggere nel tempo i documenti informatici e i dati ivi contenuti, assicurandone, tra l'altro, l'integrità al fine di preservare il valore probatorio del documento informatico.
