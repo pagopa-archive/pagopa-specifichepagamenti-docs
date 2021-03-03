@@ -1,7 +1,7 @@
 Rendicontazione ed Accredito
 ================================
 
-Ogni PSP aderente alla piattaforma, in data D+2 rendiconta il dettaglio dei riversamenti effettuati (nella giornata D+1) verso i conti di accredito dei pagamenti avvenuti nella giornata operativa D.
+Ogni PSP aderente alla piattaforma, in data D+2 rendiconta il dettaglio dei riversamenti effettuati (nella giornata D+1) verso i conti di accredito dei pagamenti avvenuti nella giornata operativa D, come definita nelle Linee Guida della piattaforma pagoPA, rinviando alle SACI.
 
 L'EC può recuperare i flussi di rendicontazione prodotti seguendo il seguente schema:
 

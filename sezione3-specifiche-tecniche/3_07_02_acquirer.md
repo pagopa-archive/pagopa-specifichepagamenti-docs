@@ -32,7 +32,7 @@ L'operazione di pagamento avviene in due fasi :
 ![sd_vpos.puml](../diagrams/sd_vpos.png) 
 
 1. Avvenuta la selezione dell'acquirer, la piattaforma richiedere verifica la disponibilità dell'import verso l'acquirer tramite il VPOS.
-2. Il VPOS restituisce l'esito dell'operazione
+2. Il VPOS restituisce l'esito dell'operazione.
 3. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato l'operazione avvenuta presso l'acquirer.
 4. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme.
 

@@ -9,7 +9,7 @@ Questa sezione è rivolta agli sviluppatori e descrive in maniera generale tutti
 
 ## Stazioni e Canali
 
-I soggetti aderenti Enti Creditori (EC) e Prestatori di Servizi di Pagamento (PSP), si connettono alla piattaforma rispettivamente per mezzo di *stazioni* e *canali* che rappresentano le piattaforme tecnologiche di partner ed intermediari connessi tramite public-internet o connessioni VPN dedicate.
+I soggetti aderenti, Enti Creditori e Prestatori di Servizi di Pagamento, si connettono alla piattaforma rispettivamente per mezzo di *stazioni* e *canali* che rappresentano le piattaforme tecnologiche di partner ed intermediari connessi tramite public-internet o connessioni VPN dedicate.
 
 ## Modello dei dati 
 

@@ -7,11 +7,11 @@ Tutti gli strumenti di pagamento sono raggruppati in tre categorie:
 
 * Pagamento con carte: attraverso questa sezione è possibile effettuare un pagamento con una carta di credito/debito abilitata a pagamenti on-line.
 * Addebito conto corrente: all'interno di questa categorie sono raccolti strumenti di pagamento che permettono l'interazione con l'home-banking del proprio istituto bancario.
-* Altri Metodi: all'interno di questa categoria rientrano strumenti di pagamento elettronici.
+* Altri Metodi: all'interno di questa categoria rientrano altri strumenti di pagamento elettronici che non rientrano nei due punti precedenti.
 
 La navigazione del WISP può avvenire sia in modalità anonima (verrà richiesta una mail dove inviare l'esito dell'operazione), oppure come utente registrato utilizzando le proprie credenziali SPID (livello 2).
 
-Per gli utenti registrati sarà possibile salvare lo strumento di pagamento utilizzato per poterlo selezionare più velocemente durante i prossimi pagamenti, garantendo in tal modo un'esperienza utente più fluida.
+Per gli utenti registrati sarà possibile salvare lo strumento di pagamento utilizzato per poterlo selezionare più velocemente durante i prossimi pagamenti, garantendo in tal modo un'esperienza utente più veloce.
 
 ## Selezione della Lingua
 
@@ -41,9 +41,9 @@ E' possibile sostituire il logo pagoPA all'interno della landing-page del WISP c
 
 Lo sviluppo del WISP segue le [linee guida di design per i servizi digitali della PA](https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html).
 
-In particolare viene assicurata la compatibilità con versioni dei browser che abbiano una penetrazione media tra la popolazione di almeno 1 persona ogni 100 abitati.
+In particolare, viene assicurata la compatibilità con versioni dei browser che abbiano una penetrazione media tra la popolazione di almeno 1 persona ogni 100 abitanti.
 
-Ciò significa che con i dati disponibili ad oggi (Dicembre 2020) i browser supportati sono:
+Ciò significa che con i dati disponibili ad oggi i browser supportati sono:
 
 * Chrome
 * Safari
