@@ -13,7 +13,7 @@ Come previsto dalle Linee guida, tutte le tipologie di pagamento gestite dal Sis
 
 Nel Sistema pagoPA ogni pagamento presuppone la creazione propedeutica, nel sistema informativo dell'Ente Creditore, di una posizione debitoria. All'Ente Creditore compete la gestione degli stati del ciclo di vita della posizione debitoria, che, in linea generale, corrispondono alle attività di:
 
-1.  Creazione. La posizione debitoria viene creata dall'Ente Creditore e posta nello stato di "Aperta". Si sottolinea che in questa sede si definisce "posizione debitoria" sia la creazione che avviene su iniziativa dell'Ente Creditore (es. maturazione delle condizioni per il pagamento di una imposta) sia quella che avviene su iniziativa dell'Utilizzatore finale (es. richiesta di un servizio), anche se in quest'ultimo caso l'Utilizzatore finale stesso non è effettivamente in debito con l'Ente Creditore.
+1.  Creazione. La posizione debitoria viene creata dall'Ente Creditore e posta nello stato di "Aperta". Si sottolinea che in questa sede si definisce "posizione debitoria" sia la creazione che avviene su iniziativa dell'Ente Creditore (es. maturazione delle condizioni per il pagamento di un'imposta) sia quella che avviene su iniziativa dell'Utilizzatore finale (es. richiesta di un servizio), anche se in quest'ultimo caso l'Utilizzatore finale stesso non è effettivamente in debito con l'Ente Creditore.
 2.  Aggiornamento. La posizione debitoria viene aggiornata dall'Ente Creditore ogni qualvolta intervengano eventi che ne modificano le informazioni associate (es sanzioni per decorrenza dei termini). L'attività di aggiornamento provoca un avanzamento di versione della posizione debitoria che permane nello stato di "Aperta". Le operazioni di pagamento assicurano che la posizione debitoria sia sempre aggiornata. 
 3.  Trasferimento. La posizione debitoria è posta nello stato di "Trasferita" nel caso in cui la competenza dell'incasso passi a un altro Ente Creditore (es. iscrizione in ruolo). 
 4.  Chiusura. L'Ente Creditore pone la posizione debitoria nello stato "Chiusa" ogni qualvolta viene effettuato un pagamento che salda il debito o intervengano eventi che la rendano non più pagabile. Tale stato è reversibile nel caso in cui intervenga una revoca del pagamento che pone di nuovo la posizione debitoria in una nuova versione dello stato di "Aperta".
@@ -66,7 +66,7 @@ Esempio:
 * Comune - Tributi - TARI - Imposta
 * `9/0101002IM/`
 
-L'elenco completo ed aggiornato della tassonomia è disponibile nel repository [in Github](https://github.com/pagopa/pagopa-api).
+L'elenco completo ed aggiornato della tassonomia è disponibile nel [repository dedicato](https://github.com/pagopa/pagopa-api).
 
 Maggiori dettagli sulla Tassonomia dei Servizi sono presenti nell'apposito capitolo in questa stessa Sezione.
 

@@ -15,7 +15,7 @@ Gli strumenti di pagamento a disposizione dell'Utilizzatore finale sono raggrupp
 
 - Pagamento con carta di credito, dove l'Utilizzatore finale può utilizzare una carta di credito/debito abilitata ai pagamenti on-line dei circuiti supportati;
 - Addebito in conto, dove sono collezionati gli strumenti di pagamento relativi agli HomeBanking e similari;
-- Altri metodi, al cui interno sono collezionati gli strumenti di pagamento di ultima generazione.
+- Altri metodi, al cui interno sono collezionati gli strumenti di pagamento di ultima generazione e/o non rientranti negli schemi di pagamento di cui ai punti precedenti.
 
 Al termine del pagamento:
 
