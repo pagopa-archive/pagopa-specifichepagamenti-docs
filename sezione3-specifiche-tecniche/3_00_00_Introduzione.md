@@ -35,7 +35,7 @@ Ogni connessione verso la piattaforma avviene tramite canale HTTPS con mutua aut
 
 ### Autenticazione EC 
 
-Ogni chiamata verso la piattaforma pagoPA è autenticata per mezzo di due parametri contenuti all'interno del body del messaggio SOAP:
+Ogni chiamata verso la Piattaforma pagoPA è autenticata per mezzo di due parametri contenuti all'interno del body del messaggio SOAP:
 
 * *identificativoStazioneIntermediarioPA*: identificativo della stazione configurata all'interno del PDA, che rappresenta il client dell'EC.
 * *password*: password associata alla stazione
@@ -44,7 +44,7 @@ Ogni chiamata viene autorizzata verificando che la stazione riportata sia stata 
 
 ### Autenticazione PSP
 
-Ogni chiamata verso la piattaforma pagoPA è autenticata per mezzo di tre parametri contenuti all'interno del body del messaggio SOAP:
+Ogni chiamata verso la Piattaforma pagoPA è autenticata per mezzo di tre parametri contenuti all'interno del body del messaggio SOAP:
 
 * *idPSP*: identificativo del PSP per conto del quale si sta effettuando la chiamata
 * *idBrokerPSP*: identificativo dell'intermediario che sta effettuando la chiamata

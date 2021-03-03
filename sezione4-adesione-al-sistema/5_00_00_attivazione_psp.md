@@ -16,7 +16,7 @@ Il *Catalogo dei Dati Informativi* è lo strumento con il quale il PSP comunica 
 
 Il processo di avvio in Esercizio sul sistema pagoPA di un PSP dipende dai modelli di pagamento e/o dai servizi di pagamento che il PSP intende erogare.
 
-Se il PSP aderente intende implementare i modelli di pagamento attivati presso l'Ente Creditore e/o quelli attivati presso il PSP è necessario che si colleghi direttamente all'infrastruttura della piattaforma pagoPA oppure si faccia intermediare da un altro PSP già attivo su quei modelli di pagamento. In ogni caso, il PSP dovrà rappresentare i servizi offerti all'utenza all'interno del Catalogo Dati Informativi.
+Se il PSP aderente intende implementare i modelli di pagamento attivati presso l'Ente Creditore e/o quelli attivati presso il PSP è necessario che si colleghi direttamente all'infrastruttura della Piattaforma pagoPA oppure si faccia intermediare da un altro PSP già attivo su quei modelli di pagamento. In ogni caso, il PSP dovrà rappresentare i servizi offerti all'utenza all'interno del Catalogo Dati Informativi.
 
 Per i PSP che intendono erogare servizi quali CBILL e/o MyBank o che vogliono svolgere il ruolo di Acquirer non è necessaria la presenza di un collegamento diretto alla piattaforma.
 

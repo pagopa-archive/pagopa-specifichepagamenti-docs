@@ -53,7 +53,7 @@ Gli Enti Creditori e i PSP aderenti si possono avvalere di uno o più soggetti t
 
 L'**Intermediario tecnologico** è un soggetto, già aderente ed attivo sul Sistema pagoPA, che svolge attività di interfacciamento con il Nodo sia per se stesso che per i soggetti che decidono di avvalersi della sua intermediazione tecnologica.
 
-Il **Partner Tecnologico** è un soggetto imprenditoriale, non sottoposto ad alcun obbligo di adesione a pagoPA, che si occupa delle attività tecniche necessarie alla connessione con la piattaforma pagoPA, ferma restando la responsabilità nei confronti di PagoPA S.p.A. in capo all'Ente Creditore. 
+Il **Partner Tecnologico** è un soggetto imprenditoriale, non sottoposto ad alcun obbligo di adesione a pagoPA, che si occupa delle attività tecniche necessarie alla connessione con la Piattaforma pagoPA, ferma restando la responsabilità nei confronti di PagoPA S.p.A. in capo all'Ente Creditore. 
 
 I **Partner Tecnologici** possono decidere di sottoporsi ad una procedura di qualificazione e sottoscrivere un accordo di servizio con PagoPA S.p.A.. Lo scopo di tale procedura è quello di mettere un Ente Creditore nella condizione di poter analizzare e valutare i servizi offerti dai soggetti "qualificati" e tenerne conto nella scelta di un Partner Tecnologico.
 

@@ -1,7 +1,7 @@
 Verifica di una posizione debitoria
 ===================================
 
-Un EC connesso alla piattaforma pagoPA deve offrire il servizio di interrogazione delle proprie posizioni  debitorie con la primitiva *paaVerifyPaymentNotice*.
+Un EC connesso alla Piattaforma pagoPA deve offrire il servizio di interrogazione delle proprie posizioni  debitorie con la primitiva *paaVerifyPaymentNotice*.
 
 Ogni posizione debitoria ottenuta può contenere più opzioni di pagamento, ogni opzione di pagamento definisce un importo, una data di scadenza, ed una descrizione.
 

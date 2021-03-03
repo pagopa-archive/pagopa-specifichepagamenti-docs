@@ -1,6 +1,6 @@
 # Tassonomia dei servizi erogati
 
-A fine di migliorare l'erogazione dei servizi delle Pubbliche Amministrazioni per i quali sia stato disposto il pagamento tramite pagoPA viene introdotta una "Tassonomia dei servizi erogati" che consente ad  ogni EC di identificare uniformemente i servizi di incasso e le rispettive posizioni debitorie che transitano tramite la piattaforma pagoPA.
+A fine di migliorare l'erogazione dei servizi delle Pubbliche Amministrazioni per i quali sia stato disposto il pagamento tramite pagoPA viene introdotta una "Tassonomia dei servizi erogati" che consente ad  ogni EC di identificare uniformemente i servizi di incasso e le rispettive posizioni debitorie che transitano tramite la Piattaforma pagoPA.
 
 Nella creazione della Posizione Debitoria, l'EC - in accordo con il proprio Partner Tecnologico, ove presente - deve attribuire al campo "dati Specifici di riscossione" il valore desunto dalla Tassonomia in base al tipo di entrata richiesta.
 
@@ -18,7 +18,7 @@ Per ogni codice tassonomico vengono indicate anche il numero della versione, la 
 
 ## Decorrenza
 
-A decorrere dalla data dell'entrata in vigore, la piattaforma pagoPA attuerà dei controlli per verificare l'effettiva aderenza a quanto specificato in questa sezione in merito alla tipologia di servizio recependo le indicazioni già pubblicate nella Monografia dedicata (rif. "Monografia - Tassonomia dei servizi di incasso") nel mese di settembre 2020.
+A decorrere dalla data dell'entrata in vigore, la Piattaforma pagoPA attuerà dei controlli per verificare l'effettiva aderenza a quanto specificato in questa sezione in merito alla tipologia di servizio recependo le indicazioni già pubblicate nella Monografia dedicata (rif. "Monografia - Tassonomia dei servizi di incasso") nel mese di settembre 2020.
 
 Le Posizioni Debitorie emesse prima dalla data dell'entrata in vigore, e che hanno una data di scadenza successiva a tale data, dovranno essere adeguate ai codici tassonomici pubblicati da PagoPA S.p.A.
 

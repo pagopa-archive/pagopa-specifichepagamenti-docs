@@ -1,7 +1,7 @@
 Richiesta di un pagamento 
 ============================
 
-Un EC connesso alla piattaforma pagoPA deve offrire un servizio che restituisce un pagamento legato ad una posizione debitoria attraverso la primitiva *getPayment*.
+Un EC connesso alla Piattaforma pagoPA deve offrire un servizio che restituisce un pagamento legato ad una posizione debitoria attraverso la primitiva *getPayment*.
 
 Ogni richiesta viene specificata attraverso i parametri `amount` e `due_date`, che sono restituiti dalla *paaVerifyPayment*, ed il parametro `transferType` che definisce il tipo di accredito che il PSP vorrebbe disporre (attualmente l'unica opzione è relativa alla necessità di un conto corrente postale).
 

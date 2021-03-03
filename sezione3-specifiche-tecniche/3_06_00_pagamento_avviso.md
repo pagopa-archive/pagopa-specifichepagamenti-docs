@@ -12,7 +12,7 @@ Entrambe vengono descritte nei capitoli seguenti.
 
 Il Prestatore di Servizi di Pagamento (PSP) è in possesso di un Avviso di Pagamento di un utente, obiettivo del PSP è verificare che le informazioni contenute nell’Avviso siano ancora attuali (es: l’importo viene attualizzato a quanto effettivamente dovuto al momento della verifica).
 
-Attraverso la lettura del _QR Code_, o attraverso l'inserimento manuale dei dati (`codice fiscale`, `importo`, `numeroAvviso`), si richiedono alla piattaforma pagoPA, mediante la primitiva `verifyPaymentNotice`​, i dati aggiornati del​l’Avviso di Pagamento.
+Attraverso la lettura del _QR Code_, o attraverso l'inserimento manuale dei dati (`codice fiscale`, `importo`, `numeroAvviso`), si richiedono alla Piattaforma pagoPA, mediante la primitiva `verifyPaymentNotice`​, i dati aggiornati del​l’Avviso di Pagamento.
 
 ![sd_psp_verifica_avviso](../diagrams/sd_psp_verifica_avviso.png) 
 
@@ -36,7 +36,7 @@ Il Prestatore di Servizi di Pagamento (PSP) apre una sessione di pagamento di un
 
 Se risulta aperta una precedente sessione di pagamento la piattaforma risponde con un `KO`: ciò inibisce ad altri PSP l’apertura di sessioni di pagamento concorrenti per lo stesso Avviso.
 
-In risposta la piattaforma pagoPA genera il token necessario per eseguire il pagamento e successivamente comunicare l’esito alla piattaforma stessa. Inoltre vengono restituiti tutti dati della richiesta di pagamento, in particolare quelli necessari per le operazioni di addebito ed accredito (es: importo totale con lista dei conti di accredito e quota parte dell’importo). Lo stato della Richiesta di Pagamento è posto in ​*paying*.
+In risposta la Piattaforma pagoPA genera il token necessario per eseguire il pagamento e successivamente comunicare l’esito alla piattaforma stessa. Inoltre vengono restituiti tutti dati della richiesta di pagamento, in particolare quelli necessari per le operazioni di addebito ed accredito (es: importo totale con lista dei conti di accredito e quota parte dell’importo). Lo stato della Richiesta di Pagamento è posto in ​*paying*.
 
 ### Pagamento
 
@@ -57,7 +57,7 @@ La Richiesta di Pagamento è posto in stato ​`paid` e la sessione di pagamento
 
 ## Eccezioni
 
-Nel seguito vengono descritte alcune eccezioni e come esse vengono gestite dalla piattaforma pagoPA.
+Nel seguito vengono descritte alcune eccezioni e come esse vengono gestite dalla Piattaforma pagoPA.
 
 **Eccezione - apertura della sessione di pagamento**
 

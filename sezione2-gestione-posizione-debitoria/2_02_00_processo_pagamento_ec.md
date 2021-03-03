@@ -4,7 +4,7 @@ Rientrano in questa categoria di pagamenti quelli richiesti dall'Utilizzatore fi
 
 Le attività a carico degli Enti Creditori per gestire il processo sono rappresentate dalla realizzazione delle procedure di pagamento (sia in termini organizzativi, che informatici); le procedure di pagamento potranno essere più o meno strettamente integrate con i servizi cui fanno riferimento.
 
-La piattaforma pagoPA mette a disposizione degli EC aderenti un servizio di pagamento on-line attraverso il quale l'utente, una volta selezionata la posizione debitoria da pagare direttamente presso il sito dell'EC, può navigare tra gli strumenti di pagamento offerti dai PSP e completare le operazioni di pagamento.
+La Piattaforma pagoPA mette a disposizione degli EC aderenti un servizio di pagamento on-line attraverso il quale l'utente, una volta selezionata la posizione debitoria da pagare direttamente presso il sito dell'EC, può navigare tra gli strumenti di pagamento offerti dai PSP e completare le operazioni di pagamento.
 
 Ogni pagamento all'interno del servizio web può avvenire in due modalità:
 

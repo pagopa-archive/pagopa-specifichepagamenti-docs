@@ -21,7 +21,7 @@ Attraverso tale funzione il PSP è in grado di aprire una sessione di pagamento 
 - codice fiscale dell'Ente
 - IBAN
 
-A seguito dell'operazione di incasso, il PSP notifica alla piattaforma pagoPA l'esito del pagamento.
+A seguito dell'operazione di incasso, il PSP notifica alla Piattaforma pagoPA l'esito del pagamento.
 
 *Nota*: per agevolare l'integrazione dei diversi sistemi di incasso, la sessione di pagamento può essere richiesta con un tempo limite. Alla scadenza di tale tempo, il pagamento si considererà non avvenuto.
 

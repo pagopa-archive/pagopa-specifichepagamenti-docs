@@ -1,7 +1,7 @@
 Marca da Bollo (@e.bollo)
 =========================
 
-Tramite la piattaforma pagoPA è possibile richiedere pagamenti di Posizioni Debitorie che contengano una marca da bollo digitale ("@e.bollo").
+Tramite la Piattaforma pagoPA è possibile richiedere pagamenti di Posizioni Debitorie che contengano una marca da bollo digitale ("@e.bollo").
 
 Per poter inserire il pagamento di una marca da bollo, è necessario compilare il campo _datiMarcaBolloDigitale_ all'interno dell'RPT avendo cura di inserire:
 

@@ -1,7 +1,7 @@
 Pagamento On-Line
 =================
 
-Tramite la piattaforma pagoPA, un EC può innescare un pagamento on-line di una o più posizioni debitorie (carrelli).
+Tramite la Piattaforma pagoPA, un EC può innescare un pagamento on-line di una o più posizioni debitorie (carrelli).
 
 ![pagamento on line](../diagrams/sd_pagamento_online.png)
 

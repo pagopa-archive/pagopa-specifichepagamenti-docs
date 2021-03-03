@@ -8,7 +8,7 @@ Tutti i soggetti collegati direttamente al Nodo (Nodo-SPC) devono farsi carico d
 
 ### Tavoli operativi
 
-Tutti i soggetti direttamente collegati alla piattaforma pagoPA hanno l'obbligo di dotarsi di un Tavolo Operativo in grado di fornire il supporto necessario a rilevare e gestire eventuali anomalie di funzionamento.
+Tutti i soggetti direttamente collegati alla Piattaforma pagoPA hanno l'obbligo di dotarsi di un Tavolo Operativo in grado di fornire il supporto necessario a rilevare e gestire eventuali anomalie di funzionamento.
 
 Il Referente Tecnico dell'Ente Creditore e del Partner Tecnologico ed il Referente del Prestatore di Servizi di Pagamento sono tenuti a fornire a PagoPA S.p.A. tutte le informazioni relative al Tavolo Operativo, che costituisce un ulteriore punto di contatto nel caso in cui pervengano segnalazioni di funzionamenti anomali.
 
@@ -18,7 +18,7 @@ PagoPA S.p.A. metterà a disposizione dei Tavoli Operativi un strumento dedicato
 
 ### Monitoraggio e controllo
 
-I soggetti direttamente collegati alla piattaforma pagoPA devono:
+I soggetti direttamente collegati alla Piattaforma pagoPA devono:
 
 * utilizzare un sistema che monitori lo stato del servizio e sia disponibile anche al Tavolo Operativo;
 * implementare il "Giornale degli Eventi", come indicato nella Sez-III delle presenti "Specifiche Attuative del Nodo dei Pagamenti-SPC"
@@ -39,7 +39,7 @@ Fatti salvi gli obblighi di legge in tema di tenuta e conservazione della docume
 Gli Enti Creditori collegati direttamente alla piattaforma dei pagamenti pagoPA devono:
 
 * comunicare al proprio utilizzatore finale gli eventuali vincoli, disponibilità dei propri servizi, con particolare riferimento ai pagamenti attivati presso le strutture dei Prestatori di Servizi di Pagamento;
-* comunicare all'utilizzatore finale le caratteristiche tipiche dei servizi di pagamento offerti tramite la piattaforma pagoPA;
+* comunicare all'utilizzatore finale le caratteristiche tipiche dei servizi di pagamento offerti tramite la Piattaforma pagoPA;
 * attivare tutti i servizi di pagamento destinati all'utilizzatore finale attraverso il sistema pagoPA;
 * rispettare le disponibilità di servizio indicate;
 * mantenere disponibili le figure del Referente Pagamenti e del Referente Tecnico e provvedere ad aggiornare PagoPA S.p.A. in caso di loro avvicendamento.
