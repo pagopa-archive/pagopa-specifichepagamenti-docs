@@ -44,13 +44,11 @@ Attraverso la *paaVerifyPaymentNotice* verranno quindi proposte tutte le opzioni
 * viene notificata una ricevuta di pagamento, pertanto la posizione debitoria risulta chiusa e nessuna opzione di pagamento sarà più disponibile.
 * l'EC diviene in possesso della data di notifica, pertanto può aggiornare le opzioni di pagamento inserendo la data di scadenza corretta per ognuna delle opzioni.
 
-## Pignoramenti / Acconti
+## Acconti / Pagamenti parziali
 
-In tale scenario l'avviso di pagamento fa riferimento ad una posizione debitoria la quale indica un importo figurativo, ma ammette la possibilità che sia l'utente, di volta in volta, a definire l'importo da versare. La posizione debitoria si considererà conclusa una volta raggiunta la somma totale riportata all'interno dell'avviso, è comunque cura dell'EC aggiornare la Posizione Debitoria secondo tali logiche
+In tale scenario l'avviso di pagamento fa riferimento ad una posizione debitoria la quale indica un importo figurativo, ma ammette la possibilità che sia l'utente, di volta in volta, a definire l'importo da versare. La posizione debitoria si considererà estinta una volta raggiunta la somma totale riportata all'interno dell'avviso; resta in capo all’EC ogni attività di aggiornamento della Posizione Debitoria secondo tali logiche.
 
-Si prenda ad esempio il caso di un pignoramento, dove l'avviso di pagamento viene notificato, ma l'utente ha disponibilità solo parziale dell'importo richiesto.
-
-In tal caso esiste un'unica opzione di pagamento che specifica un importo totale che può ammettere valori minori al dato mostrato. Pertanto una qualsiasi richiesta di pagamento verrà accettata per importi anche diversi (minori o uguali) da quello riportato all'interno della risposta della chiamata.
+In alcuni casi è possibile indicare un'opzione di pagamento che, insieme all'importo totale, specifica la possibilità di ammettere valori anche minori al dato mostrato per la finalizzazione di un pagamento parziale: una qualsiasi richiesta di pagamento verrà quindi accettata per importi anche diversi (minori o uguali) da quello riportato all'interno della risposta della chiamata.
 
 # paaVerificaRPT
 
