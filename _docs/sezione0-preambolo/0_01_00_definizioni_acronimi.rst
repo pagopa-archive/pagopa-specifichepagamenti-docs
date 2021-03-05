@@ -252,23 +252,23 @@ Definizioni e Acronimi
 |                                   | componente denominata Validation  |
 |                                   | Service.                          |
 +-----------------------------------+-----------------------------------+
-| RPT                               | Oggetto informatico inviato       |
-|                                   | dall’Ente Creditore al Prestatore |
-| Richiesta di Pagamento Telematico | di Servizi di Pagamento           |
-|                                   | attraverso il Nodo dei            |
-|                                   | Pagamenti-SPC al fine di          |
-|                                   | richiedere l’esecuzione di un     |
-|                                   | pagamento.                        |
+| RPT                               | Disposizione impartita dal		|
+|                                   | pagatore, o dal soggetto          |
+| Richiesta di Pagamento Telematico | versante, al Prestatore di Servizi|
+|                                   | di Pagamento contenente tutti gli	|
+|                                   | elementi richiesti dall'Ente		|
+|                                   | Creditore beneficiario per		|
+|                                   | effettuare un pagamento           |
+|                                   | informatico		                |
 +-----------------------------------+-----------------------------------+
 | RR                                | Richiesta Revoca                  |
 +-----------------------------------+-----------------------------------+
-| RT                                | Oggetto informatico inviato dal   |
-|                                   | Prestatore di Servizi di          |
-| Ricevuta Telematica               | Pagamento all’Ente Creditore      |
-|                                   | attraverso il Nodo dei            |
-|                                   | Pagamenti-SPC in risposta ad una  |
-|                                   | Richiesta di Pagamento Telematico |
-|                                   | effettuata da un Ente Creditore.  |
+| RT                                | Attestazione informatica di       |
+|                                   | avvenuto pagamento rilasciata dal |
+| Ricevuta Telematica               | Prestatore di Servizi di          |
+|                                   | Pagamento al pagatore, o al       |
+|                                   | soggetto versante, nonché         |
+|                                   | all'Ente Creditore.               |
 +-----------------------------------+-----------------------------------+
 | SACI                              | Specifiche attuative dei codici   |
 |                                   | identificativi di versamento,     |
