@@ -67,9 +67,9 @@ La Piattaforma pagoPA, prodotto della omonima PagoPA S.p.A., funzionalmente assu
 * (b) perché abilita il pagamento della posizione debitoria (e ne garantisce la sua estinzione) senza che vi sia un rapporto diretto tra PSP e EC;
 * (c) per la garanzia assicurata all'Ente erogatore della finalizzazione del pagamento.
 
-Queste funzionalità fanno assumere alla ricevuta emessa dalla PagoPA ed inviata all'EC, il valore liberatorio del pagamento nei confronti del cittadino, garantendo all'EC l'accredito delle somme, autorizzando l'erogazione del servizio e consentendo inoltre l'attivazione di processi amministrativi digitalizzati.
+Queste funzionalità fanno assumere alla ricevuta emessa dalla PagoPA SpA ed inviata all'EC, il valore liberatorio del pagamento nei confronti del cittadino, garantendo all'EC l'accredito delle somme, autorizzando l'erogazione del servizio e consentendo inoltre l'attivazione di processi amministrativi digitalizzati.
 
-Quindi è PagoPA S.p.A. che incide direttamente sulle posizioni giuridiche/patrimoniali sia dell'EC sia del cittadino, a prescindere da quando (e se) le somme verranno accreditate/addebitate (con conseguente estinzione della posizione debitoria). 
+Quindi è PagoPA S.p.A. che incide sulle posizioni giuridiche/patrimoniali sia dell'EC sia del cittadino, emettendo le ricevute dei pagamenti anche prima dell'addebito nei confronti del Cittadino e/o dell'accredito nei confronti dell'EC.
 
 Gli aspetti sub (a), (b) e (c), nell'ambito del quadro generale di funzionamento fissato dalle Linee Guida e dalle convenzioni tra PagoPA S.p.A. e gli EC e tra PagoPA S.p.A. ed i PSP, trovano concreta esplicitazione nelle modalità di funzionamento dei singoli servizi erogati.
 
