@@ -5,7 +5,7 @@
 .. image:: images/pagoPA.png 
 
 ##############################################################
-Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.0-RC
+Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.0
 ##############################################################
 
 
@@ -25,8 +25,8 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.0-RC
 |            |               | Revoca e Storno (deprecato);             | 
 |            |               | Pagamento on-Line con codice convenzione |
 +------------+---------------+------------------------------------------+
-| 2.4.0-RC   | Febbraio 2021 | Nuovo processo di pagamento presso il PSP|
-|            |               | eliminate funzioni deprecate             |
+| 2.4.0      |    marzo 2021 | Nuovo processo di pagamento presso il PSP|
+|            |               | Eliminate funzioni deprecate             |
 +------------+---------------+------------------------------------------+
 
 
