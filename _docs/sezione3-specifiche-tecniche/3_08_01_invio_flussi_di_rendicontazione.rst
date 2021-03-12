@@ -4,7 +4,7 @@ Invio flussi di riconciliazione
 L’invio dei flussi di riconciliazione avviene in linea con il seguente
 diagramma:
 
-.. figure:: ../diagrams/sd_psp_flussi.png
+.. figure:: ../diagrams/sd_psp_invio_flussi.png
    :alt: sdd_riconciliazione
 
    sdd_riconciliazione

@@ -3,7 +3,7 @@ Invio flussi di riconciliazione
 
 L'invio dei flussi di riconciliazione avviene in linea con il seguente diagramma:
 
-![sdd_riconciliazione](../diagrams/sd_psp_flussi.png) 
+![sdd_riconciliazione](../diagrams/sd_psp_invio_flussi.png) 
 
 1. il PSP genera il FdR
 2. il PSP accredita le somme alla Banca Tesoriera
