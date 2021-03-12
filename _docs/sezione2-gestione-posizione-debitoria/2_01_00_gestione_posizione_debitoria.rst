@@ -32,7 +32,7 @@ attività di:
    posta nello stato di “Aperta”. Si sottolinea che in questa sede si
    definisce “posizione debitoria” sia la creazione che avviene su
    iniziativa dell’Ente Creditore (es. maturazione delle condizioni per
-   il pagamento di una imposta) sia quella che avviene su iniziativa
+   il pagamento di un’imposta) sia quella che avviene su iniziativa
    dell’Utilizzatore finale (es. richiesta di un servizio), anche se in
    quest’ultimo caso l’Utilizzatore finale stesso non è effettivamente
    in debito con l’Ente Creditore.
@@ -128,8 +128,8 @@ Esempio:
 -  Comune - Tributi - TARI - Imposta
 -  ``9/0101002IM/``
 
-L’elenco completo ed aggiornato della tassonomia è disponibile `in
-Github <>`__ ``[TBD link in construzione]``
+L’elenco completo ed aggiornato della tassonomia è disponibile nel
+`repository dedicato <https://github.com/pagopa/pagopa-api>`__.
 
 Maggiori dettagli sulla Tassonomia dei Servizi sono presenti
 nell’apposito capitolo in questa stessa Sezione.
@@ -165,20 +165,31 @@ veicolate digitalmente per mezzo della piattaforma IO.
 Ricevuta di Pagamento
 ---------------------
 
-Ogni operazione di pagamento è attestata con la generazione (e consegna
-) all’EC di una Ricevuta Telematica che l’EC deve rendere disponibile,
-su richiesta dell’Utilizzatore finale, sia sotto forma di duplicato
-informatico che sotto forma di copia analogica dello stesso.
+Ogni operazione di pagamento è attestata con la generazione (e consegna)
+all’EC di una Ricevuta Telematica, generata dalla piattaforma a fronte
+dell’attività di validazione eseguita da PagoPA delle informazioni
+acquisite dai soggetti interessati (EC e PSP).
+
+L’EC deve rendere disponibile la Ricevuta Telematica, su richiesta
+dell’Utilizzatore finale, sia sotto forma di duplicato informatico che
+sotto forma di copia analogica dello stesso.
 
 Le copie analogiche prodotte devono necessariamente contenere, oltre al
 logo del sistema pagoPA, almeno le seguenti informazioni:
 
--  Data e ora dell’operazione
+-  Data e ora dell’operazione - si intende la data e l’ora in cui
+   l’utente finale ha iniziato l’operazione di pagamento sulla
+   piattaforma ed è utile ai fini liberatori dell’utente.
+-  Data Applicativa - si intende la data in cui il pagamento è stato
+   registrato all’interno del PSP selezionato per il pagamento e
+   determina la giornata operativa (cfr. Linee Guida e relativa
+   definizione presente nelle SACI) in cui ricade l’operazione di
+   pagamento.
 -  Codice fiscale e denominazione dell’EC
 -  Identificativo univoco versamento (IUV) - Identificativo univoco
    assegnato dall’EC
 -  Identificazione del PSP (es: ragione sociale, codice fiscale, codice
-   abi)
+   ABI)
 -  Numero univoco assegnato al pagamento dal PSP
 -  Importo dell’operazione
 -  Causale del versamento indicata nella richiesta di pagamento

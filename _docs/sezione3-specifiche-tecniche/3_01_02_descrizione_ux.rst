@@ -4,7 +4,7 @@ Descrizione UX (WISP)
 Il WISP (*Wizard Interattivo di Scelta del Prestatore di Servizi di
 Pagamento*) è un’applicazione web che consente ad un utente la
 navigazione degli strumenti di pagamento resi disponibili dai PSP
-aderenti alla piattaforma pagoPA.
+aderenti alla Piattaforma pagoPA.
 
 Tutti gli strumenti di pagamento sono raggruppati in tre categorie:
 
@@ -14,8 +14,9 @@ Tutti gli strumenti di pagamento sono raggruppati in tre categorie:
 -  Addebito conto corrente: all’interno di questa categorie sono
    raccolti strumenti di pagamento che permettono l’interazione con
    l’home-banking del proprio istituto bancario.
--  Altri Metodi: all’interno di questa categoria rientrano strumenti di
-   pagamento elettronici.
+-  Altri Metodi: all’interno di questa categoria rientrano altri
+   strumenti di pagamento elettronici che non rientrano nei due punti
+   precedenti.
 
 La navigazione del WISP può avvenire sia in modalità anonima (verrà
 richiesta una mail dove inviare l’esito dell’operazione), oppure come
@@ -24,7 +25,7 @@ utente registrato utilizzando le proprie credenziali SPID (livello 2).
 Per gli utenti registrati sarà possibile salvare lo strumento di
 pagamento utilizzato per poterlo selezionare più velocemente durante i
 prossimi pagamenti, garantendo in tal modo un’esperienza utente più
-fluida.
+veloce.
 
 Selezione della Lingua
 ----------------------
@@ -65,12 +66,12 @@ Lo sviluppo del WISP segue le `linee guida di design per i servizi
 digitali della
 PA <https://docs.italia.it/italia/designers-italia/design-linee-guida-docs/it/stabile/index.html>`__.
 
-In particolare viene assicurata la compatibilità con versioni dei
+In particolare, viene assicurata la compatibilità con versioni dei
 browser che abbiano una penetrazione media tra la popolazione di almeno
-1 persona ogni 100 abitati.
+1 persona ogni 100 abitanti.
 
-Ciò significa che con i dati disponibili ad oggi (Dicembre 2020) i
-browser supportati sono:
+Ciò significa che con i dati disponibili ad oggi i browser supportati
+sono:
 
 -  Chrome
 -  Safari

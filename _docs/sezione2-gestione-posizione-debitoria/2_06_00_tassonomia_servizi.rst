@@ -5,7 +5,7 @@ A fine di migliorare l’erogazione dei servizi delle Pubbliche
 Amministrazioni per i quali sia stato disposto il pagamento tramite
 pagoPA viene introdotta una “Tassonomia dei servizi erogati” che
 consente ad ogni EC di identificare uniformemente i servizi di incasso e
-le rispettive posizioni debitorie che transitano tramite la piattaforma
+le rispettive posizioni debitorie che transitano tramite la Piattaforma
 pagoPA.
 
 Nella creazione della Posizione Debitoria, l’EC - in accordo con il
@@ -43,7 +43,7 @@ possano essere facilmente individuate da parte degli attori coinvolti.
 Decorrenza
 ----------
 
-A decorrere dalla data dell’entrata in vigore, la piattaforma pagoPA
+A decorrere dalla data dell’entrata in vigore, la Piattaforma pagoPA
 attuerà dei controlli per verificare l’effettiva aderenza a quanto
 specificato in questa sezione in merito alla tipologia di servizio
 recependo le indicazioni già pubblicate nella Monografia dedicata (rif.

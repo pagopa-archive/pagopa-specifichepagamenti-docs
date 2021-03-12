@@ -8,7 +8,7 @@ intervengono nel processo:
 
 -  i Referenti Pagamenti incaricati dagli Enti Creditori;
 -  i Referenti Tecnici (e loro delegati) indicati dagli Enti Creditori
-   direttamente connessi alla piattaforma pagoPA e dai Partner
+   direttamente connessi alla Piattaforma pagoPA e dai Partner
    Tecnologici;
 -  gli operatori della piattaforma dei pagamenti;
 -  PagoPA S.p.A.
@@ -28,7 +28,7 @@ Uno stesso Referente Pagamenti può essere designato da più Enti
 Creditori.
 
 Il Referente Tecnico (RT) è la figura tecnica di riferimento di un
-soggetto direttamente connesso alla piattaforma pagoPA (Ente Creditore o
+soggetto direttamente connesso alla Piattaforma pagoPA (Ente Creditore o
 Partner tecnologico). Ogni connessione di un Ente Creditore prevede un
 Referente Tecnico: quello nominato dal Referente Pagamenti dell’Ente
 Creditore (in caso di connessione diretta) oppure quello indicato

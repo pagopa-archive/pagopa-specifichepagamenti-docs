@@ -1,13 +1,13 @@
 Avviso di Pagamento
 ===================
 
-Tramite la piattaforma pagoPA, un EC può innescare un pagamento presso
+Tramite la Piattaforma pagoPA, un EC può innescare un pagamento presso
 un qualsiasi canale dei PSP aderenti tramite un codice *numero avviso*
 abbinato al codice fiscale dell’EC.
 
 Il numero avviso è composto da 18 caratteri e deve identificare in
 maniera univoca la Posizione Debitoria all’interno degli archivi
-dell’EC. Tenuto conto che ogni EC può connettersi alla piattaforma
+dell’EC. Tenuto conto che ogni EC può connettersi alla Piattaforma
 pagoPA tramite uno o più stazioni e che ogni stazione potrebbe gestire
 un insieme (disgiunto) di posizioni debitorie, il numero avviso dovrà
 essere composto seguendo il seguente *pattern*:
@@ -17,7 +17,7 @@ essere composto seguendo il seguente *pattern*:
    <aux-digit>(1n)<position-global-id>(17)
 
 L’\ *aux-digit* (che può assumere i valori 0,1,3) codifica il tipo di
-configurazione dell’EC alla piattaforma pagoPA; a seconda del suo valore
+configurazione dell’EC alla Piattaforma pagoPA; a seconda del suo valore
 il campo *position-global-id* può assumere codifiche differenti.
 
 aux-digit=1

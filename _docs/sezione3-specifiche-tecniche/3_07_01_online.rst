@@ -19,7 +19,7 @@ quelli offerti dalla piattaforma.
 
    sd_psp_online
 
-1. Alla selezione del servizio di pagamento del PSP, la piattaforma
+1. Alla selezione del servizio di pagamento del PSP, la Piattaforma
    pagoPA invia i dettagli del pagamento attraverso la primita
    *nodoInviaCarrelloRPT*
 2. il PSP acquisisce i dettagli del pagamento, crea una sessione di
@@ -74,7 +74,7 @@ PSP per procedere con l’operazione di pagamento.
    PSP concludendo l’operazione di pagamento.
 2. il PSP gestisce l’operazione di pagamento.
 3. Al termine del pagamento, il PSP re-indirizza l’utente alla
-   piattaforma pagoPA utilizzando una URl composta nel seguete modo:
+   Piattaforma pagoPA utilizzando una URl composta nel seguete modo:
 
 .. code:: javascript
 

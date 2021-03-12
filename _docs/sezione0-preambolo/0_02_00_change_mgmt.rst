@@ -53,14 +53,9 @@ codifica adottata:
 
    -  Regolamento logo
 
-      -  Regolamento inerente l’uso del marchio collettivo registrato
-         “pagoPA”
-      -  Allegato A al “Regolamento inerente l’uso del marchio
-         collettivo registrato pagoPA”
-      -  Allegato B al “Regolamento inerente l’uso del marchio
-         collettivo registrato pagoPA”
-      -  Richiesta di concessione del Marchio pagoPA per partner
-         tecnologico
+      -  Regolamento d’uso del marchio collettivo pagoPA
+      -  Allegato 1 Brand Guidelines
+      -  Allegato 2 Richiesta di concessione del Marchio pagoPA
 
    -  Documentazione tecnica collegata
 

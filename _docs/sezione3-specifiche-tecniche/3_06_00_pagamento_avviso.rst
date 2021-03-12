@@ -21,7 +21,7 @@ verifica).
 
 Attraverso la lettura del *QR Code*, o attraverso l’inserimento manuale
 dei dati (``codice fiscale``, ``importo``, ``numeroAvviso``), si
-richiedono alla piattaforma pagoPA, mediante la primitiva
+richiedono alla Piattaforma pagoPA, mediante la primitiva
 ``verifyPaymentNotice``\ ​, i dati aggiornati del​l’Avviso di Pagamento.
 
 .. figure:: ../diagrams/sd_psp_verifica_avviso.png
@@ -67,7 +67,7 @@ Se risulta aperta una precedente sessione di pagamento la piattaforma
 risponde con un ``KO``: ciò inibisce ad altri PSP l’apertura di sessioni
 di pagamento concorrenti per lo stesso Avviso.
 
-In risposta la piattaforma pagoPA genera il token necessario per
+In risposta la Piattaforma pagoPA genera il token necessario per
 eseguire il pagamento e successivamente comunicare l’esito alla
 piattaforma stessa. Inoltre vengono restituiti tutti dati della
 richiesta di pagamento, in particolare quelli necessari per le
@@ -104,7 +104,7 @@ Eccezioni
 ---------
 
 Nel seguito vengono descritte alcune eccezioni e come esse vengono
-gestite dalla piattaforma pagoPA.
+gestite dalla Piattaforma pagoPA.
 
 **Eccezione - apertura della sessione di pagamento**
 

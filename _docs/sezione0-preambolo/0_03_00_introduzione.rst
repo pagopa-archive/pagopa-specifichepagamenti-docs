@@ -1,12 +1,11 @@
-Introduzione alla versione 2.4.0
+Introduzione alla versione 2.4.0-RC
 ===================================
 
 Il sistema dei pagamenti elettronici a favore della Pubblica
 Amministrazione, il Sistema pagoPA, garantisce agli Utilizzatori finali
-(cittadini e imprese) di effettuare pagamenti elettronici alla Pubblica
-Amministrazione in modo sicuro e affidabile, semplice, in totale
-trasparenza nei costi di commissione e in funzione delle proprie
-esigenze.
+di effettuare pagamenti elettronici alla Pubblica Amministrazione in
+modo sicuro e affidabile, semplice, in totale trasparenza nei costi di
+commissione e in funzione delle proprie esigenze.
 
 L’Introduzione del Sistema pagoPA porta benefici per i cittadini, la
 Pubblica Amministrazione e l’intero sistema Paese:
@@ -65,22 +64,20 @@ l’interconnessione e l’interoperabilità tra le pubbliche amministrazioni
 e i prestatori di servizi di pagamento abilitati, al fine di assicurare,
 attraverso strumenti condivisi di riconoscimento unificati,
 l’autenticazione certa dei soggetti interessati all’operazione in tutta
-la gestione del processo di pagamento”. IL CAD inoltre ha affidato
-all’Agenzia per l’Italia Digitale, sentita la Banca d’Italia, il compito
-di definire le Linee guida per la specifica delle modalità tecniche e
-operative per l’esecuzione dei pagamenti elettronici ed introdotto
-all’articolo 15, comma 5 bis, del D.L. n. 179/2012, l’obbligatorietà
-dell’uso di una piattaforma tecnologica messa a disposizione
-dall’Agenzia per l0’Italia Digitale per le Pubbliche Amministrazioni e i
-Gestori di Pubblico Servizio.
+la gestione del processo di pagamento”. Lo stesso articolo 5 del CAD
+inoltre ha affidato all’Agenzia per l’Italia Digitale, sentita la Banca
+d’Italia, il compito di definire le Linee guida per la specifica delle
+modalità tecniche e operative per l’esecuzione dei pagamenti
+elettronici.
 
 Il `D.L.
 135/2018 <https://www.gazzettaufficiale.it/eli/id/2018/12/14/18G00163/sg>`__
-ha trasferito la gestione di pagoPA alla Presidenza del Consiglio che si
-avvale del Commissario straordinario per l’attuazione dell’agenda
-digitale ed inoltre ha disposto la costituzione di una società per
-azioni partecipata dallo Stato che opererà sotto l’indirizzo del
-Presidente del Consiglio, PagoPA SpA appunto.
+ha trasferito la gestione di pagoPA nonché i compiti, relativi a tale
+piattaforma, svolti dall’Agenzia per l’Italia digitale alla Presidenza
+del Consiglio che si avvale del Commissario straordinario per
+l’attuazione dell’agenda digitale ed inoltre ha disposto la costituzione
+di una società per azioni partecipata dallo Stato che opererà sotto
+l’indirizzo del Presidente del Consiglio, PagoPA SpA appunto.
 
 Il presente documento denominato “*Specifiche Attuative del Nodo dei
 Pagamenti-SPC*” rappresenta l’\ **Allegato B** alle *“Linee guida per
@@ -106,15 +103,15 @@ principali:
    visione d’insieme e di alto livello del Sistema pagoPA, con un
    linguaggio ed un livello di dettaglio fruibile anche ai non addetti
    ai lavori
--  Sezione II – Regole di funzionamento del Sistema, in cui sono
-   illustrati i diversi processi gestiti dal Sistema pagoPA. Lo scopo è
-   quello di esplicitare ai diversi soggetti coinvolti le responsabilità
+-  Sezione II – Regole di funzionamento del Sistema pagoPA, in cui sono
+   illustrati i diversi processi gestiti dal Sistema. Lo scopo è quello
+   di esplicitare ai diversi soggetti coinvolti le responsabilità
    connesse al loro ruolo.
--  Sezione III – Specifiche funzionali e tecniche del Sistema, in cui
-   sono illustrati i messaggi, i flussi informativi, gli stati del
+-  Sezione III – Specifiche funzionali e tecniche del Sistema pagoPA, in
+   cui sono illustrati i messaggi, i flussi informativi, gli stati del
    pagamento e gli errori gestiti sul NodoSPC. Tale sezione include
    anche i casi di test da eseguire per l’autovalutazione del proprio
-   software. In linea generale con la presente emissione delle SANP si
+   software. In linea generale; con la presente emissione delle SANP si
    tende a rimandare i dettagli implementativi (es: formato dei messaggi
    scambiati, loro parametri, codice di errore, etc) nell’apposito
    portale per gli sviluppatori. In tal modo si avrà un tempestivo

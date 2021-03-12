@@ -42,7 +42,7 @@ erogare.
 
 Se il PSP aderente intende implementare i modelli di pagamento attivati
 presso l’Ente Creditore e/o quelli attivati presso il PSP è necessario
-che si colleghi direttamente all’infrastruttura della piattaforma pagoPA
+che si colleghi direttamente all’infrastruttura della Piattaforma pagoPA
 oppure si faccia intermediare da un altro PSP già attivo su quei modelli
 di pagamento. In ogni caso, il PSP dovrà rappresentare i servizi offerti
 all’utenza all’interno del Catalogo Dati Informativi.

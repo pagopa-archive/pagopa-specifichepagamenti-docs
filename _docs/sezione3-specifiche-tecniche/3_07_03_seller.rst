@@ -3,7 +3,7 @@ Banca Seller
 
 MyBank compare come un unico strumento di pagamento all’interno della
 componente WISP del sistema pagoPA. Secondo il paradigma di pagamento
-proprio di MyBank, un PSP aderente a pagoPA può offire il servizio di
+proprio di MyBank, un PSP aderente a pagoPA può offrire il servizio di
 pagamento con MyBank operando come Banca Seller.
 
 All’interno del WISP, l’utente trova esposto il servizio MyBank con il
@@ -12,10 +12,10 @@ selezione dove l’utente può ricercare e selezionare la propria banca
 (*Banca Buyer*). Una volta selezionata la banca, la piattaforma
 individuerà un PSP aderente come *Banca Seller* della transazione.
 
-La Banca Seller proposta in maniera automatica (“ON_US”) applicherà,
-nell’ordine, i seguenti criteri:
+Per l’individuazione della Banca Seller da proporre in maniera
+automatica si applicheranno, nell’ordine, i seguenti criteri:
 
--  La stessa Banca Buyer nel caso sia essa eroghi il servizio di Banca
+-  La stessa Banca Buyer nel caso essa eroghi anche il servizio di Banca
    Seller.
 -  La Banca Seller di preferenza indicata dalla Banca Buyer. La Banca
    Buyer può esprimere tale preferenza purché essa stessa sia aderente a
@@ -83,8 +83,8 @@ tale SCT non devono compromettere la tempistica del normale workflow di
 riconciliazione di pagoPA. Definito con:
 
 -  ``P``: il pagamento dovuto verso l’EC da parte dell’utente
--  ``X``: la commissione pubblicata su pagoPA del servizio di Banca
-   Seller
+-  ``X``: la commissione pubblicata su pagoPA del servizio di
+   tramitazione offerto dalla Banca Seller
 -  ``Y``: la commissione applicata dalla Banca Buyer per l’esecuzione
    del bonifico (definita negli accordi tra l’utente e la propria banca)
 
@@ -93,7 +93,7 @@ Allora:
 -  La Banca Seller istruirà un pagamento tramite MyBank alla Banca Buyer
    pari a ``P+X``
 -  La Banca Buyer mostrerà all’utente il *costo totale dell’operazione*,
-   pari a\ ``P+X+Y``
+   pari a ``P+(X+Y)``
 -  La Banca Buyer eseguirà un bonifico pari a ``P+X`` verso un conto
    tecnico della Banca Seller
 -  La Banca Seller eseguirà un bonifico pari a ``P`` verso l’EC

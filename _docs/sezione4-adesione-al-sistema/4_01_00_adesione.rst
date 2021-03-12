@@ -50,6 +50,7 @@ pubblico, ove ricorrano tutti i requisiti (nessuno escluso) indicati
 nella lettera di esenzione, possono fare istanza alla PagoPA S.p.A. (via
 mail all’indirizzo ``helpdesk@pagopa.it``), inviando in allegato la
 lettera di esenzione debitamente compilata e sottoscritta digitalmente.
+
 I Prestatori di Servizi di Pagamento (PSP), come le banche, le poste,
 gli istituti di moneta elettronica, gli istituti di pagamento e ogni
 altro soggetto abilitato ad eseguire servizi di pagamento, aderiscono su
@@ -87,25 +88,10 @@ di Pagamento deve firmare un accordo con PagoPA S.p.A. che prevede, da
 parte del PSP, il pagamento di un corrispettivo legato al numero di
 transazioni effettuate.
 
-Un PSP può scegliere tra *due modelli alternativi di accordo di
-adesione*, in funzione delle sue necessità:
-
--  Il **Modello A** premia i grandi volumi prevedendo uno sconto al
-   raggiungimento di determinati obiettivi. Esso permette ad un PSP di
-   accedere a tariffe migliori ed eventualmente a sconti a fronte della
-   richiesta di cumulare, alternativamente, i propri volumi con altri
-   PSP che appartengono al medesimo gruppo societario o tramite un
-   Mandatario Qualificato.
--  Il **Modello B** oltre a premiare i grandi volumi e permettere ad un
-   PSP di richiedere il cumulo dei propri con quelli di altri PSP
-   appartenenti al medesimo gruppo societario, prevede una tariffazione
-   flat per alcune casistiche, così come riportato nell’accordo stesso.
-
 Per aderire al sistema pagoPA il rappresentante del PSP deve scaricare,
 dalla sezione Prestatori Servizi di Pagamento del sito di PagoPA S.p.A.,
-il modulo relativo al modello di accordo che più risponde alle sue
-esigenze, firmarlo digitalmente e inviarlo, tramite pec, a:
-``accordipsp@pec.pagopa.it``
+il modulo relativo al modello di accordo, firmarlo digitalmente e
+inviarlo, tramite pec, a: ``accordipsp@pec.pagopa.it``
 
 Per qualsiasi chiarimento sulla procedura di adesione di un PSP, si
 possono consultare le FAQ pubblicate sul sito pagopa.gov.it o scrivere
@@ -154,14 +140,14 @@ responsabilità dell’Ente Creditore e del PSP nei confronti delle proprie
 controparti diverse da PagoPA S.p.A. e, in particolare, degli
 utilizzatori finali.
 
-L’\ **Intermediario tecnologico** è un Ente Creditore, già aderente ed
-attivo sul Sistema pagoPA, che svolge attività di interfacciamento con
-il Nodo sia per se stesso che per i soggetti che decidono di avvalersi
-della sua intermediazione tecnologica.
+L’\ **Intermediario tecnologico** è un soggetto, già aderente ed attivo
+sul Sistema pagoPA, che svolge attività di interfacciamento con il Nodo
+sia per se stesso che per i soggetti che decidono di avvalersi della sua
+intermediazione tecnologica.
 
 Il **Partner Tecnologico** è un soggetto imprenditoriale, non sottoposto
 ad alcun obbligo di adesione a pagoPA, che si occupa delle attività
-tecniche necessarie alla connessione con la piattaforma pagoPA, ferma
+tecniche necessarie alla connessione con la Piattaforma pagoPA, ferma
 restando la responsabilità nei confronti di PagoPA S.p.A. in capo
 all’Ente Creditore.
 

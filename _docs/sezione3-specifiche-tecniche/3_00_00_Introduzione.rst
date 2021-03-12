@@ -15,11 +15,11 @@ rappresenta la fonte aggiornata.
 Stazioni e Canali
 -----------------
 
-I soggetti aderenti Enti Creditori (EC) e Prestatori di Servizi di
-Pagamento (PSP), si connettono alla piattaforma rispettivamente per
-mezzo di *stazioni* e *canali* che rappresentano le piattaforme
-tecnologiche di partner ed intermediari connessi tramite public-internet
-o connessioni VPN dedicate.
+I soggetti aderenti, Enti Creditori e Prestatori di Servizi di
+Pagamento, si connettono alla piattaforma rispettivamente per mezzo di
+*stazioni* e *canali* che rappresentano le piattaforme tecnologiche di
+partner ed intermediari connessi tramite public-internet o connessioni
+VPN dedicate.
 
 Modello dei dati
 ----------------
@@ -63,7 +63,7 @@ la piattaforma fare riferimento alla Sez-IV.
 Autenticazione EC
 ~~~~~~~~~~~~~~~~~
 
-Ogni chiamata verso la piattaforma pagoPA è autenticata per mezzo di due
+Ogni chiamata verso la Piattaforma pagoPA è autenticata per mezzo di due
 parametri contenuti all’interno del body del messaggio SOAP:
 
 -  *identificativoStazioneIntermediarioPA*: identificativo della
@@ -78,7 +78,7 @@ sia valida.
 Autenticazione PSP
 ~~~~~~~~~~~~~~~~~~
 
-Ogni chiamata verso la piattaforma pagoPA è autenticata per mezzo di tre
+Ogni chiamata verso la Piattaforma pagoPA è autenticata per mezzo di tre
 parametri contenuti all’interno del body del messaggio SOAP:
 
 -  *idPSP*: identificativo del PSP per conto del quale si sta

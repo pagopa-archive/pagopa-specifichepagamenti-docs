@@ -2,9 +2,9 @@ Integrazione di un metodo nel wallet
 ====================================
 
 Il presente capitolo descrive le molteplici possibilità di integrazione
-di un metodo di pagamento nel wallet.In particolare :
+di un metodo di pagamento nel wallet. In particolare:
 
--  Pagamenti con carte di credito
+-  Pagamenti con carte
 -  Pagamenti tramite portali web (es. homeBanking)
 -  MyBank (nel ruolo di Banca Seller)
 -  BancomatPay

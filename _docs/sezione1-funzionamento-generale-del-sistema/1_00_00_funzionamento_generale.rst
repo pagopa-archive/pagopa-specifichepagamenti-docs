@@ -3,12 +3,12 @@
 Funzionamento Generale del Sistema
 ==================================
 
-Obiettivo strategico della piattaforma pagoPA è quello di facilitare e
+Obiettivo strategico della Piattaforma pagoPA è quello di facilitare e
 diffondere, a beneficio dei cittadini e delle imprese, l’utilizzo di
 strumenti evoluti nei pagamenti in favore della Pubblica
 Amministrazione, delle Società a controllo pubblico e dei Gestori dei
 Pubblici servizi. Si denominano i soggetti che hanno aderito a pagoPA in
-attuazione dell’art 5 del CAD, con il nome collettivo di **Ente
+attuazione dell’art. 5 del CAD, con il nome collettivo di **Ente
 Creditore**.
 
 L’adesione a pagoPA di tutti i più importanti PSP, ovvero Prestatori di
@@ -17,21 +17,23 @@ di pagamento) consente ai loro clienti l’accesso ad una vastissima gamma
 di strumenti di pagamento in continua espansione. Ad esempio, possono
 pagare con pagoPA i possessori di carte di credito dei circuiti Visa,
 Mastercard, American Express, i possessori di un account PayPal e di app
-per il pagamento con dispositivi *mobile*.
+per il pagamento con dispositivi *mobile*, nonché i titolari di Home
+banking integrati con la Piattaforma pagoPA o direttamente o tramite il
+servizio MyBank.
 
 L’adesione a pagoPA consente all’Ente Creditore di beneficiare dei
 servizi di pagamento senza la necessità di instaurare una esplicita
 relazione con i PSP che li erogano ai loro clienti.
 
 L’infrastruttura abilitante che consente il dialogo tecnico tra Enti
-Creditori e Prestatori di Servizi di Pagamento è la piattaforma pagoPA.
+Creditori e Prestatori di Servizi di Pagamento è la Piattaforma pagoPA.
 Tramite tale piattaforma l’Ente Creditore fornisce al PSP i dati
 necessari a erogare il servizio di pagamento e ottiene, in maniera
 standardizzata ed indipendente dallo strumento di pagamento utilizzato,
 i dati di rendicontazione necessari alla riconciliazione contabile,
 semplificando così i processi di gestione del back office.
 
-Il modello di funzionamento della piattaforma pagoPA fa riferimento ai
+Il modello di funzionamento della Piattaforma pagoPA fa riferimento ai
 principi del Four Corners model definito dall’European Payment Council:
 
 .. figure:: ../images/four_corners_model.png
@@ -49,7 +51,7 @@ La seguente tabella elenca i soggetti coinvolti nel pagamento:
 |                           | di pagamento, autorizzato ad operare in   |
 |                           | Italia, che rende disponibili ai propri   |
 |                           | clienti servizi di pagamento tramite la   |
-|                           | piattaforma PagoPA.                       |
+|                           | Piattaforma pagoPA.                       |
 +---------------------------+-------------------------------------------+
 | EC (Creditor)             | Ente Creditore: Soggetto che aderisce a   |
 |                           | pagoPA per l’incasso di somme che gli     |
@@ -79,23 +81,23 @@ degli Enti Creditori che dei Prestatori di Servizi di Pagamento. A tale
 proposito si definisce:
 
 -  **Intermediario tecnologico** come un soggetto appartenente alla
-   Pubblica Amministrazione che offre - previa adesione alla piattaforma
+   Pubblica Amministrazione che offre - previa adesione alla Piattaforma
    pagoPA - ad altri soggetti aderenti, PSP e/o Enti Creditori, un
    servizio tecnologico per il collegamento e per lo scambio dei flussi
-   con la piattaforma pagoPA, nel pieno rispetto delle `Linee
+   con la Piattaforma pagoPA, nel pieno rispetto delle `Linee
    Guida <https://www.gazzettaufficiale.it/eli/id/2018/07/03/18A04494/sg>`__
    e dei relativi standard tecnici.
 -  **Partner tecnologico** è un soggetto imprenditoriale di cui l’Ente
    Creditore si avvale in via strumentale per l’esecuzione delle
    attività tecniche relative alla fornitura dei servizi IT, non
    necessariamente caratterizzabili, per l’interfacciamento con la
-   piattaforma pagoPA. Ciò ferma restando la responsabilità nei
+   Piattaforma pagoPA. Ciò ferma restando la responsabilità nei
    confronti di PagoPA in capo all’Ente Creditore.
 
 Ciclo di vita del pagamento
 ---------------------------
 
-Il pagamento mediante la piattaforma pagoPA è operazione complessa,
+Il pagamento mediante la Piattaforma pagoPA è operazione complessa,
 composta di diverse fasi, che, in linea generale, seguono un preordinato
 “Ciclo di vita” schematizzato nella Figura 2.
 
@@ -118,17 +120,17 @@ l’inizializzazione:
 
 1. L’utilizzatore finale accede ai servizi ICT esposti dal portale/app
    dell’EC, compone un carrello di pagamenti e richiede il pagamento. In
-   backend l’EC trasmette alla piattaforma pagoPA la richiesta di
+   backend l’EC trasmette alla Piattaforma pagoPA la richiesta di
    pagamento.
-2. Il controllo passa a un’interfaccia della piattaforma pagoPA che
+2. Il controllo passa a un’interfaccia della Piattaforma pagoPA che
    consente di selezionare lo strumento, e autorizzare il pagamento,
    gestito da un PSP che riceve in backend la richiesta di pagamento;
 3. Il PSP notifica l’esito del pagamento all’utilizzatore finale e, in
-   backend, alla piattaforma pagoPA;
+   backend, alla Piattaforma pagoPA;
 4. Il controllo ritorna all’EC che, ricevendo in backend l’esito del
    pagamento, può dare all’utilizzatore finale la ricevuta del pagamento
    ed erogare il servizio;
-5. La Ricevuta Telematica erogata dalla piattaforma pagoPA è liberatoria
+5. La Ricevuta Telematica erogata dalla Piattaforma pagoPA è liberatoria
    del pagamento per il soggetto debitore e garantisce all’EC
    l’accredito dei fondi sul conto indicato nella richiesta di
    pagamento.
@@ -147,14 +149,14 @@ l’inizializzazione:
    -  inquadrando il QRcode con un’App di pagamento o con l’App IO
    -  accedendo alle funzioni internet banking di un PSP aderente alla
       piattaforma
-   -  accedendo al sito dell’Ente creditore che ha emesso l’avviso
+   -  accedendo al sito dell’Ente Creditore che ha emesso l’avviso
 
-3. Il PSP che gestisce il pagamento, tramite la piattaforma pagoPA,
-   interopera con l’EC, garantendo la correttezza ed efficacia al
+3. Il PSP che gestisce il pagamento, tramite la Piattaforma pagoPA,
+   interopera con l’EC, garantendo la correttezza ed efficacia del
    pagamento;
-4. La piattaforma pagoPA genera la Ricevuta Telematica liberatoria e la
-   invia all’EC assumendosene la responsabilità. Anche in questo caso la
-   RT garantisce all’EC la ricezione dei fondi.
+4. La Piattaforma pagoPA genera la Ricevuta Telematica e la invia all’EC
+   assumendosene la responsabilità. La RT garantisce all’EC la ricezione
+   dei fondi.
 
 La Piattaforma pagoPA, prodotto della omonima PagoPA S.p.A.,
 funzionalmente assume un ruolo determinante all’interno del processo di
@@ -176,16 +178,16 @@ esecuzione di un pagamento in favore di un EC:
    (c) per la garanzia assicurata all’Ente erogatore della
        finalizzazione del pagamento.
 
-Queste funzionalità fanno assumere alla ricevuta emessa dalla PagoPA ed
-inviata all’EC, il valore liberatorio del pagamento nei confronti del
-cittadino, garantendo alla PA l’accredito delle somme, autorizzando
+Queste funzionalità fanno assumere alla ricevuta emessa dalla PagoPA SpA
+ed inviata all’EC, il valore liberatorio del pagamento nei confronti del
+cittadino, garantendo all’EC l’accredito delle somme, autorizzando
 l’erogazione del servizio e consentendo inoltre l’attivazione di
 processi amministrativi digitalizzati.
 
-Quindi è PagoPA S.p.A. che incide direttamente sulle posizioni
-giuridiche/patrimoniali sia dell’EC sia del cittadino, a prescindere da
-quando (e se) le somme verranno accreditate/addebitate (con conseguente
-estinzione della posizione debitoria).
+Quindi è PagoPA S.p.A. che incide sulle posizioni
+giuridiche/patrimoniali sia dell’EC sia del cittadino, emettendo le
+ricevute dei pagamenti anche prima dell’addebito nei confronti del
+Cittadino e/o dell’accredito nei confronti dell’EC.
 
 Gli aspetti sub (a), (b) e (c), nell’ambito del quadro generale di
 funzionamento fissato dalle Linee Guida e dalle convenzioni tra PagoPA
@@ -203,10 +205,10 @@ Sez-IV, che prevedono:
 -  per gli EC l’invio a PagoPA S.p.A. di una lettera di adesione, di
    formato predeterminato, sottoscritta dal legale rappresentante;
 -  per i PSP la sottoscrizione con PagoPA S.p.A., su base volontaria, di
-   atti bilaterali denominati “Accordi di Servizio”.
+   un atto bilaterale denominato “Accordi di Servizio”.
 
 Ogni soggetto aderente che, per lo svolgimento delle attività tecniche
-di interfacciamento alla piattaforma pagoPA, utilizza soggetti
+di interfacciamento alla Piattaforma pagoPA, utilizza soggetti
 intermediari, rimane comunque responsabile in quanto mittente o
 destinatario logico dei flussi informativi.
 
@@ -214,7 +216,7 @@ Sicurezza e conservazione
 -------------------------
 
 Tutte le informazioni trattate nell’ambito del Sistema saranno gestite
-dai diversi attori che interagiscono con la piattaforma pagoPA, ciascuno
+dai diversi attori che interagiscono con la Piattaforma pagoPA, ciascuno
 nell’ambito della propria competenza e responsabilità, nel rispetto
 della vigente normativa in materia di conservazione dei documenti
 informatici e di sicurezza dei dati.

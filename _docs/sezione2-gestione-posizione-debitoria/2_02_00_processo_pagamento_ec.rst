@@ -16,7 +16,7 @@ termini organizzativi, che informatici); le procedure di pagamento
 potranno essere più o meno strettamente integrate con i servizi cui
 fanno riferimento.
 
-La piattaforma pagoPA mette a disposizione degli EC aderenti un servizio
+La Piattaforma pagoPA mette a disposizione degli EC aderenti un servizio
 di pagamento on-line attraverso il quale l’utente, una volta selezionata
 la posizione debitoria da pagare direttamente presso il sito dell’EC,
 può navigare tra gli strumenti di pagamento offerti dai PSP e completare
@@ -44,7 +44,8 @@ raggruppati all’interno di tre sezioni:
 -  Addebito in conto, dove sono collezionati gli strumenti di pagamento
    relativi agli HomeBanking e similari;
 -  Altri metodi, al cui interno sono collezionati gli strumenti di
-   pagamento di ultima generazione.
+   pagamento di ultima generazione e/o non rientranti negli schemi di
+   pagamento di cui ai punti precedenti.
 
 Al termine del pagamento:
 

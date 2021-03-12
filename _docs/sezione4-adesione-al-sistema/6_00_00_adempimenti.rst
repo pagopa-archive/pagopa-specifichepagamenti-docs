@@ -15,7 +15,7 @@ carico degli obblighi e adempimenti di seguito descritti.
 Tavoli operativi
 ~~~~~~~~~~~~~~~~
 
-Tutti i soggetti direttamente collegati alla piattaforma pagoPA hanno
+Tutti i soggetti direttamente collegati alla Piattaforma pagoPA hanno
 l’obbligo di dotarsi di un Tavolo Operativo in grado di fornire il
 supporto necessario a rilevare e gestire eventuali anomalie di
 funzionamento.
@@ -40,7 +40,7 @@ Assistenza.
 Monitoraggio e controllo
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-I soggetti direttamente collegati alla piattaforma pagoPA devono:
+I soggetti direttamente collegati alla Piattaforma pagoPA devono:
 
 -  utilizzare un sistema che monitori lo stato del servizio e sia
    disponibile anche al Tavolo Operativo;
@@ -86,7 +86,7 @@ pagoPA devono:
    pagamenti attivati presso le strutture dei Prestatori di Servizi di
    Pagamento;
 -  comunicare all’utilizzatore finale le caratteristiche tipiche dei
-   servizi di pagamento offerti tramite la piattaforma pagoPA;
+   servizi di pagamento offerti tramite la Piattaforma pagoPA;
 -  attivare tutti i servizi di pagamento destinati all’utilizzatore
    finale attraverso il sistema pagoPA;
 -  rispettare le disponibilità di servizio indicate;

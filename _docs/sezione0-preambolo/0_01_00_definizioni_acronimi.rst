@@ -6,13 +6,10 @@ Definizioni e Acronimi
 |                                   |                                   |
 | **Definizione**                   |                                   |
 +-----------------------------------+-----------------------------------+
-| AgID                              | Ente istituito ai sensi del       |
-|                                   | decreto legge n. 83 del 22 giugno |
-| Agenzia per l’Italia Digitale     | 2012 convertito con legge n. 134  |
-|                                   | del 7 agosto 2012 (già DigitPA).  |
-|                                   |                                   |
-|                                   | Gestore del Nodo dei              |
-|                                   | Pagamenti-SPC.                    |
+| AgID                              | Gestore del Nodo dei              |
+|                                   | Pagamenti-SPC precedentemente     |
+| Agenzia per l’Italia Digitale     | alla gestione da parte della      |
+|                                   | PagoPA S.p.A.                     |
 +-----------------------------------+-----------------------------------+
 | Allegato A                        | Il documento “*Specifiche         |
 |                                   | attuative dei codici              |
@@ -43,16 +40,6 @@ Definizioni e Acronimi
 |                                   | procedure di cifratura            |
 |                                   | asimmetrica e/o autenticazione    |
 |                                   | tramite firma digitale.           |
-+-----------------------------------+-----------------------------------+
-| Comitato di coordinamento SIPA    | Comitato composto da Ragioneria   |
-|                                   | Generale dello Stato, Corte dei   |
-|                                   | Conti, Agenzia per l’Italia       |
-|                                   | Digitale e Banca d’Italia, che    |
-|                                   | sovraintende alla gestione del    |
-|                                   | “Sistema Informatizzato dei       |
-|                                   | Pagamenti della Pubblica          |
-|                                   | Amministrazione” applicabile      |
-|                                   | all’Ente Creditore Centrale.      |
 +-----------------------------------+-----------------------------------+
 | Dominio                           | Rappresenta il sistema            |
 |                                   | complessivo che si riferisce sia  |
@@ -104,13 +91,14 @@ Definizioni e Acronimi
 |                                   | trasmissione o di un processo     |
 |                                   | elaborativo e di trattamento      |
 +-----------------------------------+-----------------------------------+
-| Gestori di pubblici servizi       | Le aziende e gli enti organizzati |
-|                                   | in forma societaria che           |
-|                                   | gestiscono servizi pubblici       |
-|                                   | quali, ad esempio, Enel, Uffici   |
+| Gestori di pubblici servizi       | Le aziende, gli enti e ogni altro |
+|                                   | soggetto giuridico che gestiscono |
+|                                   | servizio di interesse pubblico    |
+|                                   | quali, a titolo esemplificativo e |
+|                                   | non esaustivo, Enel, Uffici       |
 |                                   | postali (per quanto riguarda il   |
 |                                   | “servizio postale”), Italgas,     |
-|                                   | Trenitalia, ecc., così come, in   |
+|                                   | Trenitalia, ecc., così come in    |
 |                                   | ambito locale, le aziende che     |
 |                                   | gestiscono l’erogazione di acqua  |
 |                                   | e gas o quelle che provvedono al  |
@@ -124,21 +112,21 @@ Definizioni e Acronimi
 |                                   | Service della Seller Bank per     |
 |                                   | l’erogazione del servizio MyBank. |
 +-----------------------------------+-----------------------------------+
-| Intermediario tecnologico         | PA o Prestatore di Servizi di     |
+| Intermediario tecnologico         | EC o Prestatore di Servizi di     |
 |                                   | Pagamento aderente a pagoPA che   |
 |                                   | gestisce le attività di           |
-|                                   | interconnessione al NodoSPC per   |
-|                                   | conto di altri soggetti aderenti  |
-|                                   | a pagoPA (PA o Prestatore di      |
-|                                   | Servizi di Pagamento), ai sensi   |
-|                                   | del § 8.3.3 delle Linee guida.    |
+|                                   | interconnessione al NodoSPC anche |
+|                                   | per conto di altri soggetti       |
+|                                   | aderenti a pagoPA (EC o           |
+|                                   | Prestatore di Servizi di          |
+|                                   | Pagamento), ai sensi del § 8.3.3  |
+|                                   | delle Linee guida.                |
 +-----------------------------------+-----------------------------------+
 | Istituto tesoriere                | Soggetto finanziario affidatario  |
 |                                   | del servizio di tesoreria o di    |
 |                                   | cassa della singola               |
 |                                   | amministrazione, ivi compresa la  |
-|                                   | Banca d’Italia, o del gestore di  |
-|                                   | pubblici servizi                  |
+|                                   | Banca d’Italia                    |
 +-----------------------------------+-----------------------------------+
 | IUV                               | Identificativo Univoco Versamento |
 +-----------------------------------+-----------------------------------+
@@ -206,18 +194,19 @@ Definizioni e Acronimi
 |                                   | dallo Stato”, vigilata dal        |
 |                                   | Presidente del Consiglio dei      |
 |                                   | ministri o del Ministro delegato. |
+|                                   |                                   |
+|                                   | Gestore del Nodo dei              |
+|                                   | Pagamenti-SPC.                    |
 +-----------------------------------+-----------------------------------+
 | Partner tecnologico               | Soggetto che gestisce le attività |
 |                                   | di interconnessione al NodoSPC    |
-|                                   | per conto di una Pubblica         |
-|                                   | Amministrazione, nel rispetto     |
+|                                   | per conto di un EC, nel rispetto  |
 |                                   | delle specifiche tecniche         |
 |                                   | contenute nelle Linee guida.      |
 +-----------------------------------+-----------------------------------+
 | PdD                               | Porta di Dominio SPCoop.          |
 +-----------------------------------+-----------------------------------+
-| Portale delle Adesioni            | Sito web predisposto dall’Agenzia |
-|                                   | per l’Italia Digitale per         |
+| Portale delle Adesioni            | Sito web predisposto per          |
 |                                   | dematerializzare il processo di   |
 |                                   | adesione dell’Ente Creditore e    |
 |                                   | automatizzare le attività         |
@@ -252,23 +241,23 @@ Definizioni e Acronimi
 |                                   | componente denominata Validation  |
 |                                   | Service.                          |
 +-----------------------------------+-----------------------------------+
-| RPT                               | Disposizione impartita dal		|
-|                                   | pagatore, o dal soggetto          |
-| Richiesta di Pagamento Telematico | versante, al Prestatore di Servizi|
-|                                   | di Pagamento contenente tutti gli	|
-|                                   | elementi richiesti dall'Ente		|
-|                                   | Creditore beneficiario per		|
-|                                   | effettuare un pagamento           |
-|                                   | informatico		                |
+| RPT                               | Oggetto informatico inviato       |
+|                                   | dall’Ente Creditore al Prestatore |
+| Richiesta di Pagamento Telematico | di Servizi di Pagamento           |
+|                                   | attraverso il Nodo dei            |
+|                                   | Pagamenti-SPC al fine di          |
+|                                   | richiedere l’esecuzione di un     |
+|                                   | pagamento.                        |
 +-----------------------------------+-----------------------------------+
 | RR                                | Richiesta Revoca                  |
 +-----------------------------------+-----------------------------------+
-| RT                                | Attestazione informatica di       |
-|                                   | avvenuto pagamento rilasciata dal |
-| Ricevuta Telematica               | Prestatore di Servizi di          |
-|                                   | Pagamento al pagatore, o al       |
-|                                   | soggetto versante, nonché         |
-|                                   | all'Ente Creditore.               |
+| RT                                | Oggetto informatico inviato dal   |
+|                                   | Prestatore di Servizi di          |
+| Ricevuta Telematica               | Pagamento all’Ente Creditore      |
+|                                   | attraverso il Nodo dei            |
+|                                   | Pagamenti-SPC in risposta ad una  |
+|                                   | Richiesta di Pagamento Telematico |
+|                                   | effettuata da un Ente Creditore.  |
 +-----------------------------------+-----------------------------------+
 | SACI                              | Specifiche attuative dei codici   |
 |                                   | identificativi di versamento,     |
@@ -332,24 +321,6 @@ Definizioni e Acronimi
 |                                   | sensi dell’articolo 81, comma     |
 |                                   | 2-bis, del CAD.                   |
 +-----------------------------------+-----------------------------------+
-| SIPA                              | Nel dicembre 2000 la Ragioneria   |
-|                                   | generale dello Stato, l’AIPA      |
-|                                   | (oggi Agenzia per l’Italia        |
-|                                   | Digitale), la Banca d’Italia e la |
-|                                   | Corte dei conti hanno             |
-|                                   | sottoscritto il “Protocollo       |
-|                                   | d’intesa per lo sviluppo del      |
-|                                   | Sistema Informatizzato dei        |
-|                                   | Pagamenti della Pubblica          |
-|                                   | Amministrazione – SIPA”.          |
-|                                   |                                   |
-|                                   | Gli obiettivi del SIPA erano la   |
-|                                   | completa attuazione della Legge   |
-|                                   | 367/94 che prevedeva la           |
-|                                   | diffusione dei sistemi telematici |
-|                                   | nelle procedure di spesa          |
-|                                   | dell’Amministrazione Centrale.    |
-+-----------------------------------+-----------------------------------+
 | SPC                               | Sistema Pubblico di Connettività. |
 +-----------------------------------+-----------------------------------+
 | SPCoop                            | Sistema Pubblico di Connettività  |
@@ -360,7 +331,7 @@ Definizioni e Acronimi
 +-----------------------------------+-----------------------------------+
 | Utente                            | Persona fisica o giuridica che    |
 |                                   | effettua un pagamento elettronico |
-| Utilizzatore finale               | in favore di un Ente creditore    |
+| Utilizzatore finale               | in favore di un Ente Creditore    |
 |                                   | attraverso pagoPA.                |
 +-----------------------------------+-----------------------------------+
 | Validation Service                | Componente che, nell’ambito del   |

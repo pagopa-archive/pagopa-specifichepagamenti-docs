@@ -1,7 +1,7 @@
 Richiesta di un pagamento
 =========================
 
-Un EC connesso alla piattaforma pagoPA deve offrire un servizio che
+Un EC connesso alla Piattaforma pagoPA deve offrire un servizio che
 restituisce un pagamento legato ad una posizione debitoria attraverso la
 primitiva *getPayment*.
 

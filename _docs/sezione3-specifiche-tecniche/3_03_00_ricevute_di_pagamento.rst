@@ -1,7 +1,7 @@
 Ricevute di pagamento
 =====================
 
-A fronte di qualsiasi pagamento avvenuto sulla piattaforma pagoPA viene
+A fronte di qualsiasi pagamento avvenuto sulla Piattaforma pagoPA viene
 generata, e notificata tempestivamente, una ricevuta che attesta il
 pagamento avvenuto con i riferimenti alla posizione debitoria e relativi
 dettagli.
@@ -23,7 +23,7 @@ Le ricevute vengono inviate:
 Per poter ricevere tali ricevute, l’EC deve disporre dell’operazione
 ``sendRT`` e ``paaInviaRT``.
 
-La piattaforma pagoPA effettuerà un massimo di 5 tentativi di invio
+La Piattaforma pagoPA effettuerà un massimo di 5 tentativi di invio
 della ricevuta all’EC. In caso di mancata notifica della ricevuta verrà
 attivato il tavolo operativo ed eventualmente ripristinata l’operazione
 di invio.

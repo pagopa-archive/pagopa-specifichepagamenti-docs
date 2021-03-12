@@ -40,7 +40,7 @@ riversamento della somma, in particolare per ogni versamento:
 -  codice fiscale dell’Ente
 -  IBAN
 
-A seguito dell’operazione di incasso, il PSP notifica alla piattaforma
+A seguito dell’operazione di incasso, il PSP notifica alla Piattaforma
 pagoPA l’esito del pagamento.
 
 *Nota*: per agevolare l’integrazione dei diversi sistemi di incasso, la

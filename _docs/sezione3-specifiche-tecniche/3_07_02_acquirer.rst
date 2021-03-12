@@ -1,17 +1,17 @@
 Acquirer
 --------
 
-Tramite la piattaforma pagoPA è possibile offrire il pagamento tramite
+Tramite la Piattaforma pagoPA è possibile offrire il pagamento tramite
 carta di credito/debito in due diverse modalità :
 
 1. configurandosi come acquirer all’interno del servizio VPOS offerto da
    SIA S.p.A.
-2. integrando un proprio *payment gateway* con la piattaforma pagoPA
+2. integrando un proprio *payment gateway* con la Piattaforma pagoPA
 
 In entrambi gli scenari , il processo di pagamento è descritto dal
 diagramma seguente
 
-1. L’utente inserisce i dati carta all’interno della piattaforma pagoPA
+1. L’utente inserisce i dati carta all’interno della Piattaforma pagoPA
 2. la piattaforma seleziona il servizio di acquiring secondo il seguente
    principio :
 
@@ -54,7 +54,7 @@ fasi :
 1. Avvenuta la selezione dell’acquirer, la piattaforma richiedere
    verifica la disponibilità dell’import verso l’acquirer tramite il
    VPOS.
-2. Il VPOS restituisce l’esito dell’operazione
+2. Il VPOS restituisce l’esito dell’operazione.
 3. Nel caso di risposta positiva, la piattaforma notifica al PSP
    associato all’acquirer selezionato l’operazione avvenuta presso
    l’acquirer.
