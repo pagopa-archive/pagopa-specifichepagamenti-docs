@@ -31,13 +31,13 @@ Una volta verificato l'Avviso di Pagamento è facoltà dell'utente autorizzarne 
 
 Il Prestatore di Servizi di Pagamento (PSP) apre una sessione di pagamento di un Avviso tramite la primitiva ​`activatePaymentNotice​()`. 
 
-In risposta la Piattaforma pagoPA genera il token necessario per eseguire il pagamento e successivamente comunicare l’esito alla piattaforma stessa. Inoltre vengono restituiti tutti dati della richiesta di pagamento, in particolare quelli necessari per le operazioni di addebito ed accredito (es: importo totale con lista dei conti di accredito e quota parte dell’importo). Lo stato della Richiesta di Pagamento è posto in ​*paying*.
+In risposta la Piattaforma pagoPA genera il token necessario per eseguire il pagamento e successivamente comunicare l’esito alla piattaforma stessa. La generazione del token ha l'effetto di bloccare la posizione debitoria sulla piattaforma per il tempo indicato nel campo `expiringTime` o, se non specificato, per la sua durata di default: con questa soluzione si impediscono i pagamenti doppi per la durata del token. Inoltre vengono restituiti tutti dati della richiesta di pagamento, in particolare quelli necessari per le operazioni di addebito ed accredito (es: importo totale con lista dei conti di accredito e quota parte dell’importo).
 
 I possibili casi in cui non si ottiene una risposta positiva sono nel seguito descritti:
 
-* Se i dati forniti dal PSP non sono corretti la Piattaforma risponde con un `KO`: il PSP non potrà quindi avviare il pagamento (caso 2)
-* Se risulta aperta una precedente sessione di pagamento la Piattaforma risponde con un `KO`: ciò inibisce ad altri PSP l'apertura di sessioni di pagamento concorrenti per lo stesso Avviso (caso 2)
-* Se il PSP non ottiene risposta dalla Piattaforma alla richiesta di attivazione della sessione, può avviare un processo di retry (caso 3). La chiamata `activatePaymentNotice​()` è idempotente (prevede il parametro opzionale `idempotencyKey`): ovvero a fronte di un'invocazione con la stessa chiave la Piattaforma risponderà con il medesimo output.
+* Se i dati forniti dal PSP non sono corretti la Piattaforma risponde con un `KO`: il PSP non potrà quindi avviare il pagamento (**caso 2**)
+* Se risulta aperta una precedente sessione di pagamento la Piattaforma risponde con un `KO`: ciò inibisce ad altri PSP l'apertura di sessioni di pagamento concorrenti per lo stesso Avviso (**caso 2**)
+* Se il PSP non ottiene risposta dalla Piattaforma alla richiesta di attivazione della sessione, può avviare un processo di retry (**caso 3**). La chiamata `activatePaymentNotice​()` è idempotente (prevede il parametro opzionale `idempotencyKey`): ovvero a fronte di un'invocazione con la stessa chiave la Piattaforma risponderà con il medesimo output.
 
 ### Pagamento
 
@@ -58,19 +58,19 @@ Il PSP ha l'obbligo di notificare alla Piattaforma l'esito sia in caso di pagame
 
 Il PSP ha quindi l’obbligo, in caso di mancato recapito dell'esito, di avviare un processo di _retry_.
 
-Se il retry avviene entro la scadenza del token della sessione di pagamento non si identificano potenziali problemi. Qualora invece il processo di retry si completa oltre la scadenza del token il PSP otterrà in risposta che il token è scaduto.
+Se il retry avviene _entro la scadenza_ del token della sessione di pagamento non si identificano potenziali problemi. Qualora invece il processo di retry si completa oltre la scadenza del token il PSP otterrà in risposta che il token è scaduto.
 
 Si identificano i seguenti casi:
 
-* incasso effettuato e timeout sull'invio dell'esito (caso 4)
-* incasso non effettuato e timeout sull'invio dell’esito (caso 5)
+* incasso effettuato e timeout sull'invio dell'esito (**caso 4**)
+* incasso non effettuato e timeout sull'invio dell'esito (**caso 5**)
 
 In caso di incasso effettuato e timeout sull'invio dell’esito (caso 4), la Piattaforma pagoPA avvierà un processo di retry del pagamento verso l'Ente Creditore che può portare a due esiti:
 
-* esito positivo: l'avviso risulta ancora pagabile e la Piattaforma riesce a comunicare l'avvenuto pagamento all'EC
-* esito negativo: l'avviso non risulta pagabile. Attraverso il servizio di Assistenza verrà comunicata la situazione al PSP che dovrà preoccuparsi di rimborsare l'importo all'utente.
+* esito positivo: l'avviso risulta ancora pagabile e la Piattaforma riesce a comunicare l'avvenuto pagamento all'EC, che quindi riceve una `RT+`
+* esito negativo: l'EC non riceve una `RT+`
 
-#### Eccezioni
+### Eccezioni
 
 Nel seguito vengono illustrate le eccezioni specificate in precedenza (casi 2, 3, 4 e 5).
 
@@ -102,5 +102,3 @@ Il PSP può avviare un processo di retry in caso di mancata risposta da parte de
 **Caso 5 - incasso non effettuato e timeout su invio dell'esito**
 
 ![sd_psp_pagamento_avviso-timeout-su-outcome-negativo](../diagrams/sd_psp_pagamento_avviso-timeout-su-outcome-negativo-05.png)
-
-Se il PSP riceve una risposta negativa all'invocazione della primitiva `sendPaymentOutcome()` deve notificare all’utente l’impossibilità di concludere il pagamento, con opportuna motivazione secondo il messaggio di errore ottenuto dalla piattaforma.
