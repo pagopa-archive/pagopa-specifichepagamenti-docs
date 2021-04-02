@@ -111,7 +111,7 @@ La lista di RPT è così composta
 <RPT xmlns="http://www.digitpa.gov.it/schemas/2011/Pagamenti/">
   <versioneOggetto>6.2.0</versioneOggetto>
   <dominio>
-    <identificativoDominio>77777777777</identificativoDominio>
+    <identificativoDominio>999999999</identificativoDominio>
   </dominio>
   <identificativoMessaggioRichiesta>...</identificativoMessaggioRichiesta>
   <dataOraMessaggioRichiesta>...</dataOraMessaggioRichiesta>

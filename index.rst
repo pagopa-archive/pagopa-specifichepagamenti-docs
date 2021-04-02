@@ -4,9 +4,9 @@
 
 .. image:: images/pagoPA.png 
 
-##############################################################
-Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.0
-##############################################################
+#################################################################
+Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.1-RC
+#################################################################
 
 
 .. highlights::
@@ -28,7 +28,6 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.0
 | 2.4.0      |    marzo 2021 | Nuovo processo di pagamento presso il PSP|
 |            |               | Eliminate funzioni deprecate             |
 +------------+---------------+------------------------------------------+
-
 
 
 .. toctree::
