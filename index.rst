@@ -27,10 +27,7 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.1-RC
 +------------+---------------+------------------------------------------+
 | 2.4.0      |    marzo 2021 | Nuovo processo di pagamento presso il PSP|
 |            |               | Eliminate funzioni deprecate             |
-| 2.4.1-RC   |   aprile 2021 | Chiarimenti sul Nuovo processo di        |
-|            |               | pagamento presso il PSP                  |
 +------------+---------------+------------------------------------------+
-
 
 
 .. toctree::
