@@ -16,9 +16,10 @@ Attraverso la lettura del _QR Code_, o attraverso l'inserimento manuale dei dati
 
 ![sd_psp_verifica_avviso](../diagrams/sd_psp_verifica_avviso.png)
 
-In risposta alla richiesta la piattaforma restituisce le informazioni aggiornate dell’avviso di agamento, tra cui l'importo aggiornato.
+In risposta alla richiesta la Piattaforma restituisce le informazioni aggiornate dell’avviso di pagamento, tra cui l'importo aggiornato.
 
 La precedente chiamata non ha effetti sullo stato del pagamento, che pertanto resta invariato. Quindi in caso di timeout, errore di connessione, etc. la chiamata può essere nuovamente invocata senza _side effects_.
+
 ## Pagamento dell'Avviso
 
 Una volta verificato l'avviso di pagamento è facoltà dell'utente autorizzarne il pagamento. Ciò avviene anzitutto attivando una sessione di pagamento (che evita pagamenti concorrenti dello stesso avviso) e poi effettuando il pagamento vero e proprio (che chiude la sessione).
@@ -85,7 +86,7 @@ La piattaforma notifica al PSP, attraverso il `KO`, l'impossibilità di attivare
 
 ![sd_psp_pagamento_avviso-attivazione-timeout](../diagrams/sd_psp_pagamento_avviso-attivazione-timeout-03.png)
 
-Il PSP può avviare un processo di retry in caso di mancata risposta da parte della piattaforma.
+Il PSP può avviare un processo di retry in caso di mancata risposta da parte della Piattaforma.
 
 
 **Caso 4 - incasso effettuato e timeout su invio dell'esito**
