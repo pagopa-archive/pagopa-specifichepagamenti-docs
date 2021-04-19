@@ -62,3 +62,5 @@ Per un Partner Tecnologico, infatti, l’Ente Creditore può rappresentare
 o l’Ente pilota, il primo Ente Creditore per il quale il Partner attiva
 uno o più modelli di pagamento, oppure un nuovo Ente Creditore che si
 aggiunge a quelli già intermediati dal Partner.
+
+PagoPA SpA può operare tacitamente come Partner Tecnologico per ogni Ente Aderente 
