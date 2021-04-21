@@ -25,10 +25,10 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.1
 |            |               | Revoca e Storno (deprecato);             | 
 |            |               | Pagamento on-Line con codice convenzione |
 +------------+---------------+------------------------------------------+
-| 2.4.0      |    marzo 2021 | Nuovo processo di pagamento presso il PSP|
+| 2.4.0      |  marzo 2021   | Nuovo processo di pagamento presso il PSP|
 |            |               | Eliminate funzioni deprecate             |
 +------------+---------------+------------------------------------------+
-| 2.4.1      |    aprile     | Alcuni chiarimenti nuovo processo di     |
+| 2.4.1      |  aprile 2021  | Alcuni chiarimenti nuovo processo di     |
 |            |               | pagamento presso il PSP.                 |
 |            |               | Soluzione Canone Unico                   |
 |            |               | PagoPA SpA come Partner Tecnologico      |
