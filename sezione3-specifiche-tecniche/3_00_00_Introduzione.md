@@ -37,7 +37,7 @@ Ogni connessione verso la piattaforma avviene tramite canale HTTPS con mutua aut
 
 Ogni chiamata verso la Piattaforma pagoPA è autenticata per mezzo di due parametri contenuti all'interno del body del messaggio SOAP:
 
-* *identificativoStazioneIntermediarioPA*: identificativo della stazione configurata all'interno del PDA, che rappresenta il client dell'EC.
+* *identificativoStazioneIntermediarioPA*: identificativo della stazione configurata all'interno del PdA, che rappresenta il client dell'EC.
 * *password*: password associata alla stazione
 
 Ogni chiamata viene autorizzata verificando che la stazione riportata sia stata configurata all'interno della piattaforma e che la password sia valida.
