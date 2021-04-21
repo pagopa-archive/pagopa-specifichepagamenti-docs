@@ -67,7 +67,7 @@ Ogni chiamata verso la Piattaforma pagoPA è autenticata per mezzo di due
 parametri contenuti all’interno del body del messaggio SOAP:
 
 -  *identificativoStazioneIntermediarioPA*: identificativo della
-   stazione configurata all’interno del PDA, che rappresenta il client
+   stazione configurata all’interno del PdA, che rappresenta il client
    dell’EC.
 -  *password*: password associata alla stazione
 
