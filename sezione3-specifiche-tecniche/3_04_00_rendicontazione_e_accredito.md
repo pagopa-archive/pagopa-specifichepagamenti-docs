@@ -25,6 +25,6 @@ La ricevuta potrebbe contenere diversi versamenti, per identificare il versament
 
 ## ricevuta paSendRT
 
-E' possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso di rendicontazione tramite il parametro *identificativoUnivocoRiscossione* che conterrà il valore del campo _request-id_ della ricevuta.
+E' possibile rintracciare la ricevuta di un versamento contenuto all'interno del flusso di rendicontazione tramite il parametro *identificativoUnivocoRiscossione* che conterrà il valore del campo _receiptId_ della ricevuta.
 
 La ricevuta potrebbe contenere diversi versamenti, per identificare il versamento corrispondente è possibile utilizzare il campo *indiceDatiSingoloPagamento* che conterrà il valore del *idTransfer* all'interno della ricevuta.
