@@ -3,7 +3,10 @@ Richiesta di un pagamento
 
 Un EC connesso alla Piattaforma pagoPA deve offrire un servizio che restituisce un pagamento legato ad una posizione debitoria attraverso la primitiva *paGetPayment*.
 
-Ogni richiesta viene specificata attraverso il parametro `notice_number` ed il parametro `transferType` che definisce il tipo di accredito che il PSP vorrebbe disporre (attualmente l'unica opzione è legata alla necessità di un conto corrente postale).
+Ogni richiesta viene specificata attraverso il parametro `notice_number` ed il parametro `transferType` che definisce il tipo di accredito che il PSP vorrebbe disporre:
+
+* se `transferType=POSTAL` allora l'EC restituisce - se disponibili - con tutti i conti correnti postali presenti nei transfer; ed in particolare il conto corrente postale dell'EC "primario" deve essere il medesimo definito nel data matrix del bollettino postale
+* altrimenti l'EC restituisce, a propria discrezione, qualsiasi tipo di conto corrente
 
 La richiesta specifica anche il parametro `amount` che potrebbe o meno essere già stato attualizzato con la precedente *paVerifyPaymentNotice*; nel caso questo parametro non sia presente o sia errato, sarà l'EC ad impostare l'importo attualizzato.
 

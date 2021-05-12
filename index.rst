@@ -36,7 +36,7 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.1
 | 2.4.2      |  maggio 2021  | Ulteriori chiarimenti nuovo processo di  |
 |            |               | pagamento presso il PSP.                 |
 |            |               | Revisione opzioni di pagamento.          |
-|            |               | ___________________________________      |
+|            |               |                                          |
 +------------+---------------+------------------------------------------+
 
 
