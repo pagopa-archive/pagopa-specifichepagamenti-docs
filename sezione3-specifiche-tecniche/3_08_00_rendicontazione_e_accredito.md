@@ -29,3 +29,21 @@ Nel caso di un pagamento effettuato tramite i servizi di pagamento resi disponib
 * `singoloImportoPagato`: importo parziale
 * `codiceEsitoSingoloPagamento`: 0
 * `dataEsitoSingoloPagamento`: data del pagamento riportata all’interno della ricevuta.
+
+## Nota _codiceEsitoSingoloPagamento_
+
+E' importante evidenziare le possibili casistiche in funzione dell'esito della `sendPaymentOutcome()`, insieme al suo valore semantico, in virtù della retrocompatibilità nella generazione del FdR:
+
+* `OK` => _codiceEsitoSingoloPagamento_ = **0**
+	* EC configurato con il precedente modello: è possibile consegnare l'RT all'EC
+	* EC configurato con il nuovo modello: è possibile consegnare la Receipt all'EC
+* `PPT_TOKEN_SCADUTO` => _codiceEsitoSingoloPagamento_ = **9**
+	* EC configurato con il precedente modello: è possibile consegnare l'RT all'EC (solo nel caso in cui le Retry vadano a buon fine)
+	* EC configurato con il nuovo modello: è possibile consegnare la Receipt all'EC (a meno che il pagamento non si effettuato sul modello on-line)
+* `PPT_PAGAMENTO_DUPLICATO` => _codiceEsitoSingoloPagamento_ = **9**
+	* non è possibile consegnare l'RT/Receipt all'EC
+
+Infine se non è possibile ottenere l'esito prima della generazione dei FdR allora non sarà possibile consegnare l'RT/Receipt all'EC. A tal proposito è importate sottolineare due considerazioni:
+
+* si ritiene questa ultima casistica molto ridotta in quanto la durata dal token (al netto del limite superiore) è impostata dal PSP stesso in base alle proprie necessità e circostanze;
+* a livello di servizio PagoPA SpA attua un monitoraggio su tali eventi con l'obiettivo di minimizzarli con opportune azioni.
