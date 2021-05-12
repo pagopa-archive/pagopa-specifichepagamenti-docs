@@ -1,5 +1,5 @@
 Richiesta di un pagamento 
-============================
+=========================
 
 Un EC connesso alla Piattaforma pagoPA deve offrire un servizio che restituisce un pagamento legato ad una posizione debitoria attraverso la primitiva *paGetPayment*.
 
@@ -8,6 +8,11 @@ Ogni richiesta viene specificata attraverso i parametri `amount` e `due_date`, c
 I parametri `retentionDate` e `lastPayment` vengono ignorati dalla piattaforma (essendo riservati ad un uso futuro).
 
 In risposta, l'EC restituisce tutti i dati necessari per il pagamento ed autorizza la piattaforma a proseguire con l'eventuale incasso ed accreditamento delle somme.
+
+Si noti che dal punto di vista della piattaforma viene generato un _payment token_:
+
+* se l'EC è configurato con il precedente modello il valore del token corrisponderà al parametro `CCP`
+* se l'EC è configurato con il nuovo modello il valore non è noto in fase di attivazione del pagamento, ma solo successivamente
 
 ## paaAttivaRPT
 
