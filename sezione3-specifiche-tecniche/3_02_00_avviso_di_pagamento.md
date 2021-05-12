@@ -11,6 +11,9 @@ Il numero avviso è composto da 18 caratteri e deve identificare in maniera univ
 
 L'*aux-digit* (che può assumere i valori 0,1,3) codifica il tipo di configurazione dell'EC alla Piattaforma pagoPA; a seconda del suo valore il campo *position-global-id* può assumere codifiche differenti.
 
+
+**Nota**: Il numero avviso è descritto all'interno delle [SACI](https://docs.italia.it/italia/pagopa/pagopa-codici-docs/it/stabile/_docs/Capitolo2.html#numero-avviso-e-codice-iuv-nel-caso-di-pagamenti-attivati-presso-i-psp), il contenuto di questo paragrafo rifrasa quanto già riportato senza alternarne il contenuto.
+
 ## aux-digit=1
 
 L'EC dispone di un'unica stazione, pertanto il *position-global-id* identifica in maniera univoca la Posizione Debitoria all'interno dell'EC.
@@ -24,7 +27,7 @@ L'EC dispone di diverse stazioni, l'identificazione della posizione debitoria è
 ```
 
 * *cod-segregazione*: valore numerico che rappresenta il Codice di Segregazione, ovvero la stazione all'interno della quale risiede la posizione debitoria.
-* *position-local-id*: identificativo univoco della posizione debitoria all'interno della stazione.
+* *position-local-id*: identificativo univoco della posizione debitoria all'interno della stazione (iuv base).
 * *check-digit*: codice di controllo del numero avviso.
 
 ### check-digit
