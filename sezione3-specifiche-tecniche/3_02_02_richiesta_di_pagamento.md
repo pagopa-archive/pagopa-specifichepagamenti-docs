@@ -14,7 +14,7 @@ In risposta, l'EC restituisce tutti i dati necessari per il pagamento ed autoriz
 Si noti che dal punto di vista della piattaforma viene generato un _payment token_:
 
 * se l'EC è configurato con il precedente modello il valore del token corrisponderà al parametro `CCP`
-* se l'EC è configurato con il nuovo modello il valore non è noto in fase di attivazione del pagamento, ma solo successivamente
+* se l'EC è configurato con il nuovo modello tale valore non è noto. A conclusione del pagamento l'EC riceverà una _receipt_ identificata in maniera univoca (_receiptId_) con il valore del _payment token_ utilizzato durante il pagamento.
 
 ## paaAttivaRPT
 
