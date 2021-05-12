@@ -20,10 +20,10 @@ L'EC dispone di un'unica stazione, pertanto il *position-global-id* identifica i
 L'EC dispone di diverse stazioni, l'identificazione della posizione debitoria è composta da:
 
 ```javascript
-<station-id>(2n)<position-local-id>(13n)<check-digit>(2n)
+<cod-segregazione>(2n)<position-local-id>(13n)<check-digit>(2n)
 ```
 
-* *station-id*: identificativo della stazione all'interno della quale risiede la posizione debitoria.
+* *cod-segregazione*: valore numerico che rappresenta il Codice di Segregazione, ovvero la stazione all'interno della quale risiede la posizione debitoria.
 * *position-local-id*: identificativo univoco della posizione debitoria all'interno della stazione.
 * *check-digit*: codice di controllo del numero avviso.
 
