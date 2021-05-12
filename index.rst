@@ -38,7 +38,7 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.1
 |            |               | Chiarimenti sulla modalità d'uso dei     |
 |            |               | conti correnti postali.                  |
 |            |               | Revisione delle opzioni di pagamento.    |
-|            |               |                                          |
+|            |               | Precisazioni e chiarimenti sui FdR       |
 +------------+---------------+------------------------------------------+
 
 
