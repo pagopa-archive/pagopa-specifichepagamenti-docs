@@ -36,7 +36,7 @@ I possibili casi in cui non si ottiene una risposta positiva sono:
 
 * Se i dati forniti dal PSP non sono corretti la piattaforma risponde con un `KO`: il PSP non potrà quindi avviare il pagamento (**caso 2**)
 * Se risulta aperta una precedente sessione di pagamento la piattaforma risponde con un `KO`: ciò inibisce ad altri PSP l'apertura di sessioni di pagamento concorrenti per lo stesso avviso (**caso 2**)
-* Se il PSP non ottiene risposta dalla piattaforma alla richiesta di attivazione della sessione, può avviare un processo di retry (**caso 3**). La chiamata `activatePaymentNotice​` è idempotente (prevede il parametro opzionale `idempotencyKey`), ovvero a fronte di un'invocazione con la stessa chiave la piattaforma risponderà con il medesimo output.
+* Se il PSP non ottiene risposta dalla piattaforma alla richiesta di attivazione della sessione, può avviare un processo di retry (**caso 3**). La chiamata `activatePaymentNotice​` è idempotente (prevede il parametro opzionale `idempotencyKey`), ovvero a fronte di un'invocazione con la stessa chiave e gli stessi parametri di input la piattaforma risponderà con il medesimo output.
 
 ### Pagamento
 
