@@ -67,11 +67,6 @@ Si identificano i seguenti casi:
 * incasso effettuato e timeout sull'invio dell'esito (**caso 4**)
 * incasso non effettuato e timeout sull'invio dell'esito (**caso 5**)
 
-In caso di incasso effettuato e timeout sull'invio dell’esito (caso 4), la piattaforma pagoPA avvierà un processo di retry del pagamento verso l'Ente Creditore che può portare a due esiti:
-
-* esito positivo: l'avviso risulta ancora pagabile e la piattaforma riesce a comunicare l'avvenuto pagamento all'EC, che quindi riceve una `RT+`
-* esito negativo: l'EC non riceve una `RT+`
-
 ### Eccezioni 
 
 Nel seguito vengono illustrate le eccezioni specificate in precedenza (casi 2, 3, 4 e 5).
