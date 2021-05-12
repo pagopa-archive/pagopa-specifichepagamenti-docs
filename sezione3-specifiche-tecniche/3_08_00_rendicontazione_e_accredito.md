@@ -20,6 +20,20 @@ Nel caso di un pagamento effettuato direttamente tramite i servizi del PSP (si v
 
 Pertanto, qualsiasi Ente Beneficiario è in grado di riconciliare il pagamento ricercando per ogni _datoSingoloPagamento_ la corrispondente ricevuta identificata da _paymentToken_ e _IUV_, selezionando l’importo parziale corrispondente al campo _indiceDatiSingoloPagamento_.
 
+### Pagamento Bollettino Postale
+
+Nel caso di un pagamento multi-beneficiario effettuato tramite la sezione "Bollettino Postale" presente all'interno di un avviso di pagamento, a fronte di un addebito eseguito dal PSP Poste Italiane è possibile che i corrispettivi FdR per gli Enti Beneficiari vengano eseguiti da due PSP distinti.
+
+In particolare :
+
+* i versamenti destinati a conti correnti postali verranno eseguiti dal PSP Poste Italiane
+
+* i versamenti destinati a conti correnti bancari verranno eseguiti dal PSP Postepay.
+
+In conclusione, a fronte di un un'inca _receipt_ dove il PSP attestante è identificato come Poste Italiane potrebbero corrispondere ( in base alla composizione dei versamenti ) due FdR forniti da due PSP distinti.
+
+La fase di riconciliazione non viene modificata in quanto i due enti beneficiari saranno sempre in gradi di riconciliare ricercando per ogni _datoSingoloPagamento_ la corrispondente ricevuta identificata da _paymentToken_ e _IUV_, selezionando l’importo parziale corrispondente al campo _indiceDatiSingoloPagamento_.
+
 ## Pagamento in Wallet
 
 Nel caso di un pagamento effettuato tramite i servizi di pagamento resi disponibili all'interno del wallet (WISP), a fronte di un addebito eseguito dal PSP, il corrispondente Flusso di Rendicontazione conterrà il campo `datiSingoloPagamento` così composto:
