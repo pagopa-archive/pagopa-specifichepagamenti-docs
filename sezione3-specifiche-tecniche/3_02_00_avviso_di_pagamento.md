@@ -18,7 +18,7 @@ L'*aux-digit* (che può assumere i valori 0,1,3) codifica il tipo di configurazi
 
 L'EC dispone di un'unica stazione, pertanto il *position-global-id* identifica in maniera univoca la Posizione Debitoria all'interno dell'EC.
 
-## aux-digit 3 o 0
+## aux-digit 3
 
 L'EC dispone di diverse stazioni, l'identificazione della posizione debitoria è composta da:
 
