@@ -1,1 +1,0 @@
-Questa cartella contiene i wsdl ed i XSD relativi utili ad un EC

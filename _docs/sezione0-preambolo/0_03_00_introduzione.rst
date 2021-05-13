@@ -1,4 +1,4 @@
-Introduzione alla versione 2.4.1
+Introduzione alla versione 2.4.2
 ================================
 
 Il sistema dei pagamenti elettronici a favore della Pubblica

@@ -5,7 +5,7 @@
 .. image:: images/pagoPA.png 
 
 ##############################################################
-Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.1
+Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.2
 ##############################################################
 
 
@@ -32,6 +32,13 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.1
 |            |               | pagamento presso il PSP.                 |
 |            |               | Soluzione Canone Unico                   |
 |            |               | PagoPA SpA come Partner Tecnologico      |
++------------+---------------+------------------------------------------+
+| 2.4.2      |  maggio 2021  | Ulteriori chiarimenti sul nuovo processo |
+|            |               | di pagamento presso il PSP.              |
+|            |               | Chiarimenti sulla modalità d'uso dei     |
+|            |               | conti correnti postali.                  |
+|            |               | Revisione delle opzioni di pagamento.    |
+|            |               | Precisazioni e chiarimenti sui FdR       |
 +------------+---------------+------------------------------------------+
 
 
