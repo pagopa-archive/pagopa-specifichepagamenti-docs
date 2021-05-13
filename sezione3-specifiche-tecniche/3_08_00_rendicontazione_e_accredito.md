@@ -1,9 +1,9 @@
 # Rendicontazione e Accredito
 
 Per ogni pagamento avvenuto, il PSP si impegna a riversare le somme incassate verso gli IBAN contenuti nelle richieste di pagamento tramite disposizione di SCT cumulativi di tutti i pagamenti verso il medesimo conto corrente della PA.
-Inoltre, a fronte di un pagamento avvenuto in data D, il PSP in data D+2 deve inviare un Flusso di Riconciliazione (FdR).
+Inoltre, a fronte di un pagamento avvenuto in data D, il PSP in data D+2 deve inviare un Flusso di Rendicontazione (FdR).
 
-Il Flusso di Riconciliazione rappresenta il dettaglio dei pagamenti contenuti all'interno del medesimo SCT identificato (per mezzo del campo AT-05) con l'identificativo del flusso di riconciliazione.
+Il Flusso di Rendicontazione rappresenta il dettaglio dei pagamenti contenuti all'interno del medesimo SCT identificato (per mezzo del campo AT-05) con l'identificativo del flusso di rendicontazione.
 
 Nel dettaglio, ogni FdR collezione i singoli versamenti identificati come illustrato nel seguito.
 
@@ -32,7 +32,7 @@ In particolare :
 
 In conclusione, a fronte di un un'inca _receipt_ dove il PSP attestante è identificato come Poste Italiane potrebbero corrispondere ( in base alla composizione dei versamenti ) due FdR forniti da due PSP distinti.
 
-La fase di riconciliazione non viene modificata in quanto i due enti beneficiari saranno sempre in gradi di riconciliare ricercando per ogni _datoSingoloPagamento_ la corrispondente ricevuta identificata da _paymentToken_ e _IUV_, selezionando l’importo parziale corrispondente al campo _indiceDatiSingoloPagamento_.
+La fase di riconciliazione non viene modificata in quanto i due enti beneficiari saranno sempre in grado di riconciliare ricercando per ogni _datoSingoloPagamento_ la corrispondente ricevuta identificata da _paymentToken_ e _IUV_, selezionando l’importo parziale corrispondente al campo _indiceDatiSingoloPagamento_.
 
 ## Pagamento in Wallet
 
