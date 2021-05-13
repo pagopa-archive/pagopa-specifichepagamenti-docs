@@ -41,15 +41,29 @@ La ricevuta potrebbe contenere diversi versamenti, per identificare il
 versamento corrispondente è possibile utilizzare il campo
 *indiceDatiSingoloPagamento*.
 
+In caso di EC configurato con il precedente modello si segnala la
+possibilità - fortemente ridotta con il PSP a nuovo modello - che
+possano presentarsi dei ``codiceEsitoSingoloPagamento`` pari a **9**
+corrispondenti comunque a “RT positiva” (ma ottenuta con token scaduto).
+Per maggiori dettagli si veda il cap. “Rendicontazione e Accredito”
+relativo ai PSP, in questa stessa Sezione.
+
 ricevuta paSendRT
 -----------------
 
 E’ possibile rintracciare la ricevuta di un versamento contenuto
 all’interno del flusso di rendicontazione tramite il parametro
 *identificativoUnivocoRiscossione* che conterrà il valore del campo
-*request-id* della ricevuta.
+*receiptId* della ricevuta.
 
 La ricevuta potrebbe contenere diversi versamenti, per identificare il
 versamento corrispondente è possibile utilizzare il campo
 *indiceDatiSingoloPagamento* che conterrà il valore del *idTransfer*
 all’interno della ricevuta.
+
+In caso di EC configurato con il precedente modello si segnala la
+possibilità - fortemente ridotta con il PSP a nuovo modello - che
+possano presentarsi dei ``codiceEsitoSingoloPagamento`` pari a **9**
+corrispondenti comunque ad una Receipt ottenuta con token scaduto. Per
+maggiori dettagli si veda il cap. “Rendicontazione e Accredito” relativo
+ai PSP, in questa stessa Sezione.

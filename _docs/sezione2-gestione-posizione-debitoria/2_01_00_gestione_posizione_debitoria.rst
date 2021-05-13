@@ -56,24 +56,18 @@ attività di:
 Ogni posizione debitoria è identificata dai seguenti elementi:
 
 -  soggetto pagatore: intestatario della posizione
--  opzioni di pagamento
+-  opzione di pagamento
 
-Un’opzione di pagamento rappresenta le modalità di pagamento definite
-dall’EC e consistono in un elenco di versamenti, ognuno dei quali è
+Un’opzione di pagamento rappresenta la modalità di pagamento definita
+dall’EC e consiste in un elenco di versamenti, ognuno dei quali è
 specificato da:
 
--  codice fiscale dell’Ente beneficiario (può non coincidere con l’EC)
+-  codice fiscale dell’Ente beneficiario (che può non coincidere con
+   l’EC)
 -  importo
 -  causale di versamento
 -  tassonomia del servizio
 -  conto corrente, dove accreditare le somme
-
-Ad esempio, una delle opzioni più comuni di pagamento per un tributo
-annuale sono:
-
--  pagamento rata unica
--  pagamento prima rata
--  pagamento ennesima rata
 
 Tassonomia dei servizi
 ~~~~~~~~~~~~~~~~~~~~~~
@@ -128,8 +122,9 @@ Esempio:
 -  Comune - Tributi - TARI - Imposta
 -  ``9/0101002IM/``
 
-L’elenco completo ed aggiornato della tassonomia è disponibile nel
-`repository dedicato <https://github.com/pagopa/pagopa-api>`__.
+L’elenco completo ed aggiornato della tassonomia è disponibile `nel
+repository
+Github <https://github.com/pagopa/pagopa-api/tree/develop/taxonomy>`__.
 
 Maggiori dettagli sulla Tassonomia dei Servizi sono presenti
 nell’apposito capitolo in questa stessa Sezione.
