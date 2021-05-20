@@ -17,6 +17,6 @@ cit -[#green]> pagopa : Seleziona Strumento di pagamento
 pagopa -> pagopa : elaborazione pagamento
 pagopa -[#green]-> ec: <urlPortalePA>?&idSession=<idSession>& esito=<esito>
 ...
-pagopa -> ec : paaSendRT
+pagopa -> ec : paaInviaRT
 ec -[#blue]-> pagopa : resp OK
 @enduml
