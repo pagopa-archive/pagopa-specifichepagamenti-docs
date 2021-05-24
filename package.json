@@ -1,5 +1,5 @@
 {
-  "name": "tst-myFirstPrj",
+  "name": "pagopa-specifichepagament-docs",
   "version": "1.0.0",
   "description": "Specifiche Attuative Nodo dei Pagamenti (SANP)",
   "main": "index.js",
@@ -8,7 +8,8 @@
     "md2rst": "node script/md2rst.js",
     "puml2png": "node script/puml2png.js",
     "build-media": "node script/media2media.js",
-    "start": "npm run build-media && npm run puml2png && npm run md2rst"
+    "build-diagrams": "node script/diagrams2diagrams.js",
+    "start": "npm run build-media && npm run puml2png && npm run build-diagrams && npm run md2rst"
   },
   "repository": {
     "type": "git",
