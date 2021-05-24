@@ -5,7 +5,7 @@ const fs = require('fs');
 //joining path of directory 
 const  __rootDir = path.dirname(__dirname,'..');
 const directoryPath = path.join(__rootDir, 'puml-diagrams');
-const outDirectoryPath = path.join(__rootDir, '_docs','diagrams');
+// const outDirectoryPath = path.join(__rootDir, '_docs','diagrams');
 const outDirectoryPathMD = path.join(__rootDir,'diagrams');
 
 if (!fs.existsSync(outDirectoryPath)) {
@@ -34,8 +34,8 @@ fs.readdir(directoryPath, function (err, files) {
 		gen.out.pipe( fs.createWriteStream(path.join(outDirectoryPathMD,pngFile)) );
 		console.log(path.join(directoryPath,file) + '->' + path.join(outDirectoryPathMD,pngFile));
 		// copy for rst files
-		gen.out.pipe( fs.createWriteStream(path.join(outDirectoryPath,pngFile)) );
-		console.log(path.join(directoryPath,file) + '->' + path.join(outDirectoryPath,pngFile));
+		// gen.out.pipe( fs.createWriteStream(path.join(outDirectoryPath,pngFile)) );
+		// console.log(path.join(directoryPath,file) + '->' + path.join(outDirectoryPath,pngFile));
 		
 	})
 });
