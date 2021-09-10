@@ -115,8 +115,6 @@ Rendicontazione e gli altri ricevere i dati ivi contenuti.
 Pagamento contenente più accrediti
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-``[TBD da verificare] -> in realtà la riconciliazione deve avvenire per IUR e non IUV``
-
 Qualora l’Utilizzatore finale presenti al PSP una RPT contenente più
 pagamenti, ovvero presenti un “carrello” di richieste di pagamento
 telematico aventi più beneficiari, il PSP deve effettuare un unico
