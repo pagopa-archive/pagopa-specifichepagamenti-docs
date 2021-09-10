@@ -71,7 +71,7 @@ cliente o che esegue l’incasso per conto dell’EC può regolare
 contabilmente l’operazione in modalità singola o in modalità cumulativa,
 il che comporta per l’Ente Creditore due diverse modalità di
 riconciliazione.
-``[TBD chk SACI modalità singola ancora presente ? --> e' ancora presente ma facciamo come se fosse inesistente. il riconciliamento è gia descritto nei paragrafi precedenti]``
+
 
 Riconciliazione in modalità multipla
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
