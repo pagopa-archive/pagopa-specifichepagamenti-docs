@@ -2,14 +2,19 @@
 hide footbox
 autonumber 
 
-participant vpos  as "VPOS"
 participant nodo as "pagoPA"
 participant psp as "PSP"
+participant pg as "Payment Gateway"
 
+pagopa -> pagopa : Start Payment 
+pagopA <-> pg : execue transaction
+...
 
-nodo -> psp : req nodoInviaCarrelloRPT() / nodoInviaCarrelloRPTCarte ()
+nodo -> psp : req pspNotifyPayment ()
 psp -[#blue]-> nodo : resp OK
 
-psp -> nodo : req pspInviaRT
+pagopa -> pagopa : Close Payment
+
+psp -> nodo : req  pspSendPaymentOutcome()
 nodo -[#blue]-> psp : resp OK
 @enduml

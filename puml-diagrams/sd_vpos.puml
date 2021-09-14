@@ -7,9 +7,14 @@ participant psp as "PSP"
 nodo -> vpos : req prenotazione ( acquirer )
 vpos -[#blue]-> nodo : resp OK 
 
-nodo -> psp : req nodoInviaCarrelloRPT
+nodo -> psp : req pspNotifyPayment (idToken)
 psp -[#blue]-> nodo : resp OK
 
 nodo -> vpos : req contabilizzazione
 vpos -[#blue]-> : resp OK
+
+...
+
+psp -> nodo : req pspSendPaymentOutcome (idToken , OK)
+nodo -[#blue]-> psp: resp OK
 @enduml

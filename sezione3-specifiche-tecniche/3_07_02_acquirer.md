@@ -1,5 +1,7 @@
 ## Acquirer
 
+In questo paragrafo viene descritto come un PSP possa offrire all'interno della piattaforma pagoPA il pagamento tramite carta di credito.
+Il pagamento tramite carta di credito viene "centralizzato" all'interno della piattaforma, ovvero i dati carta dell'utente sono gestiti direttamente dalla piattaforma tramite la sua componente PCI DSS ( Payment Manager ). I PSP aderenti possono  
 Tramite la Piattaforma pagoPA è possibile offrire il pagamento tramite carta di credito/debito in due diverse modalità :
 
 1. configurandosi come acquirer all'interno del servizio VPOS offerto da SIA S.p.A.
@@ -31,10 +33,14 @@ L'operazione di pagamento avviene in due fasi :
 
 ![sd_vpos.puml](../diagrams/sd_vpos.png) 
 
-1. Avvenuta la selezione dell'acquirer, la piattaforma richiedere verifica la disponibilità dell'import verso l'acquirer tramite il VPOS.
+1. Avvenuta la selezione dell'acquirer, la piattaforma richiedere verifica la disponibilità dell'import verso l'acquirer tramite il VPOS. 
 2. Il VPOS restituisce l'esito dell'operazione.
-3. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato l'operazione avvenuta presso l'acquirer.
-4. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme.
+3. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato l'operazione avvenuta presso l'acquirer. 
+4. All'interno del campo `creditCard` sono racchiusi i codici identificativi e la risposta ottenuta dal VPOS in modo tale che il PSP possa verificare l'operazione di pagamento.
+5. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme.
+6. 
+7. Successivamente, entro 2sec , il PSP notifica la conclusione del pagamento impegnandosi ad effettuare l'accredito sui conti correnti ricevuti al punto `3`.
+8. la piattaorma registra la chiusura del pagamento, ed invierà ricevuta dell'operazione agli Enti Beneficiari.
 
 Nel caso in cui il PSP rifiuti l'operazione avvenuta, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
 
