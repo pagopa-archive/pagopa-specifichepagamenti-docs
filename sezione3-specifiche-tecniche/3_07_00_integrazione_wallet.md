@@ -29,3 +29,9 @@ Indipendentemente dal tipo di servizio integrato e dalla modalità di integrazio
 7. la piattaforma notifica la ricezione della ricevuta all'EC.
 
 Successivamente il PSP riverserà le somme verso i conti correnti indicati in modalità cumulativa. 
+
+
+### Primitiva pspInviaCarrelloRPTCarte deprecata
+
+il processo di pagamento attraverso la `pspInviaCarrelloRPTCarte` è deprecato, a partire dal 1-Nov 2021 non sarà più possibile integrare nuovi PSP che utilizzino tale primitiva. 
+Per i PSP attualmente integrati la primitiva sarà disponibile fino al 01/06/2022. Nuove funzionalità saranno disponibili solo ed esclusivamente sul nuovo flusso di pagamento.
