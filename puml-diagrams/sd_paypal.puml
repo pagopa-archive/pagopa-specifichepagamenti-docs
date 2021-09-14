@@ -1,0 +1,26 @@
+@startuml
+autonumber
+participant user as "User"
+participant pm as "pagoPA"
+participant psp as "PSP \n (Paytipper)"
+
+note over pm : Screen: \nAggiungi metodo \npagamenti digitali
+user -> pm : select "Paypal"
+
+pm -> pm : select PSP 
+
+note over pm : Screen :\n Intro_PayPal
+
+user -> pm : Continua
+
+pm -> psp : pp_onboarding_be (return_url)
+psp -[#blue]-> pm : resp OK (onboardingSessionUrl)
+pm -[#green]-> psp : redirect onBoardingSessionUrl
+
+user -> psp : login ed altro
+
+psp -[#green]-> pm : redirect return_url?esito=OK&pspToken=XXXX&idUser=YYYYY&mail=ms.***@gmail.com
+pm -> pm : addWallet
+
+note over pm : Screen\nThankyou Page esito OK
+@enduml

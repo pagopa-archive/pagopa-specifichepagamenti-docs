@@ -1,0 +1,17 @@
+@startuml
+autonumber 
+participant nodo as "pagoPA"
+participant psp as "PSP"
+
+nodo -> psp : req pp_pay(pspToken, idTokenPagamento)
+psp -[#blue]-> nodo : resp OK 
+
+nodo -> psp : req pspNotifyPayment (idToken)
+psp -[#blue]-> nodo : resp OK
+
+
+...
+
+psp -> nodo : req pspSendPaymentOutcome (idToken , OK)
+nodo -[#blue]-> psp: resp OK
+@enduml
