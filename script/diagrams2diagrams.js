@@ -13,7 +13,7 @@ var fs = require("fs-extra");
 
 
 // test _docs/diagrams 
-if (fs.existsSync(__docsDir)) {
+if (!fs.existsSync(__docsDir)) {
   fs.mkdirSync(__docsDir)
 }
 
