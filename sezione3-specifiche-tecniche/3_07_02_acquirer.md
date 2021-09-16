@@ -1,48 +1,54 @@
-## Acquirer
+## PSP che fungono anche da Acquirer su touch point di PagoPA S.p.A.
 
-In questo paragrafo viene descritto come un PSP possa offrire all'interno della piattaforma pagoPA il pagamento tramite carta di credito.
-Il pagamento tramite carta di credito viene "centralizzato" all'interno della piattaforma, ovvero i dati carta dell'utente sono gestiti direttamente dalla piattaforma tramite la sua componente PCI DSS ( Payment Manager ). I PSP aderenti possono  
-Tramite la Piattaforma pagoPA è possibile offrire il pagamento tramite carta di credito/debito in due diverse modalità :
+In questo paragrafo viene descritto come un PSP possa offrire all'interno della piattaforma pagoPA il pagamento tramite strumenti di pagamento digitali (carta di credito o debito, conto corrente, digital wallet) attraverso i touch point gestiti direttamente dalla piattaforma.
+Il pagamento tramite strumenti di pagamento digitali sui touch point gestiti da PagoPA S.p.A. viene "centralizzato" all'interno della piattaforma, ovvero i dati dello strumento sono gestiti direttamente dalla piattaforma tramite la sua componente PCI DSS (Payment Manager).
 
-1. configurandosi come acquirer all'interno del servizio VPOS offerto da SIA S.p.A.
-2. integrando un proprio _payment gateway_ con la Piattaforma pagoPA
+Un PSP che volesse esser anche Acquirer può integrarsi con la Piattaforma pagoPA in due diverse modalità :
 
-In entrambi gli scenari , il processo di pagamento è descritto dal diagramma seguente
+1. configurandosi come merchant sulle piattaforme di virtual POS:
+    - Xpay offerto da Nexi S.p.A.
+    - VPOS offerto da SIA S.p.A.
+2. integrando un proprio _payment gateway_ direttente con la Piattaforma Payment Manager di PagoPA S.p.A.
 
-1. L'utente inserisce i dati carta all'interno della Piattaforma pagoPA
+Per entrambe le opzioni la user experience del pagatore si può dividere fra:
+1. utente guest: il pagatore inserisce ex novo i dati del proprio strumento di pagamento digitale e procede con il pagamento
+2. utente registrato: utilizzando SPID o CIE accede ai touch point e memorizza il proprio strumento (se le peculiarità lo permettono) per poi esser utilizzato nei successivi pagamenti minimizzando le interazioni, l'inserimento dati del pagatore e gestendo la transazione nel modo più frictionless possibile. 
+
+
+In entrambi gli scenari, il processo di pagamento è descritto sinteticamente in questi punti:
+
+1. L'utente scelglie o inserisce ex novo i dati dello strumento di pagamento utilizzando le interfacce dei touch point PagoPA
 2. la piattaforma seleziona il servizio di acquiring secondo il seguente principio :
    1. Viene selezionato il servizio di pagamento del PSP Issuer della carta emessa. 
    2. Viene selezionato il servizio di pagamento del PSP (che gestisce il circuito di appartenenza della carta) che rappresenta il costo di commissione più basso per l'operazione in corso
 3. L'utente ha SEMPRE la possibilità di modificare la selezione proposta dalla piattaforma.
 4. Viene mostrata una pagina di riepilogo del pagamento
 5. Alla conferma dell'operazione viene effettuato il pagamento nelle modalità di integrazione del canale selezionato.
-aaaaaaaaaa
-## Acquirer su VPOS
 
-In questo scenario, il pagamento avviene attraverso il servizio VPOS. 
+## Integrazione e workflow per PSP/acqruier integrato con Virtual POS
+
 E' necessario configurare 2 negozi (3DS 2.0):
 
 - canale con obbligatorietà del codice di controllo della carta (CVC), utilizzato per on-boarding della carta.
 - canale senza obbligatorietà del codice di controllo della carta (CVC), per pagamenti di utenti registrati.
 
-Come da direttiva PSD2, durante ogni pagamento sarà responsabilità dell'Issuer richiedere (o meno) il codice di autorizzazione per procedere con il pagamento.
-L'operazione di pagamento avviene in due fasi :
+Come da direttiva PSD2, durante ogni pagamento sarà responsabilità dell'Issuer richiedere (o meno) il codice di autorizzazione (SCA) per procedere con la memorizzazione dello strumento o il pagamento con lo stesso.
 
-- prenotazione del credito
+L'operazione di pagamento avviene in due fasi :
+- autorizzazione
 - contabilizzazione
 
 ![sd_vpos.puml](../diagrams/sd_vpos.png) 
 
-1. Avvenuta la selezione dell'acquirer, la piattaforma richiedere verifica la disponibilità dell'import verso l'acquirer tramite il VPOS. 
-2. Il VPOS restituisce l'esito dell'operazione.
-3. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato l'operazione avvenuta presso l'acquirer. 
-4. All'interno del campo `creditCardPayment` sono racchiusi i codici identificativi e la risposta ottenuta dal VPOS in modo tale che il PSP possa verificare l'operazione di pagamento.
-5. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme.
-6. 
-7. Successivamente, entro 2sec , il PSP notifica la conclusione del pagamento impegnandosi ad effettuare l'accredito sui conti correnti ricevuti al punto `3`.
-8. la piattaorma registra la chiusura del pagamento, ed invierà ricevuta dell'operazione agli Enti Beneficiari.
+1. Avvenuta la selezione dell'acquirer, la piattaforma verifica la disponibilità dell'importo verso l'acquirer tramite il virtual POS. 
+2. Il Virtual POS restituisce l'esito dell'autorizzazione.
+3. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato che l'autorizzazione è avvenuta con successo, utilizzando la primitiva notifyPayment
+    1. All'interno del campo `creditCardPayment` sono racchiusi i codici identificativi e la risposta ottenuta dal Virtual POS in modo tale che il PSP possa verificare l'operazione di pagamento.
+4. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme. 
+5. Successivamente, entro 2sec , il PSP notifica la conclusione del pagamento impegnandosi ad effettuare l'accredito sui conti correnti ricevuti al punto `3`, utilizzando la chiamata sendPaymentOutcome.
+6. la piattaorma registra la chiusura del pagamento, ed invierà ricevuta dell'operazione agli Enti Beneficiari.
 
-Nel caso in cui il PSP rifiuti l'operazione avvenuta, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
+Nel caso in cui (punto 4) il PSP non risponda con esito positivo alla chiamata di notify l'operazione avvenuta, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
 
 ## Payment Gateway
 
