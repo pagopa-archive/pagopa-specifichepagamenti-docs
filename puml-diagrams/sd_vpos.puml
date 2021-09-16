@@ -15,6 +15,6 @@ vpos -[#blue]-> : resp OK
 
 ...
 
-psp -> nodo : req pspSendPaymentOutcome (idToken , OK)
+psp -> nodo : req sendPaymentOutcome (idToken , OK)
 nodo -[#blue]-> psp: resp OK
 @enduml

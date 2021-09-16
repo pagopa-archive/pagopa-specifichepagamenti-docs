@@ -36,7 +36,7 @@ L'operazione di pagamento avviene in due fasi :
 1. Avvenuta la selezione dell'acquirer, la piattaforma richiedere verifica la disponibilità dell'import verso l'acquirer tramite il VPOS. 
 2. Il VPOS restituisce l'esito dell'operazione.
 3. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato l'operazione avvenuta presso l'acquirer. 
-4. All'interno del campo `creditCard` sono racchiusi i codici identificativi e la risposta ottenuta dal VPOS in modo tale che il PSP possa verificare l'operazione di pagamento.
+4. All'interno del campo `creditCardPayment` sono racchiusi i codici identificativi e la risposta ottenuta dal VPOS in modo tale che il PSP possa verificare l'operazione di pagamento.
 5. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme.
 6. 
 7. Successivamente, entro 2sec , il PSP notifica la conclusione del pagamento impegnandosi ad effettuare l'accredito sui conti correnti ricevuti al punto `3`.
