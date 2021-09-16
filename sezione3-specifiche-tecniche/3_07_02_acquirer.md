@@ -16,7 +16,7 @@ In entrambi gli scenari , il processo di pagamento è descritto dal diagramma se
 3. L'utente ha SEMPRE la possibilità di modificare la selezione proposta dalla piattaforma.
 4. Viene mostrata una pagina di riepilogo del pagamento
 5. Alla conferma dell'operazione viene effettuato il pagamento nelle modalità di integrazione del canale selezionato.
-
+aaaaaaaaaa
 ## Acquirer su VPOS
 
 In questo scenario, il pagamento avviene attraverso il servizio VPOS. 
