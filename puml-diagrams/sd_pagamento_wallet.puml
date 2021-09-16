@@ -1,20 +1,20 @@
 @startuml
 hide footbox
-autonumber 
+autonumber
 
 participant nodo as "pagoPA"
 participant psp as "PSP"
 participant pg as "Payment Gateway"
 
-pagopa -> pagopa : Start Payment 
-pagopA <-> pg : execue transaction
+nodo -> nodo : Start Payment
+nodo <-> pg : execute transaction
 ...
 
 nodo -> psp : req pspNotifyPayment ()
 psp -[#blue]-> nodo : resp OK
 
-pagopa -> pagopa : Close Payment
+nodo -> nodo : Close Payment
 
-psp -> nodo : req  pspSendPaymentOutcome()
+psp -> nodo : req sendPaymentOutcome()
 nodo -[#blue]-> psp : resp OK
 @enduml
