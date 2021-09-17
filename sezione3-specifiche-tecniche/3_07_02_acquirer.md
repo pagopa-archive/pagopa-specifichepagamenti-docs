@@ -35,24 +35,24 @@ E' necessario configurare 2 negozi (3DS 2.0):
 
 Come da direttiva PSD2, durante ogni pagamento sarà responsabilità dell'Issuer richiedere il codice di autorizzazione (SCA) per procedere con le operazioni (memorizzazione dello strumento o pagamento).
 
-L'operazione di pagamento avviene in due fasi :
+L'operazione di pagamento avviene in due fasi:
 
 - autorizzazione
 - contabilizzazione
 
 ![sd_acquirer.puml](../diagrams/sd_acquirer.png) 
 
-1. Avvenuta la selezione dell'acquirer, il pagatore innesca l'azione del client
-2. la piattaforma verifica la disponibilità dell'importo verso l'acquirer tramite una chiamata al payment Gateway/ Virtual POS. 
-3. Il Virtual POS restituisce l'esito dell'autorizzazione.
-4. il Payment Manager allinea la compoente nodo
-5. Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato che l'autorizzazione è avvenuta con successo, utilizzando la primitiva notifyPayment
-    1. All'interno del campo `creditCardPayment` sono racchiusi i codici identificativi e la risposta ottenuta dal Virtual POS in modo tale che il PSP possa verificare l'operazione di pagamento.
-6. In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme. 
-7. Successivamente, entro 2sec , il PSP notifica la conclusione del pagamento impegnandosi ad effettuare l'accredito sui conti correnti ricevuti al punto `3`, utilizzando la chiamata 'sendPaymentOutcome'.
-8. la piattaorma registra la chiusura del pagamento, ed invierà ricevuta dell'operazione agli Enti Beneficiari.
+- Avvenuta la selezione dell'acquirer, il pagatore innesca l'azione del client
+- La piattaforma verifica la disponibilità dell'importo verso l'acquirer tramite una chiamata al payment Gateway / Virtual POS. 
+- Il Virtual POS restituisce l'esito dell'autorizzazione.
+- Il Payment Manager allinea la componente Nodo
+- Nel caso di risposta positiva, la piattaforma notifica al PSP associato all'acquirer selezionato che l'autorizzazione è avvenuta con successo, utilizzando la primitiva `pspNotifyPayment`
+    - All'interno del campo `creditCardPayment` sono racchiusi i codici identificativi e la risposta ottenuta dal Virtual POS in modo tale che il PSP possa verificare l'operazione di pagamento.
+- In caso di esito positivo, la piattaforma esegue l'operazione di contabilizzazione delle somme. 
+- Successivamente, entro 2sec , il PSP notifica la conclusione del pagamento impegnandosi ad effettuare l'accredito sui conti correnti ricevuti sopra, utilizzando la chiamata `sendPaymentOutcome`.
+- La piattaforma registra la chiusura del pagamento, ed invierà ricevuta dell'operazione agli Enti Beneficiari.
 
-Nel caso in cui (punto ) il PSP non risponda con esito positivo alla chiamata di notify l'operazione avvenuta, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
+Nel caso in cui il PSP non risponda con esito positivo alla chiamata `pspNotifyPayment`, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
 
 ### Payment Gateway
 
