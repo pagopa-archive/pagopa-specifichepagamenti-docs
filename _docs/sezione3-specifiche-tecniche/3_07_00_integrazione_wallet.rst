@@ -16,7 +16,7 @@ della piattaforma pagoPA. Distiguiamo due modalità di integrazione :
    l’autenticazione a priori dell’utente tramite SPID o CIE. In tale
    scenario l’utente potrà inserire il metodo di pagamento all’interno
    del proprio wallet ( validandone la titolarità ) e successivamente
-   utilizzarlo durante le operazione di pagamento. Rientratno in tale
+   utilizzarlo durante le operazione di pagamento. Rientrano in tale
    categoria :
 
    -  Pagamenti con carte
@@ -30,25 +30,24 @@ modo:
    avviso o tramite altra modalità.
 2. la piattaforma colloquia con il servizio predisposto dal PSP per
    l’esecuzione della transazione ( ogni integrazione avrà proprie
-   modalità, descritte nelle apposite pagine a seguire ). i fondi
+   modalità, descritte nelle apposite pagine a seguire ). I fondi
    vengono trasferiti su un conto tecnico del PSP stesso.
 3. la piattaforma notifica al PSP la transazione eseguita e le modalità
    di riversamento
 4. il PSP verifica le informazioni ed accetta le richieste pervenute.
 5. la piattaforma conclude il pagamento dandone evidenza all’utente.
-6. il PSP notifica la conclusione del pagamento emettendo una ricevuta
-   dell’operazione.
+6. il PSP notifica la conclusione del pagamento emettendo una ricevuta.
 7. la piattaforma notifica la ricezione della ricevuta all’EC.
 
 Successivamente il PSP riverserà le somme verso i conti correnti
 indicati in modalità cumulativa.
 
-Primitiva pspInviaCarrelloRPTCarte deprecata
+Primitiva pspInviaCarrelloRPTCarte DEPRECATA
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-il processo di pagamento attraverso la ``pspInviaCarrelloRPTCarte`` è
-deprecato, a partire dal 1-Nov 2021 non sarà più possibile integrare
-nuovi PSP che utilizzino tale primitiva. Per i PSP attualmente integrati
-la primitiva sarà disponibile fino al 01/06/2022. Nuove funzionalità
-saranno disponibili solo ed esclusivamente sul nuovo flusso di pagamento
-descritto nel secondo paragrafo di questo capitolo.
+Il processo di pagamento attraverso la ``pspInviaCarrelloRPTCarte`` è
+deprecato, a partire dal 01/11/2021 non sarà più possibile integrare
+nuovi PSP che utilizzino tale primitiva. Per i PSP attualmente
+integrati, la primitiva sarà disponibile fino al 01/06/2022. Nuove
+funzionalità saranno disponibili solo ed esclusivamente sul nuovo flusso
+di pagamento.
