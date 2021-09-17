@@ -1,15 +1,20 @@
 @startuml
 hide footbox
-autonumber 
+autonumber
 
-participant vpos  as "VPOS"
 participant nodo as "pagoPA"
 participant psp as "PSP"
+participant pg as "Payment Gateway"
 
+nodo -> nodo : Start Payment
+nodo <-> pg : execute transaction
+...
 
-nodo -> psp : req nodoInviaCarrelloRPT() / nodoInviaCarrelloRPTCarte ()
+nodo -> psp : req pspNotifyPayment ()
 psp -[#blue]-> nodo : resp OK
 
-psp -> nodo : req pspInviaRT
+nodo -> nodo : Close Payment
+
+psp -> nodo : req sendPaymentOutcome()
 nodo -[#blue]-> psp : resp OK
 @enduml

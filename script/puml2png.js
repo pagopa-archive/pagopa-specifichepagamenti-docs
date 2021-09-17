@@ -8,9 +8,6 @@ const directoryPath = path.join(__rootDir, 'puml-diagrams');
 // const outDirectoryPath = path.join(__rootDir, '_docs','diagrams');
 const outDirectoryPathMD = path.join(__rootDir,'diagrams');
 
-if (!fs.existsSync(outDirectoryPath)) {
-    fs.mkdirSync(outDirectoryPath,{recursive:true});
-}
 
 
 //passsing directoryPath and callback function

@@ -37,12 +37,12 @@ computano i voti spettanti per conto di terzi. Sono considerate
 collegate le società sulle quali un’altra società esercita un’influenza
 notevole. L’influenza si presume quando nell’assemblea ordinaria può
 essere esercitato almeno un quinto dei voti ovvero un decimo se la
-società ha azioni quotate in borsa“. Infine, all’articolo 2 del D.Lgs.
-n. 175/2016 è ulteriormente precisato che”Il controllo può sussistere
+società ha azioni quotate in borsa”. Infine, all’articolo 2 del D.Lgs.
+n. 175/2016 è ulteriormente precisato che “Il controllo può sussistere
 anche quando, in applicazione di norme di legge o statutarie o di patti
 parasociali, per le decisioni finanziarie e gestionali strategiche
 relative all’attività sociale è richiesto il consenso unanime di tutte
-le parti che condividono il controllo".
+le parti che condividono il controllo”.
 
 Infine, si precisa che i soggetti obbligati all’utilizzo di pagoPA,
 siano essi PA o gestori di pubblici servizi o società a controllo
