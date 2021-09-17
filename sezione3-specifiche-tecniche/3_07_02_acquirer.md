@@ -50,7 +50,7 @@ L'operazione di pagamento avviene in due fasi :
 7. Successivamente, entro 2sec , il PSP notifica la conclusione del pagamento impegnandosi ad effettuare l'accredito sui conti correnti ricevuti al punto `3`, utilizzando la chiamata 'sendPaymentOutcome'.
 8. la piattaorma registra la chiusura del pagamento, ed invierà ricevuta dell'operazione agli Enti Beneficiari.
 
-Nel caso in cui (punto 5) il PSP non risponda con esito positivo alla chiamata di notify l'operazione avvenuta, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
+Nel caso in cui (punto ) il PSP non risponda con esito positivo alla chiamata di notify l'operazione avvenuta, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
 
 ## Payment Gateway
 
