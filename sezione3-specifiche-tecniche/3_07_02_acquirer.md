@@ -3,42 +3,44 @@
 In questo paragrafo viene descritto come un PSP possa offrire all'interno della piattaforma pagoPA il pagamento tramite strumenti di pagamento digitali (carta di credito o debito, conto corrente, digital wallet) attraverso i touch point gestiti direttamente dalla piattaforma.
 Il pagamento tramite strumenti di pagamento digitali sui touch point gestiti da PagoPA S.p.A. viene "centralizzato" all'interno della piattaforma, ovvero i dati dello strumento sono gestiti direttamente dalla piattaforma tramite la sua componente PCI DSS (Payment Manager).
 
-Un PSP che volesse esser anche Acquirer può integrarsi con la Piattaforma pagoPA in due diverse modalità :
+Un PSP che volesse esser anche Acquirer può integrarsi con la Piattaforma pagoPA in due diverse modalità:
 
 1. configurandosi come merchant sulle piattaforme di virtual POS:
     - Xpay offerto da Nexi S.p.A.
     - VPOS offerto da SIA S.p.A.
-2. integrando un proprio _payment gateway_ direttente con la Piattaforma Payment Manager di PagoPA S.p.A.
+2. integrando un proprio _payment gateway_ direttamente con la componente Payment Manager di PagoPA S.p.A.
 
-Per entrambe le opzioni la user experience del pagatore si può dividere fra:
-1. utente guest: il pagatore inserisce ex novo i dati del proprio strumento di pagamento digitale e procede con il pagamento
-2. utente registrato: utilizzando SPID o CIE accede ai touch point e memorizza il proprio strumento (se le peculiarità lo permettono) per poi esser utilizzato nei successivi pagamenti minimizzando le interazioni, l'inserimento dati del pagatore e gestendo la transazione nel modo più frictionless possibile. 
+Per entrambe le opzioni la user experience del pagatore si divide fra:
+
+1. utente guest: il pagatore inserisce _ex novo_ i dati del proprio strumento di pagamento digitale e procede con il pagamento
+2. utente registrato: utilizzando SPID o CIE accede ai touch point e memorizza il proprio strumento (se le peculiarità lo permettono) per poi esser utilizzato nei successivi pagamenti minimizzando le interazioni, riducendo l'inserimento dati del pagatore e gestendo la transazione nel modo più _frictionless_ possibile. 
 
 
 In entrambi gli scenari, il processo di pagamento è descritto sinteticamente in questi punti:
 
-1. L'utente scelglie o inserisce ex novo i dati dello strumento di pagamento utilizzando le interfacce dei touch point PagoPA
-2. la piattaforma seleziona il servizio di acquiring secondo il seguente principio :
+1. L'utente sceglie o inserisce _ex novo_ i dati dello strumento di pagamento utilizzando le interfacce dei touch point PagoPA
+2. la piattaforma seleziona il servizio di acquiring secondo il seguente principio:
    1. Viene selezionato il servizio di pagamento del PSP Issuer della carta emessa. 
    2. Viene selezionato il servizio di pagamento del PSP (che gestisce il circuito di appartenenza della carta) che rappresenta il costo di commissione più basso per l'operazione in corso
 3. L'utente ha SEMPRE la possibilità di modificare la selezione proposta dalla piattaforma.
 4. Viene mostrata una pagina di riepilogo del pagamento
 5. Alla conferma dell'operazione viene effettuato il pagamento nelle modalità di integrazione del canale selezionato.
 
-## Integrazione e workflow per PSP/acqruier integrato con Virtual POS
+### Integrazione e workflow per PSP/Acquirer integrato con Virtual POS
 
 E' necessario configurare 2 negozi (3DS 2.0):
 
-- canale con obbligatorietà del codice di controllo della carta (CVC), utilizzato per on-boarding della carta.
-- canale senza obbligatorietà del codice di controllo della carta (CVC), per pagamenti di utenti registrati.
+- canale utilizzato per on-boarding della carta.
+- canale per pagamenti di utenti registrati.
 
-Come da direttiva PSD2, durante ogni pagamento sarà responsabilità dell'Issuer richiedere (o meno) il codice di autorizzazione (SCA) per procedere con la memorizzazione dello strumento o il pagamento con lo stesso.
+Come da direttiva PSD2, durante ogni pagamento sarà responsabilità dell'Issuer richiedere il codice di autorizzazione (SCA) per procedere con le operazioni (memorizzazione dello strumento o pagamento).
 
 L'operazione di pagamento avviene in due fasi :
+
 - autorizzazione
 - contabilizzazione
 
-![sd_vpos.puml](../diagrams/sd_acquirer.png) 
+![sd_acquirer.puml](../diagrams/sd_acquirer.png) 
 
 1. Avvenuta la selezione dell'acquirer, il pagatore innesca l'azione del client
 2. la piattaforma verifica la disponibilità dell'importo verso l'acquirer tramite una chiamata al payment Gateway/ Virtual POS. 
@@ -52,6 +54,6 @@ L'operazione di pagamento avviene in due fasi :
 
 Nel caso in cui (punto ) il PSP non risponda con esito positivo alla chiamata di notify l'operazione avvenuta, la piattaforma esegue la cancellazione dell'operazione e le somme impegnate ritorneranno in possesso dell'utente.
 
-## Payment Gateway
+### Payment Gateway
 
 In questo scenario PagoPA S.p.A. si rende disponibile ad un'integrazione specifica con il PSP secondo modi e tempi da concordare, che rifletta in ogni caso i flussi descritti nel precedente paragrafo per garantire una user experience uniforme.

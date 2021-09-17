@@ -1,4 +1,6 @@
-## Paypal
+## Paypal 
+
+![work in progress](../images/wip.png) 
 
 PayPal è una società statunitense che offre servizi di pagamento digitale; fondata nel 1999 oramai è sinonimo di pagamento facile e sicuro. Un qualsiasi utente medio che effettua pagamenti on-line conosce e/o possiede un account PayPal. 
 

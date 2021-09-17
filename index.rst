@@ -40,8 +40,9 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.3
 |            |               | Revisione delle opzioni di pagamento.    |
 |            |               | Precisazioni e chiarimenti sui FdR       |
 +------------+---------------+------------------------------------------+
-| 2.4.3      |settembre 2021 | Introduzione primativa notifyPayment per |
-|            |               | pagamenti da touchpoint PagoPA.          |
+| 2.4.3      |settembre 2021 | *pspInviaCarrelloRPTCarte* deprecata,    |
+|            |               | introduzione primativa *pspNotifyPayment*| 
+|            |               | per pagamenti da touchpoint PagoPA.      |
 +------------+---------------+------------------------------------------+
 
 
