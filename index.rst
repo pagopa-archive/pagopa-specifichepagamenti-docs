@@ -5,7 +5,7 @@
 .. image:: images/pagoPA.png 
 
 ##############################################################
-Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.2
+Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.3
 ##############################################################
 
 
@@ -39,6 +39,9 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.2
 |            |               | conti correnti postali.                  |
 |            |               | Revisione delle opzioni di pagamento.    |
 |            |               | Precisazioni e chiarimenti sui FdR       |
++------------+---------------+------------------------------------------+
+| 2.4.3      |settembre 2021 | Introduzione primativa notifyPayment per |
+|            |               | pagamenti da touchpoint PagoPA.          |
 +------------+---------------+------------------------------------------+
 
 
