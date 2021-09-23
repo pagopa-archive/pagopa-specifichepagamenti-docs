@@ -1,4 +1,4 @@
-# Introduzione alla versione 2.4.2
+# Introduzione
 
 Il sistema dei pagamenti elettronici a favore della Pubblica Amministrazione, il Sistema pagoPA, garantisce agli Utilizzatori finali di effettuare pagamenti elettronici alla Pubblica Amministrazione in modo sicuro e affidabile, semplice, in totale trasparenza nei costi di commissione e in funzione delle proprie esigenze.
 
@@ -45,5 +45,3 @@ A tal fine il documento è suddiviso nelle seguenti quattro sezioni principali:
 N.B. Si fa presente che i paragrafi per i quali è prevista una proposta evolutiva per la versione successiva delle Specifiche Attuative saranno contrassegnati dalla seguente dicitura:
 
 ![work-in-progress](../images/wip.png) **Paragrafo soggetto a proposta di modifica**
-
-La presente versione propone le modifiche introdotte con la soluzione per il Canone Unico oltre ad un primo insieme di chiarimenti relativi al nuovo modello di pagamento presso il PSP (c.d. multi-beneficiario). A tal proposito si ricorda che l'attuale modello di pagamento presso il PSP resta fruibile ed è ben documentato nella precedente versione delle SANP (2.3.0).

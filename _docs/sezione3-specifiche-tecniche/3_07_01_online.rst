@@ -2,8 +2,8 @@ Canale di pagamento on-line (WFESP)
 ===================================
 
 Nel presente paragrafo viene dettagliato il processo di pagamento
-utilizzando un canale di pagamento on-line. Possiamo scomporre il
-processo in due macro-fasi :
+utilizzando un canale di pagamento on-line. Si tratta sempre di un
+pagamento *guest* Possiamo scomporre il processo in due macro-fasi :
 
 1. Selezione e Pagamento
 2. Gestione dell’esito

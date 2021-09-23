@@ -1,25 +1,53 @@
-Integrazione di un metodo nel wallet
-====================================
+Integrazione di uno strumento di pagamento
+==========================================
 
 Il presente capitolo descrive le molteplici possibilità di integrazione
-di un metodo di pagamento nel wallet. In particolare:
+di uno strumento di pagamento con la componente PCI (Payment Manager)
+della piattaforma pagoPA. Distiguiamo due modalità di integrazione :
 
--  Pagamenti con carte
--  Pagamenti tramite portali web (es. homeBanking)
--  MyBank (nel ruolo di Banca Seller)
--  BancomatPay
+-  integrazione *light*, ovvero un’integrazione dove non è necessaria
+   l’autenticazione a priori dell’utente. Rientrano in tale categoria :
 
-Indipendentemente dal tipo di servizio integrato, il processo di
-pagamento verso il PSP può essere ricondotto al seguente schema
+   -  Pagamenti tramite portali web (es. homeBanking)
+   -  MyBank (nel ruolo di Banca Seller)
+   -  BancomatPay
 
-.. figure:: ../diagrams/sd_pagamento_wallet.png
-   :alt: sd_pagamento_wallet
+-  integrazione *full*, ovvero un’integrazione che prevede
+   l’autenticazione a priori dell’utente tramite SPID o CIE. In tale
+   scenario l’utente potrà inserire il metodo di pagamento all’interno
+   del proprio wallet ( validandone la titolarità ) e successivamente
+   utilizzarlo durante le operazione di pagamento. Rientrano in tale
+   categoria :
 
-   sd_pagamento_wallet
+   -  Pagamenti con carte
+   -  Paypal
 
-1. la piattaforma notifica al PSP un insieme di richieste di pagamento.
-   La primitiva utilizzata può dipendere dal tipo di integrazione.
-2. il PSP verifica le informazioni ed accetta le richieste pervenute.
-3. il PSP notifica la conclusione del pagamento emettendo una ricevuta
-   dell’operazione.
-4. la piattaforma notifica la ricezione della ricevuta.
+Indipendentemente dal tipo di servizio integrato e dalla modalità di
+integrazione, il processo di pagamento può essere sintetizzato in questo
+modo:
+
+1. la piattaforma inizia il pagamento, innescata dalla lettura di un
+   avviso o tramite altra modalità.
+2. la piattaforma colloquia con il servizio predisposto dal PSP per
+   l’esecuzione della transazione ( ogni integrazione avrà proprie
+   modalità, descritte nelle apposite pagine a seguire ). I fondi
+   vengono trasferiti su un conto tecnico del PSP stesso.
+3. la piattaforma notifica al PSP la transazione eseguita e le modalità
+   di riversamento
+4. il PSP verifica le informazioni ed accetta le richieste pervenute.
+5. la piattaforma conclude il pagamento dandone evidenza all’utente.
+6. il PSP notifica la conclusione del pagamento emettendo una ricevuta.
+7. la piattaforma notifica la ricezione della ricevuta all’EC.
+
+Successivamente il PSP riverserà le somme verso i conti correnti
+indicati in modalità cumulativa.
+
+Primitiva pspInviaCarrelloRPTCarte DEPRECATA
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Il processo di pagamento attraverso la ``pspInviaCarrelloRPTCarte`` è
+deprecato, a partire dal 01/11/2021 non sarà più possibile integrare
+nuovi PSP che utilizzino tale primitiva. Per i PSP attualmente
+integrati, la primitiva sarà disponibile fino al 01/06/2022. Nuove
+funzionalità saranno disponibili solo ed esclusivamente sul nuovo flusso
+di pagamento.

@@ -10,7 +10,6 @@ const outDirectoryPathMD = path.join(__rootDir,'diagrams');
 
 
 
-
 //passsing directoryPath and callback function
 fs.readdir(directoryPath, function (err, files) {
     //handling error
