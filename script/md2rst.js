@@ -1,6 +1,7 @@
 var pandoc = require('node-pandoc')
 const path = require('path');
 const fs = require('fs');
+const fs_extra = require("fs-extra");
 const  __rootDir = path.dirname(__dirname,'..');
 const stdArgs ='-f markdown -t rst';
 
@@ -39,10 +40,29 @@ var processChapter =  function (chapter){
 		markdownFiles = files.filter(function(e){
 		return path.extname(e).toLowerCase() === '.md'
 	})
+	    
+	    rstFiles = files.filter(function(e){
+			return path.extname(e).toLowerCase() === '.rst'
+		})
 	
 	markdownFiles.forEach(function(files){
 		// process each markdown file found
 		processDocument(chapter,files);
+	});
+
+
+// move index files
+	rstFiles.forEach( function(files){
+		outDirectoryPath = path.join(__rootDir, '_docs',chapter,files);
+		inputFile = path.join(__rootDir,chapter,files);
+		fs.copyFile(inputFile,outDirectoryPath,(err)=>{
+			if(err) {
+				console.log('index failed',err)
+			}
+			else {
+				console.log('index success copied!')
+			}
+		})
 	});
 	})
 } 
@@ -51,6 +71,12 @@ var processChapter =  function (chapter){
 asyncForEach (docChapters,chapter=>{
 
 	console.log('chapter: ',chapter);
+	// if chpater doesn't exist , create it
+    chapter_dirpath = path.join(__rootDir, '_docs',chapter);  
+	if ( !fs.existsSync(chapter_dirpath) ) {
+		fs.mkdirSync(chapter_dirpath)
+	}
+	// create rst file within chapter
 	 processChapter(chapter);
 })
 

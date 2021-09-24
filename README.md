@@ -32,6 +32,8 @@ La cartella `puml-diagrams` contiene tutti gli schemi UML in formato [PlantUML](
 
 `$ install pandoc brew install pandoc`
 
+`$ brew install plantuml`
+
 ## Come aggiornare la documentazione
 
 Per modificare la documentazione, è sufficiente eseguire [commit](https://github.com/git-guides/git-commit) sul relativo capitolo inserendo un messaggio esplicativo della modifica ed eventualmente facendo riferimento ad un [issue](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/creating-an-issue).

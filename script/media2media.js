@@ -11,6 +11,12 @@ console.log('src: ',__imagesDir);
 console.log('dst: ',__docsDir);
 var fs = require("fs-extra");
 
+
+// test _docs/images
+if (!fs.existsSync(__docsDir)) {
+  fs.mkdirSync(__docsDir)
+}
+
 // Async with promises:
 fs.copy(__imagesDir, __docsDir)
   .then(() => console.log('success!'))
