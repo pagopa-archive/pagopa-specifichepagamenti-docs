@@ -1,6 +1,6 @@
 # pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC
 
-![pagoPA](_docs/media/pagoPA.png)
+![pagoPA](_docs/images/pagoPA.png)
 
 - [pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC](#pagopa-specifiche-attuative-del-nodo-dei-pagamenti-spc)
   - [install](#install)
@@ -61,9 +61,7 @@ Un qualsiasi ramo di progetto può essere pubblicato tramite  [Read The Docs](ht
 
 Creare una segnalazione in `Github` è molto semplice e può essere fatto all'interno del proprio account Github (se non si dispone di un account è possibile crearlo [da qui](https://github.com)).
 
-Una volta registratisi, è possibile aggiungere una nuova segnalazione con il pulsante in verde "New issue":
-
-![new-issue](_docs/media/newissue.png)
+Una volta registratisi, è possibile aggiungere una nuova segnalazione con il pulsante in verde ["New issue"](https://github.com/pagopa/pagopa-specifichepagamenti-docs/issues).
 
 **IMPORTANTE** - per favore, si prega di **non inserire segnalazioni riguardanti pagamenti**. Evitare, per esempio, qualsiasi riferimenti a nome, cognome, codice fiscale, etc. Inoltre, **non inserire nessun dato relativo a configurazioni di sicurezza, quali certificati o password.**
 
