@@ -48,7 +48,7 @@ Allora:
 * La Banca Seller istruirà un pagamento tramite MyBank alla Banca Buyer pari a `P+X`
 * La Banca Buyer mostrerà all’utente il _costo totale dell’operazione_, pari a `P+(X+Y)`
 * La Banca Buyer eseguirà un bonifico pari a `P+X` verso un conto tecnico della Banca Seller
-* La Banca Seller eseguirà un bonifico pari a `P` verso l’EC (eventualmente cumulativo)
+* La Banca Seller eseguirà un bonifico pari a `P` verso l’EC
 
 ### Redirect HTTP dal WISP al servizio Banca Seller 
 
