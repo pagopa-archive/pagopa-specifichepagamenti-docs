@@ -5,8 +5,6 @@ Inoltre, a fronte di un pagamento avvenuto in data D, il PSP in data D+2 deve in
 
 Il Flusso di Rendicontazione rappresenta il dettaglio dei pagamenti contenuti all'interno del medesimo SCT identificato (per mezzo del campo AT-05) con l'identificativo del flusso di rendicontazione.
 
-Nel dettaglio, ogni FdR collezione i singoli versamenti identificati come illustrato nel seguito.
-
 ## Pagamento tramite PSP
 
 Nel caso di un pagamento effettuato direttamente tramite i servizi del PSP (si veda Sez-III "Pagamento di un Avviso"), a fronte di un addebito eseguito dal PSP, descritto dalla primitiva `sendPaymentOutcome`, nel corrispondente Flusso di Rendicontazione il campo `datiSingoloPagamento` viene così composto:

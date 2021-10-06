@@ -1,11 +1,8 @@
 
-
-
-
 .. image:: images/pagoPA.png 
 
 ##############################################################
-Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.3
+Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.5.0
 ##############################################################
 
 
@@ -44,7 +41,8 @@ Specifiche Attuative del Nodo dei Pagamenti-SPC versione 2.4.3
 |            |               | introduzione primativa *pspNotifyPayment*| 
 |            |               | per pagamenti da touchpoint PagoPA.      |
 +------------+---------------+------------------------------------------+
-
+| 2.5.0.     | ottobre 2021  | Precisazioni sui riversamenti cumulativi | 
++------------+---------------+------------------------------------------+
 
 .. toctree::
    :numbered:
