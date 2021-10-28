@@ -97,7 +97,6 @@ Allora:
 -  La Banca Buyer eseguirà un bonifico pari a ``P+X`` verso un conto
    tecnico della Banca Seller
 -  La Banca Seller eseguirà un bonifico pari a ``P`` verso l’EC
-   (eventualmente cumulativo)
 
 Redirect HTTP dal WISP al servizio Banca Seller
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -25,15 +25,13 @@ il campo *position-global-id* può assumere codifiche differenti.
 il contenuto di questo paragrafo rifrasa quanto già riportato senza
 alternarne il contenuto.
 
-aux-digit=1
------------
+**aux-digit=1**
 
 L’EC dispone di un’unica stazione, pertanto il *position-global-id*
 identifica in maniera univoca la Posizione Debitoria all’interno
 dell’EC.
 
-aux-digit 3
------------
+**aux-digit 3**
 
 L’EC dispone di diverse stazioni, l’identificazione della posizione
 debitoria è composta da:
@@ -49,8 +47,89 @@ debitoria è composta da:
    all’interno della stazione (iuv base).
 -  *check-digit*: codice di controllo del numero avviso.
 
-check-digit
-~~~~~~~~~~~
+**check-digit**
 
 Il check-digit viene calcolato come resto della divisione per 93 del
 numero ottenuto concatenando tutti i caratteri precedenti.
+
+Utilizzo del QR code sull’avviso di pagamento
+---------------------------------------------
+
+Il Codice QR (in inglese *QR Code*) è un codice a barre bidimensionale
+adottato da ISO (*ISO/IEC 18004:2015 Information technology - Automatic
+identification and data capture techniques - QR Code bar code symbology
+specification*) ed impiega to per memorizzare informazioni generalmente
+destinate ad essere lette tramite diversi dispositivi, tra cui anche
+smartphone, tablet, ATM, ecc.
+
+La stringa dati codificata all’interno del QR code è riportata nella
+tabella:
+
++---------------+-----+-------+-----+-----+---------------------------+
+| **Dato**      | *   | **Gen | *   | *   | **Contenuto**             |
+|               | *Li | ere** | *Oc | *Le |                           |
+|               | v** |       | c** | n** |                           |
++---------------+-----+-------+-----+-----+---------------------------+
+| Codice        | 1   | an    | 1   | 6   | Assume il valore fisso:   |
+| id            |     |       | ..1 |     | PAGOPA                    |
+| entificativo. |     |       |     |     |                           |
++---------------+-----+-------+-----+-----+---------------------------+
+| Separatore    | 1   | an    | 1   | 1   | Separatore di dati        |
+|               |     |       | ..1 |     |                           |
++---------------+-----+-------+-----+-----+---------------------------+
+| Versione.     | 1   | an    | 1   | 3   | Assume il valore fisso:   |
+|               |     |       | ..1 |     | 002                       |
++---------------+-----+-------+-----+-----+---------------------------+
+| Separatore    | 1   | an    | 1   | 1   | Separatore di dati        |
+|               |     |       | ..1 |     |                           |
++---------------+-----+-------+-----+-----+---------------------------+
+| Numero Avviso | 1   | an    | 1   | 18  | Contiene il Numero Avviso |
+|               |     |       | ..1 |     | composto dalla            |
+|               |     |       |     |     | concatenazione dei dati:  |
+|               |     |       |     |     | ``aux digit``,            |
+|               |     |       |     |     | ``application code``,     |
+|               |     |       |     |     | ``codice IUV``.           |
++---------------+-----+-------+-----+-----+---------------------------+
+| Separatore    | 1   | an    | 1   | 1   | Separatore di dati        |
+|               |     |       | ..1 |     |                           |
++---------------+-----+-------+-----+-----+---------------------------+
+| Ident         | 1   | an    | 1   | 11  | Codice fiscale dell’Ente  |
+| ificativoEnte |     |       | ..1 |     | Creditore                 |
++---------------+-----+-------+-----+-----+---------------------------+
+| Separatore    | 1   | an    | 1   | 1   | Separatore di dati        |
+|               |     |       | ..1 |     |                           |
++---------------+-----+-------+-----+-----+---------------------------+
+| Importo       | 1   | an    | 1   | 2.  | Importo del pagamento in  |
+|               |     |       | ..1 | .10 | centesimi di euro         |
++---------------+-----+-------+-----+-----+---------------------------+
+
+Stante quanto indicato nella tabella sopra riportata, la stringa di dati
+da codificare all’interno del QR Code potrebbe assumere la
+configurazione seguente:
+
+``PAGOPA|002|123456789012345678|12345678901|1234567801``
+
+(si tenga presente che la stringa sopra riportata presuppone
+l’inserimento dei dati previsti nella loro massima estensione)
+
+.. figure:: ../images/qrcode-sample.png
+   :alt: QRCode-sample
+
+   QRCode-sample
+
+Nella tabella sottostante sono riportate le caratteristiche tecniche che
+devono essere applicate nella generazione del QR Code:
+
++------------------------+-------------------------------+
+| **Caratteristica**     | **Valore da utilizzare**      |
++------------------------+-------------------------------+
+| Symbol Version         | 4                             |
++------------------------+-------------------------------+
+| Modules                | 33x33                         |
++------------------------+-------------------------------+
+| Modules width.         | 3 pixels                      |
++------------------------+-------------------------------+
+| ECC level              | M (correzione errore max 15%) |
++------------------------+-------------------------------+
+| Character set.         | UTF-8                         |
++------------------------+-------------------------------+

@@ -12,9 +12,6 @@ Il Flusso di Rendicontazione rappresenta il dettaglio dei pagamenti
 contenuti all’interno del medesimo SCT identificato (per mezzo del campo
 AT-05) con l’identificativo del flusso di rendicontazione.
 
-Nel dettaglio, ogni FdR collezione i singoli versamenti identificati
-come illustrato nel seguito.
-
 Pagamento tramite PSP
 ---------------------
 
