@@ -1,0 +1,16 @@
+@startuml Processo_EC
+
+participant EC
+participant pagoPA
+
+EC -> pagoPA: nodoChiediElencoFlussiRendicontazione req
+activate pagoPA
+pagoPA --> EC: nodoChiediElencoFlussiRendicontazione res (<color blue>elencoFlussiRendicontazione</color>)
+deactivate pagoPA
+...
+EC -> pagoPA: nodoChiediFlussoRendicontazione req (<color blue>identificativoFlusso</color>)
+activate pagoPA
+pagoPA --> EC: nodoChiediFlussoRendicontazione res
+deactivate pagoPA
+
+@enduml
