@@ -75,8 +75,8 @@ I possibili casi in cui non si ottiene una risposta positiva sono:
    sessioni di pagamento concorrenti per lo stesso avviso (**caso 2**)
 -  Se il PSP non ottiene risposta dalla piattaforma alla richiesta di
    attivazione della sessione, può avviare un processo di retry (**caso
-   3**). La chiamata ``activatePaymentNotice​`` è idempotente (prevede
-   il parametro opzionale ``idempotencyKey``), ovvero a fronte di
+   3**). La chiamata ``activatePaymentNotice​`` è idempotente (prevede il
+   parametro opzionale ``idempotencyKey``), ovvero a fronte di
    un’invocazione con la stessa chiave e gli stessi parametri di input
    la piattaforma risponderà con il medesimo output.
 

@@ -15,7 +15,8 @@ base al tipo di entrata richiesta.
 
 Con il termine “dati Specifici di riscossione” si fa riferimento al
 campo ``datiSpecificiRiscossione`` presente all’interno della struttura
-``datiSingoloVersamento`` della RPT.
+``datiSingoloVersamento`` della RPT, ovvero al campo
+``transferCategory`` (es: primitiva ``paSendRT``).
 
 **Osservazioni e Note**
 
@@ -26,14 +27,17 @@ campo ``datiSpecificiRiscossione`` presente all’interno della struttura
    utilizzato per il passaggio di informazioni, tali informazioni
    possono continuare a coesistere con il codice tassonomico rispettando
    il seguente formato che prevede un carattere separatore “/”:
-   ``<codice tassonomico>/<altre informazioni>``
+   ``<codice tassonomico>/<altre informazioni>`` (es: “9/0101002IM/”).
+   Mentre per il campo ``transferCategory``, non ricadendo in questo
+   caso, va valorizzato il solo codice tassonomico (es: “0101002IM”)
 -  Nel caso in cui vi sia una tipologia di incasso che ingloba al suo
    interno sia una percentuale a titolo di imposta che una percentuale a
    titolo di tassa, l’indicazione segue la tipologia *del tributo
    prevalente*.
 -  Dall’entrata a regime del nuovo Processo di pagamento presso il PSP
-   con Ente multi-beneficiario, sarà possibile indicare per ogni stringa
-   di RPT l’ulteriore dettaglio.
+   con Ente multi-beneficiario, si dovrà indicare per ogni stringa di
+   RPT l’ulteriore dettaglio, che deve essere inserito nel campo
+   ``transferCategory`` nella response alla primitiva ``paGetPayment``.
 
 **Inizio e fine validità & Codice versione della Tassonomia** Per ogni
 codice tassonomico vengono indicate anche il numero della versione, la
