@@ -33,5 +33,13 @@ di una o più posizioni debitorie (carrelli).
     corredata dall’esito dell’operazione. Per maggiori informazioni
     sulla configurazione della stazione, consultare la Sez-IV.
 9.  l’EC riceve inoltre una ricevuta telematica che descrive l’intera
-    operazione di pagamento.
+    operazione di pagamento
+
+    -  nel caso di pagamenti relativi a posizioni debitorie
+       multibeneficiario con intermediari differenti per mezzo della
+       primitiva ``paaInviaRT`` se Ente Primario o tramite la
+       ``paSendRT`` se Ente Secondario
+    -  per le altre tipologia di posizione debitoria sempre per mezzo
+       della primitiva ``paaInviaRT``
+
 10. l’EC comunica la ricezione della ricevuta.

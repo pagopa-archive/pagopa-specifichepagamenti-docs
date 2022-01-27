@@ -76,8 +76,8 @@ Il codice tassonomico identifica ogni singolo servizio incassato tramite
 i versamenti descritti all’interno della posizione debitoria. Tale
 codice è così composto:
 
--  *Tipo Ente Creditore*\ ​ (​due cifre):​ identifica la tipologia di
-   Ente titolare dell’incasso;
+-  *Tipo Ente Creditore*\ ​ (​due cifre):​ identifica la tipologia di Ente
+   titolare dell’incasso;
 -  *Numero progressivo macro-area* per Ente Creditore ​(due cifre):
    individua le singole macro-aree di aggregazione degli incassi;
 
@@ -90,8 +90,7 @@ codice è così composto:
    di incasso;
 
    -  Tipo servizio:​ tipologia di incasso;
-   -  Descrizione tipo servizio:​ descrizione dettagliata di ogni
-      dovuto;
+   -  Descrizione tipo servizio:​ descrizione dettagliata di ogni dovuto;
 
 -  *Motivo giuridico* della riscossione:
 

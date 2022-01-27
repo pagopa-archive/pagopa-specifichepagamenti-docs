@@ -48,8 +48,9 @@ Infine, si precisa che i soggetti obbligati all’utilizzo di pagoPA,
 siano essi PA o gestori di pubblici servizi o società a controllo
 pubblico, ove ricorrano tutti i requisiti (nessuno escluso) indicati
 nella lettera di esenzione, possono fare istanza alla PagoPA S.p.A. (via
-mail all’indirizzo ``helpdesk@pagopa.it``), inviando in allegato la
-lettera di esenzione debitamente compilata e sottoscritta digitalmente.
+mail all’indirizzo ``pagamenti@assistenza.pagopa.it``), inviando in
+allegato la lettera di esenzione debitamente compilata e sottoscritta
+digitalmente.
 
 I Prestatori di Servizi di Pagamento (PSP), come le banche, le poste,
 gli istituti di moneta elettronica, gli istituti di pagamento e ogni
@@ -68,8 +69,9 @@ disposizione da PagoPA S.p.A.
 Il processo di adesione di un soggetto in qualità di Ente Creditore
 prevede che:
 
--  L’Ente faccia richiesta alla casella di posta helpdesk@pagopa.it
-   delle credenziali di “primo accesso” per adesione;
+-  L’Ente faccia richiesta alla casella di posta
+   ``pagamenti@assistenza.pagopa.it`` delle credenziali di “primo
+   accesso” per adesione;
 -  Con le credenziali ricevute si esegue il primo accesso al Portale
    delle Adesioni e si nomina il Referente dei Pagamenti;
 -  Il Referente dei Pagamenti, con le credenziali nominali ricevute

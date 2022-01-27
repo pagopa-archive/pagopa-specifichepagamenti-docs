@@ -10,17 +10,20 @@ SACI.
 L’EC può recuperare i flussi di rendicontazione prodotti seguendo il
 seguente schema:
 
-.. figure:: ../diagrams/sd_ec_richiesta_flussi.png
+.. figure:: ../diagrams/sd_ec_richiesta_flussi_02.png
    :alt: sd_ec_richiesta_flussi
 
    sd_ec_richiesta_flussi
 
-1. l’EC richiede l’elenco dei flussi di rendicontazione disponibili
-2. la piattaforma restituisce l’elenco dei flussi di rendicontazione
+1. l’EC richiede l’elenco dei flussi di rendicontazione disponibili;
+2. la piattaforma restituisce l’elenco dei flussi di rendicontazione,
+   vengono sempre restituiti tutti i flussi disponibili sulla
+   piattaforma;
 3. l’EC richiede puntualmente ogni flusso di rendicontazione presente
-   all’interno della lista
-4. la piattaforma restituisce il flusso di rendicontazione ed elimina il
-   flusso dall’elenco dei flussi disponibili.
+   all’interno della lista in base al parametro
+   ``identificativoFlusso``;
+4. la piattaforma restituisce il flusso di rendicontazione più recente
+   per quell’\ ``identificativoFlusso``.
 
 Il Flusso di rendicontazione ottenuto descrive l’elenco dei pagamenti
 (*datiSingoloPagamento*) riversati, ognuno dei quali è associabile ad
