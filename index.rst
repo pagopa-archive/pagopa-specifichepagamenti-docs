@@ -1,1 +1,1 @@
-La versione più recente delle Specifiche Attuative del Nodo dei Pagamenti-SPC è disponibile al seguente link: `https://docs.pagopa.it/sanp/specifiche-attuative-del-nodo-dei-pagamenti-spc/ <https://docs.pagopa.it/sanp/specifiche-attuative-del-nodo-dei-pagamenti-spc/>`_
+La versione più recente delle Specifiche Attuative del Nodo dei Pagamenti-SPC è disponibile al seguente link: `https://docs.pagopa.it/sanp/ <https://docs.pagopa.it/sanp/>`_
