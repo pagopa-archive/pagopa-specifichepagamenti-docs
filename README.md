@@ -1,5 +1,7 @@
 # pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC
 
+:warning: **progetto archiviato** La versione più recente delle Specifiche Attuative del Nodo dei Pagamenti-SPC è disponibile al seguente link: https://docs.pagopa.it/sanp/
+
 ![pagoPA](_docs/images/pagoPA.png)
 
 - [pagoPA, Specifiche Attuative del Nodo dei Pagamenti-SPC](#pagopa-specifiche-attuative-del-nodo-dei-pagamenti-spc)
